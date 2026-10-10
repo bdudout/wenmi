@@ -2,8 +2,8 @@
 <article class="article">
   <header class="lede">
     <p class="kicker">Article 2 · Write-up technique</p>
-    <h1>Casser le Wenmi : de la structure des lettres à une clé sans paramètre</h1>
-    <p class="standfirst">Comment on passe de « <i>fazihipego wezelucuna</i> » à « <span lang="zh-Hant">報傳取消日人態度遽變</span> » : la transcription, trente séances de calcul dont la plupart négatives, un test statistique simple qui change tout, et une clé qui tient en une ligne.</p>
+    <h1>Casser le Wenmi : de la structure des lettres à deux clés sans paramètre</h1>
+    <p class="standfirst">Comment on passe de « <i>fazihipego wezelucuna</i> » à « <span lang="zh-Hant">報傳取消日人態度遽變</span> » : la transcription, trente séances de calcul dont la plupart négatives, un test statistique simple qui change tout, et deux clés qui tiennent chacune en une ligne.</p>
     <p class="byline">Lecture : environ 25 minutes · niveau : à l'aise avec les probabilités et un peu de code</p>
     <p class="legend-unc">Les passages <mark class="unc">soulignés en pointillé</mark> sont des hypothèses non confirmées.</p>
   </header>
@@ -20,13 +20,14 @@
       <li><a href="#solveur">Étape 4 — Un solveur contraint et un message témoin</a></li>
       <li><a href="#g0">Étape 5 — La grille G0</a></li>
       <li><a href="#validation">Pourquoi y croire : les contrôles</a></li>
-      <li><a href="#canal2">Le problème ouvert : le second canal</a></li>
+      <li><a href="#canal2">Étape 6 — Le second canal et la grille Y0</a></li>
+      <li><a href="#ouvert">Le problème ouvert : les messages de 1917</a></li>
       <li><a href="#outils">Outils</a></li>
     </ol>
   </nav>
 
   <h2 id="tldr">En bref : le système</h2>
-  <p>Le flux de Tokyo (juin–septembre 1916) se chiffre en cinq opérations, sans aucune clé secrète au sens moderne :</p>
+  <p>Les deux canaux de 1916 se chiffrent en cinq opérations, sans aucune clé secrète au sens moderne. Exemple sur le canal Tokyo → Zhaoqing (juin–septembre 1916) :</p>
   <div class="pipeline">
     <div>Texte chinois<b lang="zh-Hant">報</b></div>
     <div>Code télégraphique public<b>1032</b></div>
@@ -47,7 +48,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   <p>Chaque message se termine par la signature <span lang="zh-Hant">伸</span> (<code>heyu</code> = 0135), parfois <span lang="zh-Hant">伸令</span>, puis le jour du mois, écrit soit en rime <span lang="zh-Hant">韻目代日</span> (<span lang="zh-Hant">巧</span> 18, <span lang="zh-Hant">漾</span> 23, <span lang="zh-Hant">元</span> 13…), soit en chiffre chinois (<span lang="zh-Hant">卅</span> 30).</p>
 
   <h3>Essayez</h3>
-  <p>Choisissez un télégramme, puis cliquez sur un caractère ou lancez la lecture pas à pas : les deux syllabes s'allument dans le texte chiffré et dans la grille ci-dessus. Les caractères en pointillé orange sont <strong>douteux</strong> (lecture du formulaire incertaine ou caractère rare).</p>
+  <p>Choisissez un télégramme, puis cliquez sur un caractère ou lancez la lecture pas à pas : les deux syllabes s'allument dans le texte chiffré et dans la grille de la clé, affichée sous le message. Les deux canaux sont disponibles (G0, puis Y0). Les caractères en pointillé orange sont <strong>douteux</strong> (lecture du formulaire incertaine ou caractère rare).</p>
   <div class="decoder" data-default="0416b">
     <div class="controls">
       <label><span class="sr">Télégramme</span><select></select></label>
@@ -57,6 +58,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
     <div class="tokens"></div>
     <p class="meta"></p>
     <p class="legend">Chaque case : syllabes · code télégraphique · caractère.</p>
+    <div class="dec-grid"></div>
   </div>
 
   <h2 id="depart">Point de départ : le travail de Daniel Bourdeau</h2>
@@ -66,7 +68,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   </div>
 
   <h2 id="regles">Les règles du jeu</h2>
-  <p>Un déchiffrement historique est un terrain idéal pour se tromper soi-même : avec assez de paramètres, on « lit » du chinois dans n'importe quel bruit. L'enquête a donc été menée sous des règles fixées à l'avance et consignées dans un journal tenu en ajout seul (plus de 1 200 lignes, 31 séances) :</p>
+  <p>Un déchiffrement historique est un terrain idéal pour se tromper soi-même : avec assez de paramètres, on « lit » du chinois dans n'importe quel bruit. L'enquête a donc été menée sous des règles fixées à l'avance et consignées dans un journal tenu en ajout seul (près de 1 400 lignes, 31 séances) :</p>
   <ul>
     <li><strong>Sources immuables.</strong> PDF JACAR conservés tels quels, empreintes SHA-256 consignées ; toute lecture nouvelle est un nouveau fichier versionné.</li>
     <li><strong>Un message témoin.</strong> Le télégramme 0406 (12 juillet 1916) n'a <strong>jamais</strong> servi à régler une clé ou à corriger une lecture. Il n'est utilisé que pour juger.</li>
@@ -125,7 +127,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   <h2 id="g0">Étape 5 — La grille G0</h2>
   <p>En regardant la table ajustée, case par case, une régularité saute aux yeux : les consonnes se suivent dans l'ordre alphabétique inversé, deux par dizaine, et les voyelles montent puis descendent. Les quelques cases qui s'en écartent sont celles que les données contraignaient mal. On remplace donc la table ajustée par la <strong>grille régulière</strong> qu'elle approxime : G0, qui n'a plus aucun paramètre libre.</p>
   <p>Le résultat est le test le plus fort de l'enquête : <strong>sans aucun réglage, G0 décode le message témoin 0406 à +3,99 par caractère, mieux que la table ajustée dont elle est issue (+3,48)</strong>. Une table bruitée par l'ajustement fait moins bien que la règle simple qu'elle cachait : c'est ce qu'on attend si la règle est la vraie clé. G0 redonne les 351 codes des sept messages, et les fins de message deviennent cohérentes : signature <span lang="zh-Hant">伸</span> puis jour (<span lang="zh-Hant">漾</span> pour le 23 juin, <span lang="zh-Hant">巧</span> pour le 18 juillet, <span lang="zh-Hant">元</span> pour le 13 septembre, <span lang="zh-Hant">卅</span> pour le 30 septembre, <span lang="zh-Hant">文</span> pour le 12 juillet).</p>
-  <p>Deux fins restent anormales : le 19 juillet se termine par <code>4210</code> au lieu de <span lang="zh-Hant">皓</span> (<code>4110</code>), <mark class="unc">probablement une erreur du chiffreur ou du copiste (une lettre)</mark> ; le message daté du 30 juin se termine par <span lang="zh-Hant">卄</span> (20), <mark class="unc">ce qui pourrait signaler une rédaction antérieure à l'envoi ou une date mal lue</mark>.</p>
+  <p>Deux fins semblaient anormales. Le 19 juillet se termine par <code>4210</code> au lieu de <span lang="zh-Hant">皓</span> (<code>4110</code>) : c'est une lettre fautive, expliquée par le second canal (étape 6). Le message daté du 30 juin se termine par <span lang="zh-Hant">卄</span> (20) ; la lecture a été revérifiée à l'image, et l'écart reste <mark class="unc">une erreur d'encodage, ou une rédaction le 20 pour un dépôt le 30</mark>.</p>
 
   <h2 id="validation">Pourquoi y croire : les contrôles</h2>
   <div class="table-wrap"><table>
@@ -136,14 +138,38 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
       <tr><td>Optimum reproductible depuis des départs différents</td><td>Oui (3 graines, même optimum)</td></tr>
       <tr><td>Message tenu à l'écart lisible sans réglage (≥ +2,5 / caractère)</td><td>Oui : +3,99 sous G0</td></tr>
       <tr><td>Texte chinois suivi, cohérent avec les dates du formulaire</td><td>Oui pour l'essentiel ; 19 caractères douteux sur 351</td></tr>
-      <tr><td>Recoupement extérieur indépendant</td><td>Oui : l'expéditeur <span lang="zh-Hant">伸</span> = <span lang="zh-Hant">趙伸</span>, identifié <em>après</em> le décodage dans une étude de 2026<sup class="fn"><a href="sources.html#s7">[7]</a></sup> qui décrit les mêmes contrats d'armes</td></tr>
+      <tr><td>Recoupement extérieur indépendant</td><td>Oui : l'expéditeur <span lang="zh-Hant">伸</span> = <span lang="zh-Hant">趙伸</span>, identifié <em>après</em> le décodage dans une étude de 2026<sup class="fn"><a href="sources.html#s7">[7]</a></sup> qui décrit les mêmes contrats d'armes, puis confirmé par les formulaires (nom et adresse de Zhao Shen)</td></tr>
+      <tr><td>Second canal : message tenu à l'écart lisible sous une clé fermée</td><td>Oui : 0496a à +4,62 sous Y0, annonce de la mort de Cai E à Fukuoka le 8</td></tr>
+      <tr><td>Second canal : fins datées hors ancres conformes au formulaire</td><td>Oui : 4 sur 4</td></tr>
     </tbody>
   </table></div>
   <p>Ce dernier point mérite d'être souligné : le nom de Zhao Shen, la livraison du « second lot d'armes », la garantie refusée par le Guangdong et le partage des armes entre Yunnan et Guangdong apparaissent dans les télégrammes décodés <em>avant</em> qu'on ait lu l'article de Cheng Honglei. Aucun de ces mots n'a été injecté dans la recherche.</p>
-  <p>Limites : la grille a été <em>lue</em> dans une table ajustée, elle n'est pas tombée du ciel ; les derniers lots de lecture n'étaient pas aveugles ; et les traductions sont des traductions de travail.</p>
+  <p>Limites : G0 a été <em>lue</em> dans une table ajustée et Y0 déduite de cinq ancres, elles ne sont pas tombées du ciel ; les derniers lots de lecture n'étaient pas aveugles ; et les traductions sont des traductions de travail.</p>
 
-  <h2 id="canal2">Le problème ouvert : le second canal</h2>
-  <p>Un autre groupe de télégrammes porte aussi le nom <span lang="zh-Hant">文密</span> : les messages du flux du Yunnan, et le télégramme de Sun Yat-sen à Dai Jitao du 24 juin 1917 (JACAR B03050090200, image 0509). Leur alphabet est différent : <i>y</i> y est une voyelle et la lettre <i>j</i> apparaît. G0 n'y donne rien. Le test des rangs montre la même structure de coordonnées (consonnes z ≈ 22, voyelles z ≈ 5), mais aucune grille alphabétique simple ne convient (400 essayées), et un solveur à six voyelles (E26) échoue : les témoins positifs sont tous retrouvés, les archives restent à 15 % de leur niveau. <mark class="unc">Les lectures automatiques et les ancres de ce canal sont probablement en cause</mark> ; la suite passera par des lectures humaines aveugles, comme pour le premier canal. C'est à ce canal que correspond le <i>y</i> voyelle relevé par Daniel Bourdeau.</p>
+  <h2 id="canal2">Étape 6 — Le second canal et la grille Y0</h2>
+  <p>Un autre groupe de formulaires porte aussi le nom <span lang="zh-Hant">文密</span> : 15 formulaires de juillet à novembre 1916 entre Tokyo et le Yunnan, signés de Zhao Shen ou adressés à lui. Leur alphabet diffère : <i>y</i> y est une voyelle, et G0 n'y donne rien. Le test des rangs montre la même structure de coordonnées (consonnes z ≈ 22, voyelles z ≈ 5), mais quatre séries de recherches par recuit (E26 à E29), même avec des lectures humaines et des ancres de date, restent négatives : le solveur retrouve parfaitement ses témoins positifs, mais le message tenu à l'écart (0496a) plafonne à +0,9 par caractère, loin du seuil de +2,5.</p>
+  <p>Le déblocage est venu de la lecture humaine des en-têtes et des fins de message :</p>
+  <ul>
+    <li>un télégramme du 5 novembre (0489b) est envoyé <strong>en clair</strong> : <span lang="zh-Hant">十號起程月末抵滇 伸 歌</span>, « départ le 10, arrivée au Yunnan à la fin du mois ; Shen ; le 5 ». Le télégramme chiffré du même jour finit par <code>buky hary</code> : <code>buky</code> = <span lang="zh-Hant">伸</span> (0135), <code>hary</code> = <span lang="zh-Hant">歌</span> (2960, rime du 5) ;</li>
+    <li>celui du 11 novembre finit par <code>foha</code> = <span lang="zh-Hant">尤</span> (1429, rime du 11).</li>
+  </ul>
+  <p>Ces cinq valeurs (bu = 01, ky = 35, ha = 29, ry = 60, fo = 14) s'ajustent <strong>exactement</strong> à un syllabaire linéaire : 17 consonnes dans l'ordre alphabétique sans c, j ni q, six voyelles parcourues en serpentin, et valeur = 6 × rang de la consonne + rang de la voyelle. Un seul choix restait libre, l'ordre de <i>e</i> et <i>i</i> ; il a été fixé par symétrie avant tout décodage (sur les lectures automatiques, la variante inverse donne +2,76 par caractère, contre +4,23).</p>
+  <div data-grid="Y0"></div>
+<pre><code>CONS = "bdfghklmnprstvwxz"          # 17 consonnes, sans c, j, q
+Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
+      for r, v in enumerate("yuoiea" if i % 2 == 0 else "aeiouy")}
+# 102 syllabes : ze = 100 et za = 101 ne servent pas</code></pre>
+  <p>Résultats sous Y0, sans aucun réglage :</p>
+  <ul>
+    <li>tout le corpus de 1916 : <strong>+4,5</strong> par caractère sur les lectures humaines (454 codes ; +4,23 sur les premières lectures automatiques ; pour comparaison, G0 sur son message témoin : +3,99) ;</li>
+    <li>le message <strong>0496a</strong>, tenu à l'écart de toutes les recherches précédentes et jamais utilisé pour établir Y0 : <strong>+4,62</strong> par caractère, et il annonce la mort du général Cai E à Fukuoka le 8 [novembre 1916] : un fait historique exact que rien dans la méthode ne pouvait suggérer ;</li>
+    <li>des fins de message qui n'ont pas servi d'ancres tombent sur la date écrite sur le formulaire : <span lang="zh-Hant">篠</span> (17 juillet), <span lang="zh-Hant">皓</span> (19 juillet), <span lang="zh-Hant">齊</span> (8 septembre), <span lang="zh-Hant">元</span> (13 septembre).</li>
+  </ul>
+  <p>Deux précisions sur les règles. Les ancres de Y0 viennent d'un télégramme en clair du même jour, donc d'un document, pas d'une supposition. En revanche, un « mot probable » (<span lang="zh-Hant">電</span>, « télégramme ») a été essayé : c'était un écart déclaré à la règle « aucun crib », il n'a rien apporté et a été rejeté (E29). Enfin, le texte de ce canal a été entièrement relu à l'aveugle par un humain, et le nombre de mots concorde partout avec celui noté sur le formulaire ; il reste pourtant moins sûr que celui du premier : beaucoup de caractères rares y restent marqués.</p>
+  <p>Ce canal a aussi permis de corriger le premier : le télégramme de Zhaoqing du 19 juillet finissait par un code impossible, alors que son jumeau du Yunnan, envoyé le même jour, finit bien par <span lang="zh-Hant">伸皓</span> (le 19). Relue à l'image, la lettre fautive est un <i>i</i> à la place d'un <i>e</i> : en Morse, e s'écrit · et i ··.</p>
+
+  <h2 id="ouvert">Le problème ouvert : les messages de 1917</h2>
+  <p>Des trois images où Daniel Bourdeau avait repéré le <span lang="zh-Hant">文密</span>, une est désormais lue : 0416 (juillet 1916), sur les deux canaux. Les deux autres, 0509 et 0511 (juin 1917, Sun Yat-sen ↔ Dai Jitao), résistent. Leur alphabet est encore différent (<i>c</i> et <i>j</i> présents, <i>y</i> à la fois consonne et voyelle, quelques groupes atypiques). Ni G0 ni Y0 ne les lisent, et une recherche dans une famille de 193 632 grilles du même type (E30) ne fait rien ressortir au-delà du hasard. <mark class="unc">Les lectures automatiques de ces formulaires sont peut-être en cause</mark> ; une lecture humaine aveugle est en cours.</p>
 
   <h2 id="outils">Outils</h2>
   <ul>

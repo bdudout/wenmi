@@ -2,8 +2,8 @@
 <article class="article">
   <header class="lede">
     <p class="kicker">Article 2 · Technical write-up</p>
-    <h1>Breaking Wenmi: from letter structure to a parameter-free key</h1>
-    <p class="standfirst">How you get from "<i>fazihipego wezelucuna</i>" to "<span lang="zh-Hant">報傳取消日人態度遽變</span>": the transcription, thirty sessions of computation, most of them negative, one simple statistical test that changes everything, and a key that fits on one line.</p>
+    <h1>Breaking Wenmi: from letter structure to two parameter-free keys</h1>
+    <p class="standfirst">How you get from "<i>fazihipego wezelucuna</i>" to "<span lang="zh-Hant">報傳取消日人態度遽變</span>": the transcription, thirty sessions of computation, most of them negative, one simple statistical test that changes everything, and two keys that each fit on one line.</p>
     <p class="byline">Reading time: about 25 minutes · level: comfortable with probability and a little code</p>
     <p class="legend-unc">Passages <mark class="unc">underlined with dots</mark> are unconfirmed hypotheses.</p>
   </header>
@@ -20,13 +20,14 @@
       <li><a href="#solveur">Step 4 — A constrained solver and a held-out message</a></li>
       <li><a href="#g0">Step 5 — The G0 grid</a></li>
       <li><a href="#validation">Why believe it: the controls</a></li>
-      <li><a href="#canal2">The open problem: the second channel</a></li>
+      <li><a href="#canal2">Step 6 — The second channel and the Y0 grid</a></li>
+      <li><a href="#ouvert">The open problem: the 1917 messages</a></li>
       <li><a href="#outils">Tools</a></li>
     </ol>
   </nav>
 
   <h2 id="tldr">In short: the system</h2>
-  <p>The Tokyo stream (June–September 1916) is enciphered in five operations, with no secret key in the modern sense:</p>
+  <p>Both 1916 channels are enciphered in five operations, with no secret key in the modern sense. Example from the Tokyo → Zhaoqing channel (June–September 1916):</p>
   <div class="pipeline">
     <div>Chinese text<b lang="zh-Hant">報</b></div>
     <div>Public telegraph code<b>1032</b></div>
@@ -47,7 +48,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   <p>Each message ends with the signature <span lang="zh-Hant">伸</span> (<code>heyu</code> = 0135), sometimes <span lang="zh-Hant">伸令</span>, then the day of the month, written either as a <span lang="zh-Hant">韻目代日</span> rhyme (<span lang="zh-Hant">巧</span> 18, <span lang="zh-Hant">漾</span> 23, <span lang="zh-Hant">元</span> 13…) or as a Chinese numeral (<span lang="zh-Hant">卅</span> 30).</p>
 
   <h3>Try it</h3>
-  <p>Pick a telegram, then click a character or start the step-by-step playback: the two syllables light up in the ciphertext and in the grid above. Characters with an orange dashed border are <strong>doubtful</strong> (uncertain reading of the form, or rare character).</p>
+  <p>Pick a telegram, then click a character or start the step-by-step playback: the two syllables light up in the ciphertext and in the key's grid, shown below the message. Both channels are available (G0, then Y0). Characters with an orange dashed border are <strong>doubtful</strong> (uncertain reading of the form, or rare character).</p>
   <div class="decoder" data-default="0416b">
     <div class="controls">
       <label><span class="sr">Telegram</span><select></select></label>
@@ -57,6 +58,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
     <div class="tokens"></div>
     <p class="meta"></p>
     <p class="legend">Each box: syllables · telegraph code · character.</p>
+    <div class="dec-grid"></div>
   </div>
 
   <h2 id="depart">Starting point: Daniel Bourdeau's work</h2>
@@ -66,7 +68,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   </div>
 
   <h2 id="regles">Ground rules</h2>
-  <p>Historical decipherment is the perfect place to fool yourself: with enough parameters, you can "read" Chinese in any noise. The investigation was therefore run under rules fixed in advance and recorded in an append-only log (over 1,200 lines, 31 sessions):</p>
+  <p>Historical decipherment is the perfect place to fool yourself: with enough parameters, you can "read" Chinese in any noise. The investigation was therefore run under rules fixed in advance and recorded in an append-only log (nearly 1,400 lines, 31 sessions):</p>
   <ul>
     <li><strong>Immutable sources.</strong> JACAR PDFs kept as downloaded, with SHA-256 hashes recorded; every new reading is a new versioned file.</li>
     <li><strong>A held-out message.</strong> Telegram 0406 (12 July 1916) was <strong>never</strong> used to tune a key or correct a reading. It is used only to judge.</li>
@@ -125,7 +127,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   <h2 id="g0">Step 5 — The G0 grid</h2>
   <p>Looking at the fitted table cell by cell, a regularity jumps out: the consonants follow reverse alphabetical order, two per tens digit, and the vowels go up then down. The few cells that deviate are those the data constrained poorly. So we replace the fitted table with the <strong>regular grid</strong> it approximates: G0, which has no free parameter left.</p>
   <p>The result is the strongest test of the investigation: <strong>with no tuning at all, G0 decodes the held-out message 0406 at +3.99 per character, better than the fitted table it came from (+3.48)</strong>. A table blurred by fitting does worse than the simple rule it was hiding: that is what you expect if the rule is the true key. G0 yields all 351 codes of the seven messages, and the message endings become consistent: signature <span lang="zh-Hant">伸</span>, then the day (<span lang="zh-Hant">漾</span> for 23 June, <span lang="zh-Hant">巧</span> for 18 July, <span lang="zh-Hant">元</span> for 13 September, <span lang="zh-Hant">卅</span> for 30 September, <span lang="zh-Hant">文</span> for 12 July).</p>
-  <p>Two endings remain anomalous: 19 July ends with <code>4210</code> instead of <span lang="zh-Hant">皓</span> (<code>4110</code>), <mark class="unc">probably an encipherer's or copyist's error (one letter)</mark>; the message dated 30 June ends with <span lang="zh-Hant">卄</span> (20), <mark class="unc">which might indicate drafting before sending, or a misread date</mark>.</p>
+  <p>Two endings looked anomalous. 19 July ends with <code>4210</code> instead of <span lang="zh-Hant">皓</span> (<code>4110</code>): a single wrong letter, explained by the second channel (step 6). The message dated 30 June ends with <span lang="zh-Hant">卄</span> (20); the reading was re-checked on the image, and the gap remains <mark class="unc">an encoding error, or drafting on the 20th for hand-in on the 30th</mark>.</p>
 
   <h2 id="validation">Why believe it: the controls</h2>
   <div class="table-wrap"><table>
@@ -136,14 +138,38 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
       <tr><td>Optimum reproducible from different starts</td><td>Yes (3 seeds, same optimum)</td></tr>
       <tr><td>Held-out message readable without tuning (≥ +2.5 / character)</td><td>Yes: +3.99 under G0</td></tr>
       <tr><td>Continuous Chinese text, consistent with the dates on the forms</td><td>Yes for the most part; 19 doubtful characters out of 351</td></tr>
-      <tr><td>Independent external cross-check</td><td>Yes: the sender <span lang="zh-Hant">伸</span> = <span lang="zh-Hant">趙伸</span>, identified <em>after</em> decoding, in a 2026 study<sup class="fn"><a href="sources.html#s7">[7]</a></sup> describing the same arms contracts</td></tr>
+      <tr><td>Independent external cross-check</td><td>Yes: the sender <span lang="zh-Hant">伸</span> = <span lang="zh-Hant">趙伸</span>, identified <em>after</em> decoding, in a 2026 study<sup class="fn"><a href="sources.html#s7">[7]</a></sup> describing the same arms contracts, then confirmed by the forms (Zhao Shen's name and address)</td></tr>
+      <tr><td>Second channel: held-out message readable under a closed key</td><td>Yes: 0496a at +4.62 under Y0, announcing Cai E's death at Fukuoka on the 8th</td></tr>
+      <tr><td>Second channel: dated endings outside the anchors match the form</td><td>Yes: 4 out of 4</td></tr>
     </tbody>
   </table></div>
   <p>That last point deserves emphasis: Zhao Shen's name, the delivery of the "second batch of weapons", the guarantee refused by Guangdong and the division of weapons between Yunnan and Guangdong appear in the decoded telegrams <em>before</em> Cheng Honglei's article was read. None of these words was injected into the search.</p>
-  <p>Limitations: the grid was <em>read off</em> a fitted table, it did not fall from the sky; the last reading batches were not blind; and the translations are working translations.</p>
+  <p>Limitations: G0 was <em>read off</em> a fitted table and Y0 deduced from five anchors; they did not fall from the sky; the last reading batches were not blind; and the translations are working translations.</p>
 
-  <h2 id="canal2">The open problem: the second channel</h2>
-  <p>Another group of telegrams also bears the name <span lang="zh-Hant">文密</span>: the Yunnan stream, and Sun Yat-sen's telegram to Dai Jitao of 24 June 1917 (JACAR B03050090200, image 0509). Their alphabet is different: <i>y</i> is a vowel and the letter <i>j</i> appears. G0 gives nothing there. The rank test shows the same coordinate structure (consonants z ≈ 22, vowels z ≈ 5), but no simple alphabetic grid fits (400 tried), and a six-vowel solver (E26) fails: the positive controls are all recovered, the archives stay at 15% of their level. <mark class="unc">The machine readings and anchors of this channel are probably to blame</mark>; the next step will be blind human readings, as for the first channel. This is the channel that matches the vowel <i>y</i> reported by Daniel Bourdeau.</p>
+  <h2 id="canal2">Step 6 — The second channel and the Y0 grid</h2>
+  <p>Another group of forms also bears the name <span lang="zh-Hant">文密</span>: 15 forms from July to November 1916 between Tokyo and Yunnan, signed by Zhao Shen or addressed to him. Their alphabet differs: <i>y</i> is a vowel, and G0 gives nothing. The rank test shows the same coordinate structure (consonants z ≈ 22, vowels z ≈ 5), but four rounds of annealing searches (E26 to E29), even with human readings and date anchors, stay negative: the solver recovers its positive controls perfectly, but the held-out message (0496a) stalls at +0.9 per character, far from the +2.5 threshold.</p>
+  <p>The breakthrough came from human reading of the headers and message endings:</p>
+  <ul>
+    <li>a telegram of 5 November (0489b) was sent <strong>in clear</strong>: <span lang="zh-Hant">十號起程月末抵滇 伸 歌</span>, "leaving on the 10th, arriving in Yunnan at the end of the month; Shen; the 5th". The enciphered telegram of the same day ends with <code>buky hary</code>: <code>buky</code> = <span lang="zh-Hant">伸</span> (0135), <code>hary</code> = <span lang="zh-Hant">歌</span> (2960, rhyme of the 5th);</li>
+    <li>the one of 11 November ends with <code>foha</code> = <span lang="zh-Hant">尤</span> (1429, rhyme of the 11th).</li>
+  </ul>
+  <p>These five values (bu = 01, ky = 35, ha = 29, ry = 60, fo = 14) fit <strong>exactly</strong> a linear syllabary: 17 consonants in alphabetical order without c, j or q, six vowels taken in serpentine order, and value = 6 × consonant rank + vowel rank. Only one choice was left open, the order of <i>e</i> and <i>i</i>; it was fixed by symmetry before any decoding (on the machine readings, the reverse variant gives +2.76 per character, against +4.23).</p>
+  <div data-grid="Y0"></div>
+<pre><code>CONS = "bdfghklmnprstvwxz"          # 17 consonants, no c, j, q
+Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
+      for r, v in enumerate("yuoiea" if i % 2 == 0 else "aeiouy")}
+# 102 syllables: ze = 100 and za = 101 are unused</code></pre>
+  <p>Results under Y0, with no tuning at all:</p>
+  <ul>
+    <li>the whole 1916 corpus: <strong>+4.5</strong> per character on the human readings (454 codes; +4.23 on the first machine readings; for comparison, G0 on its held-out message: +3.99);</li>
+    <li>message <strong>0496a</strong>, held out of every earlier search and never used to establish Y0: <strong>+4.62</strong> per character, and it announces the death of General Cai E at Fukuoka on the 8th [of November 1916]: an exact historical fact that nothing in the method could have suggested;</li>
+    <li>message endings that were not used as anchors fall on the date written on the form: <span lang="zh-Hant">篠</span> (17 July), <span lang="zh-Hant">皓</span> (19 July), <span lang="zh-Hant">齊</span> (8 September), <span lang="zh-Hant">元</span> (13 September).</li>
+  </ul>
+  <p>Two notes on the rules. Y0's anchors come from a plaintext telegram of the same day, that is, from a document, not from a guess. On the other hand, a "probable word" (<span lang="zh-Hant">電</span>, "telegram") was tried: it was a declared departure from the no-crib rule, it brought nothing and was rejected (E29). Finally, the text of this channel has been fully re-read blind by a human, and the word count matches the one noted on the form everywhere; it nonetheless remains less certain than that of the first: many rare characters remain marked.</p>
+  <p>This channel also corrected the first: the Zhaoqing telegram of 19 July ended with an impossible code, while its Yunnan twin, sent the same day, ends properly with <span lang="zh-Hant">伸皓</span> (the 19th). Re-read on the image, the faulty letter is an <i>i</i> instead of an <i>e</i>: in Morse, e is · and i is ··.</p>
+
+  <h2 id="ouvert">The open problem: the 1917 messages</h2>
+  <p>Of the three images where Daniel Bourdeau had spotted <span lang="zh-Hant">文密</span>, one is now read: 0416 (July 1916), on both channels. The other two, 0509 and 0511 (June 1917, Sun Yat-sen ↔ Dai Jitao), resist. Their alphabet is different again (<i>c</i> and <i>j</i> present, <i>y</i> both consonant and vowel, a few atypical groups). Neither G0 nor Y0 reads them, and a search through a family of 193,632 grids of the same type (E30) shows nothing beyond chance. <mark class="unc">The machine readings of these forms may be to blame</mark>; a blind human reading is under way.</p>
 
   <h2 id="outils">Tools</h2>
   <ul>

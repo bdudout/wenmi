@@ -4,7 +4,7 @@
       <p class="kicker">Historical cryptography · China · Japan · 1916</p>
       <p class="big-cjk" lang="zh-Hant">文密</p>
       <h1>The Wenmi code, broken</h1>
-      <p class="standfirst">In the summer of 1916, a Chinese envoy in Tokyo was negotiating Japanese rifles and loans for the rebel provinces of southern China. His telegrams, enciphered in a system called <span lang="zh-Hant">文密</span> (<i>Wenmi</i>), were intercepted and copied by the Japanese administration, then lay for more than a century in Tokyo's diplomatic archives. Here they are, read for the most part.</p>
+      <p class="standfirst">In the summer of 1916, a Chinese envoy in Tokyo, Zhao Shen, was negotiating Japanese rifles, aircraft and loans for the rebel provinces of southern China. His telegrams, enciphered under the name <span lang="zh-Hant">文密</span> (<i>Wenmi</i>), were intercepted and copied by the Japanese administration, then lay for more than a century in Tokyo's diplomatic archives. Both channels he used in 1916 can now be read, for the most part.</p>
       <p class="byline">An investigation building on <a href="sources.html#s1">Daniel Bourdeau</a>'s work on the telegrams of Sun Yat-sen's circle.</p>
     </div>
     <figure style="margin:0">
@@ -14,10 +14,10 @@
   </section>
 
   <section class="facts" aria-label="Key figures">
-    <div class="fact"><b>7</b><span>telegrams from June–September 1916 read</span></div>
-    <div class="fact"><b>351</b><span>Chinese characters recovered, 19 of them still doubtful</span></div>
-    <div class="fact"><b>100</b><span>syllables laid out in a regular grid: that is the whole key</span></div>
-    <div class="fact"><b>1</b><span>held-out message, never used to tune the key, that reads under it</span></div>
+    <div class="fact"><b>22</b><span>forms from June to November 1916 read, on two channels</span></div>
+    <div class="fact"><b>2</b><span>keys recovered: two regular grids of about a hundred syllables</span></div>
+    <div class="fact"><b>≈ 800</b><span>Chinese characters recovered; doubtful passages remain marked</span></div>
+    <div class="fact"><b>2</b><span>held-out messages, never used to tune the keys, that read under them</span></div>
   </section>
 
   <section class="cards">
@@ -29,8 +29,8 @@
     </a>
     <a class="card" href="method.html">
       <p class="kicker">Article 2 · Technical write-up</p>
-      <h2>Breaking Wenmi: from letter structure to a parameter-free key</h2>
-      <p>Blind transcription, keyless tests, constrained simulated annealing, validation on a held-out message, and finally the G0 grid. The dead ends matter, so we describe them, along with the tools and the code.</p>
+      <h2>Breaking Wenmi: from letter structure to two parameter-free keys</h2>
+      <p>Blind transcription, keyless tests, constrained simulated annealing, validation on held-out messages, and finally the G0 and Y0 grids. The dead ends matter, so we describe them, along with the tools and the code.</p>
       <span class="more">Read the write-up →</span>
     </a>
   </section>
@@ -38,6 +38,11 @@
   <section class="article">
     <div class="status">
       <h4>Where things stand</h4>
-      <p>The <strong>principle</strong> of the cipher is established for the Tokyo stream (June–September 1916): a regular grid turns each half of a telegraph code into a syllable. The text is settled for the most part; about twenty characters remain uncertain and are marked as such. A <strong>second channel</strong> bearing the same name, with <i>y</i> as a sixth vowel (Yunnan telegrams, the Sun ↔ Dai Jitao message of June 1917), is <strong>not</strong> broken.</p>
+      <p>Both 1916 channels are broken in <strong>principle</strong>: in each, a regular grid turns each half of a telegraph code into a syllable.</p>
+      <ul>
+        <li><strong>Tokyo → Zhaoqing</strong> (June–September, 7 telegrams, G0 grid): text settled for the most part, about twenty uncertain characters, marked.</li>
+        <li><strong>Tokyo ↔ Yunnan</strong> (July–November, 15 forms, Y0 grid, broken on 11 October 2026): text fully re-read by a human, though many characters remain doubtful.</li>
+        <li>The <strong>1917</strong> messages bearing the same name (Sun Yat-sen ↔ Dai Jitao) are <strong>not</strong> broken: they use a different alphabet.</li>
+      </ul>
     </div>
   </section>

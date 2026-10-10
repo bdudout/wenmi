@@ -264,3 +264,13 @@ mark.unc::after {
   .site-header .lang-switch { margin-left: auto; }
   .site-header { position: static; }
 }
+
+/* grille de la clé affichée dans le décodeur */
+.decoder .dec-grid { margin-top: .9rem; max-width: 24rem; }
+.decoder .dec-grid .grid-g0 { font-size: .74rem; }
+.decoder .dec-grid .grid-g0 th, .decoder .dec-grid .grid-g0 td { padding: .14rem .3rem; }
+.grids-pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; align-items: start; }
+.grids-pair h4 { margin: 0 0 .3rem; font-size: .85rem; color: var(--accent-2); }
+
+/* le code et les grilles gardent la chasse fixe, même sur les pages en chinois ou en japonais */
+pre, code, kbd, .mono, .grid-g0, .token .u, .token .c, .decoder .cipher, .pipeline b { font-family: var(--mono) !important; }

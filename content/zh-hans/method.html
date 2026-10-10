@@ -2,8 +2,8 @@
 <article class="article">
   <header class="lede">
     <p class="kicker">第二篇 · 技术报告</p>
-    <h1>破解文密：从字母结构到无参数的密钥</h1>
-    <p class="standfirst">如何从“<i>fazihipego wezelucuna</i>”走到“<span lang="zh-Hant">報傳取消日人態度遽變</span>”：转写、三十次计算（大多以失败告终）、一个改变全局的简单统计检验，以及一把一行就能写完的密钥。</p>
+    <h1>破解文密：从字母结构到两把无参数的密钥</h1>
+    <p class="standfirst">如何从“<i>fazihipego wezelucuna</i>”走到“<span lang="zh-Hant">報傳取消日人態度遽變</span>”：转写、三十次计算（大多以失败告终）、一个改变全局的简单统计检验，以及两把各用一行就能写完的密钥。</p>
     <p class="byline">阅读时间：约25分钟 · 适合对概率和少量代码不陌生的读者</p>
     <p class="legend-unc"><mark class="unc">加点线下划线</mark>的内容为尚未证实的推测。</p>
   </header>
@@ -20,13 +20,14 @@
       <li><a href="#solveur">第四步 —— 带约束的求解器与留出电报</a></li>
       <li><a href="#g0">第五步 —— G0 表</a></li>
       <li><a href="#validation">凭什么相信：对照检验</a></li>
-      <li><a href="#canal2">悬而未决：第二通道</a></li>
+      <li><a href="#canal2">第六步 —— 第二通道与 Y0 表</a></li>
+      <li><a href="#ouvert">悬而未决：1917年的电报</a></li>
       <li><a href="#outils">工具</a></li>
     </ol>
   </nav>
 
   <h2 id="tldr">概要：加密系统</h2>
-  <p>东京一路电报（1916年6月至9月）的加密分五步，没有现代意义上的秘密密钥：</p>
+  <p>1916年的两条通道都按五步加密，没有现代意义上的秘密密钥。以东京 → 肇庆一路（1916年6月至9月）为例：</p>
   <div class="pipeline">
     <div>中文原文<b lang="zh-Hant">報</b></div>
     <div>公开的中文电码<b>1032</b></div>
@@ -47,7 +48,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   <p>每封电报以署名“<span lang="zh-Hant">伸</span>”（<code>heyu</code> = 0135）结尾，有时为“<span lang="zh-Hant">伸令</span>”，其后是日期，或用韵目代日（<span lang="zh-Hant">巧</span> 十八日、<span lang="zh-Hant">漾</span> 二十三日、<span lang="zh-Hant">元</span> 十三日……），或用数字（<span lang="zh-Hant">卅</span> 三十日）。</p>
 
   <h3>动手试试</h3>
-  <p>选择一封电报，点击任一汉字或开始逐字演示：对应的两个音节会在密文和上方表格中高亮。橙色虚线框的字为<strong>存疑</strong>字（电报纸字迹不确定或为罕用字）。</p>
+  <p>选择一封电报，点击任一汉字或开始逐字演示：对应的两个音节会在密文以及电报下方显示的密钥表格中高亮。两条通道均可选择（G0 与 Y0）。橙色虚线框的字为<strong>存疑</strong>字（电报纸字迹不确定或为罕用字）。</p>
   <div class="decoder" data-default="0416b">
     <div class="controls">
       <label><span class="sr">电报</span><select></select></label>
@@ -57,6 +58,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
     <div class="tokens"></div>
     <p class="meta"></p>
     <p class="legend">每格依次为：音节 · 电码 · 汉字。</p>
+    <div class="dec-grid"></div>
   </div>
 
   <h2 id="depart">起点：Daniel Bourdeau 的工作</h2>
@@ -66,7 +68,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   </div>
 
   <h2 id="regles">规则</h2>
-  <p>历史破译是自欺的理想温床：参数足够多时，任何噪声里都能“读出”中文。因此本研究在事先确定的规则下进行，并记录在只增不改的日志中（逾1,200行，共31次研究）：</p>
+  <p>历史破译是自欺的理想温床：参数足够多时，任何噪声里都能“读出”中文。因此本研究在事先确定的规则下进行，并记录在只增不改的日志中（近1,400行，共31次研究）：</p>
   <ul>
     <li><strong>资料不可改动。</strong>JACAR 的 PDF 原样保存，并记录 SHA-256 校验值；每一次新的转写都是新的版本文件。</li>
     <li><strong>一封留出电报。</strong>0406号电报（1916年7月12日）<strong>从未</strong>用于调整密钥或修改读法，只用于评判。</li>
@@ -125,7 +127,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   <h2 id="g0">第五步 —— G0 表</h2>
   <p>逐格查看拟合出的表，一个规律一目了然：辅音按字母倒序排列，每个十位两个，元音先升后降。少数不符合的格子，正是数据约束不足的那些。于是我们用它所近似的<strong>规则表</strong>代替拟合表：这就是 G0，它不再有任何自由参数。</p>
   <p>结果是整个研究中最有力的检验：<strong>在完全不调整的情况下，G0 解读留出电报0406的得分为每字 +3.99，高于由之导出的拟合表（+3.48）</strong>。一张被拟合“磨糊”的表，不如它所隐藏的简单规则：如果这条规则就是真正的密钥，结果正应如此。G0 给出七封电报全部351个电码，电报结尾也变得一致：署名“<span lang="zh-Hant">伸</span>”后接日期（6月23日为“<span lang="zh-Hant">漾</span>”，7月18日为“<span lang="zh-Hant">巧</span>”，9月13日为“<span lang="zh-Hant">元</span>”，9月30日为“<span lang="zh-Hant">卅</span>”，7月12日为“<span lang="zh-Hant">文</span>”）。</p>
-  <p>有两个结尾仍不正常：7月19日以 <code>4210</code> 结尾，而不是“<span lang="zh-Hant">皓</span>”（<code>4110</code>），<mark class="unc">很可能是加密者或抄写员的笔误（一个字母）</mark>；标为6月30日的电报以“<span lang="zh-Hant">卄</span>”（二十）结尾，<mark class="unc">可能说明电文在发出前就已拟好，或日期读错</mark>。</p>
+  <p>曾有两个结尾看似不正常。7月19日以 <code>4210</code> 结尾，而不是“<span lang="zh-Hant">皓</span>”（<code>4110</code>）：这是一个字母的错误，已由第二通道解释（第六步）。标为6月30日的电报以“<span lang="zh-Hant">卄</span>”（二十）结尾；读法已在图像上复核，差异仍是<mark class="unc">编码错误，或二十日拟稿、三十日交发</mark>。</p>
 
   <h2 id="validation">凭什么相信：对照检验</h2>
   <div class="table-wrap"><table>
@@ -136,14 +138,38 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
       <tr><td>不同起点得到相同最优解</td><td>是（3个种子，最优解相同）</td></tr>
       <tr><td>留出电报不经调整即可读（每字 ≥ +2.5）</td><td>是：G0 下为 +3.99</td></tr>
       <tr><td>中文文句连贯，且与电报纸上的日期一致</td><td>大体如此；351个字中19个存疑</td></tr>
-      <tr><td>独立的外部印证</td><td>是：发报人“<span lang="zh-Hant">伸</span>” = 赵伸，在破译<em>之后</em>由一篇2026年的研究<sup class="fn"><a href="sources.html#s7">[7]</a></sup>确认，该研究描述了同样的军火合同</td></tr>
+      <tr><td>独立的外部印证</td><td>是：发报人“<span lang="zh-Hant">伸</span>” = 赵伸，在破译<em>之后</em>由一篇2026年的研究<sup class="fn"><a href="sources.html#s7">[7]</a></sup>确认，该研究描述了同样的军火合同；随后又由电报纸（赵伸的姓名与住址）证实</td></tr>
+      <tr><td>第二通道：留出电报在封闭密钥下可读</td><td>是：0496a 在 Y0 下为 +4.62，报告蔡锷八日在福冈逝世</td></tr>
+      <tr><td>第二通道：未用作锚点的日期结尾与电报纸一致</td><td>是：4 封中 4 封</td></tr>
     </tbody>
   </table></div>
   <p>最后一点值得强调：赵伸之名、“第二批械”的交付、广东拒绝担保、武器在云南与广东之间的分配，这些内容在我们读到承红磊的文章<em>之前</em>就已出现在破译出的电报中。这些词没有一个是被注入搜索的。</p>
-  <p>局限：G0 表是从拟合表中<em>读出</em>的，并非凭空而来；最后几批阅读不是盲读；译文为工作译文。</p>
+  <p>局限：G0 表是从拟合表中<em>读出</em>的，Y0 表是由五个锚点推出的，都不是凭空而来；最后几批阅读不是盲读；译文为工作译文。</p>
 
-  <h2 id="canal2">悬而未决：第二通道</h2>
-  <p>另一组电报同样冠以“<span lang="zh-Hant">文密</span>”：云南一路的电报，以及1917年6月24日孙中山致戴季陶的电报（JACAR B03050090200，影像 0509）。它们的字母表不同：<i>y</i> 是元音，并出现字母 <i>j</i>。G0 在这里毫无结果。位置检验显示出同样的坐标结构（辅音 z ≈ 22，元音 z ≈ 5），但没有任何简单的字母表格适用（试了400种），六元音求解器（E26）也失败了：正对照全部找回，档案却只达到其水平的15%。<mark class="unc">问题可能出在这一通道的机器读法和锚点上</mark>；下一步将像第一通道那样进行人工盲读。Daniel Bourdeau 所指出的“<i>y</i> 为元音”正对应这一通道。</p>
+  <h2 id="canal2">第六步 —— 第二通道与 Y0 表</h2>
+  <p>另一组电报纸同样冠以“<span lang="zh-Hant">文密</span>”：1916年7月至11月间东京与云南之间的15张电报纸，或由赵伸署名，或发给赵伸。它们的字母表不同：<i>y</i> 是元音，G0 在这里毫无结果。位置检验显示出同样的坐标结构（辅音 z ≈ 22，元音 z ≈ 5），但四轮模拟退火搜索（E26—E29）即使使用人工读法和日期锚点，仍是否定结果：求解器能完美找回正对照，留出电报（0496a）却始终停在每字 +0.9 左右，远低于 +2.5 的门槛。</p>
+  <p>突破来自对电报抬头和结尾的人工阅读：</p>
+  <ul>
+    <li>11月5日的一封电报（0489b）是以<strong>明文</strong>发出的：<span lang="zh-Hant">十號起程月末抵滇 伸 歌</span>（“十日启程，月末抵滇；伸；五日”）。同日的密电以 <code>buky hary</code> 结尾：<code>buky</code> = “<span lang="zh-Hant">伸</span>”（0135），<code>hary</code> = “<span lang="zh-Hant">歌</span>”（2960，五日的韵目）；</li>
+    <li>11月11日的电报以 <code>foha</code> = “<span lang="zh-Hant">尤</span>”（1429，十一日的韵目）结尾。</li>
+  </ul>
+  <p>这五个值（bu = 01，ky = 35，ha = 29，ry = 60，fo = 14）<strong>恰好</strong>吻合一张线性音节表：17个辅音按字母顺序排列（不含 c、j、q），六个元音蛇形排列，值 = 6 × 辅音序号 + 元音序号。唯一未被锚点确定的是 <i>e</i> 与 <i>i</i> 的先后，在解码之前已按对称原则定下（在机器读法上，反过来的变体每字只有 +2.76，而 Y0 为 +4.23）。</p>
+  <div data-grid="Y0"></div>
+<pre><code>CONS = "bdfghklmnprstvwxz"          # 17个辅音，不含 c、j、q
+Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
+      for r, v in enumerate("yuoiea" if i % 2 == 0 else "aeiouy")}
+# 共102个音节：ze = 100、za = 101 不使用</code></pre>
+  <p>在 Y0 下、不做任何调整的结果：</p>
+  <ul>
+    <li>1916年全部语料：人工读法下每字 <strong>+4.5</strong>（454个电码；最初的机器读法下为 +4.23；作为比较，G0 在其验证电报上为 +3.99）；</li>
+    <li><strong>0496a</strong> 号电报从未参与此前的任何搜索，也未用于确定 Y0：每字 <strong>+4.62</strong>，内容是蔡锷将军于（1916年11月）八日在福冈逝世——一个方法本身不可能暗示的准确历史事实；</li>
+    <li>未用作锚点的电报结尾与电报纸上的日期一致：“<span lang="zh-Hant">篠</span>”（7月17日）、“<span lang="zh-Hant">皓</span>”（7月19日）、“<span lang="zh-Hant">齊</span>”（9月8日）、“<span lang="zh-Hant">元</span>”（9月13日）。</li>
+  </ul>
+  <p>关于规则的两点说明。Y0 的锚点来自同日的一封明文电报，即来自文献，而非猜测。另一方面，我们曾尝试一个“可能词”（“<span lang="zh-Hant">電</span>”），这是对“不用明文猜测”规则的公开偏离；它没有带来任何改进，已被否决（E29）。此外，这条通道的文字已全部由人工盲读复核，字数处处与电报纸上的记录相符；但它仍不如第一通道可靠，许多罕用字仍被标出。</p>
+  <p>这条通道还纠正了第一通道：7月19日发往肇庆的电报以一个不可能的电码结尾，而同日发往云南的“孪生”电报则规规矩矩地以“<span lang="zh-Hant">伸皓</span>”（十九日）结尾。回到图像复核，错的那个字母是 <i>i</i> 而非 <i>e</i>：在莫尔斯电码中，e 是 ·，i 是 ··。</p>
+
+  <h2 id="ouvert">悬而未决：1917年的电报</h2>
+  <p>Daniel Bourdeau 发现“<span lang="zh-Hant">文密</span>”的三张影像中，一张已被读出：0416（1916年7月），两条通道都有。另外两张，0509 与 0511（1917年6月，孙中山 ↔ 戴季陶），仍未攻破。它们的字母表又有不同（出现 <i>c</i> 和 <i>j</i>，<i>y</i> 既作辅音也作元音，还有若干不寻常的字母组）。G0 和 Y0 都读不出，在同类型的193,632张表中搜索（E30）也没有发现超出偶然的结果。<mark class="unc">问题可能出在这些电报纸的机器读法上</mark>；人工盲读正在进行。</p>
 
   <h2 id="outils">工具</h2>
   <ul>

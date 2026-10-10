@@ -22,12 +22,14 @@ fr/ en/ zh-hans/ zh-hant/ ja/
 content/<langue>/       corps des pages (index, history, method, sources) — à éditer
 assets/css/style.css    styles (thème clair/sombre, marqueur « non confirmé »)
 assets/js/site.js       thème, grille G0, décodeur pas à pas
-assets/js/messages.js   unités, codes et caractères des 7 télégrammes (GÉNÉRÉ)
+assets/js/messages.js   canal Tokyo → Zhaoqing (grille G0) : unités, codes, caractères (GÉNÉRÉ)
+assets/js/messages-y0.js  canal Tokyo ↔ Yunnan (grille Y0) : idem (GÉNÉRÉ)
 assets/js/translations.js  dates et traductions de travail, par langue
 assets/img/             scan JACAR (B03050090000, image 0416)
 assets/img/flags/       drapeaux du sélecteur de langue (SVG, GÉNÉRÉS)
 tools/build.py          assemble content/ + gabarit → <langue>/*.html
 tools/build_data.py     extrait messages.js de l'édition et vérifie la grille G0
+tools/build_data_y0.py  décode le second canal sous Y0 et vérifie contre c31-decodage-Y0.md
 tools/make_flags.py     dessine les drapeaux en SVG
 ```
 
@@ -43,7 +45,14 @@ Régénérer les données des télégrammes depuis l'édition de travail (dossie
 python3 tools/build_data.py "../wenmi/working/c31-edition-wenmi.md"
 ```
 
-Le script vérifie que la grille G0 redonne exactement les 351 codes.
+Le script vérifie que la grille G0 redonne exactement les 351 codes. Pour le second canal
+(nécessite NumPy et le modèle de langue du dossier d'enquête) :
+
+```bash
+python3 tools/build_data_y0.py ../wenmi
+```
+
+Il vérifie que le décodage est identique, caractère pour caractère, à `working/c31-decodage-Y0.md`.
 
 Prévisualiser :
 

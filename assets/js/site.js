@@ -21,51 +21,74 @@
     if (a) { try { localStorage.setItem('wenmi-lang', a.dataset.lang); } catch (e) {} }
   });
 
-  // ---------- grille G0 ----------
-  var ORDER = 'hgfdcbzyxwvtsrqpnmlk', VOW = 'aeiou';
-  var G0 = {};
-  for (var i = 0; i < ORDER.length; i++) {
-    for (var j = 0; j < 5; j++) {
-      G0[ORDER[i] + VOW[j]] = 10 * Math.floor(i / 2) + (i % 2 === 0 ? j : 9 - j);
-    }
-  }
+  // ---------- grilles G0 (canal de Cen) et Y0 (canal du Yunnan) ----------
   function pad(n) { return (n < 10 ? '0' : '') + n; }
+  var GRIDS = {
+    // G0 : 20 consonnes (alphabet inversé depuis h), deux par dizaine ; voyelles a e i o u en serpentin.
+    G0: (function () {
+      var C = 'hgfdcbzyxwvtsrqpnmlk', V = 'aeiou', T = {};
+      for (var i = 0; i < C.length; i++) for (var j = 0; j < 5; j++)
+        T[C[i] + V[j]] = 10 * Math.floor(i / 2) + (i % 2 === 0 ? j : 9 - j);
+      return { cons: C, vow: V, table: T };
+    })(),
+    // Y0 : 17 consonnes (ordre alphabétique sans c, j, q) × 6 voyelles ; valeur = 6 × rang + rang de la voyelle (serpentin).
+    Y0: (function () {
+      var C = 'bdfghklmnprstvwxz', V = 'aeiouy', T = {};
+      for (var i = 0; i < C.length; i++) {
+        var ord = i % 2 === 0 ? 'yuoiea' : 'aeiouy';
+        for (var r = 0; r < 6; r++) T[C[i] + ord[r]] = 6 * i + r;
+      }
+      return { cons: C, vow: V, table: T };
+    })()
+  };
 
-  function renderGrid(el) {
-    var h = '<div class="table-wrap"><table class="grid-g0"><thead><tr><th></th>';
-    for (var j = 0; j < 5; j++) h += '<th>' + VOW[j] + '</th>';
-    h += '<th>dizaine</th></tr></thead><tbody>';
-    for (var i = 0; i < ORDER.length; i++) {
-      var c = ORDER[i];
+  function renderGrid(el, key) {
+    var g = GRIDS[key], h = '<div class="table-wrap"><table class="grid-g0" data-grid="' + key + '"><thead><tr><th>' + key + '</th>';
+    for (var j = 0; j < g.vow.length; j++) h += '<th>' + g.vow[j] + '</th>';
+    h += '</tr></thead><tbody>';
+    for (var i = 0; i < g.cons.length; i++) {
+      var c = g.cons[i];
       h += '<tr class="' + (i % 2 ? 'odd' : '') + '"><th>' + c + '</th>';
-      for (var k = 0; k < 5; k++) h += '<td data-s="' + c + VOW[k] + '">' + pad(G0[c + VOW[k]]) + '</td>';
-      h += '<td class="mono">' + Math.floor(i / 2) + '·</td></tr>';
+      for (var k = 0; k < g.vow.length; k++) {
+        var v = g.table[c + g.vow[k]];
+        h += '<td data-s="' + c + g.vow[k] + '">' + (v > 99 ? '—' : pad(v)) + '</td>';
+      }
+      h += '</tr>';
     }
     el.innerHTML = h + '</tbody></table></div>';
   }
-  function highlight(syl) {
-    document.querySelectorAll('.grid-g0 td.hit').forEach(function (td) { td.classList.remove('hit'); });
+  function highlight(scope, syl) {
+    scope.querySelectorAll('.grid-g0 td.hit').forEach(function (td) { td.classList.remove('hit'); });
     (syl || []).forEach(function (s) {
-      document.querySelectorAll('.grid-g0 td[data-s="' + s + '"]').forEach(function (td) { td.classList.add('hit'); });
+      scope.querySelectorAll('.grid-g0 td[data-s="' + s + '"]').forEach(function (td) { td.classList.add('hit'); });
     });
   }
-  document.querySelectorAll('[data-g0-grid]').forEach(renderGrid);
+  document.querySelectorAll('[data-grid]').forEach(function (el) { if (el.tagName !== 'TABLE') renderGrid(el, el.getAttribute('data-grid')); });
+  document.querySelectorAll('[data-g0-grid]').forEach(function (el) { renderGrid(el, 'G0'); });
 
   // ---------- décodeur ----------
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
 
   function mountDecoder(box) {
-    var all = window.WENMI_MESSAGES || [];
+    var all = (window.WENMI_MESSAGES || []).map(function (m) { m.grid = m.grid || 'G0'; return m; })
+      .concat(window.WENMI_MESSAGES_Y0 || []);
     if (!all.length) return;
     var I = (window.WENMI_I18N || {})[root.lang] || (window.WENMI_I18N || {}).fr;
     var byId = {}; all.forEach(function (m) { byId[m.id] = m; });
     var msgs = I.order.map(function (id) { return byId[id]; }).filter(Boolean);
     var sel = box.querySelector('select');
+    var groups = {};
     msgs.forEach(function (m, idx) {
+      if (!groups[m.grid]) {
+        groups[m.grid] = document.createElement('optgroup');
+        groups[m.grid].label = (I.channel || {})[m.grid] || m.grid;
+        sel.appendChild(groups[m.grid]);
+      }
       var o = document.createElement('option');
       o.value = idx; o.textContent = m.id + ' — ' + (I.date[m.id] || '');
-      sel.appendChild(o);
+      groups[m.grid].appendChild(o);
     });
+    var gridBox = box.querySelector('.dec-grid'), shownGrid = null;
     var want = box.getAttribute('data-default');
     msgs.forEach(function (m, idx) { if (m.id === want) sel.value = idx; });
     var cipher = box.querySelector('.cipher'), toks = box.querySelector('.tokens'), meta = box.querySelector('.meta');
@@ -90,14 +113,15 @@
       });
       toks.innerHTML = t;
       meta.innerHTML = '<strong>' + esc(I.label) + '</strong> ' + esc(I.tr[m.id] || '');
-      step = -1; highlight([]);
+      if (gridBox && shownGrid !== m.grid) { renderGrid(gridBox, m.grid); shownGrid = m.grid; }
+      step = -1; highlight(box, []);
     }
     function focus(i) {
       var m = msgs[+sel.value];
       step = i;
       toks.querySelectorAll('.token').forEach(function (b) { b.classList.toggle('on', +b.dataset.i === i); });
       cipher.querySelectorAll('span').forEach(function (s) { s.classList.toggle('on', +s.dataset.i === i); });
-      if (i >= 0) highlight([m.units[2 * i], m.units[2 * i + 1]]);
+      if (i >= 0) highlight(box, [m.units[2 * i], m.units[2 * i + 1]]);
     }
     function stop() { if (timer) { clearInterval(timer); timer = null; box.querySelector('[data-act=play]').textContent = I.play; } }
     sel.addEventListener('change', function () { stop(); draw(); });
