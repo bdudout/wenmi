@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Wenmi code</title>
+<meta name="description" content="Breaking the 文密 (Wenmi) code: enciphered telegrams of 1916 between Tokyo and southern China, intercepted by Japan.">
+<link rel="alternate" hreflang="en" href="../en/index.html">
+<link rel="alternate" hreflang="fr" href="../fr/index.html">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-hans/index.html">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-hant/index.html">
+<link rel="alternate" hreflang="ja" href="../ja/index.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%239b2c1f'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f7f3ea' font-family='serif'%3E%E6%96%87%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header"><div class="inner">
+  <a class="brand" href="index.html"><span class="seal" lang="zh-Hant">文密</span> The Wenmi code</a>
+  <nav class="menu">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="history.html">The history</a>
+    <a href="method.html">The method</a>
+    <a href="sources.html">Sources</a>
+  </nav>
+  <nav class="lang-switch" aria-label="Language">
+    <a href="../en/index.html" hreflang="en" lang="en" data-lang="en" title="English" aria-label="English" aria-current="true"><img class="flag" src="../assets/img/flags/gb.svg" width="20" height="15" alt=""><span class="lc">EN</span></a>
+    <a href="../fr/index.html" hreflang="fr" lang="fr" data-lang="fr" title="Français" aria-label="Français"><img class="flag" src="../assets/img/flags/fr.svg" width="20" height="15" alt=""><span class="lc">FR</span></a>
+    <a href="../zh-hans/index.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-hans" title="简体中文" aria-label="简体中文"><img class="flag" src="../assets/img/flags/cn.svg" width="20" height="15" alt=""><span class="lc">简</span></a>
+    <a href="../zh-hant/index.html" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant" title="繁體中文" aria-label="繁體中文"><img class="flag" src="../assets/img/flags/hk.svg" width="20" height="15" alt=""><span class="lc">繁</span></a>
+    <a href="../ja/index.html" hreflang="ja" lang="ja" data-lang="ja" title="日本語" aria-label="日本語"><img class="flag" src="../assets/img/flags/jp.svg" width="20" height="15" alt=""><span class="lc">日</span></a>
+  </nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme">◐</button>
+</div></header>
+
+<main>
+<section class="hero">
+    <div>
+      <p class="kicker">Historical cryptography · China · Japan · 1916</p>
+      <p class="big-cjk" lang="zh-Hant">文密</p>
+      <h1>The Wenmi code, broken</h1>
+      <p class="standfirst">In the summer of 1916, a Chinese envoy in Tokyo was negotiating Japanese rifles and loans for the rebel provinces of southern China. His telegrams, enciphered in a system called <span lang="zh-Hant">文密</span> (<i>Wenmi</i>), were intercepted and copied by the Japanese administration, then lay for more than a century in Tokyo's diplomatic archives. Here they are, read for the most part.</p>
+      <p class="byline">An investigation building on <a href="sources.html#s1">Daniel Bourdeau</a>'s work on the telegrams of Sun Yat-sen's circle.</p>
+    </div>
+    <figure style="margin:0">
+      <img src="../assets/img/jacar-B03050090000-fr0416b.jpg" width="1400" height="985" alt="Japanese telegraph form of 19 July 1916, Tokyo to Canton. Prefix 2429 1378, then ten-letter groups: Fazihipego wezelucuna hamodarodo vorokesiya xodugoluro xoxotuhica hematemiba giheyuxifa; signed 関正雄.">
+      <figcaption>Telegram of 19 July 1916, Tokyo → Canton, copied by the Japanese Ministry of Communications. The two numbers <code>2429 1378</code> read <span lang="zh-Hant">文密</span> in the Chinese telegraph code; the enciphered words follow. Deciphered: <span lang="zh-Hant">報傳取消日人態度遽變確否速示俾便行止伸</span>. JACAR B03050090000, image 0416.</figcaption>
+    </figure>
+  </section>
+
+  <section class="facts" aria-label="Key figures">
+    <div class="fact"><b>7</b><span>telegrams from June–September 1916 read</span></div>
+    <div class="fact"><b>351</b><span>Chinese characters recovered, 19 of them still doubtful</span></div>
+    <div class="fact"><b>100</b><span>syllables laid out in a regular grid: that is the whole key</span></div>
+    <div class="fact"><b>1</b><span>held-out message, never used to tune the key, that reads under it</span></div>
+  </section>
+
+  <section class="cards">
+    <a class="card" href="history.html">
+      <p class="kicker">Article 1 · Background</p>
+      <h2>Rifles, loans and telegrams: China in 1916 through a secret code</h2>
+      <p>Who were Sun Yat-sen, Yuan Shikai, the "Military Affairs Council"? Why did a Chinese envoy in Tokyo encipher his messages, and why did Japan copy them? An introduction for readers new to Chinese history, followed by what the telegrams say.</p>
+      <span class="more">Read the article →</span>
+    </a>
+    <a class="card" href="method.html">
+      <p class="kicker">Article 2 · Technical write-up</p>
+      <h2>Breaking Wenmi: from letter structure to a parameter-free key</h2>
+      <p>Blind transcription, keyless tests, constrained simulated annealing, validation on a held-out message, and finally the G0 grid. The dead ends matter, so we describe them, along with the tools and the code.</p>
+      <span class="more">Read the write-up →</span>
+    </a>
+  </section>
+
+  <section class="article">
+    <div class="status">
+      <h4>Where things stand</h4>
+      <p>The <strong>principle</strong> of the cipher is established for the Tokyo stream (June–September 1916): a regular grid turns each half of a telegraph code into a syllable. The text is settled for the most part; about twenty characters remain uncertain and are marked as such. A <strong>second channel</strong> bearing the same name, with <i>y</i> as a sixth vowel (Yunnan telegrams, the Sun ↔ Dai Jitao message of June 1917), is <strong>not</strong> broken.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="inner">
+  Telegram images: JACAR (Japan Center for Asian Historical Records), Diplomatic Archives of the Ministry of Foreign Affairs of Japan. Prior work: Daniel Bourdeau (CC BY 4.0). <a href="sources.html">All sources</a>.
+</div></footer>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

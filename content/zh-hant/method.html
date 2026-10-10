@@ -1,0 +1,159 @@
+<!-- {"title": "破解文密", "description": "「文密」電碼（1916）破譯技術報告：盲讀轉寫、無密鑰檢驗、模擬退火求解、留出電報驗證、G0 表。"} -->
+<article class="article">
+  <header class="lede">
+    <p class="kicker">第二篇 · 技術報告</p>
+    <h1>破解文密：從字母結構到無參數的密鑰</h1>
+    <p class="standfirst">如何從「<i>fazihipego wezelucuna</i>」走到「報傳取消日人態度遽變」：轉寫、三十次計算（大多以失敗告終）、一個改變全局的簡單統計檢驗，以及一把一行就能寫完的密鑰。</p>
+    <p class="byline">閱讀時間：約25分鐘 · 適合對機率與少量程式碼不陌生的讀者</p>
+    <p class="legend-unc"><mark class="unc">加點線底線</mark>的內容為尚未證實的推測。</p>
+  </header>
+
+  <nav class="toc" aria-label="目錄">
+    <strong>目錄</strong>
+    <ol>
+      <li><a href="#tldr">概要：加密系統</a></li>
+      <li><a href="#depart">起點：Daniel Bourdeau 的研究</a></li>
+      <li><a href="#regles">規則</a></li>
+      <li><a href="#transcription">第一步 —— 讀出職員寫下的字母</a></li>
+      <li><a href="#echecs">第二步 —— 哪些方法失敗了，為什麼</a></li>
+      <li><a href="#structure">第三步 —— 無密鑰檢驗：子音代表十位</a></li>
+      <li><a href="#solveur">第四步 —— 帶約束的求解器與留出電報</a></li>
+      <li><a href="#g0">第五步 —— G0 表</a></li>
+      <li><a href="#validation">憑什麼相信：對照檢驗</a></li>
+      <li><a href="#canal2">懸而未決：第二通道</a></li>
+      <li><a href="#outils">工具</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="tldr">概要：加密系統</h2>
+  <p>東京一路電報（1916年6月至9月）的加密分五步，沒有現代意義上的秘密密鑰：</p>
+  <div class="pipeline">
+    <div>中文原文<b lang="zh-Hant">報</b></div>
+    <div>公開的中文電碼<b>1032</b></div>
+    <div>拆成兩半<b>10 | 32</b></div>
+    <div>每半 → 一個音節（G0 表）<b>fa | zi</b></div>
+    <div>音節相連，十字母一組<b>fazihipego</b></div>
+  </div>
+  <p>G0 表為 00 到 99 的每個數指定一個「子音＋母音」音節。子音從 <i>h</i> 開始依字母<strong>倒序</strong>排列（h g f d c b z y x w v t s r q p n m l k），<strong>每個十位兩個子音</strong>；母音 <i>a e i o u</i> 表示個位，第一個子音依升序、第二個依降序（蛇形排列）：</p>
+  <div data-g0-grid></div>
+  <p>於是 <code>ha</code> = 00，<code>hu</code> = 04，<code>gu</code> = 05，<code>ga</code> = 09，<code>fa</code> = 10……<code>ka</code> = 99。以 Python 撰寫：</p>
+<pre><code>ORDER, V = "hgfdcbzyxwvtsrqpnmlk", "aeiou"
+G0 = {c + v: 10 * (i // 2) + (j if i % 2 == 0 else 9 - j)
+      for i, c in enumerate(ORDER) for j, v in enumerate(V)}
+
+def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
+    s = [letters[k:k+2] for k in range(0, len(letters), 2)]
+    return ["%02d%02d" % (G0[a], G0[b]) for a, b in zip(s[::2], s[1::2])]</code></pre>
+  <p>每封電報以署名「伸」（<code>heyu</code> = 0135）結尾，有時為「伸令」，其後是日期，或用韻目代日（巧 十八日、漾 二十三日、元 十三日……），或用數字（卅 三十日）。</p>
+
+  <h3>動手試試</h3>
+  <p>選擇一封電報，點擊任一漢字或開始逐字演示：對應的兩個音節會在密文與上方表格中標亮。橙色虛線框的字為<strong>存疑</strong>字（電報紙字跡不確定或為罕用字）。</p>
+  <div class="decoder" data-default="0416b">
+    <div class="controls">
+      <label><span class="sr">電報</span><select></select></label>
+      <button type="button" data-act="play">▶ 逐字演示</button>
+    </div>
+    <div class="cipher" aria-label="密文"></div>
+    <div class="tokens"></div>
+    <p class="meta"></p>
+    <p class="legend">每格依次為：音節 · 電碼 · 漢字。</p>
+  </div>
+
+  <h2 id="depart">起點：Daniel Bourdeau 的研究</h2>
+  <div class="credit">
+    <p>一切始於 <strong>Daniel Bourdeau</strong> 的〈<a href="https://dbourdeau.github.io/cyphersolver/sunintercepts.html">Sun Yat-sen's circle on the wire, 1916–17</a>〉<sup class="fn"><a href="sources.html#s1">[1]</a></sup> 及其程式庫 <a href="https://github.com/dbourdeau/cyphersolver">dbourdeau/cyphersolver</a><sup class="fn"><a href="sources.html#s2">[2]</a></sup>。他從 S. Tomokiyo 公布的山田純三郎兩張「壓縮表」出發<sup class="fn"><a href="sources.html#s8">[8]</a></sup>，辨識出一<strong>族</strong>由20個子音與5個母音構成的密鑰（100個音節，對應 00—99），生成了整族密鑰（57,600張表，包括填寫順序、起點與 ±111 加數），並以漢字語言模型對每張表在每封電報上評分。只有在長電報上達到 z ≥ 6，<em>而且</em>能解開未參與挑選的其他電報的密鑰才被接受；韻目日期提供了獨立的檢驗。結果是約六十封電報被全部或部分讀出。</p>
+    <p>關於「文密」，他記錄了十字母一組、子音 <i>w</i>、母音 <i>y</i>，以及一個否定結果：該族的六母音版本（約20萬張表）都沒有超過 z = 4.1。他認為這可能是另一套系統，建立在一張不依規則排列的表上。我們沿用了他對檔案的定位、他的驗證方法（留出電報、核對韻目）以及「半個電碼變成一個音節」的思路。下文將說明：東京一路的表<em>確實</em>遵循規則，只是這條規則不在他那一族之內——字母倒序、每個十位兩個子音、母音蛇形排列。</p>
+  </div>
+
+  <h2 id="regles">規則</h2>
+  <p>歷史破譯是自欺的理想溫床：參數夠多時，任何雜訊裡都能「讀出」中文。因此本研究在事先確定的規則下進行，並記錄於只增不改的日誌中（逾1,200行，共31次研究）：</p>
+  <ul>
+    <li><strong>資料不可改動。</strong>JACAR 的 PDF 原樣保存，並記錄 SHA-256 校驗值；每一次新的轉寫都是新的版本檔案。</li>
+    <li><strong>一封留出電報。</strong>0406號電報（1916年7月12日）<strong>從未</strong>用於調整密鑰或修改讀法，只用於評判。</li>
+    <li><strong>不用「明文猜測」。</strong>從未把任何猜想的詞（人名、套語）強加於明文。只以日本職員在電報紙上以明文寫下的日期作為錨點，並測試了多組錨點。</li>
+    <li><strong>正對照與零對照。</strong>每次搜尋同時在一段已知中文文本（以同類型的已知密鑰加密，求解器必須找回密鑰）與打亂後的資料（求解器不應找到任何東西）上執行。檔案上的得分只有與這兩個基準相比才有意義。</li>
+    <li><strong>多個隨機種子。</strong>只有從不同隨機起點得到完全相同的最佳解時才予以採納。</li>
+    <li><strong>狀態明確。</strong>每個結果都標註為：事實、假設、否定檢驗、候選、已印證。</li>
+  </ul>
+
+  <h2 id="transcription">第一步 —— 讀出職員寫下的字母</h2>
+  <p>密文只以日本職員的手抄件形式存在。<i>g</i> 與 <i>q</i>、<i>x</i> 與 <i>d</i>、<i>u</i> 與 <i>n</i> 很容易混淆；錯一個字母就會錯一個字，漏一個字母則會讓整封電報其後的部分全部錯位。</p>
+  <ul>
+    <li><strong>處理影像</strong>：以 300 dpi 轉出頁面，旋轉，裁出每張電報紙與每一組（使用 macOS 的 <code>sips</code>，不做任何影像修飾）。</li>
+    <li><strong>盲讀</strong>：第一位讀者（AI 助手）在看到任何既有轉寫<em>之前</em>，先確定自己的讀法，附帶異讀與信心程度。</li>
+    <li><strong>獨立的人工閱讀</strong>：Brice 透過一個本機小介面閱讀各組字母，介面以<strong>匿名並打亂順序</strong>的方式呈現片段（讀者不知道屬於哪封電報、哪個位置），並可匯出 JSON。共八批、數百個片段；部分批次專門針對某個字母，並附上同一抄寫員的可靠字例供比較。</li>
+    <li><strong>共識</strong>：讀者之間多數決，分歧回到影像上裁決。工作語料從 v1（211個電碼，71個單位被遮蔽）發展到 v8。</li>
+  </ul>
+  <p>有一處讀法細節起了決定性作用：很長時間裡，<i>q</i> 被當作 <i>g</i> 的異寫。人工閱讀把兩者區分開來，於是字母表恰好有<strong>20個子音</strong>（b c d f g h k l m n p q r s t v w x y z，沒有 <i>j</i>）。在當時最好的模型下，僅此一區分就使得分從681升到829。</p>
+  <div class="status warn">
+    <h4>已聲明的偏差</h4>
+    <p>最後兩批閱讀（「輔助閱讀」以及對16個存疑電碼的複讀）<strong>不是</strong>盲讀：讀者知道模型的建議。為降低風險，每封電報最後四個單位（署名與日期）一律不得據此修改，留出電報0406從未改動，且每條建議都必須在影像上確認（接受18條，否決27條）。</p>
+  </div>
+
+  <h2 id="echecs">第二步 —— 哪些方法失敗了，為什麼</h2>
+  <p>在三十次研究中，採用的是破解未知替換密碼的經典路線：</p>
+  <ul>
+    <li><strong>語言模型</strong>（電碼的一元與二元統計），以維基文庫中約43萬字的孫中山著作轉成電碼訓練，後又補充了已出版的1916年電報；</li>
+    <li>一張<strong>未知表</strong>「音節 → 數字」（100格，任意排列），以<strong>模擬退火</strong>搜尋：多執行緒 C++ 引擎，64個起點 × 3,000萬次迭代，再做迭代局部搜尋；在8核心機器上每輪約12分鐘；</li>
+    <li><strong>錨點</strong>：電報結尾的韻目，由電報紙上的日期推出。</li>
+  </ul>
+  <p>這些搜尋全部失敗，而對照告訴了我們原因。求解器能找回正對照文本的密鑰（例如267個電碼中找回258個）：它是<em>有能力的</em>。但在檔案上，最佳得分（約900）遠低於真實文本（1,200—1,350），同時又明顯高於打亂的資料（約670）。以任意密碼本加密的文本得分在810—940之間：檔案看起來就是這樣。</p>
+  <p>假設中藏著兩個錯誤：</p>
+  <ol>
+    <li><strong>錨點有誤。</strong>對於十六日到三十日，韻目代日使用的聲調系列與最初假設的不同（已在出版的孫中山原電中核實<sup class="fn"><a href="sources.html#s11">[11]</a></sup>）。因此有幾個錨點是錯的。</li>
+    <li><strong>密鑰空間過大。</strong>一張可任意排列的100格表有足夠的自由度，在900分左右製造出雜訊的最佳解。反向實驗證實了這一點：放鬆最終找到的結構（實驗 E21），擬合得分上升，但留出電報變得無法閱讀。這就是過度擬合。</li>
+  </ol>
+  <p>與此同時，一條文獻線索被追查到底。日本駐漢口總領事館的報告（1916年5月9日與11日）<sup class="fn"><a href="sources.html#s5">[5]</a><a href="sources.html#s6">[6]</a></sup>記載了「加111」以及「四位倒序後加111」的再加密方法。報告所附的4月電報確實可以這樣解開（算術進位，結尾為韻目）。但在東京一路上，所有 ±111 的變體——不論是否倒序，也包括它在音節表下造成的殘餘偏移——全部<strong>為否定結果</strong>（實驗 E13、E15、E16）。結論：7月的電報沒有加數密鑰。</p>
+
+  <h2 id="structure">第三步 —— 無密鑰檢驗：子音代表十位</h2>
+  <p>轉機來自一個根本不尋找密鑰的檢驗。中文電碼的形狀很特別：千位數字高度集中（常用電碼大多在 0000 到 7999 之間，幾乎沒有 8xxx 或 9xxx），而個位數字大致均勻。如果半個電碼（兩位數）變成一個音節，問題就是：<strong>音節中哪一部分承載十位？</strong></p>
+  <p>於是依字母在電報中的位置分別計數（實驗 S3）。在承載電碼<em>前半</em>（千位與百位）的位置上，<strong>子音</strong>的分布極不均衡（z ≈ 22）：<i>h</i> 與 <i>g</i> 佔絕對多數，<i>l</i>、<i>p</i>、<i>m</i> 從不出現；而<strong>母音</strong>的分布則很均勻（z ≈ 1）。模擬（S4）顯示，隨機表從不產生這種模式（400次中0次），而<strong>座標表</strong>——子音表示十位、母音表示個位——則能重現它。</p>
+  <p>這一假設（H9）大幅縮小了搜尋空間：不再是任意擺放100個音節，而是把每個子音分配給一個十位、每個母音分配給一個數字。它也顯示某些日期錨點組合是<strong>不可能的</strong>：在 H9 之下，某些假定的韻目會要求同一個子音對應兩個十位。</p>
+
+  <h2 id="solveur">第四步 —— 帶約束的求解器與留出電報</h2>
+  <p>新的求解器（<code>anchor_coord</code>）只搜尋座標表。沒有錨點時，它連正對照都解不開；有十個正確錨點時，它能找回完整密鑰。於是我們列舉出與 H9 <em>相容</em>的錨點組合（324組中的97組），測試其中最合理的幾組。只有一組脫穎而出：<strong>D = {6月23日 漾、7月18日 巧、7月19日 皓、9月13日 元}</strong>。</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>指標（錨點組 D）</th><th class="num">檔案</th><th class="num">打亂（零對照）</th><th class="num">正對照</th></tr></thead>
+    <tbody>
+      <tr><td>得分，語料 v4</td><td class="num">705</td><td class="num">349</td><td class="num">1,203</td></tr>
+      <tr><td>得分，語料 v5（q ≠ g）</td><td class="num">829</td><td class="num">332</td><td class="num">1,216</td></tr>
+      <tr><td>可重複性（3個種子）</td><td class="num" colspan="3">最佳解相同（誤差 0.001 以內），96/96 個單位一致</td></tr>
+    </tbody>
+  </table></div>
+  <p>評判者是留出的 <strong>0406號電報</strong>。我們計算在語言模型下、相對於平均字的每字平均對數概似增益：解出的文字像中文則為正，否則為負。表 D 在語料 v4 上的結果是每字 <strong>+1.9</strong>，在語料 v5 上是 <strong>+3.47</strong>；而其他所有候選表都在 0 或以下，零對照表則為 −1 到 −2.5。在交叉驗證中（S7：以五封電報求解，以第六封評判），該表在 6 封中的 6 封上都能遷移。文字開始可以逐句讀出：三十式槍、萬一千、軍用品已到門司、年息一割、無擔保、第二批械、軍務院、豫定計畫……</p>
+
+  <h2 id="g0">第五步 —— G0 表</h2>
+  <p>逐格查看擬合出的表，一個規律一目了然：子音依字母倒序排列，每個十位兩個，母音先升後降。少數不符合的格子，正是資料約束不足的那些。於是我們以它所近似的<strong>規則表</strong>取代擬合表：這就是 G0，它不再有任何自由參數。</p>
+  <p>結果是整個研究中最有力的檢驗：<strong>在完全不調整的情況下，G0 解讀留出電報0406的得分為每字 +3.99，高於由之導出的擬合表（+3.48）</strong>。一張被擬合「磨糊」的表，不如它所隱藏的簡單規則：如果這條規則就是真正的密鑰，結果正應如此。G0 給出七封電報全部351個電碼，電報結尾也變得一致：署名「伸」後接日期（6月23日為「漾」，7月18日為「巧」，9月13日為「元」，9月30日為「卅」，7月12日為「文」）。</p>
+  <p>有兩個結尾仍不正常：7月19日以 <code>4210</code> 結尾，而非「皓」（<code>4110</code>），<mark class="unc">很可能是加密者或抄寫員的筆誤（一個字母）</mark>；標為6月30日的電報以「卄」（二十）結尾，<mark class="unc">可能說明電文在發出前就已擬好，或日期讀錯</mark>。</p>
+
+  <h2 id="validation">憑什麼相信：對照檢驗</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>事先確定的標準</th><th>結果</th></tr></thead>
+    <tbody>
+      <tr><td>同類型正對照被找回</td><td>是（1,203—1,216；密鑰找回）</td></tr>
+      <tr><td>檔案得分明顯高於零對照</td><td>是（829 對約 335；複讀後為 1,144）</td></tr>
+      <tr><td>不同起點得到相同最佳解</td><td>是（3個種子，最佳解相同）</td></tr>
+      <tr><td>留出電報不經調整即可讀（每字 ≥ +2.5）</td><td>是：G0 下為 +3.99</td></tr>
+      <tr><td>中文文句連貫，且與電報紙上的日期一致</td><td>大體如此；351個字中19個存疑</td></tr>
+      <tr><td>獨立的外部印證</td><td>是：發報人「伸」＝趙伸，在破譯<em>之後</em>由一篇2026年的研究<sup class="fn"><a href="sources.html#s7">[7]</a></sup>確認，該研究描述了同樣的軍火合同</td></tr>
+    </tbody>
+  </table></div>
+  <p>最後一點值得強調：趙伸之名、「第二批械」的交付、廣東拒絕擔保、武器在雲南與廣東之間的分配，這些內容在我們讀到承紅磊的文章<em>之前</em>就已出現在破譯出的電報中。這些詞沒有一個是被注入搜尋的。</p>
+  <p>局限：G0 表是從擬合表中<em>讀出</em>的，並非憑空而來；最後幾批閱讀不是盲讀；譯文為工作譯文。</p>
+
+  <h2 id="canal2">懸而未決：第二通道</h2>
+  <p>另一組電報同樣冠以「文密」：雲南一路的電報，以及1917年6月24日孫中山致戴季陶的電報（JACAR B03050090200，影像 0509）。它們的字母表不同：<i>y</i> 是母音，並出現字母 <i>j</i>。G0 在這裡毫無結果。位置檢驗顯示出同樣的座標結構（子音 z ≈ 22，母音 z ≈ 5），但沒有任何簡單的字母表格適用（試了400種），六母音求解器（E26）也失敗了：正對照全部找回，檔案卻只達到其水準的15%。<mark class="unc">問題可能出在這一通道的機器讀法與錨點上</mark>；下一步將像第一通道那樣進行人工盲讀。Daniel Bourdeau 所指出的「<i>y</i> 為母音」正對應這一通道。</p>
+
+  <h2 id="outils">工具</h2>
+  <ul>
+    <li><strong>資料</strong>：JACAR 公開 PDF<sup class="fn"><a href="sources.html#s3">[3]</a>–<a href="sources.html#s6">[6]</a></sup>；中文電碼表（Unicode Unihan 欄位 <code>kTaiwanTelegraph</code> 與 <code>kMainlandTelegraph</code>）<sup class="fn"><a href="sources.html#s10">[10]</a></sup>。</li>
+    <li><strong>語料</strong>：維基文庫中的孫中山著作<sup class="fn"><a href="sources.html#s12">[12]</a></sup>、Sunology 網站上的1916年電報<sup class="fn"><a href="sources.html#s11">[11]</a></sup>；<code>jieba</code> 斷詞<sup class="fn"><a href="sources.html#s14">[14]</a></sup>；以 OpenCC 處理異體字<sup class="fn"><a href="sources.html#s13">[13]</a></sup>。</li>
+    <li><strong>計算</strong>：Python 3（NumPy）用於檢驗、前處理與評分；C++17 求解器（<code>clang++ -O3 -march=native -pthread</code>），採用模擬退火與迭代局部搜尋：<code>anchor_sa</code>、<code>anchor_arr</code>（排列、進位與 ±111 偏移）、<code>anchor_coord</code> 與 <code>anchor_coord6</code>（座標表）。一台8核心筆電即可。</li>
+    <li><strong>閱讀</strong>：本機 HTML 盲讀介面（匿名打亂片段，匯出 JSON）與合併讀法的腳本。</li>
+    <li><strong>AI 助手</strong>：研究由 Brice 主導，藉助程式助手完成：C01—C13 使用 Codex（GPT-6.1 Sol），C14 起使用 Claude Opus 5.5，完成破譯的 C31 使用 Claude Fable 5.1。助手撰寫求解器與測試、維護日誌並提出假設；在影像上對密文的關鍵讀法與裁決均由人完成。</li>
+  </ul>
+  <p>日誌、腳本與否定結果將隨本網站一同公開，以便任何人都能重複這些計算。</p>
+  <hr>
+  <p class="byline">資料來源見<a href="sources.html">資料來源頁</a>。感謝 Daniel Bourdeau，他的文章與程式碼為本研究開闢了道路。</p>
+</article>

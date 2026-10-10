@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breaking Wenmi</title>
+<meta name="description" content="Technical write-up of the decipherment of the 文密 (Wenmi) code, 1916: blind transcription, keyless tests, simulated-annealing solvers, held-out validation, the G0 grid.">
+<link rel="alternate" hreflang="en" href="../en/method.html">
+<link rel="alternate" hreflang="fr" href="../fr/method.html">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-hans/method.html">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-hant/method.html">
+<link rel="alternate" hreflang="ja" href="../ja/method.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%239b2c1f'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f7f3ea' font-family='serif'%3E%E6%96%87%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header"><div class="inner">
+  <a class="brand" href="index.html"><span class="seal" lang="zh-Hant">文密</span> The Wenmi code</a>
+  <nav class="menu">
+    <a href="index.html">Home</a>
+    <a href="history.html">The history</a>
+    <a href="method.html" aria-current="page">The method</a>
+    <a href="sources.html">Sources</a>
+  </nav>
+  <nav class="lang-switch" aria-label="Language">
+    <a href="../en/method.html" hreflang="en" lang="en" data-lang="en" title="English" aria-label="English" aria-current="true"><img class="flag" src="../assets/img/flags/gb.svg" width="20" height="15" alt=""><span class="lc">EN</span></a>
+    <a href="../fr/method.html" hreflang="fr" lang="fr" data-lang="fr" title="Français" aria-label="Français"><img class="flag" src="../assets/img/flags/fr.svg" width="20" height="15" alt=""><span class="lc">FR</span></a>
+    <a href="../zh-hans/method.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-hans" title="简体中文" aria-label="简体中文"><img class="flag" src="../assets/img/flags/cn.svg" width="20" height="15" alt=""><span class="lc">简</span></a>
+    <a href="../zh-hant/method.html" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant" title="繁體中文" aria-label="繁體中文"><img class="flag" src="../assets/img/flags/hk.svg" width="20" height="15" alt=""><span class="lc">繁</span></a>
+    <a href="../ja/method.html" hreflang="ja" lang="ja" data-lang="ja" title="日本語" aria-label="日本語"><img class="flag" src="../assets/img/flags/jp.svg" width="20" height="15" alt=""><span class="lc">日</span></a>
+  </nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme">◐</button>
+</div></header>
+
+<main>
+<article class="article">
+  <header class="lede">
+    <p class="kicker">Article 2 · Technical write-up</p>
+    <h1>Breaking Wenmi: from letter structure to a parameter-free key</h1>
+    <p class="standfirst">How you get from "<i>fazihipego wezelucuna</i>" to "<span lang="zh-Hant">報傳取消日人態度遽變</span>": the transcription, thirty sessions of computation, most of them negative, one simple statistical test that changes everything, and a key that fits on one line.</p>
+    <p class="byline">Reading time: about 25 minutes · level: comfortable with probability and a little code</p>
+    <p class="legend-unc">Passages <mark class="unc">underlined with dots</mark> are unconfirmed hypotheses.</p>
+  </header>
+
+  <nav class="toc" aria-label="Contents">
+    <strong>Contents</strong>
+    <ol>
+      <li><a href="#tldr">In short: the system</a></li>
+      <li><a href="#depart">Starting point: Daniel Bourdeau's work</a></li>
+      <li><a href="#regles">Ground rules</a></li>
+      <li><a href="#transcription">Step 1 — Reading what the clerk wrote</a></li>
+      <li><a href="#echecs">Step 2 — What did not work (and why)</a></li>
+      <li><a href="#structure">Step 3 — A keyless test: the consonant encodes the tens</a></li>
+      <li><a href="#solveur">Step 4 — A constrained solver and a held-out message</a></li>
+      <li><a href="#g0">Step 5 — The G0 grid</a></li>
+      <li><a href="#validation">Why believe it: the controls</a></li>
+      <li><a href="#canal2">The open problem: the second channel</a></li>
+      <li><a href="#outils">Tools</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="tldr">In short: the system</h2>
+  <p>The Tokyo stream (June–September 1916) is enciphered in five operations, with no secret key in the modern sense:</p>
+  <div class="pipeline">
+    <div>Chinese text<b lang="zh-Hant">報</b></div>
+    <div>Public telegraph code<b>1032</b></div>
+    <div>Split into two halves<b>10 | 32</b></div>
+    <div>Each half → a syllable (G0 grid)<b>fa | zi</b></div>
+    <div>Syllables chained, 10-letter words<b>fazihipego</b></div>
+  </div>
+  <p>The G0 grid assigns a consonant + vowel syllable to each number from 00 to 99. The consonants are taken in <strong>reverse</strong> alphabetical order starting from <i>h</i> (h g f d c b z y x w v t s r q p n m l k), <strong>two per tens digit</strong>; the vowels <i>a e i o u</i> encode the units digit, ascending for the first consonant of the pair and descending for the second (a "boustrophedon" or serpentine path):</p>
+  <div data-g0-grid></div>
+  <p>So <code>ha</code> = 00, <code>hu</code> = 04, <code>gu</code> = 05, <code>ga</code> = 09, <code>fa</code> = 10… <code>ka</code> = 99. In Python:</p>
+<pre><code>ORDER, V = "hgfdcbzyxwvtsrqpnmlk", "aeiou"
+G0 = {c + v: 10 * (i // 2) + (j if i % 2 == 0 else 9 - j)
+      for i, c in enumerate(ORDER) for j, v in enumerate(V)}
+
+def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
+    s = [letters[k:k+2] for k in range(0, len(letters), 2)]
+    return ["%02d%02d" % (G0[a], G0[b]) for a, b in zip(s[::2], s[1::2])]</code></pre>
+  <p>Each message ends with the signature <span lang="zh-Hant">伸</span> (<code>heyu</code> = 0135), sometimes <span lang="zh-Hant">伸令</span>, then the day of the month, written either as a <span lang="zh-Hant">韻目代日</span> rhyme (<span lang="zh-Hant">巧</span> 18, <span lang="zh-Hant">漾</span> 23, <span lang="zh-Hant">元</span> 13…) or as a Chinese numeral (<span lang="zh-Hant">卅</span> 30).</p>
+
+  <h3>Try it</h3>
+  <p>Pick a telegram, then click a character or start the step-by-step playback: the two syllables light up in the ciphertext and in the grid above. Characters with an orange dashed border are <strong>doubtful</strong> (uncertain reading of the form, or rare character).</p>
+  <div class="decoder" data-default="0416b">
+    <div class="controls">
+      <label><span class="sr">Telegram</span><select></select></label>
+      <button type="button" data-act="play">▶ Step-by-step</button>
+    </div>
+    <div class="cipher" aria-label="Ciphertext"></div>
+    <div class="tokens"></div>
+    <p class="meta"></p>
+    <p class="legend">Each box: syllables · telegraph code · character.</p>
+  </div>
+
+  <h2 id="depart">Starting point: Daniel Bourdeau's work</h2>
+  <div class="credit">
+    <p>Everything starts from "<a href="https://dbourdeau.github.io/cyphersolver/sunintercepts.html">Sun Yat-sen's circle on the wire, 1916–17</a>" by <strong>Daniel Bourdeau</strong><sup class="fn"><a href="sources.html#s1">[1]</a></sup> and his repository <a href="https://github.com/dbourdeau/cyphersolver">dbourdeau/cyphersolver</a><sup class="fn"><a href="sources.html#s2">[2]</a></sup>. Starting from Yamada Junzaburō's two "condenser" tables published by S. Tomokiyo<sup class="fn"><a href="sources.html#s8">[8]</a></sup>, he recognised a <strong>family</strong> of keys with 20 consonants and 5 vowels (100 syllables, one per number from 00 to 99), generated the whole family (57,600 tables, including fill orders, origins and the ±111 additive), and scored every table on every telegram with a Chinese character model. A key was accepted only at z ≥ 6 on a long telegram <em>and</em> if it decoded other telegrams it had not been chosen on; date rhymes provided an independent check. The result: some sixty telegrams read, in whole or in part.</p>
+    <p>For <span lang="zh-Hant">文密</span> he reports ten-letter words, a consonant <i>w</i>, a vowel <i>y</i>, and a negative result: a six-vowel version of his family (about 200,000 tables) does not exceed z = 4.1. He concludes that the system is probably separate and built on a table that does not follow a rule. We took over his identification of the documents, his validation method (holding messages out, checking rhymes) and the idea that half a telegraph code becomes a syllable. What follows shows that, for the Tokyo stream, the table <em>does</em> follow a rule, but one outside his family: reversed alphabet, two consonants per tens digit, serpentine vowels.</p>
+  </div>
+
+  <h2 id="regles">Ground rules</h2>
+  <p>Historical decipherment is the perfect place to fool yourself: with enough parameters, you can "read" Chinese in any noise. The investigation was therefore run under rules fixed in advance and recorded in an append-only log (over 1,200 lines, 31 sessions):</p>
+  <ul>
+    <li><strong>Immutable sources.</strong> JACAR PDFs kept as downloaded, with SHA-256 hashes recorded; every new reading is a new versioned file.</li>
+    <li><strong>A held-out message.</strong> Telegram 0406 (12 July 1916) was <strong>never</strong> used to tune a key or correct a reading. It is used only to judge.</li>
+    <li><strong>No cribs.</strong> No guessed word (name, formula) was ever forced into the plaintext. Only dates, written in clear on the forms by the Japanese clerk, served as anchors, and several anchor sets were tested.</li>
+    <li><strong>Positive and null controls.</strong> Each search is also run on a known Chinese text enciphered with a known key of the same form (the solver must recover it), and on shuffled data (the solver must find nothing). A score on the archives only means something relative to those two benchmarks.</li>
+    <li><strong>Several seeds.</strong> An optimum is kept only if it is found identically from different random starts.</li>
+    <li><strong>Explicit status.</strong> Every result is labelled: fact, hypothesis, negative test, candidate, corroborated.</li>
+  </ul>
+
+  <h2 id="transcription">Step 1 — Reading what the clerk wrote</h2>
+  <p>The ciphertext only exists as handwritten copies by Japanese clerks. The letters <i>g</i> and <i>q</i>, <i>x</i> and <i>d</i>, <i>u</i> and <i>n</i> are easily confused; a single wrong letter changes a character, a skipped letter shifts the whole rest of the message.</p>
+  <ul>
+    <li><strong>Rendering</strong> of the pages at 300 dpi, rotation, cropping of each form and each group (macOS <code>sips</code>, no image retouching).</li>
+    <li><strong>Blind reading</strong>: a first reader (an AI assistant) fixes its reading, with variants and confidence levels, <em>before</em> seeing any earlier transcription.</li>
+    <li><strong>Independent human reading</strong>: Brice read the groups through a small local interface that presents <strong>anonymous, shuffled</strong> excerpts (you don't know which message or position you are looking at), with JSON export. Eight batches, several hundred excerpts; some batches target one letter, with reliable examples from the same copyist for comparison.</li>
+    <li><strong>Consensus</strong> by majority between readers, disagreements settled on the image. The working corpus went from version v1 (211 codes, 71 masked units) to v8.</li>
+  </ul>
+  <p>One reading detail proved decisive: for a long time <i>q</i> was treated as a graphic variant of <i>g</i>. Human reading separated them, giving an alphabet of exactly <strong>20 consonants</strong> (b c d f g h k l m n p q r s t v w x y z, no <i>j</i>). Under the best model of the time, that distinction alone raised the score from 681 to 829.</p>
+  <div class="status warn">
+    <h4>Declared bias</h4>
+    <p>The last two reading batches ("assisted readings", then a re-reading of 16 doubtful codes) were <strong>not</strong> blind: the reader knew what the model proposed. To limit the risk, the last four units of each message (signature and date) could never be changed this way, the held-out message 0406 was never touched, and every proposal had to be confirmed on the image (18 accepted, 27 rejected).</p>
+  </div>
+
+  <h2 id="echecs">Step 2 — What did not work (and why)</h2>
+  <p>For thirty sessions the approach was the classic one for an unknown substitution:</p>
+  <ul>
+    <li>a <strong>language model</strong> (unigrams and bigrams of telegraph codes) trained on about 430,000 characters of Sun Yat-sen's writings from Wikisource, converted to codes, later supplemented with published 1916 telegrams;</li>
+    <li>an <strong>unknown table</strong> syllable → number (100 cells, freely chosen), searched by <strong>simulated annealing</strong>: multi-threaded C++ engine, 64 restarts × 30 million iterations, then iterated local search; about 12 minutes per pass on 8 cores;</li>
+    <li><strong>anchors</strong>: the rhyme of the day at the end of the message, deduced from the date written on the form.</li>
+  </ul>
+  <p>All these searches failed, and the controls say why. The solver recovered the keys of the positive texts (for example 258 codes out of 267): it was <em>capable</em>. But on the archives its best score (≈ 900) stayed far below that of a real text (1,200–1,350), while clearly beating shuffled data (≈ 670). A text enciphered with an arbitrary codebook scored 810–940: the archives looked like that.</p>
+  <p>Two errors were hiding in the assumptions:</p>
+  <ol>
+    <li><strong>Wrong anchors.</strong> For days 16 to 30, the rhyme convention uses a different tonal series from the one assumed at first (checked in published originals by Sun<sup class="fn"><a href="sources.html#s11">[11]</a></sup>). Several anchors were therefore wrong.</li>
+    <li><strong>A key space that was too large.</strong> A free 100-cell table gives enough freedom to manufacture noise optima around 900. The reverse experiment confirms it: relaxing the structure eventually found (experiment E21) raises the fit but makes the held-out message unreadable. That is overfitting.</li>
+  </ol>
+  <p>Meanwhile, a documentary lead was followed to the end. The reports of the Japanese consulate in Hankou (9 and 11 May 1916)<sup class="fn"><a href="sources.html#s5">[5]</a><a href="sources.html#s6">[6]</a></sup> describe "+111" and then "reverse the four digits + 111" superencipherment. The April telegrams attached to the reports do decode that way (arithmetic carry, rhyme of the day at the end). But every ±111 variant, with or without reversal, and with the residual offset this creates under a syllable table, is <strong>negative</strong> on the Tokyo stream (experiments E13, E15, E16). Conclusion: no additive key in July.</p>
+
+  <h2 id="structure">Step 3 — A keyless test: the consonant encodes the tens</h2>
+  <p>The turning point came from a test that looks for no key at all. Telegraph codes have a very particular shape: the thousands digit is concentrated (common codes are mostly between 0000 and 7999, almost never 8xxx or 9xxx), while the units digits are roughly uniform. If half a code (two digits) becomes a syllable, the question is: <strong>which part of the syllable carries the tens digit?</strong></p>
+  <p>So we count letters by their rank in the message (experiment S3). At the ranks carrying the <em>first</em> half of the code (thousands and hundreds), the distribution of <strong>consonants</strong> is extremely skewed (z ≈ 22): <i>h</i> and <i>g</i> dominate, <i>l</i>, <i>p</i> and <i>m</i> never occur. The <strong>vowels</strong>, on the other hand, are homogeneous (z ≈ 1). A simulation (S4) shows that a random table never produces this pattern (0 cases out of 400), while a <strong>coordinate table</strong>, where the consonant gives the tens digit and the vowel the units digit, reproduces it.</p>
+  <p>This hypothesis (H9) shrinks the search space dramatically: no longer placing 100 syllables freely, but assigning each consonant to a tens digit and each vowel to a digit. It also showed that some sets of date anchors were <strong>impossible</strong>: under H9, certain assumed rhymes would require the same consonant for two tens digits.</p>
+
+  <h2 id="solveur">Step 4 — A constrained solver and a held-out message</h2>
+  <p>A new solver (<code>anchor_coord</code>) searches only coordinate tables. Without anchors it fails even on positive controls; with ten true anchors it recovers the whole key. We then enumerate the anchor sets <em>compatible</em> with H9 (97 out of 324) and test the most plausible. One stands out: <strong>D = {23 June <span lang="zh-Hant">漾</span>, 18 July <span lang="zh-Hant">巧</span>, 19 July <span lang="zh-Hant">皓</span>, 13 September <span lang="zh-Hant">元</span>}</strong>.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Measure (anchor set D)</th><th class="num">Archives</th><th class="num">Shuffled (null)</th><th class="num">Positive control</th></tr></thead>
+    <tbody>
+      <tr><td>Score, corpus v4</td><td class="num">705</td><td class="num">349</td><td class="num">1,203</td></tr>
+      <tr><td>Score, corpus v5 (q ≠ g)</td><td class="num">829</td><td class="num">332</td><td class="num">1,216</td></tr>
+      <tr><td>Reproducibility (3 seeds)</td><td class="num" colspan="3">same optimum to within 0.001, 96/96 units agreeing</td></tr>
+    </tbody>
+  </table></div>
+  <p>The judge is <strong>message 0406</strong>, held out. We measure the mean log-likelihood gain per character under the language model, relative to an average character: positive if the decoding looks like Chinese, negative otherwise. Table D decodes it at <strong>+1.9</strong> per character on corpus v4, then <strong>+3.47</strong> on corpus v5, while every other candidate table stays at 0 or below and null tables give −1 to −2.5. In cross-validation (S7: tune on five messages, judge on the sixth), the table transfers to 6 messages out of 6. The text becomes readable phrase by phrase: <span lang="zh-Hant">三十式槍、萬一千、軍用品已到門司、年息一割、無擔保、第二批械、軍務院、豫定計畫</span>…</p>
+
+  <h2 id="g0">Step 5 — The G0 grid</h2>
+  <p>Looking at the fitted table cell by cell, a regularity jumps out: the consonants follow reverse alphabetical order, two per tens digit, and the vowels go up then down. The few cells that deviate are those the data constrained poorly. So we replace the fitted table with the <strong>regular grid</strong> it approximates: G0, which has no free parameter left.</p>
+  <p>The result is the strongest test of the investigation: <strong>with no tuning at all, G0 decodes the held-out message 0406 at +3.99 per character, better than the fitted table it came from (+3.48)</strong>. A table blurred by fitting does worse than the simple rule it was hiding: that is what you expect if the rule is the true key. G0 yields all 351 codes of the seven messages, and the message endings become consistent: signature <span lang="zh-Hant">伸</span>, then the day (<span lang="zh-Hant">漾</span> for 23 June, <span lang="zh-Hant">巧</span> for 18 July, <span lang="zh-Hant">元</span> for 13 September, <span lang="zh-Hant">卅</span> for 30 September, <span lang="zh-Hant">文</span> for 12 July).</p>
+  <p>Two endings remain anomalous: 19 July ends with <code>4210</code> instead of <span lang="zh-Hant">皓</span> (<code>4110</code>), <mark class="unc">probably an encipherer's or copyist's error (one letter)</mark>; the message dated 30 June ends with <span lang="zh-Hant">卄</span> (20), <mark class="unc">which might indicate drafting before sending, or a misread date</mark>.</p>
+
+  <h2 id="validation">Why believe it: the controls</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Criterion fixed in advance</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><td>Positive controls of the same form recovered</td><td>Yes (1,203–1,216; keys recovered)</td></tr>
+      <tr><td>Archives clearly above the nulls</td><td>Yes (829 vs ≈ 335; 1,144 after re-reading)</td></tr>
+      <tr><td>Optimum reproducible from different starts</td><td>Yes (3 seeds, same optimum)</td></tr>
+      <tr><td>Held-out message readable without tuning (≥ +2.5 / character)</td><td>Yes: +3.99 under G0</td></tr>
+      <tr><td>Continuous Chinese text, consistent with the dates on the forms</td><td>Yes for the most part; 19 doubtful characters out of 351</td></tr>
+      <tr><td>Independent external cross-check</td><td>Yes: the sender <span lang="zh-Hant">伸</span> = <span lang="zh-Hant">趙伸</span>, identified <em>after</em> decoding, in a 2026 study<sup class="fn"><a href="sources.html#s7">[7]</a></sup> describing the same arms contracts</td></tr>
+    </tbody>
+  </table></div>
+  <p>That last point deserves emphasis: Zhao Shen's name, the delivery of the "second batch of weapons", the guarantee refused by Guangdong and the division of weapons between Yunnan and Guangdong appear in the decoded telegrams <em>before</em> Cheng Honglei's article was read. None of these words was injected into the search.</p>
+  <p>Limitations: the grid was <em>read off</em> a fitted table, it did not fall from the sky; the last reading batches were not blind; and the translations are working translations.</p>
+
+  <h2 id="canal2">The open problem: the second channel</h2>
+  <p>Another group of telegrams also bears the name <span lang="zh-Hant">文密</span>: the Yunnan stream, and Sun Yat-sen's telegram to Dai Jitao of 24 June 1917 (JACAR B03050090200, image 0509). Their alphabet is different: <i>y</i> is a vowel and the letter <i>j</i> appears. G0 gives nothing there. The rank test shows the same coordinate structure (consonants z ≈ 22, vowels z ≈ 5), but no simple alphabetic grid fits (400 tried), and a six-vowel solver (E26) fails: the positive controls are all recovered, the archives stay at 15% of their level. <mark class="unc">The machine readings and anchors of this channel are probably to blame</mark>; the next step will be blind human readings, as for the first channel. This is the channel that matches the vowel <i>y</i> reported by Daniel Bourdeau.</p>
+
+  <h2 id="outils">Tools</h2>
+  <ul>
+    <li><strong>Sources</strong>: public JACAR PDFs<sup class="fn"><a href="sources.html#s3">[3]</a>–<a href="sources.html#s6">[6]</a></sup>; Chinese telegraph code tables (Unicode Unihan, fields <code>kTaiwanTelegraph</code> and <code>kMainlandTelegraph</code>)<sup class="fn"><a href="sources.html#s10">[10]</a></sup>.</li>
+    <li><strong>Language corpus</strong>: Sun Yat-sen's writings on Wikisource<sup class="fn"><a href="sources.html#s12">[12]</a></sup>, 1916 telegrams from the Sunology site<sup class="fn"><a href="sources.html#s11">[11]</a></sup>; <code>jieba</code> segmentation<sup class="fn"><a href="sources.html#s14">[14]</a></sup>; character variants via OpenCC<sup class="fn"><a href="sources.html#s13">[13]</a></sup>.</li>
+    <li><strong>Computation</strong>: Python 3 (NumPy) for tests, preparation and scoring; C++17 solvers (<code>clang++ -O3 -march=native -pthread</code>) using simulated annealing and iterated local search: <code>anchor_sa</code>, <code>anchor_arr</code> (arrangements, carry and ±111 offset), <code>anchor_coord</code> and <code>anchor_coord6</code> (coordinate tables). An 8-core laptop is enough.</li>
+    <li><strong>Reading</strong>: local HTML blind-reading interface (anonymous shuffled excerpts, JSON export) and a script to merge readings.</li>
+    <li><strong>AI assistants</strong>: the sessions were run by Brice with coding assistants: Codex (GPT-6.1 Sol) for sessions C01–C13, Claude Opus 5.5 from C14, Claude Fable 5.1 for C31, the session of the decipherment. The assistants wrote the solvers and tests, kept the log and proposed hypotheses; the decisive readings of the ciphertext on the images and the arbitrations were made by a human.</li>
+  </ul>
+  <p>The log, scripts and negative results are meant to be published alongside this site, so that anyone can re-run the computations.</p>
+  <hr>
+  <p class="byline">Sources: see the <a href="sources.html">sources page</a>. Thanks to Daniel Bourdeau, whose article and code paved the way.</p>
+</article>
+</main>
+
+<footer class="site-footer"><div class="inner">
+  Telegram images: JACAR (Japan Center for Asian Historical Records), Diplomatic Archives of the Ministry of Foreign Affairs of Japan. Prior work: Daniel Bourdeau (CC BY 4.0). <a href="sources.html">All sources</a>.
+</div></footer>
+<script src="../assets/js/messages.js"></script>
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

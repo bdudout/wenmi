@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>文密を破る</title>
+<meta name="description" content="「文密」暗号（1916年）解読の技術解説：ブラインド翻字、鍵を使わない検定、焼きなまし法による探索、検証用電報による確認、G0 表。">
+<link rel="alternate" hreflang="en" href="../en/method.html">
+<link rel="alternate" hreflang="fr" href="../fr/method.html">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-hans/method.html">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-hant/method.html">
+<link rel="alternate" hreflang="ja" href="../ja/method.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%239b2c1f'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f7f3ea' font-family='serif'%3E%E6%96%87%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header"><div class="inner">
+  <a class="brand" href="index.html"><span class="seal" lang="zh-Hant">文密</span> 文密暗号</a>
+  <nav class="menu">
+    <a href="index.html">ホーム</a>
+    <a href="history.html">歴史的背景</a>
+    <a href="method.html" aria-current="page">解読の方法</a>
+    <a href="sources.html">出典</a>
+  </nav>
+  <nav class="lang-switch" aria-label="言語">
+    <a href="../en/method.html" hreflang="en" lang="en" data-lang="en" title="English" aria-label="English"><img class="flag" src="../assets/img/flags/gb.svg" width="20" height="15" alt=""><span class="lc">EN</span></a>
+    <a href="../fr/method.html" hreflang="fr" lang="fr" data-lang="fr" title="Français" aria-label="Français"><img class="flag" src="../assets/img/flags/fr.svg" width="20" height="15" alt=""><span class="lc">FR</span></a>
+    <a href="../zh-hans/method.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-hans" title="简体中文" aria-label="简体中文"><img class="flag" src="../assets/img/flags/cn.svg" width="20" height="15" alt=""><span class="lc">简</span></a>
+    <a href="../zh-hant/method.html" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant" title="繁體中文" aria-label="繁體中文"><img class="flag" src="../assets/img/flags/hk.svg" width="20" height="15" alt=""><span class="lc">繁</span></a>
+    <a href="../ja/method.html" hreflang="ja" lang="ja" data-lang="ja" title="日本語" aria-label="日本語" aria-current="true"><img class="flag" src="../assets/img/flags/jp.svg" width="20" height="15" alt=""><span class="lc">日</span></a>
+  </nav>
+  <button class="theme-toggle" type="button" aria-label="ライト／ダークを切り替え">◐</button>
+</div></header>
+
+<main>
+<article class="article">
+  <header class="lede">
+    <p class="kicker">第2部 · 技術解説</p>
+    <h1>文密を破る――文字の構造からパラメータのない鍵へ</h1>
+    <p class="standfirst">「<i>fazihipego wezelucuna</i>」から「<span lang="zh-Hant">報傳取消日人態度遽變</span>」へ至る道のり。翻字、30回に及ぶ計算（その大半は失敗）、すべてを変えた一つの単純な統計検定、そして一行で書ける鍵。</p>
+    <p class="byline">読了時間：約25分 · 確率と少しのプログラムに抵抗のない読者向け</p>
+    <p class="legend-unc"><mark class="unc">点線の下線</mark>を付した箇所は未確認の推測である。</p>
+  </header>
+
+  <nav class="toc" aria-label="目次">
+    <strong>目次</strong>
+    <ol>
+      <li><a href="#tldr">要点：暗号方式</a></li>
+      <li><a href="#depart">出発点：Daniel Bourdeau の研究</a></li>
+      <li><a href="#regles">ルール</a></li>
+      <li><a href="#transcription">第1段階 ―― 職員の書いた文字を読む</a></li>
+      <li><a href="#echecs">第2段階 ―― うまくいかなかったこと（とその理由）</a></li>
+      <li><a href="#structure">第3段階 ―― 鍵を使わない検定：子音が十の位を表す</a></li>
+      <li><a href="#solveur">第4段階 ―― 制約付きソルバーと検証用電報</a></li>
+      <li><a href="#g0">第5段階 ―― G0 表</a></li>
+      <li><a href="#validation">なぜ信じられるのか：対照検証</a></li>
+      <li><a href="#canal2">未解決の問題：第二の系統</a></li>
+      <li><a href="#outils">道具</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="tldr">要点：暗号方式</h2>
+  <p>東京発の電報群（1916年6〜9月）は、5つの操作で暗号化されている。現代的な意味での秘密鍵はない。</p>
+  <div class="pipeline">
+    <div>中国語の本文<b lang="zh-Hant">報</b></div>
+    <div>公開の電信符号<b>1032</b></div>
+    <div>二つに分ける<b>10 | 32</b></div>
+    <div>半分ずつ → 音節（G0 表）<b>fa | zi</b></div>
+    <div>音節をつなぎ、10文字ずつに区切る<b>fazihipego</b></div>
+  </div>
+  <p>G0 表は、00〜99 の各数に「子音＋母音」の音節を一つずつ割り当てる。子音は <i>h</i> から始まるアルファベットの<strong>逆順</strong>（h g f d c b z y x w v t s r q p n m l k）で、<strong>十の位ごとに二つ</strong>。母音 <i>a e i o u</i> が一の位を表し、組の最初の子音では昇順、二番目の子音では降順に並ぶ（蛇行配列）：</p>
+  <div data-g0-grid></div>
+  <p>つまり <code>ha</code> = 00、<code>hu</code> = 04、<code>gu</code> = 05、<code>ga</code> = 09、<code>fa</code> = 10……<code>ka</code> = 99。Python で書けば：</p>
+<pre><code>ORDER, V = "hgfdcbzyxwvtsrqpnmlk", "aeiou"
+G0 = {c + v: 10 * (i // 2) + (j if i % 2 == 0 else 9 - j)
+      for i, c in enumerate(ORDER) for j, v in enumerate(V)}
+
+def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
+    s = [letters[k:k+2] for k in range(0, len(letters), 2)]
+    return ["%02d%02d" % (G0[a], G0[b]) for a, b in zip(s[::2], s[1::2])]</code></pre>
+  <p>各電報は署名「<span lang="zh-Hant">伸</span>」（<code>heyu</code> = 0135）、ときに「<span lang="zh-Hant">伸令</span>」で終わり、その後に日付が続く。日付は韻目代日（<span lang="zh-Hant">巧</span> 18日、<span lang="zh-Hant">漾</span> 23日、<span lang="zh-Hant">元</span> 13日……）か、漢数字（<span lang="zh-Hant">卅</span> 30日）で書かれる。</p>
+
+  <h3>試してみる</h3>
+  <p>電報を選び、漢字をクリックするか一字ずつ再生すると、対応する二つの音節が暗号文と上の表で強調表示される。オレンジの破線で囲まれた字は<strong>疑わしい</strong>字（用紙の判読が不確か、または稀な字）である。</p>
+  <div class="decoder" data-default="0416b">
+    <div class="controls">
+      <label><span class="sr">電報</span><select></select></label>
+      <button type="button" data-act="play">▶ 一字ずつ再生</button>
+    </div>
+    <div class="cipher" aria-label="暗号文"></div>
+    <div class="tokens"></div>
+    <p class="meta"></p>
+    <p class="legend">各枠：音節 · 電信符号 · 漢字。</p>
+  </div>
+
+  <h2 id="depart">出発点：Daniel Bourdeau の研究</h2>
+  <div class="credit">
+    <p>すべては <strong>Daniel Bourdeau</strong> の「<a href="https://dbourdeau.github.io/cyphersolver/sunintercepts.html">Sun Yat-sen's circle on the wire, 1916–17</a>」<sup class="fn"><a href="sources.html#s1">[1]</a></sup> とリポジトリ <a href="https://github.com/dbourdeau/cyphersolver">dbourdeau/cyphersolver</a><sup class="fn"><a href="sources.html#s2">[2]</a></sup> から始まる。彼は S. Tomokiyo 氏が紹介した山田純三郎の二つの「圧縮表」<sup class="fn"><a href="sources.html#s8">[8]</a></sup>を手がかりに、子音20・母音5（00〜99 に対応する100音節）からなる鍵の<strong>一族</strong>を見いだし、その全体（記入順序、起点、±111 の加算を含む57,600表）を生成して、各表を各電報について漢字の言語モデルで採点した。鍵が採用されるのは、長い電報で z ≥ 6 に達し、<em>かつ</em>選定に使わなかった他の電報も解読できる場合に限られた。韻目による日付が独立した検証となった。結果、約60通の電報が全部または一部読めるようになった。</p>
+    <p>「<span lang="zh-Hant">文密</span>」について彼は、10文字の語、子音 <i>w</i>、母音 <i>y</i>、そして否定的な結果を報告している。一族の6母音版（約20万表）は z = 4.1 を超えなかった。彼は、これはおそらく別の方式で、規則に従わない表に基づくと結論した。私たちは、彼による文書の特定、検証の方法（電報を探索から外しておく、韻目を確かめる）、そして「電信符号の半分が一つの音節になる」という考えを受け継いだ。以下で示すように、東京発の系統の表は規則に<em>従っている</em>。ただしそれは彼の一族の外にある規則――アルファベットの逆順、十の位ごとに二つの子音、蛇行する母音――である。</p>
+  </div>
+
+  <h2 id="regles">ルール</h2>
+  <p>歴史的暗号の解読は、自分自身をだますのに格好の場である。パラメータが十分にあれば、どんな雑音の中にも中国語を「読める」。そこで本研究は、あらかじめ定めたルールの下で進め、追記のみのログ（1,200行超、31回のセッション）に記録した。</p>
+  <ul>
+    <li><strong>史料は改変しない。</strong>JACAR の PDF はダウンロードしたまま保存し、SHA-256 を記録する。新しい読みはすべて新しい版のファイルとする。</li>
+    <li><strong>検証用電報を一つ。</strong>0406号電報（1916年7月12日）は、鍵の調整にも読みの修正にも<strong>一度も</strong>使わない。判定にのみ用いる。</li>
+    <li><strong>クリブ（推測平文）は使わない。</strong>推測した語（人名や決まり文句）を平文に押しつけたことは一度もない。アンカーとして用いたのは、日本の職員が用紙に平文で書いた日付だけであり、複数のアンカーの組を試した。</li>
+    <li><strong>正の対照と零の対照。</strong>探索は毎回、同じ形式の既知の鍵で暗号化した既知の中国語文（ソルバーは鍵を復元できなければならない）と、シャッフルしたデータ（何も見つけてはならない）でも実行する。記録上のスコアは、この二つの基準と比べて初めて意味を持つ。</li>
+    <li><strong>複数の乱数シード。</strong>異なる初期値から同一の最適解が得られた場合のみ採用する。</li>
+    <li><strong>状態の明示。</strong>各結果には、事実・仮説・否定的試行・候補・裏付けあり、のいずれかを付す。</li>
+  </ul>
+
+  <h2 id="transcription">第1段階 ―― 職員の書いた文字を読む</h2>
+  <p>暗号文は日本の職員による手書きの写ししか残っていない。<i>g</i> と <i>q</i>、<i>x</i> と <i>d</i>、<i>u</i> と <i>n</i> は混同しやすく、一字の誤りで漢字が一つ変わり、一字の脱落でそれ以降の全体がずれる。</p>
+  <ul>
+    <li><strong>画像処理</strong>：ページを300 dpi で描画し、回転し、各用紙と各語を切り出す（macOS の <code>sips</code> を使用、画像の修整はしない）。</li>
+    <li><strong>ブラインド読み</strong>：最初の読み手（AI アシスタント）が、既存の翻字を見る<em>前に</em>、異読と確信度を付して自分の読みを確定する。</li>
+    <li><strong>独立した人間の読み</strong>：Brice が小さなローカルのインターフェースで各語を読んだ。断片は<strong>匿名化・シャッフル</strong>して提示され（どの電報のどの位置かはわからない）、JSON で書き出せる。8回、数百の断片。一部の回は特定の文字に絞り、同じ筆写者の確かな字例を比較用に添えた。</li>
+    <li><strong>合意</strong>：読み手間の多数決とし、不一致は画像に戻って裁定する。作業コーパスは v1（211符号、71単位を伏せ字）から v8 まで更新された。</li>
+  </ul>
+  <p>ある読みの細部が決定的だった。長いあいだ <i>q</i> は <i>g</i> の字形の異体とみなされていた。人間の読みがこれを区別したことで、アルファベットはちょうど<strong>20の子音</strong>（b c d f g h k l m n p q r s t v w x y z、<i>j</i> なし）になった。当時の最良のモデルでは、この区別だけでスコアが681から829に上がった。</p>
+  <div class="status warn">
+    <h4>表明しておくバイアス</h4>
+    <p>最後の2回の読み（「支援付きの読み」と、疑わしい16符号の再読）はブラインドでは<strong>なかった</strong>。読み手はモデルの提案を知っていた。リスクを抑えるため、各電報の最後の4単位（署名と日付）はこの方法では変更できないこととし、検証用電報0406には一切手を触れず、すべての提案は画像上で確認することを条件とした（採用18、却下27）。</p>
+  </div>
+
+  <h2 id="echecs">第2段階 ―― うまくいかなかったこと（とその理由）</h2>
+  <p>30回のセッションを通じて、未知の換字式暗号に対する古典的な方法をとった。</p>
+  <ul>
+    <li><strong>言語モデル</strong>（電信符号の1-gram・2-gram）。ウィキソースにある孫文の著作約43万字を符号化して学習し、のちに刊行された1916年の電報で補った。</li>
+    <li><strong>未知の表</strong>「音節 → 数字」（100マス、自由に配置）を<strong>焼きなまし法</strong>で探索。マルチスレッドの C++ エンジンで、初期値64 × 3,000万回の反復、続いて反復局所探索。8コアで1回あたり約12分。</li>
+    <li><strong>アンカー</strong>：用紙の日付から導いた、電報末尾の韻目。</li>
+  </ul>
+  <p>これらの探索はすべて失敗し、対照がその理由を教えてくれた。ソルバーは正の対照の鍵を復元できた（たとえば267符号中258）。つまり<em>能力はあった</em>。だが記録上の最良スコア（約900）は本物の文章（1,200〜1,350）に遠く及ばず、一方でシャッフルしたデータ（約670）ははっきり上回っていた。任意のコードブックで暗号化した文章は810〜940となる。記録はまさにそのように見えた。</p>
+  <p>仮定の中に二つの誤りが潜んでいた。</p>
+  <ol>
+    <li><strong>誤ったアンカー。</strong>16日から30日について、韻目代日は当初想定したものとは別の声調の系列を用いる（刊行された孫文の原電で確認<sup class="fn"><a href="sources.html#s11">[11]</a></sup>）。そのため複数のアンカーが誤っていた。</li>
+    <li><strong>鍵空間が広すぎた。</strong>自由に配置できる100マスの表には、900前後の雑音の最適解を作り出すだけの自由度がある。逆の実験がこれを裏付ける。最終的に見つかった構造を緩めると（実験 E21）、当てはまりは良くなるが検証用電報は読めなくなる。過学習である。</li>
+  </ol>
+  <p>並行して、文献の手がかりも最後まで追った。在漢口日本総領事館の報告（1916年5月9日・11日）<sup class="fn"><a href="sources.html#s5">[5]</a><a href="sources.html#s6">[6]</a></sup>は、「111を加える」、続いて「4桁を逆順にして111を加える」という再暗号化を記している。報告に添付された4月の電報は確かにその方法で解ける（算術的な繰り上がり、末尾に韻目）。しかし東京発の系統では、±111 のあらゆる変種――逆順の有無を問わず、音節表の下で生じる残差のずれも含めて――が<strong>否定的</strong>だった（実験 E13、E15、E16）。結論：7月の電報には加算鍵はない。</p>
+
+  <h2 id="structure">第3段階 ―― 鍵を使わない検定：子音が十の位を表す</h2>
+  <p>転機は、鍵をまったく探さない検定からやってきた。電信符号には独特の形がある。千の位の数字は偏っており（常用符号はほとんど 0000〜7999 にあり、8xxx や 9xxx はまれ）、一の位はほぼ一様である。符号の半分（2桁）が一つの音節になるのなら、問題は<strong>音節のどの部分が十の位を担うのか</strong>である。</p>
+  <p>そこで、電報内の位置ごとに文字を数えた（実験 S3）。符号の<em>前半</em>（千の位と百の位）を担う位置では、<strong>子音</strong>の分布が極端に偏っていた（z ≈ 22）。<i>h</i> と <i>g</i> が支配的で、<i>l</i>、<i>p</i>、<i>m</i> は一度も現れない。一方<strong>母音</strong>は一様だった（z ≈ 1）。シミュレーション（S4）によれば、ランダムな表がこのパターンを生むことはない（400回中0回）が、子音が十の位、母音が一の位を表す<strong>座標表</strong>なら再現できる。</p>
+  <p>この仮説（H9）は探索空間を劇的に狭める。100の音節を自由に置くのではなく、各子音を十の位に、各母音を数字に割り当てるだけになるからだ。また、日付アンカーのいくつかの組が<strong>ありえない</strong>こともわかった。H9 の下では、想定した韻目の一部が、同じ子音を二つの十の位に対応させることを要求してしまう。</p>
+
+  <h2 id="solveur">第4段階 ―― 制約付きソルバーと検証用電報</h2>
+  <p>新しいソルバー（<code>anchor_coord</code>）は座標表だけを探索する。アンカーなしでは正の対照すら解けないが、正しいアンカーが10あれば鍵全体を復元できる。そこで H9 と<em>両立する</em>アンカーの組（324組中97組）を列挙し、最も妥当なものを試した。一組だけが抜きん出た：<strong>D = {6月23日 <span lang="zh-Hant">漾</span>、7月18日 <span lang="zh-Hant">巧</span>、7月19日 <span lang="zh-Hant">皓</span>、9月13日 <span lang="zh-Hant">元</span>}</strong>。</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>指標（アンカー組 D）</th><th class="num">記録</th><th class="num">シャッフル（零の対照）</th><th class="num">正の対照</th></tr></thead>
+    <tbody>
+      <tr><td>スコア、コーパス v4</td><td class="num">705</td><td class="num">349</td><td class="num">1,203</td></tr>
+      <tr><td>スコア、コーパス v5（q ≠ g）</td><td class="num">829</td><td class="num">332</td><td class="num">1,216</td></tr>
+      <tr><td>再現性（シード3つ）</td><td class="num" colspan="3">最適解は 0.001 以内で一致、96/96 単位が一致</td></tr>
+    </tbody>
+  </table></div>
+  <p>判定役は、探索から外しておいた<strong>0406号電報</strong>である。言語モデルの下で、平均的な字に対する1字あたりの対数尤度の平均利得を測る。解読結果が中国語らしければ正、そうでなければ負になる。表 D はコーパス v4 で1字あたり <strong>+1.9</strong>、コーパス v5 で <strong>+3.47</strong> を示した。他の候補表はすべて0以下、零の対照の表は −1〜−2.5 である。交差検証（S7：5通で鍵を求め、6通目で判定）でも、6通中6通で表が転用できた。文章は句ごとに読めるようになる：<span lang="zh-Hant">三十式槍、萬一千、軍用品已到門司、年息一割、無擔保、第二批械、軍務院、豫定計畫</span>……</p>
+
+  <h2 id="g0">第5段階 ―― G0 表</h2>
+  <p>当てはめた表を1マスずつ眺めると、規則性が目に飛び込んでくる。子音はアルファベットの逆順に、十の位ごとに二つずつ並び、母音は上がってから下がる。外れている少数のマスは、データによる制約が弱かったところだ。そこで当てはめた表を、それが近似している<strong>規則的な表</strong>に置き換える。これが G0 であり、もはや自由なパラメータは一つもない。</p>
+  <p>結果は、本研究で最も強い検証となった。<strong>まったく調整せずに、G0 は検証用電報0406を1字あたり +3.99 で解読する。元になった当てはめの表（+3.48）よりも良い</strong>。当てはめでぼやけた表が、その中に隠れていた単純な規則に及ばない。規則こそが本当の鍵なら、まさにそうなるはずである。G0 は7通すべての351符号を与え、電報の末尾も一貫したものになる。署名「<span lang="zh-Hant">伸</span>」の後に日付（6月23日は「<span lang="zh-Hant">漾</span>」、7月18日は「<span lang="zh-Hant">巧</span>」、9月13日は「<span lang="zh-Hant">元</span>」、9月30日は「<span lang="zh-Hant">卅</span>」、7月12日は「<span lang="zh-Hant">文</span>」）。</p>
+  <p>二つの末尾はなお変則的である。7月19日は「<span lang="zh-Hant">皓</span>」（<code>4110</code>）ではなく <code>4210</code> で終わる。<mark class="unc">暗号化した者か筆写者の誤り（一文字）である可能性が高い</mark>。6月30日付の電報は「<span lang="zh-Hant">卄</span>」（20日）で終わる。<mark class="unc">発信前に起草されていたか、日付の読み違いかもしれない</mark>。</p>
+
+  <h2 id="validation">なぜ信じられるのか：対照検証</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>あらかじめ定めた基準</th><th>結果</th></tr></thead>
+    <tbody>
+      <tr><td>同形式の正の対照が復元される</td><td>はい（1,203〜1,216、鍵を復元）</td></tr>
+      <tr><td>記録のスコアが零の対照を明確に上回る</td><td>はい（829 対 約335、再読後は1,144）</td></tr>
+      <tr><td>異なる初期値から同じ最適解が得られる</td><td>はい（シード3つで同一）</td></tr>
+      <tr><td>検証用電報が調整なしで読める（1字あたり ≥ +2.5）</td><td>はい：G0 で +3.99</td></tr>
+      <tr><td>中国語として通り、用紙の日付と整合する</td><td>おおむね。351字中19字が疑わしい</td></tr>
+      <tr><td>独立した外部からの裏付け</td><td>はい：発信者「<span lang="zh-Hant">伸</span>」＝趙伸。同じ兵器契約を扱う2026年の研究<sup class="fn"><a href="sources.html#s7">[7]</a></sup>によって、解読の<em>後に</em>同定</td></tr>
+    </tbody>
+  </table></div>
+  <p>最後の点は強調に値する。趙伸の名、「第二次分の兵器」の引き渡し、広東による担保拒否、雲南と広東の間の兵器配分は、承紅磊の論文を読む<em>前に</em>、解読された電報の中に現れていた。これらの語は一つとして探索に注入されていない。</p>
+  <p>限界：G0 表は当てはめの表から<em>読み取った</em>もので、天から降ってきたわけではない。最後の数回の読みはブラインドではない。訳は作業訳である。</p>
+
+  <h2 id="canal2">未解決の問題：第二の系統</h2>
+  <p>別の電報群も「<span lang="zh-Hant">文密</span>」の名を持つ。雲南関係の電報と、1917年6月24日の孫文から戴季陶への電報（JACAR B03050090200、画像 0509）である。そのアルファベットは異なり、<i>y</i> が母音で、<i>j</i> が現れる。G0 では何も出てこない。位置の検定は同じ座標構造を示す（子音 z ≈ 22、母音 z ≈ 5）が、単純なアルファベット表はどれも合わず（400通り試行）、6母音のソルバー（E26）も失敗した。正の対照はすべて復元されるのに、記録はその水準の15%にとどまる。<mark class="unc">この系統の機械による読みとアンカーに問題がある可能性が高い</mark>。次は、第一の系統と同様に人間によるブラインド読みを行う。Daniel Bourdeau が指摘した「母音としての <i>y</i>」は、この系統に対応する。</p>
+
+  <h2 id="outils">道具</h2>
+  <ul>
+    <li><strong>史料</strong>：JACAR の公開 PDF<sup class="fn"><a href="sources.html#s3">[3]</a>–<a href="sources.html#s6">[6]</a></sup>。中国電信符号表（Unicode Unihan の <code>kTaiwanTelegraph</code> と <code>kMainlandTelegraph</code>）<sup class="fn"><a href="sources.html#s10">[10]</a></sup>。</li>
+    <li><strong>言語コーパス</strong>：ウィキソースの孫文の著作<sup class="fn"><a href="sources.html#s12">[12]</a></sup>、Sunology サイトの1916年の電報<sup class="fn"><a href="sources.html#s11">[11]</a></sup>。<code>jieba</code> による分かち書き<sup class="fn"><a href="sources.html#s14">[14]</a></sup>、OpenCC による異体字処理<sup class="fn"><a href="sources.html#s13">[13]</a></sup>。</li>
+    <li><strong>計算</strong>：検定・前処理・採点には Python 3（NumPy）。ソルバーは C++17（<code>clang++ -O3 -march=native -pthread</code>）で、焼きなまし法と反復局所探索を用いる：<code>anchor_sa</code>、<code>anchor_arr</code>（配列・繰り上がり・±111 のずれ）、<code>anchor_coord</code> と <code>anchor_coord6</code>（座標表）。8コアのノートPCで足りる。</li>
+    <li><strong>読み</strong>：ローカルの HTML ブラインド読みインターフェース（匿名・シャッフルした断片、JSON 書き出し）と、読みを統合するスクリプト。</li>
+    <li><strong>AI アシスタント</strong>：セッションは Brice がコーディングアシスタントとともに進めた。C01〜C13 は Codex（GPT-6.1 Sol）、C14 以降は Claude Opus 5.5、解読に至った C31 は Claude Fable 5.1。アシスタントはソルバーとテストを書き、ログを管理し、仮説を提案した。画像上での暗号文の決定的な読みと裁定は人間が行った。</li>
+  </ul>
+  <p>ログ、スクリプト、否定的な結果も、誰もが計算を再現できるよう、このサイトとあわせて公開する予定である。</p>
+  <hr>
+  <p class="byline">出典は<a href="sources.html">出典ページ</a>を参照。論文とコードで道を開いた Daniel Bourdeau 氏に感謝する。</p>
+</article>
+</main>
+
+<footer class="site-footer"><div class="inner">
+  電報画像：アジア歴史資料センター（JACAR）、外務省外交史料館。先行研究：Daniel Bourdeau（CC BY 4.0）。<a href="sources.html">出典一覧</a>。
+</div></footer>
+<script src="../assets/js/messages.js"></script>
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

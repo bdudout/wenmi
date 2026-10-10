@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>破解文密</title>
+<meta name="description" content="“文密”电码（1916）破译技术报告：盲读转写、无密钥检验、模拟退火求解、留出电报验证、G0 表。">
+<link rel="alternate" hreflang="en" href="../en/method.html">
+<link rel="alternate" hreflang="fr" href="../fr/method.html">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-hans/method.html">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-hant/method.html">
+<link rel="alternate" hreflang="ja" href="../ja/method.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%239b2c1f'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f7f3ea' font-family='serif'%3E%E6%96%87%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header"><div class="inner">
+  <a class="brand" href="index.html"><span class="seal" lang="zh-Hant">文密</span> 文密电码</a>
+  <nav class="menu">
+    <a href="index.html">首页</a>
+    <a href="history.html">历史背景</a>
+    <a href="method.html" aria-current="page">破译方法</a>
+    <a href="sources.html">资料来源</a>
+  </nav>
+  <nav class="lang-switch" aria-label="语言">
+    <a href="../en/method.html" hreflang="en" lang="en" data-lang="en" title="English" aria-label="English"><img class="flag" src="../assets/img/flags/gb.svg" width="20" height="15" alt=""><span class="lc">EN</span></a>
+    <a href="../fr/method.html" hreflang="fr" lang="fr" data-lang="fr" title="Français" aria-label="Français"><img class="flag" src="../assets/img/flags/fr.svg" width="20" height="15" alt=""><span class="lc">FR</span></a>
+    <a href="../zh-hans/method.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-hans" title="简体中文" aria-label="简体中文" aria-current="true"><img class="flag" src="../assets/img/flags/cn.svg" width="20" height="15" alt=""><span class="lc">简</span></a>
+    <a href="../zh-hant/method.html" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant" title="繁體中文" aria-label="繁體中文"><img class="flag" src="../assets/img/flags/hk.svg" width="20" height="15" alt=""><span class="lc">繁</span></a>
+    <a href="../ja/method.html" hreflang="ja" lang="ja" data-lang="ja" title="日本語" aria-label="日本語"><img class="flag" src="../assets/img/flags/jp.svg" width="20" height="15" alt=""><span class="lc">日</span></a>
+  </nav>
+  <button class="theme-toggle" type="button" aria-label="切换浅色/深色">◐</button>
+</div></header>
+
+<main>
+<article class="article">
+  <header class="lede">
+    <p class="kicker">第二篇 · 技术报告</p>
+    <h1>破解文密：从字母结构到无参数的密钥</h1>
+    <p class="standfirst">如何从“<i>fazihipego wezelucuna</i>”走到“<span lang="zh-Hant">報傳取消日人態度遽變</span>”：转写、三十次计算（大多以失败告终）、一个改变全局的简单统计检验，以及一把一行就能写完的密钥。</p>
+    <p class="byline">阅读时间：约25分钟 · 适合对概率和少量代码不陌生的读者</p>
+    <p class="legend-unc"><mark class="unc">加点线下划线</mark>的内容为尚未证实的推测。</p>
+  </header>
+
+  <nav class="toc" aria-label="目录">
+    <strong>目录</strong>
+    <ol>
+      <li><a href="#tldr">概要：加密系统</a></li>
+      <li><a href="#depart">起点：Daniel Bourdeau 的工作</a></li>
+      <li><a href="#regles">规则</a></li>
+      <li><a href="#transcription">第一步 —— 读出职员写下的字母</a></li>
+      <li><a href="#echecs">第二步 —— 哪些方法失败了，为什么</a></li>
+      <li><a href="#structure">第三步 —— 无密钥检验：辅音代表十位</a></li>
+      <li><a href="#solveur">第四步 —— 带约束的求解器与留出电报</a></li>
+      <li><a href="#g0">第五步 —— G0 表</a></li>
+      <li><a href="#validation">凭什么相信：对照检验</a></li>
+      <li><a href="#canal2">悬而未决：第二通道</a></li>
+      <li><a href="#outils">工具</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="tldr">概要：加密系统</h2>
+  <p>东京一路电报（1916年6月至9月）的加密分五步，没有现代意义上的秘密密钥：</p>
+  <div class="pipeline">
+    <div>中文原文<b lang="zh-Hant">報</b></div>
+    <div>公开的中文电码<b>1032</b></div>
+    <div>拆成两半<b>10 | 32</b></div>
+    <div>每半 → 一个音节（G0 表）<b>fa | zi</b></div>
+    <div>音节相连，十字母一组<b>fazihipego</b></div>
+  </div>
+  <p>G0 表给 00 到 99 的每个数指定一个“辅音 + 元音”音节。辅音从 <i>h</i> 开始按字母<strong>倒序</strong>排列（h g f d c b z y x w v t s r q p n m l k），<strong>每个十位两个辅音</strong>；元音 <i>a e i o u</i> 表示个位，第一个辅音按升序、第二个按降序（蛇形排列）：</p>
+  <div data-g0-grid></div>
+  <p>于是 <code>ha</code> = 00，<code>hu</code> = 04，<code>gu</code> = 05，<code>ga</code> = 09，<code>fa</code> = 10……<code>ka</code> = 99。用 Python 写：</p>
+<pre><code>ORDER, V = "hgfdcbzyxwvtsrqpnmlk", "aeiou"
+G0 = {c + v: 10 * (i // 2) + (j if i % 2 == 0 else 9 - j)
+      for i, c in enumerate(ORDER) for j, v in enumerate(V)}
+
+def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
+    s = [letters[k:k+2] for k in range(0, len(letters), 2)]
+    return ["%02d%02d" % (G0[a], G0[b]) for a, b in zip(s[::2], s[1::2])]</code></pre>
+  <p>每封电报以署名“<span lang="zh-Hant">伸</span>”（<code>heyu</code> = 0135）结尾，有时为“<span lang="zh-Hant">伸令</span>”，其后是日期，或用韵目代日（<span lang="zh-Hant">巧</span> 十八日、<span lang="zh-Hant">漾</span> 二十三日、<span lang="zh-Hant">元</span> 十三日……），或用数字（<span lang="zh-Hant">卅</span> 三十日）。</p>
+
+  <h3>动手试试</h3>
+  <p>选择一封电报，点击任一汉字或开始逐字演示：对应的两个音节会在密文和上方表格中高亮。橙色虚线框的字为<strong>存疑</strong>字（电报纸字迹不确定或为罕用字）。</p>
+  <div class="decoder" data-default="0416b">
+    <div class="controls">
+      <label><span class="sr">电报</span><select></select></label>
+      <button type="button" data-act="play">▶ 逐字演示</button>
+    </div>
+    <div class="cipher" aria-label="密文"></div>
+    <div class="tokens"></div>
+    <p class="meta"></p>
+    <p class="legend">每格依次为：音节 · 电码 · 汉字。</p>
+  </div>
+
+  <h2 id="depart">起点：Daniel Bourdeau 的工作</h2>
+  <div class="credit">
+    <p>一切始于 <strong>Daniel Bourdeau</strong> 的《<a href="https://dbourdeau.github.io/cyphersolver/sunintercepts.html">Sun Yat-sen's circle on the wire, 1916–17</a>》<sup class="fn"><a href="sources.html#s1">[1]</a></sup> 及其代码库 <a href="https://github.com/dbourdeau/cyphersolver">dbourdeau/cyphersolver</a><sup class="fn"><a href="sources.html#s2">[2]</a></sup>。他从 S. Tomokiyo 公布的山田纯三郎两张“压缩表”出发<sup class="fn"><a href="sources.html#s8">[8]</a></sup>，识别出一<strong>族</strong>由20个辅音和5个元音构成的密钥（100个音节，对应 00—99），生成了整族密钥（57,600张表，包括填写顺序、起点和 ±111 加数），并用汉字语言模型对每张表在每封电报上打分。只有在长电报上达到 z ≥ 6，<em>并且</em>能解开未参与挑选的其他电报的密钥才被接受；韵目日期提供了独立的检验。结果是约六十封电报被全部或部分读出。</p>
+    <p>关于“<span lang="zh-Hant">文密</span>”，他记录了十字母一组、辅音 <i>w</i>、元音 <i>y</i>，以及一个否定结果：该族的六元音版本（约20万张表）都没有超过 z = 4.1。他认为这可能是另一套系统，建立在一张不按规则排列的表上。我们沿用了他对档案的定位、他的验证方法（留出电报、核对韵目）以及“半个电码变成一个音节”的思路。下文将说明：东京一路的表<em>确实</em>遵循规则，只是这条规则不在他那一族之内——字母倒序、每个十位两个辅音、元音蛇形排列。</p>
+  </div>
+
+  <h2 id="regles">规则</h2>
+  <p>历史破译是自欺的理想温床：参数足够多时，任何噪声里都能“读出”中文。因此本研究在事先确定的规则下进行，并记录在只增不改的日志中（逾1,200行，共31次研究）：</p>
+  <ul>
+    <li><strong>资料不可改动。</strong>JACAR 的 PDF 原样保存，并记录 SHA-256 校验值；每一次新的转写都是新的版本文件。</li>
+    <li><strong>一封留出电报。</strong>0406号电报（1916年7月12日）<strong>从未</strong>用于调整密钥或修改读法，只用于评判。</li>
+    <li><strong>不用“明文猜测”。</strong>从未把任何猜想的词（人名、套语）强加到明文中。只用日本职员在电报纸上以明文写下的日期作为锚点，并测试了多组锚点。</li>
+    <li><strong>正对照与零对照。</strong>每次搜索同时在一段已知中文文本（用同类型的已知密钥加密，求解器必须找回密钥）和打乱后的数据（求解器不应找到任何东西）上运行。档案上的得分只有与这两个基准相比才有意义。</li>
+    <li><strong>多个随机种子。</strong>只有从不同随机起点得到完全相同的最优解时才予以采纳。</li>
+    <li><strong>状态明确。</strong>每个结果都标注为：事实、假设、否定检验、候选、已印证。</li>
+  </ul>
+
+  <h2 id="transcription">第一步 —— 读出职员写下的字母</h2>
+  <p>密文只以日本职员的手抄件形式存在。<i>g</i> 和 <i>q</i>、<i>x</i> 和 <i>d</i>、<i>u</i> 和 <i>n</i> 很容易混淆；错一个字母就会错一个字，漏一个字母则会让整封电报其后的部分全部错位。</p>
+  <ul>
+    <li><strong>处理图像</strong>：以 300 dpi 渲染页面，旋转，裁出每张电报纸和每一组（使用 macOS 的 <code>sips</code>，不做任何图像修饰）。</li>
+    <li><strong>盲读</strong>：第一位读者（AI 助手）在看到任何既有转写<em>之前</em>，先确定自己的读法，附带异读和置信度。</li>
+    <li><strong>独立的人工阅读</strong>：Brice 通过一个本地小界面阅读各组字母，界面以<strong>匿名并打乱顺序</strong>的方式呈现片段（读者不知道属于哪封电报、哪个位置），并可导出 JSON。共八批、数百个片段；部分批次专门针对某个字母，并附上同一抄写员的可靠字例供比较。</li>
+    <li><strong>共识</strong>：读者之间多数决定，分歧回到图像上裁决。工作语料从 v1（211个电码，71个单位被遮蔽）发展到 v8。</li>
+  </ul>
+  <p>有一处读法细节起了决定性作用：很长时间里，<i>q</i> 被当作 <i>g</i> 的异写。人工阅读把二者区分开来，于是字母表恰好有<strong>20个辅音</strong>（b c d f g h k l m n p q r s t v w x y z，没有 <i>j</i>）。在当时最好的模型下，仅这一区分就使得分从681升到829。</p>
+  <div class="status warn">
+    <h4>已声明的偏差</h4>
+    <p>最后两批阅读（“辅助阅读”以及对16个存疑电码的复读）<strong>不是</strong>盲读：读者知道模型的建议。为降低风险，每封电报最后四个单位（署名和日期）一律不得据此修改，留出电报0406从未改动，且每条建议都必须在图像上确认（接受18条，否决27条）。</p>
+  </div>
+
+  <h2 id="echecs">第二步 —— 哪些方法失败了，为什么</h2>
+  <p>在三十次研究中，采用的是破解未知替换密码的经典路线：</p>
+  <ul>
+    <li><strong>语言模型</strong>（电码的一元和二元统计），用维基文库中约43万字的孙中山著作转成电码训练，后又补充了已出版的1916年电报；</li>
+    <li>一张<strong>未知表</strong>“音节 → 数字”（100格，任意排列），用<strong>模拟退火</strong>搜索：多线程 C++ 引擎，64个起点 × 3,000万次迭代，再做迭代局部搜索；在8核机器上每轮约12分钟；</li>
+    <li><strong>锚点</strong>：电报结尾的韵目，由电报纸上的日期推出。</li>
+  </ul>
+  <p>这些搜索全部失败，而对照告诉了我们原因。求解器能找回正对照文本的密钥（例如267个电码中找回258个）：它是<em>有能力的</em>。但在档案上，最好得分（约900）远低于真实文本（1,200—1,350），同时又明显高于打乱的数据（约670）。用任意密码本加密的文本得分在810—940之间：档案看起来就像这样。</p>
+  <p>假设中藏着两个错误：</p>
+  <ol>
+    <li><strong>锚点有误。</strong>对于十六日到三十日，韵目代日使用的声调系列与最初假设的不同（已在出版的孙中山原电中核实<sup class="fn"><a href="sources.html#s11">[11]</a></sup>）。因此有几个锚点是错的。</li>
+    <li><strong>密钥空间过大。</strong>一张可以任意排列的100格表有足够的自由度，在900分左右制造出噪声的最优解。反向实验证实了这一点：放松最终找到的结构（实验 E21），拟合得分上升，但留出电报变得无法阅读。这就是过拟合。</li>
+  </ol>
+  <p>与此同时，一条文献线索被追查到底。日本驻汉口总领事馆的报告（1916年5月9日和11日）<sup class="fn"><a href="sources.html#s5">[5]</a><a href="sources.html#s6">[6]</a></sup>记载了“加111”以及“四位倒序后加111”的再加密方法。报告所附的4月电报确实可以这样解开（算术进位，结尾为韵目）。但在东京一路上，所有 ±111 的变体——不论是否倒序，也包括它在音节表下造成的残余偏移——全部<strong>为否定结果</strong>（实验 E13、E15、E16）。结论：7月的电报没有加数密钥。</p>
+
+  <h2 id="structure">第三步 —— 无密钥检验：辅音代表十位</h2>
+  <p>转机来自一个根本不寻找密钥的检验。中文电码的形状很特别：千位数字高度集中（常用电码大多在 0000 到 7999 之间，几乎没有 8xxx 或 9xxx），而个位数字大致均匀。如果半个电码（两位数）变成一个音节，问题就是：<strong>音节中哪一部分承载十位？</strong></p>
+  <p>于是按字母在电报中的位置分别计数（实验 S3）。在承载电码<em>前半</em>（千位和百位）的位置上，<strong>辅音</strong>的分布极不均衡（z ≈ 22）：<i>h</i> 和 <i>g</i> 占绝对多数，<i>l</i>、<i>p</i>、<i>m</i> 从不出现；而<strong>元音</strong>的分布则很均匀（z ≈ 1）。模拟（S4）表明，随机表从不产生这种模式（400次中0次），而<strong>坐标表</strong>——辅音表示十位、元音表示个位——则能重现它。</p>
+  <p>这一假设（H9）极大地缩小了搜索空间：不再是任意摆放100个音节，而是把每个辅音分配给一个十位、每个元音分配给一个数字。它还表明某些日期锚点组合是<strong>不可能的</strong>：在 H9 之下，某些假定的韵目会要求同一个辅音对应两个十位。</p>
+
+  <h2 id="solveur">第四步 —— 带约束的求解器与留出电报</h2>
+  <p>新的求解器（<code>anchor_coord</code>）只搜索坐标表。没有锚点时，它连正对照都解不开；有十个正确锚点时，它能找回完整密钥。于是我们列举出与 H9 <em>相容</em>的锚点组合（324组中的97组），测试其中最合理的几组。只有一组脱颖而出：<strong>D = {6月23日 <span lang="zh-Hant">漾</span>、7月18日 <span lang="zh-Hant">巧</span>、7月19日 <span lang="zh-Hant">皓</span>、9月13日 <span lang="zh-Hant">元</span>}</strong>。</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>指标（锚点组 D）</th><th class="num">档案</th><th class="num">打乱（零对照）</th><th class="num">正对照</th></tr></thead>
+    <tbody>
+      <tr><td>得分，语料 v4</td><td class="num">705</td><td class="num">349</td><td class="num">1,203</td></tr>
+      <tr><td>得分，语料 v5（q ≠ g）</td><td class="num">829</td><td class="num">332</td><td class="num">1,216</td></tr>
+      <tr><td>可重复性（3个种子）</td><td class="num" colspan="3">最优解相同（误差 0.001 以内），96/96 个单位一致</td></tr>
+    </tbody>
+  </table></div>
+  <p>评判者是留出的 <strong>0406号电报</strong>。我们计算在语言模型下、相对于平均字的每字平均对数似然增益：解出的文字像中文则为正，否则为负。表 D 在语料 v4 上的结果是每字 <strong>+1.9</strong>，在语料 v5 上是 <strong>+3.47</strong>；而其他所有候选表都在 0 或以下，零对照表则为 −1 到 −2.5。在交叉验证中（S7：用五封电报求解，用第六封评判），该表在 6 封中的 6 封上都能迁移。文字开始可以逐句读出：<span lang="zh-Hant">三十式槍、萬一千、軍用品已到門司、年息一割、無擔保、第二批械、軍務院、豫定計畫</span>……</p>
+
+  <h2 id="g0">第五步 —— G0 表</h2>
+  <p>逐格查看拟合出的表，一个规律一目了然：辅音按字母倒序排列，每个十位两个，元音先升后降。少数不符合的格子，正是数据约束不足的那些。于是我们用它所近似的<strong>规则表</strong>代替拟合表：这就是 G0，它不再有任何自由参数。</p>
+  <p>结果是整个研究中最有力的检验：<strong>在完全不调整的情况下，G0 解读留出电报0406的得分为每字 +3.99，高于由之导出的拟合表（+3.48）</strong>。一张被拟合“磨糊”的表，不如它所隐藏的简单规则：如果这条规则就是真正的密钥，结果正应如此。G0 给出七封电报全部351个电码，电报结尾也变得一致：署名“<span lang="zh-Hant">伸</span>”后接日期（6月23日为“<span lang="zh-Hant">漾</span>”，7月18日为“<span lang="zh-Hant">巧</span>”，9月13日为“<span lang="zh-Hant">元</span>”，9月30日为“<span lang="zh-Hant">卅</span>”，7月12日为“<span lang="zh-Hant">文</span>”）。</p>
+  <p>有两个结尾仍不正常：7月19日以 <code>4210</code> 结尾，而不是“<span lang="zh-Hant">皓</span>”（<code>4110</code>），<mark class="unc">很可能是加密者或抄写员的笔误（一个字母）</mark>；标为6月30日的电报以“<span lang="zh-Hant">卄</span>”（二十）结尾，<mark class="unc">可能说明电文在发出前就已拟好，或日期读错</mark>。</p>
+
+  <h2 id="validation">凭什么相信：对照检验</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>事先确定的标准</th><th>结果</th></tr></thead>
+    <tbody>
+      <tr><td>同类型正对照被找回</td><td>是（1,203—1,216；密钥找回）</td></tr>
+      <tr><td>档案得分明显高于零对照</td><td>是（829 对约 335；复读后为 1,144）</td></tr>
+      <tr><td>不同起点得到相同最优解</td><td>是（3个种子，最优解相同）</td></tr>
+      <tr><td>留出电报不经调整即可读（每字 ≥ +2.5）</td><td>是：G0 下为 +3.99</td></tr>
+      <tr><td>中文文句连贯，且与电报纸上的日期一致</td><td>大体如此；351个字中19个存疑</td></tr>
+      <tr><td>独立的外部印证</td><td>是：发报人“<span lang="zh-Hant">伸</span>” = 赵伸，在破译<em>之后</em>由一篇2026年的研究<sup class="fn"><a href="sources.html#s7">[7]</a></sup>确认，该研究描述了同样的军火合同</td></tr>
+    </tbody>
+  </table></div>
+  <p>最后一点值得强调：赵伸之名、“第二批械”的交付、广东拒绝担保、武器在云南与广东之间的分配，这些内容在我们读到承红磊的文章<em>之前</em>就已出现在破译出的电报中。这些词没有一个是被注入搜索的。</p>
+  <p>局限：G0 表是从拟合表中<em>读出</em>的，并非凭空而来；最后几批阅读不是盲读；译文为工作译文。</p>
+
+  <h2 id="canal2">悬而未决：第二通道</h2>
+  <p>另一组电报同样冠以“<span lang="zh-Hant">文密</span>”：云南一路的电报，以及1917年6月24日孙中山致戴季陶的电报（JACAR B03050090200，影像 0509）。它们的字母表不同：<i>y</i> 是元音，并出现字母 <i>j</i>。G0 在这里毫无结果。位置检验显示出同样的坐标结构（辅音 z ≈ 22，元音 z ≈ 5），但没有任何简单的字母表格适用（试了400种），六元音求解器（E26）也失败了：正对照全部找回，档案却只达到其水平的15%。<mark class="unc">问题可能出在这一通道的机器读法和锚点上</mark>；下一步将像第一通道那样进行人工盲读。Daniel Bourdeau 所指出的“<i>y</i> 为元音”正对应这一通道。</p>
+
+  <h2 id="outils">工具</h2>
+  <ul>
+    <li><strong>资料</strong>：JACAR 公开 PDF<sup class="fn"><a href="sources.html#s3">[3]</a>–<a href="sources.html#s6">[6]</a></sup>；中文电码表（Unicode Unihan 字段 <code>kTaiwanTelegraph</code> 与 <code>kMainlandTelegraph</code>）<sup class="fn"><a href="sources.html#s10">[10]</a></sup>。</li>
+    <li><strong>语料</strong>：维基文库中的孙中山著作<sup class="fn"><a href="sources.html#s12">[12]</a></sup>、Sunology 网站上的1916年电报<sup class="fn"><a href="sources.html#s11">[11]</a></sup>；<code>jieba</code> 分词<sup class="fn"><a href="sources.html#s14">[14]</a></sup>；用 OpenCC 处理异体字<sup class="fn"><a href="sources.html#s13">[13]</a></sup>。</li>
+    <li><strong>计算</strong>：Python 3（NumPy）用于检验、预处理和打分；C++17 求解器（<code>clang++ -O3 -march=native -pthread</code>），采用模拟退火与迭代局部搜索：<code>anchor_sa</code>、<code>anchor_arr</code>（排列、进位与 ±111 偏移）、<code>anchor_coord</code> 与 <code>anchor_coord6</code>（坐标表）。一台8核笔记本电脑即可。</li>
+    <li><strong>阅读</strong>：本地 HTML 盲读界面（匿名打乱片段，导出 JSON）与合并读法的脚本。</li>
+    <li><strong>AI 助手</strong>：研究由 Brice 主导，借助编程助手完成：C01—C13 使用 Codex（GPT-6.1 Sol），C14 起使用 Claude Opus 5.5，完成破译的 C31 使用 Claude Fable 5.1。助手编写求解器和测试、维护日志并提出假设；在图像上对密文的关键读法与裁决均由人完成。</li>
+  </ul>
+  <p>日志、脚本和否定结果将随本网站一同公开，以便任何人都能重复这些计算。</p>
+  <hr>
+  <p class="byline">资料来源见<a href="sources.html">资料来源页</a>。感谢 Daniel Bourdeau，他的文章和代码为本研究开辟了道路。</p>
+</article>
+</main>
+
+<footer class="site-footer"><div class="inner">
+  电报图像：日本亚洲历史资料中心（JACAR），日本外务省外交史料馆。前人研究：Daniel Bourdeau（CC BY 4.0）。<a href="sources.html">全部资料来源</a>。
+</div></footer>
+<script src="../assets/js/messages.js"></script>
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

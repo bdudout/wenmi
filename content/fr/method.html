@@ -1,0 +1,159 @@
+<!-- {"title": "Casser le Wenmi", "description": "Write-up technique du déchiffrement du code 文密 (Wenmi, 1916) : transcription aveugle, tests sans clé, solveurs par recuit simulé, validation sur message tenu à l'écart, grille G0."} -->
+<article class="article">
+  <header class="lede">
+    <p class="kicker">Article 2 · Write-up technique</p>
+    <h1>Casser le Wenmi : de la structure des lettres à une clé sans paramètre</h1>
+    <p class="standfirst">Comment on passe de « <i>fazihipego wezelucuna</i> » à « <span lang="zh-Hant">報傳取消日人態度遽變</span> » : la transcription, trente séances de calcul dont la plupart négatives, un test statistique simple qui change tout, et une clé qui tient en une ligne.</p>
+    <p class="byline">Lecture : environ 25 minutes · niveau : à l'aise avec les probabilités et un peu de code</p>
+    <p class="legend-unc">Les passages <mark class="unc">soulignés en pointillé</mark> sont des hypothèses non confirmées.</p>
+  </header>
+
+  <nav class="toc" aria-label="Sommaire">
+    <strong>Sommaire</strong>
+    <ol>
+      <li><a href="#tldr">En bref : le système</a></li>
+      <li><a href="#depart">Point de départ : le travail de Daniel Bourdeau</a></li>
+      <li><a href="#regles">Les règles du jeu</a></li>
+      <li><a href="#transcription">Étape 1 — Lire ce que l'employé a écrit</a></li>
+      <li><a href="#echecs">Étape 2 — Ce qui n'a pas marché (et pourquoi)</a></li>
+      <li><a href="#structure">Étape 3 — Un test sans clé : la consonne code la dizaine</a></li>
+      <li><a href="#solveur">Étape 4 — Un solveur contraint et un message témoin</a></li>
+      <li><a href="#g0">Étape 5 — La grille G0</a></li>
+      <li><a href="#validation">Pourquoi y croire : les contrôles</a></li>
+      <li><a href="#canal2">Le problème ouvert : le second canal</a></li>
+      <li><a href="#outils">Outils</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="tldr">En bref : le système</h2>
+  <p>Le flux de Tokyo (juin–septembre 1916) se chiffre en cinq opérations, sans aucune clé secrète au sens moderne :</p>
+  <div class="pipeline">
+    <div>Texte chinois<b lang="zh-Hant">報</b></div>
+    <div>Code télégraphique public<b>1032</b></div>
+    <div>Coupé en deux moitiés<b>10 | 32</b></div>
+    <div>Chaque moitié → une syllabe (grille G0)<b>fa | zi</b></div>
+    <div>Syllabes enchaînées, mots de 10 lettres<b>fazihipego</b></div>
+  </div>
+  <p>La grille G0 attribue à chaque nombre de 00 à 99 une syllabe consonne + voyelle. Les consonnes sont prises dans l'ordre alphabétique <strong>inversé</strong> en partant de <i>h</i> (h g f d c b z y x w v t s r q p n m l k), <strong>deux par dizaine</strong> ; les voyelles <i>a e i o u</i> codent l'unité, en montant pour la première consonne de la dizaine et en descendant pour la seconde (un parcours « en serpentin ») :</p>
+  <div data-g0-grid></div>
+  <p>Ainsi <code>ha</code> = 00, <code>hu</code> = 04, <code>gu</code> = 05, <code>ga</code> = 09, <code>fa</code> = 10… <code>ka</code> = 99. En Python :</p>
+<pre><code>ORDER, V = "hgfdcbzyxwvtsrqpnmlk", "aeiou"
+G0 = {c + v: 10 * (i // 2) + (j if i % 2 == 0 else 9 - j)
+      for i, c in enumerate(ORDER) for j, v in enumerate(V)}
+
+def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
+    s = [letters[k:k+2] for k in range(0, len(letters), 2)]
+    return ["%02d%02d" % (G0[a], G0[b]) for a, b in zip(s[::2], s[1::2])]</code></pre>
+  <p>Chaque message se termine par la signature <span lang="zh-Hant">伸</span> (<code>heyu</code> = 0135), parfois <span lang="zh-Hant">伸令</span>, puis le jour du mois, écrit soit en rime <span lang="zh-Hant">韻目代日</span> (<span lang="zh-Hant">巧</span> 18, <span lang="zh-Hant">漾</span> 23, <span lang="zh-Hant">元</span> 13…), soit en chiffre chinois (<span lang="zh-Hant">卅</span> 30).</p>
+
+  <h3>Essayez</h3>
+  <p>Choisissez un télégramme, puis cliquez sur un caractère ou lancez la lecture pas à pas : les deux syllabes s'allument dans le texte chiffré et dans la grille ci-dessus. Les caractères en pointillé orange sont <strong>douteux</strong> (lecture du formulaire incertaine ou caractère rare).</p>
+  <div class="decoder" data-default="0416b">
+    <div class="controls">
+      <label><span class="sr">Télégramme</span><select></select></label>
+      <button type="button" data-act="play">▶ Lecture pas à pas</button>
+    </div>
+    <div class="cipher" aria-label="Texte chiffré"></div>
+    <div class="tokens"></div>
+    <p class="meta"></p>
+    <p class="legend">Chaque case : syllabes · code télégraphique · caractère.</p>
+  </div>
+
+  <h2 id="depart">Point de départ : le travail de Daniel Bourdeau</h2>
+  <div class="credit">
+    <p>Tout part de « <a href="https://dbourdeau.github.io/cyphersolver/sunintercepts.html">Sun Yat-sen's circle on the wire, 1916–17</a> » de <strong>Daniel Bourdeau</strong><sup class="fn"><a href="sources.html#s1">[1]</a></sup> et de son dépôt <a href="https://github.com/dbourdeau/cyphersolver">dbourdeau/cyphersolver</a><sup class="fn"><a href="sources.html#s2">[2]</a></sup>. Partant des deux tables de « condensateur » de Yamada Junzaburō publiées par S. Tomokiyo<sup class="fn"><a href="sources.html#s8">[8]</a></sup>, il a reconnu une <strong>famille</strong> de clés à 20 consonnes et 5 voyelles (100 syllabes, une par nombre de 00 à 99), généré toute la famille (57 600 tables, ordres de remplissage, origines et additif ±111 compris), et noté chaque table sur chaque télégramme avec un modèle de caractères chinois. Une clé n'était acceptée qu'à z ≥ 6 sur un long télégramme <em>et</em> si elle décodait d'autres télégrammes sur lesquels elle n'avait pas été choisie ; les rimes de date fournissaient un contrôle indépendant. Résultat : une soixantaine de télégrammes lus, en tout ou en partie.</p>
+    <p>Pour le <span lang="zh-Hant">文密</span>, il rapporte des mots de dix lettres, un <i>w</i> consonne, un <i>y</i> voyelle, et un résultat négatif : une version à six voyelles de sa famille (environ 200 000 tables) ne dépasse pas z = 4,1. Il conclut que le système est probablement distinct et bâti sur une table qui ne suit pas une règle. Nous avons repris son repérage des pièces, sa méthode de validation (tenir des messages à l'écart, vérifier les rimes) et l'idée qu'un demi-code télégraphique devient une syllabe. La suite montre que, pour le flux de Tokyo, la table <em>suit</em> une règle, mais une règle hors de sa famille : alphabet inversé, deux consonnes par dizaine, voyelles en serpentin.</p>
+  </div>
+
+  <h2 id="regles">Les règles du jeu</h2>
+  <p>Un déchiffrement historique est un terrain idéal pour se tromper soi-même : avec assez de paramètres, on « lit » du chinois dans n'importe quel bruit. L'enquête a donc été menée sous des règles fixées à l'avance et consignées dans un journal tenu en ajout seul (plus de 1 200 lignes, 31 séances) :</p>
+  <ul>
+    <li><strong>Sources immuables.</strong> PDF JACAR conservés tels quels, empreintes SHA-256 consignées ; toute lecture nouvelle est un nouveau fichier versionné.</li>
+    <li><strong>Un message témoin.</strong> Le télégramme 0406 (12 juillet 1916) n'a <strong>jamais</strong> servi à régler une clé ou à corriger une lecture. Il n'est utilisé que pour juger.</li>
+    <li><strong>Aucun « crib ».</strong> On n'a jamais imposé un mot supposé (nom, formule) dans le texte clair. Seules les dates, lues en clair sur les formulaires par l'employé japonais, ont servi d'ancres, et plusieurs jeux d'ancres ont été testés.</li>
+    <li><strong>Témoins positifs et nuls.</strong> Chaque recherche est lancée aussi sur un texte chinois connu, chiffré avec une clé connue de même forme (le solveur doit la retrouver), et sur des données mélangées (le solveur ne doit rien trouver). Un score sur les archives n'a de sens que comparé à ces deux repères.</li>
+    <li><strong>Plusieurs graines.</strong> Un optimum n'est retenu que s'il est retrouvé à l'identique depuis des départs aléatoires différents.</li>
+    <li><strong>Statuts explicites.</strong> Chaque résultat est classé : fait, hypothèse, essai négatif, candidate, corroboré.</li>
+  </ul>
+
+  <h2 id="transcription">Étape 1 — Lire ce que l'employé a écrit</h2>
+  <p>Le chiffré n'existe que sous la forme de copies manuscrites par des employés japonais. Les lettres <i>g</i> et <i>q</i>, <i>x</i> et <i>d</i>, <i>u</i> et <i>n</i> s'y confondent facilement ; une seule lettre fausse change un caractère, une lettre sautée décale tout le reste du message.</p>
+  <ul>
+    <li><strong>Rendu</strong> des pages à 300 dpi, rotation, découpe de chaque formulaire et de chaque groupe (outil <code>sips</code> de macOS, sans retouche d'image).</li>
+    <li><strong>Lecture aveugle</strong> : un premier lecteur (assistant IA) fixe sa lecture avec variantes et niveau de confiance <em>avant</em> de voir toute transcription antérieure.</li>
+    <li><strong>Lecture humaine indépendante</strong> : Brice a lu les groupes à travers une petite interface locale qui présente des extraits <strong>anonymes et mélangés</strong> (on ne sait ni de quel message ni de quelle position il s'agit), avec export JSON. Huit lots, plusieurs centaines d'extraits ; certains lots ciblent une lettre, avec des exemples sûrs du même copiste pour comparer.</li>
+    <li><strong>Consensus</strong> par majorité entre lecteurs, désaccords arbitrés à l'image. Le corpus de travail passe de la version v1 (211 codes, 71 unités masquées) à la v8.</li>
+  </ul>
+  <p>Un détail de lecture s'est révélé décisif : longtemps, <i>q</i> a été considéré comme une variante graphique de <i>g</i>. La lecture humaine les a séparés, ce qui donne un alphabet d'exactement <strong>20 consonnes</strong> (b c d f g h k l m n p q r s t v w x y z, sans <i>j</i>). Sur le meilleur modèle de l'époque, cette seule distinction a fait monter le score de 681 à 829.</p>
+  <div class="status warn">
+    <h4>Biais déclaré</h4>
+    <p>Les deux derniers lots de lecture (« lectures assistées » puis relecture de 16 codes douteux) n'étaient <strong>pas</strong> aveugles : le lecteur savait ce que le modèle proposait. Pour limiter le risque, les quatre dernières unités de chaque message (signature et date) n'ont jamais pu être modifiées par ce biais, le message témoin 0406 n'a jamais été retouché, et toute proposition devait être confirmée à l'image (18 acceptées, 27 rejetées).</p>
+  </div>
+
+  <h2 id="echecs">Étape 2 — Ce qui n'a pas marché (et pourquoi)</h2>
+  <p>Pendant trente séances, l'approche a été celle, classique, d'une substitution inconnue :</p>
+  <ul>
+    <li>un <strong>modèle de langue</strong> (unigrammes et bigrammes de codes télégraphiques) appris sur environ 430 000 caractères de textes de Sun Yat-sen tirés de Wikisource, convertis en codes, puis complété de télégrammes de 1916 publiés ;</li>
+    <li>une <strong>table inconnue</strong> syllabe → nombre (100 cases, choisie librement), cherchée par <strong>recuit simulé</strong> : moteur C++ multi-thread, 64 départs × 30 millions d'itérations, puis recherche locale itérée ; environ 12 minutes par passe sur 8 cœurs ;</li>
+    <li>des <strong>ancres</strong> : la rime du jour en fin de message, déduite de la date écrite sur le formulaire.</li>
+  </ul>
+  <p>Toutes ces recherches ont échoué, et les témoins disent pourquoi. Le solveur retrouvait les clés des textes positifs (par exemple 258 codes sur 267) : il était <em>capable</em>. Mais sur les archives, son meilleur score (≈ 900) restait loin de celui d'un vrai texte (1 200–1 350), tout en dépassant nettement les données mélangées (≈ 670). Un texte chiffré par un livre de code arbitraire donnait 810–940 : les archives ressemblaient à cela.</p>
+  <p>Deux erreurs se cachaient dans les hypothèses :</p>
+  <ol>
+    <li><strong>De fausses ancres.</strong> Pour les jours 16 à 30, la convention des rimes emploie une autre série tonale que celle supposée au départ (vérifié dans des originaux de Sun publiés<sup class="fn"><a href="sources.html#s11">[11]</a></sup>). Plusieurs ancres étaient donc fausses.</li>
+    <li><strong>Un espace de clés trop grand.</strong> Une table libre de 100 cases offre assez de liberté pour fabriquer des optima de bruit autour de 900. L'essai inverse le confirme : en relâchant la structure finalement trouvée (expérience E21), l'ajustement monte, mais le message témoin devient illisible. C'est un surajustement.</li>
+  </ol>
+  <p>Entre-temps, une piste documentaire a été suivie jusqu'au bout. Les rapports du consulat japonais de Hankou (9 et 11 mai 1916)<sup class="fn"><a href="sources.html#s5">[5]</a><a href="sources.html#s6">[6]</a></sup> décrivent des surchiffrements « +111 » puis « inversion des quatre chiffres + 111 ». Les télégrammes d'avril joints aux rapports ont bien été décodés ainsi (retenue arithmétique, rime du jour en fin). Mais toutes les variantes ±111, avec ou sans inversion et avec le décalage résiduel que cela induit sous une table syllabique, sont <strong>négatives</strong> sur le flux de Tokyo (expériences E13, E15, E16). La conclusion a été tirée : aucune clé additive en juillet.</p>
+
+  <h2 id="structure">Étape 3 — Un test sans clé : la consonne code la dizaine</h2>
+  <p>Le tournant est venu d'un test qui ne cherche aucune clé. Les codes télégraphiques ont une forme très particulière : le chiffre des milliers est concentré (les codes courants sont surtout entre 0000 et 7999, presque jamais 8xxx ou 9xxx), alors que les chiffres des unités sont à peu près uniformes. Si une moitié de code (deux chiffres) devient une syllabe, la question est : <strong>qu'est-ce qui, dans la syllabe, porte la dizaine ?</strong></p>
+  <p>On compte donc les lettres selon leur rang dans le message (expérience S3). Aux rangs qui portent la <em>première</em> moitié du code (milliers et centaines), la distribution des <strong>consonnes</strong> est extrêmement déséquilibrée (z ≈ 22) : <i>h</i> et <i>g</i> dominent, <i>l</i>, <i>p</i> et <i>m</i> n'y apparaissent jamais. Les <strong>voyelles</strong>, elles, sont homogènes (z ≈ 1). Une simulation (S4) montre qu'une table aléatoire ne produit jamais ce motif (0 cas sur 400), alors qu'une <strong>table de coordonnées</strong>, où la consonne indique la dizaine et la voyelle l'unité, le reproduit.</p>
+  <p>Cette hypothèse (H9) divise l'espace de recherche de façon spectaculaire : il ne s'agit plus de placer 100 syllabes librement, mais d'affecter chaque consonne à une dizaine et chaque voyelle à un chiffre. Elle montrait aussi que certains jeux d'ancres de date étaient <strong>impossibles</strong> : sous H9, certaines rimes supposées exigeraient la même consonne pour deux dizaines.</p>
+
+  <h2 id="solveur">Étape 4 — Un solveur contraint et un message témoin</h2>
+  <p>Un nouveau solveur (<code>anchor_coord</code>) ne cherche que des tables de coordonnées. Sans ancre, il échoue même sur les témoins positifs ; avec dix ancres vraies, il retrouve toute la clé. On énumère alors les jeux d'ancres <em>compatibles</em> avec H9 (97 sur 324), et l'on teste les plus plausibles. Un seul se détache : <strong>D = {23 juin <span lang="zh-Hant">漾</span>, 18 juillet <span lang="zh-Hant">巧</span>, 19 juillet <span lang="zh-Hant">皓</span>, 13 septembre <span lang="zh-Hant">元</span>}</strong>.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Mesure (jeu d'ancres D)</th><th class="num">Archives</th><th class="num">Mélangé (nul)</th><th class="num">Témoin positif</th></tr></thead>
+    <tbody>
+      <tr><td>Score, corpus v4</td><td class="num">705</td><td class="num">349</td><td class="num">1 203</td></tr>
+      <tr><td>Score, corpus v5 (q ≠ g)</td><td class="num">829</td><td class="num">332</td><td class="num">1 216</td></tr>
+      <tr><td>Reproductibilité (3 graines)</td><td class="num" colspan="3">même optimum à 0,001 près, 96/96 unités concordantes</td></tr>
+    </tbody>
+  </table></div>
+  <p id="validation-0406">Le juge est le <strong>message 0406</strong>, tenu à l'écart. On mesure le gain moyen de log-vraisemblance par caractère sous le modèle de langue, par rapport à un caractère moyen : positif si le décodage ressemble à du chinois, négatif sinon. La table D le décode à <strong>+1,9</strong> par caractère sur le corpus v4, puis <strong>+3,47</strong> sur le corpus v5, alors que toutes les autres tables candidates restent à 0 ou en dessous et que les tables nulles donnent −1 à −2,5. En validation croisée (S7 : régler sur cinq messages, juger sur le sixième), la table se transporte sur 6 messages sur 6. Le texte devient lisible par phrases : <span lang="zh-Hant">三十式槍、萬一千、軍用品已到門司、年息一割、無擔保、第二批械、軍務院、豫定計畫</span>…</p>
+
+  <h2 id="g0">Étape 5 — La grille G0</h2>
+  <p>En regardant la table ajustée, case par case, une régularité saute aux yeux : les consonnes se suivent dans l'ordre alphabétique inversé, deux par dizaine, et les voyelles montent puis descendent. Les quelques cases qui s'en écartent sont celles que les données contraignaient mal. On remplace donc la table ajustée par la <strong>grille régulière</strong> qu'elle approxime : G0, qui n'a plus aucun paramètre libre.</p>
+  <p>Le résultat est le test le plus fort de l'enquête : <strong>sans aucun réglage, G0 décode le message témoin 0406 à +3,99 par caractère, mieux que la table ajustée dont elle est issue (+3,48)</strong>. Une table bruitée par l'ajustement fait moins bien que la règle simple qu'elle cachait : c'est ce qu'on attend si la règle est la vraie clé. G0 redonne les 351 codes des sept messages, et les fins de message deviennent cohérentes : signature <span lang="zh-Hant">伸</span> puis jour (<span lang="zh-Hant">漾</span> pour le 23 juin, <span lang="zh-Hant">巧</span> pour le 18 juillet, <span lang="zh-Hant">元</span> pour le 13 septembre, <span lang="zh-Hant">卅</span> pour le 30 septembre, <span lang="zh-Hant">文</span> pour le 12 juillet).</p>
+  <p>Deux fins restent anormales : le 19 juillet se termine par <code>4210</code> au lieu de <span lang="zh-Hant">皓</span> (<code>4110</code>), <mark class="unc">probablement une erreur du chiffreur ou du copiste (une lettre)</mark> ; le message daté du 30 juin se termine par <span lang="zh-Hant">卄</span> (20), <mark class="unc">ce qui pourrait signaler une rédaction antérieure à l'envoi ou une date mal lue</mark>.</p>
+
+  <h2 id="validation">Pourquoi y croire : les contrôles</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Critère fixé à l'avance</th><th>Résultat</th></tr></thead>
+    <tbody>
+      <tr><td>Témoins positifs de même forme récupérés</td><td>Oui (1 203–1 216 ; clés retrouvées)</td></tr>
+      <tr><td>Archives nettement au-dessus des nuls</td><td>Oui (829 contre ≈ 335 ; 1 144 après relecture)</td></tr>
+      <tr><td>Optimum reproductible depuis des départs différents</td><td>Oui (3 graines, même optimum)</td></tr>
+      <tr><td>Message tenu à l'écart lisible sans réglage (≥ +2,5 / caractère)</td><td>Oui : +3,99 sous G0</td></tr>
+      <tr><td>Texte chinois suivi, cohérent avec les dates du formulaire</td><td>Oui pour l'essentiel ; 19 caractères douteux sur 351</td></tr>
+      <tr><td>Recoupement extérieur indépendant</td><td>Oui : l'expéditeur <span lang="zh-Hant">伸</span> = <span lang="zh-Hant">趙伸</span>, identifié <em>après</em> le décodage dans une étude de 2026<sup class="fn"><a href="sources.html#s7">[7]</a></sup> qui décrit les mêmes contrats d'armes</td></tr>
+    </tbody>
+  </table></div>
+  <p>Ce dernier point mérite d'être souligné : le nom de Zhao Shen, la livraison du « second lot d'armes », la garantie refusée par le Guangdong et le partage des armes entre Yunnan et Guangdong apparaissent dans les télégrammes décodés <em>avant</em> qu'on ait lu l'article de Cheng Honglei. Aucun de ces mots n'a été injecté dans la recherche.</p>
+  <p>Limites : la grille a été <em>lue</em> dans une table ajustée, elle n'est pas tombée du ciel ; les derniers lots de lecture n'étaient pas aveugles ; et les traductions sont des traductions de travail.</p>
+
+  <h2 id="canal2">Le problème ouvert : le second canal</h2>
+  <p>Un autre groupe de télégrammes porte aussi le nom <span lang="zh-Hant">文密</span> : les messages du flux du Yunnan, et le télégramme de Sun Yat-sen à Dai Jitao du 24 juin 1917 (JACAR B03050090200, image 0509). Leur alphabet est différent : <i>y</i> y est une voyelle et la lettre <i>j</i> apparaît. G0 n'y donne rien. Le test des rangs montre la même structure de coordonnées (consonnes z ≈ 22, voyelles z ≈ 5), mais aucune grille alphabétique simple ne convient (400 essayées), et un solveur à six voyelles (E26) échoue : les témoins positifs sont tous retrouvés, les archives restent à 15 % de leur niveau. <mark class="unc">Les lectures automatiques et les ancres de ce canal sont probablement en cause</mark> ; la suite passera par des lectures humaines aveugles, comme pour le premier canal. C'est à ce canal que correspond le <i>y</i> voyelle relevé par Daniel Bourdeau.</p>
+
+  <h2 id="outils">Outils</h2>
+  <ul>
+    <li><strong>Sources</strong> : PDF publics de JACAR<sup class="fn"><a href="sources.html#s3">[3]</a>–<a href="sources.html#s6">[6]</a></sup> ; tables du code télégraphique chinois (Unicode Unihan, champs <code>kTaiwanTelegraph</code> et <code>kMainlandTelegraph</code>)<sup class="fn"><a href="sources.html#s10">[10]</a></sup>.</li>
+    <li><strong>Corpus de langue</strong> : textes de Sun Yat-sen sur Wikisource<sup class="fn"><a href="sources.html#s12">[12]</a></sup>, télégrammes de 1916 du site Sunology<sup class="fn"><a href="sources.html#s11">[11]</a></sup> ; segmentation <code>jieba</code><sup class="fn"><a href="sources.html#s14">[14]</a></sup> ; variantes de caractères via OpenCC<sup class="fn"><a href="sources.html#s13">[13]</a></sup>.</li>
+    <li><strong>Calcul</strong> : Python 3 (NumPy) pour les tests, la préparation et les scores ; solveurs en C++17 (<code>clang++ -O3 -march=native -pthread</code>) par recuit simulé et recherche locale itérée : <code>anchor_sa</code>, <code>anchor_arr</code> (arrangements, retenue et décalage ±111), <code>anchor_coord</code> et <code>anchor_coord6</code> (tables de coordonnées). Un portable à 8 cœurs suffit.</li>
+    <li><strong>Lecture</strong> : interface HTML locale de lecture aveugle (extraits anonymes mélangés, export JSON) et script de fusion des lectures.</li>
+    <li><strong>Assistants IA</strong> : les séances ont été menées par Brice avec des assistants de code : Codex (GPT-6.1 Sol) pour les séances C01–C13, Claude Opus 5.5 à partir de C14, Claude Fable 5.1 pour C31, la séance du déchiffrement. Les assistants ont écrit les solveurs et les tests, tenu le journal et proposé les hypothèses ; les lectures décisives du chiffré à l'image et les arbitrages ont été faits par un humain.</li>
+  </ul>
+  <p>Le journal, les scripts et les résultats négatifs ont vocation à être publiés avec ce site, pour que chacun puisse refaire les calculs.</p>
+  <hr>
+  <p class="byline">Sources : voir la <a href="sources.html">page des sources</a>. Remerciements à Daniel Bourdeau, dont l'article et le code ont ouvert la voie.</p>
+</article>
