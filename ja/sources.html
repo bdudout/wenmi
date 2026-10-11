@@ -20,6 +20,7 @@
     <a href="index.html">ホーム</a>
     <a href="history.html">歴史的背景</a>
     <a href="method.html">解読の方法</a>
+    <a href="telegrams.html">電報一覧</a>
     <a href="sources.html" aria-current="page">出典</a>
   </nav>
   <nav class="lang-switch" aria-label="言語">
@@ -75,14 +76,20 @@
     <li id="s15">Barış Kuzuoğlu, "Chinese Cryptography: The Chinese Nationalist Party and Intelligence Management, 1927–1949", <i>Cryptologia</i>, 42(6), 2018, pp. 514–539, <a href="https://doi.org/10.1080/01611194.2018.1449146">doi:10.1080/01611194.2018.1449146</a>（中国のコードブックに関する背景）。</li>
   </ol>
 
-  <h2>方法と謝辞</h2>
-  <p>研究：Brice Dudout。AI コーディングアシスタント（Codex / GPT-6.1 Sol、のち Claude Opus 5.5 と Claude Fable 5.1）を使用。暗号文の人間による読み：Brice Dudout。電報の画像は外務省外交史料館の所蔵で、JACAR が公開している。</p>
-  <p>電報の訳は著者による作業訳である。未確認の情報は本文中に明示した。</p>
+  <h2>著者・謝辞・ライセンス</h2>
+  <p>調査は <strong>Brice Dudout</strong> が主導し、用紙上の暗号文を読んだ。<strong>Claude</strong>（Anthropic）との共同作業である。C14 以降は Claude Opus 5.5、解読のセッション（C31）は Claude Fable 5.1。最初のセッション（C01〜C13）は Codex（GPT-6.1 Sol）で行った。記事は共同で執筆した。電報の訳は作業訳で、未確認の情報は本文中に明示した。</p>
+  <ul>
+    <li>電報の画像：外務省外交史料館、JACAR 経由（B03050090000）。</li>
+    <li>肖像（Wikimedia Commons、パブリックドメイン）：<ul><li><a href="https://commons.wikimedia.org/wiki/File:Sun_Yat_Sen_portrait.jpg">Sun Yat Sen portrait.jpg</a> — 孫文、1911年</li><li><a href="https://commons.wikimedia.org/wiki/File:Yuan-Shi-Kai,_pr%C3%A9sident_de_la_r%C3%A9publique_chinoise_-_btv1b69339689.jpg">Yuan-Shi-Kai, président de la république chinoise - btv1b69339689.jpg</a> — 袁世凱、1915年（フランス国立図書館）</li><li><a href="https://commons.wikimedia.org/wiki/File:Cai_E.jpg">Cai E.jpg</a> — 蔡鍔</li><li><a href="https://commons.wikimedia.org/wiki/File:%E5%94%90%E7%B9%BC%E5%A0%AF.jpg">唐繼堯.jpg</a> — 唐継尭</li><li><a href="https://commons.wikimedia.org/wiki/File:Cen_Chunxuan.jpg">Cen Chunxuan.jpg</a> — 岑春煊</li></ul></li>
+    <li>地図：<a href="https://www.naturalearthdata.com/">Natural Earth</a> 1:110m、パブリックドメイン。地図・動画・アニメーションはコードで生成（<code>tools/make_media.py</code>）し、AI 生成画像は用いていない。</li>
+    <li>ソルバー、鍵、判読データ、言語モデル：リポジトリの <a href="https://github.com/bdudout/wenmi/tree/main/solver"><code>solver/</code> フォルダ</a>。</li>
+  </ul>
+  <p>ライセンス：<a href="https://creativecommons.org/licenses/by/4.0/deed.ja">クリエイティブ・コモンズ 表示 4.0</a>（Daniel Bourdeau の研究と同じ）。「Brice Dudout『文密暗号』2026」と表示すれば自由に再利用できる。例外（JACAR の画像、肖像、派生データ）は <a href="https://github.com/bdudout/wenmi/blob/main/LICENSE.md">LICENSE.md</a> を参照。</p>
 </article>
 </main>
 
 <footer class="site-footer"><div class="inner">
-  電報画像：アジア歴史資料センター（JACAR）、外務省外交史料館。先行研究：Daniel Bourdeau（CC BY 4.0）。<a href="sources.html">出典一覧</a>。
+  © 2026 Brice Dudout（Claude〔Anthropic〕との共同作業）。文章とコード：<a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a>。電報画像：アジア歴史資料センター（JACAR）、外務省外交史料館。先行研究：Daniel Bourdeau（CC BY 4.0）。<a href="sources.html">出典一覧</a>。
 </div></footer>
 <script src="../assets/js/site.js"></script>
 </body>

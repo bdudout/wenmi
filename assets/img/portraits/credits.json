@@ -1,0 +1,52 @@
+{
+ "sun": {
+  "title": "File:Sun Yat Sen portrait.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Sun_Yat_Sen_portrait.jpg",
+  "license": "Public domain",
+  "date": "1911",
+  "artist": "上海同生照相馆 (K.T. Thompson)",
+  "file": "sun.jpg",
+  "w": 636,
+  "h": 873
+ },
+ "cai": {
+  "title": "File:Cai E.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Cai_E.jpg",
+  "license": "Public domain",
+  "date": "No later than 1916; scan created on 11 September 2009.",
+  "artist": "Unknown; scanned by 天竺鼠 (talk) 15:19, 10 September 2009 (UTC)",
+  "file": "cai.jpg",
+  "w": 690,
+  "h": 1114
+ },
+ "tang": {
+  "title": "File:唐繼堯.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:%E5%94%90%E7%B9%BC%E5%A0%AF.jpg",
+  "license": "Public domain",
+  "date": "before 1917date QS:P,+1917-00-00T00:00:00Z/7,P1326,+1917-00-",
+  "artist": "庾恩暘",
+  "file": "tang.jpg",
+  "w": 631,
+  "h": 996
+ },
+ "cen": {
+  "title": "File:Cen Chunxuan.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Cen_Chunxuan.jpg",
+  "license": "Public domain",
+  "date": "No later than 1925; created on 20 June 2012.",
+  "artist": "Unknown; scanned by Internet Archive (https://archive.org/)",
+  "file": "cen.jpg",
+  "w": 364,
+  "h": 552
+ },
+ "yuan": {
+  "title": "File:Yuan-Shi-Kai, président de la république chinoise - btv1b69339689.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Yuan-Shi-Kai,_pr%C3%A9sident_de_la_r%C3%A9publique_chinoise_-_btv1b69339689.jpg",
+  "license": "Public domain",
+  "date": "1915date QS:P571,+1915-00-00T00:00:00Z/9",
+  "artist": "Agence Rol. Agence photographique (commanditaire)",
+  "file": "yuan.jpg",
+  "w": 2000,
+  "h": 2757
+ }
+}

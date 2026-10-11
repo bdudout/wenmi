@@ -1,0 +1,49 @@
+<!-- {"title": "Les télégrammes", "description": "Tous les télégrammes 文密 de 1916 transcrits et décodés, avec le statut de chaque caractère (sûr, confirmé, douteux) et des pistes d'erreur de lecture, de transmission Morse et de copie."} -->
+<article class="article">
+  <header class="lede">
+    <p class="kicker">Corpus</p>
+    <h1>Les télégrammes, un par un</h1>
+    <p class="standfirst">Les dix-sept télégrammes de 1916 lus à ce jour, sur les deux canaux : les lettres telles qu'elles ont été lues sur les formulaires, le code et le caractère obtenus, le degré de confiance de chaque caractère, et, pour les passages douteux, les erreurs qui pourraient les expliquer.</p>
+    <p class="byline">Transcriptions de Brice Dudout (lectures humaines à l'aveugle) ; analyse avec Claude (Anthropic).</p>
+  </header>
+
+  <h2>Comment lire cette page</h2>
+  <p>Chaque télégramme est donné en trois couches : les <strong>lettres lues</strong> sur la copie japonaise (groupées par dix, comme sur le formulaire), puis, case par case, les deux <strong>syllabes</strong>, le <strong>code</strong> télégraphique qu'elles donnent sous la clé du canal (G0 ou Y0), et le <strong>caractère</strong> chinois correspondant.</p>
+  <div class="legend-box">
+    <span><span class="token"><span class="h" lang="zh-Hant">報</span></span> sûr : caractère attendu dans un texte de ce genre</span>
+    <span><span class="token confirmed"><span class="h" lang="zh-Hant">粤</span></span> rare mais confirmé (date du formulaire, mot relu à l'image, nom, variante graphique)</span>
+    <span><span class="token doubt"><span class="h" lang="zh-Hant">睟</span></span> douteux : caractère improbable à cet endroit</span>
+    <span><span class="token illegible"><span class="h">·</span></span> illisible ou syllabe hors grille</span>
+  </div>
+  <p>« Sûr » veut dire que le caractère est plausible pour le modèle de langue et cohérent avec le reste ; cela ne garantit pas chaque lettre. Un caractère « douteux » peut aussi être juste (un nom propre, un terme technique rare) : c'est un signal, pas un verdict.</p>
+
+  <h2>D'où peuvent venir les erreurs ?</h2>
+  <p>Entre le texte de Zhao Shen et notre lecture, chaque lettre a franchi trois étapes, chacune avec ses erreurs typiques :</p>
+  <ol>
+    <li><strong>La transmission Morse.</strong> Les lettres voyagent en points et en traits. Un signe perdu, ajouté ou inversé change la lettre : <i>e</i> (·) devient <i>i</i> (··), <i>a</i> (·−) devient <i>e</i> (·) ou <i>w</i> (·−−), etc.</li>
+    <li><strong>La copie japonaise.</strong> L'employé recopie à la main des mots qui n'ont aucun sens pour lui. Certaines lettres de son écriture se confondent : <i>g</i>/<i>q</i>, <i>x</i>/<i>d</i>, <i>u</i>/<i>n</i>, <i>a</i>/<i>o</i>, <i>k</i>/<i>h</i>, <i>f</i>/<i>b</i>… (paires relevées à l'image pendant l'enquête).</li>
+    <li><strong>Notre lecture.</strong> Les mêmes confusions jouent une seconde fois, cent dix ans plus tard, sur le scan.</li>
+  </ol>
+  <p>Pour chaque code douteux, l'ordinateur essaie donc toutes les variantes qui changent <strong>une seule lettre</strong> par l'un de ces mécanismes, garde celles qui donnent une syllabe valide, et les classe selon ce qu'en pense le modèle de langue (le nombre indiqué est le gain de vraisemblance, en logarithme : plus il est grand, plus la variante « sonne » chinois à cet endroit). Ce sont des <mark class="unc">pistes, pas des corrections</mark> : le texte affiché n'est jamais modifié.</p>
+  <div class="note">
+    <h4>Le cas qui valide la méthode</h4>
+    <p>Le télégramme 0416b (19 juillet) finit par un code sans sens, <code>4210</code>. Le même jour, son jumeau 0416a, envoyé par l'autre canal, finit par 伸皓, « Shen, le 19 ». En cherchant une erreur d'une seule lettre, on trouve exactement : <i>xifa</i> au lieu de <i>xefa</i>. C'est à la fois une erreur Morse plausible (·· au lieu de ·) et une confusion de copie (i/e). La correction 皓 se lit alors sans difficulté.</p>
+    <p>À l'inverse, le télégramme 0386 se termine par 卄 (« 20 ») alors que le formulaire porte le 30 juin. Pour obtenir 卅 (« 30 »), il faudrait changer un <i>p</i> en <i>n</i> : ce n'est ni une erreur Morse d'un signe ni une confusion de copie relevée. L'écart reste inexpliqué.</p>
+  </div>
+
+  <div id="corpus"></div>
+<script type="application/json" id="corpus-labels">{
+ "stats": "{codes} codes au total : {conf} rares mais confirmés, {douteux} douteux, {ill} illisibles ; tous les autres sont sûrs.",
+ "read": "Lettres lues",
+ "doubts": "Codes douteux et pistes d'erreur",
+ "none": "aucune variante d'une lettre ne donne mieux",
+ "unreachable": "aucune erreur d'une seule lettre n'y mène",
+ "y1917": "1917 — non déchiffrés",
+ "notDecoded": "Lecture aveugle (Brice). Ni la clé G0 ni la clé Y0 ne donnent de chinois : l'alphabet diffère (c, j, y consonne et voyelle).",
+ "pending": "Lecture humaine aveugle reçue, en cours d'analyse ; publiée ici quand elle aura été exploitée.",
+ "kind": {"morse": "Morse", "copie": "copie", "morse+copie": "Morse ou copie", "autre": "ni Morse ni copie"},
+ "why": {"jumeau": "attendu d'après le télégramme jumeau 0416a :", "cartouche": "attendu d'après la date du formulaire (30/6) :"},
+ "status": {"douteux": "douteux", "illisible": "illisible"},
+ "conf": {"date": "rare mais confirmé : date concordant avec le formulaire", "mot": "rare mais confirmé : mot réel (relu à l'image ou attendu dans la phrase)", "nom": "rare mais confirmé : nom ou adresse", "variante": "variante graphique d'un caractère courant (卽 = 即)"}
+}</script>
+</article>

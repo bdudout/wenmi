@@ -1,0 +1,49 @@
+<!-- {"title": "电报全文", "description": "1916年全部“文密”电报的转写与解码，标明每个字的可信程度（可靠、已确认、存疑），并推测可能的读错、莫尔斯传输错误与抄写错误。"} -->
+<article class="article">
+  <header class="lede">
+    <p class="kicker">语料</p>
+    <h1>电报逐封细读</h1>
+    <p class="standfirst">迄今已读出的1916年两条通道共十七封电报：电报纸上读出的字母、由此得到的电码和汉字、每个字的可信程度，以及对存疑之处可能出错原因的推测。</p>
+    <p class="byline">转写：Brice Dudout（人工盲读）；分析：与 Claude（Anthropic）合作。</p>
+  </header>
+
+  <h2>阅读说明</h2>
+  <p>每封电报分三层呈现：日本抄件上<strong>读出的字母</strong>（按电报纸每十个字母一组），然后逐格列出两个<strong>音节</strong>、在该通道密钥（G0 或 Y0）下得到的<strong>电码</strong>，以及对应的<strong>汉字</strong>。</p>
+  <div class="legend-box">
+    <span><span class="token"><span class="h" lang="zh-Hant">報</span></span> 可靠：此类文字中常见的字</span>
+    <span><span class="token confirmed"><span class="h" lang="zh-Hant">粤</span></span> 罕见但已确认（与电报纸日期相符、经图像复核的词、人名地名、异体字）</span>
+    <span><span class="token doubt"><span class="h" lang="zh-Hant">睟</span></span> 存疑：此处不太可能出现的字</span>
+    <span><span class="token illegible"><span class="h">·</span></span> 无法辨认，或音节不在表中</span>
+  </div>
+  <p>“可靠”指该字对语言模型而言合理且与上下文一致，并不保证每个字母都正确。“存疑”的字也可能是对的（专有名词、罕用术语）：这只是提示，不是结论。</p>
+
+  <h2>错误从何而来？</h2>
+  <p>从赵伸的原文到我们的读法，每个字母都经过三道环节，各有其典型错误：</p>
+  <ol>
+    <li><strong>莫尔斯传输。</strong>字母以点和划传送。少一个、多一个或颠倒一个符号，字母就变了：<i>e</i>（·）变成 <i>i</i>（··），<i>a</i>（·−）变成 <i>e</i>（·）或 <i>w</i>（·−−），等等。</li>
+    <li><strong>日本职员抄写。</strong>职员手抄对他毫无意义的词，其笔迹中某些字母容易混淆：<i>g</i>/<i>q</i>、<i>x</i>/<i>d</i>、<i>u</i>/<i>n</i>、<i>a</i>/<i>o</i>、<i>k</i>/<i>h</i>、<i>f</i>/<i>b</i>……（研究过程中在图像上记录的成对混淆）。</li>
+    <li><strong>我们的阅读。</strong>一百一十年后，同样的混淆在扫描件上再发生一次。</li>
+  </ol>
+  <p>因此，对每个存疑电码，程序尝试通过上述机制<strong>只改一个字母</strong>的所有变体，保留能得到有效音节的变体，并按语言模型的评价排序（所示数字为对数似然的增益：数值越大，该变体在此处越“像中文”）。这些只是<mark class="unc">线索，而非更正</mark>：所示正文从不改动。</p>
+  <div class="note">
+    <h4>验证这一方法的例子</h4>
+    <p>0416b号电报（7月19日）以一个无意义的电码 <code>4210</code> 结尾。同一天，经另一条通道发出的孪生电报0416a以“伸皓”（“伸，十九日”）结尾。搜寻一个字母的错误，恰好找到：<i>xifa</i> 应为 <i>xefa</i>。这既是一个合理的莫尔斯错误（·· 代替 ·），也是一个抄写混淆（i/e）。改正后的“皓”读来毫无困难。</p>
+    <p>反之，0386号电报以“卄”（二十）结尾，而电报纸上写的是6月30日。要得到“卅”（三十），需把 <i>p</i> 改成 <i>n</i>：这既不是一个符号的莫尔斯错误，也不是已记录的抄写混淆。差异仍无法解释。</p>
+  </div>
+
+  <div id="corpus"></div>
+<script type="application/json" id="corpus-labels">{
+ "stats": "共 {codes} 个电码：{conf} 个罕见但已确认，{douteux} 个存疑，{ill} 个无法辨认；其余均可靠。",
+ "read": "读出的字母",
+ "doubts": "存疑电码与可能的错误",
+ "none": "没有更好的单字母变体",
+ "unreachable": "没有任何单字母错误能得到它",
+ "y1917": "1917年 —— 尚未破译",
+ "notDecoded": "Brice 的盲读。G0 与 Y0 两把密钥都读不出中文：字母表不同（有 c、j，y 既作辅音也作元音）。",
+ "pending": "人工盲读已收到，正在分析；处理完毕后将在此公布。",
+ "kind": {"morse": "莫尔斯", "copie": "抄写", "morse+copie": "莫尔斯或抄写", "autre": "既非莫尔斯亦非抄写"},
+ "why": {"jumeau": "据孪生电报0416a应为：", "cartouche": "据电报纸日期（30/6）应为："},
+ "status": {"douteux": "存疑", "illisible": "无法辨认"},
+ "conf": {"date": "罕见但已确认：日期与电报纸相符", "mot": "罕见但已确认：真实词语（经图像复核或文意所需）", "nom": "罕见但已确认：人名或地址", "variante": "常用字的异体（卽 = 即）"}
+}</script>
+</article>

@@ -6,27 +6,27 @@ Usage : python3 tools/build.py   (depuis la racine du dépôt)"""
 import json, os, re, html
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
-PAGES = ['index', 'history', 'method', 'sources']
+PAGES = ['index', 'history', 'method', 'telegrams', 'sources']
 LANGS = {
     'en': dict(code='en', label='English', brand='The Wenmi code',
-               nav=['Home', 'The history', 'The method', 'Sources'], theme='Toggle light/dark theme',
-               footer='Telegram images: JACAR (Japan Center for Asian Historical Records), Diplomatic Archives of the Ministry of Foreign Affairs of Japan. Prior work: Daniel Bourdeau (CC BY 4.0). <a href="sources.html">All sources</a>.',
+               nav=['Home', 'The history', 'The method', 'Telegrams', 'Sources'], theme='Toggle light/dark theme',
+               footer='© 2026 Brice Dudout, with Claude (Anthropic). Text and code: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Telegram images: JACAR (Japan Center for Asian Historical Records), Diplomatic Archives of the Ministry of Foreign Affairs of Japan. Prior work: Daniel Bourdeau (CC BY 4.0). <a href="sources.html">All sources</a>.',
                langs='Language'),
     'fr': dict(code='fr', label='Français', brand='Le code Wenmi',
-               nav=['Accueil', "L'histoire", 'La méthode', 'Sources'], theme='Basculer le thème clair/sombre',
-               footer='Images des télégrammes : JACAR (Japan Center for Asian Historical Records), Archives diplomatiques du ministère des Affaires étrangères du Japon. Travaux antérieurs : Daniel Bourdeau (CC BY 4.0). <a href="sources.html">Toutes les sources</a>.',
+               nav=['Accueil', "L'histoire", 'La méthode', 'Télégrammes', 'Sources'], theme='Basculer le thème clair/sombre',
+               footer='© 2026 Brice Dudout, avec Claude (Anthropic). Textes et code : <a href="https://creativecommons.org/licenses/by/4.0/deed.fr">CC BY 4.0</a>. Images des télégrammes : JACAR (Japan Center for Asian Historical Records), Archives diplomatiques du ministère des Affaires étrangères du Japon. Travaux antérieurs : Daniel Bourdeau (CC BY 4.0). <a href="sources.html">Toutes les sources</a>.',
                langs='Langue'),
     'zh-hans': dict(code='zh-Hans', label='简体中文', brand='文密电码',
-               nav=['首页', '历史背景', '破译方法', '资料来源'], theme='切换浅色/深色',
-               footer='电报图像：日本亚洲历史资料中心（JACAR），日本外务省外交史料馆。前人研究：Daniel Bourdeau（CC BY 4.0）。<a href="sources.html">全部资料来源</a>。',
+               nav=['首页', '历史背景', '破译方法', '电报全文', '资料来源'], theme='切换浅色/深色',
+               footer='© 2026 Brice Dudout，与 Claude（Anthropic）合作。文字与代码：<a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC BY 4.0</a>。电报图像：日本亚洲历史资料中心（JACAR），日本外务省外交史料馆。前人研究：Daniel Bourdeau（CC BY 4.0）。<a href="sources.html">全部资料来源</a>。',
                langs='语言'),
     'zh-hant': dict(code='zh-Hant', label='繁體中文', brand='文密電碼',
-               nav=['首頁', '歷史背景', '破譯方法', '資料來源'], theme='切換淺色/深色',
-               footer='電報影像：日本亞洲歷史資料中心（JACAR），日本外務省外交史料館。前人研究：Daniel Bourdeau（CC BY 4.0）。<a href="sources.html">全部資料來源</a>。',
+               nav=['首頁', '歷史背景', '破譯方法', '電報全文', '資料來源'], theme='切換淺色/深色',
+               footer='© 2026 Brice Dudout，與 Claude（Anthropic）合作。文字與程式碼：<a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">CC BY 4.0</a>。電報影像：日本亞洲歷史資料中心（JACAR），日本外務省外交史料館。前人研究：Daniel Bourdeau（CC BY 4.0）。<a href="sources.html">全部資料來源</a>。',
                langs='語言'),
     'ja': dict(code='ja', label='日本語', brand='文密暗号',
-               nav=['ホーム', '歴史的背景', '解読の方法', '出典'], theme='ライト／ダークを切り替え',
-               footer='電報画像：アジア歴史資料センター（JACAR）、外務省外交史料館。先行研究：Daniel Bourdeau（CC BY 4.0）。<a href="sources.html">出典一覧</a>。',
+               nav=['ホーム', '歴史的背景', '解読の方法', '電報一覧', '出典'], theme='ライト／ダークを切り替え',
+               footer='© 2026 Brice Dudout（Claude〔Anthropic〕との共同作業）。文章とコード：<a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a>。電報画像：アジア歴史資料センター（JACAR）、外務省外交史料館。先行研究：Daniel Bourdeau（CC BY 4.0）。<a href="sources.html">出典一覧</a>。',
                langs='言語'),
 }
 # Drapeau (assets/img/flags/<code>.svg, généré par make_flags.py) et étiquette courte affichés dans le sélecteur.
@@ -89,6 +89,8 @@ def build():
                                    FLAGS[l][0], FLAGS[l][1]) for l, LL in LANGS.items())
             alternates = '\n'.join('<link rel="alternate" hreflang="%s" href="../%s/%s.html">' % (LL['code'], l, page) for l, LL in LANGS.items())
             scripts = ''
+            if 'id="corpus"' in body:
+                scripts += '<script src="../assets/js/corpus.js"></script>\n<script src="../assets/js/translations.js"></script>\n'
             if 'decoder' in body:
                 scripts += ('<script src="../assets/js/messages.js"></script>\n<script src="../assets/js/messages-y0.js"></script>\n'
                             '<script src="../assets/js/translations.js"></script>\n')

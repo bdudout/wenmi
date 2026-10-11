@@ -4,7 +4,8 @@
     <p class="kicker">第2部 · 技術解説</p>
     <h1>文密を破る――文字の構造からパラメータのない二つの鍵へ</h1>
     <p class="standfirst">「<i>fazihipego wezelucuna</i>」から「<span lang="zh-Hant">報傳取消日人態度遽變</span>」へ至る道のり。翻字、30回に及ぶ計算（その大半は失敗）、すべてを変えた一つの単純な統計検定、そしてそれぞれ一行で書ける二つの鍵。</p>
-    <p class="byline">読了時間：約25分 · 確率と少しのプログラムに抵抗のない読者向け</p>
+    <p class="byline">著者：<strong>Brice Dudout</strong>（Claude〔Anthropic〕との共同作業） · 読了時間：約25分 · 確率と少しのプログラムに抵抗のない読者向け</p>
+    <p class="byline">この解説は一人称で書いている。「私」は Brice、「私たち」は Claude と私である。調査は共同作業で、Claude がソルバーとテストを書き、ログを管理し、仮説を提案した。私は画像上で暗号文を読み、判断を下し、方針と基準を選んだ。</p>
     <p class="legend-unc"><mark class="unc">点線の下線</mark>を付した箇所は未確認の推測である。</p>
   </header>
 
@@ -27,6 +28,18 @@
   </nav>
 
   <h2 id="tldr">要点：暗号方式</h2>
+  <figure class="wide media">
+    <video controls preload="metadata" playsinline poster="../assets/media/decoder-poster.jpg" width="1280" height="720">
+      <source src="../assets/media/decoder.mp4" type="video/mp4">
+      <source src="../assets/media/decoder.webm" type="video/webm">
+      <track kind="subtitles" srclang="fr" label="Français" src="../assets/media/decoder.fr.vtt">
+      <track kind="subtitles" srclang="en" label="English" src="../assets/media/decoder.en.vtt">
+      <track kind="subtitles" srclang="zh-Hans" label="简体中文" src="../assets/media/decoder.zh-hans.vtt">
+      <track kind="subtitles" srclang="zh-Hant" label="繁體中文" src="../assets/media/decoder.zh-hant.vtt">
+      <track kind="subtitles" srclang="ja" label="日本語" src="../assets/media/decoder.ja.vtt" default>
+    </video>
+    <figcaption>35秒でわかる解読：日本の電報用紙から中国語の本文まで、ただ一つの誤字の訂正も含めて。アニメーションはコードで生成、字幕は5言語。</figcaption>
+  </figure>
   <p>1916年の二つの系統は、いずれも5つの操作で暗号化されている。現代的な意味での秘密鍵はない。東京 → 肇慶の系統（1916年6〜9月）を例にとる。</p>
   <div class="pipeline">
     <div>中国語の本文<b lang="zh-Hant">報</b></div>
@@ -68,7 +81,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   </div>
 
   <h2 id="regles">ルール</h2>
-  <p>歴史的暗号の解読は、自分自身をだますのに格好の場である。パラメータが十分にあれば、どんな雑音の中にも中国語を「読める」。そこで本研究は、あらかじめ定めたルールの下で進め、追記のみのログ（約1,400行、31回のセッション）に記録した。</p>
+  <p>歴史的暗号の解読は、自分自身をだますのに格好の場である。パラメータが十分にあれば、どんな雑音の中にも中国語を「読める」。そこで私たちは、あらかじめ定めたルールの下で作業し、追記のみのログ（約1,400行、31回のセッション）に記録した。</p>
   <ul>
     <li><strong>史料は改変しない。</strong>JACAR の PDF はダウンロードしたまま保存し、SHA-256 を記録する。新しい読みはすべて新しい版のファイルとする。</li>
     <li><strong>検証用電報を一つ。</strong>0406号電報（1916年7月12日）は、鍵の調整にも読みの修正にも<strong>一度も</strong>使わない。判定にのみ用いる。</li>
@@ -83,17 +96,17 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   <ul>
     <li><strong>画像処理</strong>：ページを300 dpi で描画し、回転し、各用紙と各語を切り出す（macOS の <code>sips</code> を使用、画像の修整はしない）。</li>
     <li><strong>ブラインド読み</strong>：最初の読み手（AI アシスタント）が、既存の翻字を見る<em>前に</em>、異読と確信度を付して自分の読みを確定する。</li>
-    <li><strong>独立した人間の読み</strong>：Brice が小さなローカルのインターフェースで各語を読んだ。断片は<strong>匿名化・シャッフル</strong>して提示され（どの電報のどの位置かはわからない）、JSON で書き出せる。8回、数百の断片。一部の回は特定の文字に絞り、同じ筆写者の確かな字例を比較用に添えた。</li>
+    <li><strong>独立した人間の読み</strong>：私自身が小さなローカルのインターフェースで各語を読んだ。断片は<strong>匿名化・シャッフル</strong>して提示され（どの電報のどの位置かはわからない）、JSON で書き出せる。約15回、数百の断片。一部の回は特定の文字に絞り、同じ筆写者の確かな字例を比較用に添えた。</li>
     <li><strong>合意</strong>：読み手間の多数決とし、不一致は画像に戻って裁定する。作業コーパスは v1（211符号、71単位を伏せ字）から v8 まで更新された。</li>
   </ul>
   <p>ある読みの細部が決定的だった。長いあいだ <i>q</i> は <i>g</i> の字形の異体とみなされていた。人間の読みがこれを区別したことで、アルファベットはちょうど<strong>20の子音</strong>（b c d f g h k l m n p q r s t v w x y z、<i>j</i> なし）になった。当時の最良のモデルでは、この区別だけでスコアが681から829に上がった。</p>
   <div class="status warn">
     <h4>表明しておくバイアス</h4>
-    <p>最後の2回の読み（「支援付きの読み」と、疑わしい16符号の再読）はブラインドでは<strong>なかった</strong>。読み手はモデルの提案を知っていた。リスクを抑えるため、各電報の最後の4単位（署名と日付）はこの方法では変更できないこととし、検証用電報0406には一切手を触れず、すべての提案は画像上で確認することを条件とした（採用18、却下27）。</p>
+    <p>私の読みのうち2回（「支援付きの読み」と、疑わしい16符号の再読）はブラインドでは<strong>なかった</strong>。私はモデルの提案を知っていた。リスクを抑えるため、各電報の最後の4単位（署名と日付）はこの方法では変更できないこととし、検証用電報0406には一切手を触れず、すべての提案は画像上で確認することを条件とした（採用18、却下27）。</p>
   </div>
 
   <h2 id="echecs">第2段階 ―― うまくいかなかったこと（とその理由）</h2>
-  <p>30回のセッションを通じて、未知の換字式暗号に対する古典的な方法をとった。</p>
+  <p>30回のセッションを通じて、私たちは未知の換字式暗号に対する古典的な方法をとった。</p>
   <ul>
     <li><strong>言語モデル</strong>（電信符号の1-gram・2-gram）。ウィキソースにある孫文の著作約43万字を符号化して学習し、のちに刊行された1916年の電報で補った。</li>
     <li><strong>未知の表</strong>「音節 → 数字」（100マス、自由に配置）を<strong>焼きなまし法</strong>で探索。マルチスレッドの C++ エンジンで、初期値64 × 3,000万回の反復、続いて反復局所探索。8コアで1回あたり約12分。</li>
@@ -177,9 +190,9 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
     <li><strong>言語コーパス</strong>：ウィキソースの孫文の著作<sup class="fn"><a href="sources.html#s12">[12]</a></sup>、Sunology サイトの1916年の電報<sup class="fn"><a href="sources.html#s11">[11]</a></sup>。<code>jieba</code> による分かち書き<sup class="fn"><a href="sources.html#s14">[14]</a></sup>、OpenCC による異体字処理<sup class="fn"><a href="sources.html#s13">[13]</a></sup>。</li>
     <li><strong>計算</strong>：検定・前処理・採点には Python 3（NumPy）。ソルバーは C++17（<code>clang++ -O3 -march=native -pthread</code>）で、焼きなまし法と反復局所探索を用いる：<code>anchor_sa</code>、<code>anchor_arr</code>（配列・繰り上がり・±111 のずれ）、<code>anchor_coord</code> と <code>anchor_coord6</code>（座標表）。8コアのノートPCで足りる。</li>
     <li><strong>読み</strong>：ローカルの HTML ブラインド読みインターフェース（匿名・シャッフルした断片、JSON 書き出し）と、読みを統合するスクリプト。</li>
-    <li><strong>AI アシスタント</strong>：セッションは Brice がコーディングアシスタントとともに進めた。C01〜C13 は Codex（GPT-6.1 Sol）、C14 以降は Claude Opus 5.5、解読に至った C31 は Claude Fable 5.1。アシスタントはソルバーとテストを書き、ログを管理し、仮説を提案した。画像上での暗号文の決定的な読みと裁定は人間が行った。</li>
+    <li><strong>人間と AI の共同作業</strong>：私は Claude（Anthropic）とともに調査を進めた。C14 以降は Claude Opus 5.5、解読に至った C31 は Claude Fable 5.1。最初の C01〜C13 は Codex を用いた。Claude はソルバー、テスト、ログを書き、仮説と対照を提案した。私は画像上で暗号文を読み、読みを裁定し、方針と基準を決め、これらの記事を Claude とともに書いた。</li>
   </ul>
-  <p>ログ、スクリプト、否定的な結果も、誰もが計算を再現できるよう、このサイトとあわせて公開する予定である。</p>
+  <p>ソルバー、二つの鍵、判読データ、言語モデルは <a href="https://github.com/bdudout/wenmi/tree/main/solver">GitHub リポジトリの <code>solver/</code> フォルダ</a>で公開しており、探索を再現できる。調査の完全なログは追って公開する。</p>
   <hr>
   <p class="byline">出典は<a href="sources.html">出典ページ</a>を参照。論文とコードで道を開いた Daniel Bourdeau 氏に感謝する。</p>
 </article>

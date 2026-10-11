@@ -139,4 +139,68 @@
     draw();
   }
   document.querySelectorAll('.decoder').forEach(mountDecoder);
+
+  // ---------- page « Télégrammes » : corpus complet, statut de chaque code, pistes d'erreur ----------
+  function mountCorpus(box) {
+    var C = window.WENMI_CORPUS, I = (window.WENMI_I18N || {})[root.lang] || (window.WENMI_I18N || {}).fr;
+    var Lel = document.getElementById('corpus-labels');
+    if (!C || !Lel) return;
+    var L = JSON.parse(Lel.textContent);
+    var morse = function (m) { return m.replace(/\./g, '·').replace(/-/g, '−'); };
+    var kindLabel = function (k) { return L.kind[k] || k; };
+    var h = '<p class="corpus-stats">' + L.stats.replace('{codes}', C.stats.codes).replace('{douteux}', C.stats['douteux'])
+      .replace('{conf}', C.stats['confirmé']).replace('{ill}', C.stats.illisible) + '</p>';
+    h += '<nav class="corpus-toc">';
+    ['G0', 'Y0'].forEach(function (g) {
+      h += '<div><strong>' + esc((I.channel || {})[g] || g) + '</strong> ';
+      C.messages.filter(function (m) { return m.grid === g; }).forEach(function (m) { h += '<a href="#t' + m.id + '">' + m.id + '</a> '; });
+      h += '</div>';
+    });
+    h += '<div><strong>' + esc(L.y1917) + '</strong> <a href="#t1917">0509a · 0511</a></div></nav>';
+    C.messages.forEach(function (m) {
+      h += '<section class="tg" id="t' + m.id + '"><h2>' + m.id + ' <small>' + esc(I.date[m.id] || '') + '</small></h2>';
+      h += '<p class="tg-meta"><span>' + esc(m.route) + '</span> · <span>' + esc((I.channel || {})[m.grid] || m.grid) + '</span> · <a href="https://www.jacar.archives.go.jp/das/meta/' + m.record + '">JACAR ' + m.record + '</a></p>';
+      var groups = m.letters.match(/.{1,10}/g) || [];
+      h += '<p class="tg-label">' + esc(L.read) + '</p><p class="cipher mono">' + groups.join(' ') + '</p>';
+      h += '<div class="tokens">';
+      m.codes.forEach(function (code, i) {
+        var st = m.status[i], cls = st === 'ok' ? '' : st === 'douteux' ? ' doubt' : st === 'illisible' ? ' illegible' : ' confirmed';
+        var title = st.indexOf('confirmé') === 0 ? L.conf[st.split(':')[1]] : (L.status[st] || '');
+        h += '<span class="token' + cls + '" title="' + esc(title) + '"><span class="u">' + m.letters.substr(4 * i, 2) + '·' + m.letters.substr(4 * i + 2, 2) +
+          '</span><span class="c">' + code + '</span><span class="h" lang="zh-Hant">' + esc(m.chars[i]) + '</span></span>';
+      });
+      h += '</div>';
+      if (I.tr[m.id]) h += '<p class="meta"><strong>' + esc(I.label) + '</strong> ' + esc(I.tr[m.id]) + '</p>';
+      var items = '';
+      Object.keys(m.expected || {}).forEach(function (i) {
+        var e = m.expected[i], idx = +i;
+        items += '<li class="expected"><b>' + (idx + 1) + '.</b> <span lang="zh-Hant">' + esc(m.chars[idx]) + '</span> <code>' + m.codes[idx] + '</code> → <span lang="zh-Hant">' + esc(e.ch) + '</span> <code>' + e.code + '</code> — ' + esc(L.why[e.why]) + ' ';
+        items += e.paths.length ? e.paths.map(function (p) {
+          return '<span class="path">' + p.from + ' → ' + p.to + ' (' + esc(kindLabel(p.kind)) + (p.kind.indexOf('morse') >= 0 ? ' : ' + morse(p.morse[0]) + ' → ' + morse(p.morse[1]) : '') + ')</span>';
+        }).join(' ') : esc(L.unreachable);
+        items += '</li>';
+      });
+      m.status.forEach(function (st, idx) {
+        if (st !== 'douteux' && st !== 'illisible') return;
+        if (m.expected && m.expected[String(idx)]) return;
+        var al = (m.alts || {})[String(idx)] || [];
+        items += '<li><b>' + (idx + 1) + '.</b> <span class="mono">' + m.letters.substr(4 * idx, 4) + '</span> <span lang="zh-Hant">' + esc(m.chars[idx]) + '</span> <code>' + m.codes[idx] + '</code> → ';
+        items += al.length ? al.map(function (a) {
+          return '<span class="alt"><span lang="zh-Hant">' + esc(a.ch) + '</span> <code>' + a.code + '</code> <small>' + a.from + '→' + a.to + ', ' + esc(kindLabel(a.kind)) +
+            (a.kind.indexOf('morse') >= 0 ? ' ' + morse(a.morse[0]) + '→' + morse(a.morse[1]) : '') + ', ' + (a.d > 0 ? '+' : '') + a.d.toLocaleString(root.lang, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + '</small></span>';
+        }).join(' · ') : '<em>' + esc(L.none) + '</em>';
+        items += '</li>';
+      });
+      if (items) h += '<details class="tg-doubts"' + (m.expected && Object.keys(m.expected).length ? ' open' : '') + '><summary>' + esc(L.doubts) + '</summary><ul>' + items + '</ul></details>';
+      h += '</section>';
+    });
+    h += '<section class="tg" id="t1917"><h2>' + esc(L.y1917) + '</h2>';
+    C.undeciphered.forEach(function (u) {
+      h += '<h3>' + u.id + ' <small>' + esc(u.route) + '</small></h3>';
+      h += u.reading ? '<p class="tg-label">' + esc(L.read) + '</p><p class="cipher mono">' + esc(u.reading) + '</p><p>' + esc(L.notDecoded) + '</p>' : '<p>' + esc(L.pending) + '</p>';
+    });
+    h += '</section>';
+    box.innerHTML = h;
+  }
+  document.querySelectorAll('#corpus').forEach(mountCorpus);
 })();

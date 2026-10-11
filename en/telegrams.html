@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The telegrams</title>
+<meta name="description" content="Every 1916 文密 telegram transcribed and decoded, with the status of each character (secure, confirmed, doubtful) and candidate reading, Morse-transmission and copying errors.">
+<link rel="alternate" hreflang="en" href="../en/telegrams.html">
+<link rel="alternate" hreflang="fr" href="../fr/telegrams.html">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-hans/telegrams.html">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-hant/telegrams.html">
+<link rel="alternate" hreflang="ja" href="../ja/telegrams.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%239b2c1f'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f7f3ea' font-family='serif'%3E%E6%96%87%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header"><div class="inner">
+  <a class="brand" href="index.html"><span class="seal" lang="zh-Hant">文密</span> The Wenmi code</a>
+  <nav class="menu">
+    <a href="index.html">Home</a>
+    <a href="history.html">The history</a>
+    <a href="method.html">The method</a>
+    <a href="telegrams.html" aria-current="page">Telegrams</a>
+    <a href="sources.html">Sources</a>
+  </nav>
+  <nav class="lang-switch" aria-label="Language">
+    <a href="../en/telegrams.html" hreflang="en" lang="en" data-lang="en" title="English" aria-label="English" aria-current="true"><img class="flag" src="../assets/img/flags/gb.svg" width="20" height="15" alt=""><span class="lc">EN</span></a>
+    <a href="../fr/telegrams.html" hreflang="fr" lang="fr" data-lang="fr" title="Français" aria-label="Français"><img class="flag" src="../assets/img/flags/fr.svg" width="20" height="15" alt=""><span class="lc">FR</span></a>
+    <a href="../zh-hans/telegrams.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-hans" title="简体中文" aria-label="简体中文"><img class="flag" src="../assets/img/flags/cn.svg" width="20" height="15" alt=""><span class="lc">简</span></a>
+    <a href="../zh-hant/telegrams.html" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant" title="繁體中文" aria-label="繁體中文"><img class="flag" src="../assets/img/flags/hk.svg" width="20" height="15" alt=""><span class="lc">繁</span></a>
+    <a href="../ja/telegrams.html" hreflang="ja" lang="ja" data-lang="ja" title="日本語" aria-label="日本語"><img class="flag" src="../assets/img/flags/jp.svg" width="20" height="15" alt=""><span class="lc">日</span></a>
+  </nav>
+  <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme">◐</button>
+</div></header>
+
+<main>
+<article class="article">
+  <header class="lede">
+    <p class="kicker">Corpus</p>
+    <h1>The telegrams, one by one</h1>
+    <p class="standfirst">The seventeen 1916 telegrams read so far, on both channels: the letters as read on the forms, the resulting code and character, the confidence of each character, and, for doubtful passages, the errors that might explain them.</p>
+    <p class="byline">Transcriptions by Brice Dudout (blind human readings); analysis with Claude (Anthropic).</p>
+  </header>
+
+  <h2>How to read this page</h2>
+  <p>Each telegram is given in three layers: the <strong>letters read</strong> on the Japanese copy (in groups of ten, as on the form), then, box by box, the two <strong>syllables</strong>, the telegraph <strong>code</strong> they give under the channel's key (G0 or Y0), and the corresponding Chinese <strong>character</strong>.</p>
+  <div class="legend-box">
+    <span><span class="token"><span class="h" lang="zh-Hant">報</span></span> secure: a character expected in a text of this kind</span>
+    <span><span class="token confirmed"><span class="h" lang="zh-Hant">粤</span></span> rare but confirmed (date on the form, word re-read on the image, name, graphic variant)</span>
+    <span><span class="token doubt"><span class="h" lang="zh-Hant">睟</span></span> doubtful: an unlikely character at this point</span>
+    <span><span class="token illegible"><span class="h">·</span></span> illegible, or syllable outside the grid</span>
+  </div>
+  <p>"Secure" means the character is plausible for the language model and consistent with the rest; it does not guarantee every letter. A "doubtful" character may also be right (a proper name, a rare technical term): it is a signal, not a verdict.</p>
+
+  <h2>Where can errors come from?</h2>
+  <p>Between Zhao Shen's text and our reading, every letter went through three stages, each with its typical errors:</p>
+  <ol>
+    <li><strong>Morse transmission.</strong> Letters travel as dots and dashes. A lost, added or inverted sign changes the letter: <i>e</i> (·) becomes <i>i</i> (··), <i>a</i> (·−) becomes <i>e</i> (·) or <i>w</i> (·−−), and so on.</li>
+    <li><strong>Japanese copying.</strong> The clerk copies by hand words that mean nothing to him. Some letters in his handwriting get confused: <i>g</i>/<i>q</i>, <i>x</i>/<i>d</i>, <i>u</i>/<i>n</i>, <i>a</i>/<i>o</i>, <i>k</i>/<i>h</i>, <i>f</i>/<i>b</i>… (pairs noted on the images during the investigation).</li>
+    <li><strong>Our reading.</strong> The same confusions come into play a second time, a hundred and ten years later, on the scan.</li>
+  </ol>
+  <p>For each doubtful code, the computer therefore tries every variant that changes <strong>a single letter</strong> through one of these mechanisms, keeps those that give a valid syllable, and ranks them by what the language model thinks of them (the number shown is the gain in log-likelihood: the larger it is, the more Chinese the variant "sounds" at this point). These are <mark class="unc">leads, not corrections</mark>: the text shown is never changed.</p>
+  <div class="note">
+    <h4>The case that validates the method</h4>
+    <p>Telegram 0416b (19 July) ends with a meaningless code, <code>4210</code>. The same day, its twin 0416a, sent through the other channel, ends with 伸皓, "Shen, the 19th". Searching for a single-letter error finds exactly that: <i>xifa</i> instead of <i>xefa</i>. It is both a plausible Morse error (·· instead of ·) and a copying confusion (i/e). The correction 皓 then reads without difficulty.</p>
+    <p>Conversely, telegram 0386 ends with 卄 ("20") while the form says 30 June. Getting 卅 ("30") would require changing a <i>p</i> into an <i>n</i>: neither a one-sign Morse error nor a recorded copying confusion. The discrepancy remains unexplained.</p>
+  </div>
+
+  <div id="corpus"></div>
+<script type="application/json" id="corpus-labels">{
+ "stats": "{codes} codes in all: {conf} rare but confirmed, {douteux} doubtful, {ill} illegible; all others are secure.",
+ "read": "Letters read",
+ "doubts": "Doubtful codes and candidate errors",
+ "none": "no one-letter variant does better",
+ "unreachable": "no single-letter error leads there",
+ "y1917": "1917 — not broken",
+ "notDecoded": "Blind reading (Brice). Neither key G0 nor key Y0 yields Chinese: the alphabet differs (c, j, y as both consonant and vowel).",
+ "pending": "Blind human reading received, being analysed; it will be published here once processed.",
+ "kind": {"morse": "Morse", "copie": "copying", "morse+copie": "Morse or copying", "autre": "neither Morse nor copying"},
+ "why": {"jumeau": "expected from the twin telegram 0416a:", "cartouche": "expected from the date on the form (30/6):"},
+ "status": {"douteux": "doubtful", "illisible": "illegible"},
+ "conf": {"date": "rare but confirmed: date matching the form", "mot": "rare but confirmed: real word (re-read on the image or expected in the sentence)", "nom": "rare but confirmed: name or address", "variante": "graphic variant of a common character (卽 = 即)"}
+}</script>
+</article>
+</main>
+
+<footer class="site-footer"><div class="inner">
+  © 2026 Brice Dudout, with Claude (Anthropic). Text and code: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Telegram images: JACAR (Japan Center for Asian Historical Records), Diplomatic Archives of the Ministry of Foreign Affairs of Japan. Prior work: Daniel Bourdeau (CC BY 4.0). <a href="sources.html">All sources</a>.
+</div></footer>
+<script src="../assets/js/corpus.js"></script>
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

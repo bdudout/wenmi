@@ -1,0 +1,12 @@
+{
+ "alpha": 0.5,
+ "lambda": 0.9,
+ "bigram_default": -2.302585092994046,
+ "corpus_files": 225,
+ "corpus_ctc_chars": 429548,
+ "distinct_pairs_chars": 101071,
+ "code_pairs": 101089,
+ "positives_8gram_overlap": [],
+ "script_sha256": "a8a71c2e45192b5c4e304381243859e074837157cfce0d6e8770559adeae8962",
+ "corpus_manifest_sha256": "d7d649b3c1223d53f5a204b40e8efa06c810ae8a15906330cf2b3455d7e5f893"
+}

@@ -20,6 +20,7 @@
     <a href="index.html">首页</a>
     <a href="history.html">历史背景</a>
     <a href="method.html" aria-current="page">破译方法</a>
+    <a href="telegrams.html">电报全文</a>
     <a href="sources.html">资料来源</a>
   </nav>
   <nav class="lang-switch" aria-label="语言">
@@ -38,7 +39,8 @@
     <p class="kicker">第二篇 · 技术报告</p>
     <h1>破解文密：从字母结构到两把无参数的密钥</h1>
     <p class="standfirst">如何从“<i>fazihipego wezelucuna</i>”走到“<span lang="zh-Hant">報傳取消日人態度遽變</span>”：转写、三十次计算（大多以失败告终）、一个改变全局的简单统计检验，以及两把各用一行就能写完的密钥。</p>
-    <p class="byline">阅读时间：约25分钟 · 适合对概率和少量代码不陌生的读者</p>
+    <p class="byline">作者：<strong>Brice Dudout</strong>，与 Claude（Anthropic）合作 · 阅读时间：约25分钟 · 适合对概率和少量代码不陌生的读者</p>
+    <p class="byline">本报告以第一人称写成：“我”是 Brice，“我们”是 Claude 和我。这项研究是一次合作：Claude 编写求解器与测试、维护日志并提出假设；我在图像上阅读密文、作出裁决、选择方向与标准。</p>
     <p class="legend-unc"><mark class="unc">加点线下划线</mark>的内容为尚未证实的推测。</p>
   </header>
 
@@ -61,6 +63,18 @@
   </nav>
 
   <h2 id="tldr">概要：加密系统</h2>
+  <figure class="wide media">
+    <video controls preload="metadata" playsinline poster="../assets/media/decoder-poster.jpg" width="1280" height="720">
+      <source src="../assets/media/decoder.mp4" type="video/mp4">
+      <source src="../assets/media/decoder.webm" type="video/webm">
+      <track kind="subtitles" srclang="fr" label="Français" src="../assets/media/decoder.fr.vtt">
+      <track kind="subtitles" srclang="en" label="English" src="../assets/media/decoder.en.vtt">
+      <track kind="subtitles" srclang="zh-Hans" label="简体中文" src="../assets/media/decoder.zh-hans.vtt" default>
+      <track kind="subtitles" srclang="zh-Hant" label="繁體中文" src="../assets/media/decoder.zh-hant.vtt">
+      <track kind="subtitles" srclang="ja" label="日本語" src="../assets/media/decoder.ja.vtt">
+    </video>
+    <figcaption>35秒看懂破译：从日本电报纸到中文原文，包括改正唯一一个错字母。动画由程序生成；字幕有五种语言。</figcaption>
+  </figure>
   <p>1916年的两条通道都按五步加密，没有现代意义上的秘密密钥。以东京 → 肇庆一路（1916年6月至9月）为例：</p>
   <div class="pipeline">
     <div>中文原文<b lang="zh-Hant">報</b></div>
@@ -102,7 +116,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   </div>
 
   <h2 id="regles">规则</h2>
-  <p>历史破译是自欺的理想温床：参数足够多时，任何噪声里都能“读出”中文。因此本研究在事先确定的规则下进行，并记录在只增不改的日志中（近1,400行，共31次研究）：</p>
+  <p>历史破译是自欺的理想温床：参数足够多时，任何噪声里都能“读出”中文。因此我们在事先确定的规则下工作，并记录在只增不改的日志中（近1,400行，共31次研究）：</p>
   <ul>
     <li><strong>资料不可改动。</strong>JACAR 的 PDF 原样保存，并记录 SHA-256 校验值；每一次新的转写都是新的版本文件。</li>
     <li><strong>一封留出电报。</strong>0406号电报（1916年7月12日）<strong>从未</strong>用于调整密钥或修改读法，只用于评判。</li>
@@ -117,17 +131,17 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   <ul>
     <li><strong>处理图像</strong>：以 300 dpi 渲染页面，旋转，裁出每张电报纸和每一组（使用 macOS 的 <code>sips</code>，不做任何图像修饰）。</li>
     <li><strong>盲读</strong>：第一位读者（AI 助手）在看到任何既有转写<em>之前</em>，先确定自己的读法，附带异读和置信度。</li>
-    <li><strong>独立的人工阅读</strong>：Brice 通过一个本地小界面阅读各组字母，界面以<strong>匿名并打乱顺序</strong>的方式呈现片段（读者不知道属于哪封电报、哪个位置），并可导出 JSON。共八批、数百个片段；部分批次专门针对某个字母，并附上同一抄写员的可靠字例供比较。</li>
+    <li><strong>独立的人工阅读</strong>：我亲自通过一个本地小界面阅读各组字母，界面以<strong>匿名并打乱顺序</strong>的方式呈现片段（读者不知道属于哪封电报、哪个位置），并可导出 JSON。约十五批、数百个片段；部分批次专门针对某个字母，并附上同一抄写员的可靠字例供比较。</li>
     <li><strong>共识</strong>：读者之间多数决定，分歧回到图像上裁决。工作语料从 v1（211个电码，71个单位被遮蔽）发展到 v8。</li>
   </ul>
   <p>有一处读法细节起了决定性作用：很长时间里，<i>q</i> 被当作 <i>g</i> 的异写。人工阅读把二者区分开来，于是字母表恰好有<strong>20个辅音</strong>（b c d f g h k l m n p q r s t v w x y z，没有 <i>j</i>）。在当时最好的模型下，仅这一区分就使得分从681升到829。</p>
   <div class="status warn">
     <h4>已声明的偏差</h4>
-    <p>最后两批阅读（“辅助阅读”以及对16个存疑电码的复读）<strong>不是</strong>盲读：读者知道模型的建议。为降低风险，每封电报最后四个单位（署名和日期）一律不得据此修改，留出电报0406从未改动，且每条建议都必须在图像上确认（接受18条，否决27条）。</p>
+    <p>我有两批阅读（“辅助阅读”以及对16个存疑电码的复读）<strong>不是</strong>盲读：我知道模型的建议。为降低风险，每封电报最后四个单位（署名和日期）一律不得据此修改，留出电报0406从未改动，且每条建议都必须在图像上确认（接受18条，否决27条）。</p>
   </div>
 
   <h2 id="echecs">第二步 —— 哪些方法失败了，为什么</h2>
-  <p>在三十次研究中，采用的是破解未知替换密码的经典路线：</p>
+  <p>在三十次研究中，我们采用的是破解未知替换密码的经典路线：</p>
   <ul>
     <li><strong>语言模型</strong>（电码的一元和二元统计），用维基文库中约43万字的孙中山著作转成电码训练，后又补充了已出版的1916年电报；</li>
     <li>一张<strong>未知表</strong>“音节 → 数字”（100格，任意排列），用<strong>模拟退火</strong>搜索：多线程 C++ 引擎，64个起点 × 3,000万次迭代，再做迭代局部搜索；在8核机器上每轮约12分钟；</li>
@@ -211,16 +225,16 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
     <li><strong>语料</strong>：维基文库中的孙中山著作<sup class="fn"><a href="sources.html#s12">[12]</a></sup>、Sunology 网站上的1916年电报<sup class="fn"><a href="sources.html#s11">[11]</a></sup>；<code>jieba</code> 分词<sup class="fn"><a href="sources.html#s14">[14]</a></sup>；用 OpenCC 处理异体字<sup class="fn"><a href="sources.html#s13">[13]</a></sup>。</li>
     <li><strong>计算</strong>：Python 3（NumPy）用于检验、预处理和打分；C++17 求解器（<code>clang++ -O3 -march=native -pthread</code>），采用模拟退火与迭代局部搜索：<code>anchor_sa</code>、<code>anchor_arr</code>（排列、进位与 ±111 偏移）、<code>anchor_coord</code> 与 <code>anchor_coord6</code>（坐标表）。一台8核笔记本电脑即可。</li>
     <li><strong>阅读</strong>：本地 HTML 盲读界面（匿名打乱片段，导出 JSON）与合并读法的脚本。</li>
-    <li><strong>AI 助手</strong>：研究由 Brice 主导，借助编程助手完成：C01—C13 使用 Codex（GPT-6.1 Sol），C14 起使用 Claude Opus 5.5，完成破译的 C31 使用 Claude Fable 5.1。助手编写求解器和测试、维护日志并提出假设；在图像上对密文的关键读法与裁决均由人完成。</li>
+    <li><strong>人与 AI 的合作</strong>：我与 Claude（Anthropic）一起完成这项研究——C14 起使用 Claude Opus 5.5，完成破译的 C31 使用 Claude Fable 5.1；最初的 C01—C13 曾使用 Codex。Claude 编写求解器、测试与日志，提出假设与对照；我在图像上阅读密文、裁决读法、决定方向与标准，并与它一起写成这些文章。</li>
   </ul>
-  <p>日志、脚本和否定结果将随本网站一同公开，以便任何人都能重复这些计算。</p>
+  <p>求解器、两把密钥、阅读数据和语言模型已发布在 <a href="https://github.com/bdudout/wenmi/tree/main/solver">GitHub 仓库的 <code>solver/</code> 目录</a>中，可据此重做搜索；完整的研究日志随后公布。</p>
   <hr>
   <p class="byline">资料来源见<a href="sources.html">资料来源页</a>。感谢 Daniel Bourdeau，他的文章和代码为本研究开辟了道路。</p>
 </article>
 </main>
 
 <footer class="site-footer"><div class="inner">
-  电报图像：日本亚洲历史资料中心（JACAR），日本外务省外交史料馆。前人研究：Daniel Bourdeau（CC BY 4.0）。<a href="sources.html">全部资料来源</a>。
+  © 2026 Brice Dudout，与 Claude（Anthropic）合作。文字与代码：<a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC BY 4.0</a>。电报图像：日本亚洲历史资料中心（JACAR），日本外务省外交史料馆。前人研究：Daniel Bourdeau（CC BY 4.0）。<a href="sources.html">全部资料来源</a>。
 </div></footer>
 <script src="../assets/js/messages.js"></script>
 <script src="../assets/js/messages-y0.js"></script>

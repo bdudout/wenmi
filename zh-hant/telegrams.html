@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>電報全文</title>
+<meta name="description" content="1916年全部「文密」電報的轉寫與解碼，標明每個字的可信程度（可靠、已確認、存疑），並推測可能的讀錯、摩斯傳輸錯誤與抄寫錯誤。">
+<link rel="alternate" hreflang="en" href="../en/telegrams.html">
+<link rel="alternate" hreflang="fr" href="../fr/telegrams.html">
+<link rel="alternate" hreflang="zh-Hans" href="../zh-hans/telegrams.html">
+<link rel="alternate" hreflang="zh-Hant" href="../zh-hant/telegrams.html">
+<link rel="alternate" hreflang="ja" href="../ja/telegrams.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%239b2c1f'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f7f3ea' font-family='serif'%3E%E6%96%87%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header"><div class="inner">
+  <a class="brand" href="index.html"><span class="seal" lang="zh-Hant">文密</span> 文密電碼</a>
+  <nav class="menu">
+    <a href="index.html">首頁</a>
+    <a href="history.html">歷史背景</a>
+    <a href="method.html">破譯方法</a>
+    <a href="telegrams.html" aria-current="page">電報全文</a>
+    <a href="sources.html">資料來源</a>
+  </nav>
+  <nav class="lang-switch" aria-label="語言">
+    <a href="../en/telegrams.html" hreflang="en" lang="en" data-lang="en" title="English" aria-label="English"><img class="flag" src="../assets/img/flags/gb.svg" width="20" height="15" alt=""><span class="lc">EN</span></a>
+    <a href="../fr/telegrams.html" hreflang="fr" lang="fr" data-lang="fr" title="Français" aria-label="Français"><img class="flag" src="../assets/img/flags/fr.svg" width="20" height="15" alt=""><span class="lc">FR</span></a>
+    <a href="../zh-hans/telegrams.html" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-hans" title="简体中文" aria-label="简体中文"><img class="flag" src="../assets/img/flags/cn.svg" width="20" height="15" alt=""><span class="lc">简</span></a>
+    <a href="../zh-hant/telegrams.html" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant" title="繁體中文" aria-label="繁體中文" aria-current="true"><img class="flag" src="../assets/img/flags/hk.svg" width="20" height="15" alt=""><span class="lc">繁</span></a>
+    <a href="../ja/telegrams.html" hreflang="ja" lang="ja" data-lang="ja" title="日本語" aria-label="日本語"><img class="flag" src="../assets/img/flags/jp.svg" width="20" height="15" alt=""><span class="lc">日</span></a>
+  </nav>
+  <button class="theme-toggle" type="button" aria-label="切換淺色/深色">◐</button>
+</div></header>
+
+<main>
+<article class="article">
+  <header class="lede">
+    <p class="kicker">語料</p>
+    <h1>電報逐封細讀</h1>
+    <p class="standfirst">迄今已讀出的1916年兩條通道共十七封電報：電報紙上讀出的字母、由此得到的電碼與漢字、每個字的可信程度，以及對存疑之處可能出錯原因的推測。</p>
+    <p class="byline">轉寫：Brice Dudout（人工盲讀）；分析：與 Claude（Anthropic）合作。</p>
+  </header>
+
+  <h2>閱讀說明</h2>
+  <p>每封電報分三層呈現：日本抄件上<strong>讀出的字母</strong>（依電報紙每十個字母一組），然後逐格列出兩個<strong>音節</strong>、在該通道密鑰（G0 或 Y0）下得到的<strong>電碼</strong>，以及對應的<strong>漢字</strong>。</p>
+  <div class="legend-box">
+    <span><span class="token"><span class="h" lang="zh-Hant">報</span></span> 可靠：此類文字中常見的字</span>
+    <span><span class="token confirmed"><span class="h" lang="zh-Hant">粤</span></span> 罕見但已確認（與電報紙日期相符、經影像複核的詞、人名地名、異體字）</span>
+    <span><span class="token doubt"><span class="h" lang="zh-Hant">睟</span></span> 存疑：此處不太可能出現的字</span>
+    <span><span class="token illegible"><span class="h">·</span></span> 無法辨認，或音節不在表中</span>
+  </div>
+  <p>「可靠」指該字對語言模型而言合理且與上下文一致，並不保證每個字母都正確。「存疑」的字也可能是對的（專有名詞、罕用術語）：這只是提示，不是結論。</p>
+
+  <h2>錯誤從何而來？</h2>
+  <p>從趙伸的原文到我們的讀法，每個字母都經過三道環節，各有其典型錯誤：</p>
+  <ol>
+    <li><strong>摩斯傳輸。</strong>字母以點與劃傳送。少一個、多一個或顛倒一個符號，字母就變了：<i>e</i>（·）變成 <i>i</i>（··），<i>a</i>（·−）變成 <i>e</i>（·）或 <i>w</i>（·−−），等等。</li>
+    <li><strong>日本職員抄寫。</strong>職員手抄對他毫無意義的詞，其筆跡中某些字母容易混淆：<i>g</i>/<i>q</i>、<i>x</i>/<i>d</i>、<i>u</i>/<i>n</i>、<i>a</i>/<i>o</i>、<i>k</i>/<i>h</i>、<i>f</i>/<i>b</i>……（研究過程中在影像上記錄的成對混淆）。</li>
+    <li><strong>我們的閱讀。</strong>一百一十年後，同樣的混淆在掃描件上再發生一次。</li>
+  </ol>
+  <p>因此，對每個存疑電碼，程式嘗試透過上述機制<strong>只改一個字母</strong>的所有變體，保留能得到有效音節的變體，並依語言模型的評價排序（所示數字為對數概似的增益：數值越大，該變體在此處越「像中文」）。這些只是<mark class="unc">線索，而非更正</mark>：所示正文從不改動。</p>
+  <div class="note">
+    <h4>驗證這一方法的例子</h4>
+    <p>0416b號電報（7月19日）以一個無意義的電碼 <code>4210</code> 結尾。同一天，經另一條通道發出的孿生電報0416a以「伸皓」（「伸，十九日」）結尾。搜尋一個字母的錯誤，恰好找到：<i>xifa</i> 應為 <i>xefa</i>。這既是一個合理的摩斯錯誤（·· 代替 ·），也是一個抄寫混淆（i/e）。改正後的「皓」讀來毫無困難。</p>
+    <p>反之，0386號電報以「卄」（二十）結尾，而電報紙上寫的是6月30日。要得到「卅」（三十），需把 <i>p</i> 改成 <i>n</i>：這既不是一個符號的摩斯錯誤，也不是已記錄的抄寫混淆。差異仍無法解釋。</p>
+  </div>
+
+  <div id="corpus"></div>
+<script type="application/json" id="corpus-labels">{
+ "stats": "共 {codes} 個電碼：{conf} 個罕見但已確認，{douteux} 個存疑，{ill} 個無法辨認；其餘均可靠。",
+ "read": "讀出的字母",
+ "doubts": "存疑電碼與可能的錯誤",
+ "none": "沒有更好的單字母變體",
+ "unreachable": "沒有任何單字母錯誤能得到它",
+ "y1917": "1917年 —— 尚未破譯",
+ "notDecoded": "Brice 的盲讀。G0 與 Y0 兩把密鑰都讀不出中文：字母表不同（有 c、j，y 既作子音也作母音）。",
+ "pending": "人工盲讀已收到，正在分析；處理完畢後將在此公布。",
+ "kind": {"morse": "摩斯", "copie": "抄寫", "morse+copie": "摩斯或抄寫", "autre": "既非摩斯亦非抄寫"},
+ "why": {"jumeau": "據孿生電報0416a應為：", "cartouche": "據電報紙日期（30/6）應為："},
+ "status": {"douteux": "存疑", "illisible": "無法辨認"},
+ "conf": {"date": "罕見但已確認：日期與電報紙相符", "mot": "罕見但已確認：真實詞語（經影像複核或文意所需）", "nom": "罕見但已確認：人名或地址", "variante": "常用字的異體（卽 = 即）"}
+}</script>
+</article>
+</main>
+
+<footer class="site-footer"><div class="inner">
+  © 2026 Brice Dudout，與 Claude（Anthropic）合作。文字與程式碼：<a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">CC BY 4.0</a>。電報影像：日本亞洲歷史資料中心（JACAR），日本外務省外交史料館。前人研究：Daniel Bourdeau（CC BY 4.0）。<a href="sources.html">全部資料來源</a>。
+</div></footer>
+<script src="../assets/js/corpus.js"></script>
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

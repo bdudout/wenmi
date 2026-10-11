@@ -4,7 +4,8 @@
     <p class="kicker">Article 2 · Technical write-up</p>
     <h1>Breaking Wenmi: from letter structure to two parameter-free keys</h1>
     <p class="standfirst">How you get from "<i>fazihipego wezelucuna</i>" to "<span lang="zh-Hant">報傳取消日人態度遽變</span>": the transcription, thirty sessions of computation, most of them negative, one simple statistical test that changes everything, and two keys that each fit on one line.</p>
-    <p class="byline">Reading time: about 25 minutes · level: comfortable with probability and a little code</p>
+    <p class="byline">By <strong>Brice Dudout</strong>, with Claude (Anthropic) · reading time: about 25 minutes · level: comfortable with probability and a little code</p>
+    <p class="byline">This write-up is in the first person: "I" is me, Brice; "we" is Claude and me. The investigation is a collaboration: Claude wrote the solvers and tests, kept the log and proposed hypotheses; I read the ciphertext on the images, made the calls, chose the leads and the criteria.</p>
     <p class="legend-unc">Passages <mark class="unc">underlined with dots</mark> are unconfirmed hypotheses.</p>
   </header>
 
@@ -27,6 +28,18 @@
   </nav>
 
   <h2 id="tldr">In short: the system</h2>
+  <figure class="wide media">
+    <video controls preload="metadata" playsinline poster="../assets/media/decoder-poster.jpg" width="1280" height="720">
+      <source src="../assets/media/decoder.mp4" type="video/mp4">
+      <source src="../assets/media/decoder.webm" type="video/webm">
+      <track kind="subtitles" srclang="fr" label="Français" src="../assets/media/decoder.fr.vtt">
+      <track kind="subtitles" srclang="en" label="English" src="../assets/media/decoder.en.vtt" default>
+      <track kind="subtitles" srclang="zh-Hans" label="简体中文" src="../assets/media/decoder.zh-hans.vtt">
+      <track kind="subtitles" srclang="zh-Hant" label="繁體中文" src="../assets/media/decoder.zh-hant.vtt">
+      <track kind="subtitles" srclang="ja" label="日本語" src="../assets/media/decoder.ja.vtt">
+    </video>
+    <figcaption>The decipherment in 35 seconds: from the Japanese form to the Chinese text, including the correction of the one wrong letter. Code-generated animation; subtitles in five languages.</figcaption>
+  </figure>
   <p>Both 1916 channels are enciphered in five operations, with no secret key in the modern sense. Example from the Tokyo → Zhaoqing channel (June–September 1916):</p>
   <div class="pipeline">
     <div>Chinese text<b lang="zh-Hant">報</b></div>
@@ -68,7 +81,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   </div>
 
   <h2 id="regles">Ground rules</h2>
-  <p>Historical decipherment is the perfect place to fool yourself: with enough parameters, you can "read" Chinese in any noise. The investigation was therefore run under rules fixed in advance and recorded in an append-only log (nearly 1,400 lines, 31 sessions):</p>
+  <p>Historical decipherment is the perfect place to fool yourself: with enough parameters, you can "read" Chinese in any noise. We therefore worked under rules fixed in advance and recorded in an append-only log (nearly 1,400 lines, 31 sessions):</p>
   <ul>
     <li><strong>Immutable sources.</strong> JACAR PDFs kept as downloaded, with SHA-256 hashes recorded; every new reading is a new versioned file.</li>
     <li><strong>A held-out message.</strong> Telegram 0406 (12 July 1916) was <strong>never</strong> used to tune a key or correct a reading. It is used only to judge.</li>
@@ -83,17 +96,17 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   <ul>
     <li><strong>Rendering</strong> of the pages at 300 dpi, rotation, cropping of each form and each group (macOS <code>sips</code>, no image retouching).</li>
     <li><strong>Blind reading</strong>: a first reader (an AI assistant) fixes its reading, with variants and confidence levels, <em>before</em> seeing any earlier transcription.</li>
-    <li><strong>Independent human reading</strong>: Brice read the groups through a small local interface that presents <strong>anonymous, shuffled</strong> excerpts (you don't know which message or position you are looking at), with JSON export. Eight batches, several hundred excerpts; some batches target one letter, with reliable examples from the same copyist for comparison.</li>
+    <li><strong>Independent human reading</strong>: I read the groups myself through a small local interface that presents <strong>anonymous, shuffled</strong> excerpts (you don't know which message or position you are looking at), with JSON export. About fifteen batches, several hundred excerpts; some target one letter, with reliable examples from the same copyist for comparison.</li>
     <li><strong>Consensus</strong> by majority between readers, disagreements settled on the image. The working corpus went from version v1 (211 codes, 71 masked units) to v8.</li>
   </ul>
   <p>One reading detail proved decisive: for a long time <i>q</i> was treated as a graphic variant of <i>g</i>. Human reading separated them, giving an alphabet of exactly <strong>20 consonants</strong> (b c d f g h k l m n p q r s t v w x y z, no <i>j</i>). Under the best model of the time, that distinction alone raised the score from 681 to 829.</p>
   <div class="status warn">
     <h4>Declared bias</h4>
-    <p>The last two reading batches ("assisted readings", then a re-reading of 16 doubtful codes) were <strong>not</strong> blind: the reader knew what the model proposed. To limit the risk, the last four units of each message (signature and date) could never be changed this way, the held-out message 0406 was never touched, and every proposal had to be confirmed on the image (18 accepted, 27 rejected).</p>
+    <p>Two of my reading batches ("assisted readings", then a re-reading of 16 doubtful codes) were <strong>not</strong> blind: I knew what the model proposed. To limit the risk, the last four units of each message (signature and date) could not be changed this way, the held-out message 0406 was never touched, and every proposal had to be confirmed on the image (18 accepted, 27 rejected).</p>
   </div>
 
   <h2 id="echecs">Step 2 — What did not work (and why)</h2>
-  <p>For thirty sessions the approach was the classic one for an unknown substitution:</p>
+  <p>For thirty sessions we followed the classic approach for an unknown substitution:</p>
   <ul>
     <li>a <strong>language model</strong> (unigrams and bigrams of telegraph codes) trained on about 430,000 characters of Sun Yat-sen's writings from Wikisource, converted to codes, later supplemented with published 1916 telegrams;</li>
     <li>an <strong>unknown table</strong> syllable → number (100 cells, freely chosen), searched by <strong>simulated annealing</strong>: multi-threaded C++ engine, 64 restarts × 30 million iterations, then iterated local search; about 12 minutes per pass on 8 cores;</li>
@@ -177,9 +190,9 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
     <li><strong>Language corpus</strong>: Sun Yat-sen's writings on Wikisource<sup class="fn"><a href="sources.html#s12">[12]</a></sup>, 1916 telegrams from the Sunology site<sup class="fn"><a href="sources.html#s11">[11]</a></sup>; <code>jieba</code> segmentation<sup class="fn"><a href="sources.html#s14">[14]</a></sup>; character variants via OpenCC<sup class="fn"><a href="sources.html#s13">[13]</a></sup>.</li>
     <li><strong>Computation</strong>: Python 3 (NumPy) for tests, preparation and scoring; C++17 solvers (<code>clang++ -O3 -march=native -pthread</code>) using simulated annealing and iterated local search: <code>anchor_sa</code>, <code>anchor_arr</code> (arrangements, carry and ±111 offset), <code>anchor_coord</code> and <code>anchor_coord6</code> (coordinate tables). An 8-core laptop is enough.</li>
     <li><strong>Reading</strong>: local HTML blind-reading interface (anonymous shuffled excerpts, JSON export) and a script to merge readings.</li>
-    <li><strong>AI assistants</strong>: the sessions were run by Brice with coding assistants: Codex (GPT-6.1 Sol) for sessions C01–C13, Claude Opus 5.5 from C14, Claude Fable 5.1 for C31, the session of the decipherment. The assistants wrote the solvers and tests, kept the log and proposed hypotheses; the decisive readings of the ciphertext on the images and the arbitrations were made by a human.</li>
+    <li><strong>A human–AI collaboration</strong>: I ran the investigation with Claude (Anthropic) — Claude Opus 5.5 from session C14, Claude Fable 5.1 for session C31, the one of the decipherment; the very first sessions (C01–C13) had been done with Codex. Claude wrote the solvers, the tests and the log, and proposed hypotheses and controls; I read the ciphertext on the images, settled the readings, chose the leads and the criteria, and wrote these articles with it.</li>
   </ul>
-  <p>The log, scripts and negative results are meant to be published alongside this site, so that anyone can re-run the computations.</p>
+  <p>The solver, both keys, the reading data and the language model are published in the <a href="https://github.com/bdudout/wenmi/tree/main/solver"><code>solver/</code> folder of the GitHub repository</a>, with everything needed to re-run the search; the full investigation log will follow.</p>
   <hr>
   <p class="byline">Sources: see the <a href="sources.html">sources page</a>. Thanks to Daniel Bourdeau, whose article and code paved the way.</p>
 </article>
