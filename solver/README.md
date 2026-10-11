@@ -13,6 +13,7 @@ Ce dossier contient de quoi **vérifier et rejouer** le déchiffrement présent�
 | `make_job.py`, `compare.py` | préparer une recherche avec le jeu d'ancres « D », puis comparer le résultat à G0 |
 | `data/cen_v8.json` | canal Tokyo → Zhaoqing : syllabes lues sur les formulaires (lectures humaines), 7 télégrammes |
 | `data/yunnan_v3.json` | canal Tokyo ↔ Yunnan : syllabes lues (lectures humaines), 15 formulaires |
+| `data/relecture-1916.csv` | relecture des télégrammes de mars–mai 1916 déchiffrés par Daniel Bourdeau : 45 propositions d'une lettre, mot lu sur le scan (lecture aveugle), verdict (voir la page « 1916 relu ») |
 | `lm3/` | modèle de langue (unigrammes et bigrammes de codes télégraphiques) et table code → caractère |
 
 ## Décoder
