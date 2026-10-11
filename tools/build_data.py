@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 """Extrait de l'édition provisoire (working/c31-edition-wenmi.md) les unités, codes et caractères
 de chaque télégramme, vérifie que la grille G0 redonne bien les codes, et écrit assets/js/messages.js.
+Les unités sont ensuite mises à jour depuis le corpus de référence Cen v9 (c31-consensus-corpus-v9.json, mêmes dossiers) :
+seuls les codes listés dans ses v9_changes peuvent différer de l'édition (0348 code 36 乞, 0386 code 26 準, relus au lot R1).
 Usage : python3 tools/build_data.py <chemin vers c31-edition-wenmi.md>"""
 import json, re, sys, os
 ORDER, V = 'hgfdcbzyxwvtsrqpnmlk', 'aeiou'
@@ -22,6 +24,23 @@ for block in re.split(r'\n## ', src)[1:]:
     assert not bad, (m.group(1), bad)
     out.append({'id': m.group(1), 'units': units, 'codes': codes,
                 'chars': [c for c, _ in chars], 'doubt': [i for i, (_, d) in enumerate(chars) if d]})
+WENMI = os.path.dirname(os.path.dirname(os.path.abspath(sys.argv[1])))
+v9 = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c31', 'c31-consensus-corpus-v9.json'), encoding='utf-8'))
+LM = os.path.join(WENMI, 'cryptanalysis', 'c14', 'lm3')
+C2CH = dict(l.rstrip('\n').split('\t') for l in open(os.path.join(LM, 'code2ch.tsv'), encoding='utf-8'))
+import numpy as np
+uni = np.fromfile(os.path.join(LM, 'uni.f32'), dtype=np.float32); REF = float(uni.mean())
+for o in out:
+    us = v9['messages'].get(o['id'])
+    if us is None: continue
+    assert len(us) == len(o['units']), o['id']
+    for i in range(len(o['codes'])):
+        if us[2 * i:2 * i + 2] == o['units'][2 * i:2 * i + 2]: continue
+        c = '%02d%02d' % (G0[us[2 * i]], G0[us[2 * i + 1]])
+        print('v9 :', o['id'], i, o['units'][2 * i:2 * i + 2], '→', us[2 * i:2 * i + 2], o['chars'][i], '→', C2CH[c])
+        o['units'][2 * i:2 * i + 2] = us[2 * i:2 * i + 2]; o['codes'][i] = c; o['chars'][i] = C2CH[c]
+        o['doubt'] = [k for k in o['doubt'] if k != i] + ([i] if float(uni[int(c)]) - REF < 1 else [])
+        o['doubt'].sort()
 dst = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'assets', 'js', 'messages.js')
 open(dst, 'w', encoding='utf-8').write('// Généré par tools/build_data.py — ne pas éditer à la main.\nwindow.WENMI_MESSAGES = ' + json.dumps(out, ensure_ascii=False, indent=1) + ';\n')
 print(len(out), 'messages :', ', '.join(f"{o['id']} ({len(o['codes'])} codes, {len(o['doubt'])} douteux)" for o in out))
