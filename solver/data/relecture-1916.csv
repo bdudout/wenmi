@@ -1,46 +1,97 @@
-telegramme,expediteur_destinataire_date,jacar,image,mot_transcrit_Bourdeau,mot_lu_sur_scan,lettre,caractere_Bourdeau,caractere_propose,verdict
-A24,"Sun → Junzaburo Shanghai, 26/3/1916",B03050088300,465,cavigasege,caviqasege,5:g>q,刷,利,confirmee
-A20,"Shanghai n°0129 → Rosamonde, 27/3/1916",B03050088300,461,pokepibuba,pokepibuba,6:i>e,噶,銘,maintenue
-A20,"Shanghai n°0129 → Rosamonde, 27/3/1916",B03050088300,460,qurelukova,qureluhova,7:k>h,漆,然,confirmee
-A20,"Shanghai n°0129 → Rosamonde, 27/3/1916",B03050088300,460,mejihayije,mejuhayije,4:i>u,陲,需,confirmee
-A20b,"Manila n°19 → Rosamonde, 27/3/1916",B03050088300,461,cemegovoca,cemegovoca,5:g>q,期,本,maintenue
-A20b,"Manila n°19 → Rosamonde, 27/3/1916",B03050088300,461,cedoyurozo,cexoyurozo,3:d>x,愴,展,confirmee
-A27,"Shanghai n°054 → Rosamonde, 25/3/1916",B03050088300,468,temixozabo,temixozabo,6:o>i,擂,先,maintenue
-A04a,"Sun → Konglipo Manila, 27/3/1916",B03050088300,445,parakusoke,parakuxoke,7:s>x,夠,尚,confirmee
-A19,"Seitō n°71 → Rosamonde, 28/3/1916",B03050088300,459,huhacukepu,Huhacukepu,4:a>o,徼,徑,maintenue
-A23,"Shanghai n°070 (Chen Qimei) → Rosamonde, 26/3/1916",B03050088300,463,pigibufoxo,piqibufoxo,4:i>a,嚳,圖,maintenue
-B28a,"Sun → Junzaburo Shanghai, 25/3/1916",B03050088300,469,binoputemi,binoputemi,3:n>m,沉,海,maintenue
-B28a,"Sun → Junzaburo Shanghai, 25/3/1916",B03050088300,469,himesicazi,himesilazi,10:i>e,供,謀,maintenue
-B28a,"Sun → Junzaburo Shanghai, 25/3/1916",B03050088300,469,bexigotahu,bexigotahu,6:o>a,允,全,maintenue
-B32a,"Sun → Junzaburo Shanghai, 30/3/1916",B03050088300,473,cukirovoko,cukirovopo,9:k>p,斕,文,confirmee
-B34,"Sun → Junzaburo Shanghai, 30/3/1916",B03050088300,475,nacesesaba,nacesesaba,6:e>i,逢,反,maintenue
-B34,"Sun → Junzaburo Shanghai, 30/3/1916",B03050088300,475,zahinovide,zahinevixe,9:d>x,剮,則,confirmee
-B34,"Sun → Junzaburo Shanghai, 30/3/1916",B03050088300,475,yidifopeqa,yidifapeqa,3:d>x,俸,俟,maintenue
-B34,"Sun → Junzaburo Shanghai, 30/3/1916",B03050088300,475,kofobuhase,kofobuhase,8:a>u,了,仍,maintenue
-B36,"Shanghai n°089 → Rosamonde, 31/3/1916",B03050088300,477,seyivigora,seyivigora,7:g>q,刋,函,maintenue
-B37a,"Manila n°42 → Rosamonde, 31/3/1916",B03050088300,478,zavumomilo,Lavumomilo,1:z>g,鯿,請,autre
-B37a,"Manila n°42 → Rosamonde, 31/3/1916",B03050088300,478,lahalavate,lahalavade,9:t>l,頫,領,autre
-B37a,"Manila n°42 → Rosamonde, 31/3/1916",B03050088300,478,qoxegonozo,qoxegonoqo,9:z>q,庫,圓,confirmee
-B37a,"Manila n°42 → Rosamonde, 31/3/1916",B03050088300,478,yufurovisi,yufurovusi,8:i>u,鎣,英,confirmee
-B45a,"Sun → Junzaburo Shanghai, 31/3/1916",B03050088300,486,videfisela,vixefisela,3:d>x,剮,則,confirmee
-B48,"Shanghai n°0118 → Rosamonde, 3/4/1916",B03050088300,489,fasifameku,faxifameku,3:s>x,古,兩,confirmee
-B48,"Shanghai n°0118 → Rosamonde, 3/4/1916",B03050088300,489,fihukogaze,fihukoqaze,7:g>q,漬,演,confirmee
-B49,"Seitō n°2 → Rosamonde, 1/4/1916",B03050088300,490,zupegamenu,zupeqamenu,5:g>q,禘,票,confirmee
-B51,"Aoyama → Kayano, Seitō, 4/4/1916",B03050088300,492,loceludugi,laceluduqi,9:g>q,铒,尚,confirmee
-B51,"Aoyama → Kayano, Seitō, 4/4/1916",B03050088300,492,jomarosaqi,zomarosaqi,1:j>z,齡,難,confirmee
-B51,"Aoyama → Kayano, Seitō, 4/4/1916",B03050088300,492,jomarosaqi,zomarosaqi,10:i>u,斷,到,maintenue
-B51,"Aoyama → Kayano, Seitō, 4/4/1916",B03050088300,492,loceludugi,laceluduqi,5:l>t,艤,船,maintenue
-B52b,"Sun → Junzaburo Shanghai, 4/4/1916",B03050088300,493,mojetibisi,mojetibisi,2:o>a,洽,能,maintenue
-B52b,"Sun → Junzaburo Shanghai, 4/4/1916",B03050088300,493,bivetaxudo,bivetaxuxo,1:b>f,戣,彼,maintenue
-B52b,"Sun → Junzaburo Shanghai, 4/4/1916",B03050088300,493,tomibibuye,tumibibiye,9:y>j,互,交,maintenue
-C01,"Tokyo → Junzaburo, 17/5/1916",B03050089100,61,dinenegive,dineneqive,7:g>q,舵,皆,confirmee
-C01,"Tokyo → Junzaburo, 17/5/1916",B03050089100,62,xigoraseqi,xiqoraseqi,3:g>q,飢,謂,confirmee
-C01,"Tokyo → Junzaburo, 17/5/1916",B03050089100,61,xigitobeku,xiqitobeku,3:g>q,芳,省,confirmee
-C04,"Shanghai n°051 → Linwailuk, 19/5/1916",B03050089100,66,yetubupuce,yetubupuce,2:e>u,孀,孫,maintenue
-C13,"Tokyo → Junzaburo, 25/5/1916",B03050089100,87,teyogebexo,teyoqebexo,5:g>q,孌,令,confirmee
-D33,"Tokyo → Junzaburo, 26/5/1916",B03050089100,93,fujigedase,fujiqedase,5:g>q,寡,促,confirmee
-D33,"Tokyo → Junzaburo, 26/5/1916",B03050089100,93,biqucageni,biqucageni,6:a>o,捆,持,maintenue
-D33,"Tokyo → Junzaburo, 26/5/1916",B03050089100,93,galikeyeye,galiceyeye,3:l>s,虢,碼,maintenue
-D53b,"Tokyo → Junzaburo, 29/5/1916",B03050089100,114,tozeqeqedo,tozeqeqedo,3:z>m,唪,必,maintenue
-B35,"Seitō → Rosamonde, 30/3/1916",B03050088300,476,vosoredige,vosurediqe,5:r>g,逡,逼,maintenue
-B35,"Seitō → Rosamonde, 30/3/1916",B03050088300,476,vosoredige,vosurediqe,9:g>q,濞,濟,confirmee
+lot,nature,telegramme,expediteur_destinataire_date,jacar,image,mot_transcrit_Bourdeau,mot_lu_sur_scan,lettre,caractere_avant,caractere_apres,verdict
+B1,proposition,A24,"Sun → Junzaburo Shanghai, 26/3/1916",B03050088300,465,cavigasege,caviqasege,5:g>q,刷,利,confirmee
+B1,proposition,A20,"Shanghai n°0129 → Rosamonde, 27/3/1916",B03050088300,461,pokepibuba,pokepibuba,6:i>e,噶,銘,maintenue
+B1,proposition,A20,"Shanghai n°0129 → Rosamonde, 27/3/1916",B03050088300,460,qurelukova,qureluhova,7:k>h,漆,然,confirmee
+B1,proposition,A20,"Shanghai n°0129 → Rosamonde, 27/3/1916",B03050088300,460,mejihayije,mejuhayije,4:i>u,陲,需,confirmee
+B1,proposition,A20b,"Manila n°19 → Rosamonde, 27/3/1916",B03050088300,461,cemegovoca,cemegovoca,5:g>q,期,本,maintenue
+B1,proposition,A20b,"Manila n°19 → Rosamonde, 27/3/1916",B03050088300,461,cedoyurozo,cexoyurozo,3:d>x,愴,展,confirmee
+B1,proposition,A27,"Shanghai n°054 → Rosamonde, 25/3/1916",B03050088300,468,temixozabo,temixozabo,6:o>i,擂,先,maintenue
+B1,proposition,A04a,"Sun → Konglipo Manila, 27/3/1916",B03050088300,445,parakusoke,parakuxoke,7:s>x,夠,尚,confirmee
+B1,proposition,A19,"Seitō n°71 → Rosamonde, 28/3/1916",B03050088300,459,huhacukepu,Huhacukepu,4:a>o,徼,徑,maintenue
+B1,proposition,A23,"Shanghai n°070 (Chen Qimei) → Rosamonde, 26/3/1916",B03050088300,463,pigibufoxo,piqibufoxo,4:i>a,嚳,圖,maintenue
+B1,proposition,B28a,"Sun → Junzaburo Shanghai, 25/3/1916",B03050088300,469,binoputemi,binoputemi,3:n>m,沉,海,maintenue
+B1,proposition,B28a,"Sun → Junzaburo Shanghai, 25/3/1916",B03050088300,469,himesicazi,himesilazi,10:i>e,供,謀,maintenue
+B1,proposition,B28a,"Sun → Junzaburo Shanghai, 25/3/1916",B03050088300,469,bexigotahu,bexigotahu,6:o>a,允,全,maintenue
+B1,proposition,B32a,"Sun → Junzaburo Shanghai, 30/3/1916",B03050088300,473,cukirovoko,cukirovopo,9:k>p,斕,文,confirmee
+B1,proposition,B34,"Sun → Junzaburo Shanghai, 30/3/1916",B03050088300,475,nacesesaba,nacesesaba,6:e>i,逢,反,maintenue
+B1,proposition,B34,"Sun → Junzaburo Shanghai, 30/3/1916",B03050088300,475,zahinovide,zahinevixe,9:d>x,剮,則,confirmee
+B1,proposition,B34,"Sun → Junzaburo Shanghai, 30/3/1916",B03050088300,475,yidifopeqa,yidifapeqa,3:d>x,俸,俟,maintenue
+B1,proposition,B34,"Sun → Junzaburo Shanghai, 30/3/1916",B03050088300,475,kofobuhase,kofobuhase,8:a>u,了,仍,maintenue
+B1,proposition,B36,"Shanghai n°089 → Rosamonde, 31/3/1916",B03050088300,477,seyivigora,seyivigora,7:g>q,刋,函,maintenue
+B1,proposition,B37a,"Manila n°42 → Rosamonde, 31/3/1916",B03050088300,478,zavumomilo,Lavumomilo,1:z>g,鯿,請,autre
+B1,proposition,B37a,"Manila n°42 → Rosamonde, 31/3/1916",B03050088300,478,lahalavate,lahalavade,9:t>l,頫,領,autre
+B1,proposition,B37a,"Manila n°42 → Rosamonde, 31/3/1916",B03050088300,478,qoxegonozo,qoxegonoqo,9:z>q,庫,圓,confirmee
+B1,proposition,B37a,"Manila n°42 → Rosamonde, 31/3/1916",B03050088300,478,yufurovisi,yufurovusi,8:i>u,鎣,英,confirmee
+B1,proposition,B45a,"Sun → Junzaburo Shanghai, 31/3/1916",B03050088300,486,videfisela,vixefisela,3:d>x,剮,則,confirmee
+B1,proposition,B48,"Shanghai n°0118 → Rosamonde, 3/4/1916",B03050088300,489,fasifameku,faxifameku,3:s>x,古,兩,confirmee
+B1,proposition,B48,"Shanghai n°0118 → Rosamonde, 3/4/1916",B03050088300,489,fihukogaze,fihukoqaze,7:g>q,漬,演,confirmee
+B1,proposition,B49,"Seitō n°2 → Rosamonde, 1/4/1916",B03050088300,490,zupegamenu,zupeqamenu,5:g>q,禘,票,confirmee
+B1,proposition,B51,"Aoyama → Kayano, Seitō, 4/4/1916",B03050088300,492,loceludugi,laceluduqi,9:g>q,铒,尚,confirmee
+B1,proposition,B51,"Aoyama → Kayano, Seitō, 4/4/1916",B03050088300,492,jomarosaqi,zomarosaqi,1:j>z,齡,難,confirmee
+B1,proposition,B51,"Aoyama → Kayano, Seitō, 4/4/1916",B03050088300,492,jomarosaqi,zomarosaqi,10:i>u,斷,到,maintenue
+B1,proposition,B51,"Aoyama → Kayano, Seitō, 4/4/1916",B03050088300,492,loceludugi,laceluduqi,5:l>t,艤,船,maintenue
+B1,proposition,B52b,"Sun → Junzaburo Shanghai, 4/4/1916",B03050088300,493,mojetibisi,mojetibisi,2:o>a,洽,能,maintenue
+B1,proposition,B52b,"Sun → Junzaburo Shanghai, 4/4/1916",B03050088300,493,bivetaxudo,bivetaxuxo,1:b>f,戣,彼,maintenue
+B1,proposition,B52b,"Sun → Junzaburo Shanghai, 4/4/1916",B03050088300,493,tomibibuye,tumibibiye,9:y>j,互,交,maintenue
+B1,proposition,C01,"Tokyo → Junzaburo, 17/5/1916",B03050089100,61,dinenegive,dineneqive,7:g>q,舵,皆,confirmee
+B1,proposition,C01,"Tokyo → Junzaburo, 17/5/1916",B03050089100,62,xigoraseqi,xiqoraseqi,3:g>q,飢,謂,confirmee
+B1,proposition,C01,"Tokyo → Junzaburo, 17/5/1916",B03050089100,61,xigitobeku,xiqitobeku,3:g>q,芳,省,confirmee
+B1,proposition,C04,"Shanghai n°051 → Linwailuk, 19/5/1916",B03050089100,66,yetubupuce,yetubupuce,2:e>u,孀,孫,maintenue
+B1,proposition,C13,"Tokyo → Junzaburo, 25/5/1916",B03050089100,87,teyogebexo,teyoqebexo,5:g>q,孌,令,confirmee
+B1,proposition,D33,"Tokyo → Junzaburo, 26/5/1916",B03050089100,93,fujigedase,fujiqedase,5:g>q,寡,促,confirmee
+B1,proposition,D33,"Tokyo → Junzaburo, 26/5/1916",B03050089100,93,biqucageni,biqucageni,6:a>o,捆,持,maintenue
+B1,proposition,D33,"Tokyo → Junzaburo, 26/5/1916",B03050089100,93,galikeyeye,galiceyeye,3:l>s,虢,碼,maintenue
+B1,proposition,D53b,"Tokyo → Junzaburo, 29/5/1916",B03050089100,114,tozeqeqedo,tozeqeqedo,3:z>m,唪,必,maintenue
+B1,proposition,B35,"Seitō → Rosamonde, 30/3/1916",B03050088300,476,vosoredige,vosurediqe,5:r>g,逡,逼,maintenue
+B1,proposition,B35,"Seitō → Rosamonde, 30/3/1916",B03050088300,476,vosoredige,vosurediqe,9:g>q,濞,濟,confirmee
+B2,suggestion Bourdeau,B28a,"Sun → Junzaburo Shanghai, 25/3/1916",B03050088300,469,merijusifi,merijusifi,9:f>k,厂,卽,maintenue
+B2,suggestion Bourdeau,B29,"Sun → Konglipo Manila, 24/3/1916",B03050088300,470,fifipocomo,fifipocomo,9:m>k,忖,忍,maintenue
+B2,suggestion Bourdeau,B29,"Sun → Konglipo Manila, 24/3/1916",B03050088300,470,ceromofofu,ceromofofu,8:o>a,厓,追,maintenue
+B2,suggestion Bourdeau,B29,"Sun → Konglipo Manila, 24/3/1916",B03050088300,470,sotagoqugo,sotagoquqo,9:g>q,你,回,confirmee
+B2,suggestion Bourdeau,B32a,"Sun → Junzaburo Shanghai, 30/3/1916",B03050088300,473,pokamajemi,popamajemi,3:k>p,欽,款,confirmee
+B2,suggestion Bourdeau,B32b,"Aoyama → Kayano, Seitō, 30/3/1916",B03050088300,473,mogudisafu,moqusisafu,5:d>s,瀺,查,confirmee
+B2,suggestion Bourdeau,B32b,"Aoyama → Kayano, Seitō, 30/3/1916",B03050088300,473,zuzoyirida,zuzoyirixa,9:d>x,朓,有,confirmee
+B2,suggestion Bourdeau,B34,"Sun → Junzaburo Shanghai, 30/3/1916",B03050088300,475,sirinorego,ririnorego,1:s>r,卵,告,confirmee
+B2,suggestion Bourdeau,B35,"Seitō → Rosamonde, 30/3/1916",B03050088300,476,noyujuradi,noyujuraxi,9:d>x,瀣,此,confirmee
+B2,suggestion Bourdeau,B45a,"Sun → Junzaburo Shanghai, 31/3/1916",B03050088300,486,mezukizelo,mezukizelo,7:k>p,宬,在,maintenue
+B2,suggestion Bourdeau,B51,"Aoyama → Kayano, Seitō, 4/4/1916",B03050088300,492,runobitobe,runositobe,5:b>s,譴,警,confirmee
+B2,suggestion Bourdeau,B52a,"Sun → Junzaburo Shanghai, 4/4/1916",B03050088300,493,bugesadute,buqesadute,7:d>k,籓,籌,maintenue
+B2,suggestion Bourdeau,B54,"Shanghai n°067 → Rosamonde, 4/4/1916",B03050088300,495,kepopazeka,tepopageka,1:k>t,匾,匯,confirmee
+B2,correction Bourdeau,B54,"Shanghai n°067 → Rosamonde, 4/4/1916",B03050088300,495,kepopazeka,tepopageka,7:g>z,鯿,請,erreur1916
+B2,suggestion Bourdeau,C07,"Tokyo → Junzaburo, 20/5/1916",B03050089100,69,keyabolije,keyabolije,1:k>p,廬,手,maintenue
+B2,suggestion Bourdeau,C07,"Tokyo → Junzaburo, 20/5/1916",B03050089100,69,doredayece,doredagece,6:a>o,僦,備,maintenue
+B2,suggestion Bourdeau,C07,"Tokyo → Junzaburo, 20/5/1916",B03050089100,69,kixehavumo,kixehavumo,10:o>a,曷,望,maintenue
+B2,suggestion Bourdeau,C07,"Tokyo → Junzaburo, 20/5/1916",B03050089100,69,picehefodu,picehefoxu,9:d>x,泯,東,confirmee
+B2,suggestion Bourdeau,C07,"Tokyo → Junzaburo, 20/5/1916",B03050089100,70,revupobego,revupobeqo,9:g>q,坍,在,confirmee
+B2,lecture nouvelle,C07,"Tokyo → Junzaburo, 20/5/1916",B03050089100,70,rexo?mavo,rexodomavo,5:?>d,…,傍,confirmee
+B2,suggestion Bourdeau,C08,"Tokyo → Junzaburo, 21/5/1916",B03050089100,71,bubidujono,bubidujono,9:n>v,螅,軍,maintenue
+B2,lecture nouvelle,C08,"Tokyo → Junzaburo, 21/5/1916",B03050089100,71,depaxagopo,depaxaqopo,7:g>q,食,謀,confirmee
+B2,lecture nouvelle,C08,"Tokyo → Junzaburo, 21/5/1916",B03050089100,71,teyopagebo,teyopaqevo,7:g>q,世,一,confirmee
+B2,correction Bourdeau,C08,"Tokyo → Junzaburo, 21/5/1916",B03050089100,71,teyopagebo,teyopaqevo,9:b>v,鐓,辦,confirmee
+B2,correction Bourdeau,C13,"Tokyo → Junzaburo, 25/5/1916",B03050089100,87,sutovuzede,sutovuzexe,9:d>x,姍,否,confirmee
+B2,suggestion Bourdeau,C13,"Tokyo → Junzaburo, 25/5/1916",B03050089100,87,haxezibose,haxeziboxe,9:s>x,銚,銷,confirmee
+B2,suggestion Bourdeau,A19,"Seitō n°71 → Rosamonde, 28/3/1916",B03050088300,459,nesetubuxi,nexetubuxi,3:s>x,砬,知,confirmee
+B2,suggestion Bourdeau,A19,"Seitō n°71 → Rosamonde, 28/3/1916",B03050088300,459,nesetubuxi,nexetubuxi,5:t>d,呂,將,maintenue
+B2,proposition,A27,"Shanghai n°054 → Rosamonde, 25/3/1916",B03050088300,468,tibinepusa,tibinepuxa,9:s>x,篚,礙,confirmee
+B2,proposition,A27,"Shanghai n°054 → Rosamonde, 25/3/1916",B03050088300,468,toqifiketi,toqifiheti,7:k>h,徊,後,confirmee
+B2,proposition,B44,"Sun → Junzaburo Shanghai, 31/3/1916",B03050088300,485,qugogasihe,qugoqaxihe,7:s>x,吁,再,confirmee
+B2,proposition,C09,"Tokyo → Junzaburo, 23/5/1916",B03050089100,75,qegigegidu,qeqigegidu,3:g>q,佚,但,confirmee
+B2,lecture nouvelle,C09,"Tokyo → Junzaburo, 23/5/1916",B03050089100,75,ribipagopa,ribipaqopa,7:g>q,亢,云,confirmee
+B2,correction Bourdeau,C09,"Tokyo → Junzaburo, 23/5/1916",B03050089100,75,neruhudiho,reruhuduho,8:i>u,能,洽,confirmee
+B2,correction Bourdeau,C09,"Tokyo → Junzaburo, 23/5/1916",B03050089100,75,paxahefuro,paxahefuxo,9:r>x,謡,近,confirmee
+B2,correction Bourdeau,C09,"Tokyo → Junzaburo, 23/5/1916",B03050089100,75,qogogidujo,qoqogidujo,3:g>q,顜,請,confirmee
+B2,correction Bourdeau,C09,"Tokyo → Junzaburo, 23/5/1916",B03050089100,75,roliheqedo,roliheqedo,7:q,來,來,confirmee
+B2,correction Bourdeau,C09,"Tokyo → Junzaburo, 23/5/1916",B03050089100,75,liqirexuji,liqirexuji,3:q,百,百,confirmee
+B2,correction Bourdeau,A20,"Shanghai n°0129 → Rosamonde, 27/3/1916",B03050088300,460,nogemozuko,noqemozuko,3:g>q,汪,江,confirmee
+B2,correction Bourdeau,A20,"Shanghai n°0129 → Rosamonde, 27/3/1916",B03050088300,460,conesigeso,conesiqexo,7:g>q,,可,confirmee
+B2,correction Bourdeau,A20,"Shanghai n°0129 → Rosamonde, 27/3/1916",B03050088300,460,conesigeso,conesiqexo,9:s>x,,支,confirmee
+B2,correction Bourdeau,A24,"Sun → Junzaburo Shanghai, 26/3/1916",B03050088300,465,delizigiyi,deliziqiyi,7:g>q,,代,confirmee
+B2,correction Bourdeau,A24,"Sun → Junzaburo Shanghai, 26/3/1916",B03050088300,465,hosigevopo,hasiqevopo,5:g>q,,可,confirmee
+B2,correction Bourdeau,A27,"Shanghai n°054 → Rosamonde, 25/3/1916",B03050088300,468,jigojuzibe,jiqojuzibe,3:g>q,,機,confirmee
+B2,correction Bourdeau,A27,"Shanghai n°054 → Rosamonde, 25/3/1916",B03050088300,468,fisovozabi,fisovogabi,7:z>g,,於,confirmee
+B2,correction Bourdeau,B54,"Shanghai n°067 → Rosamonde, 4/4/1916",B03050088300,495,setexuraro,setesuraro,5:x>s,,辦,confirmee
+B2,correction Bourdeau,C02,"Tokyo → Junzaburo, 19/5/1916",B03050089100,65,guligajoce,guluqajoxe,4:i>u,漭,滬,confirmee
+B2,correction Bourdeau,C02,"Tokyo → Junzaburo, 19/5/1916",B03050089100,65,huqoriqido,huqoriqido,"3:q,7:q",,爲誰,confirmee
+B2,correction Bourdeau,C03,"Tokyo → Junzaburo, 19/5/1916",B03050089100,65,veradefoze,veradefaqe,9:z>q,喭,何,confirmee
+B2,correction Bourdeau,C03,"Tokyo → Junzaburo, 19/5/1916",B03050089100,65,bigidopice,biqidopice,3:g>q,苐,盻,confirmee
+B2,correction Bourdeau,C03,"Tokyo → Junzaburo, 19/5/1916",B03050089100,65,xutenireqe,xutenireqe,10:e>a,俛,傷,erreur1916
