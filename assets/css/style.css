@@ -107,6 +107,11 @@ figure { margin: 2rem 0; }
 figure.wide { margin-left: calc(50% - min(34rem, 50vw - 1rem)); margin-right: calc(50% - min(34rem, 50vw - 1rem)); }
 figure img { display: block; border: 1px solid var(--rule); border-radius: 4px; background: #fff; box-shadow: var(--shadow); }
 figcaption { font-size: .88rem; color: var(--muted); margin-top: .6rem; line-height: 1.5; }
+.illustration-banner { margin: 0; }
+.editorial-illustration { max-width: 42rem; margin: 2rem auto; }
+.illustration-banner img, .editorial-illustration img { width: 100%; }
+.illustration-banner img { aspect-ratio: 16 / 9; object-fit: cover; }
+.editorial-illustration img { object-fit: contain; }
 
 /* tableaux */
 .table-wrap { overflow-x: auto; margin: 1.3rem 0 1.6rem; }

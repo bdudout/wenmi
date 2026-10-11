@@ -11,6 +11,11 @@ citer l'auteur (« Brice Dudout, Le code Wenmi, 2026 », avec un lien vers <http
 d'indiquer si des modifications ont été faites. C'est la même licence que les travaux de Daniel Bourdeau sur lesquels
 cette enquête s'appuie.
 
+Les images de `assets/img/illustrations/` sont des reconstitutions éditoriales générées par IA
+(ImageGen, OpenAI), préparées pour ce site par Brice Dudout avec Codex. Elles relèvent de la
+licence générale ci-dessus. Les légendes les distinguent des documents d’archives : les scènes sont imaginées.
+La carte symbolique et le portrait dessiné de Sun Yat-sen, présents dans le dossier, ne sont pas utilisés par les pages.
+
 ## Éléments non couverts par cette licence
 
 - **Scan du télégramme** (`assets/img/jacar-B03050090000-fr0416b.jpg`) : document des Archives diplomatiques du

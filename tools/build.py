@@ -4,6 +4,7 @@
 Chaque fichier de contenu commence par un commentaire JSON : <!-- {"title": "...", "description": "..."} -->.
 Usage : python3 tools/build.py   (depuis la racine du dépôt)"""
 import json, os, re, html
+from illustrations import add_illustrations
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 PAGES = ['index', 'history', 'method', 'telegrams', 'sources']
@@ -90,6 +91,7 @@ def build():
             m = re.match(r'\s*<!--\s*(\{.*?\})\s*-->\s*', raw, re.S)
             meta = json.loads(m.group(1)) if m else {}
             body = raw[m.end():] if m else raw
+            body = add_illustrations(body, lang, page)
             nav = '\n'.join('    <a href="%s.html"%s>%s</a>' % (p, ' aria-current="page"' if p == page else '', L['nav'][i])
                             for i, p in enumerate(PAGES))
             switch = '\n'.join('    <a href="../%s/%s.html" hreflang="%s" lang="%s" data-lang="%s" title="%s" aria-label="%s"%s>'

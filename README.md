@@ -33,6 +33,8 @@ assets/js/messages.js   canal Tokyo → Zhaoqing (grille G0) : unités, codes, c
 assets/js/messages-y0.js  canal Tokyo ↔ Yunnan (grille Y0) : idem (GÉNÉRÉ)
 assets/js/translations.js  dates et traductions de travail, par langue
 assets/img/             scan JACAR (B03050090000, image 0416)
+assets/img/illustrations/ six reconstitutions IA locales en WebP ; légendes multilingues
+tools/illustrations.py  placement et légendes des illustrations lors du build
 assets/img/flags/       drapeaux du sélecteur de langue (SVG, GÉNÉRÉS)
 tools/build.py          assemble content/ + gabarit → <langue>/*.html
 tools/build_data.py     extrait messages.js de l'édition et vérifie la grille G0

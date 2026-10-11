@@ -1,0 +1,38 @@
+{
+  "a-telegraph-office": {
+    "width": 1600,
+    "height": 900,
+    "bytes": 160556,
+    "original": "wenmi/illustrations/a-telegraph-office.png"
+  },
+  "b-japanese-clerk": {
+    "width": 1536,
+    "height": 1024,
+    "bytes": 192582,
+    "original": "wenmi/illustrations/b-japanese-clerk.png"
+  },
+  "c-tokyo-south-china": {
+    "width": 1600,
+    "height": 900,
+    "bytes": 474870,
+    "original": "wenmi/illustrations/c-tokyo-south-china.png"
+  },
+  "e-rifle-shipment": {
+    "width": 1536,
+    "height": 1024,
+    "bytes": 387522,
+    "original": "wenmi/illustrations/e-rifle-shipment.png"
+  },
+  "d-aircraft-negotiation": {
+    "width": 1536,
+    "height": 1024,
+    "bytes": 457166,
+    "original": "wenmi/illustrations/d-aircraft-negotiation.png"
+  },
+  "f-sun-yat-sen": {
+    "width": 1536,
+    "height": 1024,
+    "bytes": 361808,
+    "original": "wenmi/illustrations/f-sun-yat-sen.png"
+  }
+}

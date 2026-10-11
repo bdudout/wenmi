@@ -33,8 +33,8 @@ R = {
            [('P', ['sens', 'lecture']), ('P', ['sens', 'lecture'])]),
  '0467': ('記念章及各個‹钎›盒‹侀›須九千五百元，如訂，祈匯款。詳{由}嘉{君}函呈。刻寺{內}內閣成立，武器或可有{望}，不日確定，卽歸。伸。灰。',
           [('P', ['sens', 'lecture']), ('Q', ['sens']), ('P', ['contexte', 'sens']), ('P', ['sens'])]),
- '0473': ('借款以·債爲標準，額{百}萬，息八釐，一‹矸›還，無擔保，九四{扣}。如借，祈飭伸簽約，卽交。速示。械須中央認可，當局始{允}侵給。並聞。回電祈相{京}{赤}{坂}青山南町‹孵›‹眥›。',
-          [('P', ['sens']), ('P', ['sens', 'contexte']), ('P', ['sens']), ('Q', ['contexte']), ('Q', ['contexte', 'lecture']), ('Q', ['contexte'])]),
+ '0473': ('借款以·債爲標準，額{百}萬，息八釐，一‹矸›還，無擔保，九四{扣}。如借，祈飭伸簽約，卽交。速示。械須中央認可，當局始{允}侵給。並聞。回電祈{直}{交}{赤}{坂}青山南町‹孵›‹眥›。',
+          [('P', ['sens']), ('P', ['sens', 'contexte']), ('P', ['sens']), ('Q', ['lecture']), ('P', ['lecture', 'sens']), ('P', ['lecture', 'contexte']), ('P', ['lecture', 'contexte'])]),
  '0489a': ('擬十號南歸，謹聞。伸。歌。', []),
  '0494a': ('歐戰{中}，卽內{債}{亦}無出九五扣者，俄且然，何况滇無抵押，應稍貴。餘可商，此難辦，擬歸商。盼立復。伸。尤。',
            [('Q', ['sens']), ('Q', ['sens', 'contexte']), ('P', ['sens'])]),
@@ -46,19 +46,21 @@ R = {
 }
 
 # État de chaque proposition à l'image (journal de l'enquête) : 'confirmée' = la lettre proposée a été lue à l'image ;
-# 'maintenue' = la lettre décodée a été relue et confirmée (l'erreur supposée serait d'origine : Morse ou copiste en 1916) ;
-# 'attente' = dans le lot 19 (lecture aveugle, en cours) ; 'témoin' = 0406, jamais relu de façon ciblée ; absent = non relu.
-IMAGE = {('0473', 9): 'maintenue', ('0498', 27): 'maintenue', ('0498', 32): 'maintenue', ('0498', 61): 'maintenue',
-         ('0498', 72): 'maintenue', ('0498', 99): 'maintenue', ('0496a', 16): 'maintenue', ('0449', 27): 'maintenue',
-         ('0494a', 2): 'maintenue', ('0416b', 19): 'maintenue', ('0415', 38): 'maintenue', ('0415', 39): 'maintenue',
-         ('0415', 42): 'maintenue', ('0415', 48): 'confirmée', ('0348', 52): 'maintenue'}
-LOT19 = {('0348', 36), ('0386', 21), ('0386', 26), ('0413', 0), ('0413', 12), ('0413', 17), ('0413', 22), ('0449', 25), ('0449', 26),
-         ('0455a', 27), ('0455a', 28), ('0467', 21), ('0467', 23), ('0467', 28), ('0467', 38), ('0473', 22), ('0473', 43), ('0473', 52), ('0473', 53),
-         ('0473', 54), ('0494a', 5), ('0494a', 6), ('0496a', 44), ('0498', 0), ('0498', 16), ('0498', 34), ('0498', 56), ('0498', 58),
-         ('0498', 64), ('0498', 94)}
+# 'maintenue' = la lettre décodée a été relue (l'erreur supposée serait d'origine : Morse ou copiste en 1916) ;
+# 'attente' = lecture aveugle en cours ; 'témoin' = 0406, jamais relu de façon ciblée ; absent = non relu.
+# Lots 13 et 17 ; lot R1 (11/10/2026, 35 mots dont 5 témoins, lecture aveugle : cadre seul, rien de proposé).
+CONFIRMED = [('0415', 48), ('0348', 36), ('0386', 26), ('0413', 0), ('0413', 17), ('0413', 22), ('0449', 26), ('0455a', 27),
+             ('0455a', 28), ('0467', 21), ('0473', 52), ('0473', 53), ('0473', 54)]
+KEPT = [('0473', 9), ('0498', 27), ('0498', 32), ('0498', 61), ('0498', 72), ('0498', 99), ('0496a', 16), ('0449', 27), ('0494a', 2),
+        ('0416b', 19), ('0415', 38), ('0415', 39), ('0415', 42), ('0348', 52),
+        ('0386', 21), ('0413', 12), ('0449', 25), ('0467', 23), ('0467', 28), ('0467', 38), ('0473', 22), ('0473', 43), ('0494a', 5),
+        ('0494a', 6), ('0496a', 44), ('0498', 0), ('0498', 16), ('0498', 34), ('0498', 56), ('0498', 58), ('0498', 64), ('0498', 94)]
+IMAGE = {**{k: 'maintenue' for k in KEPT}, **{k: 'confirmée' for k in CONFIRMED}}
+# 0473 i51 (相 → 直, laru → lary) : lecture aveugle de confiance faible, non visée par le lot ; laissée sans état.
+PENDING = set()
 def image_state(mid, i):
     if mid == '0406': return 'témoin'
-    return IMAGE.get((mid, i)) or ('attente' if (mid, i) in LOT19 else None)
+    return IMAGE.get((mid, i)) or ('attente' if (mid, i) in PENDING else None)
 
 PUNCT = set('。，、；：？！ ')
 
