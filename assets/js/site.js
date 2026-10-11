@@ -160,6 +160,14 @@
     C.messages.forEach(function (m) {
       h += '<section class="tg" id="t' + m.id + '"><h2>' + m.id + ' <small>' + esc(I.date[m.id] || '') + '</small></h2>';
       h += '<p class="tg-meta"><span>' + esc(m.route) + '</span> · <span>' + esc((I.channel || {})[m.grid] || m.grid) + '</span> · <a href="https://www.jacar.archives.go.jp/das/meta/' + m.record + '">JACAR ' + m.record + '</a></p>';
+      if (m.fiche) {
+        var fi = '../assets/img/fiches/', cap = (L.scan || '').replace('{rec}', m.record).replace('{img}', m.fiche.img);
+        h += '<div class="tg-fiche"><a class="tg-scan" href="' + fi + 'scan-' + m.fiche.img + '-full.webp" title="' + esc(cap) + '">' +
+          '<img src="' + fi + 'scan-' + m.fiche.img + '.webp" loading="lazy" alt="' + esc(cap) + '"></a>' +
+          '<div class="tg-side"><img class="tg-map" src="' + fi + 'map-' + m.id + '.png" loading="lazy" alt="' + esc((L.route || '') + ' : ' + m.route) + '">' +
+          '<p class="tg-keys"><span class="tg-label">' + esc(L.keys || '') + '</span> ' + m.fiche.keys.map(function (k) { return '<span lang="zh-Hant">' + esc(k) + '</span>'; }).join(' · ') + '</p>' +
+          '<p class="tg-credit">' + esc(cap) + '</p></div></div>';
+      }
       var groups = m.letters.match(/.{1,10}/g) || [];
       h += '<p class="tg-label">' + esc(L.read) + '</p><p class="cipher mono">' + groups.join(' ') + '</p>';
       h += '<div class="tokens">';

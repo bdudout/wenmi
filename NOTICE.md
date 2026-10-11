@@ -18,9 +18,9 @@ La carte symbolique et le portrait dessiné de Sun Yat-sen, présents dans le do
 
 ## Éléments non couverts par cette licence
 
-- **Scan du télégramme** (`assets/img/jacar-B03050090000-fr0416b.jpg`) : document des Archives diplomatiques du
-  ministère des Affaires étrangères du Japon, diffusé par JACAR (Japan Center for Asian Historical Records), référence
-  B03050090000. Reproduit avec mention de la source ; se reporter aux conditions d'utilisation de JACAR.
+- **Scans des télégrammes** (`assets/img/jacar-B03050090000-fr0416b.jpg` et `assets/img/fiches/scan-*.webp`) : documents des
+  Archives diplomatiques du ministère des Affaires étrangères du Japon, diffusés par JACAR (Japan Center for Asian Historical
+  Records), références B03050089900, B03050090000 et B03050090100 (numéro d'image indiqué sous chaque fiche). Reproduit avec mention de la source ; se reporter aux conditions d'utilisation de JACAR.
 - **Portraits** (`assets/img/portraits/`) : photographies du domaine public, Wikimedia Commons (liens et crédits dans
   `assets/img/portraits/credits.json` et sous chaque image).
 - **Fond de carte** : Natural Earth (1:110m), domaine public.
@@ -31,6 +31,6 @@ La carte symbolique et le portrait dessiné de Sun Yat-sen, présents dans le do
 
 Unless stated otherwise, the texts, translations, code, reading data, generated images and videos in this repository are
 released under **CC BY 4.0**. Please credit "Brice Dudout, The Wenmi code, 2026" with a link to
-<https://github.com/bdudout/wenmi>. Exceptions: the JACAR telegram scan (Diplomatic Archives of the Ministry of Foreign
+<https://github.com/bdudout/wenmi>. Exceptions: the JACAR telegram scans (Diplomatic Archives of the Ministry of Foreign
 Affairs of Japan; see JACAR terms of use), public-domain portraits from Wikimedia Commons, Natural Earth base map (public
 domain), and data derived from Wikisource texts and the Unicode Unihan database.

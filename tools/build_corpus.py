@@ -175,13 +175,20 @@ def readable(m, grid):
     return {'toks': [[c, i, p] for c, i, p in toks], 'props': out, 'score': [mean_score(before), mean_score(after)]}
 
 msgs = load_js(os.path.join(SITE, 'assets', 'js', 'messages.js'), 'WENMI_MESSAGES') + load_js(os.path.join(SITE, 'assets', 'js', 'messages-y0.js'), 'WENMI_MESSAGES_Y0')
+# Fiche de chaque télégramme (tools/make_fiches.py) : image JACAR du formulaire, mini-carte, mots clés (tirés du texte décodé)
+KEYS = {'0348': ['三十式槍萬一千', '門司', '年息一割', '關正雄'], '0386': ['軍器飛機', '宜歸滬', '伸留'], '0406': ['段無組織內閣', '日政府', '終局援助'],
+        '0415': ['參部', '山縣', '一師', '械款'], '0416b': ['日人態度遽變', '確否速示'], '0455b': ['攝機', '代滇購'], '0462': ['興華', '借款', '信用未免掃地', '第二批械'],
+        '0413': ['航空隊', '飛行機四台', '鈴木茂'], '0416a': ['滇索槍萬枝', '軍院取消'], '0449': ['軍用飛機六', '無綫電機八', '參謀部'],
+        '0455a': ['武器及飛機', '副議長'], '0467': ['記念章', '九千五百元', '寺內內閣'], '0473': ['借款', '無擔保', '九四', '赤坂青山南町'],
+        '0489a': ['擬十號南歸'], '0494a': ['歐戰', '內債', '九五扣', '無抵押'], '0496a': ['蔡公', '病故福岡', '哀悼'], '0498': ['借款', '年息擬六厘至七厘', '三年爲限']}
 corpus = []
 for m in msgs:
     grid = m.get('grid', 'G0'); ch, route, rec = META[m['id']]; assert ch == grid, m['id']
     codes = analyse(m, grid)
     corpus.append({'id': m['id'], 'grid': grid, 'route': route, 'record': rec, 'letters': ''.join(m['units']),
                    'codes': m['codes'], 'chars': m['chars'], 'status': [c['s'] for c in codes], 'alts': {str(i): c['alts'] for i, c in enumerate(codes) if c['alts']},
-                   'expected': {str(i): c['exp'] for i, c in enumerate(codes) if c['exp']}, 'readable': readable(m, grid)})
+                   'expected': {str(i): c['exp'] for i, c in enumerate(codes) if c['exp']}, 'readable': readable(m, grid),
+                   'fiche': {'img': m['id'][:4], 'keys': KEYS[m['id']]}})
 
 # 1917 : lettres seulement (non déchiffrés)
 sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c14')); sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c31'))

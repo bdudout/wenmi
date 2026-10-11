@@ -36,6 +36,7 @@ assets/img/             scan JACAR (B03050090000, image 0416)
 assets/img/illustrations/ six reconstitutions IA locales en WebP ; légendes multilingues
 tools/illustrations.py  placement et légendes des illustrations lors du build
 assets/img/flags/       drapeaux du sélecteur de langue (SVG, GÉNÉRÉS)
+tools/make_fiches.py    fiche de chaque télégramme : scan JACAR recadré + mini-carte (assets/img/fiches/)
 tools/build.py          assemble content/ + gabarit → <langue>/*.html
 tools/build_data.py     extrait messages.js de l'édition et vérifie la grille G0
 tools/build_data_y0.py  décode le second canal sous Y0 et vérifie contre c31-decodage-Y0.md

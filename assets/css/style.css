@@ -328,3 +328,12 @@ figure.media video { display: block; width: 100%; height: auto; border-radius: 6
 .img-confirmée { border-color: var(--accent-2); color: var(--accent-2); }
 .img-maintenue { border-color: var(--doubt); color: var(--doubt); }
 .img-attente, .img-témoin { color: var(--muted); }
+
+/* fiche de télégramme : formulaire JACAR + mini-carte */
+.tg-fiche { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); gap: 1rem; align-items: start; margin: .8rem 0 1rem; }
+.tg-scan img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; background: #fff; box-shadow: var(--shadow); }
+.tg-map { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.tg-keys { margin: .6rem 0 .3rem; font-size: 1.05rem; }
+.tg-keys .tg-label { display: block; margin-bottom: .1rem; }
+.tg-credit { font-size: .8rem; color: var(--muted); margin: 0; }
+@media (max-width: 560px) { .tg-fiche { grid-template-columns: 1fr; } .tg-scan img { max-width: 16rem; } }
