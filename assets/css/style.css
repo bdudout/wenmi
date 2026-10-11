@@ -48,7 +48,7 @@ img { max-width: 100%; height: auto; }
 /* ---------- en-tête ---------- */
 .site-header {
   border-bottom: 1px solid var(--rule); background: var(--paper);
-  position: sticky; top: 0; z-index: 10;
+  position: sticky; top: 0; z-index: 14;
 }
 .site-header .inner {
   max-width: 68rem; margin: 0 auto; padding: .7rem 1rem;
@@ -229,15 +229,25 @@ html:lang(ja) body { font-family: Charter, Georgia, var(--jp); line-height: 1.85
 :lang(ja) { font-family: var(--jp); }
 html:lang(zh-Hans) .standfirst, html:lang(zh-Hant) .standfirst, html:lang(ja) .standfirst { font-size: 1.12rem; }
 html:lang(zh-Hans) blockquote, html:lang(zh-Hant) blockquote, html:lang(ja) blockquote { font-style: normal; }
-.lang-switch { display: flex; gap: .2rem; align-items: center; }
-.lang-switch a {
-  display: inline-flex; align-items: center; gap: .3rem; text-decoration: none; color: var(--ink-2);
-  font-size: .78rem; line-height: 1; padding: .3rem .4rem; border-radius: 6px; border: 1px solid transparent;
+.lang-switch { position: relative; }
+.lang-switch details { position: relative; }
+.lang-switch summary {
+  list-style: none; display: inline-flex; align-items: center; gap: .3rem; cursor: pointer; color: var(--ink-2);
+  font-size: .78rem; line-height: 1; padding: .3rem .45rem; border-radius: 6px; border: 1px solid var(--rule);
 }
-.flag { width: 1.35em; height: 1em; object-fit: cover; border-radius: 2px; box-shadow: 0 0 0 1px var(--rule); vertical-align: -.15em; }
-.lang-switch a:hover { border-color: var(--rule); color: var(--ink); }
-.lang-switch a[aria-current="true"] { border-color: var(--accent); color: var(--accent); background: var(--paper-2); }
-@media (max-width: 760px) { .lang-switch a .lc { display: none; } }
+.lang-switch summary::-webkit-details-marker { display: none; }
+.lang-switch summary::after { content: ""; width: .32em; height: .32em; margin-left: .1rem; border: solid currentColor;
+  border-width: 0 1.5px 1.5px 0; transform: translateY(-.12em) rotate(45deg); opacity: .7; }
+.lang-switch summary:hover, .lang-switch details[open] summary { border-color: var(--accent); color: var(--accent); }
+.lang-switch ul { position: absolute; right: 0; top: calc(100% + .35rem); z-index: 20; list-style: none; margin: 0; padding: .3rem;
+  min-width: 10rem; background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; box-shadow: var(--shadow); }
+.lang-switch li a {
+  display: flex; align-items: center; gap: .55rem; text-decoration: none; color: var(--ink-2);
+  font-size: .9rem; line-height: 1.2; padding: .4rem .55rem; border-radius: 5px;
+}
+.flag { width: 1.35em; height: 1em; object-fit: cover; border-radius: 2px; box-shadow: 0 0 0 1px var(--rule); vertical-align: -.15em; flex: none; }
+.lang-switch li a:hover { background: var(--paper-2); color: var(--ink); }
+.lang-switch li a[aria-current="true"] { color: var(--accent); background: var(--paper-2); }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* ---------- information non confirmée ---------- */
@@ -363,10 +373,10 @@ h1 a.star { color: var(--accent); text-decoration: none; font-size: .7em; vertic
 .ftoc a small { color: var(--muted); }
 .ftoc a:hover { color: var(--accent); }
 .ftoc a.on { color: var(--accent); border-left-color: var(--accent); background: var(--paper-2); }
-@media (min-width: 84rem) {
+@media (min-width: 72rem) {
   .ftoc-btn { display: none; }
-  .ftoc-panel { display: block; top: 5.5rem; bottom: auto; right: auto; left: calc(50% + var(--measure) / 2 + 2.5rem);
-    width: min(16rem, calc(50% - var(--measure) / 2 - 4rem)); max-height: calc(100vh - 7.5rem); background: transparent;
+  .ftoc-panel { display: block; top: calc(var(--head-h, 3.5rem) + 1.6rem); bottom: auto; right: auto; left: calc(50% + var(--measure) / 2 + 2rem);
+    width: min(16rem, calc(50% - var(--measure) / 2 - 3rem)); max-height: calc(100vh - var(--head-h, 3.5rem) - 3rem); background: transparent;
     border: 0; border-left: 1px solid var(--rule); border-radius: 0; box-shadow: none; padding: 0 0 0 .4rem; transition: opacity .2s; }
   body.ftoc-hide .ftoc-panel { opacity: 0; pointer-events: none; }
 }

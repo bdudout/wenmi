@@ -21,6 +21,20 @@
     if (a) { try { localStorage.setItem('wenmi-lang', a.dataset.lang); } catch (e) {} }
   });
 
+  // ---------- menu des langues : fermeture au clic extérieur ou par Échap ----------
+  var langMenu = document.querySelector('.lang-switch details');
+  if (langMenu) {
+    document.addEventListener('click', function (ev) { if (langMenu.open && !langMenu.contains(ev.target)) langMenu.open = false; });
+    document.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Escape' && langMenu.open) { langMenu.open = false; langMenu.querySelector('summary').focus(); }
+    });
+  }
+
+  // ---------- hauteur réelle de l'en-tête : le sommaire flottant se cale dessous ----------
+  var head = document.querySelector('.site-header');
+  function headH() { if (head) root.style.setProperty('--head-h', head.offsetHeight + 'px'); }
+  headH(); window.addEventListener('resize', headH);
+
   // ---------- grilles G0 (canal de Cen) et Y0 (canal du Yunnan) ----------
   function pad(n) { return (n < 10 ? '0' : '') + n; }
   var GRIDS = {

@@ -53,7 +53,9 @@ TEMPLATE = '''<!doctype html>
 {nav}
   </nav>
   <nav class="lang-switch" aria-label="{langs}">
+    <details>
 {switch}
+    </details>
   </nav>
   <button class="theme-toggle" type="button" aria-label="{theme}">◐</button>
 </div></header>
@@ -94,10 +96,14 @@ def build():
             body = add_illustrations(body, lang, page)
             nav = '\n'.join('    <a href="%s.html"%s>%s</a>' % (p, ' aria-current="page"' if p == page else '', L['nav'][i])
                             for i, p in enumerate(PAGES))
-            switch = '\n'.join('    <a href="../%s/%s.html" hreflang="%s" lang="%s" data-lang="%s" title="%s" aria-label="%s"%s>'
-                                '<img class="flag" src="../assets/img/flags/%s.svg" width="20" height="15" alt=""><span class="lc">%s</span></a>'
-                                % (l, page, LL['code'], LL['code'], l, LL['label'], LL['label'], ' aria-current="true"' if l == lang else '',
-                                   FLAGS[l][0], FLAGS[l][1]) for l, LL in LANGS.items())
+            cur = LANGS[lang]
+            switch = ('      <summary title="%s" aria-label="%s — %s"><img class="flag" src="../assets/img/flags/%s.svg" width="20" height="15" alt="">'
+                      '<span class="lc">%s</span></summary>\n      <ul>\n' % (L['langs'], L['langs'], cur['label'], FLAGS[lang][0], FLAGS[lang][1]))
+            switch += '\n'.join('        <li><a href="../%s/%s.html" hreflang="%s" lang="%s" data-lang="%s"%s>'
+                                 '<img class="flag" src="../assets/img/flags/%s.svg" width="20" height="15" alt=""><span>%s</span></a></li>'
+                                 % (l, page, LL['code'], LL['code'], l, ' aria-current="true"' if l == lang else '', FLAGS[l][0], LL['label'])
+                                 for l, LL in LANGS.items())
+            switch += '\n      </ul>'
             alternates = '\n'.join('<link rel="alternate" hreflang="%s" href="../%s/%s.html">' % (LL['code'], l, page) for l, LL in LANGS.items())
             scripts = ''
             if 'id="corpus"' in body:
