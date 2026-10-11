@@ -1,11 +1,10 @@
-# Licence
+# Licence et mentions
 
 © 2026 Brice Dudout, en collaboration avec Claude (Anthropic).
 
 Sauf mention contraire, les textes, les traductions, le code, les données de lecture, les images et les vidéos générées
 de ce dépôt sont publiés sous licence **Creative Commons Attribution 4.0 International (CC BY 4.0)** :
-<https://creativecommons.org/licenses/by/4.0/> (texte juridique complet :
-<https://creativecommons.org/licenses/by/4.0/legalcode>).
+<https://creativecommons.org/licenses/by/4.0/>. Le texte juridique complet figure dans le fichier [`LICENSE`](LICENSE).
 
 Vous pouvez copier, redistribuer, adapter et réutiliser ce contenu, y compris à des fins commerciales, à condition de
 citer l'auteur (« Brice Dudout, Le code Wenmi, 2026 », avec un lien vers <https://github.com/bdudout/wenmi>) et

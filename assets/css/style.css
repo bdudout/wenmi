@@ -306,3 +306,16 @@ figure.media video { display: block; width: 100%; height: auto; border-radius: 6
 .portraits figure { margin: 0; }
 .portraits img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; border-radius: 4px; filter: sepia(.15); }
 .portraits figcaption { font-size: .8rem; margin-top: .3rem; }
+
+/* version lisible proposée */
+.readable { font-size: 1.25rem; line-height: 2; margin: .2rem 0 .3rem; }
+.readable .prop, .tg-props .prop { border-radius: 3px; padding: 0 .08em; cursor: help; }
+.prop-P { background: color-mix(in srgb, var(--accent-2) 18%, transparent); box-shadow: inset 0 -2px 0 var(--accent-2); }
+.prop-Q { background: color-mix(in srgb, var(--doubt) 14%, transparent); box-shadow: inset 0 -2px 0 var(--doubt); text-decoration: underline dotted var(--doubt); }
+.readable .unres { color: var(--doubt); border-bottom: 1px dashed var(--doubt); cursor: help; }
+.tg-score { font-size: .82rem; color: var(--muted); margin: 0 0 .5rem; }
+.tg-props { font-size: .88rem; margin: .3rem 0 .6rem; }
+.tg-props summary { cursor: pointer; color: var(--accent-2); }
+.tg-props ul { padding-left: 1.1rem; margin: .4rem 0 0; }
+.tg-props li { margin-bottom: .35rem; }
+.tg-props .lvl { font-weight: 600; }

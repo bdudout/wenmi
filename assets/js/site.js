@@ -170,6 +170,35 @@
           '</span><span class="c">' + code + '</span><span class="h" lang="zh-Hant">' + esc(m.chars[i]) + '</span></span>';
       });
       h += '</div>';
+      // version lisible proposée
+      var R = m.readable;
+      if (R) {
+        var byI = {}; R.props.forEach(function (p) { byI[p.i] = p; });
+        var reasonTxt = function (p) { return p.reasons.map(function (r) { return L.reason[r] || r; }).join(', '); };
+        var editTxt = function (p) {
+          return p.letters + ' → ' + p.to_letters + ' (' + p.edits.map(function (e) {
+            return e.from + '→' + e.to + ' : ' + kindLabel(e.kind) + (e.kind.indexOf('morse') >= 0 ? ' ' + morse(e.morse[0]) + '→' + morse(e.morse[1]) : '');
+          }).join(' ; ') + ')';
+        };
+        h += '<p class="tg-label">' + esc(L.readable) + '</p><p class="readable" lang="zh-Hant">';
+        R.toks.forEach(function (t) {
+          var ch = t[0], i = t[1], prop = t[2];
+          if (prop) { var p = byI[i]; h += '<span class="prop prop-' + p.level + '" title="' + esc(p.orig + ' → ' + p.ch + ' · ' + editTxt(p) + ' · ' + reasonTxt(p)) + '">' + esc(ch) + '</span>'; }
+          else if (i !== null && (m.status[i] === 'douteux' || m.status[i] === 'illisible')) h += '<span class="unres" title="' + esc(L.unres) + '">' + esc(ch) + '</span>';
+          else h += esc(ch);
+        });
+        h += '</p>';
+        var fmt = function (x) { return (x > 0 ? '+' : '') + x.toLocaleString(root.lang, { minimumFractionDigits: 2, maximumFractionDigits: 2 }); };
+        h += '<p class="tg-score">' + esc(L.score).replace('{a}', fmt(R.score[0])).replace('{b}', fmt(R.score[1])) + '</p>';
+        if (R.props.length) {
+          h += '<details class="tg-props"><summary>' + esc(L.props.replace('{n}', R.props.length)) + '</summary><ul>';
+          R.props.forEach(function (p) {
+            h += '<li><b>' + (p.i + 1) + '.</b> <span lang="zh-Hant">' + esc(p.orig) + '</span> → <span lang="zh-Hant" class="prop prop-' + p.level + '">' + esc(p.ch) + '</span> <code>' + p.code + '</code> — <span class="lvl">' + esc(L.level[p.level]) + '</span> · ' +
+              '<span class="mono">' + esc(editTxt(p)) + '</span> · ' + esc(reasonTxt(p)) + '</li>';
+          });
+          h += '</ul></details>';
+        }
+      }
       if (I.tr[m.id]) h += '<p class="meta"><strong>' + esc(I.label) + '</strong> ' + esc(I.tr[m.id]) + '</p>';
       var items = '';
       Object.keys(m.expected || {}).forEach(function (i) {

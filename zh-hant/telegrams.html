@@ -66,20 +66,70 @@
     <p>反之，0386號電報以「卄」（二十）結尾，而電報紙上寫的是6月30日。要得到「卅」（三十），需把 <i>p</i> 改成 <i>n</i>：這既不是一個符號的摩斯錯誤，也不是已記錄的抄寫混淆。差異仍無法解釋。</p>
   </div>
 
+  <h2>可讀版本及其局限</h2>
+  <p>每封電報下方，我們給出一個<strong>可讀版本</strong>：加上標點的解碼文字，其中一些不太可能的字被替換為我們認為<em>原本應有</em>的字。每處替換綜合三方面的證據：句子的<strong>文意</strong>（以及電報套語：乞速電催、甚感、盼復……）、<strong>上下文</strong>（其他電報、已知史實、電文結構、日期慣例），以及<strong>字母的接近程度</strong>：需要改動幾個字母，這種改動能否以摩斯錯誤或抄寫混淆來解釋。</p>
+  <div class="legend-box">
+    <span><span class="prop prop-P" lang="zh-Hant">誠</span> 很可能：只差一個字母，文意明顯更通，或有外部證據</span>
+    <span><span class="prop prop-Q" lang="zh-Hant">君</span> 有可能：差兩個字母，或只有一條線索</span>
+    <span><span class="unres" lang="zh-Hant">襯</span> 存疑，未恢復</span>
+  </div>
+  <p>將滑鼠移到字上，可看到解碼出的原字、改動的字母及理由。例如0406中「段無組織內閣之<span lang="zh-Hant">誕</span>意」不成文義；「之<span lang="zh-Hant">誠</span>意」只差<em>一個</em>字母（a 誤為 u，摩斯 · − 誤為 ·· −）。同一句中，「放廈」成為「政府」，每處也只差一個字母。</p>
+  <div class="status warn">
+    <h4>局限</h4>
+    <ul>
+      <li>這些是我們（Brice Dudout 與 Claude）根據文意提出的<strong>讀法建議</strong>，並未逐一在電報紙上核對；解碼文字從不改動。</li>
+      <li>電報文字極為簡省，可能有幾種同樣合理的恢復方式，我們只給出一種。</li>
+      <li>單字母錯誤能「解釋」很多東西：26個字母、4個位置，一個電碼有幾十個「鄰居」。只有當文意與上下文指向同一方向時，接近程度才算論據。</li>
+      <li>每封電報所示的概似增益必然上升，因為我們選擇的都是合理的字：這只是參考指標，不是證明。</li>
+      <li>約有二十個字仍存疑而無建議；某些段落（0386、0406的結尾、0498的開頭）即使恢復後仍不清楚。</li>
+    </ul>
+  </div>
+
   <div id="corpus"></div>
 <script type="application/json" id="corpus-labels">{
  "stats": "共 {codes} 個電碼：{conf} 個罕見但已確認，{douteux} 個存疑，{ill} 個無法辨認；其餘均可靠。",
  "read": "讀出的字母",
- "doubts": "存疑電碼與可能的錯誤",
+ "doubts": "自動線索（僅語言模型）",
  "none": "沒有更好的單字母變體",
  "unreachable": "沒有任何單字母錯誤能得到它",
  "y1917": "1917年 —— 尚未破譯",
  "notDecoded": "Brice 的盲讀。G0 與 Y0 兩把密鑰都讀不出中文：字母表不同（有 c、j，y 既作子音也作母音）。",
  "pending": "人工盲讀已收到，正在分析；處理完畢後將在此公布。",
- "kind": {"morse": "摩斯", "copie": "抄寫", "morse+copie": "摩斯或抄寫", "autre": "既非摩斯亦非抄寫"},
- "why": {"jumeau": "據孿生電報0416a應為：", "cartouche": "據電報紙日期（30/6）應為："},
- "status": {"douteux": "存疑", "illisible": "無法辨認"},
- "conf": {"date": "罕見但已確認：日期與電報紙相符", "mot": "罕見但已確認：真實詞語（經影像複核或文意所需）", "nom": "罕見但已確認：人名或地址", "variante": "常用字的異體（卽 = 即）"}
+ "kind": {
+  "morse": "摩斯",
+  "copie": "抄寫",
+  "morse+copie": "摩斯或抄寫",
+  "autre": "既非摩斯亦非抄寫"
+ },
+ "why": {
+  "jumeau": "據孿生電報0416a應為：",
+  "cartouche": "據電報紙日期（30/6）應為："
+ },
+ "status": {
+  "douteux": "存疑",
+  "illisible": "無法辨認"
+ },
+ "conf": {
+  "date": "罕見但已確認：日期與電報紙相符",
+  "mot": "罕見但已確認：真實詞語（經影像複核或文意所需）",
+  "nom": "罕見但已確認：人名或地址",
+  "variante": "常用字的異體（卽 = 即）"
+ },
+ "readable": "建議的可讀版本",
+ "score": "每字平均概似：解碼 {a}，採用建議後 {b}。",
+ "props": "讀法建議（{n}）",
+ "level": {
+  "P": "很可能",
+  "Q": "有可能"
+ },
+ "reason": {
+  "sens": "文意",
+  "contexte": "上下文",
+  "structure": "電文結構",
+  "jumeau": "孿生電報",
+  "lecture": "電報紙的另一種讀法"
+ },
+ "unres": "存疑，未恢復"
 }</script>
 </article>
 </main>

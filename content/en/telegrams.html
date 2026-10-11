@@ -31,19 +31,69 @@
     <p>Conversely, telegram 0386 ends with 卄 ("20") while the form says 30 June. Getting 卅 ("30") would require changing a <i>p</i> into an <i>n</i>: neither a one-sign Morse error nor a recorded copying confusion. The discrepancy remains unexplained.</p>
   </div>
 
+  <h2>A readable version, and its limits</h2>
+  <p>Under each telegram we propose a <strong>readable version</strong>: the decoded text, punctuated, where some unlikely characters are replaced by the character we believe was <em>intended</em>. Each replacement combines three kinds of evidence: the <strong>meaning</strong> of the sentence (and telegraphic formulas: 乞速電催, 甚感, 盼復…), the <strong>context</strong> (other telegrams, known facts, the structure of the message, the date convention) and the <strong>closeness of the letters</strong>: how many letters must change, and whether that change is explained by a Morse error or a copying confusion.</p>
+  <div class="legend-box">
+    <span><span class="prop prop-P" lang="zh-Hant">誠</span> probable: one letter away, much better sense or external evidence</span>
+    <span><span class="prop prop-Q" lang="zh-Hant">君</span> possible: two letters, or a single clue</span>
+    <span><span class="unres" lang="zh-Hant">襯</span> doubtful, not restored</span>
+  </div>
+  <p>Hover over a character to see the decoded character, the letters changed and the reasons. Example: in 0406, "段無組織內閣之<span lang="zh-Hant">誕</span>意" means nothing; "之<span lang="zh-Hant">誠</span>意" ("the sincere will") is <em>one</em> letter away (u instead of a, ·· − instead of · −). In the same sentence, 放廈 becomes 政府 ("the government"), each time by a single letter.</p>
+  <div class="status warn">
+    <h4>Limits</h4>
+    <ul>
+      <li>These are <strong>reading proposals</strong>, made by us (Brice Dudout and Claude) from the meaning; they have not been checked one by one against the forms, and the decoded text is never changed.</li>
+      <li>Telegraphic Chinese is extremely terse: several restorations may be equally plausible. We give only one.</li>
+      <li>A one-letter error "explains" a lot: with 26 letters and 4 positions, a code has dozens of neighbours. Closeness is only an argument when meaning and context point the same way.</li>
+      <li>The likelihood gain shown for each message necessarily goes up, since we chose plausible characters: it is an indicator, not a proof.</li>
+      <li>About twenty characters remain doubtful with no proposal; some passages (0386, the end of 0406, the start of 0498) stay obscure even after restoration.</li>
+    </ul>
+  </div>
+
   <div id="corpus"></div>
 <script type="application/json" id="corpus-labels">{
  "stats": "{codes} codes in all: {conf} rare but confirmed, {douteux} doubtful, {ill} illegible; all others are secure.",
  "read": "Letters read",
- "doubts": "Doubtful codes and candidate errors",
+ "doubts": "Automatic leads (language model only)",
  "none": "no one-letter variant does better",
  "unreachable": "no single-letter error leads there",
  "y1917": "1917 — not broken",
  "notDecoded": "Blind reading (Brice). Neither key G0 nor key Y0 yields Chinese: the alphabet differs (c, j, y as both consonant and vowel).",
  "pending": "Blind human reading received, being analysed; it will be published here once processed.",
- "kind": {"morse": "Morse", "copie": "copying", "morse+copie": "Morse or copying", "autre": "neither Morse nor copying"},
- "why": {"jumeau": "expected from the twin telegram 0416a:", "cartouche": "expected from the date on the form (30/6):"},
- "status": {"douteux": "doubtful", "illisible": "illegible"},
- "conf": {"date": "rare but confirmed: date matching the form", "mot": "rare but confirmed: real word (re-read on the image or expected in the sentence)", "nom": "rare but confirmed: name or address", "variante": "graphic variant of a common character (卽 = 即)"}
+ "kind": {
+  "morse": "Morse",
+  "copie": "copying",
+  "morse+copie": "Morse or copying",
+  "autre": "neither Morse nor copying"
+ },
+ "why": {
+  "jumeau": "expected from the twin telegram 0416a:",
+  "cartouche": "expected from the date on the form (30/6):"
+ },
+ "status": {
+  "douteux": "doubtful",
+  "illisible": "illegible"
+ },
+ "conf": {
+  "date": "rare but confirmed: date matching the form",
+  "mot": "rare but confirmed: real word (re-read on the image or expected in the sentence)",
+  "nom": "rare but confirmed: name or address",
+  "variante": "graphic variant of a common character (卽 = 即)"
+ },
+ "readable": "Proposed readable version",
+ "score": "Mean likelihood per character: {a} decoded, {b} with the proposals.",
+ "props": "Reading proposals ({n})",
+ "level": {
+  "P": "probable",
+  "Q": "possible"
+ },
+ "reason": {
+  "sens": "meaning of the sentence",
+  "contexte": "context",
+  "structure": "structure of the message",
+  "jumeau": "twin telegram",
+  "lecture": "another reading of the form"
+ },
+ "unres": "doubtful, not restored"
 }</script>
 </article>

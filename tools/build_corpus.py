@@ -129,6 +129,50 @@ META = {  # canal, trajet, archive (JACAR) — dates et traductions dans transla
     '0489a': ('Y0', 'Tokyo → Kunming (唐督軍)', 'B03050090100'), '0494a': ('Y0', 'Tokyo → Kunming (財政廳)', 'B03050090100'),
     '0496a': ('Y0', 'Tokyo → Kunming (唐督軍)', 'B03050090100'), '0498': ('Y0', 'Kunming → Tokyo (趙伸 c/o 関正雄)', 'B03050090100'),
 }
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import restitution
+CH2CODES = {}
+for _c, _ch in C2CH.items(): CH2CODES.setdefault(_ch, []).append(_c)
+
+def edit_path(letters4, T, target_char):
+    """Plus petit changement de lettres qui mène au caractère cible, avec le mécanisme de chaque lettre changée."""
+    inv = {v: k for k, v in T.items() if v <= 99}; best = None
+    for code in CH2CODES.get(target_char, []):
+        a, b = int(code[:2]), int(code[2:])
+        if a not in inv or b not in inv: continue
+        tgt = inv[a] + inv[b]; d = [k for k in range(4) if letters4[k] != tgt[k]]
+        if best is None or len(d) < len(best[1]): best = (code, d, tgt)
+    if best is None: return None
+    code, d, tgt = best; edits = []
+    for k in d:
+        o, n = letters4[k], tgt[k]
+        kind = ('morse+copie' if n in MORSE_NB.get(o, ()) and n in COPY_NB.get(o, ()) else 'morse' if n in MORSE_NB.get(o, ())
+                else 'copie' if n in COPY_NB.get(o, ()) else 'autre')
+        edits.append({'from': o, 'to': n, 'kind': kind, 'morse': [MORSE[o], MORSE[n]]})
+    return {'code': code, 'to_letters': tgt, 'edits': edits}
+
+def readable(m, grid):
+    text, levels = restitution.R[m['id']]
+    toks, props = restitution.parse(text, m['chars'])
+    assert len(props) == len(levels), (m['id'], len(props), len(levels))
+    letters = ''.join(m['units']); out = []
+    for (lvl, reasons), i in zip(levels, props):
+        ch = next(t[0] for t in toks if t[1] == i and t[2])
+        ep = edit_path(letters[4 * i:4 * i + 4], GRIDS[grid], ch)
+        assert ep and len(ep['edits']) <= 2, (m['id'], i, ch, ep)
+        out.append(dict(i=i, ch=ch, orig=m['chars'][i], level=lvl, reasons=reasons, letters=letters[4 * i:4 * i + 4], **ep))
+    # vraisemblance moyenne par code (unigramme + bigramme) avant / après les propositions
+    def mean_score(codes):
+        tot, n, prev = 0.0, 0, None
+        for c in codes:
+            if c is None: prev = None; continue
+            tot += float(uni[c]) - REF + bi(prev, c); n += 1; prev = c
+        return round(tot / max(n, 1), 2)
+    before = [int(c) if c.isdigit() else None for c in m['codes']]
+    after = list(before)
+    for p in out: after[p['i']] = int(p['code'])
+    return {'toks': [[c, i, p] for c, i, p in toks], 'props': out, 'score': [mean_score(before), mean_score(after)]}
+
 msgs = load_js(os.path.join(SITE, 'assets', 'js', 'messages.js'), 'WENMI_MESSAGES') + load_js(os.path.join(SITE, 'assets', 'js', 'messages-y0.js'), 'WENMI_MESSAGES_Y0')
 corpus = []
 for m in msgs:
@@ -136,7 +180,7 @@ for m in msgs:
     codes = analyse(m, grid)
     corpus.append({'id': m['id'], 'grid': grid, 'route': route, 'record': rec, 'letters': ''.join(m['units']),
                    'codes': m['codes'], 'chars': m['chars'], 'status': [c['s'] for c in codes], 'alts': {str(i): c['alts'] for i, c in enumerate(codes) if c['alts']},
-                   'expected': {str(i): c['exp'] for i, c in enumerate(codes) if c['exp']}})
+                   'expected': {str(i): c['exp'] for i, c in enumerate(codes) if c['exp']}, 'readable': readable(m, grid)})
 
 # 1917 : lettres seulement (non déchiffrés)
 sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c14')); sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c31'))
@@ -154,7 +198,14 @@ stats = {'codes': sum(len(c['codes']) for c in corpus), 'douteux': sum(s == 'dou
 open(os.path.join(SITE, 'assets', 'js', 'corpus.js'), 'w', encoding='utf-8').write(
     '// Généré par tools/build_corpus.py — ne pas éditer à la main.\nwindow.WENMI_CORPUS = '
     + json.dumps({'messages': corpus, 'undeciphered': undeciphered, 'stats': stats, 'morse': MORSE}, ensure_ascii=False) + ';\n')
+stats['props_P'] = sum(p['level'] == 'P' for c in corpus for p in c['readable']['props'])
+stats['props_Q'] = sum(p['level'] == 'Q' for c in corpus for p in c['readable']['props'])
+stats['still_doubtful'] = sum(1 for c in corpus for t in c['readable']['toks'] if t[1] is not None and not t[2] and c['status'][t[1]] in ('douteux', 'illisible'))
 print(stats)
+for c in corpus: print('SCORE', c['id'], c['readable']['score'], len(c['readable']['props']))
+for c in corpus:
+    for p in c['readable']['props']:
+        pass  # print('PROP', c['id'], p['i'], p['orig'], '→', p['ch'], p['level'], len(p['edits']), ' '.join(e['from'] + '→' + e['to'] + '(' + e['kind'] + ')' for e in p['edits']))
 for c in corpus:
     for i, e in c['expected'].items(): print('ATTENDU', c['id'], i, c['chars'][int(i)], '→', e['ch'], e['code'], e['why'], [(p['from'] + '→' + p['to'], p['kind']) for p in e['paths']])
 for c in corpus:

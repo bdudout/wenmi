@@ -1,6 +1,6 @@
 # Le code Wenmi · 文密
 
-Par **Brice Dudout**, en collaboration avec Claude (Anthropic) — licence [CC BY 4.0](LICENSE.md).
+Par **Brice Dudout**, en collaboration avec Claude (Anthropic) — licence [CC BY 4.0](LICENSE) (mentions et exceptions : [NOTICE.md](NOTICE.md)).
 
 Site statique présentant le déchiffrement du code **文密 (Wenmi)** : télégrammes chiffrés de 1916
 entre Tokyo et le Sud de la Chine, interceptés et recopiés par l'administration japonaise
@@ -108,6 +108,6 @@ Pousser le dépôt puis activer *Settings → Pages → Deploy from a branch →
 ## Crédits et licence
 
 Enquête et lectures : Brice Dudout, en collaboration avec Claude (Anthropic). Textes, code et
-médias générés : CC BY 4.0 (voir [LICENSE.md](LICENSE.md) pour les exceptions : scan JACAR,
+médias générés : CC BY 4.0 (texte complet dans [LICENSE](LICENSE) ; voir [NOTICE.md](NOTICE.md) pour les exceptions : scan JACAR,
 portraits du domaine public, fond Natural Earth, données dérivées). Images des télégrammes :
 Archives diplomatiques du ministère des Affaires étrangères du Japon, via JACAR.
