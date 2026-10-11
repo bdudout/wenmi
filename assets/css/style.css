@@ -378,6 +378,8 @@ h1 a.star { color: var(--accent); text-decoration: none; font-size: .7em; vertic
   .ftoc-panel { display: block; top: calc(var(--head-h, 3.5rem) + 1.6rem); bottom: auto; right: auto; left: calc(50% + var(--measure) / 2 + 2rem);
     width: min(16rem, calc(50% - var(--measure) / 2 - 3rem)); max-height: calc(100vh - var(--head-h, 3.5rem) - 3rem); background: transparent;
     border: 0; border-left: 1px solid var(--rule); border-radius: 0; box-shadow: none; padding: 0 0 0 .4rem; transition: opacity .2s; }
-  body.ftoc-hide .ftoc-panel { opacity: 0; pointer-events: none; }
+  body.ftoc-hide .ftoc-panel, body.ftoc-foot .ftoc-panel { opacity: 0; pointer-events: none; }
 }
+/* le bouton flottant ne masque pas la dernière ligne du pied de page */
+body.has-ftoc .site-footer { padding-bottom: 4.5rem; }
 @media print { .ftoc { display: none; } }

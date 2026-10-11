@@ -308,6 +308,18 @@
       document.body.classList.toggle('ftoc-hide', over);
     }
     if (wide.length) { window.addEventListener('scroll', hideOverWide, { passive: true }); window.addEventListener('resize', hideOverWide); hideOverWide(); }
+    // la colonne s'arrête au-dessus du pied de page : elle raccourcit, puis s'efface s'il ne reste plus de place
+    var foot = document.querySelector('.site-footer'), panel = wrap.querySelector('.ftoc-panel');
+    document.body.classList.add('has-ftoc');
+    function fitFoot() {
+      panel.style.maxHeight = '';
+      var column = window.getComputedStyle(btn).display === 'none';
+      if (!foot || !column) { document.body.classList.remove('ftoc-foot'); return; }
+      var room = foot.getBoundingClientRect().top - panel.getBoundingClientRect().top - 24;
+      if (room < panel.getBoundingClientRect().height) panel.style.maxHeight = Math.max(room, 0) + 'px';
+      document.body.classList.toggle('ftoc-foot', room < 72);
+    }
+    window.addEventListener('scroll', fitFoot, { passive: true }); window.addEventListener('resize', fitFoot); fitFoot();
   }
   mountFloatingToc();
 })();
