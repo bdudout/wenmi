@@ -69,6 +69,15 @@ TEMPLATE = '''<!doctype html>
 </html>
 '''
 
+import hashlib
+def bust(html):
+    """Ajoute ?v=<empreinte> aux CSS/JS locaux pour que les navigateurs rechargent les fichiers modifiés."""
+    def rep(m):
+        path = os.path.normpath(os.path.join(ROOT, 'fr', m.group(2)))
+        h = hashlib.sha256(open(path, 'rb').read()).hexdigest()[:10] if os.path.exists(path) else None
+        return m.group(1) + m.group(2) + ('?v=' + h if h else '') + m.group(3)
+    return re.sub(r'((?:href|src)=")(\.\./assets/(?:css|js)/[^"?]+)(")', rep, html)
+
 def build():
     n = 0
     for lang, L in LANGS.items():
@@ -99,7 +108,7 @@ def build():
                                   description=html.escape(meta.get('description', '')), alternates=alternates,
                                   icon=ICON, brand=L['brand'], nav=nav, langs=L['langs'], switch=switch,
                                   theme=L['theme'], body=body.rstrip(), footer=L['footer'], scripts=scripts)
-            open(os.path.join(ROOT, lang, page + '.html'), 'w', encoding='utf-8').write(out)
+            open(os.path.join(ROOT, lang, page + '.html'), 'w', encoding='utf-8').write(bust(out))
             n += 1
     print(n, 'pages générées')
 

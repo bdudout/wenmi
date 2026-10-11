@@ -183,7 +183,7 @@
         h += '<p class="tg-label">' + esc(L.readable) + '</p><p class="readable" lang="zh-Hant">';
         R.toks.forEach(function (t) {
           var ch = t[0], i = t[1], prop = t[2];
-          if (prop) { var p = byI[i]; h += '<span class="prop prop-' + p.level + '" title="' + esc(p.orig + ' → ' + p.ch + ' · ' + editTxt(p) + ' · ' + reasonTxt(p)) + '">' + esc(ch) + '</span>'; }
+          if (prop) { var p = byI[i]; h += '<span class="prop prop-' + p.level + '" title="' + esc(p.orig + ' → ' + p.ch + ' · ' + editTxt(p) + ' · ' + reasonTxt(p) + (p.image && L.image ? ' · ' + L.image[p.image] : '')) + '">' + esc(ch) + '</span>'; }
           else if (i !== null && (m.status[i] === 'douteux' || m.status[i] === 'illisible')) h += '<span class="unres" title="' + esc(L.unres) + '">' + esc(ch) + '</span>';
           else h += esc(ch);
         });
@@ -194,7 +194,8 @@
           h += '<details class="tg-props"><summary>' + esc(L.props.replace('{n}', R.props.length)) + '</summary><ul>';
           R.props.forEach(function (p) {
             h += '<li><b>' + (p.i + 1) + '.</b> <span lang="zh-Hant">' + esc(p.orig) + '</span> → <span lang="zh-Hant" class="prop prop-' + p.level + '">' + esc(p.ch) + '</span> <code>' + p.code + '</code> — <span class="lvl">' + esc(L.level[p.level]) + '</span> · ' +
-              '<span class="mono">' + esc(editTxt(p)) + '</span> · ' + esc(reasonTxt(p)) + '</li>';
+              '<span class="mono">' + esc(editTxt(p)) + '</span> · ' + esc(reasonTxt(p)) +
+              (p.image && L.image ? ' · <span class="img-state img-' + p.image + '">' + esc(L.image[p.image]) + '</span>' : '') + '</li>';
           });
           h += '</ul></details>';
         }

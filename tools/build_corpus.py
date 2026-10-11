@@ -160,7 +160,8 @@ def readable(m, grid):
         ch = next(t[0] for t in toks if t[1] == i and t[2])
         ep = edit_path(letters[4 * i:4 * i + 4], GRIDS[grid], ch)
         assert ep and len(ep['edits']) <= 2, (m['id'], i, ch, ep)
-        out.append(dict(i=i, ch=ch, orig=m['chars'][i], level=lvl, reasons=reasons, letters=letters[4 * i:4 * i + 4], **ep))
+        out.append(dict(i=i, ch=ch, orig=m['chars'][i], level=lvl, reasons=reasons, letters=letters[4 * i:4 * i + 4],
+                        image=restitution.image_state(m['id'], i), **ep))
     # vraisemblance moyenne par code (unigramme + bigramme) avant / après les propositions
     def mean_score(codes):
         tot, n, prev = 0.0, 0, None

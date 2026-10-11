@@ -10,7 +10,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="../zh-hans/method.html">
 <link rel="alternate" hreflang="zh-Hant" href="../zh-hant/method.html">
 <link rel="alternate" hreflang="ja" href="../ja/method.html">
-<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/style.css?v=68da0ad296">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%239b2c1f'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f7f3ea' font-family='serif'%3E%E6%96%87%3C/text%3E%3C/svg%3E">
 </head>
 <body>
@@ -185,7 +185,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
       <tr><td>記録のスコアが零の対照を明確に上回る</td><td>はい（829 対 約335、再読後は1,144）</td></tr>
       <tr><td>異なる初期値から同じ最適解が得られる</td><td>はい（シード3つで同一）</td></tr>
       <tr><td>検証用電報が調整なしで読める（1字あたり ≥ +2.5）</td><td>はい：G0 で +3.99</td></tr>
-      <tr><td>中国語として通り、用紙の日付と整合する</td><td>おおむね。351字中19字が疑わしい</td></tr>
+      <tr><td>中国語として通り、用紙の日付と整合する</td><td>おおむね。351字中13字が疑わしい（ほかに稀だが確認済みの6字）</td></tr>
       <tr><td>独立した外部からの裏付け</td><td>はい：発信者「<span lang="zh-Hant">伸</span>」＝趙伸。同じ兵器契約を扱う2026年の研究<sup class="fn"><a href="sources.html#s7">[7]</a></sup>によって、解読の<em>後に</em>同定、その後電報用紙（趙伸の氏名と住所）で確認</td></tr>
       <tr><td>第二の系統：閉じた鍵の下で検証用電報が読める</td><td>はい：0496a は Y0 で +4.62、蔡鍔の八日福岡での死去を告げる</td></tr>
       <tr><td>第二の系統：アンカー以外の日付末尾が用紙と一致</td><td>はい：4通中4通</td></tr>
@@ -236,9 +236,9 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
 <footer class="site-footer"><div class="inner">
   © 2026 Brice Dudout（Claude〔Anthropic〕との共同作業）。文章とコード：<a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a>。電報画像：アジア歴史資料センター（JACAR）、外務省外交史料館。先行研究：Daniel Bourdeau（CC BY 4.0）。<a href="sources.html">出典一覧</a>。
 </div></footer>
-<script src="../assets/js/messages.js"></script>
-<script src="../assets/js/messages-y0.js"></script>
-<script src="../assets/js/translations.js"></script>
-<script src="../assets/js/site.js"></script>
+<script src="../assets/js/messages.js?v=5bde006bd2"></script>
+<script src="../assets/js/messages-y0.js?v=b72832f59c"></script>
+<script src="../assets/js/translations.js?v=d45b11d452"></script>
+<script src="../assets/js/site.js?v=607776e5df"></script>
 </body>
 </html>

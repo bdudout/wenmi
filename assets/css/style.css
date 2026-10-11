@@ -319,3 +319,7 @@ figure.media video { display: block; width: 100%; height: auto; border-radius: 6
 .tg-props ul { padding-left: 1.1rem; margin: .4rem 0 0; }
 .tg-props li { margin-bottom: .35rem; }
 .tg-props .lvl { font-weight: 600; }
+.img-state { font-size: .78rem; padding: .05rem .35rem; border-radius: 3px; border: 1px solid var(--rule); white-space: nowrap; }
+.img-confirmée { border-color: var(--accent-2); color: var(--accent-2); }
+.img-maintenue { border-color: var(--doubt); color: var(--doubt); }
+.img-attente, .img-témoin { color: var(--muted); }

@@ -11,7 +11,7 @@ window.WENMI_I18N = {
     tr: {
       '0348': "Onze mille fusils Type 30 et du matériel militaire sont arrivés à Moji. Le prix est traité comme un prêt provisoire à dix pour cent d'intérêt annuel, sans garantie. Seul Koike en a la charge ; on attend votre télégramme pour expédier vers le Guangdong : pressez vite par télégramme, et ne refusez en aucun cas, pour éviter d'avoir à payer des indemnités. Par ailleurs, la feuille de code privée [?] a été transmise. Répondez directement à Seki Masao. — Shen. Le 23.",
       '0386': "Votre télégramme est arrivé. Les armes et les avions […] peuvent arriver le […]. Il convient de rentrer à Shanghai […] viendra encore au Japon. Shen reste […]. — Shen. Le 20 (?).",
-      '0406': "Duan [Qirui] n'a ni la volonté sincère ni la capacité de former le cabinet. Le gouvernement japonais partage désormais ce sentiment ; le malentendu à l'égard du Conseil des affaires militaires et de l'ensemble du Sud est […] dissipé. Désormais, tant que le plan prévu n'est pas modifié, on peut espérer l'aide finale. […] Il n'y a plus d'obstacle à l'action. […] — Wen. Le 12.",
+      '0406': "Duan [Qirui] n'a ni la volonté sincère ni la capacité de former le cabinet. Le gouvernement japonais partage désormais ce sentiment ; le malentendu à l'égard du Conseil des affaires militaires et de l'ensemble du Sud est […] dissipé. Désormais, tant que le plan prévu n'est pas modifié, on peut espérer l'aide finale. […] Il n'y a plus d'obstacle à l'action. […] — Shen. Le 12 (文, écrit deux fois).",
       '0415': "D'après le télégramme de Yamagata reçu par l'état-major, les armes de cette fois […] le Yunnan ; ses difficultés sont indescriptibles, et l'état-major lui-même est très déçu. Quand Shen était au Yunnan, une division avait déjà été promise ; de la moitié de cette livraison, il faut [lui] une partie. Si on ne la donne pas, pour les armes comme pour les fonds, le Yunnan est laissé de côté : que dira-t-on ? Nous vous prions instamment de répartir l'aide selon les quantités convenues, pour éviter les critiques. Qu'en dites-vous ? — Shen. Le 18.",
       '0416b': "On annonce une annulation ; l'attitude des Japonais a brusquement changé. Dites vite si c'est exact, afin que je sache quoi faire. — Shen. Le 19 (皓 ; le chiffré porte 4210 par une erreur e → i, corrigée grâce au télégramme parallèle 0416a).",
       '0455b': "Les appareils sont achetés pour le compte du Yunnan. Si l'état-major vous interroge par télégramme, veuillez répondre en approuvant. — Shen. Le 13.",
@@ -20,10 +20,10 @@ window.WENMI_I18N = {
       '0455a': "Télégramme du 11 reçu. L'affaire des armes et des avions n'a pas encore abouti ; il m'est difficile de rentrer tout de suite. Pour l'assemblée, faites suppléer par le vice-président selon le règlement ; n'y allez pas. — Shen. Le 13.",
       '0489a': "Je compte rentrer au sud le 10. Respectueusement. — Shen. Le 5.",
       '0494a': "La guerre en Europe continue : même les emprunts intérieurs [japonais] ne se placent pas à 95. S'il en va ainsi pour la Russie, à plus forte raison pour le Yunnan, sans garantie : ce devrait être un peu plus cher. Le reste peut se négocier, mais ce point est difficile ; je compte rentrer pour en discuter. Répondez immédiatement. — Shen. Le 11.",
-      '0496a': "Transmettre à l'assemblée provinciale et aux journaux : … Monseigneur Cai [Cai E] est mort de maladie à Fukuoka le 8, à deux heures du matin (?) ; ses mérites sont hauts comme une montagne. Il faut l'annoncer à tout le Yunnan, porter le deuil sincèrement, et préparer avec soin les suites et la commémoration. — Shen.",
-      '0413': "Afin de créer un corps d'aviation, acheter quatre avions militaires du dernier modèle (?) et engager l'aviateur Suzuki Shigeru comme instructeur ; fonds à réunir à Tokyo. Approuvez-vous ? Répondez vite. — Shen. Le 17.",
-      '0449': "Shen commande pour le Yunnan six avions militaires du dernier modèle et huit postes de télégraphie sans fil. Prière de télégraphier à Cen pour transmission à l'état-major, afin d'éviter … ; l'affaire du matériel est en négociation. J'en ai aussi été informé. Le 8.",
-      '0467': "Les médailles commémoratives et leurs écrins […] coûtent 9 500 yuans comme convenu ; prière de virer les fonds. Les détails vous seront adressés par lettre par M. Jia [?]. Le cabinet [étant] formé, l'affaire des armes a des chances d'aboutir et sera réglée sous peu ; je rentrerai aussitôt. — Shen. Le 10.",
+      '0496a': "Transmettre à l'assemblée provinciale et aux journaux : … Monseigneur Cai [Cai E] est mort de maladie à Fukuoka le 8, à deux heures du matin ; ses mérites sont hauts comme une montagne. Il faut l'annoncer à tout le Yunnan, porter le deuil sincèrement, et préparer avec soin les suites et la commémoration. — Shen. [Le 9 ?]",
+      '0413': "Afin de créer un corps d'aviation, acheter quatre avions militaires du dernier modèle et engager l'aviateur Suzuki Shigeru comme instructeur ; fonds à réunir à Tokyo. Approuvez-vous ? Répondez vite. — Shen. Le 17.",
+      '0449': "Shen commande pour le Yunnan six avions militaires du dernier modèle et huit postes de télégraphie sans fil. Prière de télégraphier à Cen pour transmission à l'état-major, afin d'éviter tout obstacle ; l'affaire des armes est en négociation. J'en ai aussi été informé. Le 8.",
+      '0467': "Les médailles commémoratives, chacune avec son écrin […], coûtent 9 500 yuans comme convenu ; prière de virer les fonds. Les détails vous seront adressés par lettre par M. Jia [?]. Le cabinet Terauchi vient d'être formé ; l'affaire des armes a des chances d'aboutir et sera réglée sous peu ; je rentrerai aussitôt. — Shen. Le 10.",
       '0473': "Emprunt : sur la base d'obligations […], montant d'un million, intérêt de 8 %, […] remboursement, sans garantie, émis à 94. Si l'emprunt se fait, chargez Shen de signer le contrat et de le remettre ; répondez vite. Les armes exigent l'accord du gouvernement central ; ce n'est qu'alors que les autorités accepteront de les livrer. Pour information. Répondez par télégramme à […] Tokyo, Akasaka [?], Aoyama Minami-chō […].",
       '0498': "(Du Yunnan à Zhao Shen.) Vos télégrammes du 30 et du 1er bien reçus. Pour l'emprunt, merci de le négocier avec soin […]. Il reste toutefois quelques points […] : 1. montant : deux à trois millions [de yuans] ; 2. intérêt annuel : 6 à 7 % ; 3. remboursement : sur au moins trois ans ; 4. escompte : au plus à 98. Sur ces quatre points, veuillez négocier encore. Le Yunnan a un besoin urgent d'argent et tient beaucoup à ce que l'affaire aboutisse. Si le montant, le remboursement et l'escompte peuvent être acceptés, l'intérêt annuel peut encore être un peu assoupli. Quel résultat ? Répondez."
     }
@@ -38,7 +38,7 @@ window.WENMI_I18N = {
     tr: {
       '0348': "Eleven thousand Type 30 rifles and military supplies have arrived at Moji. The price is treated as a temporary loan at ten per cent annual interest, without guarantee. Only Koike is in charge; your telegram is awaited before shipping to Guangdong: press quickly by telegram, and do not refuse under any circumstances, to avoid having to pay compensation. Furthermore, the private code sheet [?] has been transmitted. Reply directly to Seki Masao. — Shen. The 23rd.",
       '0386': "Your telegram has arrived. The weapons and aircraft […] can arrive on the […]. It is advisable to return to Shanghai […] will come to Japan again. Shen remains […]. — Shen. The 20th (?).",
-      '0406': "Duan [Qirui] has neither the sincere will nor the ability to form the cabinet. The Japanese government now shares this view; the misunderstanding regarding the Military Affairs Council and the South as a whole has […] been dispelled. From now on, as long as the agreed plan is not changed, the final assistance can be hoped for. […] There is no longer any obstacle to action. […] — Wen. The 12th.",
+      '0406': "Duan [Qirui] has neither the sincere will nor the ability to form the cabinet. The Japanese government now shares this view; the misunderstanding regarding the Military Affairs Council and the South as a whole has […] been dispelled. From now on, as long as the agreed plan is not changed, the final assistance can be hoped for. […] There is no longer any obstacle to action. […] — Shen. The 12th (文, written twice).",
       '0415': "According to the telegram from Yamagata received by the General Staff, the weapons this time […] Yunnan; its difficulties are beyond words, and the General Staff itself is very disappointed. When Shen was in Yunnan, a division had already been promised; of half of this shipment, a part is needed [for it]. If it is not given, for the weapons as for the funds, Yunnan is disregarded: what will people say? We urge you to distribute the aid in the agreed quantities, to avoid criticism. What do you say? — Shen. The 18th.",
       '0416b': "A cancellation is reported; the attitude of the Japanese has suddenly changed. Tell me quickly whether this is true, so that I know what to do. — Shen. The 19th (皓; the ciphertext has 4210 through an e → i slip, corrected thanks to the parallel telegram 0416a).",
       '0455b': "The apparatus is purchased on behalf of Yunnan. If the General Staff enquires by telegram, please reply approving it. — Shen. The 13th.",
@@ -47,10 +47,10 @@ window.WENMI_I18N = {
       '0455a': "Telegram of the 11th received. The matter of the weapons and aircraft has not yet been concluded; it is difficult for me to return right away. As for the assembly, have the vice-president stand in according to the rules; do not go. — Shen. The 13th.",
       '0489a': "I plan to return south on the 10th. Respectfully. — Shen. The 5th.",
       '0494a': "The war in Europe goes on: even [Japanese] domestic loans are not placed at 95. If it is so even for Russia, all the more for Yunnan, without collateral: it should be somewhat more expensive. The rest can be negotiated, but this point is difficult; I plan to return to discuss it. Reply at once. — Shen. The 11th.",
-      '0496a': "Forward to the provincial assembly and the newspapers: … Lord Cai [Cai E] died of illness at Fukuoka on the 8th, at two in the morning (?); his merits are as high as a mountain. It must be announced throughout Yunnan, with sincere mourning, and the arrangements and commemoration carefully prepared. — Shen.",
-      '0413': "In order to create an aviation corps, buy four military aircraft of the latest type (?) and engage the aviator Suzuki Shigeru as instructor; funds to be raised in Tokyo. Do you approve? Reply quickly. — Shen. The 17th.",
-      '0449': "Shen is ordering for Yunnan six military aircraft of the latest type and eight wireless sets. Please telegraph Cen to forward to the General Staff, to avoid …; the equipment is under negotiation. I have also been informed. The 8th.",
-      '0467': "The commemorative medals and their cases […] cost 9,500 yuan as agreed; please remit the funds. Details will follow by letter through Mr Jia [?]. With the cabinet formed, the weapons matter has a chance and will be settled shortly; I will return at once. — Shen. The 10th.",
+      '0496a': "Forward to the provincial assembly and the newspapers: … Lord Cai [Cai E] died of illness at Fukuoka on the 8th, at two in the morning; his merits are as high as a mountain. It must be announced throughout Yunnan, with sincere mourning, and the arrangements and commemoration carefully prepared. — Shen. [The 9th?]",
+      '0413': "In order to create an aviation corps, buy four military aircraft of the latest type and engage the aviator Suzuki Shigeru as instructor; funds to be raised in Tokyo. Do you approve? Reply quickly. — Shen. The 17th.",
+      '0449': "Shen is ordering for Yunnan six military aircraft of the latest type and eight wireless sets. Please telegraph Cen to forward to the General Staff, to avoid any obstacle; the weapons matter is under negotiation. I have also been informed. The 8th.",
+      '0467': "The commemorative medals, each with its case […], cost 9,500 yuan as agreed; please remit the funds. Details will follow by letter through Mr Jia [?]. The Terauchi cabinet has just been formed; the weapons matter has a chance and will be settled shortly; I will return at once. — Shen. The 10th.",
       '0473': "Loan: on the basis of bonds […], amount one million, interest 8 per cent, […] repayment, without guarantee, issued at 94. If the loan goes ahead, instruct Shen to sign the contract and hand it over; reply quickly. The weapons require the approval of the central government; only then will the authorities agree to deliver them. For information. Reply by telegram to […] Tokyo, Akasaka [?], Aoyama Minami-chō […].",
       '0498': "(From Yunnan to Zhao Shen.) Your telegrams of the 30th and the 1st received. Thank you for negotiating the loan with care […]. A few points remain […]: 1. amount: two to three million [yuan]; 2. annual interest: 6 to 7 per cent; 3. repayment: over at least three years; 4. discount: at most to 98. On these four points, please negotiate further. Yunnan urgently needs money and is very keen for the matter to succeed. If the amount, repayment and discount can be accepted, the annual interest can be eased a little further. What is the outcome? Reply."
     }
@@ -65,7 +65,7 @@ window.WENMI_I18N = {
     tr: {
       '0348': "大意：三十年式步枪一万一千支及军用品已运抵门司，价款作为暂借，年息一成，无担保。唯小池主持，候您来电方运往广东，乞速电催，万勿谢绝，以免负赔偿之责。再者，私用密码单（？）已经送达。请径复关正雄。伸令。二十三日（漾）。",
       '0386': '大意：来电已到。军器、飞机……某日可到……宜归沪……仍来东（日本）。伸留……伸令。二十日（？）。',
-      '0406': "大意：段（祺瑞）无组织内阁之诚意及能力。日本政府现已同感，对于军务院及南方全局之误解已（……）消除。今后以不改预定计划为限，可望终局援助。……行动已无窒碍。……文。十二日。",
+      '0406': "大意：段（祺瑞）无组织内阁之诚意及能力。日本政府现已同感，对于军务院及南方全局之误解已（……）消除。今后以不改预定计划为限，可望终局援助。……行动已无窒碍。……伸。十二日（文，重出）。",
       '0415': "大意：据参谋部接山县电，此次军械……滇，困难莫名，参谋部亦颇失望。伸在滇时已允一师，今次之半，须其一部。如不给，是械款两端均置滇于不顾，如人言何？务请按数分助，免滋物议。如何？盼复。伸。十八日（巧）。",
       '0416b': '大意：报传取消，日人态度骤变，确否速示，以便决定行止。伸。十九日（皓；密文因 e → i 笔误作 4210，据平行电报 0416a 改正）。',
       '0455b': '大意：摄机系代滇购买，如参谋部来电询问，请回电赞成。伸。十三日。',
@@ -74,10 +74,10 @@ window.WENMI_I18N = {
       '0455a': "大意：十一日（真）来电已悉。武器及飞机事尚无结果，难以即归。议会事请照章以副议长代理，勿往。伸。十三日（元）。",
       '0489a': "大意：拟十日南归，谨闻。伸。五日（歌）。",
       '0494a': "大意：欧战之中，即（日本）内债亦无出九五扣者；俄国尚且如此，何况滇无抵押，应稍贵。余可商，此事难办，拟归面商。盼立复。伸。十一日（尤）。",
-      '0496a': "大意：转省议会及各报：……蔡公（蔡锷）于八日午前二时（？）病故福冈，公功德如山，应公布全滇，竭诚哀悼，并妥筹善后及纪念。伸。",
-      '0413': "大意：为建设航空队，购最新式（？）军用飞机四架，并聘飞行家铃木茂为教官，款由东京筹措。赞成与否，请速示。伸。十七日（篠）。",
-      '0449': "大意：伸为滇订购最新军用飞机六架、无线电机八台，请电岑转参谋部，免生……；器械交涉中。并闻。八日（齐）。",
-      '0467': "大意：纪念章及各盒……须九千五百元，如约请汇款，详情由嘉君（？）函呈。现内阁成立，武器或可有望，不日确定，即归。伸。十日（灰）。",
+      '0496a': "大意：转省议会及各报：……蔡公（蔡锷）于八日午前二时病故福冈，公功德如山，应公布全滇，竭诚哀悼，并妥筹善后及纪念。伸。（九日？青）",
+      '0413': "大意：为建设航空队，购最新式军用飞行机四架，并聘飞行家铃木茂为教官，款由东京筹措。赞成与否，请速示。伸。十七日（篠）。",
+      '0449': "大意：伸为滇订购最新军用飞机六架、无线电机八台，请电岑转参谋部，免生障碍；武器正在交涉中。并闻。八日（齐）。",
+      '0467': "大意：纪念章及各个……盒……须九千五百元，如约请汇款，详情由嘉君（？）函呈。现寺内内阁成立，武器或可有望，不日确定，即归。伸。十日（灰）。",
       '0473': "大意：借款以……债为标准，额百万，息八厘，……还，无担保，九四折扣。如借，请饬伸签约即交，速示。军械须中央认可，当局始允交给。并闻。回电请寄……东京赤坂（？）青山南町……。",
       '0498': "（云南致赵伸）大意：卅、东两电均悉。借款事……妥为接洽，甚感。但尚须……数事：一、款额拟……二三百万元；二、年息拟六厘至七厘；三、摊还之期至少以三年为限；四、折扣之数最大以九八为率。以上四项，请再向商榷。滇因需财甚急，颇望此事有成。如借额、摊还、折扣三事可以概允，则年息尚可稍宽。结果如何，盼复。"
     }
@@ -92,7 +92,7 @@ window.WENMI_I18N = {
     tr: {
       '0348': "三十式槍萬一千並軍用品已到門司，價作暫借，年息一割，無擔保。惟小池主，候尊電方運粤，乞速電催，萬勿謝絶，免負賠償。再，密碼私單（？）已通。請逕復關正雄。伸令。漾（二十三日）。",
       '0386': '大意：來電已到。軍器、飛機……某日可到……宜歸滬……仍來東（日本）。伸留……伸令。二十日（？）。',
-      '0406': "段無組織內閣之誠意及能力。日政府現已同感，對于軍務院及南方全般之誤解，已（……）消除。今後以不改豫定計畫為限，可望終局援助。……無復礙難行動。……文。文（十二日）。",
+      '0406': "段無組織內閣之誠意及能力。日政府現已同感，對于軍務院及南方全般之誤解，已（……）消除。今後以不改豫定計畫為限，可望終局援助。……無復礙難行動。……盼復。伸。文。文（十二日，重出）。",
       '0415': "據參部接山縣電，謂此次所器全未……滇，困難莫名，參部亦頗失望。伸在滇時已允一師，今次之半，須其一部。如不（……）給，是械款兩端均置滇（於）不顧，如人言何？務祈如數分助，免滋物議。如何？盼復。伸。巧（十八日）。",
       '0416b': '大意：報傳取消，日人態度遽變，確否速示，俾便行止。伸。十九日（皓；密文因 e → i 筆誤作 4210，據平行電報 0416a 改正）。',
       '0455b': '大意：攝機係代滇購買，如參謀部來電詢問，請回電贊成。伸。十三日。',
@@ -101,10 +101,10 @@ window.WENMI_I18N = {
       '0455a': "真電悉。武器及飛機事尚無結果，礙難即歸。議會事祈照章以副議長代，勿往。伸。元（十三日）。",
       '0489a': "擬十號南歸，謹聞。伸。歌（五日）。",
       '0494a': "歐戰中，即內債亦無出九五扣者，俄且然，何況滇無抵押，應稍貴。餘可商，此難辦，擬歸商。盼立復。伸。尤（十一日）。",
-      '0496a': "轉省議會及各報：……蔡公（蔡鍔）於八號午前二時（？）病故福岡，公功德如山，應公布全滇，竭誠哀悼，並妥籌善後及記念。伸。",
-      '0413': "集以建設航空隊之目的，購最‹昃›（新？）式軍用飛機四臺，並聘飛行家鈴木茂為教官，款由東籌。贊否速示。伸。篠（十七日）。",
-      '0449': "伸為滇訂最新軍用飛機六、無線電機八，祈電岑轉參謀部，免生……；器交涉中。並聞。齊（八日）。",
-      '0467': "記念章及各……盒……須九千五百元，如訂，祈匯款。詳由嘉君（？）函呈。刻……內閣成立，武器或可有望，不日確定，即歸。伸。灰（十日）。",
+      '0496a': "轉省議會及各報：……蔡公（蔡鍔）於八號午前二時病故福岡，公功德如山，應公布全滇，竭誠哀悼，並妥籌善後及記念。伸。青（九日？）。",
+      '0413': "擬以建設航空隊之目的，購最新式軍用飛行機四臺，並聘飛行家鈴木茂為教官，款由東籌。贊否速示。伸。篠（十七日）。",
+      '0449': "伸為滇訂最新軍用飛機六、無線電機八，祈電岑轉參謀部，免生障礙。武器交涉中。並聞。齊（八日）。",
+      '0467': "記念章及各個……盒……須九千五百元，如訂，祈匯款。詳由嘉君（？）函呈。刻寺內內閣成立，武器或可有望，不日確定，即歸。伸。灰（十日）。",
       '0473': "借款以……債為標準，額百萬，息八釐，……還，無擔保，九四扣。如借，祈飭伸簽約，即交。速示。械須中央認可，當局始允……給。並聞。回電祈……京赤坂（？）青山南町……。",
       '0498': "（雲南致趙伸）卅、東兩電均悉。借款事……妥為接洽，甚感。但尚須……數事：一、款額擬……二三百萬元；二、年息擬六釐至七釐；三、攤（還）之期，至少以三年為限；四、折扣之數，最大以九八為率。以上四（項），請再向商榷。滇因需財（甚）急，頗（望）此事之有成。如借額、攤還、折扣三事可以概允，則年息尚可稍寬也。結果如何？盼復。"
     }
@@ -119,7 +119,7 @@ window.WENMI_I18N = {
     tr: {
       '0348': "三十年式歩兵銃一万一千挺および軍用品が門司に到着した。代価は一時借款扱いで年利一割、無担保。小池のみが担当し、貴電を待って広東へ発送する。至急電報で催促されたい。決して断らぬように。賠償を負わぬためである。なお、私用の密碼表（？）はすでに届いている。返電は直接関正雄へ。伸令。二十三日。",
       '0386': '来電到着。武器・飛行機は……某日到着可能……上海へ戻るべし……再び来日する。伸は残留……伸令。二十日（？）。',
-      '0406': "段（祺瑞）には内閣を組織する誠意も能力もない。日本政府もいまや同感で、軍務院および南方全体に対する誤解は（……）解けた。今後は既定計画を変えない限り、最終的な援助が望める。……行動にもはや支障はない。……文。十二日。",
+      '0406': "段（祺瑞）には内閣を組織する誠意も能力もない。日本政府もいまや同感で、軍務院および南方全体に対する誤解は（……）解けた。今後は既定計画を変えない限り、最終的な援助が望める。……行動にもはや支障はない。……伸。十二日（「文」を二度記す）。",
       '0415': "参謀本部が受けた山県の電報によれば、今回の兵器は……雲南……。困難は言いようもなく、参謀本部もはなはだ失望している。伸が雲南にいた時、すでに一個師団分を約束していた。今回の半分のうち、その一部が必要である。もし与えなければ、兵器も資金も雲南を顧みないことになり、世間は何と言うか。約束の数どおりに援助を分配されたい。物議を避けるためである。いかが。返電を待つ。伸。十八日。",
       '0416b': '取り消しとの報あり。日本側の態度が急変した。真偽を至急知らされたい。進退を決めるためである。伸。十九日（皓。暗号文は e → i の誤記で 4210 となっているが、並行電報 0416a により訂正）。',
       '0455b': '機械は雲南のために代理購入したもの。参謀本部から電報で照会があれば、賛成と返電されたい。伸。十三日。',
@@ -128,10 +128,10 @@ window.WENMI_I18N = {
       '0455a': "十一日の来電了承。武器と飛行機の件はまだまとまらず、すぐには帰れない。議会の件は規程どおり副議長に代理させ、出向かぬように。伸。十三日。",
       '0489a': "十日に南へ帰る予定。謹んでお知らせする。伸。五日。",
       '0494a': "欧州大戦のさなか、［日本の］国内債ですら九五では出ない。ロシアでさえそうなのだから、無担保の雲南はなおさら、やや高くなるはずである。ほかは交渉できるが、この点は難しい。帰って相談するつもりである。至急返電を。伸。十一日。",
-      '0496a': "省議会と各新聞へ転送：……蔡公（蔡鍔）は八日午前二時（？）、福岡にて病没。その功徳は山のごとし。雲南全省に公布し、誠を尽くして哀悼し、あわせて善後策と記念を周到に準備すべし。伸。",
-      '0413': "航空隊創設のため、最新式（？）の軍用飛行機四機を購入し、飛行家鈴木茂を教官に招く。資金は東京で調達。賛否を至急示されたい。伸。十七日。",
-      '0449': "伸は雲南のため最新の軍用飛行機六機と無線電信機八台を発注。岑に電報し参謀部へ転送させ、……を避けられたい。機材は交渉中。あわせて報告を受けた。八日。",
-      '0467': "記念章とその箱……は約定どおり九千五百元、送金されたい。詳細は嘉君（？）から書面で届ける。内閣が成立したので、兵器の件は見込みがあり、近日確定する。すぐに帰る。伸。十日。",
+      '0496a': "省議会と各新聞へ転送：……蔡公（蔡鍔）は八日午前二時、福岡にて病没。その功徳は山のごとし。雲南全省に公布し、誠を尽くして哀悼し、あわせて善後策と記念を周到に準備すべし。伸。（九日？）",
+      '0413': "航空隊創設のため、最新式の軍用飛行機四機を購入し、飛行家鈴木茂を教官に招く。資金は東京で調達。賛否を至急示されたい。伸。十七日。",
+      '0449': "伸は雲南のため最新の軍用飛行機六機と無線電信機八台を発注。岑に電報し参謀部へ転送させ、支障が生じないようにされたい。兵器は交渉中。あわせて報告を受けた。八日。",
+      '0467': "記念章（各個の箱付き……）は約定どおり九千五百元、送金されたい。詳細は嘉君（？）から書面で届ける。寺内内閣が成立したので、兵器の件は見込みがあり、近日確定する。すぐに帰る。伸。十日。",
       '0473': "借款：……債を基準とし、額は百万、利息八厘（8%）、……返済、無担保、九四で発行。借りるなら伸に契約署名と引き渡しを命じ、至急返電されたい。兵器は中央政府の認可を要し、そのうえで当局がはじめて引き渡しを認める。あわせて報告。返電は……東京赤坂（？）青山南町……へ。",
       '0498': "（雲南より趙伸へ）三十日と一日の電報、いずれも了承。借款の件、ていねいに交渉していただき感謝する。ただし、なお……数点がある。一、借款額は二三百万元。二、年利は六厘〜七厘（6〜7%）。三、返済期間は少なくとも三年。四、割引は最大で九八。以上四点について、さらに交渉されたい。雲南は資金がきわめて急を要し、この件の成立を強く望んでいる。借入額・返済・割引の三点が認められれば、年利はなおやや緩めてよい。結果はいかに。返電を待つ。"
     }

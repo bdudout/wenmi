@@ -10,7 +10,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="../zh-hans/method.html">
 <link rel="alternate" hreflang="zh-Hant" href="../zh-hant/method.html">
 <link rel="alternate" hreflang="ja" href="../ja/method.html">
-<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/style.css?v=68da0ad296">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%239b2c1f'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f7f3ea' font-family='serif'%3E%E6%96%87%3C/text%3E%3C/svg%3E">
 </head>
 <body>
@@ -185,7 +185,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
       <tr><td>Archives clearly above the nulls</td><td>Yes (829 vs ≈ 335; 1,144 after re-reading)</td></tr>
       <tr><td>Optimum reproducible from different starts</td><td>Yes (3 seeds, same optimum)</td></tr>
       <tr><td>Held-out message readable without tuning (≥ +2.5 / character)</td><td>Yes: +3.99 under G0</td></tr>
-      <tr><td>Continuous Chinese text, consistent with the dates on the forms</td><td>Yes for the most part; 19 doubtful characters out of 351</td></tr>
+      <tr><td>Continuous Chinese text, consistent with the dates on the forms</td><td>Yes for the most part; 13 doubtful characters out of 351 (plus 6 rare but confirmed)</td></tr>
       <tr><td>Independent external cross-check</td><td>Yes: the sender <span lang="zh-Hant">伸</span> = <span lang="zh-Hant">趙伸</span>, identified <em>after</em> decoding, in a 2026 study<sup class="fn"><a href="sources.html#s7">[7]</a></sup> describing the same arms contracts, then confirmed by the forms (Zhao Shen's name and address)</td></tr>
       <tr><td>Second channel: held-out message readable under a closed key</td><td>Yes: 0496a at +4.62 under Y0, announcing Cai E's death at Fukuoka on the 8th</td></tr>
       <tr><td>Second channel: dated endings outside the anchors match the form</td><td>Yes: 4 out of 4</td></tr>
@@ -236,9 +236,9 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
 <footer class="site-footer"><div class="inner">
   © 2026 Brice Dudout, with Claude (Anthropic). Text and code: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Telegram images: JACAR (Japan Center for Asian Historical Records), Diplomatic Archives of the Ministry of Foreign Affairs of Japan. Prior work: Daniel Bourdeau (CC BY 4.0). <a href="sources.html">All sources</a>.
 </div></footer>
-<script src="../assets/js/messages.js"></script>
-<script src="../assets/js/messages-y0.js"></script>
-<script src="../assets/js/translations.js"></script>
-<script src="../assets/js/site.js"></script>
+<script src="../assets/js/messages.js?v=5bde006bd2"></script>
+<script src="../assets/js/messages-y0.js?v=b72832f59c"></script>
+<script src="../assets/js/translations.js?v=d45b11d452"></script>
+<script src="../assets/js/site.js?v=607776e5df"></script>
 </body>
 </html>
