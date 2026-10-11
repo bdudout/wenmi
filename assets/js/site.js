@@ -241,4 +241,59 @@
     box.innerHTML = h;
   }
   document.querySelectorAll('#corpus').forEach(mountCorpus);
+
+  // ---------- sommaire flottant (pages longues) : colonne fixe sur grand écran, bouton + panneau sinon ----------
+  function mountFloatingToc() {
+    var main = document.querySelector('main');
+    if (!main || document.querySelector('.hero')) return;           // pas sur l'accueil
+    var heads = Array.prototype.slice.call(main.querySelectorAll('h2'));
+    if (heads.length < 3) return;
+    var T = { fr: 'Sommaire', en: 'Contents', 'zh-Hans': '目录', 'zh-Hant': '目錄', ja: '目次' };
+    var title = T[root.lang] || T.fr, n = 0;
+    var items = heads.map(function (h) {
+      var target = h.id ? h : (h.parentElement && h.parentElement.id && h.parentElement.tagName === 'SECTION' ? h.parentElement : h);
+      if (!target.id) target.id = 'sec-' + (++n);
+      var label = h.cloneNode(true); label.querySelectorAll('small, sup, .star').forEach(function (x) { x.remove(); });
+      var txt = label.textContent.replace(/\s+/g, ' ').trim(), small = h.querySelector('small');
+      return { id: target.id, el: h, txt: txt, sub: small ? small.textContent.trim() : '' };
+    });
+    var wrap = document.createElement('div'); wrap.className = 'ftoc';
+    var h = '<button class="ftoc-btn" type="button" aria-expanded="false" aria-controls="ftoc-panel">☰ ' + esc(title) + '</button>' +
+      '<nav class="ftoc-panel" id="ftoc-panel" aria-label="' + esc(title) + '"><p class="ftoc-title">' + esc(title) + '</p><ul>';
+    items.forEach(function (it) {
+      h += '<li><a href="#' + it.id + '" data-id="' + it.id + '">' + esc(it.txt) + (it.sub ? ' <small>' + esc(it.sub) + '</small>' : '') + '</a></li>';
+    });
+    wrap.innerHTML = h + '</ul></nav>';
+    document.body.appendChild(wrap);
+    var btn = wrap.querySelector('.ftoc-btn'), links = wrap.querySelectorAll('a');
+    function setOpen(o) { wrap.classList.toggle('open', o); btn.setAttribute('aria-expanded', o ? 'true' : 'false'); }
+    btn.addEventListener('click', function () { setOpen(!wrap.classList.contains('open')); });
+    wrap.addEventListener('click', function (ev) { if (ev.target.closest('a')) setOpen(false); });
+    document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') setOpen(false); });
+    document.addEventListener('click', function (ev) { if (!wrap.contains(ev.target)) setOpen(false); });
+    // section en cours
+    var current = null;
+    function spy() {
+      var y = window.scrollY + 120, cur = items[0];
+      items.forEach(function (it) { if (it.el.getBoundingClientRect().top + window.scrollY <= y) cur = it; });
+      if (cur !== current) {
+        current = cur;
+        links.forEach(function (a) { a.classList.toggle('on', a.dataset.id === cur.id); });
+        var on = wrap.querySelector('a.on'), panel = wrap.querySelector('.ftoc-panel');
+        if (on && panel.scrollHeight > panel.clientHeight) {
+          var top = on.offsetTop - panel.clientHeight / 2;
+          panel.scrollTop = Math.max(0, top);
+        }
+      }
+    }
+    window.addEventListener('scroll', spy, { passive: true }); spy();
+    // les figures larges passent sous la colonne : on l'efface le temps qu'elles sont à l'écran
+    var wide = Array.prototype.slice.call(document.querySelectorAll('figure.wide'));
+    function hideOverWide() {
+      var over = wide.some(function (f) { var r = f.getBoundingClientRect(); return r.bottom > 0 && r.top < window.innerHeight; });
+      document.body.classList.toggle('ftoc-hide', over);
+    }
+    if (wide.length) { window.addEventListener('scroll', hideOverWide, { passive: true }); window.addEventListener('resize', hideOverWide); hideOverWide(); }
+  }
+  mountFloatingToc();
 })();

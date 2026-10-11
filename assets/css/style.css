@@ -348,3 +348,26 @@ table.rel td:last-child { min-width: 14rem; }
 h1 a.star { color: var(--accent); text-decoration: none; font-size: .7em; vertical-align: super; margin-left: .1em; }
 .hero-note { font-size: .9rem; color: var(--muted); border-left: 3px solid var(--accent); padding: .2rem 0 .2rem .7rem; margin: .8rem 0; }
 .hero-note .star { color: var(--accent); font-weight: bold; }
+
+/* ---------- sommaire flottant ---------- */
+.ftoc { font-size: .86rem; line-height: 1.35; }
+.ftoc-btn { position: fixed; right: 1rem; bottom: 1rem; z-index: 12; font: inherit; font-size: .9rem; color: var(--ink);
+  background: var(--paper); border: 1px solid var(--rule); border-radius: 999px; padding: .5rem 1rem; box-shadow: var(--shadow); cursor: pointer; }
+.ftoc-btn:hover, .ftoc.open .ftoc-btn { border-color: var(--accent); color: var(--accent); }
+.ftoc-panel { display: none; position: fixed; right: 1rem; bottom: 4.2rem; z-index: 12; width: min(22rem, calc(100vw - 2rem)); max-height: 65vh;
+  overflow-y: auto; background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; box-shadow: var(--shadow); padding: .7rem .5rem; }
+.ftoc.open .ftoc-panel { display: block; }
+.ftoc-title { margin: 0 .5rem .4rem; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-2); }
+.ftoc ul { list-style: none; margin: 0; padding: 0; }
+.ftoc a { display: block; padding: .28rem .5rem; color: var(--ink-2); text-decoration: none; border-left: 2px solid transparent; }
+.ftoc a small { color: var(--muted); }
+.ftoc a:hover { color: var(--accent); }
+.ftoc a.on { color: var(--accent); border-left-color: var(--accent); background: var(--paper-2); }
+@media (min-width: 84rem) {
+  .ftoc-btn { display: none; }
+  .ftoc-panel { display: block; top: 5.5rem; bottom: auto; right: auto; left: calc(50% + var(--measure) / 2 + 2.5rem);
+    width: min(16rem, calc(50% - var(--measure) / 2 - 4rem)); max-height: calc(100vh - 7.5rem); background: transparent;
+    border: 0; border-left: 1px solid var(--rule); border-radius: 0; box-shadow: none; padding: 0 0 0 .4rem; transition: opacity .2s; }
+  body.ftoc-hide .ftoc-panel { opacity: 0; pointer-events: none; }
+}
+@media print { .ftoc { display: none; } }
