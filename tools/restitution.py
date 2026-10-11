@@ -46,7 +46,7 @@ R = {
 
 # État de chaque proposition à l'image (journal de l'enquête) : 'confirmée' = la lettre proposée a été lue à l'image ;
 # 'maintenue' = la lettre décodée a été relue (l'erreur supposée serait d'origine : Morse ou copiste en 1916) ;
-# 'attente' = lecture aveugle en cours ; 'témoin' = 0406, jamais relu de façon ciblée ; absent = non relu.
+# 'divergente' = deux relectures en désaccord ; 'attente' = lecture aveugle en cours ; 'témoin' = 0406, jamais relu de façon ciblée ; absent = non relu.
 # Lots 13 et 17 ; lot R1 (11/10/2026, 35 mots dont 5 témoins, lecture aveugle : cadre seul, rien de proposé).
 # Les lettres lues au lot R1 sont intégrées aux corpus de référence (second canal v6, Cen v9) : ce sont des lectures, plus des propositions.
 CONFIRMED = [('0415', 48)]
@@ -55,6 +55,9 @@ KEPT = [('0473', 9), ('0498', 27), ('0498', 32), ('0498', 61), ('0498', 72), ('0
         ('0386', 21), ('0413', 12), ('0449', 25), ('0467', 23), ('0467', 28), ('0467', 38), ('0473', 22), ('0473', 43), ('0494a', 5),
         ('0494a', 6), ('0496a', 44), ('0498', 0), ('0498', 16), ('0498', 34), ('0498', 56), ('0498', 58), ('0498', 64), ('0498', 94)]
 IMAGE = {**{k: 'maintenue' for k in KEPT}, **{k: 'confirmée' for k in CONFIRMED}}
+# Lectures contradictoires : 0473 i9 (額‹珪›萬 → 百) : lettre décodée au lot 17 (lettre ciblée), lettre proposée au lot R2
+# (mot entier, aveugle : « xutumolabo ») ; mais le même lot R2 lit aussi a pour un o certain (0386 飛) : non tranché.
+IMAGE[('0473', 9)] = 'divergente'
 # 0473 i51 (相 → 直, laru → lary) : lecture aveugle de confiance faible, non visée par le lot ; laissée sans état.
 PENDING = set()
 def image_state(mid, i):

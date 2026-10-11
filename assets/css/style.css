@@ -328,6 +328,7 @@ figure.media video { display: block; width: 100%; height: auto; border-radius: 6
 .img-confirmée { border-color: var(--accent-2); color: var(--accent-2); }
 .img-maintenue { border-color: var(--doubt); color: var(--doubt); }
 .img-attente, .img-témoin { color: var(--muted); }
+.img-divergente { border-style: dashed; color: var(--muted); }
 
 /* fiche de télégramme : formulaire JACAR + mini-carte */
 .tg-fiche { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); gap: 1rem; align-items: start; margin: .8rem 0 1rem; }
