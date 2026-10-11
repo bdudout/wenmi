@@ -19,6 +19,8 @@ modèle de langue, de quoi rejouer le déchiffrement.
 Ce travail prolonge celui de **Daniel Bourdeau**,
 [« Sun Yat-sen's circle on the wire, 1916–17 »](https://dbourdeau.github.io/cyphersolver/sunintercepts.html)
 ([dbourdeau/cyphersolver](https://github.com/dbourdeau/cyphersolver), CC BY 4.0).
+Il s'appuie aussi sur les travaux de **S. Tomokiyo** sur le site [Cryptiana](http://cryptiana.web.fc2.com/)
+(histoire de la cryptographie chinoise et japonaise, tables de « condensateur » de Yamada Junzaburō).
 
 ## Structure
 

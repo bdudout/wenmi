@@ -49,7 +49,7 @@
     <strong>Contents</strong>
     <ol>
       <li><a href="#tldr">In short: the system</a></li>
-      <li><a href="#depart">Starting point: Daniel Bourdeau's work</a></li>
+      <li><a href="#depart">Starting point: published work</a></li>
       <li><a href="#regles">Ground rules</a></li>
       <li><a href="#transcription">Step 1 — Reading what the clerk wrote</a></li>
       <li><a href="#echecs">Step 2 — What did not work (and why)</a></li>
@@ -114,10 +114,10 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
     <div class="dec-grid"></div>
   </div>
 
-  <h2 id="depart">Starting point: Daniel Bourdeau's work</h2>
+  <h2 id="depart">Starting point: published work</h2>
   <div class="credit">
-    <p>Everything starts from "<a href="https://dbourdeau.github.io/cyphersolver/sunintercepts.html">Sun Yat-sen's circle on the wire, 1916–17</a>" by <strong>Daniel Bourdeau</strong><sup class="fn"><a href="sources.html#s1">[1]</a></sup> and his repository <a href="https://github.com/dbourdeau/cyphersolver">dbourdeau/cyphersolver</a><sup class="fn"><a href="sources.html#s2">[2]</a></sup>. Starting from Yamada Junzaburō's two "condenser" tables published by S. Tomokiyo<sup class="fn"><a href="sources.html#s8">[8]</a></sup>, he recognised a <strong>family</strong> of keys with 20 consonants and 5 vowels (100 syllables, one per number from 00 to 99), generated the whole family (57,600 tables, including fill orders, origins and the ±111 additive), and scored every table on every telegram with a Chinese character model. A key was accepted only at z ≥ 6 on a long telegram <em>and</em> if it decoded other telegrams it had not been chosen on; date rhymes provided an independent check. The result: some sixty telegrams read, in whole or in part.</p>
-    <p>For <span lang="zh-Hant">文密</span> he reports ten-letter words, a consonant <i>w</i>, a vowel <i>y</i>, and a negative result: a six-vowel version of his family (about 200,000 tables) does not exceed z = 4.1. He concludes that the system is probably separate and built on a table that does not follow a rule. We took over his identification of the documents, his validation method (holding messages out, checking rhymes) and the idea that half a telegraph code becomes a syllable. What follows shows that, for the Tokyo stream, the table <em>does</em> follow a rule, but one outside his family: reversed alphabet, two consonants per tens digit, serpentine vowels.</p>
+    <p>Starting point: the article “<a href="https://dbourdeau.github.io/cyphersolver/sunintercepts.html">Sun Yat-sen's circle on the wire, 1916–17</a>”<sup class="fn"><a href="sources.html#s1">[1]</a></sup> and the repository <a href="https://github.com/dbourdeau/cyphersolver">dbourdeau/cyphersolver</a><sup class="fn"><a href="sources.html#s2">[2]</a></sup>, which publish transcriptions of the forms and the decipherment of some sixty telegrams of Sun Yat-sen's circle. Those telegrams use “condenser” tables in the line of Yamada Junzaburō's tables, published by S. Tomokiyo on Cryptiana<sup class="fn"><a href="sources.html#s8">[8]</a></sup>: 20 consonants and 5 vowels, i.e. 100 syllables, one per number from 00 to 99.</p>
+    <p><span lang="zh-Hant">文密</span> stands apart: ten-letter words, <i>w</i> as a consonant, <i>y</i> as a vowel; it is listed there among the open problems<sup class="fn"><a href="sources.html#s1">[1]</a></sup>. We started from the identified documents and the transcriptions, and from the idea that half a telegraph code becomes one syllable. What follows shows that, for the Tokyo stream, the table does follow a simple rule: reversed alphabet, two consonants per ten, serpentine vowels.</p>
   </div>
 
   <h2 id="regles">Ground rules</h2>
@@ -222,7 +222,7 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
   <p>This channel also corrected the first: the Zhaoqing telegram of 19 July ended with an impossible code, while its Yunnan twin, sent the same day, ends properly with <span lang="zh-Hant">伸皓</span> (the 19th). Re-read on the image, the faulty letter is an <i>i</i> instead of an <i>e</i>: in Morse, e is · and i is ··.</p>
 
   <h2 id="ouvert">The open problem: the 1917 messages</h2>
-  <p>Of the three images where Daniel Bourdeau had spotted <span lang="zh-Hant">文密</span>, one is now read: 0416 (July 1916), on both channels. The other two, 0509 and 0511 (June 1917, Sun Yat-sen ↔ Dai Jitao), resist. Their alphabet is different again (<i>c</i> and <i>j</i> present, <i>y</i> both consonant and vowel, a few atypical groups). Neither G0 nor Y0 reads them, and a search through a family of 193,632 grids of the same type (E30) shows nothing beyond chance. <mark class="unc">The machine readings of these forms may be to blame</mark>; a blind human reading is under way.</p>
+  <p>Of the three known images bearing <span lang="zh-Hant">文密</span>, one is now read: 0416 (July 1916), on both channels. The other two, 0509 and 0511 (June 1917, Sun Yat-sen ↔ Dai Jitao), resist. Their alphabet is different again (<i>c</i> and <i>j</i> present, <i>y</i> both consonant and vowel, a few atypical groups). Neither G0 nor Y0 reads them, and a search through a family of 193,632 grids of the same type (E30) shows nothing beyond chance. <mark class="unc">The machine readings of these forms may be to blame</mark>; a blind human reading is under way.</p>
 
   <h2 id="outils">Tools</h2>
   <ul>
@@ -234,12 +234,12 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
   </ul>
   <p>The solver, both keys, the reading data and the language model are published in the <a href="https://github.com/bdudout/wenmi/tree/main/solver"><code>solver/</code> folder of the GitHub repository</a>, with everything needed to re-run the search; the full investigation log will follow.</p>
   <hr>
-  <p class="byline">Sources: see the <a href="sources.html">sources page</a>. Thanks to Daniel Bourdeau, whose article and code paved the way.</p>
+  <p class="byline">Sources: see the <a href="sources.html">sources page</a>. Thanks to Daniel Bourdeau, whose article and code paved the way, and to S. Tomokiyo (Cryptiana).</p>
 </article>
 </main>
 
 <footer class="site-footer"><div class="inner">
-  © 2026 Brice Dudout, with Claude (Anthropic). Text and code: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Telegram images: JACAR (Japan Center for Asian Historical Records), Diplomatic Archives of the Ministry of Foreign Affairs of Japan. Prior work: Daniel Bourdeau (CC BY 4.0). <a href="sources.html">All sources</a>.
+  © 2026 Brice Dudout, with Claude (Anthropic). Text and code: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Telegram images: JACAR (Japan Center for Asian Historical Records), Diplomatic Archives of the Ministry of Foreign Affairs of Japan. Prior work: Daniel Bourdeau (CC BY 4.0); S. Tomokiyo (Cryptiana). <a href="sources.html">All sources</a>.
 </div></footer>
 <script src="../assets/js/messages.js?v=2b222c7bcb"></script>
 <script src="../assets/js/messages-y0.js?v=6a55d942c3"></script>

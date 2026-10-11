@@ -13,7 +13,7 @@
     <strong>Sommaire</strong>
     <ol>
       <li><a href="#tldr">En bref : le système</a></li>
-      <li><a href="#depart">Point de départ : le travail de Daniel Bourdeau</a></li>
+      <li><a href="#depart">Point de départ : les travaux publiés</a></li>
       <li><a href="#regles">Les règles du jeu</a></li>
       <li><a href="#transcription">Étape 1 — Lire ce que l'employé a écrit</a></li>
       <li><a href="#echecs">Étape 2 — Ce qui n'a pas marché (et pourquoi)</a></li>
@@ -74,10 +74,10 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
     <div class="dec-grid"></div>
   </div>
 
-  <h2 id="depart">Point de départ : le travail de Daniel Bourdeau</h2>
+  <h2 id="depart">Point de départ : les travaux publiés</h2>
   <div class="credit">
-    <p>Tout part de « <a href="https://dbourdeau.github.io/cyphersolver/sunintercepts.html">Sun Yat-sen's circle on the wire, 1916–17</a> » de <strong>Daniel Bourdeau</strong><sup class="fn"><a href="sources.html#s1">[1]</a></sup> et de son dépôt <a href="https://github.com/dbourdeau/cyphersolver">dbourdeau/cyphersolver</a><sup class="fn"><a href="sources.html#s2">[2]</a></sup>. Partant des deux tables de « condensateur » de Yamada Junzaburō publiées par S. Tomokiyo<sup class="fn"><a href="sources.html#s8">[8]</a></sup>, il a reconnu une <strong>famille</strong> de clés à 20 consonnes et 5 voyelles (100 syllabes, une par nombre de 00 à 99), généré toute la famille (57 600 tables, ordres de remplissage, origines et additif ±111 compris), et noté chaque table sur chaque télégramme avec un modèle de caractères chinois. Une clé n'était acceptée qu'à z ≥ 6 sur un long télégramme <em>et</em> si elle décodait d'autres télégrammes sur lesquels elle n'avait pas été choisie ; les rimes de date fournissaient un contrôle indépendant. Résultat : une soixantaine de télégrammes lus, en tout ou en partie.</p>
-    <p>Pour le <span lang="zh-Hant">文密</span>, il rapporte des mots de dix lettres, un <i>w</i> consonne, un <i>y</i> voyelle, et un résultat négatif : une version à six voyelles de sa famille (environ 200 000 tables) ne dépasse pas z = 4,1. Il conclut que le système est probablement distinct et bâti sur une table qui ne suit pas une règle. Nous avons repris son repérage des pièces, sa méthode de validation (tenir des messages à l'écart, vérifier les rimes) et l'idée qu'un demi-code télégraphique devient une syllabe. La suite montre que, pour le flux de Tokyo, la table <em>suit</em> une règle, mais une règle hors de sa famille : alphabet inversé, deux consonnes par dizaine, voyelles en serpentin.</p>
+    <p>Point de départ : l'article « <a href="https://dbourdeau.github.io/cyphersolver/sunintercepts.html">Sun Yat-sen's circle on the wire, 1916–17</a> »<sup class="fn"><a href="sources.html#s1">[1]</a></sup> et le dépôt <a href="https://github.com/dbourdeau/cyphersolver">dbourdeau/cyphersolver</a><sup class="fn"><a href="sources.html#s2">[2]</a></sup>, qui publient les transcriptions des formulaires et le déchiffrement d'une soixantaine de télégrammes du cercle de Sun Yat-sen. Ces télégrammes emploient des tables de « condensateur » de la lignée de celles de Yamada Junzaburō, publiées par S. Tomokiyo sur Cryptiana<sup class="fn"><a href="sources.html#s8">[8]</a></sup> : 20 consonnes et 5 voyelles, soit 100 syllabes, une par nombre de 00 à 99.</p>
+    <p>Le <span lang="zh-Hant">文密</span> s'en distingue : mots de dix lettres, <i>w</i> consonne, <i>y</i> voyelle ; il y figure parmi les problèmes ouverts<sup class="fn"><a href="sources.html#s1">[1]</a></sup>. Nous sommes partis des pièces identifiées et des transcriptions, et de l'idée qu'un demi-code télégraphique devient une syllabe. La suite montre que, pour le flux de Tokyo, la table suit une règle simple : alphabet inversé, deux consonnes par dizaine, voyelles en serpentin.</p>
   </div>
 
   <h2 id="regles">Les règles du jeu</h2>
@@ -182,7 +182,7 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
   <p>Ce canal a aussi permis de corriger le premier : le télégramme de Zhaoqing du 19 juillet finissait par un code impossible, alors que son jumeau du Yunnan, envoyé le même jour, finit bien par <span lang="zh-Hant">伸皓</span> (le 19). Relue à l'image, la lettre fautive est un <i>i</i> à la place d'un <i>e</i> : en Morse, e s'écrit · et i ··.</p>
 
   <h2 id="ouvert">Le problème ouvert : les messages de 1917</h2>
-  <p>Des trois images où Daniel Bourdeau avait repéré le <span lang="zh-Hant">文密</span>, une est désormais lue : 0416 (juillet 1916), sur les deux canaux. Les deux autres, 0509 et 0511 (juin 1917, Sun Yat-sen ↔ Dai Jitao), résistent. Leur alphabet est encore différent (<i>c</i> et <i>j</i> présents, <i>y</i> à la fois consonne et voyelle, quelques groupes atypiques). Ni G0 ni Y0 ne les lisent, et une recherche dans une famille de 193 632 grilles du même type (E30) ne fait rien ressortir au-delà du hasard. <mark class="unc">Les lectures automatiques de ces formulaires sont peut-être en cause</mark> ; une lecture humaine aveugle est en cours.</p>
+  <p>Des trois images connues portant le <span lang="zh-Hant">文密</span>, une est désormais lue : 0416 (juillet 1916), sur les deux canaux. Les deux autres, 0509 et 0511 (juin 1917, Sun Yat-sen ↔ Dai Jitao), résistent. Leur alphabet est encore différent (<i>c</i> et <i>j</i> présents, <i>y</i> à la fois consonne et voyelle, quelques groupes atypiques). Ni G0 ni Y0 ne les lisent, et une recherche dans une famille de 193 632 grilles du même type (E30) ne fait rien ressortir au-delà du hasard. <mark class="unc">Les lectures automatiques de ces formulaires sont peut-être en cause</mark> ; une lecture humaine aveugle est en cours.</p>
 
   <h2 id="outils">Outils</h2>
   <ul>
@@ -194,5 +194,5 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
   </ul>
   <p>Le solveur, les deux clés, les données de lecture et le modèle de langue sont publiés dans le dossier <a href="https://github.com/bdudout/wenmi/tree/main/solver"><code>solver/</code> du dépôt GitHub</a>, avec de quoi rejouer la recherche ; le journal complet de l'enquête le sera ensuite.</p>
   <hr>
-  <p class="byline">Sources : voir la <a href="sources.html">page des sources</a>. Remerciements à Daniel Bourdeau, dont l'article et le code ont ouvert la voie.</p>
+  <p class="byline">Sources : voir la <a href="sources.html">page des sources</a>. Remerciements à Daniel Bourdeau, dont l'article et le code ont ouvert la voie, et à S. Tomokiyo (Cryptiana).</p>
 </article>

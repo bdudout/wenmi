@@ -13,7 +13,7 @@
     <strong>目录</strong>
     <ol>
       <li><a href="#tldr">概要：加密系统</a></li>
-      <li><a href="#depart">起点：Daniel Bourdeau 的工作</a></li>
+      <li><a href="#depart">起点：已发表的研究</a></li>
       <li><a href="#regles">规则</a></li>
       <li><a href="#transcription">第一步 —— 读出职员写下的字母</a></li>
       <li><a href="#echecs">第二步 —— 哪些方法失败了，为什么</a></li>
@@ -74,10 +74,10 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
     <div class="dec-grid"></div>
   </div>
 
-  <h2 id="depart">起点：Daniel Bourdeau 的工作</h2>
+  <h2 id="depart">起点：已发表的研究</h2>
   <div class="credit">
-    <p>一切始于 <strong>Daniel Bourdeau</strong> 的《<a href="https://dbourdeau.github.io/cyphersolver/sunintercepts.html">Sun Yat-sen's circle on the wire, 1916–17</a>》<sup class="fn"><a href="sources.html#s1">[1]</a></sup> 及其代码库 <a href="https://github.com/dbourdeau/cyphersolver">dbourdeau/cyphersolver</a><sup class="fn"><a href="sources.html#s2">[2]</a></sup>。他从 S. Tomokiyo 公布的山田纯三郎两张“压缩表”出发<sup class="fn"><a href="sources.html#s8">[8]</a></sup>，识别出一<strong>族</strong>由20个辅音和5个元音构成的密钥（100个音节，对应 00—99），生成了整族密钥（57,600张表，包括填写顺序、起点和 ±111 加数），并用汉字语言模型对每张表在每封电报上打分。只有在长电报上达到 z ≥ 6，<em>并且</em>能解开未参与挑选的其他电报的密钥才被接受；韵目日期提供了独立的检验。结果是约六十封电报被全部或部分读出。</p>
-    <p>关于“<span lang="zh-Hant">文密</span>”，他记录了十字母一组、辅音 <i>w</i>、元音 <i>y</i>，以及一个否定结果：该族的六元音版本（约20万张表）都没有超过 z = 4.1。他认为这可能是另一套系统，建立在一张不按规则排列的表上。我们沿用了他对档案的定位、他的验证方法（留出电报、核对韵目）以及“半个电码变成一个音节”的思路。下文将说明：东京一路的表<em>确实</em>遵循规则，只是这条规则不在他那一族之内——字母倒序、每个十位两个辅音、元音蛇形排列。</p>
+    <p>起点是《<a href="https://dbourdeau.github.io/cyphersolver/sunintercepts.html">Sun Yat-sen's circle on the wire, 1916–17</a>》<sup class="fn"><a href="sources.html#s1">[1]</a></sup>及代码库 <a href="https://github.com/dbourdeau/cyphersolver">dbourdeau/cyphersolver</a><sup class="fn"><a href="sources.html#s2">[2]</a></sup>：其中公开了电报纸的转写，以及孙中山周围人物约六十封电报的破译。这些电报使用的“压缩表”与 S. Tomokiyo 在 Cryptiana 上公布的山田纯三郎压缩表一脉相承<sup class="fn"><a href="sources.html#s8">[8]</a></sup>：20个辅音和5个元音，共100个音节，00—99 每个数对应一个。</p>
+    <p>“<span lang="zh-Hant">文密</span>”与之不同：十字母一词，<i>w</i> 为辅音，<i>y</i> 为元音；文中将其列为尚未解决的问题<sup class="fn"><a href="sources.html#s1">[1]</a></sup>。我们从已确认的档案与转写出发，并沿用“半个电码对应一个音节”的思路。下文将说明：东京发出的电报所用的表其实遵循一条简单规则——字母倒序，每十个数两个辅音，元音蛇形排列。</p>
   </div>
 
   <h2 id="regles">规则</h2>
@@ -182,7 +182,7 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
   <p>这条通道还纠正了第一通道：7月19日发往肇庆的电报以一个不可能的电码结尾，而同日发往云南的“孪生”电报则规规矩矩地以“<span lang="zh-Hant">伸皓</span>”（十九日）结尾。回到图像复核，错的那个字母是 <i>i</i> 而非 <i>e</i>：在莫尔斯电码中，e 是 ·，i 是 ··。</p>
 
   <h2 id="ouvert">悬而未决：1917年的电报</h2>
-  <p>Daniel Bourdeau 发现“<span lang="zh-Hant">文密</span>”的三张影像中，一张已被读出：0416（1916年7月），两条通道都有。另外两张，0509 与 0511（1917年6月，孙中山 ↔ 戴季陶），仍未攻破。它们的字母表又有不同（出现 <i>c</i> 和 <i>j</i>，<i>y</i> 既作辅音也作元音，还有若干不寻常的字母组）。G0 和 Y0 都读不出，在同类型的193,632张表中搜索（E30）也没有发现超出偶然的结果。<mark class="unc">问题可能出在这些电报纸的机器读法上</mark>；人工盲读正在进行。</p>
+  <p>已知带有“<span lang="zh-Hant">文密</span>”的三张影像中，一张已被读出：0416（1916年7月），两条通道都有。另外两张，0509 与 0511（1917年6月，孙中山 ↔ 戴季陶），仍未攻破。它们的字母表又有不同（出现 <i>c</i> 和 <i>j</i>，<i>y</i> 既作辅音也作元音，还有若干不寻常的字母组）。G0 和 Y0 都读不出，在同类型的193,632张表中搜索（E30）也没有发现超出偶然的结果。<mark class="unc">问题可能出在这些电报纸的机器读法上</mark>；人工盲读正在进行。</p>
 
   <h2 id="outils">工具</h2>
   <ul>
@@ -194,5 +194,5 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
   </ul>
   <p>求解器、两把密钥、阅读数据和语言模型已发布在 <a href="https://github.com/bdudout/wenmi/tree/main/solver">GitHub 仓库的 <code>solver/</code> 目录</a>中，可据此重做搜索；完整的研究日志随后公布。</p>
   <hr>
-  <p class="byline">资料来源见<a href="sources.html">资料来源页</a>。感谢 Daniel Bourdeau，他的文章和代码为本研究开辟了道路。</p>
+  <p class="byline">资料来源见<a href="sources.html">资料来源页</a>。感谢 Daniel Bourdeau，他的文章和代码为本研究开辟了道路；也感谢 S. Tomokiyo（Cryptiana）。</p>
 </article>

@@ -13,7 +13,7 @@
     <strong>目次</strong>
     <ol>
       <li><a href="#tldr">要点：暗号方式</a></li>
-      <li><a href="#depart">出発点：Daniel Bourdeau の研究</a></li>
+      <li><a href="#depart">出発点：公開済みの研究</a></li>
       <li><a href="#regles">ルール</a></li>
       <li><a href="#transcription">第1段階 ―― 職員の書いた文字を読む</a></li>
       <li><a href="#echecs">第2段階 ―― うまくいかなかったこと（とその理由）</a></li>
@@ -74,10 +74,10 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
     <div class="dec-grid"></div>
   </div>
 
-  <h2 id="depart">出発点：Daniel Bourdeau の研究</h2>
+  <h2 id="depart">出発点：公開済みの研究</h2>
   <div class="credit">
-    <p>すべては <strong>Daniel Bourdeau</strong> の「<a href="https://dbourdeau.github.io/cyphersolver/sunintercepts.html">Sun Yat-sen's circle on the wire, 1916–17</a>」<sup class="fn"><a href="sources.html#s1">[1]</a></sup> とリポジトリ <a href="https://github.com/dbourdeau/cyphersolver">dbourdeau/cyphersolver</a><sup class="fn"><a href="sources.html#s2">[2]</a></sup> から始まる。彼は S. Tomokiyo 氏が紹介した山田純三郎の二つの「圧縮表」<sup class="fn"><a href="sources.html#s8">[8]</a></sup>を手がかりに、子音20・母音5（00〜99 に対応する100音節）からなる鍵の<strong>一族</strong>を見いだし、その全体（記入順序、起点、±111 の加算を含む57,600表）を生成して、各表を各電報について漢字の言語モデルで採点した。鍵が採用されるのは、長い電報で z ≥ 6 に達し、<em>かつ</em>選定に使わなかった他の電報も解読できる場合に限られた。韻目による日付が独立した検証となった。結果、約60通の電報が全部または一部読めるようになった。</p>
-    <p>「<span lang="zh-Hant">文密</span>」について彼は、10文字の語、子音 <i>w</i>、母音 <i>y</i>、そして否定的な結果を報告している。一族の6母音版（約20万表）は z = 4.1 を超えなかった。彼は、これはおそらく別の方式で、規則に従わない表に基づくと結論した。私たちは、彼による文書の特定、検証の方法（電報を探索から外しておく、韻目を確かめる）、そして「電信符号の半分が一つの音節になる」という考えを受け継いだ。以下で示すように、東京発の系統の表は規則に<em>従っている</em>。ただしそれは彼の一族の外にある規則――アルファベットの逆順、十の位ごとに二つの子音、蛇行する母音――である。</p>
+    <p>出発点は「<a href="https://dbourdeau.github.io/cyphersolver/sunintercepts.html">Sun Yat-sen's circle on the wire, 1916–17</a>」<sup class="fn"><a href="sources.html#s1">[1]</a></sup>とリポジトリ <a href="https://github.com/dbourdeau/cyphersolver">dbourdeau/cyphersolver</a><sup class="fn"><a href="sources.html#s2">[2]</a></sup>である。そこでは電報用紙の翻字と、孫文周辺の約60通の電報の解読が公開されている。これらの電報は、S. Tomokiyo 氏が Cryptiana で紹介した山田純三郎の「圧縮表」<sup class="fn"><a href="sources.html#s8">[8]</a></sup>の系統に属する表を用いる。子音20・母音5、すなわち00〜99の各数に一つずつ対応する100音節である。</p>
+    <p>「<span lang="zh-Hant">文密</span>」はこれと異なる。10文字の語、子音の <i>w</i>、母音の <i>y</i> をもち、そこでは未解決の問題とされている<sup class="fn"><a href="sources.html#s1">[1]</a></sup>。私たちは特定済みの文書と翻字、そして電碼の半分が1音節になるという考え方から出発した。以下に示すとおり、東京発の系統では表は単純な規則に従っている。アルファベットの逆順、10ごとに子音二つ、母音の蛇行配置である。</p>
   </div>
 
   <h2 id="regles">ルール</h2>
@@ -182,7 +182,7 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
   <p>この系統は第一の系統の訂正にも役立った。7月19日の肇慶宛て電報はありえない符号で終わっていたが、同日に雲南へ送られた「双子」の電報はきちんと「<span lang="zh-Hant">伸皓</span>」（十九日）で終わる。画像で確認すると、誤った文字は <i>e</i> ではなく <i>i</i> だった。モールス符号では e は ·、i は ·· である。</p>
 
   <h2 id="ouvert">未解決の問題：1917年の電報</h2>
-  <p>Daniel Bourdeau が「<span lang="zh-Hant">文密</span>」を見いだした三つの画像のうち、一つは読めるようになった：0416（1916年7月、二つの系統の両方）。残る二つ、0509 と 0511（1917年6月、孫文 ↔ 戴季陶）は破れていない。アルファベットがさらに異なる（<i>c</i> と <i>j</i> があり、<i>y</i> は子音にも母音にもなり、珍しい文字群もある）。G0 でも Y0 でも読めず、同じ型の193,632表を探索しても（E30）偶然を超えるものは見つからない。<mark class="unc">これらの用紙の機械判読に問題があるのかもしれない</mark>。人間によるブラインド読みが進行中である。</p>
+  <p>「<span lang="zh-Hant">文密</span>」を含むことが知られている三つの画像のうち、一つは読めるようになった：0416（1916年7月、二つの系統の両方）。残る二つ、0509 と 0511（1917年6月、孫文 ↔ 戴季陶）は破れていない。アルファベットがさらに異なる（<i>c</i> と <i>j</i> があり、<i>y</i> は子音にも母音にもなり、珍しい文字群もある）。G0 でも Y0 でも読めず、同じ型の193,632表を探索しても（E30）偶然を超えるものは見つからない。<mark class="unc">これらの用紙の機械判読に問題があるのかもしれない</mark>。人間によるブラインド読みが進行中である。</p>
 
   <h2 id="outils">道具</h2>
   <ul>
@@ -194,5 +194,5 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
   </ul>
   <p>ソルバー、二つの鍵、判読データ、言語モデルは <a href="https://github.com/bdudout/wenmi/tree/main/solver">GitHub リポジトリの <code>solver/</code> フォルダ</a>で公開しており、探索を再現できる。調査の完全なログは追って公開する。</p>
   <hr>
-  <p class="byline">出典は<a href="sources.html">出典ページ</a>を参照。論文とコードで道を開いた Daniel Bourdeau 氏に感謝する。</p>
+  <p class="byline">出典は<a href="sources.html">出典ページ</a>を参照。論文とコードで道を開いた Daniel Bourdeau 氏、そして S. Tomokiyo 氏（Cryptiana）に感謝する。</p>
 </article>
