@@ -359,6 +359,17 @@ table.rel td:nth-child(2), table.rel td:nth-child(3) { min-width: 7.5rem; }
 table.rel td:first-child { min-width: 9rem; font-size: .88rem; color: var(--ink-2); }
 table.rel td:last-child { min-width: 14rem; }
 
+/* télégrammes de juin 1917 : lecture mot par mot et pistes */
+.tblwrap { overflow-x: auto; margin: .4rem 0 1rem; }
+table.y1917 { font-size: .9rem; border-collapse: collapse; width: 100%; }
+table.y1917 th, table.y1917 td { text-align: left; vertical-align: top; padding: .3rem .5rem; border-bottom: 1px solid var(--rule); }
+table.y1917 td:first-child { white-space: nowrap; color: var(--muted); }
+table.y1917 td:nth-child(2) { white-space: nowrap; }
+table.y1917.pistes td:first-child { color: var(--ink); font-weight: 600; white-space: normal; min-width: 8rem; }
+table.y1917.pistes td:nth-child(2) { white-space: normal; }
+table.y1917.pistes td:last-child { min-width: 7rem; }
+#t1917 h3 small { font-weight: normal; color: var(--muted); }
+
 /* astérisque du titre d'accueil : Wenmi de 1916, pas de 1917 */
 h1 a.star { color: var(--accent); text-decoration: none; font-size: .7em; vertical-align: super; margin-left: .1em; }
 .hero-note { font-size: .9rem; color: var(--muted); border-left: 3px solid var(--accent); padding: .2rem 0 .2rem .7rem; margin: .8rem 0; }

@@ -4,7 +4,7 @@
 Mêmes traitements que make_fiches.py (scans d'archives à 300 dpi, carte dessinée par code sur fond Natural Earth, sans IA) ;
 la carte descend jusqu'à Manille et le trajet est tracé en ocre (condensateurs), pour ne pas le confondre avec les canaux du Wenmi.
 Usage : python3 tools/make_fiches_c1916.py <dossier d'enquête wenmi> <ne_110m_land.geojson> [scans|maps|all]
-Sorties : assets/img/fiches/scan-c<image>.webp, scan-c<image>-full.webp, map-<id>.png"""
+Sorties : assets/img/fiches/scan-c<image>.webp, scan-c<image>-full.webp, map-<id>.png ; et scan-0509 / scan-0511 (juin 1917)"""
 import glob, json, os, subprocess, sys, tempfile
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageOps
@@ -14,7 +14,8 @@ import make_media as M
 
 WENMI, LAND, OUT = MF.WENMI, MF.LAND, MF.OUT
 PDF = {'B03050088300': (os.path.join(WENMI, 'sources', 'c32', 'B03050088300.pdf'), 440),   # page du PDF = image − 440
-       'B03050089100': (os.path.join(WENMI, 'sources', 'c14', 'B03050089100.pdf'), 59)}    # page du PDF = image − 59
+       'B03050089100': (os.path.join(WENMI, 'sources', 'c14', 'B03050089100.pdf'), 59),    # page du PDF = image − 59
+       'B03050090200': (os.path.join(WENMI, 'sources', 'B03050090200_0503-0513.pdf'), 502)}  # juin 1917 (non déchiffrés)
 M.CITIES.update({'manila': ('Manila', '馬尼拉', 120.98, 14.60, (14, -6)), 'qingdao': ('Qingdao', '青島', 120.38, 36.07, (14, -6))})
 CITY = {'Tokyo': 'tokyo', 'Shanghai': 'shanghai', 'Manila': 'manila', 'Qingdao': 'qingdao'}
 
@@ -45,7 +46,7 @@ def form_crop(im):
 
 def scans(msgs):
     done = set()
-    for m in msgs:
+    for m in msgs + [{'record': 'B03050090200', 'fiche': {'img': n, 'n': n}} for n in ('0509', '0511')]:   # + juin 1917
         img = m['fiche']['img']
         if img in done: continue
         done.add(img)

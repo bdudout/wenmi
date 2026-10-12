@@ -258,7 +258,9 @@
     }
     C.messages.forEach(function (m) { h += tg(m, I, null); });
     h += '<section class="tg" id="t1917"><h2>' + esc(L.y1917) + '</h2>';
-    C.undeciphered.forEach(function (u) {
+    var tpl1917 = document.getElementById('y1917-tpl');   // lecture, confusions et pistes (texte de la page, 5 langues)
+    if (tpl1917) h += tpl1917.innerHTML;
+    else C.undeciphered.forEach(function (u) {
       h += '<h3>' + u.id + ' <small>' + esc(u.route) + '</small></h3>';
       h += u.reading ? '<p class="tg-label">' + esc(L.read) + '</p><p class="cipher mono">' + esc(u.reading) + '</p><p>' + esc(L.notDecoded) + '</p>' : '<p>' + esc(L.pending) + '</p>';
     });
