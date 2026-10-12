@@ -41,6 +41,7 @@ assets/img/illustrations/ six reconstitutions IA locales en WebP ; légendes mul
 tools/illustrations.py  placement et légendes des illustrations lors du build
 assets/img/flags/       drapeaux du sélecteur de langue (SVG, GÉNÉRÉS)
 tools/make_fiches.py    fiche de chaque télégramme : scan JACAR recadré + mini-carte (assets/img/fiches/)
+tools/build_n1916.py    nouveaux déchiffrements de mai–juin 1916 (condensateur Yamada) → assets/js/corpus-n1916.js
 tools/build.py          assemble content/ + gabarit → <langue>/*.html
 tools/build_data.py     extrait messages.js de l'édition et vérifie la grille G0
 tools/build_data_y0.py  décode le second canal sous Y0 et vérifie contre c31-decodage-Y0.md

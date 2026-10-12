@@ -281,6 +281,18 @@
       h += '</nav></section>';
       K.messages.forEach(function (m) { h += tg(m, KI, KI); });
     }
+    // nouveaux déchiffrements de mai–juin 1916 (corpus-n1916.js)
+    var N = window.WENMI_N1916, NX = window.WENMI_N1916_I18N;
+    var NI = NX ? (NX[root.lang] || NX.fr) : null;
+    if (N && NI) {
+      var ns = N.stats;
+      h += '<section class="tg tg-group" id="n1916"><h2>' + esc(NI.title) + '</h2>' + NI.intro +
+        '<p class="corpus-stats">' + esc(NI.stats.replace('{tels}', ns.tels).replace('{codes}', ns.codes).replace('{conf}', ns['confirmé']).replace('{douteux}', ns.douteux)) +
+        '</p><nav class="corpus-toc"><div><strong>' + esc(NI.channel.yamada1916) + '</strong> ';
+      N.messages.forEach(function (m) { h += '<a href="#t' + m.id + '">' + m.label + '</a> '; });
+      h += '</div></nav></section>';
+      N.messages.forEach(function (m) { h += tg(m, NI, NI); });
+    }
     box.innerHTML = h;
   }
   document.querySelectorAll('#corpus').forEach(mountCorpus);
