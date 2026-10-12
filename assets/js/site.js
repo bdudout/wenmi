@@ -170,12 +170,20 @@
       C.messages.filter(function (m) { return m.grid === g; }).forEach(function (m) { h += '<a href="#t' + m.id + '">' + m.id + '</a> '; });
       h += '</div>';
     });
-    h += '<div><strong>' + esc(L.y1917) + '</strong> <a href="#t1917">0509a · 0511</a></div></nav>';
-    C.messages.forEach(function (m) {
-      h += '<section class="tg" id="t' + m.id + '"><h2>' + m.id + ' <small>' + esc(I.date[m.id] || '') + '</small></h2>';
+    h += '<div><strong>' + esc(L.y1917) + '</strong> <a href="#t1917">0509a · 0511</a></div>';
+    var KX0 = window.WENMI_C1916_I18N, KI0 = KX0 ? (KX0[root.lang] || KX0.fr) : null;
+    if (window.WENMI_C1916 && KI0) {
+      h += '<div><strong>' + esc(KI0.toc) + '</strong> ' + window.WENMI_C1916.order.map(function (g) {
+        var first = window.WENMI_C1916.messages.filter(function (m) { return m.grid === g; })[0];
+        return first ? '<a href="#t' + first.id + '">' + esc(KI0.short[g] || g) + '</a>' : '';
+      }).join(' · ') + '</div>';
+    }
+    h += '</nav>';
+    function tg(m, I, X) {
+      var h = '<section class="tg" id="t' + m.id + '"><h2>' + (m.label || m.id) + ' <small>' + esc(I.date[m.id] || '') + '</small></h2>';
       h += '<p class="tg-meta"><span>' + esc(m.route) + '</span> · <span>' + esc((I.channel || {})[m.grid] || m.grid) + '</span> · <a href="https://www.jacar.archives.go.jp/das/meta/' + m.record + '">JACAR ' + m.record + '</a></p>';
       if (m.fiche) {
-        var fi = '../assets/img/fiches/', cap = (L.scan || '').replace('{rec}', m.record).replace('{img}', m.fiche.img);
+        var fi = '../assets/img/fiches/', cap = (L.scan || '').replace('{rec}', m.record).replace('{img}', m.fiche.n || m.fiche.img);
         h += '<div class="tg-fiche"><a class="tg-scan" href="' + fi + 'scan-' + m.fiche.img + '-full.webp" title="' + esc(cap) + '">' +
           '<img src="' + fi + 'scan-' + m.fiche.img + '.webp" loading="lazy" alt="' + esc(cap) + '"></a>' +
           '<div class="tg-side"><img class="tg-map" src="' + fi + 'map-' + m.id + '.png" loading="lazy" alt="' + esc((L.route || '') + ' : ' + m.route) + '">' +
@@ -183,11 +191,13 @@
           '<p class="tg-credit">' + esc(cap) + '</p></div></div>';
       }
       var groups = m.letters.match(/.{1,10}/g) || [];
-      h += '<p class="tg-label">' + esc(L.read) + '</p><p class="cipher mono">' + groups.join(' ') + '</p>';
+      h += '<p class="tg-label">' + esc(X ? X.read : L.read) + '</p><p class="cipher mono">' + groups.join(' ') + '</p>';
       h += '<div class="tokens">';
       m.codes.forEach(function (code, i) {
         var st = m.status[i], cls = st === 'ok' ? '' : st === 'douteux' ? ' doubt' : st === 'illisible' ? ' illegible' : ' confirmed';
         var title = st.indexOf('confirmé') === 0 ? L.conf[st.split(':')[1]] : (L.status[st] || '');
+        var fx = (m.fixed || {})[String(i)];
+        if (fx && X) { cls += ' fixed'; title = X.fixed[fx.how].replace('{from}', fx.from || '') + (title ? ' · ' + title : ''); }
         h += '<span class="token' + cls + '" title="' + esc(title) + '"><span class="u">' + m.letters.substr(4 * i, 2) + '·' + m.letters.substr(4 * i + 2, 2) +
           '</span><span class="c">' + code + '</span><span class="h" lang="zh-Hant">' + esc(m.chars[i]) + '</span></span>';
       });
@@ -244,14 +254,31 @@
         items += '</li>';
       });
       if (items) h += '<details class="tg-doubts"' + (m.expected && Object.keys(m.expected).length ? ' open' : '') + '><summary>' + esc(L.doubts) + '</summary><ul>' + items + '</ul></details>';
-      h += '</section>';
-    });
+      return h + '</section>';
+    }
+    C.messages.forEach(function (m) { h += tg(m, I, null); });
     h += '<section class="tg" id="t1917"><h2>' + esc(L.y1917) + '</h2>';
     C.undeciphered.forEach(function (u) {
       h += '<h3>' + u.id + ' <small>' + esc(u.route) + '</small></h3>';
       h += u.reading ? '<p class="tg-label">' + esc(L.read) + '</p><p class="cipher mono">' + esc(u.reading) + '</p><p>' + esc(L.notDecoded) + '</p>' : '<p>' + esc(L.pending) + '</p>';
     });
     h += '</section>';
+    // télégrammes à condensateur de 1916 (corpus-c1916.js) : même gabarit, groupés par clé puis par date
+    var K = window.WENMI_C1916, KX = window.WENMI_C1916_I18N;
+    var KI = KX ? (KX[root.lang] || KX.fr) : null;
+    if (K && KI) {
+      var st = K.stats;
+      h += '<section class="tg tg-group" id="c1916"><h2>' + esc(KI.title) + '</h2>' + KI.intro +
+        '<p class="corpus-stats">' + esc(KI.stats.replace('{tels}', st.tels).replace('{codes}', st.codes).replace('{fixed}', st.fixed)
+          .replace('{added}', st.added).replace('{conf}', st['confirmé']).replace('{douteux}', st.douteux)) + '</p><nav class="corpus-toc">';
+      K.order.forEach(function (g) {
+        h += '<div><strong>' + esc(KI.channel[g] || g) + '</strong> ';
+        K.messages.filter(function (m) { return m.grid === g; }).forEach(function (m) { h += '<a href="#t' + m.id + '">' + m.label + '</a> '; });
+        h += '</div>';
+      });
+      h += '</nav></section>';
+      K.messages.forEach(function (m) { h += tg(m, KI, KI); });
+    }
     box.innerHTML = h;
   }
   document.querySelectorAll('#corpus').forEach(mountCorpus);

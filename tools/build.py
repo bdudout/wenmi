@@ -107,7 +107,8 @@ def build():
             alternates = '\n'.join('<link rel="alternate" hreflang="%s" href="../%s/%s.html">' % (LL['code'], l, page) for l, LL in LANGS.items())
             scripts = ''
             if 'id="corpus"' in body:
-                scripts += '<script src="../assets/js/corpus.js"></script>\n<script src="../assets/js/translations.js"></script>\n'
+                scripts += ('<script src="../assets/js/corpus.js"></script>\n<script src="../assets/js/translations.js"></script>\n'
+                            '<script src="../assets/js/corpus-c1916.js"></script>\n')
             if 'decoder' in body:
                 scripts += ('<script src="../assets/js/messages.js"></script>\n<script src="../assets/js/messages-y0.js"></script>\n'
                             '<script src="../assets/js/translations.js"></script>\n')
