@@ -84,7 +84,12 @@ def mean_score(nums):
 # ---- mots ajoutés ou fins relues : codes nouveaux par rapport au texte publié
 OMIS = {'c0489': (65, 67)}           # mot omis par la transcription publiée (B48, papier 38, ligne 6) : codes 65–67
 NEW_FROM = {'c0489': 68, 'c0069': 50}  # au-delà : le texte publié s'arrêtait (« suite non reprise » / fin illisible)
-NOT_FIXED = {('c0495', 19)}          # le texte publié portait 請 (correction supposée) ; le scan porte g : proposition
+NOT_FIXED = {('c0495', 19),          # le texte publié portait 請 (correction supposée) ; le scan porte g : proposition
+             ('c0087', 17), ('c0075', 72)}   # 否, 近 : déjà dans le texte publié (correction appliquée, confirmée sur le scan)
+# Même classement que la page « Condensateurs 1916 » : 28 corrections (tableau), 12 lectures proposées confirmées, 4 lectures nouvelles
+SUGG = {('c0470', '回'), ('c0473a', '款'), ('c0473b', '查'), ('c0473b', '有'), ('c0475', '告'), ('c0476', '此'), ('c0459', '知'),
+        ('c0492', '警'), ('c0495', '匯'), ('c0069', '東'), ('c0069', '在'), ('c0087', '銷')}
+NEW = {('c0475', '巳'), ('c0490b', '廖'), ('c0061', '京'), ('c0061', '無')}
 FRAME0 = {'B03050088300': 440, 'B03050089100': 59}
 
 def build():
@@ -100,7 +105,9 @@ def build():
         for i, c in enumerate(codes):
             if sid in OMIS and OMIS[sid][0] <= i <= OMIS[sid][1]: fixed[str(i)] = {'how': 'omis'}
             elif sid in NEW_FROM and i >= NEW_FROM[sid]: fixed[str(i)] = {'how': 'nouveau'}
-            elif i < len(pub) and pub[i] != c and (sid, i) not in NOT_FIXED: fixed[str(i)] = {'how': 'scan', 'from': C2CH.get(pub[i], '□')}
+            elif i < len(pub) and pub[i] != c and (sid, i) not in NOT_FIXED:
+                k = 'sugg' if (sid, C2CH[c]) in SUGG else 'new' if (sid, C2CH[c]) in NEW else 'scan'
+                fixed[str(i)] = {'how': k, 'from': C2CH.get(pub[i], '□')}
         text, levels = RC.R[sid]
         toks, props = restitution.parse(text, chars)
         assert len(props) == len(levels), (sid, len(props), len(levels))
@@ -139,11 +146,14 @@ def build():
     order = ['manila1916', 'shanghai1916', 'seito1916', 'yamada1916']   # par date du premier télégramme de chaque clé
     msgs.sort(key=lambda m: (order.index(m['grid']), m['md'], m['label']))
     stats = {'tels': len(msgs), 'codes': sum(len(m['codes']) for m in msgs),
-             'fixed': sum(1 for m in msgs for v in m['fixed'].values() if v['how'] == 'scan'),
-             'added': sum(1 for m in msgs for v in m['fixed'].values() if v['how'] != 'scan'),
+             'corr': sum(1 for m in msgs for v in m['fixed'].values() if v['how'] == 'scan'),
+             'sugg': sum(1 for m in msgs for v in m['fixed'].values() if v['how'] == 'sugg'),
+             'new': sum(1 for m in msgs for v in m['fixed'].values() if v['how'] == 'new'),
+             'added': sum(1 for m in msgs for v in m['fixed'].values() if v['how'] in ('omis', 'nouveau')),
              'douteux': sum(s == 'douteux' for m in msgs for s in m['status']),
              'confirmé': sum(s.startswith('confirmé') for m in msgs for s in m['status']),
              'props': sum(len(m['readable']['props']) for m in msgs)}
+    assert (stats['corr'], stats['sugg'], stats['new']) == (28, 12, 4), stats   # = page « Condensateurs 1916 »
     i18n = c1916_i18n.build(msgs, stats, WENMI)
     path = os.path.join(SITE, 'assets', 'js', 'corpus-c1916.js')
     open(path, 'w', encoding='utf-8').write(
@@ -152,7 +162,7 @@ def build():
         'window.WENMI_C1916_I18N = ' + json.dumps(i18n, ensure_ascii=False) + ';\n')
     print(stats)
     for m in msgs:
-        print(m['id'], m['old'], m['grid'], m['md'], 'corrigés', [m['chars'][int(i)] for i, v in m['fixed'].items() if v['how'] == 'scan'],
+        print(m['id'], m['old'], m['grid'], m['md'], 'changés', [(m['chars'][int(i)], v['how']) for i, v in m['fixed'].items() if v['how'] in ('scan', 'sugg', 'new')],
               'props', [(p['orig'], p['ch'], p['level'], ''.join(e['from'] + '→' + e['to'] for e in p['edits'])) for p in m['readable']['props']],
               'score', m['readable']['score'])
 

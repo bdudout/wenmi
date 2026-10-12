@@ -19,10 +19,12 @@ LAB = {
          'Les lettres sont celles de la transcription publiée, rectifiées sur les formulaires ; les caractères corrigés ou rétablis sont '
          '<span class="fixed-sample">soulignés en vert</span>. Classement : par clé, puis par date.</p>'),
   read='Lettres du formulaire (transcription publiée, rectifiée sur les scans)',
-  fixed={'scan': 'corrigé sur le scan — texte publié : {from}', 'omis': 'mot omis dans la transcription publiée, rétabli sur le scan',
+  fixed={'scan': 'corrigé sur le scan — texte publié : {from}', 'sugg': 'lecture proposée dans le texte publié, confirmée sur le scan',
+         'new': 'lecture nouvelle sur le scan — texte publié : {from}', 'omis': 'mot omis dans la transcription publiée, rétabli sur le scan',
          'nouveau': 'lu sur le scan ; absent du texte publié'},
-  stats=('{tels} télégrammes, {codes} codes : après lecture des scans, {fixed} caractères diffèrent du texte publié (corrections et lectures '
-         'proposées confirmées), {added} sont rétablis (mot omis, fins relues) ; {conf} rares mais confirmés, {douteux} douteux.'),
+  stats=('{tels} télégrammes, {codes} codes. Par rapport au texte publié, la lecture des scans change {chg} caractères (les {corr} corrections de la page '
+         'Condensateurs 1916, {sugg} lectures proposées dans le texte publié et confirmées, {new} lectures nouvelles) et en rétablit {added} (mot omis, '
+         'fin relue). {conf} codes rares mais confirmés, {douteux} douteux.'),
   toc='Condensateurs 1916', short={'manila1916': 'Manille', 'shanghai1916': 'Shanghai', 'seito1916': 'Qingdao', 'yamada1916': 'Yamada'}, label='Traduction de travail.',
   channel={'manila1916': 'Condensateur « Manille » (Tokyo ↔ Manille)', 'shanghai1916': 'Condensateur « Shanghai » (Tokyo ↔ Shanghai)',
            'seito1916': 'Condensateur « Qingdao » (Tokyo ↔ Qingdao)', 'yamada1916': 'Condensateur « Yamada » (Tokyo → Shanghai, mai 1916)'}),
@@ -35,10 +37,12 @@ LAB = {
          'The letters are those of the published transcription, rectified on the forms; corrected or restored characters are '
          '<span class="fixed-sample">underlined in green</span>. Order: by key, then by date.</p>'),
   read='Letters on the form (published transcription, rectified on the scans)',
-  fixed={'scan': 'corrected on the scan — published text: {from}', 'omis': 'word omitted in the published transcription, restored from the scan',
+  fixed={'scan': 'corrected on the scan — published text: {from}', 'sugg': 'reading suggested in the published text, confirmed on the scan',
+         'new': 'new reading on the scan — published text: {from}', 'omis': 'word omitted in the published transcription, restored from the scan',
          'nouveau': 'read on the scan; not in the published text'},
-  stats=('{tels} telegrams, {codes} codes: after reading the scans, {fixed} characters differ from the published text (corrections and '
-         'confirmed suggested readings), {added} are restored (omitted word, re-read endings); {conf} rare but confirmed, {douteux} doubtful.'),
+  stats=('{tels} telegrams, {codes} codes. Compared with the published text, reading the scans changes {chg} characters (the {corr} corrections of '
+         'the 1916 condensers page, {sugg} readings suggested in the published text and confirmed, {new} new readings) and restores {added} '
+         '(omitted word, re-read ending). {conf} rare but confirmed codes, {douteux} doubtful.'),
   toc='1916 condensers', short={'manila1916': 'Manila', 'shanghai1916': 'Shanghai', 'seito1916': 'Qingdao', 'yamada1916': 'Yamada'}, label='Working translation.',
   channel={'manila1916': 'Condenser “Manila” (Tokyo ↔ Manila)', 'shanghai1916': 'Condenser “Shanghai” (Tokyo ↔ Shanghai)',
            'seito1916': 'Condenser “Qingdao” (Tokyo ↔ Qingdao)', 'yamada1916': 'Condenser “Yamada” (Tokyo → Shanghai, May 1916)'}),
@@ -49,8 +53,9 @@ LAB = {
          '{tels}封電報（詳見<a href="relecture.html">1916年壓縮碼</a>）。字母取自已發表的轉寫，並依電報紙訂正；訂正或補回的字以'
          '<span class="fixed-sample">綠色底線</span>標出。排列：先按密鑰，再按日期。</p>'),
   read='電報紙上的字母（已發表的轉寫，依掃描影像訂正）',
-  fixed={'scan': '依掃描影像訂正——已發表文本作：{from}', 'omis': '已發表轉寫遺漏的詞，依掃描影像補回', 'nouveau': '從掃描影像讀出；已發表文本無此段'},
-  stats='{tels}封電報，{codes}個電碼：經核對掃描影像，與已發表文本不同的字{fixed}個（訂正及經證實的建議讀法），補回{added}個（遺漏的詞、重讀的結尾）；{conf}個罕見但已確認，{douteux}個存疑。',
+  fixed={'scan': '依掃描影像訂正——已發表文本作：{from}', 'sugg': '已發表文本所提的讀法，經掃描影像證實', 'new': '從掃描影像得出的新讀法——已發表文本作：{from}',
+         'omis': '已發表轉寫遺漏的詞，依掃描影像補回', 'nouveau': '從掃描影像讀出；已發表文本無此段'},
+  stats='{tels}封電報，{codes}個電碼。與已發表文本相比，核對掃描影像後改動{chg}字（「1916年壓縮碼」頁的{corr}處訂正、已發表文本所提並經證實的讀法{sugg}處、新讀法{new}處），並補回{added}字（遺漏的詞、重讀的結尾）。罕見但已確認{conf}個，存疑{douteux}個。',
   toc='1916年壓縮碼', short={'manila1916': '馬尼拉', 'shanghai1916': '上海', 'seito1916': '青島', 'yamada1916': '山田'}, label='斷句與白話大意（工作譯文）。',
   channel={'manila1916': '壓縮碼「馬尼拉」（東京 ↔ 馬尼拉）', 'shanghai1916': '壓縮碼「上海」（東京 ↔ 上海）',
            'seito1916': '壓縮碼「青島」（東京 ↔ 青島）', 'yamada1916': '壓縮碼「山田」（東京 → 上海，1916年5月）'}),
@@ -61,8 +66,9 @@ LAB = {
          '画像の再読により少なくとも1字を訂正または確認した{tels}通を掲げる（詳細は<a href="relecture.html">1916年圧縮符号</a>）。'
          '文字は公開された翻字を用紙で訂正したもので、訂正・補完した字は<span class="fixed-sample">緑の下線</span>で示す。配列は符号表ごと、日付順。</p>'),
   read='用紙の文字（公開された翻字を画像で訂正）',
-  fixed={'scan': '画像で訂正 — 公開テキストでは「{from}」', 'omis': '公開された翻字で脱落していた語。画像から補完', 'nouveau': '画像から読んだ部分。公開テキストにはない'},
-  stats='{tels}通、{codes}コード：画像の照合により公開テキストと異なる字{fixed}（訂正および確認された読みの提案）、補完した字{added}（脱落語・結尾の再読）。まれだが確認済み{conf}、疑わしい字{douteux}。',
+  fixed={'scan': '画像で訂正 — 公開テキストでは「{from}」', 'sugg': '公開テキストが示した読み。画像で確認', 'new': '画像による新たな読み — 公開テキストでは「{from}」',
+         'omis': '公開された翻字で脱落していた語。画像から補完', 'nouveau': '画像から読んだ部分。公開テキストにはない'},
+  stats='{tels}通、{codes}コード。公開テキストに対し、画像の照合で{chg}字を改めた（「1916年圧縮符号」の訂正{corr}、公開テキストが示し確認された読み{sugg}、新たな読み{new}）。さらに{added}字を補完（脱落語・結尾の再読）。まれだが確認済み{conf}、疑わしい字{douteux}。',
   toc='1916年圧縮符号', short={'manila1916': 'マニラ', 'shanghai1916': '上海', 'seito1916': '青島', 'yamada1916': '山田'}, label='作業訳。',
   channel={'manila1916': '圧縮符号「マニラ」（東京 ↔ マニラ）', 'shanghai1916': '圧縮符号「上海」（東京 ↔ 上海）',
            'seito1916': '圧縮符号「青島」（東京 ↔ 青島）', 'yamada1916': '圧縮符号「山田」（東京 → 上海、1916年5月）'}),
@@ -177,28 +183,43 @@ TR = {
 
 
 def t2s_table(wenmi):
-    """Table traditionnel → simplifié : OpenCC STCharacters (simplifié → traditionnel·s), inversée."""
-    path = os.path.join(wenmi, 'sources', 'language', 'STCharacters.txt'); m, keep = {}, set()
-    for line in open(path, encoding='utf-8'):
+    """Table traditionnel → simplifié : OpenCC STCharacters (simplifié → traditionnel·s), inversée. Un caractère n'est converti que
+    s'il est rare en chinois simplifié (fréquences du dictionnaire jieba, corpus simplifié) : sinon « 呆 → 呆 待 » ferait de 待 un 呆,
+    et « 坐 → 坐 座 » de 座 un 坐. Entre plusieurs cibles, la plus fréquente l'emporte (劃 → 划, et non 㓰)."""
+    import collections
+    freq = collections.Counter()
+    for line in open(os.path.join(wenmi, 'sources', 'language', 'jieba-dict.txt'), encoding='utf-8'):
+        p = line.split()
+        if len(p) >= 2 and p[1].isdigit():
+            for c in p[0]: freq[c] += int(p[1])
+    cand = collections.defaultdict(set)
+    for line in open(os.path.join(wenmi, 'sources', 'language', 'STCharacters.txt'), encoding='utf-8'):
         if line.startswith('#') or '\t' not in line: continue
-        s, ts = line.rstrip('\n').split('\t'); ts = ts.split()
-        if s in ts: keep.add(s)
-        for t in ts:
-            if t != s: m.setdefault(t, s)
-    for k in keep: m.pop(k, None)
-    m.update({'像': '像', '為': '为', '篠': '篠', '著': '着'})   #影像 ; 為 → 为 ; 篠 : nom de rime (date) ; 著手 → 着手
+        s, ts = line.rstrip('\n').split('\t')
+        for t in ts.split():
+            if t != s: cand[t].add(s)
+    m = {}
+    for t, ss in cand.items():
+        s = max(ss, key=lambda x: (freq[x], x))
+        if freq[t] > 2000 and freq[t] > 0.2 * freq[s]: continue   # caractère courant en simplifié : on le garde
+        m[t] = s
+    m.update({'為': '为', '篠': '篠', '著': '着'})   # 為 → 为 ; 篠 : nom de rime (date) ; 著手 → 着手
     return m
+
+
+PHRASES = {'座標': '坐标'}   # formes simplifiées propres à un mot (座 reste 座 ailleurs)
 
 
 def to_hans(x, T):
     if isinstance(x, dict): return {k: to_hans(v, T) for k, v in x.items()}
+    conv = lambda seg: ''.join(T.get(c, c) for c in __import__('functools').reduce(lambda a, kv: a.replace(*kv), PHRASES.items(), seg))
     # les balises et les caractères explicitement marqués lang="zh-Hant" restent en traditionnel
     out, i = [], 0
     while i < len(x):
         j = x.find('<span lang="zh-Hant">', i)
-        if j < 0: out.append(''.join(T.get(c, c) for c in x[i:])); break
+        if j < 0: out.append(conv(x[i:])); break
         k = x.index('</span>', j) + 7
-        out.append(''.join(T.get(c, c) for c in x[i:j])); out.append(x[j:k]); i = k
+        out.append(conv(x[i:j])); out.append(x[j:k]); i = k
     return ''.join(out)
 
 

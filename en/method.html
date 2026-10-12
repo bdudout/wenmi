@@ -122,7 +122,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   <h2 id="depart">Starting point: published work</h2>
   <div class="credit">
     <p>Starting point: the article “<a href="https://dbourdeau.github.io/cyphersolver/sunintercepts.html">Sun Yat-sen's circle on the wire, 1916–17</a>”<sup class="fn"><a href="sources.html#s1">[1]</a></sup> and the repository <a href="https://github.com/dbourdeau/cyphersolver">dbourdeau/cyphersolver</a><sup class="fn"><a href="sources.html#s2">[2]</a></sup>, which publish transcriptions of the forms and the decipherment of some sixty telegrams of Sun Yat-sen's circle. Those telegrams use “condenser” tables in the line of Yamada Junzaburō's tables, published by S. Tomokiyo on Cryptiana<sup class="fn"><a href="sources.html#s8">[8]</a></sup>: 20 consonants and 5 vowels, i.e. 100 syllables, one per number from 00 to 99.</p>
-    <p><span lang="zh-Hant">文密</span> stands apart: ten-letter words, <i>w</i> as a consonant, <i>y</i> as a vowel; it is listed there among the open problems<sup class="fn"><a href="sources.html#s1">[1]</a></sup>. We started from the identified documents and the transcriptions, and from the idea that half a telegraph code becomes one syllable. What follows shows that, for the Tokyo stream, the table does follow a simple rule: reversed alphabet, two consonants per ten, serpentine vowels.</p>
+    <p>Zhao Shen's enciphered telegrams stand apart: ten-letter words, no apparent additive; they were listed there among the open problems<sup class="fn"><a href="sources.html#s1">[1]</a></sup>. Those of the Military Affairs Council channel usually open with the clear prefix <code>2429 1378</code>, which reads <span lang="zh-Hant">文密</span>: this is the name of that cipher. His telegrams to Yunnan, built the same way but with six vowels, open with the indicator “Cg”. We started from the identified documents and the transcriptions, and from the idea that half a telegraph code becomes one syllable. What follows shows that, for the Council channel, the table does follow a simple rule: reversed alphabet, two consonants per ten, serpentine vowels.</p>
   </div>
 
   <h2 id="regles">Ground rules</h2>
@@ -205,7 +205,7 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   <p>Limitations: G0 was <em>read off</em> a fitted table and Y0 deduced from five anchors; they did not fall from the sky; the last reading batches were not blind; and the translations are working translations.</p>
 
   <h2 id="canal2">Step 6 — The second channel and the Y0 grid</h2>
-  <p>Another group of forms also bears the name <span lang="zh-Hant">文密</span>: 15 forms from July to November 1916 between Tokyo and Yunnan, signed by Zhao Shen or addressed to him. Their alphabet differs: <i>y</i> is a vowel, and G0 gives nothing. The rank test shows the same coordinate structure (consonants z ≈ 22, vowels z ≈ 5), but four rounds of annealing searches (E26 to E29), even with human readings and date anchors, stay negative: the solver recovers its positive controls perfectly, but the held-out message (0496a) stalls at +0.9 per character, far from the +2.5 threshold.</p>
+  <p>Another group of forms, without the name <span lang="zh-Hant">文密</span>, comes from the same sender: 15 forms from July to November 1916 between Tokyo and Yunnan, signed by Zhao Shen or addressed to him, which usually open with the clear indicator “Cg”. Their alphabet differs: <i>y</i> is a vowel, and G0 gives nothing. The rank test shows the same coordinate structure (consonants z ≈ 22, vowels z ≈ 5), but four rounds of annealing searches (E26 to E29), even with human readings and date anchors, stay negative: the solver recovers its positive controls perfectly, but the held-out message (0496a) stalls at +0.9 per character, far from the +2.5 threshold.</p>
   <p>The breakthrough came from human reading of the headers and message endings:</p>
   <ul>
     <li>a telegram of 5 November (0489b) was sent <strong>in clear</strong>: <span lang="zh-Hant">十號起程月末抵滇 伸 歌</span>, "leaving on the 10th, arriving in Yunnan at the end of the month; Shen; the 5th". The enciphered telegram of the same day ends with <code>buky hary</code>: <code>buky</code> = <span lang="zh-Hant">伸</span> (0135), <code>hary</code> = <span lang="zh-Hant">歌</span> (2960, rhyme of the 5th);</li>
@@ -227,7 +227,7 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
   <p>This channel also corrected the first: the Zhaoqing telegram of 19 July ended with an impossible code, while its Yunnan twin, sent the same day, ends properly with <span lang="zh-Hant">伸皓</span> (the 19th). Re-read on the image, the faulty letter is an <i>i</i> instead of an <i>e</i>: in Morse, e is · and i is ··.</p>
 
   <h2 id="ouvert">The open problem: the 1917 messages</h2>
-  <p>Of the three known images bearing <span lang="zh-Hant">文密</span>, one is now read: 0416 (July 1916), on both channels. The other two, 0509 and 0511 (June 1917, Sun Yat-sen ↔ Dai Jitao), resist. Their alphabet is different again (<i>c</i> and <i>j</i> present, <i>y</i> both consonant and vowel, a few atypical groups). Neither G0 nor Y0 reads them, and a search through a family of 193,632 grids of the same type (E30) shows nothing beyond chance. <mark class="unc">The machine readings of these forms may be to blame</mark>; a blind human reading is under way.</p>
+  <p>The two enciphered telegrams of June 1917, 0509 and 0511 (Sun Yat-sen ↔ Dai Jitao), resist. They bear neither the <span lang="zh-Hant">文密</span> prefix nor the “Cg” indicator, and their alphabet is different again (<i>c</i> and <i>j</i> present, <i>y</i> both consonant and vowel, a few atypical groups). Neither G0 nor Y0 reads them, and none of the table families tested since (grids of the same type, 17 or 18 × 6 tables in any order, coordinates with anchors, probable words) brings out anything beyond chance. The blind human reading, the possible confusions and all the leads are set out on the <a href="telegrams.html#t1917">Telegrams</a> page.</p>
 
   <h2 id="outils">Tools</h2>
   <ul>
@@ -249,6 +249,6 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
 <script src="../assets/js/messages.js?v=2b222c7bcb"></script>
 <script src="../assets/js/messages-y0.js?v=6a55d942c3"></script>
 <script src="../assets/js/translations.js?v=1e3a1b94fa"></script>
-<script src="../assets/js/site.js?v=e17152062a"></script>
+<script src="../assets/js/site.js?v=a5c6b636c3"></script>
 </body>
 </html>

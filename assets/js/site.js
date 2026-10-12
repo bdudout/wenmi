@@ -271,8 +271,8 @@
     if (K && KI) {
       var st = K.stats;
       h += '<section class="tg tg-group" id="c1916"><h2>' + esc(KI.title) + '</h2>' + KI.intro +
-        '<p class="corpus-stats">' + esc(KI.stats.replace('{tels}', st.tels).replace('{codes}', st.codes).replace('{fixed}', st.fixed)
-          .replace('{added}', st.added).replace('{conf}', st['confirmé']).replace('{douteux}', st.douteux)) + '</p><nav class="corpus-toc">';
+        '<p class="corpus-stats">' + esc(KI.stats.replace('{tels}', st.tels).replace('{codes}', st.codes).replace('{chg}', st.corr + st.sugg + st.new).replace('{corr}', st.corr)
+          .replace('{sugg}', st.sugg).replace('{new}', st['new']).replace('{added}', st.added).replace('{conf}', st['confirmé']).replace('{douteux}', st.douteux)) + '</p><nav class="corpus-toc">';
       K.order.forEach(function (g) {
         h += '<div><strong>' + esc(KI.channel[g] || g) + '</strong> ';
         K.messages.filter(function (m) { return m.grid === g; }).forEach(function (m) { h += '<a href="#t' + m.id + '">' + m.label + '</a> '; });
