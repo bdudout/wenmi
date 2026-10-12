@@ -368,6 +368,9 @@ table.y1917 td:nth-child(2) { white-space: nowrap; }
 table.y1917.pistes td:first-child { color: var(--ink); font-weight: 600; white-space: normal; min-width: 8rem; }
 table.y1917.pistes td:nth-child(2) { white-space: normal; }
 table.y1917.pistes td:last-child { min-width: 7rem; }
+table.y1917.inv td:nth-child(2) { white-space: normal; color: var(--muted); }
+table.y1917.inv td:nth-child(3), table.y1917.inv td:nth-child(4) { white-space: nowrap; }
+table.y1917.inv b { color: var(--accent, inherit); }
 #t1917 h3 small { font-weight: normal; color: var(--muted); }
 
 /* astérisque du titre d'accueil : Wenmi de 1916, pas de 1917 */
