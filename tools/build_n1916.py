@@ -27,8 +27,8 @@ R = {
  'n0605a': ('廖先生鑒：弟促‹姊›何‹下›覆。‹紀›‹文›', []),
  'n0605b': ('濰縣函索飛機，尾崎已赴‹担›，請先生就近商議。澳款用‹伐›‹苤›‹嬲›‹名›', []),
  'n0607': ('袁賊旣死，速定大計。持決乘春日丸歸。', []),
- 'n0615': ('電悉。不兌換可否加暫順券面？應否署名？{如}署，以何人爲宜？但先生署名恐有抵觸。弟可否隨券到‹逆›？‹兆›‹銘›又萱{野}偕坂本攜‹剪›‹風›機往‹餽›。'
-           '機校由立花代理，學‹玤›中‹坵›無或‹勁›‹丸›望，坂本商‹顆›改換，速‹訏›‹重›‹民›‹删›', [('P', ['lecture', 'sens']), ('P', ['contexte'])]),
+ 'n0615': ('電悉。不兌換可否加暫順券面？應否署名？{如}署，以何人爲宜？但先生署名恐有抵觸。弟可否隨券到‹逆›？‹兆›‹銘›又萱野偕坂本攜‹剪›‹風›機往‹餽›。'
+           '機校由立花代理，學生中‹坵›無或‹勁›之望，坂本商‹説›改換，速覆。‹重›‹民›‹删›', [('P', ['lecture', 'sens'])]),
 }
 # codes rares pour le modèle de langue mais sûrs : (caractère → type)
 CONF = {'n0517': {'仟': 'mot', '瑾': 'nom', '篠': 'date'}, 'n0531a': {'卅': 'date'}, 'n0531b': {'濰': 'nom'},
@@ -90,7 +90,7 @@ TR = {
   'n0605a': "À Monsieur Liao : […] répondez. […]",
   'n0605b': "Weixian demande des avions par lettre ; Ozaki est déjà parti pour […] ; prière à Monsieur de se concerter sur place. Les fonds de Macao (?) […]",
   'n0607': "Yuan le traître est mort : arrêtez vite le grand plan. Chi a décidé de rentrer par le Kasuga-maru.",
-  'n0615': "Télégramme reçu. Les billets non convertibles : peut-on ajouter au recto la mention « billet provisoire » ? Faut-il les signer ? Si oui, qui vaut-il mieux faire signer ? Mais la signature de Monsieur [Sun] risque de poser problème. Puis-je partir avec les billets ? […] Kayano (萱野), avec Sakamoto (坂本), emporte […] avion(s) vers […]. L'école d'aviation est confiée à titre provisoire à Tachibana (立花) […].",
+  'n0615': "Télégramme reçu. Les billets non convertibles : peut-on ajouter au recto la mention « billet provisoire » ? Faut-il les signer ? Si oui, qui vaut-il mieux faire signer ? Mais la signature de Monsieur [Sun] risque de poser problème. Puis-je partir avec les billets ? […] Kayano (萱野), avec Sakamoto (坂本), emporte […] avion(s) vers […]. L'école d'aviation est confiée à titre provisoire à Tachibana (立花) ; parmi les élèves, […] aucun espoir […]. Sakamoto propose (?) de changer […] ; répondez vite. […]",
  },
  'en': {
   'n0517': "As for the 3,000 in funds: may 2,000 be given to Xi Zhengming and 500 to Zhao Jinqing? Reply. — Chi (Xie Chi). The 17th.",
@@ -102,7 +102,7 @@ TR = {
   'n0605a': "To Mr Liao: […] reply. […]",
   'n0605b': "Weixian asks for aircraft by letter; Ozaki has already left for […]; please, Sir, consult on the spot. The Macao (?) funds […]",
   'n0607': "Yuan the traitor is dead: settle the great plan quickly. Chi has decided to return on the Kasuga-maru.",
-  'n0615': "Telegram received. The inconvertible notes: may 'provisional note' be added on the face? Should they be signed? If so, who would be best to sign? But Sir [Sun]'s signature might cause problems. May I travel with the notes? […] Kayano (萱野), together with Sakamoto (坂本), takes […] aircraft to […]. The flying school is entrusted for the time being to Tachibana (立花) […].",
+  'n0615': "Telegram received. The inconvertible notes: may 'provisional note' be added on the face? Should they be signed? If so, who would be best to sign? But Sir [Sun]'s signature might cause problems. May I travel with the notes? […] Kayano (萱野), together with Sakamoto (坂本), takes […] aircraft to […]. The flying school is entrusted for the time being to Tachibana (立花); among the students, […] no hope […]. Sakamoto suggests (?) changing […]; reply quickly. […]",
  },
  'zh-Hant': {
   'n0517': "款三仟，可否給席正銘二仟、趙瑾卿五百？望覆。持。篠（十七日）。",
@@ -114,7 +114,7 @@ TR = {
   'n0605a': "廖先生鑒：……覆。……",
   'n0605b': "濰縣來函索飛機，尾崎已赴……，請先生就近商議。澳款……",
   'n0607': "袁賊既死，速定大計。持決乘春日丸歸。",
-  'n0615': "電悉。不兌換券可否加「暫順券」於券面？應否署名？如署，以何人為宜？但先生署名恐有抵觸。弟可否隨券到……？……萱野偕坂本攜……機往……。飛機學校由立花代理……。",
+  'n0615': "電悉。不兌換券可否加「暫順券」於券面？應否署名？如署，以何人為宜？但先生署名恐有抵觸。弟可否隨券到……？……萱野偕坂本攜……機往……。飛機學校由立花代理，學生中……無或……之望。坂本商（？）改換……，速覆。……",
  },
  'ja': {
   'n0517': "資金三千のうち、席正銘に二千、趙瑾卿に五百を与えてよいか。返電を。持（謝持）。篠（17日）。",
@@ -126,7 +126,7 @@ TR = {
   'n0605a': "廖先生へ：……返電を。……",
   'n0605b': "濰県から書簡で飛行機を求めてきた。尾崎はすでに……へ向かった。先生には現地で協議されたい。澳門（？）の資金……",
   'n0607': "袁賊はすでに死んだ。速やかに大計を定められたい。持は春日丸で帰ることに決めた。",
-  'n0615': "電報拝見。兌換されない券に「暫順券」と券面に加えてよいか。署名すべきか。署名するなら誰がよいか。ただし先生の署名は差し支えがあるかもしれない。私が券とともに……へ行ってよいか。……萱野は坂本とともに飛行機を……へ持って行く。飛行学校は立花が代理……。",
+  'n0615': "電報拝見。兌換されない券に「暫順券」と券面に加えてよいか。署名すべきか。署名するなら誰がよいか。ただし先生の署名は差し支えがあるかもしれない。私が券とともに……へ行ってよいか。……萱野は坂本とともに飛行機を持って……へ行く。飛行学校は立花が代理する。学生のうち……の望みはない……。坂本は……の変更を相談（？）。至急返電を。……",
  },
 }
 
