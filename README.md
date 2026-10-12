@@ -1,5 +1,7 @@
 # Le code Wenmi · 文密
 
+**Site : <https://bdudout.github.io/wenmi/>** (français, English, 简体中文, 繁體中文, 日本語)
+
 Par **Brice Dudout**, en collaboration avec Claude (Anthropic) — licence [CC BY 4.0](LICENSE) (mentions et exceptions : [NOTICE.md](NOTICE.md)).
 
 Site statique présentant le déchiffrement du code **文密 (Wenmi)** : télégrammes chiffrés de 1916
