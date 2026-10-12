@@ -28,7 +28,7 @@ Il s'appuie aussi sur les travaux de **S. Tomokiyo** sur le site [Cryptiana](htt
 index.html              page de choix de langue (redirige selon la langue du navigateur)
 fr/ en/ zh-hans/ zh-hant/ ja/
                         pages GÉNÉRÉES (ne pas éditer à la main)
-content/<langue>/       corps des pages (index, history, method, telegrams, sources) — à éditer
+content/<langue>/       corps des pages (index, history, method, telegrams, relecture, sources) — à éditer
 assets/css/style.css    styles (thème clair/sombre, marqueur « non confirmé »)
 assets/js/site.js       thème, grille G0, décodeur pas à pas
 assets/js/messages.js   canal Tokyo → Zhaoqing (grille G0) : unités, codes, caractères (GÉNÉRÉ)
@@ -44,6 +44,10 @@ tools/build_data.py     extrait messages.js de l'édition et vérifie la grille 
 tools/build_data_y0.py  décode le second canal sous Y0 et vérifie contre c31-decodage-Y0.md
 tools/make_flags.py     dessine les drapeaux en SVG
 tools/build_corpus.py   page « Télégrammes » : statut de chaque code, pistes d'erreur Morse/copie
+tools/build_condensateurs.py  télégrammes à condensateur de 1916 relus sur les scans (assets/js/corpus-c1916.js, GÉNÉRÉ)
+tools/restitution_c1916.py    leur version lisible, propositions, statuts et mots clés
+tools/c1916_i18n.py      leurs libellés et traductions de travail (5 langues ; chinois simplifié dérivé du traditionnel)
+tools/make_fiches_c1916.py    leurs fiches (scan + carte) et les formulaires de juin 1917 (0509, 0511)
 tools/make_media.py     carte, vidéo de l'histoire, animation du déchiffrement, sous-titres (5 langues)
 assets/media/           vidéos MP4 et sous-titres WebVTT (GÉNÉRÉS)
 assets/img/portraits/   portraits du domaine public (Wikimedia Commons), crédits dans credits.json
@@ -76,6 +80,8 @@ n'est pas versionné ; ffmpeg requis) :
 
 ```bash
 python3 tools/build_corpus.py ../wenmi
+python3 tools/build_condensateurs.py ../wenmi
+python3 tools/make_fiches_c1916.py ../wenmi chemin/vers/ne_110m_land.geojson all
 python3 tools/make_media.py chemin/vers/ne_110m_land.geojson all
 ```
 
