@@ -288,9 +288,17 @@
       var ns = N.stats;
       h += '<section class="tg tg-group" id="n1916"><h2>' + esc(NI.title) + '</h2>' + NI.intro +
         '<p class="corpus-stats">' + esc(NI.stats.replace('{tels}', ns.tels).replace('{codes}', ns.codes).replace('{conf}', ns['confirmé']).replace('{douteux}', ns.douteux)) +
-        '</p><nav class="corpus-toc"><div><strong>' + esc(NI.channel.yamada1916) + '</strong> ';
-      N.messages.forEach(function (m) { h += '<a href="#t' + m.id + '">' + m.label + '</a> '; });
-      h += '</div></nav></section>';
+        '</p><nav class="corpus-toc">';
+      // sommaire groupé par canal (m.toc, sinon la clé) ; les intitulés viennent de NI.toc ou NI.channel
+      var groups = NI.toc || NI.channel;
+      Object.keys(groups).forEach(function (g) {
+        var ms = N.messages.filter(function (m) { return (m.toc || m.grid) === g; });
+        if (!ms.length) return;
+        h += '<div><strong>' + esc(groups[g]) + '</strong> ';
+        ms.forEach(function (m) { h += '<a href="#t' + m.id + '">' + m.label + '</a> '; });
+        h += '</div>';
+      });
+      h += '</nav></section>';
       N.messages.forEach(function (m) { h += tg(m, NI, NI); });
     }
     box.innerHTML = h;

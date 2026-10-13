@@ -41,7 +41,8 @@ assets/img/illustrations/ six reconstitutions IA locales en WebP ; légendes mul
 tools/illustrations.py  placement et légendes des illustrations lors du build
 assets/img/flags/       drapeaux du sélecteur de langue (SVG, GÉNÉRÉS)
 tools/make_fiches.py    fiche de chaque télégramme : scan JACAR recadré + mini-carte (assets/img/fiches/)
-tools/build_n1916.py    nouveaux déchiffrements de mai–juin 1916 (condensateur Yamada) → assets/js/corpus-n1916.js
+tools/build_n1916.py    nouveaux déchiffrements de mai–juin 1916 (clés Yamada et Manille) → assets/js/corpus-n1916.js
+tools/make_fiches_n1916.py    leurs fiches (scan JACAR + mini-carte), n° d'image = page du PDF + décalage du dossier
 tools/build.py          assemble content/ + gabarit → <langue>/*.html
 tools/build_data.py     extrait messages.js de l'édition et vérifie la grille G0
 tools/build_data_y0.py  décode le second canal sous Y0 et vérifie contre c31-decodage-Y0.md
@@ -85,6 +86,8 @@ n'est pas versionné ; ffmpeg requis) :
 python3 tools/build_corpus.py ../wenmi
 python3 tools/build_condensateurs.py ../wenmi
 python3 tools/make_fiches_c1916.py ../wenmi chemin/vers/ne_110m_land.geojson all
+python3 tools/build_n1916.py ../wenmi
+python3 tools/make_fiches_n1916.py ../wenmi chemin/vers/ne_110m_land.geojson all
 python3 tools/make_media.py chemin/vers/ne_110m_land.geojson all
 ```
 
