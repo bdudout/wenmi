@@ -240,22 +240,22 @@ for _lang in ('fr', 'en', 'zh-Hant', 'ja'): TR[_lang].update(_MAI[_lang])
 _INTRO_MAI = {
  'fr': ('<p><strong>Ajout du 13 octobre 2026 : le début de mai 1916 (JACAR B03050089000).</strong> Quatorze télégrammes de plus, du 3 au 15 mai. '
         'Outre les messages de Tokyo à « Junzaburo », ce lot contient des <em>réponses</em> parties de Shanghai vers Tokyo (adresse « Linwailuk »), '
-        'chiffrées avec le même condensateur ; l\'une est signée <span lang="zh-Hant">文</span> (Sun Wen, c\'est-à-dire Sun Yat-sen). Le télégramme du 12 mai porte un autre préfixe, « Thirtyeight », et se lit avec une <strong>table nouvelle</strong>, retrouvée ici (voir l\'article <a href="method.html#mai1916">Méthode</a>). '
+        'chiffrées avec le même condensateur ; l\'une est signée <span lang="zh-Hant">文</span> (Sun Wen, c\'est-à-dire Sun Yat-sen). Le télégramme du 12 mai porte un autre préfixe, « Thirtyeight », et se lit avec une <strong>table nouvelle</strong>, retrouvée ici (voir l\'article <a href="method.html#thirtyeight">Méthode</a>). '
         'Un télégramme de Manille à Tōyama Mitsuru (頭山滿), relayé tel quel vers Shanghai, se lit avec la clé de Manille à Tōyama déjà publiée' + SUP +
         ' et porte la signature <span lang="zh-Hant">誠</span>. Les lettres ont été lues par Claude ; les 23 mots douteux ont été '
         '<strong>vérifiés à l\'image par Brice Dudout</strong> (les autres n\'ont pas été relus lettre par lettre).</p>'),
  'en': ('<p><strong>Added 13 October 2026: early May 1916 (JACAR B03050089000).</strong> Fourteen more telegrams, from 3 to 15 May. '
         'Besides the messages from Tokyo to “Junzaburo”, this batch contains <em>replies</em> sent from Shanghai to Tokyo (address “Linwailuk”), '
-        'enciphered with the same condenser; one is signed <span lang="zh-Hant">文</span> (Sun Wen, that is, Sun Yat-sen). The telegram of 12 May carries a different prefix, “Thirtyeight”, and reads with a <strong>new table</strong>, recovered here (see the <a href="method.html#mai1916">Method</a> article). '
+        'enciphered with the same condenser; one is signed <span lang="zh-Hant">文</span> (Sun Wen, that is, Sun Yat-sen). The telegram of 12 May carries a different prefix, “Thirtyeight”, and reads with a <strong>new table</strong>, recovered here (see the <a href="method.html#thirtyeight">Method</a> article). '
         'A telegram from Manila to Tōyama Mitsuru (頭山滿), relayed verbatim to Shanghai, reads with the Manila-to-Tōyama key already published' + SUP +
         ' and is signed <span lang="zh-Hant">誠</span>. The letters were read by Claude; the 23 doubtful words were '
         '<strong>checked against the image by Brice Dudout</strong> (the others were not re-read letter by letter).</p>'),
  'zh-Hant': ('<p><strong>2026年10月13日補充：1916年5月上旬（JACAR B03050089000）。</strong>新增十四封電報（5月3日至15日）。除東京致「Junzaburo」的電報外，'
-        '本批還有由上海發往東京（地址「Linwailuk」）的<em>覆電</em>，使用同一壓縮碼；其中一封署名<span lang="zh-Hant">文</span>（孫文）。5月12日電冠以另一前綴「Thirtyeight」，以此處找出的<strong>新碼表</strong>讀出（見<a href="method.html#mai1916">方法</a>一文）。'
+        '本批還有由上海發往東京（地址「Linwailuk」）的<em>覆電</em>，使用同一壓縮碼；其中一封署名<span lang="zh-Hant">文</span>（孫文）。5月12日電冠以另一前綴「Thirtyeight」，以此處找出的<strong>新碼表</strong>讀出（見<a href="method.html#thirtyeight">方法</a>一文）。'
         '一封馬尼拉致頭山滿的電報，原樣轉發上海，以已發表的馬尼拉→頭山密鑰' + SUP + '讀出，署名<span lang="zh-Hant">誠</span>。'
         '字母由 Claude 讀出，其中23個存疑詞已由 Brice Dudout <strong>對照影像核對</strong>（其餘未逐字母重讀）。</p>'),
  'ja': ('<p><strong>2026年10月13日追加：1916年5月上旬（JACAR B03050089000）。</strong>5月3日から15日までの電報14通を追加。東京から「Junzaburo」宛の電報に加え、'
-        'この束には上海から東京（宛名「Linwailuk」）への<em>返電</em>があり、同じ圧縮符号で暗号化されている。うち1通は<span lang="zh-Hant">文</span>（孫文）の署名。5月12日の電報は別の前置語「Thirtyeight」を持ち、ここで復元した<strong>新しい表</strong>で読める（<a href="method.html#mai1916">方法</a>の記事を参照）。'
+        'この束には上海から東京（宛名「Linwailuk」）への<em>返電</em>があり、同じ圧縮符号で暗号化されている。うち1通は<span lang="zh-Hant">文</span>（孫文）の署名。5月12日の電報は別の前置語「Thirtyeight」を持ち、ここで復元した<strong>新しい表</strong>で読める（<a href="method.html#thirtyeight">方法</a>の記事を参照）。'
         'マニラから頭山満宛の電報は、そのまま上海へ転送されており、既発表のマニラ→頭山鍵' + SUP + 'で読め、<span lang="zh-Hant">誠</span>の署名がある。'
         '文字は Claude が読み、疑わしい23語は Brice Dudout が<strong>画像と照合した</strong>（その他は一文字ずつは再読していない）。</p>'),
 }
