@@ -16,6 +16,24 @@ import restitution, c1916_i18n                        # noqa: E402
 from n1916_streams import SEL, EXTRA_KEYS, KEY, ROUTE as ROUTES, LOCAL, IMG_OFFSET, POS   # noqa: E402
 bkeys = BC.bkeys; C2CH, uni, REF = BC.C2CH, BC.uni, BC.REF
 for _k, _t in EXTRA_KEYS.items(): bkeys.KEYS.setdefault(_k, _t)
+# variante « Aloha » de la clé « Honolulu » (Bourdeau) : w à la place de v (Honolulu → Tokyo, avril 1916, signé 鐵城)
+bkeys.KEYS.setdefault('honolulu1916w', {**bkeys.KEYS['honolulu1916'], **{'w' + v: bkeys.KEYS['honolulu1916']['v' + v] for v in 'aeiou'}})
+def edit_path_alias(l4, T, target):
+    """comme BC.edit_path, mais parmi les syllabes de même valeur (w/v, w/p…) garde celle qui est écrite si elle convient"""
+    by = {}
+    for k, v in T.items(): by.setdefault(v, []).append(k)
+    best = None
+    for code in BC.CH2CODES.get(target, []):
+        a, b = int(code[:2]), int(code[2:])
+        if a not in by or b not in by: continue
+        cost = lambda x, o: (sum(p != q for p, q in zip(x, o)), x[0] not in BC.CONS)   # à égalité : la lettre de référence (p, v…)
+        h1 = min(by[a], key=lambda x: cost(x, l4[:2])); h2 = min(by[b], key=lambda x: cost(x, l4[2:]))
+        tgt = h1 + h2; d = [k for k in range(4) if l4[k] != tgt[k]]
+        if best is None or len(d) < len(best[1]): best = (code, d, tgt)
+    if best is None: return None
+    code, d, tgt = best
+    return {'code': code, 'to_letters': tgt, 'edits': [{'from': l4[k], 'to': tgt[k], 'kind': BC.kind_of(l4[k], tgt[k]),
+            'morse': [BC.MORSE[l4[k]], BC.MORSE[tgt[k]]]} for k in d]}
 CH = lambda c: C2CH.get(c, '□')                      # code absent du code télégraphique standard
 
 # version lisible : {x} = proposition (≤ 2 lettres), ‹x› = caractère décodé laissé douteux
@@ -44,7 +62,7 @@ SUP = c1916_i18n.SUP
 
 LAB = {
  'fr': dict(
-  title='Télégrammes nouvellement déchiffrés, mai–juin 1916',
+  title='Télégrammes nouvellement déchiffrés, avril–juin 1916',
   intro=('<p><strong>Nouveaux déchiffrements (octobre 2026), inédits à notre connaissance.</strong> Dix télégrammes envoyés de Tokyo à « Junzaburo » '
          '(Yamada Junzaburō, Shanghai) entre le 17 mai et le 15 juin 1916, chiffrés avec le condensateur « Yamada » déjà identifié' + SUP + ', mais '
          'absents des transcriptions publiées : ils se trouvent dans les envois suivants du ministère des Communications (JACAR B03050089000, '
@@ -54,7 +72,7 @@ LAB = {
   read='Lettres du formulaire (lues sur le scan, vérifiées)', stats='{tels} télégrammes, {codes} codes ; {conf} codes rares mais confirmés, {douteux} douteux.',
   label='Traduction de travail.', channel={'yamada1916': 'Condensateur « Yamada » (Tokyo → Shanghai)'}),
  'en': dict(
-  title='Newly deciphered telegrams, May–June 1916',
+  title='Newly deciphered telegrams, April–June 1916',
   intro=('<p><strong>New decipherments (October 2026), unpublished as far as we know.</strong> Ten telegrams sent from Tokyo to “Junzaburo” '
          '(Yamada Junzaburō, Shanghai) between 17 May and 15 June 1916, enciphered with the “Yamada” condenser already identified' + SUP + ', but '
          'absent from the published transcriptions: they are in the following batches of the Ministry of Communications (JACAR B03050089000, '
@@ -64,7 +82,7 @@ LAB = {
   read='Letters on the form (read on the scan, checked)', stats='{tels} telegrams, {codes} codes; {conf} rare but confirmed codes, {douteux} doubtful.',
   label='Working translation.', channel={'yamada1916': 'Condenser “Yamada” (Tokyo → Shanghai)'}),
  'zh-Hant': dict(
-  title='新破譯的電報（1916年5月至6月）',
+  title='新破譯的電報（1916年4月至6月）',
   intro=('<p><strong>新破譯（2026年10月），據我們所知尚未發表。</strong>1916年5月17日至6月15日由東京發往「Junzaburo」（上海山田純三郎）的十封電報，'
          '使用已知的「山田」壓縮碼' + SUP + '，但不見於已發表的轉寫：它們收在遞信省其後幾批送件中（JACAR B03050089000、B03050089200、B03050089400）。'
          '字母由 Claude 依掃描影像讀出，再由 Brice Dudout 對照影像逐字母核對。多數署名<span lang="zh-Hant">持</span>（謝持），韻目日期與電報紙相符。'
@@ -72,7 +90,7 @@ LAB = {
   read='電報紙上的字母（依掃描影像讀出並核對）', stats='{tels}封電報，{codes}個電碼；罕見但已確認{conf}個，存疑{douteux}個。',
   label='斷句與白話大意（工作譯文）。', channel={'yamada1916': '壓縮碼「山田」（東京 → 上海）'}),
  'ja': dict(
-  title='新たに解読した電報（1916年5〜6月）',
+  title='新たに解読した電報（1916年4〜6月）',
   intro=('<p><strong>新たな解読（2026年10月）、管見の限り未公表。</strong>1916年5月17日から6月15日に東京から「Junzaburo」（上海の山田純三郎）へ送られた10通。'
          'すでに知られた「山田」圧縮符号' + SUP + 'で暗号化されているが、公開された翻字には含まれず、逓信省のその後の送付分（JACAR B03050089000、B03050089200、'
          'B03050089400）にある。文字は Claude が画像から読み、Brice Dudout が画像と一文字ずつ照合した。多くは<span lang="zh-Hant">持</span>（謝持）の署名で、'
@@ -152,11 +170,12 @@ R.update({
  's0506': ('{請}覆邵：地點未備，人緩招募，械則安置安東，待時而用。款六千由正金購。所持‹亶›投票寄‹愷›', []),
  's0508': ('已{到}津學生請酌‹擎›款維持，{待}得濟南令役餘‹孌›。楊丙停歷招集。邵事目前不能辦，本部文下足則六十勿匯奶也。齊', []),
  's0515': ('速辰十圓、百圓券各二{萬}，加福建專用章，交陳羣轉黃展雲。此間款盡，難再籌。請‹韞›覆各處', []),
+ 'h0430': ('{黃}{轉}到{日}，換船{赴}滬。鐵城', []),
  'm0503': ('款匯港，債券無存，請‹皤›趣漢‹苞›‹擎›券伍仟圓、証書及{陞}等功章速附佳弟。擬日間回國。誠叩', []),
 })
 
 P_, Q_ = lambda *r: ('P', list(r)), lambda *r: ('Q', list(r))
-_LV = {'n0503a': [P_('sens'), P_('sens', 'contexte'), Q_('sens')], 'n0510': [P_('sens'), P_('sens'), P_('structure')], 'n0511': [P_('sens', 'structure')], 'n0512': [P_('sens')], 'n0504a': [P_('structure', 'sens')],
+_LV = {'n0503a': [P_('sens'), P_('sens', 'contexte'), Q_('sens')], 'n0510': [P_('sens'), P_('sens'), P_('structure')], 'n0511': [P_('sens', 'structure')], 'h0430': [Q_('contexte'), P_('sens'), P_('sens'), P_('sens')], 'n0512': [P_('sens')], 'n0504a': [P_('structure', 'sens')],
        'n0504b': [P_('sens', 'contexte'), P_('sens')], 'n0506': [P_('sens')], 'n0508': [Q_('sens')], 'n0515': [P_('sens')] * 8,
        's0505': [P_('sens', 'contexte'), Q_('sens')], 's0506': [Q_('sens')], 's0508': [P_('sens'), Q_('sens')], 's0515': [P_('sens', 'contexte')],
        'm0503': [P_('sens', 'jumeau')]}
@@ -167,7 +186,7 @@ CONF.update({'n0503a': {'愷': 'nom', '江': 'date'}, 'n0512': {'塚': 'nom'}, '
              'n0508': {'占': 'mot', '濰': 'nom', '却': 'variante'}, 'n0515': {'絶': 'variante', '删': 'date'}, 'm0503': {'仟': 'mot', '証': 'variante'}})
 KEYS.update({'n0503a': ['兆銘', '債券', '仲愷'], 'n0503b': ['博愛丸'], 'n0504a': ['邵子峯', '王煥夏', '鴨綠江', '安東', '坂本', '春日丸'],
              'n0504b': ['現款六仟', '深谷', '中須賀'], 'n0506': ['楊丙', '天津', '學生'], 'n0508': ['覺生', '周村', '濰縣', '邵子峯'],
-             'n0510': ['克強', '避人', '舉事', '金山'], 'n0512': ['犬塚', '法船'], 'n0511': ['張繼', '回日'], 'n0515': ['克強', '參謀部', '席正銘', '保定軍校', '天津'],
+             'n0510': ['克強', '避人', '舉事', '金山'], 'n0512': ['犬塚', '法船'], 'n0511': ['張繼', '回日'], 'h0430': ['黃', '換船', '鐵城'], 'n0515': ['克強', '參謀部', '席正銘', '保定軍校', '天津'],
              's0505': ['百圓券', '春洋丸', '梅喬林', '文'], 's0506': ['邵', '安東', '正金'], 's0508': ['學生', '濟南', '楊丙', '邵'],
              's0515': ['福建', '陳羣', '黃展雲'], 'm0503': ['債券', '陞等功章', '誠']})
 _MAI = {
@@ -186,6 +205,7 @@ _MAI = {
   's0506': "Répondez à Shao : le lieu n'est pas prêt ; ralentir le recrutement ; les armes, les garder à Andong jusqu'au moment de s'en servir. Les 6 000 de fonds passent par la Yokohama Specie Bank (正金). […]",
   's0508': "Les étudiants déjà arrivés à Tianjin : allouez[-leur] des fonds pour les entretenir, en attendant l'ordre de Jinan […]. Que Yang Bing cesse de recruter. L'affaire de Shao ne peut être traitée pour l'instant ; quand le document du quartier général sera parvenu, […] n'envoyez pas d'argent. — Le 8.",
   's0515': "Vite, des billets de 10 et de 100 yuans, 20 000 de chaque, avec le sceau spécial du Fujian, à remettre à Chen Qun (陳羣) pour Huang Zhanyun (黃展雲). Les fonds d'ici sont épuisés ; il est difficile d'en lever d'autres. Veuillez […] répondre partout.",
+  'h0430': 'Huang (黃, Huang Xing) passe au Japon et y changera de navire pour Shanghai. — Tiecheng (鐵城, Wu Tiecheng).',
   'm0503': "Fonds virés à Hong Kong ; il ne reste plus d'obligations ; prière […] 5 000 yuans de billets ; les certificats et les médailles de promotion et de mérite, à envoyer vite par […]. Je compte rentrer au pays ces jours-ci. — Cheng (誠), salutations.",
  },
  'en': {
@@ -203,6 +223,7 @@ _MAI = {
   's0506': "Reply to Shao: the place is not ready; slow down recruitment; keep the arms at Andong until the time comes to use them. The 6,000 in funds go through the Yokohama Specie Bank (正金). […]",
   's0508': "The students already arrived in Tianjin: please allot funds to keep them, pending the Jinan order […]. Yang Bing should stop recruiting. Shao's affair cannot be handled for now; once the headquarters' document has arrived, […] do not remit money. — The 8th.",
   's0515': "Quickly, notes of 10 and 100 yuan, 20,000 of each, with the special seal for Fujian, to be handed to Chen Qun (陳羣) for Huang Zhanyun (黃展雲). Funds here are exhausted; it is hard to raise more. Please […] reply everywhere.",
+  'h0430': 'Huang (黃, Huang Xing) is going on to Japan and will change ship there for Shanghai. — Tiecheng (鐵城, Wu Tiecheng).',
   'm0503': "Funds remitted to Hong Kong; no bonds are left; please […] 5,000 yuan in notes; the certificates and the promotion and merit medals, to be sent quickly by […]. I expect to return home in the next few days. — Cheng (誠), with respects.",
  },
  'ja': {
@@ -220,6 +241,7 @@ _MAI = {
   's0506': "邵に返電：場所の準備ができていない。募集は控え、武器は安東に保管して時機を待って使う。資金六千は正金（横浜正金銀行）経由。……",
   's0508': "すでに天津に着いた学生には資金を配分して維持し、済南の命令を待つ……。楊丙は募集を停止。邵の件は目下処理できない。本部の文書が届いたら……送金するな。齊（8日）。",
   's0515': "至急、十円券・百円券を各二万、福建専用印を付けて陳羣に渡し、黄展雲へ転送されたい。こちらの資金は尽き、これ以上調達しがたい。……各所に返答されたい。",
+  'h0430': '黄（黄興）は日本へ回り、船を乗り換えて上海へ向かう。鉄城（呉鉄城）。',
   'm0503': "資金は香港へ送金した。債券は残っていない。……券五千円、証書および昇進・功労章を至急……で送られたい。近日中に帰国するつもり。誠拝。",
  },
 }
@@ -238,25 +260,25 @@ for _lang in ('fr', 'en', 'zh-Hant', 'ja'): TR[_lang].update(_MAI[_lang])
 
 # lot du début mai : paragraphe ajouté à l'introduction, clés supplémentaires, lettres pas toutes vérifiées
 _INTRO_MAI = {
- 'fr': ('<p><strong>Ajout du 13 octobre 2026 : le début de mai 1916 (JACAR B03050089000).</strong> Quinze télégrammes de plus, du 3 au 15 mai. '
+ 'fr': ('<p><strong>Ajout du 13 octobre 2026 : le début de mai 1916 (JACAR B03050089000).</strong> Seize télégrammes de plus, du 30 avril au 15 mai. '
         'Outre les messages de Tokyo à « Junzaburo », ce lot contient des <em>réponses</em> parties de Shanghai vers Tokyo (adresse « Linwailuk »), '
         'chiffrées avec le même condensateur ; l\'une est signée <span lang="zh-Hant">文</span> (Sun Wen, c\'est-à-dire Sun Yat-sen). Les télégrammes des 11 et 12 mai portent un autre préfixe, « Thirtyeight », et se lisent avec une <strong>table nouvelle</strong>, retrouvée ici (voir l\'article <a href="method.html#thirtyeight">Méthode</a>). '
         'Un télégramme de Manille à Tōyama Mitsuru (頭山滿), relayé tel quel vers Shanghai, se lit avec la clé de Manille à Tōyama déjà publiée' + SUP +
-        ' et porte la signature <span lang="zh-Hant">誠</span>. Les lettres ont été lues par Claude ; les 23 mots douteux ont été '
+        ' et porte la signature <span lang="zh-Hant">誠</span>. Un télégramme d\'Honolulu (préfixe « Aloha »), signé <span lang="zh-Hant">鐵城</span> (Wu Tiecheng), se lit avec la clé « Honolulu » déjà publiée' + SUP + ', dans une variante où w s\'emploie comme seconde forme du v ; il annonce le passage de Huang Xing par le Japon. Les lettres ont été lues par Claude ; les 23 mots douteux ont été '
         '<strong>vérifiés à l\'image par Brice Dudout</strong> (les autres n\'ont pas été relus lettre par lettre).</p>'),
- 'en': ('<p><strong>Added 13 October 2026: early May 1916 (JACAR B03050089000).</strong> Fifteen more telegrams, from 3 to 15 May. '
+ 'en': ('<p><strong>Added 13 October 2026: early May 1916 (JACAR B03050089000).</strong> Sixteen more telegrams, from 30 April to 15 May. '
         'Besides the messages from Tokyo to “Junzaburo”, this batch contains <em>replies</em> sent from Shanghai to Tokyo (address “Linwailuk”), '
         'enciphered with the same condenser; one is signed <span lang="zh-Hant">文</span> (Sun Wen, that is, Sun Yat-sen). The telegrams of 11 and 12 May carry a different prefix, “Thirtyeight”, and read with a <strong>new table</strong>, recovered here (see the <a href="method.html#thirtyeight">Method</a> article). '
         'A telegram from Manila to Tōyama Mitsuru (頭山滿), relayed verbatim to Shanghai, reads with the Manila-to-Tōyama key already published' + SUP +
-        ' and is signed <span lang="zh-Hant">誠</span>. The letters were read by Claude; the 23 doubtful words were '
+        ' and is signed <span lang="zh-Hant">誠</span>. A telegram from Honolulu (prefix “Aloha”), signed <span lang="zh-Hant">鐵城</span> (Wu Tiecheng), reads with the “Honolulu” key already published' + SUP + ', in a variant where w is used as a second form of v; it announces Huang Xing\'s passage through Japan. The letters were read by Claude; the 23 doubtful words were '
         '<strong>checked against the image by Brice Dudout</strong> (the others were not re-read letter by letter).</p>'),
- 'zh-Hant': ('<p><strong>2026年10月13日補充：1916年5月上旬（JACAR B03050089000）。</strong>新增十五封電報（5月3日至15日）。除東京致「Junzaburo」的電報外，'
+ 'zh-Hant': ('<p><strong>2026年10月13日補充：1916年5月上旬（JACAR B03050089000）。</strong>新增十六封電報（4月30日至5月15日）。除東京致「Junzaburo」的電報外，'
         '本批還有由上海發往東京（地址「Linwailuk」）的<em>覆電</em>，使用同一壓縮碼；其中一封署名<span lang="zh-Hant">文</span>（孫文）。5月11日、12日兩電冠以另一前綴「Thirtyeight」，以此處找出的<strong>新碼表</strong>讀出（見<a href="method.html#thirtyeight">方法</a>一文）。'
-        '一封馬尼拉致頭山滿的電報，原樣轉發上海，以已發表的馬尼拉→頭山密鑰' + SUP + '讀出，署名<span lang="zh-Hant">誠</span>。'
+        '一封馬尼拉致頭山滿的電報，原樣轉發上海，以已發表的馬尼拉→頭山密鑰' + SUP + '讀出，署名<span lang="zh-Hant">誠</span>。一封檀香山電報（前綴「Aloha」），署名<span lang="zh-Hant">鐵城</span>（吳鐵城），以已發表的「檀香山」密鑰' + SUP + '讀出，其中 w 作為 v 的另一寫法；內容是黃興取道日本。'
         '字母由 Claude 讀出，其中23個存疑詞已由 Brice Dudout <strong>對照影像核對</strong>（其餘未逐字母重讀）。</p>'),
- 'ja': ('<p><strong>2026年10月13日追加：1916年5月上旬（JACAR B03050089000）。</strong>5月3日から15日までの電報15通を追加。東京から「Junzaburo」宛の電報に加え、'
+ 'ja': ('<p><strong>2026年10月13日追加：1916年5月上旬（JACAR B03050089000）。</strong>4月30日から5月15日までの電報16通を追加。東京から「Junzaburo」宛の電報に加え、'
         'この束には上海から東京（宛名「Linwailuk」）への<em>返電</em>があり、同じ圧縮符号で暗号化されている。うち1通は<span lang="zh-Hant">文</span>（孫文）の署名。5月11日と12日の電報は別の前置語「Thirtyeight」を持ち、ここで復元した<strong>新しい表</strong>で読める（<a href="method.html#thirtyeight">方法</a>の記事を参照）。'
-        'マニラから頭山満宛の電報は、そのまま上海へ転送されており、既発表のマニラ→頭山鍵' + SUP + 'で読め、<span lang="zh-Hant">誠</span>の署名がある。'
+        'マニラから頭山満宛の電報は、そのまま上海へ転送されており、既発表のマニラ→頭山鍵' + SUP + 'で読め、<span lang="zh-Hant">誠</span>の署名がある。ホノルル発の電報（前置語「Aloha」）は<span lang="zh-Hant">鐵城</span>（呉鉄城）の署名で、既発表の「ホノルル」鍵' + SUP + 'を w を v のもう一つの書き方とする変種で読み、黄興の日本経由を伝える。'
         '文字は Claude が読み、疑わしい23語は Brice Dudout が<strong>画像と照合した</strong>（その他は一文字ずつは再読していない）。</p>'),
 }
 _CH_MAI = {'fr': {'k38': 'Préfixe « Thirtyeight » (nouvelle table, Tokyo → Shanghai)', 'man2': 'Clé Manille → Tōyama (Manille → Tokyo)'},
@@ -269,9 +291,9 @@ _READ = {'fr': 'Lettres du formulaire (lues sur le scan, vérifiées)',
 _TOC_SH = {'fr': 'Condensateur « Yamada » (Shanghai → Tokyo, réponses)', 'en': 'Condenser “Yamada” (Shanghai → Tokyo, replies)',
            'zh-Hant': '壓縮碼「山田」（上海 → 東京，覆電）', 'ja': '圧縮符号「山田」（上海 → 東京、返電）'}
 for _lang in LAB:
-    _c = LAB[_lang]['channel']; LAB[_lang]['toc'] = {'yamada1916': _c['yamada1916'], 'k38': _CH_MAI[_lang]['k38'], 'yamada1916-sh': _TOC_SH[_lang], 'man2': _CH_MAI[_lang]['man2']}
+    _c = LAB[_lang]['channel']; LAB[_lang]['toc'] = {'yamada1916': _c['yamada1916'], 'k38': _CH_MAI[_lang]['k38'], 'yamada1916-sh': _TOC_SH[_lang], 'man2': _CH_MAI[_lang]['man2'], 'honolulu1916w': {'fr': 'Clé « Honolulu », variante « Aloha » (Honolulu → Tokyo)', 'en': '“Honolulu” key, “Aloha” variant (Honolulu → Tokyo)', 'zh-Hant': '「檀香山」密鑰「Aloha」變體（檀香山 → 東京）', 'ja': '「ホノルル」鍵の「Aloha」変種（ホノルル → 東京）'}[_lang]}
     _c['yamada1916'] = {'fr': 'Condensateur « Yamada »', 'en': 'Condenser “Yamada”', 'zh-Hant': '壓縮碼「山田」', 'ja': '圧縮符号「山田」'}[_lang]
-    LAB[_lang]['intro'] += _INTRO_MAI[_lang]; LAB[_lang]['channel'].update({'yamada1916w': {'fr': 'Condensateur « Yamada » (w = p)', 'en': 'Condenser “Yamada” (w = p)', 'zh-Hant': '壓縮碼「山田」（w = p）', 'ja': '圧縮符号「山田」（w = p）'}[_lang], 'k38': {'fr': 'Table « Thirtyeight »', 'en': '“Thirtyeight” table', 'zh-Hant': '「Thirtyeight」碼表', 'ja': '「Thirtyeight」表'}[_lang], 'man2': {'fr': 'Clé Manille → Tōyama', 'en': 'Manila → Tōyama key', 'zh-Hant': '馬尼拉→頭山密鑰', 'ja': 'マニラ→頭山鍵'}[_lang]}); LAB[_lang]['read'] = _READ[_lang]
+    LAB[_lang]['intro'] += _INTRO_MAI[_lang]; LAB[_lang]['channel'].update({'honolulu1916w': {'fr': 'Clé « Honolulu », variante « Aloha » (w = v)', 'en': '“Honolulu” key, “Aloha” variant (w = v)', 'zh-Hant': '「檀香山」密鑰「Aloha」變體（w = v）', 'ja': '「ホノルル」鍵の「Aloha」変種（w = v）'}[_lang], 'yamada1916w': {'fr': 'Condensateur « Yamada » (w = p)', 'en': 'Condenser “Yamada” (w = p)', 'zh-Hant': '壓縮碼「山田」（w = p）', 'ja': '圧縮符号「山田」（w = p）'}[_lang], 'k38': {'fr': 'Table « Thirtyeight »', 'en': '“Thirtyeight” table', 'zh-Hant': '「Thirtyeight」碼表', 'ja': '「Thirtyeight」表'}[_lang], 'man2': {'fr': 'Clé Manille → Tōyama', 'en': 'Manila → Tōyama key', 'zh-Hant': '馬尼拉→頭山密鑰', 'ja': 'マニラ→頭山鍵'}[_lang]}); LAB[_lang]['read'] = _READ[_lang]
 
 def build():
     msgs = []
@@ -302,7 +324,7 @@ def build():
         out = []
         for (lvl, reasons), i in zip(levels, props):
             ch = next(t[0] for t in toks if t[1] == i and t[2])
-            ep = BC.edit_path(letters[4 * i:4 * i + 4], T, ch)
+            ep = edit_path_alias(letters[4 * i:4 * i + 4], T, ch)
             assert ep and len(ep['edits']) <= 2, (sid, i, ch, ep)
             out.append(dict(i=i, ch=ch, orig=chars[i], level=lvl, reasons=reasons, letters=letters[4 * i:4 * i + 4], image='divergente' if (sid, ch) in DIVERGE else None, **ep))
         after = list(nums)

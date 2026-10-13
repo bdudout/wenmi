@@ -15,6 +15,8 @@ import make_media as M
 WENMI, OUT = FC.WENMI, FC.OUT
 sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'site'))
 from n1916_streams import IMG_OFFSET   # noqa: E402
+# Honolulu est hors du cadre (96–145° E) : point placé au bord est, libellé « Honolulu » (direction d'arrivée)
+M.CITIES['honolulu'] = ('Honolulu', '檀香山', 144.2, 25.0, (14, -6)); FC.CITY['Honolulu'] = 'honolulu'
 for rec, off in IMG_OFFSET.items():
     FC.PDF[rec] = (os.path.join(WENMI, 'sources', 'site', rec + '.pdf'), off)   # page du PDF = image − décalage
 

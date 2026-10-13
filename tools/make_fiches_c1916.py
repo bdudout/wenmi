@@ -75,7 +75,7 @@ def mini_map(m, all_routes):
         for k in set(stops):
             x, y = M.city_xy(k, W2, H2); r = 7 * s; dr.ellipse([x - r, y - r, x + r, y + r], fill=M.INK)
             name, cjk = M.CITIES[k][:2]
-            dx = {'tokyo': -120, 'qingdao': -128, 'manila': 20, 'shanghai': -138}.get(k, 14) * s; dy = {'tokyo': 14, 'manila': -66, 'shanghai': 12}.get(k, -30) * s
+            dx = {'tokyo': -120, 'qingdao': -128, 'manila': 20, 'shanghai': -138, 'honolulu': -170}.get(k, 14) * s; dy = {'tokyo': 14, 'manila': -66, 'shanghai': 12, 'honolulu': 10}.get(k, -30) * s
             dr.text((x + dx, y + dy), name, font=M.F('serif', 26 * s), fill=M.INK)
             dr.text((x + dx, y + dy + 28 * s), cjk, font=M.F('cjk', 26 * s), fill=M.MUTED)
         im = im.resize((W, im.height // s), Image.LANCZOS); im.save(os.path.join(OUT, f"map-{m['id']}.png"), optimize=True)
