@@ -19,6 +19,8 @@ from final_streams import SEL, final_stream          # noqa: E402  (dossier d'en
 from check_repro import stream as published_stream   # noqa: E402
 import bkeys                                          # noqa: E402
 import restitution, restitution_c1916 as RC, c1916_i18n  # noqa: E402
+import dx_overrides  # noqa: E402
+DX = dx_overrides.load(WENMI)
 
 CONS, VOW = bkeys.CONS, bkeys.VOW
 uni, REF, BI, BDEF, C2CH = bkeys.uni, bkeys.REF, bkeys.BI, bkeys.BDEF, bkeys.CODE2CH
@@ -96,6 +98,7 @@ def build():
     msgs = []
     for sid, tid, key, route, rec, img, (mo, da) in SEL:
         t, s = final_stream(tid); T = bkeys.KEYS[key]
+        s = dx_overrides.apply_stream(s, DX.get(('c1916', sid), {}), sid)   # relecture ciblée (Brice, 13/10/2026)
         d = bkeys.decode(s, key); codes = [c for _, c in d]; chars = [C2CH[c] for c in codes]; nums = [int(c) for c in codes]
         letters = ''.join(syl for syl, _ in d)
         assert letters == s[:len(letters)], sid
@@ -105,6 +108,7 @@ def build():
         for i, c in enumerate(codes):
             if sid in OMIS and OMIS[sid][0] <= i <= OMIS[sid][1]: fixed[str(i)] = {'how': 'omis'}
             elif sid in NEW_FROM and i >= NEW_FROM[sid]: fixed[str(i)] = {'how': 'nouveau'}
+            elif i in DX.get(('c1916', sid), {}) and i < len(pub) and pub[i] != c: fixed[str(i)] = {'how': 'dx', 'from': C2CH.get(pub[i], '□')}
             elif i < len(pub) and pub[i] != c and (sid, i) not in NOT_FIXED:
                 k = 'sugg' if (sid, C2CH[c]) in SUGG else 'new' if (sid, C2CH[c]) in NEW else 'scan'
                 fixed[str(i)] = {'how': k, 'from': C2CH.get(pub[i], '□')}
@@ -149,11 +153,12 @@ def build():
              'corr': sum(1 for m in msgs for v in m['fixed'].values() if v['how'] == 'scan'),
              'sugg': sum(1 for m in msgs for v in m['fixed'].values() if v['how'] == 'sugg'),
              'new': sum(1 for m in msgs for v in m['fixed'].values() if v['how'] == 'new'),
+             'dx': sum(1 for m in msgs for v in m['fixed'].values() if v['how'] == 'dx'),
              'added': sum(1 for m in msgs for v in m['fixed'].values() if v['how'] in ('omis', 'nouveau')),
              'douteux': sum(s == 'douteux' for m in msgs for s in m['status']),
              'confirmé': sum(s.startswith('confirmé') for m in msgs for s in m['status']),
              'props': sum(len(m['readable']['props']) for m in msgs)}
-    assert (stats['corr'], stats['sugg'], stats['new']) == (28, 12, 4), stats   # = page « Condensateurs 1916 »
+    assert (stats['corr'], stats['sugg'], stats['new']) == (28, 12, 3), stats   # = page « Condensateurs 1916 » (la lecture nouvelle 巳 de 0475, relue 已 le 13/10, passe en « dx »)
     i18n = c1916_i18n.build(msgs, stats, WENMI)
     path = os.path.join(SITE, 'assets', 'js', 'corpus-c1916.js')
     open(path, 'w', encoding='utf-8').write(

@@ -13,6 +13,8 @@ sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'site'))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_condensateurs as BC                      # noqa: E402  (fonctions communes : alts_for, edit_path, mean_score)
 import restitution, c1916_i18n                        # noqa: E402
+import dx_overrides                                   # noqa: E402
+DX = dx_overrides.load(WENMI)
 from n1916_streams import SEL, EXTRA_KEYS, KEY, ROUTE as ROUTES, LOCAL, IMG_OFFSET, POS   # noqa: E402
 bkeys = BC.bkeys; C2CH, uni, REF = BC.C2CH, BC.uni, BC.REF
 for _k, _t in EXTRA_KEYS.items(): bkeys.KEYS.setdefault(_k, _t)
@@ -40,22 +42,21 @@ CH = lambda c: C2CH.get(c, '□')                      # code absent du code té
 R = {
  'n0517': ('款三仟，可否給席正銘二仟、趙瑾卿五百？望覆。持。篠', []),
  'n0531a': ('軍用票辦法，速覆。持。卅。‹不›', []),
- 'n0531b': ('美僑駐濱者小達六十，欲往濰縣‹俶›力，如何？盼覆。聞美支部存款甚多。‹顆›‹電›‹傑›', []),
- 'n0601': ('寄魯芳債券照辦。軍用票事，覺生來電：東京如不能應急，則渠將自印云‹亢›。持', []),
+ 'n0531b': ('美僑駐濱者小達六十，欲往濰縣‹俶›力，如何？盼覆。聞美支部存款甚多。‹顆›‹電›催', []),
+ 'n0601': ('寄魯芳債券照辦。軍用票事，覺生來電：東京如不能應急，則渠將自印云云。持', []),
  'n0603': ('先生曁仲愷兄鑒：軍票事何不復？覺生連電急索。中央銀行票不作用，可‹叢›參印發行。持。江', []),
  'n0604': ('華僑己到六十餘，請示安置方法。持。江', []),
- 'n0605a': ('廖先生鑒：弟促‹姊›何‹下›覆。‹紀›‹文›', []),
- 'n0605b': ('濰縣函索飛機，尾崎已赴‹担›，請先生就近商議。澳款用‹伐›‹苤›‹嬲›‹名›', []),
+ 'n0605a': ('廖先生鑒：弟促如何‹下›覆。‹紀›‹文›', []),
+ 'n0605b': ('濰縣函索飛機，尾崎已赴‹担›，請先生就近商議。澳款用孫逸仙‹名›', []),
  'n0607': ('袁賊旣死，速定大計。持決乘春日丸歸。', []),
- 'n0615': ('電悉。不兌換可否加暫順券面？應否署名？{如}署，以何人爲宜？但先生署名恐有抵觸。弟可否隨券到‹逆›？‹兆›‹銘›又萱野偕坂本攜‹剪›‹風›機往‹餽›。'
-           '機校由立花代理，學生中‹坵›無或‹勁›之望，坂本商‹説›改換，速覆。‹重›‹民›‹删›', [('P', ['lecture', 'sens'])]),
+ 'n0615': ('電悉。不兌換可否加暫順券面？應否署名？{如}署，以何人爲宜？但先生署名恐有抵觸。弟可否隨券到魯？‹兆›‹銘›又萱野偕坂本攜‹剪›‹風›機往‹餽›。機校由立花代理，學生中半無或‹勁›之望，坂本商‹説›改換，速覆。‹重›‹民›‹删›', [('P', ['lecture', 'sens'])]),
 }
 # codes rares pour le modèle de langue mais sûrs : (caractère → type)
 CONF = {'n0517': {'仟': 'mot', '瑾': 'nom', '篠': 'date'}, 'n0531a': {'卅': 'date'}, 'n0531b': {'濰': 'nom'},
         'n0603': {'曁': 'variante', '愷': 'nom'}, 'n0605b': {'濰': 'nom'}, 'n0607': {'旣': 'variante'},
         'n0615': {'萱': 'nom', '偕': 'mot', '坂': 'nom'}}
 KEYS = {'n0517': ['席正銘', '趙瑾卿', '持'], 'n0531a': ['軍用票'], 'n0531b': ['美僑', '濰縣', '美支部'], 'n0601': ['債券', '軍用票', '覺生'],
-        'n0603': ['仲愷', '軍票', '中央銀行'], 'n0604': ['華僑', '安置'], 'n0605a': ['廖先生'], 'n0605b': ['濰縣', '飛機', '尾崎'],
+        'n0603': ['仲愷', '軍票', '中央銀行'], 'n0604': ['華僑', '安置'], 'n0605a': ['廖先生'], 'n0605b': ['濰縣', '飛機', '尾崎', '孫逸仙'],
         'n0607': ['袁賊旣死', '春日丸'], 'n0615': ['不兌換券', '署名', '萱野', '坂本', '機校', '立花']}
 ROUTE = 'Tokyo → Shanghai (Junzaburo)'
 SUP = c1916_i18n.SUP
@@ -108,7 +109,7 @@ TR = {
   'n0603': "À Monsieur [Sun] et à frère Zhongkai (Liao Zhongkai) : pourquoi ne répondez-vous pas sur les bons militaires ? Juesheng (Ju Zheng) télégraphie sans cesse pour les réclamer d'urgence. Les billets de la Banque centrale ne servent à rien ; on peut [envisager] de les faire imprimer et émettre. — Chi. Le 3.",
   'n0604': "Plus de soixante Chinois d'outre-mer sont déjà arrivés ; indiquez comment les installer. — Chi. Le 3.",
   'n0605a': "À Monsieur Liao : […] répondez. […]",
-  'n0605b': "Weixian demande des avions par lettre ; Ozaki est déjà parti pour […] ; prière à Monsieur de se concerter sur place. Les fonds de Macao (?) […]",
+  'n0605b': "Weixian demande des avions par lettre ; Ozaki est déjà parti pour […] ; prière à Monsieur de se concerter sur place. Pour les fonds de Macao (?), utiliser le nom de Sun Yat-sen (孫逸仙).",
   'n0607': "Yuan le traître est mort : arrêtez vite le grand plan. Chi a décidé de rentrer par le Kasuga-maru.",
   'n0615': "Télégramme reçu. Les billets non convertibles : peut-on ajouter au recto la mention « billet provisoire » ? Faut-il les signer ? Si oui, qui vaut-il mieux faire signer ? Mais la signature de Monsieur [Sun] risque de poser problème. Puis-je partir avec les billets ? […] Kayano (萱野), avec Sakamoto (坂本), emporte […] avion(s) vers […]. L'école d'aviation est confiée à titre provisoire à Tachibana (立花) ; parmi les élèves, […] aucun espoir […]. Sakamoto propose (?) de changer […] ; répondez vite. […]",
  },
@@ -120,7 +121,7 @@ TR = {
   'n0603': "To Sir [Sun] and brother Zhongkai (Liao Zhongkai): why no reply about the military notes? Juesheng (Ju Zheng) keeps telegraphing to demand them urgently. The Central Bank notes are of no use; we could [consider] having them printed and issued. — Chi. The 3rd.",
   'n0604': "More than sixty overseas Chinese have already arrived; please say how to accommodate them. — Chi. The 3rd.",
   'n0605a': "To Mr Liao: […] reply. […]",
-  'n0605b': "Weixian asks for aircraft by letter; Ozaki has already left for […]; please, Sir, consult on the spot. The Macao (?) funds […]",
+  'n0605b': "Weixian asks for aircraft by letter; Ozaki has already left for […]; please, Sir, consult on the spot. For the Macao (?) funds, use the name of Sun Yat-sen (孫逸仙).",
   'n0607': "Yuan the traitor is dead: settle the great plan quickly. Chi has decided to return on the Kasuga-maru.",
   'n0615': "Telegram received. The inconvertible notes: may 'provisional note' be added on the face? Should they be signed? If so, who would be best to sign? But Sir [Sun]'s signature might cause problems. May I travel with the notes? […] Kayano (萱野), together with Sakamoto (坂本), takes […] aircraft to […]. The flying school is entrusted for the time being to Tachibana (立花); among the students, […] no hope […]. Sakamoto suggests (?) changing […]; reply quickly. […]",
  },
@@ -132,7 +133,7 @@ TR = {
   'n0603': "先生暨仲愷兄鑒：軍票事何以不覆？覺生連電急索。中央銀行票不作用，可……印發行。持。江（三日）。",
   'n0604': "華僑已到六十餘人，請示安置方法。持。江（三日）。",
   'n0605a': "廖先生鑒：……覆。……",
-  'n0605b': "濰縣來函索飛機，尾崎已赴……，請先生就近商議。澳款……",
+  'n0605b': "濰縣來函索飛機，尾崎已赴……，請先生就近商議。澳款用孫逸仙名。",
   'n0607': "袁賊既死，速定大計。持決乘春日丸歸。",
   'n0615': "電悉。不兌換券可否加「暫順券」於券面？應否署名？如署，以何人為宜？但先生署名恐有抵觸。弟可否隨券到……？……萱野偕坂本攜……機往……。飛機學校由立花代理，學生中……無或……之望。坂本商（？）改換……，速覆。……",
  },
@@ -144,7 +145,7 @@ TR = {
   'n0603': "先生および仲愷兄へ：軍票の件、なぜ返事がないのか。覚生がしきりに電報で至急求めている。中央銀行券は役に立たない。……印刷・発行してはどうか。持。江（3日）。",
   'n0604': "華僑がすでに60余人到着した。収容の方法を指示されたい。持。江（3日）。",
   'n0605a': "廖先生へ：……返電を。……",
-  'n0605b': "濰県から書簡で飛行機を求めてきた。尾崎はすでに……へ向かった。先生には現地で協議されたい。澳門（？）の資金……",
+  'n0605b': "濰県から書簡で飛行機を求めてきた。尾崎はすでに……へ向かった。先生には現地で協議されたい。澳門（？）の資金は孫逸仙の名義を用いること。",
   'n0607': "袁賊はすでに死んだ。速やかに大計を定められたい。持は春日丸で帰ることに決めた。",
   'n0615': "電報拝見。兌換されない券に「暫順券」と券面に加えてよいか。署名すべきか。署名するなら誰がよいか。ただし先生の署名は差し支えがあるかもしれない。私が券とともに……へ行ってよいか。……萱野は坂本とともに飛行機を持って……へ行く。飛行学校は立花が代理する。学生のうち……の望みはない……。坂本は……の変更を相談（？）。至急返電を。……",
  },
@@ -152,32 +153,28 @@ TR = {
 
 # ---- Lot du début mai 1916 (B03050089000) : lecture de Claude seule (13/10/2026), pas encore vérifiée à l'image par Brice ----
 R.update({
- 'n0503a': ('抵滬平安否？港拯日函、江門得而覆失。金山‹倭›羅芳‹潑›崙代表馬醒‹馨›‹筊›三{人}昨日到東，可否促其赴{滬}？兆銘{擬}覓杜石助寫債券，請詢仲愷兄可否照辦。江', []),
+ 'n0503a': ('抵滬平安否？港拯日函、江門得而覆失。金山‹倭›羅省‹潑›崙代表馬醒‹馨›‹筊›三人昨日到東，可否促其赴{滬}？兆銘{擬}覓杜石助寫債券，請詢仲愷兄可否照辦。江', []),
  'n0503b': ('‹紉›秋乘博愛丸赴滬。持。‹復›', []),
- 'n0504a': ('‹卲›子峯{來}電：懷仁描事王煥夏於四月儉日率懷專兩縣軍譚五百獨立，然勢力‹蘇›敗，擬將人械沿鴨綠江運至安東租界，再募數千待命。運很他芳，望速覆。‹亢›‹云›請示辦法，便辨覆。'
-            '應時因坂本事改乘春日丸，決宅‹□›日開懇親會。持', []),
- 'n0504b': ('有現款六仟，是否匯{滬}？‹帷›日人深谷來詢統一兄與中須賀之五浮能{否}實行。望覆。持。支', []),
+ 'n0504a': ('‹卲›子峯來電：懷仁描事王煥夏於四月儉日率懷專兩縣軍譚五百獨立，然勢力‹蘇›敗，擬將人械沿鴨綠江運至安東租界，再募數千待命。運很他芳，望速覆云云。請示辦法，便辨覆。應時因坂本事改乘春日丸，決宅‹齷›日開懇親會。持', []),
+ 'n0504b': ('有現款六仟，是否匯{滬}？‹帷›日人深谷來詢統一兄與中須賀之五浮能否實行。望覆。持。支', []),
  'n0506': ('楊丙交天津電：學生已到百貴人，需款{至}急。‹芰›覆。魚', []),
- 'n0508': ('昨夜得覺生電稱：四日占誌周村，{本}軍以{同}日攻濰縣城，五日占其東關，正午稍却，晚復決計圍境，占領附近泌落，士氣頗壯。特轉。‹弼›邵子峯遮義之軍‹警›可上，今其運適山東。'
-           '‹椒›丙又接津難‹傞›款，請速辦。持。齊', []),
- 'n0510': ('克強昨日到，避人，尚未晤。‹□›‹惟›孟碩乘原船適滬。{請}以‹底›‹正›舉{事}。山東電告金山至要。持。{灰}', []),
+ 'n0508': ('昨夜得覺生電稱：四日占誌周村，{本}軍以同日攻濰縣城，五日占其東關，正午稍却，晚復決計圍境，占領附近泌落，士氣頗壯。特轉。‹弼›邵子峯遮義之軍‹警›可上，今其運適山東。‹椒›丙又接津難‹傞›款，請速辦。持。齊', []),
+ 'n0510': ('克強昨日到，避人，尚未晤。‹逖›‹惟›孟碩乘原船適滬。{請}以居‹正›舉{事}。山東電告金山至要。持。{灰}', []),
  'n0512': ('箱已交犬塚，十五日附法船來。若有要事，請{電}如下：', []),
- 'n0511': ('聞張繼已回日，頗奇，{是}否？', []),
- 'n0515': ('今日晤克強，頗稱先生‹但›赴滬從緩。又言參部局長某謂：山東事革軍軍隊過少，不增，且將議和，則其國外交殊{難}著手，擬緩其幫助之力。經換答{以}軍隊忠壘，決不苟和，務請積極幫助。'
-           '某始‹醛›，特電{請}亟謀擴充軍隊。再，席正銘急電{請}款，摘原電如下：保軍校{來}津填誓約已逾百人，{代}表終對服從，已囑‹涕›中拒絶。外派點段鉅{款}買收也。定‹嬙›五給憑分遣，'
-           '釐速寄萬圓。模肘團南逸‹苑›人保等軍確有可爲。‹亢›‹亢›現{在}宜圖天津。持。删', []),
- 's0505': ('江日官抵滬，馬代表等可來{滬}。並請速備百圓券二萬、十圓八萬、一圓五圓各‹不›萬，交春洋丸{帶}港，‹耻›義會‹曝›交梅喬林收。帳券人請兄酌奪。文', []),
- 's0506': ('{請}覆邵：地點未備，人緩招募，械則安置安東，待時而用。款六千由正金購。所持人‹拂›票寄‹愷›', []),
- 's0508': ('已{到}津學生請酌撥款維持，{待}得濟南令役餘‹孌›。楊丙停歷招集。邵事目前不能辦，本部文下足則六十勿匯奶也。齊', []),
- 's0515': ('速辰十圓、百圓券各二{萬}，加福建專用章，交陳羣轉黃展雲。此間款盡，難再籌。請‹韞›覆各處', []),
+ 'n0511': ('聞張繼已回日，頗奇，是否？', []),
+ 'n0515': ('今日晤克強，頗稱先生‹但›赴滬從緩。又言參部局長某謂：山東事革軍軍隊過少，不增，且將議和，則其國外交殊難著手，擬緩其幫助之力。經換答{以}軍隊忠壘，決不苟和，務請積極幫助。某始‹醛›，特電請亟謀擴充軍隊。再，席正銘急電{請}款，摘原電如下：保軍校來津填誓約已逾百人，代表終對服從，已囑‹涕›中拒絶。外派點段鉅{款}買收也。定‹嬙›五給憑分遣，釐速寄萬圓。模肘團南逸‹寁›人保等軍確有可爲。‹亢›‹云›現在宜圖天津。持。删', []),
+ 's0505': ('江日官抵滬，馬代表等可來滬。並請速備百圓券二萬、十圓八萬、一圓五圓各一萬，交春洋丸{帶}港，‹耻›義會‹曝›交梅喬林收。帳券人請兄酌奪。文', []),
+ 's0506': ('請覆邵：地點未備，人緩招募，械則安置安東，待時而用。款六千由正金購。所持人‹拂›票寄‹愷›', []),
+ 's0508': ('已{到}津學生請酌撥款維持，待得濟南令役餘令。楊丙停歷招集。邵事目前不能辦，本部文下足則六十勿匯奶也。齊', []),
+ 's0515': ('速辰十圓、百圓券各二{萬}，加福建專用章，交陳羣轉黃展雲。此間款盡，難再籌。請酌覆各處', []),
  'h0430': ('{黃}{轉}到{日}，換船{赴}滬。鐵城', []),
- 'm0503': ('款匯港，債券無存，請‹皤›趣漢‹苞›‹擎›券伍仟圓、証書及{陞}等功章速附佳弟。擬日間回國。誠叩', []),
+ 'm0503': ('款匯港，債券無存，請‹皤›趣漢英‹擐›券伍仟圓、証書及{陞}等功章速附佳弟。擬日間回國。誠叩', []),
 })
 
 P_, Q_ = lambda *r: ('P', list(r)), lambda *r: ('Q', list(r))
-_LV = {'n0503a': [P_('sens'), P_('sens', 'contexte'), Q_('sens')], 'n0510': [P_('sens'), P_('sens'), P_('structure')], 'n0511': [P_('sens', 'structure')], 'h0430': [Q_('contexte'), P_('sens'), P_('sens'), P_('sens')], 'n0512': [P_('sens')], 'n0504a': [P_('structure', 'sens')],
-       'n0504b': [P_('sens', 'contexte'), P_('sens')], 'n0506': [P_('sens')], 'n0508': [Q_('sens'), P_('sens', 'lecture')], 'n0515': [P_('sens')] * 8,
-       's0505': [P_('sens', 'contexte'), Q_('sens')], 's0506': [Q_('sens')], 's0508': [P_('sens'), Q_('sens')], 's0515': [P_('sens', 'contexte')],
+_LV = {'n0503a': [P_('sens', 'contexte'), Q_('sens')], 'n0510': [P_('sens'), P_('sens'), P_('structure')], 'n0511': [], 'h0430': [Q_('contexte'), P_('sens'), P_('sens'), P_('sens')], 'n0512': [P_('sens')], 'n0504a': [],
+       'n0504b': [P_('sens', 'contexte')], 'n0506': [P_('sens')], 'n0508': [Q_('sens')], 'n0515': [P_('sens')] * 3,
+       's0505': [Q_('sens')], 's0506': [], 's0508': [P_('sens')], 's0515': [P_('sens', 'contexte')],
        'm0503': [P_('sens', 'jumeau')]}
 # propositions maintenues alors que la relecture de Brice (lot V7) ne les voit pas sur l'image
 DIVERGE = {('n0503a', '滬'), ('n0503a', '擬'), ('n0615', '如'), ('n0515', '款'), ('s0515', '萬'), ('s0508', '到'), ('m0503', '陞')}
@@ -300,6 +297,7 @@ def build():
     for sid, rec, page, (mo, da), tm, s, prefix in SEL:
         if sid in LOCAL: continue                      # en cours en local : pas sur le site
         key = KEY.get(sid, 'yamada1916'); T = bkeys.KEYS[key]
+        s = dx_overrides.apply_stream(s, DX.get(('n1916', sid), {}), sid)   # relecture ciblée (Brice, 13/10/2026)
         d = [(s[i:i + 4], '%02d%02d' % (T[s[i:i + 2]], T[s[i + 2:i + 4]])) for i in range(0, len(s) - 3, 4)]; codes = [c for _, c in d];   # accepte w (yamada1916w) ; comme bkeys.decode, ignore une syllabe finale seule
         chars = [CH(c) for c in codes]; nums = [int(c) for c in codes]
         letters = ''.join(syl for syl, _ in d)

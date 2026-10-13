@@ -38,6 +38,17 @@ for m, us in msgs.items():
     rebuilt = ''.join(('‹%s›' % ch) if (k in doubt and ch != '·') else ch for k, ch in enumerate(chars))
     assert rebuilt == ref[m], (m, rebuilt, ref[m])
     out.append({'id': m, 'grid': 'Y0', 'units': units, 'codes': codes, 'chars': chars, 'doubt': doubt})
+# relecture ciblée des codes douteux (Brice, 13/10/2026), appliquée après la vérification contre l'édition
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import dx_overrides
+DX = dx_overrides.load(WENMI)
+for o in out:
+    for i, (old, new) in DX.get(('wenmi', o['id']), {}).items():
+        assert ''.join(o['units'][2 * i:2 * i + 2]) == old, (o['id'], i, old)
+        o['units'][2 * i:2 * i + 2] = [new[:2], new[2:]]; c = Y0[new[:2]] * 100 + Y0[new[2:]]
+        print('DX :', o['id'], i, old, '→', new, o['chars'][i], '→', cm.get('%04d' % c, '□'))
+        o['codes'][i] = '%04d' % c; o['chars'][i] = cm.get('%04d' % c, '□')
+        o['doubt'] = sorted([k for k in o['doubt'] if k != i] + ([i] if float(uni[c]) - REF < 1 else []))
 missing = set(ref) - {o['id'] for o in out}
 assert not missing, missing
 dst = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'assets', 'js', 'messages-y0.js')

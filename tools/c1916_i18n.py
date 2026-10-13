@@ -21,9 +21,9 @@ LAB = {
   read='Lettres du formulaire (transcription publiée, rectifiée sur les scans)',
   fixed={'scan': 'corrigé sur le scan — texte publié : {from}', 'sugg': 'lecture proposée dans le texte publié, confirmée sur le scan',
          'new': 'lecture nouvelle sur le scan — texte publié : {from}', 'omis': 'mot omis dans la transcription publiée, rétabli sur le scan',
-         'nouveau': 'lu sur le scan ; absent du texte publié'},
+         'nouveau': 'lu sur le scan ; absent du texte publié', 'dx': 'relu sur le scan lors de la relecture ciblée des codes douteux (13/10/2026) — texte publié : {from}'},
   stats=('{tels} télégrammes, {codes} codes. Par rapport au texte publié, la lecture des scans change {chg} caractères (les {corr} corrections de la page '
-         'Condensateurs 1916, {sugg} lectures proposées dans le texte publié et confirmées, {new} lectures nouvelles) et en rétablit {added} (mot omis, '
+         'Condensateurs 1916, {sugg} lectures proposées dans le texte publié et confirmées, {new} lectures nouvelles, {dx} relues lors de la relecture ciblée des codes douteux du 13 octobre 2026) et en rétablit {added} (mot omis, '
          'fin relue). {conf} codes rares mais confirmés, {douteux} douteux.'),
   toc='Condensateurs 1916', short={'manila1916': 'Manille', 'shanghai1916': 'Shanghai', 'seito1916': 'Qingdao', 'yamada1916': 'Yamada'}, label='Traduction de travail.',
   channel={'manila1916': 'Condensateur « Manille » (Tokyo ↔ Manille)', 'shanghai1916': 'Condensateur « Shanghai » (Tokyo ↔ Shanghai)',
@@ -39,9 +39,9 @@ LAB = {
   read='Letters on the form (published transcription, rectified on the scans)',
   fixed={'scan': 'corrected on the scan — published text: {from}', 'sugg': 'reading suggested in the published text, confirmed on the scan',
          'new': 'new reading on the scan — published text: {from}', 'omis': 'word omitted in the published transcription, restored from the scan',
-         'nouveau': 'read on the scan; not in the published text'},
+         'nouveau': 'read on the scan; not in the published text', 'dx': 're-read on the scan during the targeted check of doubtful codes (13 Oct 2026) — published text: {from}'},
   stats=('{tels} telegrams, {codes} codes. Compared with the published text, reading the scans changes {chg} characters (the {corr} corrections of '
-         'the 1916 condensers page, {sugg} readings suggested in the published text and confirmed, {new} new readings) and restores {added} '
+         'the 1916 condensers page, {sugg} readings suggested in the published text and confirmed, {new} new readings, {dx} re-read during the targeted check of doubtful codes on 13 October 2026) and restores {added} '
          '(omitted word, re-read ending). {conf} rare but confirmed codes, {douteux} doubtful.'),
   toc='1916 condensers', short={'manila1916': 'Manila', 'shanghai1916': 'Shanghai', 'seito1916': 'Qingdao', 'yamada1916': 'Yamada'}, label='Working translation.',
   channel={'manila1916': 'Condenser “Manila” (Tokyo ↔ Manila)', 'shanghai1916': 'Condenser “Shanghai” (Tokyo ↔ Shanghai)',
@@ -54,8 +54,8 @@ LAB = {
          '<span class="fixed-sample">綠色底線</span>標出。排列：先按密鑰，再按日期。</p>'),
   read='電報紙上的字母（已發表的轉寫，依掃描影像訂正）',
   fixed={'scan': '依掃描影像訂正——已發表文本作：{from}', 'sugg': '已發表文本所提的讀法，經掃描影像證實', 'new': '從掃描影像得出的新讀法——已發表文本作：{from}',
-         'omis': '已發表轉寫遺漏的詞，依掃描影像補回', 'nouveau': '從掃描影像讀出；已發表文本無此段'},
-  stats='{tels}封電報，{codes}個電碼。與已發表文本相比，核對掃描影像後改動{chg}字（「1916年壓縮碼」頁的{corr}處訂正、已發表文本所提並經證實的讀法{sugg}處、新讀法{new}處），並補回{added}字（遺漏的詞、重讀的結尾）。罕見但已確認{conf}個，存疑{douteux}個。',
+         'omis': '已發表轉寫遺漏的詞，依掃描影像補回', 'nouveau': '從掃描影像讀出；已發表文本無此段', 'dx': '存疑電碼專項重讀時依掃描影像讀出（2026年10月13日）——已發表文本作：{from}'},
+  stats='{tels}封電報，{codes}個電碼。與已發表文本相比，核對掃描影像後改動{chg}字（「1916年壓縮碼」頁的{corr}處訂正、已發表文本所提並經證實的讀法{sugg}處、新讀法{new}處、2026年10月13日存疑電碼專項重讀{dx}處），並補回{added}字（遺漏的詞、重讀的結尾）。罕見但已確認{conf}個，存疑{douteux}個。',
   toc='1916年壓縮碼', short={'manila1916': '馬尼拉', 'shanghai1916': '上海', 'seito1916': '青島', 'yamada1916': '山田'}, label='斷句與白話大意（工作譯文）。',
   channel={'manila1916': '壓縮碼「馬尼拉」（東京 ↔ 馬尼拉）', 'shanghai1916': '壓縮碼「上海」（東京 ↔ 上海）',
            'seito1916': '壓縮碼「青島」（東京 ↔ 青島）', 'yamada1916': '壓縮碼「山田」（東京 → 上海，1916年5月）'}),
@@ -67,8 +67,8 @@ LAB = {
          '文字は公開された翻字を用紙で訂正したもので、訂正・補完した字は<span class="fixed-sample">緑の下線</span>で示す。配列は符号表ごと、日付順。</p>'),
   read='用紙の文字（公開された翻字を画像で訂正）',
   fixed={'scan': '画像で訂正 — 公開テキストでは「{from}」', 'sugg': '公開テキストが示した読み。画像で確認', 'new': '画像による新たな読み — 公開テキストでは「{from}」',
-         'omis': '公開された翻字で脱落していた語。画像から補完', 'nouveau': '画像から読んだ部分。公開テキストにはない'},
-  stats='{tels}通、{codes}コード。公開テキストに対し、画像の照合で{chg}字を改めた（「1916年圧縮符号」の訂正{corr}、公開テキストが示し確認された読み{sugg}、新たな読み{new}）。さらに{added}字を補完（脱落語・結尾の再読）。まれだが確認済み{conf}、疑わしい字{douteux}。',
+         'omis': '公開された翻字で脱落していた語。画像から補完', 'nouveau': '画像から読んだ部分。公開テキストにはない', 'dx': '疑わしいコードの重点再読で画像から読んだ（2026年10月13日）— 公開テキストでは「{from}」'},
+  stats='{tels}通、{codes}コード。公開テキストに対し、画像の照合で{chg}字を改めた（「1916年圧縮符号」の訂正{corr}、公開テキストが示し確認された読み{sugg}、新たな読み{new}、2026年10月13日の疑わしいコードの重点再読{dx}）。さらに{added}字を補完（脱落語・結尾の再読）。まれだが確認済み{conf}、疑わしい字{douteux}。',
   toc='1916年圧縮符号', short={'manila1916': 'マニラ', 'shanghai1916': '上海', 'seito1916': '青島', 'yamada1916': '山田'}, label='作業訳。',
   channel={'manila1916': '圧縮符号「マニラ」（東京 ↔ マニラ）', 'shanghai1916': '圧縮符号「上海」（東京 ↔ 上海）',
            'seito1916': '圧縮符号「青島」（東京 ↔ 青島）', 'yamada1916': '圧縮符号「山田」（東京 → 上海、1916年5月）'}),

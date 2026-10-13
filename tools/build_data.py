@@ -41,6 +41,17 @@ for o in out:
         o['units'][2 * i:2 * i + 2] = us[2 * i:2 * i + 2]; o['codes'][i] = c; o['chars'][i] = C2CH[c]
         o['doubt'] = [k for k in o['doubt'] if k != i] + ([i] if float(uni[int(c)]) - REF < 1 else [])
         o['doubt'].sort()
+# relecture ciblée des codes douteux (Brice, 13/10/2026) : lettres corrigées sur le scan
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import dx_overrides
+DX = dx_overrides.load(WENMI)
+for o in out:
+    for i, (old, new) in DX.get(('wenmi', o['id']), {}).items():
+        assert ''.join(o['units'][2 * i:2 * i + 2]) == old, (o['id'], i, o['units'][2 * i:2 * i + 2], old)
+        o['units'][2 * i:2 * i + 2] = [new[:2], new[2:]]; c = '%02d%02d' % (G0[new[:2]], G0[new[2:]])
+        print('DX :', o['id'], i, old, '→', new, o['chars'][i], '→', C2CH[c])
+        o['codes'][i] = c; o['chars'][i] = C2CH[c]
+        o['doubt'] = sorted([k for k in o['doubt'] if k != i] + ([i] if float(uni[int(c)]) - REF < 1 else []))
 dst = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'assets', 'js', 'messages.js')
 open(dst, 'w', encoding='utf-8').write('// Généré par tools/build_data.py — ne pas éditer à la main.\nwindow.WENMI_MESSAGES = ' + json.dumps(out, ensure_ascii=False, indent=1) + ';\n')
 print(len(out), 'messages :', ', '.join(f"{o['id']} ({len(o['codes'])} codes, {len(o['doubt'])} douteux)" for o in out))
