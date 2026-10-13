@@ -142,7 +142,7 @@ R.update({
  'n0506': ('楊丙交天津電：學生已到百貴人，需款{至}急。‹芰›覆。魚', []),
  'n0508': ('昨夜得覺生電稱：四日占誌周村，{本}軍以‹吠›日攻濰縣城，五日占其東關，正午稍却，晚復決計圍境，占領附近泌落，士氣頗壯。特轉。‹弼›邵子峯遮義之軍議‹慁›上，今其運適山東。'
            '‹椒›丙又接津難‹傞›款，請速辦。持。齊', []),
- 'n0510': ('克強昨日到，避人，尚未晤。‹□›‹惟›孟碩乘原船適滬。{請}以‹底›‹正›舉事。山東電告金山至要。持。灰', []),
+ 'n0510': ('克強昨日到，避人，尚未晤。‹□›‹惟›孟碩乘原船適滬。{請}以‹底›‹正›舉{事}。山東電告金山至要。持。{灰}', []),
  'n0512': ('箱已交犬塚，十五日附法船來。若有要事，請{電}如下：', []),
  'n0511': ('‹禴›張繼已回，‹旜›頗奇服‹悱›', []),
  'n0515': ('今日晤克強，頗稱先生‹但›赴滬從緩。又言參部‹庋›長某謂：山東事革軍軍隊過少，不增，且將議和，則其國外交殊{難}著手，擬緩其幫助之力。經換答{以}軍隊忠壘，決不苟和，務請積極幫助。'
@@ -156,14 +156,14 @@ R.update({
 })
 
 P_, Q_ = lambda *r: ('P', list(r)), lambda *r: ('Q', list(r))
-_LV = {'n0503a': [P_('sens'), P_('sens', 'contexte'), Q_('sens')], 'n0510': [P_('sens')], 'n0512': [P_('sens')], 'n0504a': [P_('structure', 'sens')],
+_LV = {'n0503a': [P_('sens'), P_('sens', 'contexte'), Q_('sens')], 'n0510': [P_('sens'), P_('sens'), P_('structure')], 'n0512': [P_('sens')], 'n0504a': [P_('structure', 'sens')],
        'n0504b': [P_('sens', 'contexte'), P_('sens')], 'n0506': [P_('sens')], 'n0508': [Q_('sens')], 'n0515': [P_('sens')] * 8,
        's0505': [P_('sens', 'contexte'), Q_('sens')], 's0506': [Q_('sens')], 's0508': [P_('sens'), Q_('sens')], 's0515': [P_('sens', 'contexte')],
        'm0503': [P_('sens', 'jumeau')]}
 # propositions maintenues alors que la relecture de Brice (lot V7) ne les voit pas sur l'image
 DIVERGE = {('n0503a', '滬'), ('n0503a', '擬'), ('n0615', '如'), ('n0515', '款'), ('s0515', '萬'), ('s0508', '到'), ('m0503', '陞')}
 for _sid, _lv in _LV.items(): R[_sid] = (R[_sid][0], _lv)
-CONF.update({'n0503a': {'愷': 'nom', '江': 'date'}, 'n0510': {'灰': 'date'}, 'n0512': {'塚': 'nom'}, 'n0504a': {'卲': 'variante', '儉': 'date', '坂': 'nom'}, 'n0504b': {'仟': 'mot', '支': 'date'},
+CONF.update({'n0503a': {'愷': 'nom', '江': 'date'}, 'n0512': {'塚': 'nom'}, 'n0504a': {'卲': 'variante', '儉': 'date', '坂': 'nom'}, 'n0504b': {'仟': 'mot', '支': 'date'},
              'n0508': {'占': 'mot', '濰': 'nom', '却': 'variante'}, 'n0515': {'絶': 'variante', '删': 'date'}, 'm0503': {'仟': 'mot', '証': 'variante'}})
 KEYS.update({'n0503a': ['兆銘', '債券', '仲愷'], 'n0503b': ['博愛丸'], 'n0504a': ['邵子峯', '王煥夏', '鴨綠江', '安東', '坂本', '春日丸'],
              'n0504b': ['現款六仟', '深谷', '中須賀'], 'n0506': ['楊丙', '天津', '學生'], 'n0508': ['覺生', '周村', '濰縣', '邵子峯'],
@@ -271,14 +271,15 @@ _TOC_SH = {'fr': 'Condensateur « Yamada » (Shanghai → Tokyo, réponses)', 'e
 for _lang in LAB:
     _c = LAB[_lang]['channel']; LAB[_lang]['toc'] = {'yamada1916': _c['yamada1916'], 'k38': _CH_MAI[_lang]['k38'], 'yamada1916-sh': _TOC_SH[_lang], 'man2': _CH_MAI[_lang]['man2']}
     _c['yamada1916'] = {'fr': 'Condensateur « Yamada »', 'en': 'Condenser “Yamada”', 'zh-Hant': '壓縮碼「山田」', 'ja': '圧縮符号「山田」'}[_lang]
-    LAB[_lang]['intro'] += _INTRO_MAI[_lang]; LAB[_lang]['channel'].update({'k38': {'fr': 'Table « Thirtyeight »', 'en': '“Thirtyeight” table', 'zh-Hant': '「Thirtyeight」碼表', 'ja': '「Thirtyeight」表'}[_lang], 'man2': {'fr': 'Clé Manille → Tōyama', 'en': 'Manila → Tōyama key', 'zh-Hant': '馬尼拉→頭山密鑰', 'ja': 'マニラ→頭山鍵'}[_lang]}); LAB[_lang]['read'] = _READ[_lang]
+    LAB[_lang]['intro'] += _INTRO_MAI[_lang]; LAB[_lang]['channel'].update({'yamada1916w': {'fr': 'Condensateur « Yamada » (w = p)', 'en': 'Condenser “Yamada” (w = p)', 'zh-Hant': '壓縮碼「山田」（w = p）', 'ja': '圧縮符号「山田」（w = p）'}[_lang], 'k38': {'fr': 'Table « Thirtyeight »', 'en': '“Thirtyeight” table', 'zh-Hant': '「Thirtyeight」碼表', 'ja': '「Thirtyeight」表'}[_lang], 'man2': {'fr': 'Clé Manille → Tōyama', 'en': 'Manila → Tōyama key', 'zh-Hant': '馬尼拉→頭山密鑰', 'ja': 'マニラ→頭山鍵'}[_lang]}); LAB[_lang]['read'] = _READ[_lang]
 
 def build():
     msgs = []
     for sid, rec, page, (mo, da), tm, s, prefix in SEL:
         if sid in LOCAL: continue                      # en cours en local : pas sur le site
         key = KEY.get(sid, 'yamada1916'); T = bkeys.KEYS[key]
-        d = bkeys.decode(s, key); codes = [c for _, c in d]; chars = [CH(c) for c in codes]; nums = [int(c) for c in codes]
+        d = [(s[i:i + 4], '%02d%02d' % (T[s[i:i + 2]], T[s[i + 2:i + 4]])) for i in range(0, len(s) - 3, 4)]; codes = [c for _, c in d];   # accepte w (yamada1916w) ; comme bkeys.decode, ignore une syllabe finale seule
+        chars = [CH(c) for c in codes]; nums = [int(c) for c in codes]
         letters = ''.join(syl for syl, _ in d)
         text, levels = R[sid]
         toks, props = restitution.parse(text, chars)
@@ -306,7 +307,7 @@ def build():
             out.append(dict(i=i, ch=ch, orig=chars[i], level=lvl, reasons=reasons, letters=letters[4 * i:4 * i + 4], image='divergente' if (sid, ch) in DIVERGE else None, **ep))
         after = list(nums)
         for p in out: after[p['i']] = int(p['code'])
-        toc = key + ('-sh' if sid.startswith('s') else '')
+        toc = {'yamada1916w': 'yamada1916'}.get(key, key) + ('-sh' if sid.startswith('s') else '')
         n = '%04d' % (page + IMG_OFFSET[rec])            # n° d'image JACAR, comme les autres télégrammes du site
         msgs.append({'id': sid, 'label': n + POS.get(sid, ''), 'toc': toc, 'grid': key, 'fiche': {'img': 'n' + n, 'n': n, 'keys': KEYS[sid]}, 'route': ROUTES.get(sid, ROUTE), 'record': rec, 'md': [mo, da], 'page': page,
                      'time': tm, 'prefix': prefix, 'letters': letters, 'codes': codes, 'chars': chars, 'status': status, 'fixed': {}, 'alts': alts,
