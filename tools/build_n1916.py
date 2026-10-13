@@ -144,7 +144,7 @@ R.update({
            '‹椒›丙又接津難‹傞›款，請速辦。持。齊', []),
  'n0510': ('克強昨日到，避人，尚未晤。‹□›‹惟›孟碩乘原船適滬。{請}以‹底›‹正›舉{事}。山東電告金山至要。持。{灰}', []),
  'n0512': ('箱已交犬塚，十五日附法船來。若有要事，請{電}如下：', []),
- 'n0511': ('‹禴›張繼已回，‹旜›頗奇服‹悱›', []),
+ 'n0511': ('聞張繼已回日，頗奇，{是}否？', []),
  'n0515': ('今日晤克強，頗稱先生‹但›赴滬從緩。又言參部‹庋›長某謂：山東事革軍軍隊過少，不增，且將議和，則其國外交殊{難}著手，擬緩其幫助之力。經換答{以}軍隊忠壘，決不苟和，務請積極幫助。'
            '某始‹醛›，特電{請}亟謀擴充軍隊。再，席正銘急電{請}款，摘原電如下：保軍校{來}津填‹颚›約已逾百人，{代}表終對服從，已囑‹涕›中拒絶。外派點段鉅{款}買收也。定‹嬙›五給憑分遣，'
            '釐速寄萬圓。模肘團南逸‹苑›人保等軍確有可爲。‹亢›‹亢›現{在}宜圖天津。持。删', []),
@@ -156,7 +156,7 @@ R.update({
 })
 
 P_, Q_ = lambda *r: ('P', list(r)), lambda *r: ('Q', list(r))
-_LV = {'n0503a': [P_('sens'), P_('sens', 'contexte'), Q_('sens')], 'n0510': [P_('sens'), P_('sens'), P_('structure')], 'n0512': [P_('sens')], 'n0504a': [P_('structure', 'sens')],
+_LV = {'n0503a': [P_('sens'), P_('sens', 'contexte'), Q_('sens')], 'n0510': [P_('sens'), P_('sens'), P_('structure')], 'n0511': [P_('sens', 'structure')], 'n0512': [P_('sens')], 'n0504a': [P_('structure', 'sens')],
        'n0504b': [P_('sens', 'contexte'), P_('sens')], 'n0506': [P_('sens')], 'n0508': [Q_('sens')], 'n0515': [P_('sens')] * 8,
        's0505': [P_('sens', 'contexte'), Q_('sens')], 's0506': [Q_('sens')], 's0508': [P_('sens'), Q_('sens')], 's0515': [P_('sens', 'contexte')],
        'm0503': [P_('sens', 'jumeau')]}
@@ -167,7 +167,7 @@ CONF.update({'n0503a': {'愷': 'nom', '江': 'date'}, 'n0512': {'塚': 'nom'}, '
              'n0508': {'占': 'mot', '濰': 'nom', '却': 'variante'}, 'n0515': {'絶': 'variante', '删': 'date'}, 'm0503': {'仟': 'mot', '証': 'variante'}})
 KEYS.update({'n0503a': ['兆銘', '債券', '仲愷'], 'n0503b': ['博愛丸'], 'n0504a': ['邵子峯', '王煥夏', '鴨綠江', '安東', '坂本', '春日丸'],
              'n0504b': ['現款六仟', '深谷', '中須賀'], 'n0506': ['楊丙', '天津', '學生'], 'n0508': ['覺生', '周村', '濰縣', '邵子峯'],
-             'n0510': ['克強', '避人', '舉事', '金山'], 'n0512': ['犬塚', '法船'], 'n0511': ['張繼'], 'n0515': ['克強', '參謀部', '席正銘', '保定軍校', '天津'],
+             'n0510': ['克強', '避人', '舉事', '金山'], 'n0512': ['犬塚', '法船'], 'n0511': ['張繼', '回日'], 'n0515': ['克強', '參謀部', '席正銘', '保定軍校', '天津'],
              's0505': ['百圓券', '春洋丸', '梅喬林', '文'], 's0506': ['邵', '安東', '正金'], 's0508': ['學生', '濟南', '楊丙', '邵'],
              's0515': ['福建', '陳羣', '黃展雲'], 'm0503': ['債券', '陞等功章', '誠']})
 _MAI = {
@@ -180,7 +180,7 @@ _MAI = {
   'n0508': "Hier soir, télégramme de Juesheng (Ju Zheng) : le 4, [nous avons] pris Zhoucun (周村) ; notre armée a attaqué la ville de Weixian le […] ; le 5, [nous avons] pris sa porte Est ; à midi léger recul ; le soir, [nous avons] décidé d'encercler [la ville] et occupé les villages voisins ; le moral est excellent. Je transmets. […] [L'armée] de Shao Zifeng […] est maintenant en route vers le Shandong. [Yang] Bing a aussi reçu de Tianjin une demande pressante de fonds : agissez vite. — Chi. Le 8.",
   'n0510': "Keqiang (Huang Xing) est arrivé hier ; il évite les visiteurs, je ne l'ai pas encore vu. […] Mengshuo (孟碩) a pris le même navire pour Shanghai. Prière de […] lancer l'action. Il est essentiel de télégraphier les nouvelles du Shandong à San Francisco (金山). — Chi. Le 10.",
   'n0512': "La caisse a été remise à Inuzuka (犬塚) ; elle partira le 15 par un navire français. Pour toute affaire urgente, télégraphier à l'adresse suivante : [adresse en clair, non lue].",
-  'n0511': "[…] Zhang Ji (張繼) est rentré ; […] très […].",
+  'n0511': "J'apprends que Zhang Ji (張繼) est rentré au Japon ; c'est très surprenant — est-ce vrai ?",
   'n0515': "Vu aujourd'hui Keqiang (Huang Xing) : il insiste pour que la venue de Monsieur [Sun] à Shanghai soit différée. Il dit aussi qu'un [responsable] de l'état-major a déclaré : au Shandong, les troupes de l'armée révolutionnaire sont trop peu nombreuses ; si elles n'augmentent pas et qu'on en vient à négocier la paix, la diplomatie de son pays aura bien du mal à agir, et il compte ralentir son aide. [Keqiang] a répondu que les troupes sont loyales et ne feront jamais une paix de compromis, et demandé une aide active. L'autre a alors […], et [Keqiang] télégraphie spécialement pour demander qu'on étende d'urgence les troupes. Par ailleurs, Xi Zhengming demande des fonds par télégramme urgent ; extrait de l'original : les élèves de l'école militaire [de Baoding] venus à Tianjin et engagés dépassent la centaine ; leurs représentants jurent obéissance ; je leur ai dit de refuser […]. Au-dehors, on dépense de grosses sommes pour les acheter. [J'ai] fixé […] cinq, donné des certificats et réparti [les hommes] ; envoyez vite dix mille yuans. […] Les troupes de Bao et d'autres ont réellement de quoi faire. Il faut maintenant viser Tianjin. — Chi. Le 15.",
   's0505': "Le 3, […] est arrivé à Shanghai ; les représentants Ma et autres peuvent venir à Shanghai. Préparez aussi vite des billets : 20 000 de 100 yuans, 80 000 de 10 yuans, et […] de 1 et de 5 yuans chacun, à remettre au Harunoyō-maru (春洋丸) pour les porter à Hong Kong ; […] à remettre à Mei Qiaolin (梅喬林). Pour [les responsables] des comptes et des billets, je te laisse en décider, frère. — Wen (Sun Yat-sen).",
   's0506': "Répondez à Shao : le lieu n'est pas prêt ; ralentir le recrutement ; les armes, les garder à Andong jusqu'au moment de s'en servir. Les 6 000 de fonds passent par la Yokohama Specie Bank (正金). […]",
@@ -197,7 +197,7 @@ _MAI = {
   'n0508': "Last night, a telegram from Juesheng (Ju Zheng): on the 4th [we] took Zhoucun (周村); our army attacked the city of Weixian on the […]; on the 5th [we] took its East Gate; at noon a slight pull-back; in the evening [we] decided to surround [the city] and occupied the nearby villages; morale is excellent. Forwarding this. […] Shao Zifeng's [army] […] is now on its way to Shandong. [Yang] Bing has also had an urgent request for funds from Tianjin: please act quickly. — Chi. The 8th.",
   'n0510': 'Keqiang (Huang Xing) arrived yesterday; he is avoiding visitors, I have not seen him yet. […] Mengshuo (孟碩) took the same ship to Shanghai. Please […] launch the action. It is essential to telegraph the Shandong news to San Francisco (金山). — Chi. The 10th.',
   'n0512': 'The box has been handed to Inuzuka (犬塚); it will leave on the 15th by a French ship. For any urgent matter, telegraph to the following address: [address in clear, unread].',
-  'n0511': "[…] Zhang Ji (張繼) has returned; […] very […].",
+  'n0511': 'I hear that Zhang Ji (張繼) has returned to Japan; that is very surprising — is it true?',
   'n0515': "Saw Keqiang (Huang Xing) today: he strongly advises that Sir [Sun]'s journey to Shanghai be put off. He also says that a certain [officer] of the General Staff stated: in Shandong the revolutionary army has too few troops; if they are not increased and it comes to peace talks, his country's diplomacy will find it very hard to act, and he means to slow down his help. [Keqiang] replied that the troops are loyal and will never make a compromise peace, and asked for active help. The other then […], and [Keqiang] telegraphs specially to ask that the troops be expanded urgently. Further, Xi Zhengming asks for funds by urgent telegram; extract of the original: the cadets of the [Baoding] military school who have come to Tianjin and signed up already exceed a hundred; their representatives pledge obedience; I have told them to refuse […]. Outsiders are spending large sums to buy them over. [I have] fixed […] five, issued certificates and assigned [the men]; send ten thousand yuan quickly. […] Bao's and the other troops really can do something. Tianjin should now be the target. — Chi. The 15th.",
   's0505': "On the 3rd […] arrived in Shanghai; the representatives Ma and others may come to Shanghai. Also prepare banknotes quickly: 20,000 of 100 yuan, 80,000 of 10 yuan, and […] each of 1 and 5 yuan, to be handed to the Harunoyō-maru (春洋丸) and carried to Hong Kong; […] to be handed to Mei Qiaolin (梅喬林). As for [those in charge of] accounts and notes, I leave it to you, brother. — Wen (Sun Yat-sen).",
   's0506': "Reply to Shao: the place is not ready; slow down recruitment; keep the arms at Andong until the time comes to use them. The 6,000 in funds go through the Yokohama Specie Bank (正金). […]",
@@ -214,7 +214,7 @@ _MAI = {
   'n0508': "昨夜、覚生（居正）から電報：4日に周村を占領、わが軍は……日に濰県城を攻撃、5日にその東関を占領、正午やや後退、夜にまた包囲を決め、付近の村落を占領した。士気は非常に高い。転電する。……邵子峯の軍……は今や山東へ向かっている。〔楊〕丙はまた天津から資金の催促を受けた。速やかに処理されたい。持。齊（8日）。",
   'n0510': '克強（黄興）は昨日着いたが、人を避けており、まだ会っていない。……孟碩は同じ船で上海へ向かった。……挙事されたい。山東の情報を金山（サンフランシスコ）へ電報で知らせることが肝要。持。灰（10日）。',
   'n0512': '箱はすでに犬塚に渡した。15日にフランス船で送る。急用があれば次の宛先へ打電されたい：〔平文の宛先、未読〕。',
-  'n0511': "……張継はすでに戻った。……",
+  'n0511': '張継が日本に戻ったと聞いた。たいへん意外だ。本当か。',
   'n0515': "今日、克強（黄興）に会った。先生の上海行きは延期すべきだと強く言う。また参謀本部の某……は、山東の革命軍は兵が少なすぎ、増えないうえ講和にでもなれば、自国の外交は手をつけにくく、援助を緩めるつもりだと言ったという。〔克強は〕軍隊は忠実で決して妥協の講和はしないと答え、積極的な援助を求めた。某はそこで……、〔克強は〕軍の拡充を急ぐよう特に打電する。また席正銘が至急電で資金を求めている。原電の抜粋：〔保定〕軍官学校の学生で天津に来て応募した者はすでに百人を超え、代表は服従を誓っている。……を拒むよう言っておいた。外部は巨額で買収しようとしている。……五を定め、証明書を与えて分遣した。至急一万円送られたい。……保などの軍には確かに見込みがある。今は天津を図るべきである。持。刪（15日）。",
   's0505': "3日（江）に……が上海に着いた。馬代表らは上海に来てよい。また至急紙幣を用意されたい：百円券二万、十円券八万、一円・五円各……万。春洋丸に託して香港へ運び、……梅喬林に渡して受け取らせる。帳簿・券の担当は兄の判断に任せる。文（孫文）。",
   's0506': "邵に返電：場所の準備ができていない。募集は控え、武器は安東に保管して時機を待って使う。資金六千は正金（横浜正金銀行）経由。……",
@@ -238,24 +238,24 @@ for _lang in ('fr', 'en', 'zh-Hant', 'ja'): TR[_lang].update(_MAI[_lang])
 
 # lot du début mai : paragraphe ajouté à l'introduction, clés supplémentaires, lettres pas toutes vérifiées
 _INTRO_MAI = {
- 'fr': ('<p><strong>Ajout du 13 octobre 2026 : le début de mai 1916 (JACAR B03050089000).</strong> Quatorze télégrammes de plus, du 3 au 15 mai. '
+ 'fr': ('<p><strong>Ajout du 13 octobre 2026 : le début de mai 1916 (JACAR B03050089000).</strong> Quinze télégrammes de plus, du 3 au 15 mai. '
         'Outre les messages de Tokyo à « Junzaburo », ce lot contient des <em>réponses</em> parties de Shanghai vers Tokyo (adresse « Linwailuk »), '
-        'chiffrées avec le même condensateur ; l\'une est signée <span lang="zh-Hant">文</span> (Sun Wen, c\'est-à-dire Sun Yat-sen). Le télégramme du 12 mai porte un autre préfixe, « Thirtyeight », et se lit avec une <strong>table nouvelle</strong>, retrouvée ici (voir l\'article <a href="method.html#thirtyeight">Méthode</a>). '
+        'chiffrées avec le même condensateur ; l\'une est signée <span lang="zh-Hant">文</span> (Sun Wen, c\'est-à-dire Sun Yat-sen). Les télégrammes des 11 et 12 mai portent un autre préfixe, « Thirtyeight », et se lisent avec une <strong>table nouvelle</strong>, retrouvée ici (voir l\'article <a href="method.html#thirtyeight">Méthode</a>). '
         'Un télégramme de Manille à Tōyama Mitsuru (頭山滿), relayé tel quel vers Shanghai, se lit avec la clé de Manille à Tōyama déjà publiée' + SUP +
         ' et porte la signature <span lang="zh-Hant">誠</span>. Les lettres ont été lues par Claude ; les 23 mots douteux ont été '
         '<strong>vérifiés à l\'image par Brice Dudout</strong> (les autres n\'ont pas été relus lettre par lettre).</p>'),
- 'en': ('<p><strong>Added 13 October 2026: early May 1916 (JACAR B03050089000).</strong> Fourteen more telegrams, from 3 to 15 May. '
+ 'en': ('<p><strong>Added 13 October 2026: early May 1916 (JACAR B03050089000).</strong> Fifteen more telegrams, from 3 to 15 May. '
         'Besides the messages from Tokyo to “Junzaburo”, this batch contains <em>replies</em> sent from Shanghai to Tokyo (address “Linwailuk”), '
-        'enciphered with the same condenser; one is signed <span lang="zh-Hant">文</span> (Sun Wen, that is, Sun Yat-sen). The telegram of 12 May carries a different prefix, “Thirtyeight”, and reads with a <strong>new table</strong>, recovered here (see the <a href="method.html#thirtyeight">Method</a> article). '
+        'enciphered with the same condenser; one is signed <span lang="zh-Hant">文</span> (Sun Wen, that is, Sun Yat-sen). The telegrams of 11 and 12 May carry a different prefix, “Thirtyeight”, and read with a <strong>new table</strong>, recovered here (see the <a href="method.html#thirtyeight">Method</a> article). '
         'A telegram from Manila to Tōyama Mitsuru (頭山滿), relayed verbatim to Shanghai, reads with the Manila-to-Tōyama key already published' + SUP +
         ' and is signed <span lang="zh-Hant">誠</span>. The letters were read by Claude; the 23 doubtful words were '
         '<strong>checked against the image by Brice Dudout</strong> (the others were not re-read letter by letter).</p>'),
- 'zh-Hant': ('<p><strong>2026年10月13日補充：1916年5月上旬（JACAR B03050089000）。</strong>新增十四封電報（5月3日至15日）。除東京致「Junzaburo」的電報外，'
-        '本批還有由上海發往東京（地址「Linwailuk」）的<em>覆電</em>，使用同一壓縮碼；其中一封署名<span lang="zh-Hant">文</span>（孫文）。5月12日電冠以另一前綴「Thirtyeight」，以此處找出的<strong>新碼表</strong>讀出（見<a href="method.html#thirtyeight">方法</a>一文）。'
+ 'zh-Hant': ('<p><strong>2026年10月13日補充：1916年5月上旬（JACAR B03050089000）。</strong>新增十五封電報（5月3日至15日）。除東京致「Junzaburo」的電報外，'
+        '本批還有由上海發往東京（地址「Linwailuk」）的<em>覆電</em>，使用同一壓縮碼；其中一封署名<span lang="zh-Hant">文</span>（孫文）。5月11日、12日兩電冠以另一前綴「Thirtyeight」，以此處找出的<strong>新碼表</strong>讀出（見<a href="method.html#thirtyeight">方法</a>一文）。'
         '一封馬尼拉致頭山滿的電報，原樣轉發上海，以已發表的馬尼拉→頭山密鑰' + SUP + '讀出，署名<span lang="zh-Hant">誠</span>。'
         '字母由 Claude 讀出，其中23個存疑詞已由 Brice Dudout <strong>對照影像核對</strong>（其餘未逐字母重讀）。</p>'),
- 'ja': ('<p><strong>2026年10月13日追加：1916年5月上旬（JACAR B03050089000）。</strong>5月3日から15日までの電報14通を追加。東京から「Junzaburo」宛の電報に加え、'
-        'この束には上海から東京（宛名「Linwailuk」）への<em>返電</em>があり、同じ圧縮符号で暗号化されている。うち1通は<span lang="zh-Hant">文</span>（孫文）の署名。5月12日の電報は別の前置語「Thirtyeight」を持ち、ここで復元した<strong>新しい表</strong>で読める（<a href="method.html#thirtyeight">方法</a>の記事を参照）。'
+ 'ja': ('<p><strong>2026年10月13日追加：1916年5月上旬（JACAR B03050089000）。</strong>5月3日から15日までの電報15通を追加。東京から「Junzaburo」宛の電報に加え、'
+        'この束には上海から東京（宛名「Linwailuk」）への<em>返電</em>があり、同じ圧縮符号で暗号化されている。うち1通は<span lang="zh-Hant">文</span>（孫文）の署名。5月11日と12日の電報は別の前置語「Thirtyeight」を持ち、ここで復元した<strong>新しい表</strong>で読める（<a href="method.html#thirtyeight">方法</a>の記事を参照）。'
         'マニラから頭山満宛の電報は、そのまま上海へ転送されており、既発表のマニラ→頭山鍵' + SUP + 'で読め、<span lang="zh-Hant">誠</span>の署名がある。'
         '文字は Claude が読み、疑わしい23語は Brice Dudout が<strong>画像と照合した</strong>（その他は一文字ずつは再読していない）。</p>'),
 }
