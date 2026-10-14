@@ -11,7 +11,7 @@ R = {
  'c0470': ('倍根招未寫收條，恐於法律無效。不{必}拘控，祇卻常理‹厓›討。觀其如何回答，另行設法對待。', [('Q', ['sens'])]),
  'c0445': ('舅電稱閩尚需款，請籌匯東，轉滬；並請轉告怡朗。文', []),
  'c0461b': ('爲誰用{本}密碼在滬發電？囑交滬山田五萬，可疑。以後請用展堂留下電碼。英', [('P', ['sens'])]),
- 'c0478a': ('{請}向匯豐領四仟圓。覆。英', [('Q', ['lecture'])]),
+ 'c0478a': ('請向匯豐領四仟圓。覆。英', []),
  'c0468': ('帝制取消，馮、朱等當漸觀望。滬異派力弱，於我略可從容佈置。海軍‹擂›發，策較萬全，然猶急備未懈。慮滬動防礙王謀，仍請飭王速來會商，便‹反›相當時機。‹供›是後動。', []),
  'c0465a': ('京信：莫利遜策，袁暫退，使黎代；俟歐戰終，乃借英力徹出。故滬事當發於袁退之前乃可。文', []),
  'c0460': ('江浙滬曁第二艦隊等款略可支配，然無餘裕。外湘需萬餘，鄂萬餘，購械均內，贛四千，皖二萬。專處尚有款分給否？席正{銘}言直隸事頗好。請立撥二‹匍›滬，籌萬全，須兩星期始能發動。', [('P', ['contexte'])]),
@@ -47,8 +47,7 @@ CONFIRMED = {
 # État à l'image des propositions (mêmes valeurs que restitution.IMAGE) : 'maintenue' = le formulaire porte la lettre
 # décodée (lots B1/B2), l'erreur, s'il y en a une, date de 1916 ; 'divergente' = lecture hésitante entre les deux lettres.
 IMAGE = {('c0460', 46): 'maintenue', ('c0461b', 3): 'maintenue', ('c0495', 19): 'maintenue', ('c0459', 0): 'maintenue',
-         ('c0092', 58): 'maintenue', ('c0489', 66): 'divergente', ('c0489', 67): 'maintenue', ('c0478a', 0): 'divergente',
-         ('c0478a', 4): 'maintenue'}
+         ('c0092', 58): 'maintenue', ('c0489', 66): 'divergente', ('c0489', 67): 'maintenue', ('c0478a', 4): 'maintenue'}   # c0478a i0 請 : lu « G » au lot V1 (14/10/2026) → lettres corrigées
 
 # Mots clés de la fiche (tirés du texte décodé)
 KEYS = {

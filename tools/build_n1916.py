@@ -49,7 +49,7 @@ R = {
  'n0605a': ('廖先生鑒：弟促如何{不}覆。‹紀›‹文›', [('Q', ['sens'])]),
  'n0605b': ('濰縣函索飛機，尾崎已赴滬，請先生就近商議。澳款用孫逸仙名', []),
  'n0607': ('袁賊旣死，速定大計。持決乘春日丸歸。', []),
- 'n0615': ('電悉。不兌換可否加暫順券面？應否署名？{如}署，以何人爲宜？但先生署名恐有抵觸。弟可否隨券到魯？兆銘又萱野偕坂本攜{兩}{飛}機往‹餽›。機校由立花代理，學生中半無成功之望，坂本商請改換，速覆。‹重›‹民›‹删›', [('P', ['lecture', 'sens']), ('Q', ['sens']), ('Q', ['sens'])]),
+ 'n0615': ('電悉。不兌換可否加暫順券面？應否署名？如署，以何人爲宜？但先生署名恐有抵觸。弟可否隨券到魯？兆銘又萱野偕坂本攜{兩}{飛}機往‹餽›。機校由立花代理，學生中半無成功之望，坂本商請改換，速覆。‹重›‹民›‹删›', [('Q', ['sens']), ('Q', ['sens'])]),
 }
 # codes rares pour le modèle de langue mais sûrs : (caractère → type)
 CONF = {'n0517': {'仟': 'mot', '瑾': 'nom', '篠': 'date'}, 'n0531a': {'卅': 'date'}, 'n0531b': {'濰': 'nom'},
@@ -177,7 +177,10 @@ _LV = {'n0503a': [Q_('sens'), P_('sens', 'contexte'), Q_('sens')], 'n0510': [P_(
        's0505': [Q_('sens')], 's0506': [Q_('sens')], 's0508': [P_('sens')], 's0515': [P_('sens', 'contexte')],
        'm0503': [Q_('sens'), P_('sens', 'jumeau')]}
 # propositions maintenues alors que la relecture de Brice (lot V7) ne les voit pas sur l'image
-DIVERGE = {('n0503a', '滬'), ('n0503a', '擬'), ('n0615', '如'), ('n0515', '款'), ('s0515', '萬'), ('s0508', '到'), ('m0503', '陞')}
+DIVERGE = set()   # 14/10/2026 : toutes tranchées par la relecture V1 (une lettre comparée à la même main, aveugle au sens)
+# relecture V1 : la lettre décodée est confirmée à l'image, la proposition est maintenue (erreur d'origine, 1916, supposée)
+MAINT = {('n0503a', '滬'), ('n0503a', '擬'), ('n0515', '款'), ('s0515', '萬'), ('s0508', '到'), ('m0503', '陞')}
+# (n0615 如 : lettre proposée lue à l'image au lot V1 → lettres corrigées, dx_corrections.json)
 for _sid, _lv in _LV.items(): R[_sid] = (R[_sid][0], _lv)
 CONF.update({'n0601': {'云': 'mot'}})   # 云云 (fin de citation) ; 兆銘 (Wang Zhaoming)
 CONF.update({'n0503a': {'愷': 'nom', '江': 'date'}, 'n0512': {'塚': 'nom'}, 'n0504a': {'卲': 'variante', '儉': 'date', '坂': 'nom'}, 'n0504b': {'仟': 'mot', '支': 'date'},
@@ -349,7 +352,7 @@ def build():
             ch = next(t[0] for t in toks if t[1] == i and t[2])
             ep = edit_path_alias(letters[4 * i:4 * i + 4], T, ch)
             assert ep and len(ep['edits']) <= 2, (sid, i, ch, ep)
-            out.append(dict(i=i, ch=ch, orig=chars[i], level=lvl, reasons=reasons, letters=letters[4 * i:4 * i + 4], image='divergente' if (sid, ch) in DIVERGE else None, **ep))
+            out.append(dict(i=i, ch=ch, orig=chars[i], level=lvl, reasons=reasons, letters=letters[4 * i:4 * i + 4], image='divergente' if (sid, ch) in DIVERGE else 'maintenue' if (sid, ch) in MAINT else None, **ep))
         after = list(nums)
         for p in out: after[p['i']] = int(p['code'])
         toc = {'yamada1916w': 'yamada1916'}.get(key, key) + ('-sh' if sid.startswith('s') else '')
