@@ -235,6 +235,7 @@ var VERIF = {'fr': 'lettres vérifiées sur le scan : erreur probable du chiffre
         }
       }
       if (I.tr[m.id]) h += '<p class="meta"><strong>' + esc(I.label) + '</strong> ' + esc(I.tr[m.id]) + '</p>';
+      if (I.note && I.note[m.id]) h += '<p class="meta tg-note"><strong>' + esc(I.noteLabel || 'Note') + '</strong> ' + esc(I.note[m.id]) + '</p>';
       var items = '';
       Object.keys(m.expected || {}).forEach(function (i) {
         var e = m.expected[i], idx = +i;

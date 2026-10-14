@@ -296,6 +296,26 @@ for _lang in LAB:
 CONF['n0504a']['云'] = 'mot'   # 云云 (fin de citation), relu le 13/10/2026
 CONF.setdefault('n0615', {})['銘'] = 'nom'; CONF.setdefault('n0515', {})['云'] = 'mot'   # 兆銘 ; 云云
 
+# ---- Gloses des noms de navires (14/10/2026) : affichées sous la traduction ; sources : Wikipédia japonaise
+# (博愛丸, 春洋丸), indicateurs de la Tōyō Kisen ; 春日丸 : ligne de 1916 non vérifiée ----
+_G = {
+ 'fr': {'hakuai': "Hakuai-maru (博愛丸), navire-hôpital de la Croix-Rouge japonaise (1898), exploité en temps de paix par la compagnie Nippon Yūsen (NYK) comme cargo-passagers sur la ligne de Shanghai.",
+        'kasuga': "Kasuga-maru (春日丸), paquebot de la compagnie Nippon Yūsen (NYK) ; la ligne qu'il desservait en 1916 n'est pas vérifiée.",
+        'shunyo': "Shun’yō-maru (春洋丸), paquebot de la Tōyō Kisen (1911), ligne de San Francisco, avec escales à Honolulu, Yokohama, Kobe, Nagasaki, Shanghai et Hong Kong."},
+ 'en': {'hakuai': "Hakuai-maru (博愛丸), a hospital ship of the Japanese Red Cross (1898), run in peacetime by the Nippon Yūsen company (NYK) as a cargo-passenger ship on the Shanghai line.",
+        'kasuga': "Kasuga-maru (春日丸), a liner of the Nippon Yūsen company (NYK); the line she served in 1916 has not been checked.",
+        'shunyo': "Shun’yō-maru (春洋丸), a liner of the Tōyō Kisen company (1911), San Francisco line, calling at Honolulu, Yokohama, Kobe, Nagasaki, Shanghai and Hong Kong."},
+ 'zh-Hant': {'hakuai': "博愛丸為日本赤十字社醫院船（1898年建成），平時由日本郵船公司作為上海航線客貨船營運。",
+        'kasuga': "春日丸為日本郵船公司輪船；1916年所行航線尚未查證。",
+        'shunyo': "春洋丸為東洋汽船公司客輪（1911年建成），舊金山航線，停靠檀香山、橫濱、神戶、長崎、上海、香港。"},
+ 'ja': {'hakuai': "博愛丸は日本赤十字社の病院船（1898年竣工）。平時は日本郵船が上海航路の貨客船として運航した。",
+        'kasuga': "春日丸は日本郵船の汽船。1916年当時の就航航路は未確認。",
+        'shunyo': "春洋丸は東洋汽船の客船（1911年竣工）。サンフランシスコ航路（ホノルル・横浜・神戸・長崎・上海・香港に寄港）。"},
+}
+_SHIPS = {'n0503b': ['hakuai'], 'n0504a': ['kasuga'], 'n0607': ['kasuga'], 's0505': ['shunyo']}
+NOTE = {lang: {sid: ' '.join(_G[lang][k] for k in ks) for sid, ks in _SHIPS.items()} for lang in _G}
+NOTE_LAB = {'fr': 'Note :', 'en': 'Note:', 'zh-Hant': '註：', 'ja': '注：'}
+
 def build():
     msgs = []
     for sid, rec, page, (mo, da), tm, s, prefix in SEL:
@@ -342,7 +362,7 @@ def build():
              'confirmé': sum(s.startswith('confirmé') for m in msgs for s in m['status'])}
     T2 = c1916_i18n.t2s_table(WENMI); i18n = {}
     for lang in ('fr', 'en', 'zh-Hant', 'ja'):
-        dd = dict(LAB[lang]); dd['tr'] = {k: v for k, v in TR[lang].items() if k not in LOCAL}; dd['date'] = {m['id']: c1916_i18n.date_of(lang, *m['md']) + (', ' + m['time'] if m['time'] else '') for m in msgs}
+        dd = dict(LAB[lang]); dd['tr'] = {k: v for k, v in TR[lang].items() if k not in LOCAL}; dd['note'] = {k: v for k, v in NOTE[lang].items() if k not in LOCAL}; dd['noteLabel'] = NOTE_LAB[lang]; dd['date'] = {m['id']: c1916_i18n.date_of(lang, *m['md']) + (', ' + m['time'] if m['time'] else '') for m in msgs}
         assert set(dd['tr']) == {m['id'] for m in msgs}; i18n[lang] = dd
     hans = c1916_i18n.to_hans({k: v for k, v in i18n['zh-Hant'].items() if k != 'date'}, T2); hans['date'] = dict(i18n['zh-Hant']['date']); i18n['zh-Hans'] = hans
     open(os.path.join(SITE, 'assets', 'js', 'corpus-n1916.js'), 'w', encoding='utf-8').write(
