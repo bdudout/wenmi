@@ -181,11 +181,15 @@ KEYS = {'0348': ['三十式槍萬一千', '門司', '年息一割', '關正雄']
         '0413': ['航空隊', '飛行機四台', '鈴木茂'], '0416a': ['滇索槍萬枝', '軍院取消'], '0449': ['軍用飛機六', '無綫電機八', '參謀部'],
         '0455a': ['武器及飛機', '副議長'], '0467': ['記念章', '九千五百元', '寺內內閣'], '0473': ['借款', '無擔保', '九四', '赤坂青山南町'],
         '0489a': ['擬十號南歸'], '0494a': ['歐戰', '內債', '九五扣', '無抵押'], '0496a': ['蔡公', '病故福岡', '哀悼'], '0498': ['借款', '年息擬六厘至七厘', '三年爲限']}
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import dx_overrides
+VER = dx_overrides.verified(WENMI)
 corpus = []
 for m in msgs:
     grid = m.get('grid', 'G0'); ch, route, rec = META[m['id']]; assert ch == grid, m['id']
     codes = analyse(m, grid)
-    corpus.append({'id': m['id'], 'grid': grid, 'route': route, 'record': rec, 'letters': ''.join(m['units']),
+    st = [c['s'] for c in codes]
+    corpus.append({'id': m['id'], 'verified': [i for i in VER.get(('wenmi', m['id']), []) if st[i] in ('douteux', 'illisible')], 'grid': grid, 'route': route, 'record': rec, 'letters': ''.join(m['units']),
                    'codes': m['codes'], 'chars': m['chars'], 'status': [c['s'] for c in codes], 'alts': {str(i): c['alts'] for i, c in enumerate(codes) if c['alts']},
                    'expected': {str(i): c['exp'] for i, c in enumerate(codes) if c['exp']}, 'readable': readable(m, grid),
                    'fiche': {'img': m['id'][:4], 'keys': KEYS[m['id']]}})

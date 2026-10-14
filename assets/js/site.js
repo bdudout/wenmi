@@ -1,3 +1,4 @@
+var VERIF = {'fr': 'lettres vérifiées sur le scan : erreur probable du chiffreur ; voir le caractère proposé dans la version lisible', 'en': 'letters checked on the scan: probably an encipherer\'s error; see the proposed character in the readable version', 'zh-Hant': '字母已對照掃描影像核實：可能是發報人加密時的錯誤；請參見可讀版本中建議的字', 'zh-Hans': '字母已对照扫描影像核实：可能是发报人加密时的错误；请参见可读版本中建议的字', 'ja': '文字は画像で確認済み：暗号化した者の誤りと思われる。読み下しの提案字を参照'};
 // Wenmi — scripts communs : thème, grille G0, décodeur pas à pas.
 (function () {
   'use strict';
@@ -198,6 +199,7 @@
         var title = st.indexOf('confirmé') === 0 ? L.conf[st.split(':')[1]] : (L.status[st] || '');
         var fx = (m.fixed || {})[String(i)];
         if (fx && X) { cls += ' fixed'; title = X.fixed[fx.how].replace('{from}', fx.from || '') + (title ? ' · ' + title : ''); }
+        if ((m.verified || []).indexOf(i) >= 0) title += ' · ' + (VERIF[document.documentElement.lang] || VERIF.fr);
         h += '<span class="token' + cls + '" title="' + esc(title) + '"><span class="u">' + m.letters.substr(4 * i, 2) + '·' + m.letters.substr(4 * i + 2, 2) +
           '</span><span class="c">' + code + '</span><span class="h" lang="zh-Hant">' + esc(m.chars[i]) + '</span></span>';
       });

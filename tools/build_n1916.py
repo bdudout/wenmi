@@ -46,10 +46,10 @@ R = {
  'n0601': ('寄魯芳債券照辦。軍用票事，覺生來電：東京如不能應急，則渠將自印云云。持', []),
  'n0603': ('先生曁仲愷兄鑒：軍票事何不復？覺生連電急索。中央銀行票不作用，可‹叢›參印發行。持。江', []),
  'n0604': ('華僑己到六十餘，請示安置方法。持。江', []),
- 'n0605a': ('廖先生鑒：弟促如何‹下›覆。‹紀›‹文›', []),
+ 'n0605a': ('廖先生鑒：弟促如何{不}覆。‹紀›‹文›', [('Q', ['sens'])]),
  'n0605b': ('濰縣函索飛機，尾崎已赴‹担›，請先生就近商議。澳款用孫逸仙‹名›', []),
  'n0607': ('袁賊旣死，速定大計。持決乘春日丸歸。', []),
- 'n0615': ('電悉。不兌換可否加暫順券面？應否署名？{如}署，以何人爲宜？但先生署名恐有抵觸。弟可否隨券到魯？‹兆›‹銘›又萱野偕坂本攜‹剪›‹風›機往‹餽›。機校由立花代理，學生中半無或‹勁›之望，坂本商‹説›改換，速覆。‹重›‹民›‹删›', [('P', ['lecture', 'sens'])]),
+ 'n0615': ('電悉。不兌換可否加暫順券面？應否署名？{如}署，以何人爲宜？但先生署名恐有抵觸。弟可否隨券到魯？‹兆›‹銘›又萱野偕坂本攜{兩}{飛}機往‹餽›。機校由立花代理，學生中半無或‹勁›之望，坂本商‹説›改換，速覆。‹重›‹民›‹删›', [('P', ['lecture', 'sens']), ('Q', ['sens']), ('Q', ['sens'])]),
 }
 # codes rares pour le modèle de langue mais sûrs : (caractère → type)
 CONF = {'n0517': {'仟': 'mot', '瑾': 'nom', '篠': 'date'}, 'n0531a': {'卅': 'date'}, 'n0531b': {'濰': 'nom'},
@@ -153,7 +153,7 @@ TR = {
 
 # ---- Lot du début mai 1916 (B03050089000) : lecture de Claude seule (13/10/2026), pas encore vérifiée à l'image par Brice ----
 R.update({
- 'n0503a': ('抵滬平安否？港拯日函、江門得而覆失。金山‹倭›羅省‹潑›崙代表馬醒‹馨›‹筊›三人昨日到東，可否促其赴{滬}？兆銘{擬}覓杜石助寫債券，請詢仲愷兄可否照辦。江', []),
+ 'n0503a': ('抵滬平安否？港拯日函、江門得而覆失。金山{及}羅省‹潑›崙代表馬醒‹馨›‹筊›三人昨日到東，可否促其赴{滬}？兆銘{擬}覓杜石助寫債券，請詢仲愷兄可否照辦。江', []),
  'n0503b': ('‹紉›秋乘博愛丸赴滬。持。‹復›', []),
  'n0504a': ('‹卲›子峯來電：懷仁描事王煥夏於四月儉日率懷專兩縣軍譚五百獨立，然勢力‹蘇›敗，擬將人械沿鴨綠江運至安東租界，再募數千待命。運很他芳，望速覆云云。請示辦法，便辨覆。應時因坂本事改乘春日丸，決宅‹齷›日開懇親會。持', []),
  'n0504b': ('有現款六仟，是否匯{滬}？‹帷›日人深谷來詢統一兄與中須賀之五浮能否實行。望覆。持。支', []),
@@ -162,23 +162,24 @@ R.update({
  'n0510': ('克強昨日到，避人，尚未晤。‹逖›‹惟›孟碩乘原船適滬。{請}以居‹正›舉{事}。山東電告金山至要。持。{灰}', []),
  'n0512': ('箱已交犬塚，十五日附法船來。若有要事，請{電}如下：', []),
  'n0511': ('聞張繼已回日，頗奇，是否？', []),
- 'n0515': ('今日晤克強，頗稱先生‹但›赴滬從緩。又言參部局長某謂：山東事革軍軍隊過少，不增，且將議和，則其國外交殊難著手，擬緩其幫助之力。經換答{以}軍隊忠壘，決不苟和，務請積極幫助。某始‹醛›，特電請亟謀擴充軍隊。再，席正銘急電{請}款，摘原電如下：保軍校來津填誓約已逾百人，代表終對服從，已囑‹涕›中拒絶。外派點段鉅{款}買收也。定‹嬙›五給憑分遣，釐速寄萬圓。模肘團南逸‹寁›人保等軍確有可爲。‹亢›‹云›現在宜圖天津。持。删', []),
- 's0505': ('江日官抵滬，馬代表等可來滬。並請速備百圓券二萬、十圓八萬、一圓五圓各一萬，交春洋丸{帶}港，‹耻›義會‹曝›交梅喬林收。帳券人請兄酌奪。文', []),
- 's0506': ('請覆邵：地點未備，人緩招募，械則安置安東，待時而用。款六千由正金購。所持人‹拂›票寄‹愷›', []),
+ 'n0515': ('今日晤克強，頗稱先生‹但›赴滬從緩。又言參部局長某謂：山東事革軍軍隊過少，不增，且將議和，則其國外交殊難著手，擬緩其幫助之力。經換答{以}軍隊忠壘，決不苟和，務請積極幫助。某始‹醛›，特電請亟謀擴充軍隊。再，席正銘急電{請}款，摘原電如下：保軍校來津填誓約已逾百人，代表終對服從，已囑‹涕›中拒絶。外派點段鉅{款}買收也。定‹嬙›五給憑分遣，釐速寄萬圓。模肘團南逸‹寁›人保等軍確有可爲。{云}‹云›現在宜圖天津。持。删', []),
+ 's0505': ('江日官抵滬，馬代表等可來滬。並請速備百圓券二萬、十圓八萬、一圓五圓各一萬，交春洋丸{帶}港，‹耻›義會{轉}交梅喬林收。帳券人請兄酌奪。文', []),
+ 's0506': ('請覆邵：地點未備，人緩招募，械則安置安東，待時而用。款六千由正金購。所持人‹拂›票寄{到}', []),
  's0508': ('已{到}津學生請酌撥款維持，待得濟南令役餘令。楊丙停歷招集。邵事目前不能辦，本部文下足則六十勿匯奶也。齊', []),
  's0515': ('速辰十圓、百圓券各二{萬}，加福建專用章，交陳羣轉黃展雲。此間款盡，難再籌。請酌覆各處', []),
  'h0430': ('{黃}{轉}到{日}，換船{赴}滬。鐵城', []),
- 'm0503': ('款匯港，債券無存，請‹皤›趣漢英‹擐›券伍仟圓、証書及{陞}等功章速附佳弟。擬日間回國。誠叩', []),
+ 'm0503': ('款匯港，債券無存，請{該}趣漢英‹擐›券伍仟圓、証書及{陞}等功章速附佳弟。擬日間回國。誠叩', []),
 })
 
 P_, Q_ = lambda *r: ('P', list(r)), lambda *r: ('Q', list(r))
-_LV = {'n0503a': [P_('sens', 'contexte'), Q_('sens')], 'n0510': [P_('sens'), P_('sens'), P_('structure')], 'n0511': [], 'h0430': [Q_('contexte'), P_('sens'), P_('sens'), P_('sens')], 'n0512': [P_('sens')], 'n0504a': [],
-       'n0504b': [P_('sens', 'contexte')], 'n0506': [P_('sens')], 'n0508': [Q_('sens')], 'n0515': [P_('sens')] * 3,
-       's0505': [Q_('sens')], 's0506': [], 's0508': [P_('sens')], 's0515': [P_('sens', 'contexte')],
-       'm0503': [P_('sens', 'jumeau')]}
+_LV = {'n0503a': [Q_('sens'), P_('sens', 'contexte'), Q_('sens')], 'n0510': [P_('sens'), P_('sens'), P_('structure')], 'n0511': [], 'h0430': [Q_('contexte'), P_('sens'), P_('sens'), P_('sens')], 'n0512': [P_('sens')], 'n0504a': [],
+       'n0504b': [P_('sens', 'contexte')], 'n0506': [P_('sens')], 'n0508': [Q_('sens')], 'n0515': [P_('sens'), P_('sens'), P_('sens'), Q_('sens')],
+       's0505': [Q_('sens'), Q_('sens')], 's0506': [Q_('sens')], 's0508': [P_('sens')], 's0515': [P_('sens', 'contexte')],
+       'm0503': [Q_('sens'), P_('sens', 'jumeau')]}
 # propositions maintenues alors que la relecture de Brice (lot V7) ne les voit pas sur l'image
 DIVERGE = {('n0503a', '滬'), ('n0503a', '擬'), ('n0615', '如'), ('n0515', '款'), ('s0515', '萬'), ('s0508', '到'), ('m0503', '陞')}
 for _sid, _lv in _LV.items(): R[_sid] = (R[_sid][0], _lv)
+CONF.update({'n0601': {'云': 'mot'}})   # 云云 (fin de citation) ; 兆銘 (Wang Zhaoming)
 CONF.update({'n0503a': {'愷': 'nom', '江': 'date'}, 'n0512': {'塚': 'nom'}, 'n0504a': {'卲': 'variante', '儉': 'date', '坂': 'nom'}, 'n0504b': {'仟': 'mot', '支': 'date'},
              'n0508': {'占': 'mot', '濰': 'nom', '却': 'variante'}, 'n0515': {'絶': 'variante', '删': 'date'}, 'm0503': {'仟': 'mot', '証': 'variante'}})
 KEYS.update({'n0503a': ['兆銘', '債券', '仲愷'], 'n0503b': ['博愛丸'], 'n0504a': ['邵子峯', '王煥夏', '鴨綠江', '安東', '坂本', '春日丸'],
@@ -292,6 +293,9 @@ for _lang in LAB:
     _c['yamada1916'] = {'fr': 'Condensateur « Yamada »', 'en': 'Condenser “Yamada”', 'zh-Hant': '壓縮碼「山田」', 'ja': '圧縮符号「山田」'}[_lang]
     LAB[_lang]['intro'] += _INTRO_MAI[_lang]; LAB[_lang]['channel'].update({'honolulu1916w': {'fr': 'Clé « Honolulu », variante « Aloha » (w = v)', 'en': '“Honolulu” key, “Aloha” variant (w = v)', 'zh-Hant': '「檀香山」密鑰「Aloha」變體（w = v）', 'ja': '「ホノルル」鍵の「Aloha」変種（w = v）'}[_lang], 'yamada1916w': {'fr': 'Condensateur « Yamada » (w = p)', 'en': 'Condenser “Yamada” (w = p)', 'zh-Hant': '壓縮碼「山田」（w = p）', 'ja': '圧縮符号「山田」（w = p）'}[_lang], 'k38': {'fr': 'Table « Thirtyeight »', 'en': '“Thirtyeight” table', 'zh-Hant': '「Thirtyeight」碼表', 'ja': '「Thirtyeight」表'}[_lang], 'man2': {'fr': 'Clé Manille → Tōyama', 'en': 'Manila → Tōyama key', 'zh-Hant': '馬尼拉→頭山密鑰', 'ja': 'マニラ→頭山鍵'}[_lang]}); LAB[_lang]['read'] = _READ[_lang]
 
+CONF['n0504a']['云'] = 'mot'   # 云云 (fin de citation), relu le 13/10/2026
+CONF.setdefault('n0615', {})['銘'] = 'nom'; CONF.setdefault('n0515', {})['云'] = 'mot'   # 兆銘 ; 云云
+
 def build():
     msgs = []
     for sid, rec, page, (mo, da), tm, s, prefix in SEL:
@@ -329,7 +333,8 @@ def build():
         for p in out: after[p['i']] = int(p['code'])
         toc = {'yamada1916w': 'yamada1916'}.get(key, key) + ('-sh' if sid.startswith('s') else '')
         n = '%04d' % (page + IMG_OFFSET[rec])            # n° d'image JACAR, comme les autres télégrammes du site
-        msgs.append({'id': sid, 'label': n + POS.get(sid, ''), 'toc': toc, 'grid': key, 'fiche': {'img': 'n' + n, 'n': n, 'keys': KEYS[sid]}, 'route': ROUTES.get(sid, ROUTE), 'record': rec, 'md': [mo, da], 'page': page,
+        VER = dx_overrides.verified(WENMI).get(('n1916', sid), [])
+        msgs.append({'id': sid, 'verified': [i for i in VER if status[i] in ('douteux', 'illisible')], 'label': n + POS.get(sid, ''), 'toc': toc, 'grid': key, 'fiche': {'img': 'n' + n, 'n': n, 'keys': KEYS[sid]}, 'route': ROUTES.get(sid, ROUTE), 'record': rec, 'md': [mo, da], 'page': page,
                      'time': tm, 'prefix': prefix, 'letters': letters, 'codes': codes, 'chars': chars, 'status': status, 'fixed': {}, 'alts': alts,
                      'expected': {}, 'readable': {'toks': [[c, i, p] for c, i, p in toks], 'props': out, 'score': [BC.mean_score(nums), BC.mean_score(after)]}})
     msgs.sort(key=lambda m: (m['record'], m['label']))   # ordre des images JACAR, comme les autres télégrammes

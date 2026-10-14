@@ -17,3 +17,11 @@ def apply_stream(s, ov, label=''):
         assert ''.join(s[4 * i:4 * i + 4]) == old, (label, i, ''.join(s[4 * i:4 * i + 4]), old)
         s[4 * i:4 * i + 4] = new
     return ''.join(s)
+
+def verified(wenmi):
+    """Codes douteux dont les lettres ont été vérifiées sur le scan lors de la relecture ciblée (erreur probable du chiffreur) :
+    {(corpus, id): [i, …]} (source : wenmi/cryptanalysis/douteux/dx_lettres_confirmees.json)."""
+    out = {}
+    for c in json.load(open(os.path.join(wenmi, 'cryptanalysis', 'douteux', 'dx_lettres_confirmees.json'), encoding='utf-8')):
+        corp, mid, i = c['key'].split(':'); out.setdefault((corp, mid), set()).add(int(i))
+    return {k: sorted(v) for k, v in out.items()}

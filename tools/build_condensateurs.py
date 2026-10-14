@@ -143,7 +143,8 @@ def build():
         after = list(nums)
         for p in out: after[p['i']] = int(p['code'])
         n = img[:4]
-        msgs.append({'id': sid, 'label': sid[1:], 'grid': key, 'route': route, 'record': rec, 'md': [mo, da], 'old': tid,
+        VER = dx_overrides.verified(WENMI).get(('c1916', sid), [])
+        msgs.append({'id': sid, 'verified': [i for i in VER if status[i] in ('douteux', 'illisible')], 'label': sid[1:], 'grid': key, 'route': route, 'record': rec, 'md': [mo, da], 'old': tid,
                      'letters': letters, 'codes': codes, 'chars': chars, 'status': status, 'fixed': fixed, 'alts': alts, 'expected': {},
                      'readable': {'toks': [[c, i, p] for c, i, p in toks], 'props': out, 'score': [mean_score(nums), mean_score(after)]},
                      'fiche': {'img': 'c' + n, 'n': n, 'keys': RC.KEYS[sid]}})
