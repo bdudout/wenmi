@@ -31,7 +31,7 @@ R = {
  '0489a': ('擬十號南歸，謹聞。伸。歌。', []),
  '0494a': ('歐戰{中}，卽內{債}{亦}無出九五扣者，俄且然，何况滇無抵押，應稍貴。餘可商，此難辦，擬歸商。盼立復。伸。尤。',
            [('Q', ['sens']), ('Q', ['sens', 'contexte']), ('P', ['sens'])]),
- '0496a': ('轉省議會及各報{館}：蔡公于八號午前二{時}病故福岡。公功德如山，應公布全滇，竭誠哀悼，並妥籌善後及記念。伸。{青}。', [('Q', ['sens']), ('P', ['sens']), ('Q', ['structure'])]),
+ '0496a': ('轉省議會及各報{館}：蔡公于八號午前二時病故福岡。公功德如山，應公布全滇，竭誠哀悼，並妥籌善後及記念。伸。{青}。', [('Q', ['sens']), ('Q', ['structure'])]),
  '0498': ('{卅}、東兩電均悉。借款事舉‹剜›‹勳›妥爲接洽，{甚}感。但尚須{求}{有}數事：一、款{額}擬‹簏›二三{百}萬{元}；二、年息擬六厘至七厘；三、攤四之期，至少以三年爲限；{四}、折{扣}之數，{最}大以{九}八爲率。以上四卽，{請}再向商榷。滇因需財留急，頗有此事之有成。如借額、攤{還}、折扣三事{可}以{公}允，則年息尚可稍寬也。結果如何？盼復。', [('P', ['structure', 'sens']), ('P', ['sens']), ('Q', ['sens']), ('Q', ['sens']), ('P', ['sens', 'structure']), ('P', ['sens']), ('Q', ['structure']), ('P', ['structure']), ('Q', ['sens', 'structure']), ('P', ['sens']), ('P', ['sens']), ('P', ['sens']), ('P', ['structure', 'sens']), ('P', ['sens']), ('Q', ['sens'])]),
 }
 
@@ -41,7 +41,7 @@ R = {
 # Lots 13 et 17 ; lot R1 (11/10/2026, 35 mots dont 5 témoins, lecture aveugle : cadre seul, rien de proposé).
 # Les lettres lues au lot R1 sont intégrées aux corpus de référence (second canal v6, Cen v9) : ce sont des lectures, plus des propositions.
 CONFIRMED = [('0415', 48)]
-KEPT = [('0473', 9), ('0498', 27), ('0498', 32), ('0498', 61), ('0498', 72), ('0498', 99), ('0496a', 16), ('0449', 27), ('0494a', 2),
+KEPT = [('0473', 9), ('0498', 27), ('0498', 32), ('0498', 61), ('0498', 72), ('0498', 99), ('0449', 27), ('0494a', 2),
         ('0416b', 19), ('0415', 38), ('0415', 39), ('0415', 42), ('0348', 52),
         ('0386', 21), ('0413', 12), ('0449', 25), ('0467', 23), ('0467', 28), ('0467', 38), ('0473', 22), ('0473', 43), ('0494a', 5),
         ('0494a', 6), ('0496a', 44), ('0498', 0), ('0498', 16), ('0498', 34), ('0498', 56), ('0498', 58), ('0498', 64), ('0498', 94)]
@@ -49,9 +49,8 @@ IMAGE = {**{k: 'maintenue' for k in KEPT}, **{k: 'confirmée' for k in CONFIRMED
 # Lectures contradictoires : 0473 i9 (額‹珪›萬 → 百) : lettre décodée au lot 17 (lettre ciblée), lettre proposée au lot R2
 # (mot entier, aveugle : « xutumolabo ») ; mais le même lot R2 lit aussi a pour un o certain (0386 飛) : non tranché.
 IMAGE[('0473', 9)] = 'divergente'
-# 0496a i16 (二‹暾›病故 → 時) : lettre décodée « hupo » relue aux lots 13/17, mais « hufo » (= 時) au lot W1 (14/10/2026,
-# lecture aveugle, lettres masquées) : deux relectures en désaccord.
-IMAGE[('0496a', 16)] = 'divergente'
+# 0496a i16 (二時) : « hupo » aux lots 11, 17, R2 (f en variante aux lots 17 et R2) ; « hufo » aux relectures ciblées W1 et W2
+# (14/10/2026 ; W2 : lettre seule comparée aux p et f de la même main) ⇒ lettres corrigées (dx_corrections.json), 時 n'est plus une proposition.
 # 0473 i51 (相 → 直, laru → lary) : lecture aveugle de confiance faible, non visée par le lot ; laissée sans état.
 PENDING = set()
 def image_state(mid, i):
