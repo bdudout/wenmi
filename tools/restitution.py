@@ -27,7 +27,7 @@ R = {
  '0449': ('伸爲滇訂最新軍用飛機六、無綫電機八。祈電岑轉參謀部，免生{障}礙。{武}器交涉中。並聞。齊。', [('P', ['sens', 'lecture']), ('P', ['sens', 'contexte'])]),
  '0455a': ('真電悉。武器及飛機事尚無結果，礙難卽歸。議會事祈照章以副議長代，勿往。伸。元。', []),
  '0467': ('記念章及各個{革}盒‹侀›須九千五百元，如訂，祈匯款。詳由嘉{君}函呈。刻寺{內}內閣成立，武器或可有{望}，不日確定，卽歸。伸。灰。', [('Q', ['sens']), ('Q', ['sens']), ('P', ['contexte', 'sens']), ('P', ['sens'])]),
- '0473': ('借款以·債爲標準，額百萬，息八釐，一{年}還，無擔保，九四{扣}。如借，祈飭伸簽約，卽交。速示。械須中央認可，當局始{允}侵給。並聞。回電祈直交赤坂青山南町‹孵›‹眥›。', [('Q', ['sens']), ('P', ['sens', 'contexte']), ('P', ['sens'])]),
+ '0473': ('借款以·債爲標準，額百萬，息八釐，一{年}還，無擔保，九四{扣}。如借，祈飭伸簽約，卽交。速示。械須中央認可，當局始{允}侵給。並聞。回電祈直交赤坂青山南町伸。‹眥›。', [('Q', ['sens']), ('P', ['sens', 'contexte']), ('P', ['sens'])]),
  '0489a': ('擬十號南歸，謹聞。伸。歌。', []),
  '0494a': ('歐戰{中}，卽內{債}{亦}無出九五扣者，俄且然，何况滇無抵押，應稍貴。餘可商，此難辦，擬歸商。盼立復。伸。尤。',
            [('Q', ['sens']), ('Q', ['sens', 'contexte']), ('P', ['sens'])]),
@@ -49,6 +49,9 @@ IMAGE = {**{k: 'maintenue' for k in KEPT}, **{k: 'confirmée' for k in CONFIRMED
 # Lectures contradictoires : 0473 i9 (額‹珪›萬 → 百) : lettre décodée au lot 17 (lettre ciblée), lettre proposée au lot R2
 # (mot entier, aveugle : « xutumolabo ») ; mais le même lot R2 lit aussi a pour un o certain (0386 飛) : non tranché.
 IMAGE[('0473', 9)] = 'divergente'
+# 0496a i16 (二‹暾›病故 → 時) : lettre décodée « hupo » relue aux lots 13/17, mais « hufo » (= 時) au lot W1 (14/10/2026,
+# lecture aveugle, lettres masquées) : deux relectures en désaccord.
+IMAGE[('0496a', 16)] = 'divergente'
 # 0473 i51 (相 → 直, laru → lary) : lecture aveugle de confiance faible, non visée par le lot ; laissée sans état.
 PENDING = set()
 def image_state(mid, i):

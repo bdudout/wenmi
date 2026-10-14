@@ -24,7 +24,7 @@ window.WENMI_I18N = {
       '0413': "Afin de créer un corps d'aviation, acheter quatre avions militaires du dernier modèle et engager l'aviateur Suzuki Shigeru comme instructeur ; fonds à réunir à Tokyo. Approuvez-vous ? Répondez vite. — Shen. Le 17.",
       '0449': "Shen commande pour le Yunnan six avions militaires du dernier modèle et huit postes de télégraphie sans fil. Prière de télégraphier à Cen pour transmission à l'état-major, afin d'éviter tout obstacle ; l'affaire des armes est en négociation. J'en ai aussi été informé. Le 8.",
       '0467': "Les médailles commémoratives, chacune avec son écrin de cuir (?), coûtent 9 500 yuans comme convenu ; prière de virer les fonds. Les détails vous seront adressés par lettre par M. Jia [?]. Le cabinet Terauchi vient d'être formé ; l'affaire des armes a des chances d'aboutir et sera réglée sous peu ; je rentrerai aussitôt. — Shen. Le 10.",
-      '0473': "Emprunt : sur la base d'obligations […], montant d'un million, intérêt de 8 %, remboursement en un an (?), sans garantie, émis à 94. Si l'emprunt se fait, chargez Shen de signer le contrat et de le remettre ; répondez vite. Les armes exigent l'accord du gouvernement central ; ce n'est qu'alors que les autorités accepteront de les livrer. Pour information. Répondez par télégramme ; prière de remettre directement (?) à Akasaka, Aoyama Minami-chō […].",
+      '0473': "Emprunt : sur la base d'obligations […], montant d'un million, intérêt de 8 %, remboursement en un an (?), sans garantie, émis à 94. Si l'emprunt se fait, chargez Shen de signer le contrat et de le remettre ; répondez vite. Les armes exigent l'accord du gouvernement central ; ce n'est qu'alors que les autorités accepteront de les livrer. Pour information. Répondez par télégramme ; prière de remettre directement (?) à Shen (伸), Aoyama Minami-chō, Akasaka. […]",
       '0498': "(Du Yunnan à Zhao Shen.) Vos télégrammes du 30 et du 1er bien reçus. Pour l'emprunt, merci de le négocier avec soin […]. Il reste toutefois quelques points […] : 1. montant : deux à trois millions [de yuans] ; 2. intérêt annuel : 6 à 7 % ; 3. remboursement : sur au moins trois ans ; 4. escompte : au plus à 98. Sur ces quatre points, veuillez négocier encore. Le Yunnan a un besoin urgent d'argent et tient beaucoup à ce que l'affaire aboutisse. Si le montant, le remboursement et l'escompte peuvent être acceptés, l'intérêt annuel peut encore être un peu assoupli. Quel résultat ? Répondez."
     }
   },
@@ -51,7 +51,7 @@ window.WENMI_I18N = {
       '0413': "In order to create an aviation corps, buy four military aircraft of the latest type and engage the aviator Suzuki Shigeru as instructor; funds to be raised in Tokyo. Do you approve? Reply quickly. — Shen. The 17th.",
       '0449': "Shen is ordering for Yunnan six military aircraft of the latest type and eight wireless sets. Please telegraph Cen to forward to the General Staff, to avoid any obstacle; the weapons matter is under negotiation. I have also been informed. The 8th.",
       '0467': "The commemorative medals, each with its leather (?) case, cost 9,500 yuan as agreed; please remit the funds. Details will follow by letter through Mr Jia [?]. The Terauchi cabinet has just been formed; the weapons matter has a chance and will be settled shortly; I will return at once. — Shen. The 10th.",
-      '0473': "Loan: on the basis of bonds […], amount one million, interest 8 per cent, repayment in one year (?), without guarantee, issued at 94. If the loan goes ahead, instruct Shen to sign the contract and hand it over; reply quickly. The weapons require the approval of the central government; only then will the authorities agree to deliver them. For information. Reply by telegram; please deliver directly (?) to Akasaka, Aoyama Minami-chō […].",
+      '0473': "Loan: on the basis of bonds […], amount one million, interest 8 per cent, repayment in one year (?), without guarantee, issued at 94. If the loan goes ahead, instruct Shen to sign the contract and hand it over; reply quickly. The weapons require the approval of the central government; only then will the authorities agree to deliver them. For information. Reply by telegram; please deliver directly (?) to Shen (伸), Aoyama Minami-chō, Akasaka. […]",
       '0498': "(From Yunnan to Zhao Shen.) Your telegrams of the 30th and the 1st received. Thank you for negotiating the loan with care […]. A few points remain […]: 1. amount: two to three million [yuan]; 2. annual interest: 6 to 7 per cent; 3. repayment: over at least three years; 4. discount: at most to 98. On these four points, please negotiate further. Yunnan urgently needs money and is very keen for the matter to succeed. If the amount, repayment and discount can be accepted, the annual interest can be eased a little further. What is the outcome? Reply."
     }
   },
@@ -78,7 +78,7 @@ window.WENMI_I18N = {
       '0413': "大意：为建设航空队，购最新式军用飞行机四架，并聘飞行家铃木茂为教官，款由东京筹措。赞成与否，请速示。伸。十七日（篠）。",
       '0449': "大意：伸为滇订购最新军用飞机六架、无线电机八台，请电岑转参谋部，免生障碍；武器正在交涉中。并闻。八日（齐）。",
       '0467': "大意：纪念章及各个革（？）盒……须九千五百元，如约请汇款，详情由嘉君（？）函呈。现寺内内阁成立，武器或可有望，不日确定，即归。伸。十日（灰）。",
-      '0473': "大意：借款以……债为标准，额百万，息八厘，一年（？）还，无担保，九四折扣。如借，请饬伸签约即交，速示。军械须中央认可，当局始允交给。并闻。回电请直（？）交赤坂青山南町……。",
+      '0473': "大意：借款以……债为标准，额百万，息八厘，一年（？）还，无担保，九四折扣。如借，请饬伸签约即交，速示。军械须中央认可，当局始允交给。并闻。回电请直（？）交赤坂青山南町伸。……",
       '0498': "（云南致赵伸）大意：卅、东两电均悉。借款事……妥为接洽，甚感。但尚须……数事：一、款额拟……二三百万元；二、年息拟六厘至七厘；三、摊还之期至少以三年为限；四、折扣之数最大以九八为率。以上四项，请再向商榷。滇因需财甚急，颇望此事有成。如借额、摊还、折扣三事可以概允，则年息尚可稍宽。结果如何，盼复。"
     }
   },
@@ -105,7 +105,7 @@ window.WENMI_I18N = {
       '0413': "擬以建設航空隊之目的，購最新式軍用飛行機四臺，並聘飛行家鈴木茂為教官，款由東籌。贊否速示。伸。篠（十七日）。",
       '0449': "伸為滇訂最新軍用飛機六、無線電機八，祈電岑轉參謀部，免生障礙。武器交涉中。並聞。齊（八日）。",
       '0467': "記念章及各個革（？）盒……須九千五百元，如訂，祈匯款。詳由嘉君（？）函呈。刻寺內內閣成立，武器或可有望，不日確定，即歸。伸。灰（十日）。",
-      '0473': "借款以……債為標準，額百萬，息八釐，一年（？）還，無擔保，九四扣。如借，祈飭伸簽約，即交。速示。械須中央認可，當局始允……給。並聞。回電祈直（？）交赤坂青山南町……。",
+      '0473': "借款以……債為標準，額百萬，息八釐，一年（？）還，無擔保，九四扣。如借，祈飭伸簽約，即交。速示。械須中央認可，當局始允……給。並聞。回電祈直（？）交赤坂青山南町伸。……",
       '0498': "（雲南致趙伸）卅、東兩電均悉。借款事……妥為接洽，甚感。但尚須……數事：一、款額擬……二三百萬元；二、年息擬六釐至七釐；三、攤（還）之期，至少以三年為限；四、折扣之數，最大以九八為率。以上四（項），請再向商榷。滇因需財（甚）急，頗（望）此事之有成。如借額、攤還、折扣三事可以概允，則年息尚可稍寬也。結果如何？盼復。"
     }
   },
@@ -132,7 +132,7 @@ window.WENMI_I18N = {
       '0413': "航空隊創設のため、最新式の軍用飛行機四機を購入し、飛行家鈴木茂を教官に招く。資金は東京で調達。賛否を至急示されたい。伸。十七日。",
       '0449': "伸は雲南のため最新の軍用飛行機六機と無線電信機八台を発注。岑に電報し参謀部へ転送させ、支障が生じないようにされたい。兵器は交渉中。あわせて報告を受けた。八日。",
       '0467': "記念章（各個に革（？）の箱付き……）は約定どおり九千五百元、送金されたい。詳細は嘉君（？）から書面で届ける。寺内内閣が成立したので、兵器の件は見込みがあり、近日確定する。すぐに帰る。伸。十日。",
-      '0473': "借款：……債を基準とし、額は百万、利息八厘（8%）、一年（？）で返済、無担保、九四で発行。借りるなら伸に契約署名と引き渡しを命じ、至急返電されたい。兵器は中央政府の認可を要し、そのうえで当局がはじめて引き渡しを認める。あわせて報告。返電のうえ、赤坂青山南町……へ直接（？）届けられたい。",
+      '0473': "借款：……債を基準とし、額は百万、利息八厘（8%）、一年（？）で返済、無担保、九四で発行。借りるなら伸に契約署名と引き渡しを命じ、至急返電されたい。兵器は中央政府の認可を要し、そのうえで当局がはじめて引き渡しを認める。あわせて報告。返電のうえ、赤坂青山南町の伸へ直接（？）届けられたい。……",
       '0498': "（雲南より趙伸へ）三十日と一日の電報、いずれも了承。借款の件、ていねいに交渉していただき感謝する。ただし、なお……数点がある。一、借款額は二三百万元。二、年利は六厘〜七厘（6〜7%）。三、返済期間は少なくとも三年。四、割引は最大で九八。以上四点について、さらに交渉されたい。雲南は資金がきわめて急を要し、この件の成立を強く望んでいる。借入額・返済・割引の三点が認められれば、年利はなおやや緩めてよい。結果はいかに。返電を待つ。"
     }
   }
