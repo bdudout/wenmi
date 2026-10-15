@@ -20,6 +20,7 @@ from check_repro import stream as published_stream   # noqa: E402
 import bkeys                                          # noqa: E402
 import restitution, restitution_c1916 as RC, c1916_i18n  # noqa: E402
 import dx_overrides  # noqa: E402
+import form_times  # noqa: E402
 DX = dx_overrides.load(WENMI)
 
 CONS, VOW = bkeys.CONS, bkeys.VOW
@@ -144,12 +145,12 @@ def build():
         for p in out: after[p['i']] = int(p['code'])
         n = img[:4]
         VER = dx_overrides.verified(WENMI).get(('c1916', sid), [])
-        msgs.append({'id': sid, 'verified': [i for i in VER if status[i] in ('douteux', 'illisible')], 'label': sid[1:], 'grid': key, 'route': route, 'record': rec, 'md': [mo, da], 'old': tid,
+        msgs.append({'id': sid, 'verified': [i for i in VER if status[i] in ('douteux', 'illisible')], 'label': sid[1:], 'grid': key, 'route': route, 'record': rec, 'md': [mo, da], 'time': form_times.C1916[sid], 'old': tid,
                      'letters': letters, 'codes': codes, 'chars': chars, 'status': status, 'fixed': fixed, 'alts': alts, 'expected': {},
                      'readable': {'toks': [[c, i, p] for c, i, p in toks], 'props': out, 'score': [mean_score(nums), mean_score(after)]},
                      'fiche': {'img': 'c' + n, 'n': n, 'keys': RC.KEYS[sid]}})
     order = ['manila1916', 'shanghai1916', 'seito1916', 'yamada1916']   # par date du premier télégramme de chaque clé
-    msgs.sort(key=lambda m: (order.index(m['grid']), m['md'], m['label']))
+    msgs.sort(key=lambda m: (order.index(m['grid']), m['md'], form_times.minutes(m['time']), m['label']))
     stats = {'tels': len(msgs), 'codes': sum(len(m['codes']) for m in msgs),
              'corr': sum(1 for m in msgs for v in m['fixed'].values() if v['how'] == 'scan'),
              'sugg': sum(1 for m in msgs for v in m['fixed'].values() if v['how'] == 'sugg'),

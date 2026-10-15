@@ -15,6 +15,7 @@ import build_condensateurs as BC                      # noqa: E402  (fonctions c
 import restitution, c1916_i18n                        # noqa: E402
 import dx_overrides                                   # noqa: E402
 DX = dx_overrides.load(WENMI)
+import form_times  # noqa: E402
 from n1916_streams import SEL, EXTRA_KEYS, KEY, ROUTE as ROUTES, LOCAL, IMG_OFFSET, POS   # noqa: E402
 bkeys = BC.bkeys; C2CH, uni, REF = BC.C2CH, BC.uni, BC.REF
 for _k, _t in EXTRA_KEYS.items(): bkeys.KEYS.setdefault(_k, _t)
@@ -471,7 +472,7 @@ def build():
         msgs.append({'id': sid, 'verified': [i for i in VER if status[i] in ('douteux', 'illisible')], 'label': n + POS.get(sid, ''), 'toc': toc, 'grid': key, 'fiche': {'img': 'n' + n, 'n': n, 'keys': KEYS[sid]}, 'route': ROUTES.get(sid, ROUTE), 'record': rec, 'md': [mo, da], 'page': page,
                      'time': tm, 'prefix': prefix, 'letters': letters, 'codes': codes, 'chars': chars, 'status': status, 'fixed': {}, 'alts': alts,
                      'expected': {}, 'readable': {'toks': [[c, i, p] for c, i, p in toks], 'props': out, 'score': [BC.mean_score(nums), BC.mean_score(after)]}})
-    msgs.sort(key=lambda m: (m['record'], m['label']))   # ordre des images JACAR, comme les autres télégrammes
+    msgs.sort(key=lambda m: (m['md'], form_times.minutes(m['time']), m['label']))   # par date et heure du formulaire, comme les autres séries
     stats = {'tels': len(msgs), 'codes': sum(len(m['codes']) for m in msgs), 'douteux': sum(s == 'douteux' for m in msgs for s in m['status']),
              'confirmé': sum(s.startswith('confirmé') for m in msgs for s in m['status'])}
     T2 = c1916_i18n.t2s_table(WENMI); i18n = {}

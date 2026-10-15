@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1160" viewBox="0 0 900 1160" role="img" aria-labelledby="title desc" xml:lang="zh-hant">
+<title id="title">Rosamonde 的密碼</title><desc id="desc">互易字母替換 · 1915—1916; you ↔ hea; love ↔ teno.</desc>
+<rect width="900" height="1160" rx="16" fill="#f7f3ea"/>
+<style>text{font-family:Georgia,"Noto Serif CJK SC",serif;fill:#28251f}.small{font-size:22px;fill:#605b50}.mono{font-family:monospace;letter-spacing:2px}.heading{font-size:28px;fill:#8c3d2c}</style>
+<text x="42" y="64" class="" font-size="40">Rosamonde 的密碼</text>
+<text x="42" y="104" class="small" font-size="30">互易字母替換 · 1915—1916</text>
+<rect x="24" y="140" width="852" height="150" rx="10" fill="#efe8d9" stroke="#d5c8b3"/>
+<rect x="24" y="310" width="852" height="310" rx="10" fill="#efe8d9" stroke="#d5c8b3"/>
+<rect x="24" y="640" width="852" height="250" rx="10" fill="#efe8d9" stroke="#d5c8b3"/>
+<rect x="24" y="910" width="852" height="205" rx="10" fill="#efe8d9" stroke="#d5c8b3"/>
+<text x="44" y="181" class="heading" font-size="30">1 · 英文訊息</text>
+<text x="44" y="234" class="mono" font-size="38">love you love you</text>
+<text x="44" y="270" class="small" font-size="30">為講解而編寫的例句，並非電報原文。</text>
+<text x="44" y="351" class="heading" font-size="30">2 · 將每個字母換成配對字母</text>
+<text x="44" y="408" class="mono" font-size="34">y  o  u       l  o  v  e</text>
+<text x="44" y="449" class="mono" font-size="34">↕  ↕  ↕       ↕  ↕  ↕  ↕</text>
+<text x="44" y="492" class="mono" font-size="34">h  e  a       t  e  n  o</text>
+<text x="44" y="548" class="mono" font-size="25">a↔u  b↔g  c↔s  e↔o  f↔j  h↔y</text>
+<text x="44" y="584" class="mono" font-size="25">i↔r  k↔z  l↔t  m↔w  n↔v  q↔x</text>
+<text x="600" y="607" class="small" font-size="30">d 和 p 保持不變</text>
+<text x="44" y="681" class="heading" font-size="30">3 · 去除空格，再按十個字母分組</text>
+<text x="44" y="724" class="small" font-size="30">去除原有空格</text>
+<text x="44" y="772" class="mono" font-size="38">tenoheatenohea</text>
+<text x="44" y="815" class="small" font-size="30">發送的字母組（本例最後一組不足十個字母）</text>
+<text x="44" y="863" class="mono" font-size="38">tenoheaten ohea</text>
+<text x="44" y="951" class="heading" font-size="30">4 · 使用同一張表還原原文</text>
+<text x="44" y="1006" class="mono" font-size="34">tenoheatenohea  →</text>
+<text x="44" y="1053" class="mono" font-size="34">loveyouloveyou</text>
+<text x="44" y="1091" class="small" font-size="30">每一對字母均可雙向替換。</text>
+</svg>

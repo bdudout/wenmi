@@ -10,7 +10,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="../zh-hans/method.html">
 <link rel="alternate" hreflang="zh-Hant" href="../zh-hant/method.html">
 <link rel="alternate" hreflang="ja" href="../ja/method.html">
-<link rel="stylesheet" href="../assets/css/style.css?v=5fc509dd66">
+<link rel="stylesheet" href="../assets/css/style.css?v=6b646e2911">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%239b2c1f'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f7f3ea' font-family='serif'%3E%E6%96%87%3C/text%3E%3C/svg%3E">
 </head>
 <body>
@@ -18,6 +18,7 @@
   <a class="brand" href="index.html"><span class="seal" lang="zh-Hant">文密</span> 文密暗号</a>
   <nav class="menu">
     <a href="index.html">ホーム</a>
+    <a href="rosamonde.html">宋慶齢の電報</a>
     <a href="history.html">歴史的背景</a>
     <a href="method.html" aria-current="page">解読の方法</a>
     <a href="telegrams.html">電報一覧</a>
@@ -67,6 +68,8 @@
       <li><a href="#mai1916">延長：1916年5〜6月</a></li>
       <li><a href="#thirtyeight">新しい表「Thirtyeight」</a></li>
       <li><a href="#huangxing">新しい表：黄興の表</a></li>
+      <li><a href="#t1915">1915年の三つの表</a></li>
+      <li><a href="#rosamonde">ロザモンド：暗号化された英語</a></li>
       <li><a href="#outils">道具</a></li>
     </ol>
   </nav>
@@ -75,6 +78,14 @@
   <img src="../assets/img/illustrations/a-telegraph-office.webp" alt="1916年の日本の電信局を想起させる場面。実際の「文密」電報用紙には、ラテン文字の暗号語が記されている（トップページの画像を参照）。" width="1600" height="900" loading="lazy" decoding="async">
   <figcaption>1916年の日本の電信局を想起させる場面。実際の「文密」電報用紙には、ラテン文字の暗号語が記されている（トップページの画像を参照）。 AIによる歴史的再現イラスト。</figcaption>
 </figure>
+<section class="reading-visual" id="comparer-les-chiffres" aria-labelledby="compare-title">
+<h2 id="compare-title">同じラテン文字でも、暗号方式は異なる</h2>
+<p>公開電碼は符号化の段階であり、秘密そのものではない。1916年の文密は、二つの固有の表で音節に変換する。</p><ol class="cipher-comparison">
+<li><h3><a href="rosamonde.html#systeme">ロザモンド · 1915–1916</a></h3><div class="cipher-route"><span>英語</span><span aria-hidden="true">→</span><span>文字を相互に置換</span></div><p class="cipher-example"><code>you ↔ hea</code></p><p class="visual-caption">一文字を別の文字に置き換える。同じ表で暗号化と復号を行う。</p></li>
+<li><h3><a href="history.html#telegraphe">中文電碼</a></h3><div class="cipher-route"><span>漢字</span><span aria-hidden="true">→</span><span>公開の4桁番号表</span></div><p class="cipher-example"><code>文 → 2429</code></p><p class="visual-caption">公開の表なので、これだけでは内容を隠せない。</p></li>
+<li><h3><a href="relecture.html#principe">圧縮符号 · 複数の表</a></h3><div class="cipher-route"><span>4桁の中文電碼</span><span aria-hidden="true">→</span><span>2桁ずつの数 → 音節</span></div><p class="cipher-example"><code>00–99 → CV</code></p><p class="visual-caption">方式ごとに表が異なる。CVは子音と母音を表す。</p></li>
+<li><h3><a href="method.html#g0">文密 1916 · G0 / Y0</a></h3><div class="cipher-route"><span>4桁の中文電碼</span><span aria-hidden="true">→</span><span>二つの異なる音節表</span></div><p class="cipher-example"><code>報 → 1032 → fa | zi</code></p><p class="visual-caption">G0のみの例。Y0は別の表なので、相互に代用できない。</p></li>
+</ol></section>
 <h2 id="tldr">要点：暗号方式</h2>
   <figure class="wide media">
     <video controls preload="metadata" playsinline poster="../assets/media/decoder-poster.jpg" width="1280" height="720">
@@ -140,6 +151,19 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   </ul>
 
   <h2 id="transcription">第1段階 ―― 職員の書いた文字を読む</h2>
+<section class="reading-visual" id="du-scan-au-texte" aria-labelledby="process-title">
+<h3 id="process-title">用紙から意味へ：実際の例</h3><p>ロザモンド、上海 → 東京、1915年7月7日。英語の置換暗号の例であり、文密のG0ではない。</p>
+<ol class="evidence-path">
+<li><h4>1 · 史料</h4>
+<a href="../assets/img/rosamonde/B03050087700-p50-1915-07-07.jpg"><img src="../assets/img/rosamonde/B03050087700-p50-1915-07-07.jpg" width="1400" height="964" alt="JACAR所蔵の日本側写し：B03050087700、画像50。クリックで拡大。" loading="lazy" decoding="async"></a>
+<p class="visual-caption">JACAR所蔵の日本側写し：B03050087700、画像50。クリックで拡大。</p></li>
+<li><h4>2 · 文字群を書き起こす</h4><pre class="evidence-word"><code>gowoisrjat</code></pre></li>
+<li><h4>3 · 置換表を適用</h4><pre class="evidence-word"><code>g o w o i s r j a t
+↕
+b e m e r c i f u l</code></pre></li>
+<li><h4>4 · 単語に区切って訳す</h4><pre class="evidence-word"><code>be merciful</code></pre><p>「どうか慈悲を。」</p></li>
+</ol><aside class="note"><strong>この例でも解決しない点</strong><p>公表テキストでは「Lovesick」の後に未読部分が残る。他の箇所が読めても、この不確かさは消せない。</p><a href="rosamonde.html#1915">本文と限界を確認する</a></aside></section>
+
   <p>暗号文は日本の職員による手書きの写ししか残っていない。<i>g</i> と <i>q</i>、<i>x</i> と <i>d</i>、<i>u</i> と <i>n</i> は混同しやすく、一字の誤りで漢字が一つ変わり、一字の脱落でそれ以降の全体がずれる。</p>
   <ul>
     <li><strong>画像処理</strong>：ページを300 dpi で描画し、回転し、各用紙と各語を切り出す（macOS の <code>sips</code> を使用、画像の修整はしない）。</li>
@@ -245,6 +269,38 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
   <p>内容：6月3日、黄興は田中（<span lang="zh-Hant">田中</span>、おそらく参謀次長田中義一）に会い、<span lang="zh-Hant">「槍二千、砲六門不日可運」</span>（小銃2000挺と砲6門を近日中に送れる）。5月31日、資金20万と武器若干、胡漢民（<span lang="zh-Hant">漢民</span>）に青木（<span lang="zh-Hant">青木</span>）へ当局に再び打電するよう頼ませた。〔日本側は〕孫文が急いで山東へ赴くことを望まず、黄興は張継（<span lang="zh-Hant">溥泉</span>）と声望ある軍人による調停を提案する。9通が読めた。疑わしい文字はBrice Dudoutが用紙上で確認し（意味を知らない読み）、電報は<a href="telegrams.html#n1916">電報</a>ページに掲載した。上海から「Ylchang」宛の2通（5月29日、6月8日）は別の発信者のもので（冒頭と末尾の符号が共通）、この表では読めない。</p>
   <p><strong>管見の限り、この表は未公表であった</strong>。これらの電報はDaniel Bourdeauのノート<sup class="fn"><a href="sources.html#s2">[2]</a></sup>とCryptiana<sup class="fn"><a href="sources.html#s8">[8]</a></sup>で未解読とされている（2026年10月15日確認）。</p>
 
+<!-- m1915:start -->
+  <h2 id="t1915">さらに三つの表：1915年</h2>
+  <p>同じ系列の1915年の二冊（JACAR B03050087600、B03050087700）<sup class="fn"><a href="sources.html#s17">[17]</a></sup>は、これまで誰も開いていなかった。そこには1916年のものより一年古い圧縮符号の電報がある。各電報について圧縮符号表の系統全体（604 800表：20子音のアルファベット順または逆順、始点、5母音の順序、子音順・母音順・蛇行の埋め方、00または01始まり）を試し、最高点を六つの対照（同じ音節を並べ替えたもの）の得点と比べた。三つの表がはっきりと抜け出し、それぞれ複数の電報を読む：</p>
+  <ul>
+    <li><strong>「Laisaosang」</strong>（東京 ↔ 上海、1915年1〜2月）：子音は <code>c</code> からアルファベット順（<code>w</code> なし）、母音 <code>o a e u i</code>、母音順に埋め、01始まり。1符号あたり2.90、対照は最高0.23。同じ表で逆方向の上海発の電報も読める（2.77対0.96）。</li>
+    <li><strong>「ニューヨーク」</strong>（ニューヨーク → 孫文、1915年2月）：系統の中で最も単純な表——子音 <code>b</code> から <code>z</code> までアルファベット順（<code>p</code> と <code>q</code> は同じ）、母音 <code>a e i o u</code>、子音順に埋め、<i>ba</i> = 00。二通の電報でそれぞれ独立に見つかった。1符号あたり3.90と4.74。</li>
+    <li><strong>「Thirtieth」</strong>（上海 ↔ 東京、1915年2〜3月）、この語が平文で添えられている：子音は <code>v</code> から、母音 <code>u i e o a</code>、母音順に埋め、01始まり。2月27日の電報で1符号あたり6.24（対照1.73）、訂正はまったく不要。1916年の「Thirtyseventh」「Thirtyeight」と同じく、この序数は表の一覧の中の一つを指すのだろう。</li>
+  </ul>
+  <p>さらに、1915年1月6日の東京発「Konglipo」（マニラ）宛ての電報は、Daniel Bourdeau が1916年5月の一通だけから暫定的に提案した表<sup class="fn"><a href="sources.html#s1">[1]</a></sup>で、訂正なしに読める：<span lang="zh-Hant">無其事。文覆</span>（「そのような事実はない。文、返信」）。この表は十六か月前から使われていたことになる。</p>
+  <p>文字はスキャンから Claude が読み、疑わしい箇所を私がブラインドで読み直した（77問、うち対照の10音節はすべて確認。提案された22の訂正のうち15を、何が期待されているか知らずに読み当てた）。電報は<a href="telegrams.html#t1915">電報一覧</a>のページにある。</p>
+
+  <h2 id="rosamonde">ロザモンド：相互置換の下の英語</h2>
+  <p>同じ冊に、また1916年5月の B03050089000<sup class="fn"><a href="sources.html#s16">[16]</a></sup>に、圧縮符号らしくない電報がある。子音と母音が交互にならない十文字の単語で、子音の連続や母音の重複がある。鍵なしの検定は陰性（音節表ではない）だが、三つの統計が方向を示した。文字の一致指数は0.062で自然言語のもの（無作為な文字なら0.038）、<i>f</i> と <i>q</i> は一度も現れず、同じ三文字列が電報をまたいで繰り返される（<span class="mono">hea</span> は十回）。自然言語の文に対する<strong>単純置換</strong>の特徴である。</p>
+  <p>26文字のすべての置換を焼きなまし法で探索し、英語の四文字組モデルで評価すると、最初の試みで英語が現れた（<i>your letter</i>、<i>received my life</i>、<i>cable</i>）。得られた表はほぼ<strong>対合</strong>（各文字が別の文字と入れ替わる）であり、探索を相互置換に限ると鍵が定まる：a↔u b↔g c↔s e↔o f↔j h↔y i↔r k↔z l↔t m↔w n↔v q↔x、<i>d</i> と <i>p</i> はそのまま。<span class="mono">hea</span> = <i>you</i>、<span class="mono">teno</span> = <i>love</i>。</p>
+  <p>三つの検証。（1）同じ長さの英文を無作為な表で暗号化すると、同じ探索で100%復元できる。（2）<strong>標本外</strong>：1915年の電報だけから得た鍵は、私が発見前にブラインドで翻字した1916年5月の七通を読む（無作為な相互置換表2000個に対して z = 7.5）。（3）私が1915年の電報をブラインドで読み直したもの（50行、Claude の読みも平文も見ずに）も同様に読める（z = 10.9）。別方式の電報は読めないまま（z = 0.6）。内容——孫文と宋慶齢の恋の往復——は<a href="rosamonde.html">ロザモンド電報</a>のページで紹介する。</p>
+  <!-- m1916err:start -->
+  <h3 id="rosamonde-1916">なぜ1916年5月は訂正した文字が多いのか</h3>
+  <p>校訂文で角括弧に入れたのは、用紙が別の文字で書いている、または書き落としている文字である。その割合は1916年5月（611文字中109、17.8%）が1915年（1061文字中59、5.6%）の三倍で、二枚にわたる5月12日の電報だけでその半分を占める（234文字中56）。私はこれらの文字を一つずつ、期待される文字を見ながら画像で確かめた（2026年10月15日）。133文字のうち99は用紙に確かに別の文字で書かれており、18は期待される文字として読むことができ、16はなお不確かである。</p>
+  <p>方法の違いでは、ほとんど説明がつかない。1915年の校訂文は二つの独立した読みを組み合わせ、1916年のものは私一人の読みによる。しかし読み手を同じにして——1915年の私のブラインドの読みだけで——比べると、期待される暗号文とのずれは1915年が約7%、1916年が18%である。1916年の用紙のほうが不正確で、ずれは三組の文字に集中している：</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>期待される文字</th><th>1915年（私のブラインドの読み）</th><th>1916年5月（画像で確認）</th></tr></thead>
+    <tbody>
+      <tr><td><i>v</i>（平文 <i>n</i>）</td><td>47回中 v 41回</td><td>v 18回、<b>n</b> 23回</td></tr>
+      <tr><td><i>r</i>（平文 <i>i</i>）</td><td>51回中 r 51回</td><td>r 7回、<b>i</b> 24回</td></tr>
+      <tr><td><i>h</i>（平文 <i>y</i>）</td><td>47回中 h 46回</td><td>h 16回、<b>y</b> 7回</td></tr>
+    </tbody></table></div>
+  <p>これらの誤りは送信によるものではない。モールス符号では <i>n</i> と <i>v</i>、<i>i</i> と <i>r</i>、<i>h</i> と <i>y</i> に共通点はない。誤りは誰かが筆記体を読むときに生じる——おそらく窓口の係員が発信者の手書きの電文を書き写すときである——そして、ほぼ常に同じ向きである。期待される <i>v</i> は <i>n</i> になるが逆はなく、<i>h</i> は <i>y</i> になるが逆はない。原因は二つ考えられるが、どちらとも決められない。一つは急いで書かれた電報であること。1916年5月、孫文は上海から蜂起を指揮しており（<i>“now very busy”</i>）、暗号化そのものもより雑で、語全体が平文のまま残され（<i>know</i>、<i>own</i>、<i>iron</i>、<i>trunk</i>）、半分だけの語さえある（<i>anxi-ous</i>）。もう一つは係員の違い。上海の電信係は自分のものではないラテン文字の筆跡を読んでいた。ただし、東京から出た宋慶齢の二通の電報にも同じ誤りがある。</p>
+  <p>鍵そのものが影響を大きくしている。この鍵はまさに形の似た文字どうし（a/u、c/s、e/o、h/y、i/r、l/t、n/v…）を入れ替えるので、筆のわずかなためらいでも、見た目にはもっともらしいが解読には誤った文字が生まれる。1916年の鍵は確かに1915年のものである。自動探索で最初に見つかった変種（<i>v</i>↔<i>p</i>、<i>n</i>・<i>i</i>・<i>r</i> はそのまま）はこれらの誤りによる見かけにすぎず、平文のすべての <i>v</i> と矛盾する。用紙はそれを <i>n</i> と書き、<i>p</i> と書くことは一度もない。</p>
+  <!-- m1916err:end -->
+  <p><strong>私たちの知る限り、この方式もこれらの文も未発表である</strong>。Daniel Bourdeau の覚え書き<sup class="fn"><a href="sources.html#s2">[2]</a></sup>、Cryptiana<sup class="fn"><a href="sources.html#s8">[8]</a></sup>、二人の結婚に関する研究<sup class="fn"><a href="sources.html#s18">[18]</a></sup><sup class="fn"><a href="sources.html#s19">[19]</a></sup>、J. Chang と J. Halliday の伝記<sup class="fn"><a href="sources.html#s20">[20]</a></sup>のいずれにも見当たらない（2026年10月15日確認）。</p>
+<!-- m1915:end -->
+
   <h2 id="outils">道具</h2>
   <ul>
     <li><strong>史料</strong>：JACAR の公開 PDF<sup class="fn"><a href="sources.html#s3">[3]</a>–<a href="sources.html#s6">[6]</a></sup>。中国電信符号表（Unicode Unihan の <code>kTaiwanTelegraph</code> と <code>kMainlandTelegraph</code>）<sup class="fn"><a href="sources.html#s10">[10]</a></sup>。</li>
@@ -265,6 +321,6 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
 <script src="../assets/js/messages.js?v=a2915f1cfc"></script>
 <script src="../assets/js/messages-y0.js?v=5061365423"></script>
 <script src="../assets/js/translations.js?v=265e6bf252"></script>
-<script src="../assets/js/site.js?v=59f60c45f4"></script>
+<script src="../assets/js/site.js?v=c4c027365b"></script>
 </body>
 </html>

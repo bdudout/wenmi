@@ -161,6 +161,7 @@ var VERIF = {'fr': 'lettres vérifiées sur le scan : erreur probable du chiffre
     var Lel = document.getElementById('corpus-labels');
     if (!C || !Lel) return;
     var L = JSON.parse(Lel.textContent);
+    var Wel = document.getElementById('who-data'), W = Wel ? JSON.parse(Wel.textContent) : {};   // expéditeur / destinataire (persons.py)
     var morse = function (m) { return m.replace(/\./g, '·').replace(/-/g, '−'); };
     var kindLabel = function (k) { return L.kind[k] || k; };
     var h = '<p class="corpus-stats">' + L.stats.replace('{codes}', C.stats.codes).replace('{douteux}', C.stats['douteux'])
@@ -181,13 +182,16 @@ var VERIF = {'fr': 'lettres vérifiées sur le scan : erreur probable du chiffre
     }
     h += '</nav>';
     function tg(m, I, X) {
-      var h = '<section class="tg" id="t' + m.id + '"><h2>' + (m.label || m.id) + ' <small>' + esc(I.date[m.id] || '') + '</small></h2>';
-      h += '<p class="tg-meta"><span>' + esc(m.route) + '</span> · <span>' + esc((I.channel || {})[m.grid] || m.grid) + '</span> · <a href="https://www.jacar.archives.go.jp/das/meta/' + m.record + '">JACAR ' + m.record + '</a></p>';
+      var dt = I.date[m.id] || '';   // heure du formulaire (form_times.py) ajoutée si la date ne la porte pas déjà
+      if (m.time && dt.indexOf(m.time) < 0) dt = dt.replace(/^([^(（]*?)(\s*[(（].*)?$/, function (_, a, b) { return a + ', ' + m.time + (b || ''); });
+      var h = '<section class="tg" id="t' + m.id + '"><h2>' + (m.label || m.id) + ' <small>' + esc(dt) + '</small></h2>';
+      h += '<p class="tg-meta"><span>' + esc((I.route || {})[m.id] || m.route) + '</span> · <span>' + esc((I.channel || {})[m.grid] || m.grid) + '</span> · <a href="https://www.jacar.archives.go.jp/das/meta/' + m.record + '">JACAR ' + m.record + '</a></p>';
+      if (W[m.id]) h += W[m.id]; else if (I.who && I.who[m.id]) h += I.who[m.id];
       if (m.fiche) {
         var fi = '../assets/img/fiches/', cap = (L.scan || '').replace('{rec}', m.record).replace('{img}', m.fiche.n || m.fiche.img);
         h += '<div class="tg-fiche"><a class="tg-scan" href="' + fi + 'scan-' + m.fiche.img + '-full.webp" title="' + esc(cap) + '">' +
           '<img src="' + fi + 'scan-' + m.fiche.img + '.webp" loading="lazy" alt="' + esc(cap) + '"></a>' +
-          '<div class="tg-side"><img class="tg-map" src="' + fi + 'map-' + m.id + '.png" loading="lazy" alt="' + esc((L.route || '') + ' : ' + m.route) + '">' +
+          '<div class="tg-side">' + (m.fiche.nomap ? '' : '<img class="tg-map" src="' + fi + 'map-' + m.id + '.png" loading="lazy" alt="' + esc((L.route || '') + ' : ' + m.route) + '">') +
           '<p class="tg-keys"><span class="tg-label">' + esc(L.keys || '') + '</span> ' + m.fiche.keys.map(function (k) { return '<span lang="zh-Hant">' + esc(k) + '</span>'; }).join(' · ') + '</p>' +
           '<p class="tg-credit">' + esc(cap) + '</p></div></div>';
       }
@@ -303,6 +307,23 @@ var VERIF = {'fr': 'lettres vérifiées sur le scan : erreur probable du chiffre
       });
       h += '</nav></section>';
       N.messages.forEach(function (m) { h += tg(m, NI, NI); });
+    }
+    // télégrammes de 1915 (corpus-t1915.js) : même gabarit, par date et heure
+    var T15 = window.WENMI_T1915, TX = window.WENMI_T1915_I18N;
+    var TI = TX ? (TX[root.lang] || TX.fr) : null;
+    if (T15 && TI) {
+      h += '<section class="tg tg-group" id="t1915"><h2>' + esc(TI.title) + '</h2>' + TI.intro +
+        '<p class="corpus-stats">' + esc(TI.stats.replace('{tels}', T15.stats.tels).replace('{codes}', T15.stats.codes).replace('{douteux}', T15.stats.douteux)) +
+        '</p><nav class="corpus-toc">';
+      Object.keys(TI.toc).forEach(function (g) {
+        var ms = T15.messages.filter(function (m) { return m.toc === g; });
+        if (!ms.length) return;
+        h += '<div><strong>' + esc(TI.toc[g]) + '</strong> ';
+        ms.forEach(function (m) { h += '<a href="#t' + m.id + '">' + m.label + '</a> '; });
+        h += '</div>';
+      });
+      h += '</nav></section>';
+      T15.messages.forEach(function (m) { h += tg(m, TI, TI); });
     }
     box.innerHTML = h;
   }

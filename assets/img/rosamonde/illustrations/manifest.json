@@ -1,0 +1,32 @@
+{
+  "rosamonde-correspondence": {
+    "width": 1600,
+    "height": 900,
+    "bytes": 263490,
+    "original": "wenmi/illustrations/rosamonde/rosamonde-correspondence.png"
+  },
+  "rosamonde-traversee": {
+    "width": 1536,
+    "height": 1024,
+    "bytes": 303070,
+    "original": "wenmi/illustrations/rosamonde/rosamonde-traversee.png"
+  },
+  "rosamonde-chiffre-maison": {
+    "width": 1536,
+    "height": 1024,
+    "bytes": 191142,
+    "original": "wenmi/illustrations/rosamonde/rosamonde-chiffre-maison.png"
+  },
+  "rosamonde-chiffre-maison-bund": {
+    "width": 1536,
+    "height": 1024,
+    "bytes": 213472,
+    "original": "wenmi/illustrations/rosamonde/rosamonde-chiffre-maison-bund.png"
+  },
+  "rosamonde-yung-maison-automobile": {
+    "width": 1536,
+    "height": 1024,
+    "bytes": 410944,
+    "original": "wenmi/illustrations/rosamonde/rosamonde-yung-maison-automobile.png"
+  }
+}

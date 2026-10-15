@@ -16,6 +16,12 @@ Les images de `assets/img/illustrations/` sont des reconstitutions éditoriales 
 licence générale ci-dessus. Les légendes les distinguent des documents d’archives : les scènes sont imaginées.
 La carte symbolique et le portrait dessiné de Sun Yat-sen, présents dans le dossier, ne sont pas utilisés par les pages.
 
+Les scènes de `assets/img/rosamonde/illustrations/*.webp` sont des évocations générées
+avec ImageGen (OpenAI), préparées avec Codex, et relèvent de la licence générale.
+Elles ne sont ni des archives ni des portraits de Soong Ching-ling. Le schéma SVG
+multilingue du chiffrement est composé par code à partir de la clé publiée ; son
+exemple est pédagogique, non une citation de télégramme.
+
 ## Éléments non couverts par cette licence
 
 - **Scans des télégrammes** (`assets/img/jacar-B03050090000-fr0416b.jpg` et `assets/img/fiches/scan-*.webp`) : documents des

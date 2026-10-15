@@ -10,7 +10,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="../zh-hans/method.html">
 <link rel="alternate" hreflang="zh-Hant" href="../zh-hant/method.html">
 <link rel="alternate" hreflang="ja" href="../ja/method.html">
-<link rel="stylesheet" href="../assets/css/style.css?v=5fc509dd66">
+<link rel="stylesheet" href="../assets/css/style.css?v=6b646e2911">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%239b2c1f'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f7f3ea' font-family='serif'%3E%E6%96%87%3C/text%3E%3C/svg%3E">
 </head>
 <body>
@@ -18,6 +18,7 @@
   <a class="brand" href="index.html"><span class="seal" lang="zh-Hant">文密</span> The Wenmi code</a>
   <nav class="menu">
     <a href="index.html">Home</a>
+    <a href="rosamonde.html">Rosamonde</a>
     <a href="history.html">The history</a>
     <a href="method.html" aria-current="page">The method</a>
     <a href="telegrams.html">Telegrams</a>
@@ -67,6 +68,8 @@
       <li><a href="#mai1916">Follow-up: May–June 1916</a></li>
       <li><a href="#thirtyeight">New table “Thirtyeight”</a></li>
       <li><a href="#huangxing">Huang Xing's new table</a></li>
+      <li><a href="#t1915">Three 1915 tables</a></li>
+      <li><a href="#rosamonde">Rosamonde: enciphered English</a></li>
       <li><a href="#outils">Tools</a></li>
     </ol>
   </nav>
@@ -75,6 +78,14 @@
   <img src="../assets/img/illustrations/a-telegraph-office.webp" alt="A Japanese telegraph office, evoking 1916. The real Wenmi forms carry cipher words in Latin letters (see the scan on the home page)." width="1600" height="900" loading="lazy" decoding="async">
   <figcaption>A Japanese telegraph office, evoking 1916. The real Wenmi forms carry cipher words in Latin letters (see the scan on the home page). AI-generated historical reconstruction.</figcaption>
 </figure>
+<section class="reading-visual" id="comparer-les-chiffres" aria-labelledby="compare-title">
+<h2 id="compare-title">Latin-letter words, but different systems</h2>
+<p>The public telegraph code is an encoding step, not a secret. The 1916 Wenmi uses conversion into syllables, with two particular grids.</p><ol class="cipher-comparison">
+<li><h3><a href="rosamonde.html#systeme">Rosamonde · 1915–1916</a></h3><div class="cipher-route"><span>English</span><span aria-hidden="true">→</span><span>Reciprocal letter substitution</span></div><p class="cipher-example"><code>you ↔ hea</code></p><p class="visual-caption">One letter replaces another; the same table works in both directions.</p></li>
+<li><h3><a href="history.html#telegraphe">Chinese telegraph code</a></h3><div class="cipher-route"><span>Chinese character</span><span aria-hidden="true">→</span><span>Public four-digit directory</span></div><p class="cipher-example"><code>文 → 2429</code></p><p class="visual-caption">This directory is public: by itself it does not conceal the text.</p></li>
+<li><h3><a href="relecture.html#principe">Condensers · several tables</a></h3><div class="cipher-route"><span>Four-digit Chinese code</span><span aria-hidden="true">→</span><span>Two digit pairs → syllables</span></div><p class="cipher-example"><code>00–99 → CV</code></p><p class="visual-caption">The table depends on the system. CV means a consonant followed by a vowel.</p></li>
+<li><h3><a href="method.html#g0">Wenmi 1916 · G0 / Y0</a></h3><div class="cipher-route"><span>Four-digit Chinese code</span><span aria-hidden="true">→</span><span>Two distinct syllable grids</span></div><p class="cipher-example"><code>報 → 1032 → fa | zi</code></p><p class="visual-caption">G0 example only. Y0 uses a different grid: the tables are not interchangeable.</p></li>
+</ol></section>
 <h2 id="tldr">In short: the system</h2>
   <figure class="wide media">
     <video controls preload="metadata" playsinline poster="../assets/media/decoder-poster.jpg" width="1280" height="720">
@@ -140,6 +151,19 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   </ul>
 
   <h2 id="transcription">Step 1 — Reading what the clerk wrote</h2>
+<section class="reading-visual" id="du-scan-au-texte" aria-labelledby="process-title">
+<h3 id="process-title">From the form to its meaning: a real example</h3><p>Rosamonde, Shanghai → Tokyo, 7 July 1915. This example uses the English substitution, not Wenmi’s G0 grid.</p>
+<ol class="evidence-path">
+<li><h4>1 · The document</h4>
+<a href="../assets/img/rosamonde/B03050087700-p50-1915-07-07.jpg"><img src="../assets/img/rosamonde/B03050087700-p50-1915-07-07.jpg" width="1400" height="964" alt="Japanese copy held by JACAR: B03050087700, image 50. Click to enlarge." loading="lazy" decoding="async"></a>
+<p class="visual-caption">Japanese copy held by JACAR: B03050087700, image 50. Click to enlarge.</p></li>
+<li><h4>2 · Transcribe the group</h4><pre class="evidence-word"><code>gowoisrjat</code></pre></li>
+<li><h4>3 · Apply the table</h4><pre class="evidence-word"><code>g o w o i s r j a t
+↕
+b e m e r c i f u l</code></pre></li>
+<li><h4>4 · Restore word boundaries</h4><pre class="evidence-word"><code>be merciful</code></pre><p>“Be merciful.”</p></li>
+</ol><aside class="note"><strong>What this example does not resolve</strong><p>The published text retains a gap after “Lovesick”. Readable decipherment elsewhere does not justify erasing this uncertainty.</p><a href="rosamonde.html#1915">Check the text and its limits</a></aside></section>
+
   <p>The ciphertext only exists as handwritten copies by Japanese clerks. The letters <i>g</i> and <i>q</i>, <i>x</i> and <i>d</i>, <i>u</i> and <i>n</i> are easily confused; a single wrong letter changes a character, a skipped letter shifts the whole rest of the message.</p>
   <ul>
     <li><strong>Rendering</strong> of the pages at 300 dpi, rotation, cropping of each form and each group (macOS <code>sips</code>, no image retouching).</li>
@@ -245,6 +269,38 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
   <p>What they say: on 3 June Huang Xing saw Tanaka (<span lang="zh-Hant">田中</span>, presumably Tanaka Giichi, vice-chief of the General Staff): <span lang="zh-Hant">「槍二千、砲六門不日可運」</span>, 2,000 rifles and 6 guns can be shipped shortly; on 31 May, 200,000 in funds and arms, and Hu Hanmin (<span lang="zh-Hant">漢民</span>) asked to request Aoki (<span lang="zh-Hant">青木</span>) to intervene again with the authorities; [the Japanese] do not wish Sun to rush to Shandong, and Huang suggests mediation by Zhang Ji (<span lang="zh-Hant">溥泉</span>) and a respected military man. Nine telegrams are read; the doubtful letters were checked on the forms by Brice Dudout (reading blind to the meaning), and the telegrams are given on the <a href="telegrams.html#n1916">Telegrams</a> page. Two telegrams from Shanghai to “Ylchang” (29 May and 8 June), from another sender (same opening and closing codes), do not read with this table.</p>
   <p><strong>As far as we know, this table had not been published</strong>: these telegrams are listed as unread in Daniel Bourdeau's notes<sup class="fn"><a href="sources.html#s2">[2]</a></sup> and on Cryptiana<sup class="fn"><a href="sources.html#s8">[8]</a></sup> (checked on 15 October 2026).</p>
 
+<!-- m1915:start -->
+  <h2 id="t1915">Three more tables: 1915</h2>
+  <p>The 1915 volumes of the same series (JACAR B03050087600 and B03050087700)<sup class="fn"><a href="sources.html#s17">[17]</a></sup> had never been opened. They contain condenser telegrams a year older than those of 1916. For each one, we ran the complete family of condenser tables (604,800 tables: twenty consonants in alphabetical or reverse order, starting point, order of the five vowels, filling by consonant, by vowel or in a serpentine, start at 00 or 01) and compared the best score with those of six controls, the same syllables shuffled. Three tables stand out clearly, each readable on several telegrams:</p>
+  <ul>
+    <li><strong>“Laisaosang”</strong> (Tokyo ↔ Shanghai, January–February 1915): consonants in alphabetical order from <code>c</code> (without <code>w</code>), vowels <code>o a e u i</code>, filled by vowel, starting at 01. 2.90 per code against at best 0.23 for the controls; the same table reads a telegram from Shanghai in the other direction (2.77 against 0.96).</li>
+    <li><strong>“New York”</strong> (New York → Sun Yat-sen, February 1915): the simplest table in the family — consonants <code>b</code> to <code>z</code> in alphabetical order (<code>p</code> and <code>q</code> merged), vowels <code>a e i o u</code>, filled by consonant, <i>ba</i> = 00. Found independently on two telegrams; 3.90 and 4.74 per code.</li>
+    <li><strong>“Thirtieth”</strong> (Shanghai ↔ Tokyo, February–March 1915), announced in clear by that word: consonants from <code>v</code>, vowels <code>u i e o a</code>, filled by vowel, starting at 01. 6.24 per code against 1.73, with no correction at all, on the telegram of 27 February. Like “Thirtyseventh” and “Thirtyeight” in 1916, the ordinal probably designates a table in a list.</li>
+  </ul>
+  <p>Finally, on 6 January 1915 a telegram from Tokyo to “Konglipo” (Manila) reads without correction with the table that Daniel Bourdeau had proposed, tentatively, from a single telegram of May 1916<sup class="fn"><a href="sources.html#s1">[1]</a></sup>: <span lang="zh-Hant">無其事。文覆</span> (“There is nothing of the sort. — Wen, replying”). That table was therefore in use sixteen months earlier.</p>
+  <p>Claude read the letters on the scans, then I reread the doubtful points blind (a batch of 77 questions, including 10 control syllables, all confirmed; I found 15 of the 22 proposed corrections without knowing which were expected). The telegrams are on the <a href="telegrams.html#t1915">Telegrams</a> page.</p>
+
+  <h2 id="rosamonde">Rosamonde: English under a reciprocal substitution</h2>
+  <p>In the same volumes, and in May 1916 in file B03050089000<sup class="fn"><a href="sources.html#s16">[16]</a></sup>, other telegrams do not look like condensers: ten-letter words without consonant–vowel alternation, with consonant clusters and doubled vowels. The keyless test is negative (this is not a syllable table), but three statistics point the way: the index of coincidence of the letters is 0.062, that of a natural language (0.038 for random letters); <i>f</i> and <i>q</i> never occur; trigrams recur from one telegram to another (<span class="mono">hea</span>, ten times). This is the signature of a <strong>simple substitution</strong> on natural-language text.</p>
+  <p>Simulated annealing over all 26-letter substitutions, scored by an English quadgram model, brings out English at the first attempt (<i>your letter</i>, <i>received my life</i>, <i>cable</i>). The table found is almost an <strong>involution</strong> (each letter swapped with another); restricting the search to reciprocal substitutions fixes the key: a↔u b↔g c↔s e↔o f↔j h↔y i↔r k↔z l↔t m↔w n↔v q↔x, <i>d</i> and <i>p</i> unchanged. <span class="mono">hea</span> = <i>you</i>, <span class="mono">teno</span> = <i>love</i>.</p>
+  <p>Three checks. (1) An English text of the same length, enciphered with a random table, is recovered at 100 % by the same search. (2) <strong>Out of sample</strong>: the key taken from the 1915 telegrams alone reads the seven telegrams of May 1916, which I had transcribed blind before the discovery (z = 7.5 against 2,000 random reciprocal tables). (3) My blind rereading of the 1915 telegrams (50 lines, without seeing either Claude's reading or the plaintext) reads just as well (z = 10.9). A telegram in another system stays unreadable (z = 0.6). The content — a love correspondence between Sun Yat-sen and Soong Ching-ling — is presented on the page <a href="rosamonde.html">The Rosamonde telegrams</a>.</p>
+  <!-- m1916err:start -->
+  <h3 id="rosamonde-1916">Why so many corrected letters in May 1916?</h3>
+  <p>In the edition, letters in brackets are those that the form gives differently, or leaves out. They are three times more frequent in May 1916 (109 of 611, 17.8 %) than in 1915 (59 of 1,061, 5.6 %); the telegram of 12 May, on two sheets, accounts for half of them (56 of 234). I checked each of these letters on the images, with the expected letter in view (15 October 2026): of 133, 99 are indeed written differently on the form, 18 can be read as the expected letter, 16 remain uncertain.</p>
+  <p>Method explains almost nothing. The 1915 edition combines two independent readings, the 1916 one my reading alone; but with the reader held constant — my blind reading of 1915 on its own —, the gap with the expected cipher is about 7 % in 1915, against 18 % in 1916. The 1916 forms are less faithful, and the gaps concentrate on three pairs of letters:</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>expected letter</th><th>1915 (my blind reading)</th><th>May 1916 (checked on the image)</th></tr></thead>
+    <tbody>
+      <tr><td><i>v</i> (plain <i>n</i>)</td><td>v 41 times of 47</td><td>v 18 times, <b>n</b> 23 times</td></tr>
+      <tr><td><i>r</i> (plain <i>i</i>)</td><td>r 51 times of 51</td><td>r 7 times, <b>i</b> 24 times</td></tr>
+      <tr><td><i>h</i> (plain <i>y</i>)</td><td>h 46 times of 47</td><td>h 16 times, <b>y</b> 7 times</td></tr>
+    </tbody></table></div>
+  <p>These errors do not come from transmission: in Morse, <i>n</i> and <i>v</i>, <i>i</i> and <i>r</i>, <i>h</i> and <i>y</i> have nothing in common. They arise when someone reads cursive handwriting — most likely the counter clerk copying the sender's handwritten message — and they nearly always go the same way: an expected <i>v</i> becomes <i>n</i>, never the reverse; an <i>h</i> becomes <i>y</i>, never the reverse. Two causes are possible, and we cannot decide between them. Telegrams written in haste: in May 1916 Sun was leading the rising from Shanghai (<i>“now very busy”</i>), and the encipherment itself is more careless, with whole words left in clear (<i>know</i>, <i>own</i>, <i>iron</i>, <i>trunk</i>) and even half a word (<i>anxi-ous</i>). Or other clerks: in Shanghai, telegraphists reading a Latin hand that was not their own; yet Ching-ling's two telegrams sent from Tokyo show the same faults.</p>
+  <p>The key makes things worse: it swaps precisely letters that look alike (a/u, c/s, e/o, h/y, i/r, l/t, n/v…), so the slightest hesitation of the pen yields a letter that looks plausible but is wrong for deciphering. The 1916 key is indeed that of 1915: a variant first found by automatic search (<i>v</i>↔<i>p</i>, <i>n</i>, <i>i</i> and <i>r</i> unchanged) was only an effect of these errors; it is contradicted by every plain <i>v</i>, which the form writes <i>n</i> and never <i>p</i>.</p>
+  <!-- m1916err:end -->
+  <p><strong>As far as we know, neither this system nor these texts had been published</strong>: they are absent from Daniel Bourdeau's notes<sup class="fn"><a href="sources.html#s2">[2]</a></sup>, from Cryptiana<sup class="fn"><a href="sources.html#s8">[8]</a></sup>, from the historiography of the marriage<sup class="fn"><a href="sources.html#s18">[18]</a></sup><sup class="fn"><a href="sources.html#s19">[19]</a></sup> and from the biography by J. Chang and J. Halliday<sup class="fn"><a href="sources.html#s20">[20]</a></sup> (checked on 15 October 2026).</p>
+<!-- m1915:end -->
+
   <h2 id="outils">Tools</h2>
   <ul>
     <li><strong>Sources</strong>: public JACAR PDFs<sup class="fn"><a href="sources.html#s3">[3]</a>–<a href="sources.html#s6">[6]</a></sup>; Chinese telegraph code tables (Unicode Unihan, fields <code>kTaiwanTelegraph</code> and <code>kMainlandTelegraph</code>)<sup class="fn"><a href="sources.html#s10">[10]</a></sup>.</li>
@@ -265,6 +321,6 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
 <script src="../assets/js/messages.js?v=a2915f1cfc"></script>
 <script src="../assets/js/messages-y0.js?v=5061365423"></script>
 <script src="../assets/js/translations.js?v=265e6bf252"></script>
-<script src="../assets/js/site.js?v=59f60c45f4"></script>
+<script src="../assets/js/site.js?v=c4c027365b"></script>
 </body>
 </html>

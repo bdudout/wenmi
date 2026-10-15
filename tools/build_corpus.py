@@ -183,6 +183,7 @@ KEYS = {'0348': ['三十式槍萬一千', '門司', '年息一割', '關正雄']
         '0489a': ['擬十號南歸'], '0494a': ['歐戰', '內債', '九五扣', '無抵押'], '0496a': ['蔡公', '病故福岡', '哀悼'], '0498': ['借款', '年息擬六厘至七厘', '三年爲限']}
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import dx_overrides
+import form_times
 VER = dx_overrides.verified(WENMI)
 corpus = []
 for m in msgs:
@@ -192,7 +193,9 @@ for m in msgs:
     corpus.append({'id': m['id'], 'verified': [i for i in VER.get(('wenmi', m['id']), []) if st[i] in ('douteux', 'illisible')], 'grid': grid, 'route': route, 'record': rec, 'letters': ''.join(m['units']),
                    'codes': m['codes'], 'chars': m['chars'], 'status': [c['s'] for c in codes], 'alts': {str(i): c['alts'] for i, c in enumerate(codes) if c['alts']},
                    'expected': {str(i): c['exp'] for i, c in enumerate(codes) if c['exp']}, 'readable': readable(m, grid),
-                   'fiche': {'img': m['id'][:4], 'keys': KEYS[m['id']]}})
+                   'fiche': {'img': m['id'][:4], 'keys': KEYS[m['id']]}, 'md': list(form_times.WENMI[m['id']][0]), 'time': form_times.WENMI[m['id']][1]})
+# classement : par canal (G0 puis Y0), puis par date et heure du formulaire
+corpus.sort(key=lambda m: (m['grid'] != 'G0', m['md'], form_times.minutes(m['time']), m['id']))
 
 # 1917 : lettres seulement (non déchiffrés)
 sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c14')); sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c31'))

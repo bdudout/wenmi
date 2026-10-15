@@ -10,7 +10,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="../zh-hans/method.html">
 <link rel="alternate" hreflang="zh-Hant" href="../zh-hant/method.html">
 <link rel="alternate" hreflang="ja" href="../ja/method.html">
-<link rel="stylesheet" href="../assets/css/style.css?v=5fc509dd66">
+<link rel="stylesheet" href="../assets/css/style.css?v=6b646e2911">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%239b2c1f'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f7f3ea' font-family='serif'%3E%E6%96%87%3C/text%3E%3C/svg%3E">
 </head>
 <body>
@@ -18,6 +18,7 @@
   <a class="brand" href="index.html"><span class="seal" lang="zh-Hant">文密</span> 文密電碼</a>
   <nav class="menu">
     <a href="index.html">首頁</a>
+    <a href="rosamonde.html">宋慶齡電報</a>
     <a href="history.html">歷史背景</a>
     <a href="method.html" aria-current="page">破譯方法</a>
     <a href="telegrams.html">電報全文</a>
@@ -67,6 +68,8 @@
       <li><a href="#mai1916">延伸：1916年5至6月</a></li>
       <li><a href="#thirtyeight">新碼表「Thirtyeight」</a></li>
       <li><a href="#huangxing">新碼表：黃興的碼表</a></li>
+      <li><a href="#t1915">1915年的三張碼表</a></li>
+      <li><a href="#rosamonde">羅莎蒙德：加密英文</a></li>
       <li><a href="#outils">工具</a></li>
     </ol>
   </nav>
@@ -75,6 +78,14 @@
   <img src="../assets/img/illustrations/a-telegraph-office.webp" alt="1916年日本電報局的想像場景。真實的「文密」電報單上寫的是拉丁字母密語（見首頁掃描件）。" width="1600" height="900" loading="lazy" decoding="async">
   <figcaption>1916年日本電報局的想像場景。真實的「文密」電報單上寫的是拉丁字母密語（見首頁掃描件）。 AI生成的歷史重構插畫。</figcaption>
 </figure>
+<section class="reading-visual" id="comparer-les-chiffres" aria-labelledby="compare-title">
+<h2 id="compare-title">同為拉丁字母，密碼系統卻不同</h2>
+<p>公開中文電碼是一種編碼步驟，本身並非秘密。1916年的文密採用兩張特定的表，將數字轉換為音節。</p><ol class="cipher-comparison">
+<li><h3><a href="rosamonde.html#systeme">Rosamonde · 1915–1916</a></h3><div class="cipher-route"><span>英文</span><span aria-hidden="true">→</span><span>字母互易替換</span></div><p class="cipher-example"><code>you ↔ hea</code></p><p class="visual-caption">一個字母替換另一個字母；同一張表既用於加密，也用於解密。</p></li>
+<li><h3><a href="history.html#telegraphe">中文電碼</a></h3><div class="cipher-route"><span>漢字</span><span aria-hidden="true">→</span><span>公開的四位數字碼表</span></div><p class="cipher-example"><code>文 → 2429</code></p><p class="visual-caption">碼表是公開的，單憑這一步無法隱藏內容。</p></li>
+<li><h3><a href="relecture.html#principe">壓縮電碼 · 多張碼表</a></h3><div class="cipher-route"><span>四位中文電碼</span><span aria-hidden="true">→</span><span>兩組兩位數字 → 音節</span></div><p class="cipher-example"><code>00–99 → CV</code></p><p class="visual-caption">不同系統使用不同碼表。CV表示子音加母音。</p></li>
+<li><h3><a href="method.html#g0">文密 1916 · G0 / Y0</a></h3><div class="cipher-route"><span>四位中文電碼</span><span aria-hidden="true">→</span><span>兩張不同的音節表</span></div><p class="cipher-example"><code>報 → 1032 → fa | zi</code></p><p class="visual-caption">僅為G0示例。Y0使用另一張表，不能互換。</p></li>
+</ol></section>
 <h2 id="tldr">概要：加密系統</h2>
   <figure class="wide media">
     <video controls preload="metadata" playsinline poster="../assets/media/decoder-poster.jpg" width="1280" height="720">
@@ -140,6 +151,19 @@ def decode(letters):          # "fazihipego..." -> ["1032", "0278", ...]
   </ul>
 
   <h2 id="transcription">第一步 —— 讀出職員寫下的字母</h2>
+<section class="reading-visual" id="du-scan-au-texte" aria-labelledby="process-title">
+<h3 id="process-title">從電報單到含義：一個真實例子</h3><p>Rosamonde，上海 → 東京，1915年7月7日。這裡使用英文替換密碼，而非文密的G0表。</p>
+<ol class="evidence-path">
+<li><h4>1 · 原始史料</h4>
+<a href="../assets/img/rosamonde/B03050087700-p50-1915-07-07.jpg"><img src="../assets/img/rosamonde/B03050087700-p50-1915-07-07.jpg" width="1400" height="964" alt="JACAR所藏日方抄件：B03050087700，圖像50。點擊放大。" loading="lazy" decoding="async"></a>
+<p class="visual-caption">JACAR所藏日方抄件：B03050087700，圖像50。點擊放大。</p></li>
+<li><h4>2 · 轉錄字母組</h4><pre class="evidence-word"><code>gowoisrjat</code></pre></li>
+<li><h4>3 · 應用替換表</h4><pre class="evidence-word"><code>g o w o i s r j a t
+↕
+b e m e r c i f u l</code></pre></li>
+<li><h4>4 · 劃分單詞並翻譯</h4><pre class="evidence-word"><code>be merciful</code></pre><p>「請憐憫我。」</p></li>
+</ol><aside class="note"><strong>本例並未解決的問題</strong><p>已發表文本在「Lovesick」之後仍保留未讀部分。其他段落能夠讀通，並不意味著可以抹去這裡的不確定性。</p><a href="rosamonde.html#1915">核對原文及其局限</a></aside></section>
+
   <p>密文只以日本職員的手抄件形式存在。<i>g</i> 與 <i>q</i>、<i>x</i> 與 <i>d</i>、<i>u</i> 與 <i>n</i> 很容易混淆；錯一個字母就會錯一個字，漏一個字母則會讓整封電報其後的部分全部錯位。</p>
   <ul>
     <li><strong>處理影像</strong>：以 300 dpi 轉出頁面，旋轉，裁出每張電報紙與每一組（使用 macOS 的 <code>sips</code>，不做任何影像修飾）。</li>
@@ -245,6 +269,38 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
   <p>內容：6月3日，黃興晤田中（<span lang="zh-Hant">田中</span>，應為參謀次長田中義一）：<span lang="zh-Hant">「槍二千、砲六門不日可運」</span>；5月31日，款二十萬、武器若干，囑胡漢民（<span lang="zh-Hant">漢民</span>）親請青木（<span lang="zh-Hant">青木</span>）再電當局；〔日方〕不欲孫先生急赴山東，黃興提議請張繼（<span lang="zh-Hant">溥泉</span>）及一有資望軍人調和。已讀出九封電報；存疑字母已由 Brice Dudout 對照電報紙核對（在不知文意的情況下），這些電報已收入<a href="telegrams.html#n1916">電報全文</a>頁。上海發往「Ylchang」的另兩封（5月29日、6月8日）出自另一發報人（開頭與結尾電碼相同），此碼表讀不出。</p>
   <p><strong>據我們所知，此碼表此前未曾發表</strong>：這些電報在 Daniel Bourdeau 的筆記<sup class="fn"><a href="sources.html#s2">[2]</a></sup>及 Cryptiana<sup class="fn"><a href="sources.html#s8">[8]</a></sup>中均列為未讀（2026年10月15日查核）。</p>
 
+<!-- m1915:start -->
+  <h2 id="t1915">又三張碼表：1915年</h2>
+  <p>同一系列1915年的兩卷（JACAR B03050087600 與 B03050087700）<sup class="fn"><a href="sources.html#s17">[17]</a></sup>此前從未有人打開。其中有比1916年早一年的壓縮碼電報。我們對每封電報運行整族壓縮碼表（604 800張：二十個輔音按字母順序或逆序、起點、五個元音的順序、按輔音/按元音/蛇形填充、從00或01起編），並把最高分與六個對照（同一批音節打亂）比較。有三張碼表明顯勝出，且各自能讀出多封電報：</p>
+  <ul>
+    <li><strong>「Laisaosang」</strong>（東京 ↔ 上海，1915年1–2月）：輔音按字母順序自 <code>c</code> 起（無 <code>w</code>），元音 <code>o a e u i</code>，按元音填充，從01起。每碼2.90分，對照最高0.23；同一張表也能反向讀出一封上海來電（2.77對0.96）。</li>
+    <li><strong>「紐約」</strong>（紐約 → 孫中山，1915年2月）：族中最簡單的一張——輔音 <code>b</code> 至 <code>z</code> 按字母順序（<code>p</code>、<code>q</code> 合一），元音 <code>a e i o u</code>，按輔音填充，<i>ba</i> = 00。在兩封電報上分別獨立找到；每碼3.90與4.74分。</li>
+    <li><strong>「Thirtieth」</strong>（上海 ↔ 東京，1915年2–3月），以這個明文詞標示：輔音自 <code>v</code> 起，元音 <code>u i e o a</code>，按元音填充，從01起。2月27日那封電報每碼6.24分（對照1.73），無需任何更正。與1916年的「Thirtyseventh」「Thirtyeight」一樣，這個序數詞大概是指一份碼表清單中的某一張。</li>
+  </ul>
+  <p>此外，1915年1月6日東京發往「Konglipo」（馬尼拉）的一封電報，用 Daniel Bourdeau 依據1916年5月僅一封電報暫定的碼表<sup class="fn"><a href="sources.html#s1">[1]</a></sup>即可讀出，無需更正：<span lang="zh-Hant">無其事。文覆</span>。可見這張碼表早在十六個月前已在使用。</p>
+  <p>字母由 Claude 依掃描件讀出，我再對存疑之處盲讀複核（77題，其中10個對照音節全部得到證實；22處提議的更正中，我在不知道預期答案的情況下讀出了15處）。電報見<a href="telegrams.html#t1915">電報全文</a>頁。</p>
+
+  <h2 id="rosamonde">羅莎蒙德：互換替換下的英文</h2>
+  <p>在同幾卷中，以及1916年5月的 B03050089000 卷<sup class="fn"><a href="sources.html#s16">[16]</a></sup>中，另有一些電報不像壓縮碼：十個字母的單詞沒有輔音—元音交替，有輔音連綴和重複元音。無鑰測試為陰性（不是音節表），但三項統計指明了方向：字母重合指數為0.062，與自然語言相符（隨機字母為0.038）；<i>f</i> 和 <i>q</i> 從未出現；某些三字母組在不同電報中反覆出現（<span class="mono">hea</span> 十次）。這是自然語言文本經<strong>簡單替換</strong>的特徵。</p>
+  <p>對全部26字母替換做模擬退火，以英文四字母組模型評分，第一次嘗試就出現了英文（<i>your letter</i>、<i>received my life</i>、<i>cable</i>）。所得替換表幾乎是一個<strong>對合</strong>（每個字母與另一個互換）；把搜索限制在互換替換上，密鑰即告確定：a↔u b↔g c↔s e↔o f↔j h↔y i↔r k↔z l↔t m↔w n↔v q↔x，<i>d</i>、<i>p</i> 不變。<span class="mono">hea</span> = <i>you</i>，<span class="mono">teno</span> = <i>love</i>。</p>
+  <p>三項檢驗。（1）同樣長度、以隨機表加密的英文文本，同一搜索可百分之百復原。（2）<strong>樣本外</strong>：僅從1915年電報得出的密鑰，能讀出我在發現之前盲讀轉錄的七封1916年5月電報（相對2000張隨機互換表，z = 7.5）。（3）我對1915年電報的盲讀複核（50行，既看不到 Claude 的讀法，也看不到明文）同樣可讀（z = 10.9）。另一系統的電報仍不可讀（z = 0.6）。其內容——孫中山與宋慶齡之間的情書——見<a href="rosamonde.html">羅莎蒙德電報</a>頁。</p>
+  <!-- m1916err:start -->
+  <h3 id="rosamonde-1916">為什麼1916年5月更正的字母這麼多？</h3>
+  <p>在校訂本中，方括號內的字母是電報單上寫法不同或漏寫的字母。1916年5月的比例（611個字母中有109個，17.8%）是1915年（1061個中59個，5.6%）的三倍；5月12日那封兩頁的電報就佔了一半（234個中56個）。我對照圖像逐一核查了這些字母，核查時可以看到所期望的字母（2026年10月15日）：133個中，99個在電報單上確實寫成別的字母，18個可以讀成所期望的字母，16個仍不確定。</p>
+  <p>方法上的差別幾乎說明不了什麼。1915年的校訂本結合了兩次獨立讀法，1916年的只依據我一人的讀法；但在讀者相同的條件下——只看我對1915年電報的盲讀——與預期密文的差異1915年約為7%，1916年則為18%。1916年的電報單本身較不可靠，差異集中在三對字母上：</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>預期字母</th><th>1915年（我的盲讀）</th><th>1916年5月（對照圖像核查）</th></tr></thead>
+    <tbody>
+      <tr><td><i>v</i>（明文 <i>n</i>）</td><td>47次中 v 41次</td><td>v 18次，<b>n</b> 23次</td></tr>
+      <tr><td><i>r</i>（明文 <i>i</i>）</td><td>51次中 r 51次</td><td>r 7次，<b>i</b> 24次</td></tr>
+      <tr><td><i>h</i>（明文 <i>y</i>）</td><td>47次中 h 46次</td><td>h 16次，<b>y</b> 7次</td></tr>
+    </tbody></table></div>
+  <p>這些錯誤並非來自傳輸：在摩斯電碼中，<i>n</i> 與 <i>v</i>、<i>i</i> 與 <i>r</i>、<i>h</i> 與 <i>y</i> 毫無相似之處。它們產生於有人辨讀手寫草體之時——多半是櫃檯職員謄抄發報人的手寫電文——而且幾乎總是同一方向：預期的 <i>v</i> 變成 <i>n</i>，反之則無；<i>h</i> 變成 <i>y</i>，反之則無。可能的原因有兩個，目前無法斷定。其一，電報寫得匆忙：1916年5月孫中山在上海領導起義（<i>“now very busy”</i>），加密本身也較草率，有整詞以明文保留（<i>know</i>、<i>own</i>、<i>iron</i>、<i>trunk</i>），甚至有半個詞（<i>anxi-ous</i>）。其二，經手的職員不同：上海的電報員辨讀的是並非他們自己的拉丁字母手跡；不過宋慶齡從東京發出的兩封電報也有同樣的錯誤。</p>
+  <p>密鑰本身加重了這種效果：它所互換的正是外形相近的字母（a/u、c/s、e/o、h/y、i/r、l/t、n/v……），筆下稍有猶豫，寫出的字母看上去合理，對解密卻是錯的。1916年的密鑰確實就是1915年的：自動搜索最初找到的一個變體（<i>v</i>↔<i>p</i>，<i>n</i>、<i>i</i>、<i>r</i> 不變）只是這些錯誤造成的假象；明文中的每一個 <i>v</i> 都與它矛盾——電報單上寫的是 <i>n</i>，從來不是 <i>p</i>。</p>
+  <!-- m1916err:end -->
+  <p><strong>就我們所知，這一系統和這些文本此前均未發表</strong>：Daniel Bourdeau 的筆記<sup class="fn"><a href="sources.html#s2">[2]</a></sup>、Cryptiana<sup class="fn"><a href="sources.html#s8">[8]</a></sup>、關於孫宋婚姻的史學研究<sup class="fn"><a href="sources.html#s18">[18]</a></sup><sup class="fn"><a href="sources.html#s19">[19]</a></sup>以及 J. Chang 與 J. Halliday 的傳記<sup class="fn"><a href="sources.html#s20">[20]</a></sup>中都沒有（2026年10月15日核查）。</p>
+<!-- m1915:end -->
+
   <h2 id="outils">工具</h2>
   <ul>
     <li><strong>資料</strong>：JACAR 公開 PDF<sup class="fn"><a href="sources.html#s3">[3]</a>–<a href="sources.html#s6">[6]</a></sup>；中文電碼表（Unicode Unihan 欄位 <code>kTaiwanTelegraph</code> 與 <code>kMainlandTelegraph</code>）<sup class="fn"><a href="sources.html#s10">[10]</a></sup>。</li>
@@ -265,6 +321,6 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
 <script src="../assets/js/messages.js?v=a2915f1cfc"></script>
 <script src="../assets/js/messages-y0.js?v=5061365423"></script>
 <script src="../assets/js/translations.js?v=265e6bf252"></script>
-<script src="../assets/js/site.js?v=59f60c45f4"></script>
+<script src="../assets/js/site.js?v=c4c027365b"></script>
 </body>
 </html>

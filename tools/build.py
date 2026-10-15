@@ -5,28 +5,31 @@ Chaque fichier de contenu commence par un commentaire JSON : <!-- {"title": "...
 Usage : python3 tools/build.py   (depuis la racine du dépôt)"""
 import json, os, re, html
 from illustrations import add_illustrations
+from rosamonde_illustrations import add_rosamonde_illustrations
+from rosamonde_cipher_diagram import build_diagrams
+from editorial_visuals import add_editorial_visuals
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
-PAGES = ['index', 'history', 'method', 'telegrams', 'relecture', 'sources']
+PAGES = ['index', 'rosamonde', 'history', 'method', 'telegrams', 'relecture', 'sources']
 LANGS = {
     'en': dict(code='en', label='English', brand='The Wenmi code',
-               nav=['Home', 'The history', 'The method', 'Telegrams', '1916 condensers', 'Sources'], theme='Toggle light/dark theme',
+               nav=['Home', 'Rosamonde', 'The history', 'The method', 'Telegrams', '1916 condensers', 'Sources'], theme='Toggle light/dark theme',
                footer='© 2026 Brice Dudout, with Claude (Anthropic). Text and code: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Telegram images: JACAR (Japan Center for Asian Historical Records), Diplomatic Archives of the Ministry of Foreign Affairs of Japan. Prior work: Daniel Bourdeau (CC BY 4.0); S. Tomokiyo (Cryptiana). <a href="sources.html">All sources</a>. Contact: <a href="https://www.linkedin.com/in/brice-dudout" rel="author noopener">LinkedIn</a>.',
                langs='Language'),
     'fr': dict(code='fr', label='Français', brand='Le code Wenmi',
-               nav=['Accueil', "L'histoire", 'La méthode', 'Télégrammes', 'Condensateurs 1916', 'Sources'], theme='Basculer le thème clair/sombre',
+               nav=['Accueil', 'Rosamonde', "L'histoire", 'La méthode', 'Télégrammes', 'Condensateurs 1916', 'Sources'], theme='Basculer le thème clair/sombre',
                footer='© 2026 Brice Dudout, avec Claude (Anthropic). Textes et code : <a href="https://creativecommons.org/licenses/by/4.0/deed.fr">CC BY 4.0</a>. Images des télégrammes : JACAR (Japan Center for Asian Historical Records), Archives diplomatiques du ministère des Affaires étrangères du Japon. Travaux antérieurs : Daniel Bourdeau (CC BY 4.0) ; S. Tomokiyo (Cryptiana). <a href="sources.html">Toutes les sources</a>. Contact : <a href="https://www.linkedin.com/in/brice-dudout" rel="author noopener">LinkedIn</a>.',
                langs='Langue'),
     'zh-hans': dict(code='zh-Hans', label='简体中文', brand='文密电码',
-               nav=['首页', '历史背景', '破译方法', '电报全文', '1916年压缩码', '资料来源'], theme='切换浅色/深色',
+               nav=['首页', '宋庆龄电报', '历史背景', '破译方法', '电报全文', '1916年压缩码', '资料来源'], theme='切换浅色/深色',
                footer='© 2026 Brice Dudout，与 Claude（Anthropic）合作。文字与代码：<a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC BY 4.0</a>。电报图像：日本亚洲历史资料中心（JACAR），日本外务省外交史料馆。前人研究：Daniel Bourdeau（CC BY 4.0）；S. Tomokiyo（Cryptiana）。<a href="sources.html">全部资料来源</a>。联系方式：<a href="https://www.linkedin.com/in/brice-dudout" rel="author noopener">LinkedIn</a>。',
                langs='语言'),
     'zh-hant': dict(code='zh-Hant', label='繁體中文', brand='文密電碼',
-               nav=['首頁', '歷史背景', '破譯方法', '電報全文', '1916年壓縮碼', '資料來源'], theme='切換淺色/深色',
+               nav=['首頁', '宋慶齡電報', '歷史背景', '破譯方法', '電報全文', '1916年壓縮碼', '資料來源'], theme='切換淺色/深色',
                footer='© 2026 Brice Dudout，與 Claude（Anthropic）合作。文字與程式碼：<a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hant">CC BY 4.0</a>。電報影像：日本亞洲歷史資料中心（JACAR），日本外務省外交史料館。前人研究：Daniel Bourdeau（CC BY 4.0）；S. Tomokiyo（Cryptiana）。<a href="sources.html">全部資料來源</a>。聯絡方式：<a href="https://www.linkedin.com/in/brice-dudout" rel="author noopener">LinkedIn</a>。',
                langs='語言'),
     'ja': dict(code='ja', label='日本語', brand='文密暗号',
-               nav=['ホーム', '歴史的背景', '解読の方法', '電報一覧', '1916年圧縮符号', '出典'], theme='ライト／ダークを切り替え',
+               nav=['ホーム', '宋慶齢の電報', '歴史的背景', '解読の方法', '電報一覧', '1916年圧縮符号', '出典'], theme='ライト／ダークを切り替え',
                footer='© 2026 Brice Dudout（Claude〔Anthropic〕との共同作業）。文章とコード：<a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a>。電報画像：アジア歴史資料センター（JACAR）、外務省外交史料館。先行研究：Daniel Bourdeau（CC BY 4.0）、S. Tomokiyo（Cryptiana）。<a href="sources.html">出典一覧</a>。連絡先：<a href="https://www.linkedin.com/in/brice-dudout" rel="author noopener">LinkedIn</a>。',
                langs='言語'),
 }
@@ -82,6 +85,7 @@ def bust(html):
     return re.sub(r'((?:href|src)=")(\.\./assets/(?:css|js)/[^"?]+)(")', rep, html)
 
 def build():
+    build_diagrams()
     n = 0
     for lang, L in LANGS.items():
         os.makedirs(os.path.join(ROOT, lang), exist_ok=True)
@@ -94,6 +98,8 @@ def build():
             meta = json.loads(m.group(1)) if m else {}
             body = raw[m.end():] if m else raw
             body = add_illustrations(body, lang, page)
+            body = add_rosamonde_illustrations(body, lang, page)
+            body = add_editorial_visuals(body, lang, page)
             nav = '\n'.join('    <a href="%s.html"%s>%s</a>' % (p, ' aria-current="page"' if p == page else '', L['nav'][i])
                             for i, p in enumerate(PAGES))
             cur = LANGS[lang]
@@ -108,7 +114,8 @@ def build():
             scripts = ''
             if 'id="corpus"' in body:
                 scripts += ('<script src="../assets/js/corpus.js"></script>\n<script src="../assets/js/translations.js"></script>\n'
-                            '<script src="../assets/js/corpus-c1916.js"></script>\n<script src="../assets/js/corpus-n1916.js"></script>\n')
+                            '<script src="../assets/js/corpus-c1916.js"></script>\n<script src="../assets/js/corpus-n1916.js"></script>\n'
+                            '<script src="../assets/js/corpus-t1915.js"></script>\n')
             if 'decoder' in body:
                 scripts += ('<script src="../assets/js/messages.js"></script>\n<script src="../assets/js/messages-y0.js"></script>\n'
                             '<script src="../assets/js/translations.js"></script>\n')
