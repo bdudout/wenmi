@@ -164,23 +164,7 @@ var VERIF = {'fr': 'lettres vérifiées sur le scan : erreur probable du chiffre
     var Wel = document.getElementById('who-data'), W = Wel ? JSON.parse(Wel.textContent) : {};   // expéditeur / destinataire (persons.py)
     var morse = function (m) { return m.replace(/\./g, '·').replace(/-/g, '−'); };
     var kindLabel = function (k) { return L.kind[k] || k; };
-    var h = '<p class="corpus-stats">' + L.stats.replace('{codes}', C.stats.codes).replace('{douteux}', C.stats['douteux'])
-      .replace('{conf}', C.stats['confirmé']).replace('{ill}', C.stats.illisible) + '</p>';
-    h += '<nav class="corpus-toc">';
-    ['G0', 'Y0'].forEach(function (g) {
-      h += '<div><strong>' + esc((I.channel || {})[g] || g) + '</strong> ';
-      C.messages.filter(function (m) { return m.grid === g; }).forEach(function (m) { h += '<a href="#t' + m.id + '">' + m.id + '</a> '; });
-      h += '</div>';
-    });
-    h += '<div><strong>' + esc(L.y1917) + '</strong> <a href="#t1917">0509a · 0511</a></div>';
-    var KX0 = window.WENMI_C1916_I18N, KI0 = KX0 ? (KX0[root.lang] || KX0.fr) : null;
-    if (window.WENMI_C1916 && KI0) {
-      h += '<div><strong>' + esc(KI0.toc) + '</strong> ' + window.WENMI_C1916.order.map(function (g) {
-        var first = window.WENMI_C1916.messages.filter(function (m) { return m.grid === g; })[0];
-        return first ? '<a href="#t' + first.id + '">' + esc(KI0.short[g] || g) + '</a>' : '';
-      }).join(' · ') + '</div>';
-    }
-    h += '</nav>';
+    var h = '';
     function tg(m, I, X) {
       var dt = I.date[m.id] || '';   // heure du formulaire (form_times.py) ajoutée si la date ne la porte pas déjà
       if (m.time && dt.indexOf(m.time) < 0) dt = dt.replace(/^([^(（]*?)(\s*[(（].*)?$/, function (_, a, b) { return a + ', ' + m.time + (b || ''); });
@@ -263,7 +247,58 @@ var VERIF = {'fr': 'lettres vérifiées sur le scan : erreur probable du chiffre
       if (items) h += '<details class="tg-doubts"' + (m.expected && Object.keys(m.expected).length ? ' open' : '') + '><summary>' + esc(L.doubts) + '</summary><ul>' + items + '</ul></details>';
       return h + '</section>';
     }
-    C.messages.forEach(function (m) { h += tg(m, I, null); });
+    // ---- classement par système de chiffrement, puis par date (systems.js) ----
+    var SY = window.WENMI_SYSTEMS, ST = SY ? (SY.text[root.lang] || SY.text.fr) : null;
+    var CORP = [['CORPUS', C, I, null, true]];
+    [['C1916', 'WENMI_C1916'], ['N1916', 'WENMI_N1916'], ['T1915', 'WENMI_T1915'], ['F1916', 'WENMI_F1916']].forEach(function (c) {
+      var K = window[c[1]], KX = window[c[1] + '_I18N'];
+      if (K && KX) { var KI = KX[root.lang] || KX.fr; CORP.push([c[0], K, KI, KI, false]); }
+    });
+    var mins = function (t) {
+      if (!t) return 24 * 60;
+      var p = t.split(' '), hm = p[0].split('.'), hh = +hm[0], mm = +(hm[1] || 0);
+      if (p[1] === 'pm' && hh !== 12) hh += 12; if (p[1] === 'am' && hh === 12) hh = 0;
+      return hh * 60 + mm;
+    };
+    var BY = {};
+    CORP.forEach(function (c) {
+      c[1].messages.forEach(function (m, k) {
+        var sys = SY ? (SY.map[c[0]] || {})[m.grid] : null;
+        if (!sys) sys = c[0] + ':' + m.grid;
+        var md = m.md || [0, 0], day = md[1] || (SY && SY.sortDay[m.id]) || 0;
+        (BY[sys] = BY[sys] || []).push({ m: m, I: c[2], X: c[3], key: [(SY && SY.year[c[0]]) || 1916, md[0], day, mins(m.time), k] });
+      });
+    });
+    var cmp = function (a, b) { for (var i = 0; i < a.key.length; i++) if (a.key[i] !== b.key[i]) return a.key[i] < b.key[i] ? -1 : 1; return 0; };
+    Object.keys(BY).forEach(function (k) { BY[k].sort(cmp); });
+    var refs = function (t) { return t.replace(/\[([0-9]+(?:, *[0-9]+)*)\]/g, function (_, n) { return '<sup class="fn">' + n.split(/, */).map(function (x) { return '<a href="sources.html#s' + x + '">[' + x + ']</a>'; }).join('') + '</sup>'; }); };
+    var cnt = function (n) { return n === 1 ? ST.count1 : ST.count.replace('{n}', n); };
+    var used = {};
+    // sommaire
+    h += '<nav class="corpus-toc"><strong>' + esc(ST.toc) + '</strong>';
+    SY.groups.forEach(function (g) {
+      h += '<div><strong>' + esc(ST.groups[g.id][0]) + '</strong> ' + g.systems.filter(function (s) { return BY[s]; }).map(function (s) {
+        return '<a href="#sys-' + s + '">' + esc(ST.sys[s][0]) + '</a>';
+      }).join(' · ') + '</div>';
+    });
+    h += '<div><a href="rosamonde.html"><strong>' + esc(ST.rosamonde[0]) + '</strong></a></div>';
+    h += '<div><a href="#t1917"><strong>' + esc(L.y1917) + '</strong></a></div></nav>';
+    SY.groups.forEach(function (g) {
+      h += '<section class="tg tg-group" id="grp-' + g.id + '">' + (g.anchors || []).map(function (a) { return '<span id="' + a + '"></span>'; }).join('') +
+        '<h2>' + esc(ST.groups[g.id][0]) + '</h2>' + refs(ST.groups[g.id][1]);
+      if (g.id === 'wenmi') h += '<p class="corpus-stats">' + L.stats.replace('{codes}', C.stats.codes).replace('{douteux}', C.stats['douteux'])
+        .replace('{conf}', C.stats['confirmé']).replace('{ill}', C.stats.illisible) + '</p>';
+      h += '</section>';
+      g.systems.forEach(function (s) {
+        var es = BY[s]; if (!es) return; used[s] = 1;
+        h += '<section class="tg tg-group tg-system" id="sys-' + s + '"><h2>' + esc(ST.sys[s][0]) + ' <small>' + esc(cnt(es.length)) + '</small></h2>' +
+          '<p>' + refs(ST.sys[s][1]) + '</p>' +
+          '<p class="tg-syslinks">' + es.map(function (e) { return '<a href="#t' + e.m.id + '">' + (e.m.label || e.m.id) + '</a>'; }).join(' ') + '</p></section>';
+        es.forEach(function (e) { h += tg(e.m, e.I, e.X); });
+      });
+    });
+    Object.keys(BY).forEach(function (s) { if (!used[s]) BY[s].forEach(function (e) { h += tg(e.m, e.I, e.X); }); });   // clé non classée : en fin
+    h += '<section class="tg tg-group" id="sys-rosamonde"><h2>' + esc(ST.rosamonde[0]) + '</h2>' + ST.rosamonde[1] + '</section>';
     h += '<section class="tg" id="t1917"><h2>' + esc(L.y1917) + '</h2>';
     var tpl1917 = document.getElementById('y1917-tpl');   // lecture, confusions et pistes (texte de la page, 5 langues)
     if (tpl1917) h += tpl1917.innerHTML;
@@ -272,76 +307,6 @@ var VERIF = {'fr': 'lettres vérifiées sur le scan : erreur probable du chiffre
       h += u.reading ? '<p class="tg-label">' + esc(L.read) + '</p><p class="cipher mono">' + esc(u.reading) + '</p><p>' + esc(L.notDecoded) + '</p>' : '<p>' + esc(L.pending) + '</p>';
     });
     h += '</section>';
-    // télégrammes à condensateur de 1916 (corpus-c1916.js) : même gabarit, groupés par clé puis par date
-    var K = window.WENMI_C1916, KX = window.WENMI_C1916_I18N;
-    var KI = KX ? (KX[root.lang] || KX.fr) : null;
-    if (K && KI) {
-      var st = K.stats;
-      h += '<section class="tg tg-group" id="c1916"><h2>' + esc(KI.title) + '</h2>' + KI.intro +
-        '<p class="corpus-stats">' + esc(KI.stats.replace('{tels}', st.tels).replace('{codes}', st.codes).replace('{chg}', st.corr + st.sugg + st.new + (st.dx || 0)).replace('{dx}', st.dx || 0).replace('{corr}', st.corr)
-          .replace('{sugg}', st.sugg).replace('{new}', st['new']).replace('{added}', st.added).replace('{conf}', st['confirmé']).replace('{douteux}', st.douteux)) + '</p><nav class="corpus-toc">';
-      K.order.forEach(function (g) {
-        h += '<div><strong>' + esc(KI.channel[g] || g) + '</strong> ';
-        K.messages.filter(function (m) { return m.grid === g; }).forEach(function (m) { h += '<a href="#t' + m.id + '">' + m.label + '</a> '; });
-        h += '</div>';
-      });
-      h += '</nav></section>';
-      K.messages.forEach(function (m) { h += tg(m, KI, KI); });
-    }
-    // nouveaux déchiffrements de mai–juin 1916 (corpus-n1916.js)
-    var N = window.WENMI_N1916, NX = window.WENMI_N1916_I18N;
-    var NI = NX ? (NX[root.lang] || NX.fr) : null;
-    if (N && NI) {
-      var ns = N.stats;
-      h += '<section class="tg tg-group" id="n1916"><h2>' + esc(NI.title) + '</h2>' + NI.intro +
-        '<p class="corpus-stats">' + esc(NI.stats.replace('{tels}', ns.tels).replace('{codes}', ns.codes).replace('{conf}', ns['confirmé']).replace('{douteux}', ns.douteux)) +
-        '</p><nav class="corpus-toc">';
-      // sommaire groupé par canal (m.toc, sinon la clé) ; les intitulés viennent de NI.toc ou NI.channel
-      var groups = NI.toc || NI.channel;
-      Object.keys(groups).forEach(function (g) {
-        var ms = N.messages.filter(function (m) { return (m.toc || m.grid) === g; });
-        if (!ms.length) return;
-        h += '<div><strong>' + esc(groups[g]) + '</strong> ';
-        ms.forEach(function (m) { h += '<a href="#t' + m.id + '">' + m.label + '</a> '; });
-        h += '</div>';
-      });
-      h += '</nav></section>';
-      N.messages.forEach(function (m) { h += tg(m, NI, NI); });
-    }
-    // télégrammes de 1915 (corpus-t1915.js) : même gabarit, par date et heure
-    var T15 = window.WENMI_T1915, TX = window.WENMI_T1915_I18N;
-    var TI = TX ? (TX[root.lang] || TX.fr) : null;
-    if (T15 && TI) {
-      h += '<section class="tg tg-group" id="t1915"><h2>' + esc(TI.title) + '</h2>' + TI.intro +
-        '<p class="corpus-stats">' + esc(TI.stats.replace('{tels}', T15.stats.tels).replace('{codes}', T15.stats.codes).replace('{douteux}', T15.stats.douteux)) +
-        '</p><nav class="corpus-toc">';
-      Object.keys(TI.toc).forEach(function (g) {
-        var ms = T15.messages.filter(function (m) { return m.toc === g; });
-        if (!ms.length) return;
-        h += '<div><strong>' + esc(TI.toc[g]) + '</strong> ';
-        ms.forEach(function (m) { h += '<a href="#t' + m.id + '">' + m.label + '</a> '; });
-        h += '</div>';
-      });
-      h += '</nav></section>';
-      T15.messages.forEach(function (m) { h += tg(m, TI, TI); });
-    }
-    // télégrammes de février–mars 1916 (corpus-f1916.js, tools/build_f1916.py) : même gabarit, par date
-    var F16 = window.WENMI_F1916, FX = window.WENMI_F1916_I18N;
-    var FI = FX ? (FX[root.lang] || FX.fr) : null;
-    if (F16 && FI) {
-      h += '<section class="tg tg-group" id="f1916"><h2>' + esc(FI.title) + '</h2>' + FI.intro +
-        '<p class="corpus-stats">' + esc(FI.stats.replace('{tels}', F16.stats.tels).replace('{codes}', F16.stats.codes).replace('{douteux}', F16.stats.douteux)) +
-        '</p><nav class="corpus-toc">';
-      Object.keys(FI.toc).forEach(function (g) {
-        var ms = F16.messages.filter(function (m) { return m.toc === g; });
-        if (!ms.length) return;
-        h += '<div><strong>' + esc(FI.toc[g]) + '</strong> ';
-        ms.forEach(function (m) { h += '<a href="#t' + m.id + '">' + m.label + '</a> '; });
-        h += '</div>';
-      });
-      h += '</nav></section>';
-      F16.messages.forEach(function (m) { h += tg(m, FI, FI); });
-    }
     box.innerHTML = h;
   }
   document.querySelectorAll('#corpus').forEach(mountCorpus);
