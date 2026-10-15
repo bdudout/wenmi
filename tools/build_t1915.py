@@ -64,6 +64,7 @@ def parse(text, chars):
     toks, props, i, k = [], [], 0, 0
     while k < len(text):
         c = text[k]
+        if c == '「' and restitution.is_clear(text, k): e = text.index('」', k) + 1; toks.append((text[k:e], None, False)); k = e; continue
         if c in PUNCT: toks.append((c, None, False)); k += 1; continue
         if c == '{': toks.append((text[k + 1], i, True)); props.append(i); i += 1; k += 3; continue
         if c == '‹': assert chars[i] == text[k + 1], (i, text[k + 1], chars[i]); toks.append((text[k + 1], i, False)); i += 1; k += 3; continue
@@ -97,6 +98,7 @@ def build():
         marked, i, k = set(), 0, 0
         while k < len(text):
             c = text[k]
+            if c == '「' and restitution.is_clear(text, k): k = text.index('」', k) + 1; continue
             if c in PUNCT: k += 1; continue
             if c in '{‹':
                 if c == '‹': marked.add(i)

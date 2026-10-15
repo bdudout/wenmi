@@ -279,7 +279,7 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
   <p>此外，1915年1月6日東京發往「Konglipo」（馬尼拉）的一封電報，用 Daniel Bourdeau 依據1916年5月僅一封電報暫定的碼表<sup class="fn"><a href="sources.html#s1">[1]</a></sup>即可讀出，無需更正：<span lang="zh-Hant">無其事。文覆</span>。可見這張碼表早在十六個月前已在使用。</p>
   <p>字母由 Claude 依掃描件讀出，我再對存疑之處盲讀複核（77題，其中10個對照音節全部得到證實；22處提議的更正中，我在不知道預期答案的情況下讀出了15處）。電報見<a href="telegrams.html#t1915">電報全文</a>頁。</p>
 
-  <p>1916年3月東京與上海之間還使用第四張新碼表：<strong>「Thirteenth」</strong>，1916年2月28日一封電報以此字明文標出：輔音從 <code>n</code> 起，元音 <code>o a e i u</code>，按元音填充，自01起。它能讀出1916年3月12日和16日的電報（每碼4.83和4.52）；見<a href="telegrams.html#f1916">1916年2—3月</a>。</p>
+  <p>1916年3月東京與上海之間還使用第四張新碼表：<strong>「Thirteenth」</strong>，1916年2月28日一封電報以此字明文標出：輔音從 <code>n</code> 起，元音 <code>o a e i u</code>，按元音填充，自01起。它能讀出1916年3月12日和16日的電報（每碼4.83和4.52），以及2月28日該電本身（4.40）：密文中夾有一個明文英文詞，<span lang="zh-Hant">正金銀行</span> <i>bearer</i> <span lang="zh-Hant">票</span>，即橫濱正金銀行的不記名票據；見<a href="telegrams.html#f1916">1916年2—3月</a>。</p>
   <h2 id="rosamonde">羅莎蒙德：互換替換下的英文</h2>
   <p>在同幾卷中，以及1916年5月的 B03050089000 卷<sup class="fn"><a href="sources.html#s16">[16]</a></sup>中，另有一些電報不像壓縮碼：十個字母的單詞沒有輔音—元音交替，有輔音連綴和重複元音。無鑰測試為陰性（不是音節表），但三項統計指明了方向：字母重合指數為0.062，與自然語言相符（隨機字母為0.038）；<i>f</i> 和 <i>q</i> 從未出現；某些三字母組在不同電報中反覆出現（<span class="mono">hea</span> 十次）。這是自然語言文本經<strong>簡單替換</strong>的特徵。</p>
   <p>對全部26字母替換做模擬退火，以英文四字母組模型評分，第一次嘗試就出現了英文（<i>your letter</i>、<i>received my life</i>、<i>cable</i>）。所得替換表幾乎是一個<strong>對合</strong>（每個字母與另一個互換）；把搜索限制在互換替換上，密鑰即告確定：a↔u b↔g c↔s e↔o f↔j h↔y i↔r k↔z l↔t m↔w n↔v q↔x，<i>d</i>、<i>p</i> 不變。<span class="mono">hea</span> = <i>you</i>，<span class="mono">teno</span> = <i>love</i>。</p>

@@ -60,6 +60,12 @@ def image_state(mid, i):
 PUNCT = set('。，、；：？！ ')
 
 
+def is_clear(text, k):
+    """「…」 contenant des lettres latines : passage hors chiffre chinois, sans code"""
+    e = text.find('」', k)
+    return e > k and any(x.isascii() and x.isalpha() for x in text[k:e])
+
+
 def parse(text, chars):
     """Renvoie la liste des jetons [(caractère affiché, index du code ou None, proposé?)] et la liste des index proposés.
     Vérifie l'alignement avec les caractères décodés (‹x› = caractère décodé laissé douteux)."""
@@ -68,6 +74,8 @@ def parse(text, chars):
         c = text[k]
         if c in PUNCT:
             toks.append((c, None, False)); k += 1; continue
+        if c == '「' and is_clear(text, k):           # passage en lettres latines (anglais chiffré à part, 0512) : un seul jeton
+            e = text.index('」', k) + 1; toks.append((text[k:e], None, False)); k = e; continue
         if c == '{':
             ch = text[k + 1]; assert text[k + 2] == '}', text[k:k + 3]
             toks.append((ch, i, True)); props.append(i); i += 1; k += 3; continue

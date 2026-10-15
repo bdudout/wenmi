@@ -23,7 +23,8 @@ def corpus():
 
 
 M.CITIES['newyork'] = ('New York', '紐約', 144.2, 27.0, (14, -6))      # hors cadre : bord est, direction d'arrivée
-CITY = {'Tokyo': 'tokyo', 'Shanghai': 'shanghai', 'Manila': 'manila', 'Qingdao': 'qingdao'}
+M.CITIES['sanfrancisco'] = ('San Francisco', '舊金山', 144.2, 31.0, (14, -6))   # hors cadre, comme Honolulu et New York
+CITY = {'Tokyo': 'tokyo', 'Shanghai': 'shanghai', 'Manila': 'manila', 'Qingdao': 'qingdao', 'San Francisco': 'sanfrancisco'}
 
 
 def stops_of(route):
@@ -43,8 +44,8 @@ def mini_map(m, all_routes):
         for k in set(stops):
             x, y = M.city_xy(k, W2, H2); r = 7 * s; dr.ellipse([x - r, y - r, x + r, y + r], fill=M.INK)
             name, cjk = M.CITIES[k][:2]
-            dx = {'tokyo': -120, 'manila': 20, 'shanghai': -138, 'qingdao': -128}.get(k, 14) * s
-            dy = {'tokyo': 14, 'manila': -66, 'shanghai': 12, 'qingdao': -40}.get(k, -30) * s
+            dx = {'tokyo': -120, 'manila': 20, 'shanghai': -138, 'qingdao': -128, 'sanfrancisco': -190}.get(k, 14) * s
+            dy = {'tokyo': 14, 'manila': -66, 'shanghai': 12, 'qingdao': -40, 'sanfrancisco': 48}.get(k, -30) * s
             dr.text((x + dx, y + dy), name, font=M.F('serif', 26 * s), fill=M.INK)
             dr.text((x + dx, y + dy + 28 * s), cjk, font=M.F('cjk', 26 * s), fill=M.MUTED)
         im = im.resize((W, im.height // s), Image.LANCZOS); im.save(os.path.join(OUT, f"map-{m['id']}.png"), optimize=True)

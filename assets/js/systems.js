@@ -8,7 +8,7 @@ window.WENMI_SYSTEMS = {
     C1916: { manila1916: 'manila1916', shanghai1916: 'shanghai1916', seito1916: 'seito1916', yamada1916: 'yamada1916' },
     N1916: { honolulu1916w: 'honolulu1916', yamada1916: 'yamada1916', yamada1916w: 'yamada1916', man2: 'manila1916b', k38: 'k38', h16: 'h16' },
     T1915: { manila1916b: 'manila1916b', laisaosang1915: 'laisaosang1915', newyork1915: 'newyork1915', k30: 'k30' },
-    F1916: { shanghai1916: 'shanghai1916', k13: 'k13', seito1916: 'seito1916', manila1916: 'manila1916' }
+    F1916: { shanghai1916: 'shanghai1916', k13: 'k13', seito1916: 'seito1916', manila1916: 'manila1916', sanfran1916: 'sanfran1916' }
   },
   year: { CORPUS: 1916, C1916: 1916, N1916: 1916, T1915: 1915, F1916: 1916 },
   // jour approché pour le classement (date du formulaire illisible ; cf. tools/form_times.py)
@@ -16,7 +16,7 @@ window.WENMI_SYSTEMS = {
   groups: [
     { id: 'wenmi', systems: ['G0', 'Y0'] },
     { id: 'condensers', anchors: ['c1916', 'n1916', 't1915', 'f1916'],
-      systems: ['manila1916b', 'laisaosang1915', 'newyork1915', 'k30', 'shanghai1916', 'k13', 'seito1916', 'manila1916', 'honolulu1916', 'yamada1916', 'k38', 'h16'] }
+      systems: ['manila1916b', 'laisaosang1915', 'newyork1915', 'k30', 'shanghai1916', 'k13', 'seito1916', 'manila1916', 'sanfran1916', 'honolulu1916', 'yamada1916', 'k38', 'h16'] }
   ],
   text: {
     fr: {
@@ -33,9 +33,10 @@ window.WENMI_SYSTEMS = {
         newyork1915: ['Table « New York »', 'New York → Sun Yat-sen, février 1915. Table retrouvée en octobre 2026.'],
         k30: ['Table « Thirtieth »', 'Shanghai → « Rosamonde » et Tokyo → « Junzaburo », février–mars 1915 ; indicateur en clair « Thirtieth ». Table retrouvée en octobre 2026.'],
         shanghai1916: ['Table « Shanghai »', 'Shanghai ↔ Tokyo (« Rosamonde », Yamada Junzaburō), février–avril 1916. Table publiée par D. Bourdeau[1].'],
-        k13: ['Table « Thirteenth »', 'Tokyo → « Junzaburo », mars 1916 ; indicateur en clair « Thirteenth ». Table retrouvée en octobre 2026.'],
+        k13: ['Table « Thirteenth »', 'Tokyo → « Junzaburo », février–mars 1916 ; indicateur en clair « Thirteenth ». Table retrouvée en octobre 2026.'],
         seito1916: ['Table « Qingdao »', 'Qingdao ↔ Tokyo (Ju Zheng, Kayano Nagatomo), mars–avril 1916. Table publiée par D. Bourdeau[1].'],
         manila1916: ['Table « Manille »', 'Tokyo ↔ Manille, mars 1916. Table publiée par D. Bourdeau[1].'],
+        sanfran1916: ['Table « San Francisco »', 'San Francisco → « Dr Sunwen », Tokyo, mars 1916 ; signé 森 (Lin Sen). Table publiée par D. Bourdeau[1].'],
         honolulu1916: ['Table « Honolulu », variante « Aloha »', 'Honolulu → Tokyo, 30 avril 1916 ; indicateur « Aloha ». Table publiée par D. Bourdeau[1], ici avec w comme seconde forme de v.'],
         yamada1916: ['Table « Yamada » — « Thirtyseventh »', 'Tokyo ↔ Shanghai (« Junzaburo », « Linwailuk »), mai–juin 1916 ; indicateur en clair « Thirtyseventh » sur la plupart. Table publiée par D. Bourdeau[1].'],
         k38: ['Table « Thirtyeight »', 'Tokyo → « Junzaburo », 11–12 mai 1916 ; indicateur en clair « Thirtyeight ». Table retrouvée en octobre 2026.'],
@@ -58,9 +59,10 @@ window.WENMI_SYSTEMS = {
         newyork1915: ['“New York” table', 'New York → Sun Yat-sen, February 1915. Table recovered in October 2026.'],
         k30: ['“Thirtieth” table', 'Shanghai → “Rosamonde” and Tokyo → “Junzaburo”, February–March 1915; clear indicator “Thirtieth”. Table recovered in October 2026.'],
         shanghai1916: ['“Shanghai” table', 'Shanghai ↔ Tokyo (“Rosamonde”, Yamada Junzaburō), February–April 1916. Table published by D. Bourdeau[1].'],
-        k13: ['“Thirteenth” table', 'Tokyo → “Junzaburo”, March 1916; clear indicator “Thirteenth”. Table recovered in October 2026.'],
+        k13: ['“Thirteenth” table', 'Tokyo → “Junzaburo”, February–March 1916; clear indicator “Thirteenth”. Table recovered in October 2026.'],
         seito1916: ['“Qingdao” table', 'Qingdao ↔ Tokyo (Ju Zheng, Kayano Nagatomo), March–April 1916. Table published by D. Bourdeau[1].'],
         manila1916: ['“Manila” table', 'Tokyo ↔ Manila, March 1916. Table published by D. Bourdeau[1].'],
+        sanfran1916: ['“San Francisco” table', 'San Francisco → “Dr Sunwen”, Tokyo, March 1916; signed 森 (Lin Sen). Table published by D. Bourdeau[1].'],
         honolulu1916: ['“Honolulu” table, “Aloha” variant', 'Honolulu → Tokyo, 30 April 1916; indicator “Aloha”. Table published by D. Bourdeau[1], here with w as a second form of v.'],
         yamada1916: ['“Yamada” table — “Thirtyseventh”', 'Tokyo ↔ Shanghai (“Junzaburo”, “Linwailuk”), May–June 1916; clear indicator “Thirtyseventh” on most. Table published by D. Bourdeau[1].'],
         k38: ['“Thirtyeight” table', 'Tokyo → “Junzaburo”, 11–12 May 1916; clear indicator “Thirtyeight”. Table recovered in October 2026.'],
@@ -83,9 +85,10 @@ window.WENMI_SYSTEMS = {
         newyork1915: ['「紐約」表', '紐約 → 孫中山，1915年2月。2026年10月復原。'],
         k30: ['「Thirtieth」表', '上海 →「Rosamonde」及東京 →「Junzaburo」，1915年2月至3月；明碼標記「Thirtieth」。2026年10月復原。'],
         shanghai1916: ['「上海」表', '上海 ↔ 東京（「Rosamonde」、山田純三郎），1916年2月至4月。D. Bourdeau 發表的表[1]。'],
-        k13: ['「Thirteenth」表', '東京 →「Junzaburo」，1916年3月；明碼標記「Thirteenth」。2026年10月復原。'],
+        k13: ['「Thirteenth」表', '東京 →「Junzaburo」，1916年2月至3月；明碼標記「Thirteenth」。2026年10月復原。'],
         seito1916: ['「青島」表', '青島 ↔ 東京（居正、萱野長知），1916年3月至4月。D. Bourdeau 發表的表[1]。'],
         manila1916: ['「馬尼拉」表', '東京 ↔ 馬尼拉，1916年3月。D. Bourdeau 發表的表[1]。'],
+        sanfran1916: ['「舊金山」表', '舊金山 →「Dr Sunwen」，東京，1916年3月；署名「森」（林森）。D. Bourdeau 發表的表[1]。'],
         honolulu1916: ['「檀香山」表，「Aloha」變體', '檀香山 → 東京，1916年4月30日；標記「Aloha」。D. Bourdeau 發表的表[1]，此處 w 作為 v 的第二寫法。'],
         yamada1916: ['「山田」表——「Thirtyseventh」', '東京 ↔ 上海（「Junzaburo」、「Linwailuk」），1916年5月至6月；多數帶明碼標記「Thirtyseventh」。D. Bourdeau 發表的表[1]。'],
         k38: ['「Thirtyeight」表', '東京 →「Junzaburo」，1916年5月11至12日；明碼標記「Thirtyeight」。2026年10月復原。'],
@@ -108,9 +111,10 @@ window.WENMI_SYSTEMS = {
         newyork1915: ['“纽约”表', '纽约 → 孙中山，1915年2月。2026年10月复原。'],
         k30: ['“Thirtieth”表', '上海 →“Rosamonde”及东京 →“Junzaburo”，1915年2月至3月；明码标记“Thirtieth”。2026年10月复原。'],
         shanghai1916: ['“上海”表', '上海 ↔ 东京（“Rosamonde”、山田纯三郎），1916年2月至4月。D. Bourdeau 发表的表[1]。'],
-        k13: ['“Thirteenth”表', '东京 →“Junzaburo”，1916年3月；明码标记“Thirteenth”。2026年10月复原。'],
+        k13: ['“Thirteenth”表', '东京 →“Junzaburo”，1916年2月至3月；明码标记“Thirteenth”。2026年10月复原。'],
         seito1916: ['“青岛”表', '青岛 ↔ 东京（居正、萱野长知），1916年3月至4月。D. Bourdeau 发表的表[1]。'],
         manila1916: ['“马尼拉”表', '东京 ↔ 马尼拉，1916年3月。D. Bourdeau 发表的表[1]。'],
+        sanfran1916: ['“旧金山”表', '旧金山 →“Dr Sunwen”，东京，1916年3月；署名“森”（林森）。D. Bourdeau 发表的表[1]。'],
         honolulu1916: ['“檀香山”表，“Aloha”变体', '檀香山 → 东京，1916年4月30日；标记“Aloha”。D. Bourdeau 发表的表[1]，此处 w 作为 v 的第二写法。'],
         yamada1916: ['“山田”表——“Thirtyseventh”', '东京 ↔ 上海（“Junzaburo”、“Linwailuk”），1916年5月至6月；多数带明码标记“Thirtyseventh”。D. Bourdeau 发表的表[1]。'],
         k38: ['“Thirtyeight”表', '东京 →“Junzaburo”，1916年5月11至12日；明码标记“Thirtyeight”。2026年10月复原。'],
@@ -133,9 +137,10 @@ window.WENMI_SYSTEMS = {
         newyork1915: ['「ニューヨーク」表', 'ニューヨーク → 孫文、1915年2月。2026年10月に復元。'],
         k30: ['「Thirtieth」表', '上海 →「Rosamonde」および東京 →「Junzaburo」、1915年2〜3月。平文の標識「Thirtieth」。2026年10月に復元。'],
         shanghai1916: ['「上海」表', '上海 ↔ 東京（「Rosamonde」、山田純三郎）、1916年2〜4月。D. Bourdeau が公表した表[1]。'],
-        k13: ['「Thirteenth」表', '東京 →「Junzaburo」、1916年3月。平文の標識「Thirteenth」。2026年10月に復元。'],
+        k13: ['「Thirteenth」表', '東京 →「Junzaburo」、1916年2〜3月。平文の標識「Thirteenth」。2026年10月に復元。'],
         seito1916: ['「青島」表', '青島 ↔ 東京（居正、萱野長知）、1916年3〜4月。D. Bourdeau が公表した表[1]。'],
         manila1916: ['「マニラ」表', '東京 ↔ マニラ、1916年3月。D. Bourdeau が公表した表[1]。'],
+        sanfran1916: ['「サンフランシスコ」表', 'サンフランシスコ →「Dr Sunwen」、東京、1916年3月。署名「森」（林森）。D. Bourdeau が公表した表[1]。'],
         honolulu1916: ['「ホノルル」表、「Aloha」変種', 'ホノルル → 東京、1916年4月30日。標識「Aloha」。D. Bourdeau が公表した表[1]で、ここでは w を v の別形として用いる。'],
         yamada1916: ['「山田」表——「Thirtyseventh」', '東京 ↔ 上海（「Junzaburo」、「Linwailuk」）、1916年5〜6月。多くに平文の標識「Thirtyseventh」。D. Bourdeau が公表した表[1]。'],
         k38: ['「Thirtyeight」表', '東京 →「Junzaburo」、1916年5月11〜12日。平文の標識「Thirtyeight」。2026年10月に復元。'],

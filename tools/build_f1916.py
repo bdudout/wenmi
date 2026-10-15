@@ -20,50 +20,50 @@ bkeys = BC.bkeys; C2CH = BC.C2CH
 bkeys.KEYS.setdefault('k13', bkeys.make_table(10, 'oaeiu'))   # « Thirteenth » (cryptanalysis/c35/y1916)
 # n° d'image JACAR : image du PDF + décalage du dossier (premiers cadres 0280, 0336, 0383 ; sources/c35/README.md)
 OFF = {'B03050088000': 279, 'B03050088100': 335, 'B03050088200': 382}
-SUFFIX = {'f1916-0323': 'a', 'f1916-0322': 'b'}        # deux télégrammes sur la même image (0430)
+SUFFIX = {'f1916-0323': 'a', 'f1916-0322': 'b', 'f1916-0320': 'a', 'f1916-0318': 'b'}   # deux télégrammes sur la même image (0430 ; 0392)
 LANGS = ('fr', 'en', 'zh-Hant', 'ja')
 SITE_LANG = {'fr': 'fr', 'en': 'en', 'zh-Hant': 'zh-hant', 'ja': 'ja'}
 S21 = '<sup class="fn"><a href="sources.html#s21">[21]</a></sup>'; S1 = '<sup class="fn"><a href="sources.html#s1">[1]</a></sup>'
 KEYS = {
- 'fr': {'shanghai1916': 'table « Shanghai » (D. Bourdeau)', 'k13': 'table « Thirteenth » (nouvelle)', 'seito1916': 'table « Qingdao » (D. Bourdeau)', 'manila1916': 'table « Manille » (D. Bourdeau)'},
- 'en': {'shanghai1916': '“Shanghai” table (D. Bourdeau)', 'k13': '“Thirteenth” table (new)', 'seito1916': '“Qingdao” table (D. Bourdeau)', 'manila1916': '“Manila” table (D. Bourdeau)'},
- 'zh-Hant': {'shanghai1916': '「上海」碼表（D. Bourdeau）', 'k13': '「Thirteenth」碼表（新）', 'seito1916': '「青島」碼表（D. Bourdeau）', 'manila1916': '「馬尼拉」碼表（D. Bourdeau）'},
- 'zh-hans': {'shanghai1916': '“上海”码表（D. Bourdeau）', 'k13': '“Thirteenth”码表（新）', 'seito1916': '“青岛”码表（D. Bourdeau）', 'manila1916': '“马尼拉”码表（D. Bourdeau）'},
- 'ja': {'shanghai1916': '「上海」表（D. Bourdeau）', 'k13': '「Thirteenth」表（新）', 'seito1916': '「青島」表（D. Bourdeau）', 'manila1916': '「マニラ」表（D. Bourdeau）'},
+ 'fr': {'sanfran1916': 'table « San Francisco » (D. Bourdeau)', 'shanghai1916': 'table « Shanghai » (D. Bourdeau)', 'k13': 'table « Thirteenth » (nouvelle)', 'seito1916': 'table « Qingdao » (D. Bourdeau)', 'manila1916': 'table « Manille » (D. Bourdeau)'},
+ 'en': {'sanfran1916': '“San Francisco” table (D. Bourdeau)', 'shanghai1916': '“Shanghai” table (D. Bourdeau)', 'k13': '“Thirteenth” table (new)', 'seito1916': '“Qingdao” table (D. Bourdeau)', 'manila1916': '“Manila” table (D. Bourdeau)'},
+ 'zh-Hant': {'sanfran1916': '「舊金山」碼表（D. Bourdeau）', 'shanghai1916': '「上海」碼表（D. Bourdeau）', 'k13': '「Thirteenth」碼表（新）', 'seito1916': '「青島」碼表（D. Bourdeau）', 'manila1916': '「馬尼拉」碼表（D. Bourdeau）'},
+ 'zh-hans': {'sanfran1916': '“旧金山”码表（D. Bourdeau）', 'shanghai1916': '“上海”码表（D. Bourdeau）', 'k13': '“Thirteenth”码表（新）', 'seito1916': '“青岛”码表（D. Bourdeau）', 'manila1916': '“马尼拉”码表（D. Bourdeau）'},
+ 'ja': {'sanfran1916': '「サンフランシスコ」表（D. Bourdeau）', 'shanghai1916': '「上海」表（D. Bourdeau）', 'k13': '「Thirteenth」表（新）', 'seito1916': '「青島」表（D. Bourdeau）', 'manila1916': '「マニラ」表（D. Bourdeau）'},
 }
 TXT = {
  'fr': dict(title='Février–mars 1916 : nouveaux déchiffrements', intro=(
-   '<p><strong>Nouveaux déchiffrements (octobre 2026), inédits à notre connaissance.</strong> Dix télégrammes de février–mars 1916, '
+   '<p><strong>Nouveaux déchiffrements (octobre 2026), inédits à notre connaissance.</strong> Seize télégrammes de février–mars 1916, '
    'tirés des envois du ministère des Communications qui précèdent ceux qu\'a transcrits D. Bourdeau (JACAR B03050088000 à B03050088200)' + S21 + '. '
-   'Ils se lisent avec les tables de condensateur déjà publiées (Shanghai, Qingdao, Manille)' + S1 + ' et une table nouvelle, « Thirteenth » '
-   '(voir <a href="method.html#t1915">Méthode</a>). Les lettres ont été lues sur les scans par Claude et relues à l\'aveugle par Brice Dudout ; les deux '
+   'Ils se lisent avec les tables de condensateur déjà publiées (Shanghai, Qingdao, Manille, San Francisco)' + S1 + ' et une table nouvelle, « Thirteenth » '
+   '(voir <a href="method.html#t1915">Méthode</a>). Les lettres ont été lues sur les scans par Claude et relues à l\'aveugle par Brice Dudout (pour six d\'entre eux, corrigées sur une transcription pré-remplie) ; les deux '
    'lectures ont été fusionnées code par code, puis les caractères restés incertains ont été revus à l\'image. On y suit la maladie de Chen Qimei '
-   '(et les conseils de Sun sur la méthode du Dr Takano), les fonds pour l\'action à Shanghai et la défection annoncée de Long Jiguang.</p>'),
+   '(et les conseils de Sun sur la méthode du Dr Takano), les fonds pour l\'action à Shanghai, la défection annoncée de Long Jiguang, la deuxième escadre et le ralliement promis au Fengtian, l\'indépendance du Guangxi (15 mars) et l\'achat d\'avions à San Francisco.</p>'),
    read='Lettres du formulaire (deux lectures fusionnées)', label='Traduction de travail.', stats='{tels} télégrammes, {codes} codes ; {douteux} douteux.'),
  'en': dict(title='February–March 1916: new decipherments', intro=(
-   '<p><strong>New decipherments (October 2026), unpublished as far as we know.</strong> Ten telegrams of February–March 1916, '
+   '<p><strong>New decipherments (October 2026), unpublished as far as we know.</strong> Sixteen telegrams of February–March 1916, '
    'from the batches of the Ministry of Communications that precede those transcribed by D. Bourdeau (JACAR B03050088000 to B03050088200)' + S21 + '. '
-   'They read with the condenser tables already published (Shanghai, Qingdao, Manila)' + S1 + ' and a new table, “Thirteenth” '
-   '(see <a href="method.html#t1915">Method</a>). The letters were read on the scans by Claude and reread blind by Brice Dudout; the two readings were '
+   'They read with the condenser tables already published (Shanghai, Qingdao, Manila, San Francisco)' + S1 + ' and a new table, “Thirteenth” '
+   '(see <a href="method.html#t1915">Method</a>). The letters were read on the scans by Claude and reread blind by Brice Dudout (for six of them, corrected on a pre-filled transcription); the two readings were '
    'merged code by code, then the characters left uncertain were checked again on the images. They follow Chen Qimei\'s illness (and Sun\'s advice on '
-   'Dr Takano\'s method), the funds for the action in Shanghai and the expected defection of Long Jiguang.</p>'),
+   'Dr Takano\'s method), the funds for the action in Shanghai, the expected defection of Long Jiguang, the Second Squadron and the rising promised in Fengtian, the independence of Guangxi (15 March) and the purchase of aircraft in San Francisco.</p>'),
    read='Letters of the form (two readings merged)', label='Working translation.', stats='{tels} telegrams, {codes} codes; {douteux} doubtful.'),
  'zh-Hant': dict(title='1916年2—3月：新破譯的電報', intro=(
-   '<p><strong>新破譯（2026年10月），就我們所知此前未曾發表。</strong>1916年2月至3月的十封電報，出自 D. Bourdeau 所轉錄卷宗之前的遞信省抄送卷宗'
-   '（JACAR B03050088000 至 B03050088200）' + S21 + '。它們以已發表的壓縮碼表（上海、青島、馬尼拉）' + S1 + '及一張新碼表「Thirteenth」讀出'
-   '（見<a href="method.html#t1915">破譯方法</a>）。字母由 Claude 依掃描件讀出，再由 Brice Dudout 盲讀；兩種讀法逐碼合併，仍存疑的字再對照圖像核查。'
-   '電文中可見陳其美的病情（以及孫中山關於高野醫師療法的建議）、上海舉事的款項，以及龍濟光的叛離。</p>'),
+   '<p><strong>新破譯（2026年10月），就我們所知此前未曾發表。</strong>1916年2月至3月的十六封電報，出自 D. Bourdeau 所轉錄卷宗之前的遞信省抄送卷宗'
+   '（JACAR B03050088000 至 B03050088200）' + S21 + '。它們以已發表的壓縮碼表（上海、青島、馬尼拉、舊金山）' + S1 + '及一張新碼表「Thirteenth」讀出'
+   '（見<a href="method.html#t1915">破譯方法</a>）。字母由 Claude 依掃描件讀出，再由 Brice Dudout 盲讀（其中六封為校改預填的轉寫）；兩種讀法逐碼合併，仍存疑的字再對照圖像核查。'
+   '電文中可見陳其美的病情（以及孫中山關於高野醫師療法的建議）、上海舉事的款項、龍濟光的叛離、第二艦隊與奉天的響應、廣西獨立（3月15日），以及在舊金山購買飛機。</p>'),
    read='電報紙上的字母（兩種讀法合併）', label='工作譯文。', stats='電報{tels}封，電碼{codes}個；存疑{douteux}個。'),
  'zh-hans': dict(title='1916年2—3月：新破译的电报', intro=(
-   '<p><strong>新破译（2026年10月），就我们所知此前未曾发表。</strong>1916年2月至3月的十封电报，出自 D. Bourdeau 所转录卷宗之前的递信省抄送卷宗'
-   '（JACAR B03050088000 至 B03050088200）' + S21 + '。它们以已发表的压缩码表（上海、青岛、马尼拉）' + S1 + '及一张新码表“Thirteenth”读出'
-   '（见<a href="method.html#t1915">破译方法</a>）。字母由 Claude 依扫描件读出，再由 Brice Dudout 盲读；两种读法逐码合并，仍存疑的字再对照图像核查。'
-   '电文中可见陈其美的病情（以及孙中山关于高野医师疗法的建议）、上海举事的款项，以及龙济光的叛离。</p>')),
+   '<p><strong>新破译（2026年10月），就我们所知此前未曾发表。</strong>1916年2月至3月的十六封电报，出自 D. Bourdeau 所转录卷宗之前的递信省抄送卷宗'
+   '（JACAR B03050088000 至 B03050088200）' + S21 + '。它们以已发表的压缩码表（上海、青岛、马尼拉、旧金山）' + S1 + '及一张新码表“Thirteenth”读出'
+   '（见<a href="method.html#t1915">破译方法</a>）。字母由 Claude 依扫描件读出，再由 Brice Dudout 盲读（其中六封为校改预填的转写）；两种读法逐码合并，仍存疑的字再对照图像核查。'
+   '电文中可见陈其美的病情（以及孙中山关于高野医师疗法的建议）、上海举事的款项、龙济光的叛离、第二舰队与奉天的响应、广西独立（3月15日），以及在旧金山购买飞机。</p>')),
  'ja': dict(title='1916年2〜3月：新たな解読', intro=(
-   '<p><strong>新たな解読（2026年10月）、管見の限り未公表。</strong>1916年2〜3月の電報10通。D. Bourdeau が翻字した送付分より前の逓信省の送付分'
-   '（JACAR B03050088000〜B03050088200）' + S21 + 'から採った。公表済みの圧縮符号表（上海・青島・マニラ）' + S1 + 'と新しい表「Thirteenth」で読める'
-   '（<a href="method.html#t1915">解読の方法</a>を参照）。文字は Claude がスキャンから読み、Brice Dudout がブラインドで読み直した。二つの読みを符号ごとに統合し、'
-   'なお不確かな字は画像で再確認した。陳其美の病（と高野博士の療法をめぐる孫文の助言）、上海での行動資金、龍済光の離反の動きがたどれる。</p>'),
+   '<p><strong>新たな解読（2026年10月）、管見の限り未公表。</strong>1916年2〜3月の電報16通。D. Bourdeau が翻字した送付分より前の逓信省の送付分'
+   '（JACAR B03050088000〜B03050088200）' + S21 + 'から採った。公表済みの圧縮符号表（上海・青島・マニラ・サンフランシスコ）' + S1 + 'と新しい表「Thirteenth」で読める'
+   '（<a href="method.html#t1915">解読の方法</a>を参照）。文字は Claude がスキャンから読み、Brice Dudout がブラインドで読み直した（うち6通は下書きの転写を校正）。二つの読みを符号ごとに統合し、'
+   'なお不確かな字は画像で再確認した。陳其美の病（と高野博士の療法をめぐる孫文の助言）、上海での行動資金、龍済光の離反の動き、第二艦隊と奉天の呼応、広西の独立（3月15日）、サンフランシスコでの飛行機購入がたどれる。</p>'),
    read='用紙の文字（二つの読みを統合）', label='試訳。', stats='電報{tels}通、符号{codes}個。疑わしいもの{douteux}個。'),
 }
 
@@ -80,6 +80,7 @@ def build():
         marked, i, k = set(), 0, 0
         while k < len(text):
             c = text[k]
+            if c == '「' and BT.restitution.is_clear(text, k): k = text.index('」', k) + 1; continue
             if c in BT.PUNCT: k += 1; continue
             if c in '{‹':
                 if c == '‹': marked.add(i)

@@ -161,7 +161,7 @@ R.update({
  'n0506': ('楊丙交天津電：學生已到百貴人，需款{至}急。盼覆。魚', []),
  'n0508': ('昨夜得覺生電稱：四日占領周村，{本}軍以同日攻濰縣城，五日占其東關，正午稍却，晚復決計圍境，占領附近村落，士氣頗壯。特轉。‹弼›邵子峯遮義之軍‹警›可上，今其運適山東。楊丙又接津電，‹傞›款，請速辦。持。齊', []),
  'n0510': ('克強昨日到，避人，尚未晤。‹逖›‹惟›孟碩乘原船適滬。{請}以居正舉{事}。山東電告金山至要。持。{灰}', []),
- 'n0512': ('箱已交犬塚，十五日附法船來。若有要事，請電如下：', []),
+ 'n0512': ('箱已交犬塚，十五日附法船來。若有要事，請電如下：「Mrs …, steamer Porthos」。請派二人接，因行李甚多。', []),   # 「」 : anglais chiffré (clé Rosamonde), hors flux
  'n0511': ('聞張繼已回日，頗奇，是否？', []),
  'n0515': ('今日晤克強，頗稱先生‹但›赴滬從緩。又言參部局長某謂：山東事革軍軍隊過少，不增，且將議和，則其國外交殊難著手，擬緩其幫助之力。經換答以軍隊忠壘，決不苟和，務請積極幫助。某始諾，特電請亟謀擴充軍隊。再，席正銘急電請款，摘原電如下：保軍校來津填誓約已逾百人，代表終對服從，已囑校中拒絶。外派點段鉅{款}買收也。定‹嬙›五給憑分遣，釐速寄萬圓。模範團南逸‹寁›人保等軍確有可爲。{云}云。現在宜圖天津。持。删', []),
  's0505': ('江日官抵滬，馬代表等可來滬。並請速備百圓券二萬、十圓八萬、一圓五圓各一萬，交春洋丸帶港，‹耻›義會{轉}交梅喬林收。帳券人請兄酌奪。文', []),
@@ -188,7 +188,7 @@ CONF.update({'n0503a': {'愷': 'nom', '江': 'date'}, 'n0512': {'塚': 'nom'}, '
              'n0508': {'占': 'mot', '濰': 'nom', '却': 'variante'}, 'n0515': {'絶': 'variante', '删': 'date'}, 'm0503': {'仟': 'mot', '証': 'variante'}})
 KEYS.update({'n0503a': ['兆銘', '債券', '仲愷'], 'n0503b': ['博愛丸'], 'n0504a': ['邵子峯', '王煥夏', '鴨綠江', '安東', '坂本', '春日丸'],
              'n0504b': ['現款六仟', '深谷', '中須賀'], 'n0506': ['楊丙', '天津', '學生'], 'n0508': ['覺生', '周村', '濰縣', '邵子峯'],
-             'n0510': ['克強', '避人', '舉事', '金山'], 'n0512': ['犬塚', '法船'], 'n0511': ['張繼', '回日'], 'h0430': ['黃', '換船', '鐵城'], 'n0515': ['克強', '參謀部', '席正銘', '保定軍校', '天津'],
+             'n0510': ['克強', '避人', '舉事', '金山'], 'n0512': ['犬塚', '法船', 'Porthos', '行李'], 'n0511': ['張繼', '回日'], 'h0430': ['黃', '換船', '鐵城'], 'n0515': ['克強', '參謀部', '席正銘', '保定軍校', '天津'],
              's0505': ['百圓券', '春洋丸', '梅喬林', '文'], 's0506': ['邵', '安東', '正金'], 's0508': ['學生', '濟南', '楊丙', '邵'],
              's0515': ['福建', '陳羣', '黃展雲'], 'm0503': ['債券', '陞等功章', '誠']})
 _MAI = {
@@ -200,7 +200,7 @@ _MAI = {
   'n0506': "Yang Bing transmet un télégramme de Tianjin : les étudiants arrivés sont une centaine (?) ; il faut des fonds de toute urgence. Dans l'attente de ta réponse. — Le 6.",
   'n0508': "Hier soir, télégramme de Juesheng (Ju Zheng) : le 4, [nous avons] pris Zhoucun (周村) ; notre armée a attaqué la ville de Weixian le même jour (?) ; le 5, [nous avons] pris sa porte Est ; à midi léger recul ; le soir, [nous avons] décidé d'encercler [la ville] et occupé les villages voisins ; le moral est excellent. Je transmets. […] [L'armée] de Shao Zifeng […] est maintenant en route vers le Shandong. Yang Bing a aussi reçu un télégramme de Tianjin : […] des fonds ; agissez vite. — Chi. Le 8.",
   'n0510': "Keqiang (Huang Xing) est arrivé hier ; il évite les visiteurs, je ne l'ai pas encore vu. […] Mengshuo (孟碩) a pris le même navire pour Shanghai. Prière de lancer l'action avec Ju Zheng (居正). Il est essentiel de télégraphier les nouvelles du Shandong à San Francisco (金山). — Chi. Le 10.",
-  'n0512': "La caisse a été remise à Inuzuka (犬塚) ; elle partira le 15 par un navire français. Pour toute affaire urgente, télégraphier à l'adresse suivante : [adresse en clair, non lue].",
+  'n0512': "La malle a été remise à Inuzuka (犬塚). Le 15, [je] viens par un navire français. Pour toute affaire urgente, télégraphier comme suit : « Mrs …, steamer Porthos ». Prière d'envoyer deux personnes [m']attendre : il y a beaucoup de bagages.",
   'n0511': "J'apprends que Zhang Ji (張繼) est rentré au Japon ; c'est très surprenant — est-ce vrai ?",
   'n0515': "Vu aujourd'hui Keqiang (Huang Xing) : il insiste pour que la venue de Monsieur [Sun] à Shanghai soit différée. Il dit aussi qu'un chef de bureau (局長) de l'état-major a déclaré : au Shandong, les troupes de l'armée révolutionnaire sont trop peu nombreuses ; si elles n'augmentent pas et qu'on en vient à négocier la paix, la diplomatie de son pays aura bien du mal à agir, et il compte ralentir son aide. [Keqiang] a répondu que les troupes sont loyales et ne feront jamais une paix de compromis, et demandé une aide active. L'autre a alors acquiescé, et [Keqiang] télégraphie spécialement pour demander qu'on étende d'urgence les troupes. Par ailleurs, Xi Zhengming demande des fonds par télégramme urgent ; extrait de l'original : les élèves de l'école militaire [de Baoding] venus à Tianjin et ayant signé un engagement (誓約) dépassent la centaine ; leurs représentants jurent obéissance ; j'ai fait dire à l'école de refuser. Au-dehors, on dépense de grosses sommes pour les acheter. [J'ai] fixé […] cinq, donné des certificats et réparti [les hommes] ; envoyez vite dix mille yuans. Le Régiment modèle (模範團) […], les troupes de Bao et d'autres ont réellement de quoi faire », etc. Il faut maintenant viser Tianjin. — Chi. Le 15.",
   's0505': "Le 3, […] est arrivé à Shanghai ; les représentants Ma et autres peuvent venir à Shanghai. Préparez aussi vite des billets : 20 000 de 100 yuans, 80 000 de 10 yuans, et 10 000 de 1 et de 5 yuans chacun, à remettre au Shun’yō-maru (春洋丸) pour les porter à Hong Kong ; la société 耻義會 (?) les transmettra à Mei Qiaolin (梅喬林). Pour [les responsables] des comptes et des billets, je te laisse en décider, frère. — Wen (Sun Yat-sen).",
@@ -218,7 +218,7 @@ _MAI = {
   'n0506': "Yang Bing forwards a telegram from Tianjin: the students who have arrived number about a hundred (?); funds are needed most urgently. Awaiting your reply. — The 6th.",
   'n0508': "Last night, a telegram from Juesheng (Ju Zheng): on the 4th [we] took Zhoucun (周村); our army attacked the city of Weixian the same day (?); on the 5th [we] took its East Gate; at noon a slight pull-back; in the evening [we] decided to surround [the city] and occupied the nearby villages; morale is excellent. Forwarding this. […] Shao Zifeng's [army] […] is now on its way to Shandong. Yang Bing has also had a telegram from Tianjin: […] funds; please act quickly. — Chi. The 8th.",
   'n0510': 'Keqiang (Huang Xing) arrived yesterday; he is avoiding visitors, I have not seen him yet. […] Mengshuo (孟碩) took the same ship to Shanghai. Please launch the action with Ju Zheng (居正). It is essential to telegraph the Shandong news to San Francisco (金山). — Chi. The 10th.',
-  'n0512': 'The box has been handed to Inuzuka (犬塚); it will leave on the 15th by a French ship. For any urgent matter, telegraph to the following address: [address in clear, unread].',
+  'n0512': 'The trunk has been handed to Inuzuka (犬塚). On the 15th [I] come by a French ship. For any urgent matter, telegraph as follows: “Mrs …, steamer Porthos”. Please send two people to meet [me]: there is a lot of luggage.',
   'n0511': 'I hear that Zhang Ji (張繼) has returned to Japan; that is very surprising — is it true?',
   'n0515': "Saw Keqiang (Huang Xing) today: he strongly advises that Sir [Sun]'s journey to Shanghai be put off. He also says that a bureau chief (局長) of the General Staff stated: in Shandong the revolutionary army has too few troops; if they are not increased and it comes to peace talks, his country's diplomacy will find it very hard to act, and he means to slow down his help. [Keqiang] replied that the troops are loyal and will never make a compromise peace, and asked for active help. The other then agreed, and [Keqiang] telegraphs specially to ask that the troops be expanded urgently. Further, Xi Zhengming asks for funds by urgent telegram; extract of the original: the cadets of the [Baoding] military school who have come to Tianjin and signed a pledge (誓約) already exceed a hundred; their representatives pledge obedience; I have told [those in] the school to refuse. Outsiders are spending large sums to buy them over. [I have] fixed […] five, issued certificates and assigned [the men]; send ten thousand yuan quickly. The Model Regiment (模範團) […], Bao's and the other troops really can do something,” etc. Tianjin should now be the target. — Chi. The 15th.",
   's0505': "On the 3rd […] arrived in Shanghai; the representatives Ma and others may come to Shanghai. Also prepare banknotes quickly: 20,000 of 100 yuan, 80,000 of 10 yuan, and 10,000 each of 1 and 5 yuan, to be handed to the Shun’yō-maru (春洋丸) and carried to Hong Kong; the 耻義會 society (?) is to pass them on to Mei Qiaolin (梅喬林). As for [those in charge of] accounts and notes, I leave it to you, brother. — Wen (Sun Yat-sen).",
@@ -236,7 +236,7 @@ _MAI = {
   'n0506': "楊丙が天津の電報を伝える：到着した学生は百人ほど（？）、至急資金が必要。返電を待つ。魚（6日）。",
   'n0508': "昨夜、覚生（居正）から電報：4日に周村を占領、わが軍は同日（？）に濰県城を攻撃、5日にその東関を占領、正午やや後退、夜にまた包囲を決め、付近の村落を占領した。士気は非常に高い。転電する。……邵子峯の軍……は今や山東へ向かっている。楊丙はまた天津から電報を受けた：……資金。速やかに処理されたい。持。齊（8日）。",
   'n0510': '克強（黄興）は昨日着いたが、人を避けており、まだ会っていない。……孟碩は同じ船で上海へ向かった。居正をもって挙事されたい。山東の情報を金山（サンフランシスコ）へ電報で知らせることが肝要。持。灰（10日）。',
-  'n0512': '箱はすでに犬塚に渡した。15日にフランス船で送る。急用があれば次の宛先へ打電されたい：〔平文の宛先、未読〕。',
+  'n0512': '箱はすでに犬塚に渡した。15日にフランス船で行く。急用があれば次のとおり打電されたい：「Mrs ……, steamer Porthos」。荷物が多いので、二人迎えによこされたい。',
   'n0511': '張継が日本に戻ったと聞いた。たいへん意外だ。本当か。',
   'n0515': "今日、克強（黄興）に会った。先生の上海行きは延期すべきだと強く言う。また参謀本部の某局長は、山東の革命軍は兵が少なすぎ、増えないうえ講和にでもなれば、自国の外交は手をつけにくく、援助を緩めるつもりだと言ったという。〔克強は〕軍隊は忠実で決して妥協の講和はしないと答え、積極的な援助を求めた。某はそこで承諾し、〔克強は〕軍の拡充を急ぐよう特に打電する。また席正銘が至急電で資金を求めている。原電の抜粋：〔保定〕軍官学校の学生で天津に来て応募した者はすでに百人を超え、代表は服従を誓っている。学校の中で拒むよう言っておいた。外部は巨額で買収しようとしている。……五を定め、証明書を与えて分遣した。至急一万円送られたい。模範団……保などの軍には確かに見込みがある。今は天津を図るべきである。持。刪（15日）。",
   's0505': "3日（江）に……が上海に着いた。馬代表らは上海に来てよい。また至急紙幣を用意されたい：百円券二万、十円券八万、一円・五円各一万。春洋丸に託して香港へ運び、耻義会（？）から梅喬林に転送して受け取らせる。帳簿・券の担当は兄の判断に任せる。文（孫文）。",
@@ -429,6 +429,14 @@ _N16 = {
         'n0531c': "末尾（旦）は東京発の他の電報の署名「興」と異なる。タイプ打ちの写しがある。"},
 }
 for _lang in _N16: NOTE[_lang].update(_N16[_lang])
+# 0512 : passage en anglais chiffré avec la clé de Rosamonde (15/10/2026)
+_P12 = {
+ 'fr': "Après 如下 (« comme suit »), entre zoxeyujore et kuzixacujo, le formulaire porte deux groupes qui ne sont pas des syllabes (absents de la ligne de lettres ci-dessus) : « wicuhaelou woipeilyce » est de l'anglais chiffré avec la clé des télégrammes de Rosamonde. Lettre à lettre : « mrsayuoteamerporthso », soit « Mrs …, steamer Porthos » à deux écarts près (le s de steamer, l'ordre de os) ; le nom de la passagère reste incertain (« Ayu » ?). C'est l'adresse où télégraphier pendant la traversée : le Porthos, le « navire français » (法船) du texte, que le télégramme de Tokyo du 13 mai (« Rosamonde. Porthos. ») nomme aussi. Le chiffre chinois reprend ensuite (請派二人接…).",
+ 'en': "After 如下 (“as follows”), between zoxeyujore and kuzixacujo, the form carries two groups that are not syllables (left out of the letter line above): “wicuhaelou woipeilyce” is English enciphered with the key of the Rosamonde telegrams. Letter by letter: “mrsayuoteamerporthso”, i.e. “Mrs …, steamer Porthos” with two slips (the s of steamer, the order of os); the passenger's name is uncertain (“Ayu”?). This is the address to telegraph to during the voyage: the Porthos, the “French ship” (法船) of the text, also named in the Tokyo telegram of 13 May (“Rosamonde. Porthos.”). The Chinese cipher then resumes (請派二人接…).",
+ 'zh-Hant': "「如下」之後、zoxeyujore 與 kuzixacujo 之間，電報紙上有兩組字母不成音節（上方字母行未列入）：「wicuhaelou woipeilyce」是用 Rosamonde 電報的密鑰加密的英文。逐字母解出「mrsayuoteamerporthso」，即「Mrs …, steamer Porthos」，有兩處出入（steamer 的 s、os 的次序）；乘客姓名仍不確定（「Ayu」？）。這是航行途中的收電地址：Porthos 號即電文中的「法船」，5月13日東京發出的電報（「Rosamonde. Porthos.」）亦提及此船。其後恢復中文密碼（請派二人接……）。",
+ 'ja': "「如下」の後、zoxeyujore と kuzixacujo の間に、音節にならない二組がある（上の文字列には含めていない）。「wicuhaelou woipeilyce」は Rosamonde 電報の鍵で暗号化された英語である。一字ずつ解くと「mrsayuoteamerporthso」、すなわち「Mrs …, steamer Porthos」（steamer の s と os の順序の二か所が異なる）。乗客の名は不確か（「Ayu」？）。航海中の打電先であり、Porthos 号は本文の「法船」（フランス船）、5月13日の東京発の電報（「Rosamonde. Porthos.」）にも出てくる。その後、中国語の暗号に戻る（請派二人接……）。",
+}
+for _lang in _P12: NOTE[_lang]['n0512'] = _P12[_lang]
 
 def build():
     msgs = []
@@ -446,6 +454,7 @@ def build():
         while k < len(text):
             c = text[k]
             if c in restitution.PUNCT: k += 1; continue
+            if c == '「' and restitution.is_clear(text, k): k = text.index('」', k) + 1; continue
             if c in '{‹':
                 if c == '‹': marked.add(i)
                 i += 1; k += 3; continue
