@@ -325,6 +325,23 @@ var VERIF = {'fr': 'lettres vérifiées sur le scan : erreur probable du chiffre
       h += '</nav></section>';
       T15.messages.forEach(function (m) { h += tg(m, TI, TI); });
     }
+    // télégrammes de février–mars 1916 (corpus-f1916.js, tools/build_f1916.py) : même gabarit, par date
+    var F16 = window.WENMI_F1916, FX = window.WENMI_F1916_I18N;
+    var FI = FX ? (FX[root.lang] || FX.fr) : null;
+    if (F16 && FI) {
+      h += '<section class="tg tg-group" id="f1916"><h2>' + esc(FI.title) + '</h2>' + FI.intro +
+        '<p class="corpus-stats">' + esc(FI.stats.replace('{tels}', F16.stats.tels).replace('{codes}', F16.stats.codes).replace('{douteux}', F16.stats.douteux)) +
+        '</p><nav class="corpus-toc">';
+      Object.keys(FI.toc).forEach(function (g) {
+        var ms = F16.messages.filter(function (m) { return m.toc === g; });
+        if (!ms.length) return;
+        h += '<div><strong>' + esc(FI.toc[g]) + '</strong> ';
+        ms.forEach(function (m) { h += '<a href="#t' + m.id + '">' + m.label + '</a> '; });
+        h += '</div>';
+      });
+      h += '</nav></section>';
+      F16.messages.forEach(function (m) { h += tg(m, FI, FI); });
+    }
     box.innerHTML = h;
   }
   document.querySelectorAll('#corpus').forEach(mountCorpus);
