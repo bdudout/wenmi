@@ -1,0 +1,2620 @@
+[
+  {
+    "id": "inedits-c39-a50t",
+    "source_id": "a50t",
+    "date_iso": "1913-12-29",
+    "date": {
+      "fr": "29 décembre 1913",
+      "en": "29 December 1913",
+      "zh": "1913年12月29日",
+      "ja": "1913年12月29日"
+    },
+    "route": {
+      "fr": "Aoicho → Mr Chiupchjin, Tonying Co., 6 Kiukiang Rd, Shanghai ; signé M. Toyama",
+      "en": "Aoicho → Mr Chiupchjin, Tonying Co., 6 Kiukiang Rd, Shanghai ; signé M. Toyama",
+      "ja": "Aoicho → Mr Chiupchjin, Tonying Co., 6 Kiukiang Rd, 上海 ; signé M. Toyama",
+      "zh-hant": "Aoicho → Mr Chiupchjin, Tonying Co., 6 Kiukiang Rd, 上海 ; signé M. Toyama",
+      "zh-hans": "Aoicho → Mr Chiupchjin, Tonying Co., 6 Kiukiang Rd, 上海 ; signé M. Toyama"
+    },
+    "key": "ctc",
+    "src": "B03050087300, image 50",
+    "pages": "50",
+    "frame": "0055a",
+    "cipher": "06862 97368 55239 20059 05780 61300 74058 72429",
+    "effective": "0686297368552392005905780613007405872429",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "向正金收二千卽交卓文",
+    "aligned": "向正金收二千卽交卓文",
+    "read": "向正金收二千，卽交卓文。",
+    "keyw": [
+      "向正金收二千卽交卓文"
+    ],
+    "tr": {
+      "fr": "Retirez deux mille à la banque Shōkin et remettez-les aussitôt à Zhuowen.",
+      "en": "Collect two thousand from Shōkin Bank and hand them to Zhuowen at once.",
+      "ja": "正金から二千を受け取り、ただちに卓文へ渡されたい。",
+      "zh-Hant": "節錄：向正金收二千卽交卓文。"
+    },
+    "score": 5.123,
+    "null": -0.26,
+    "source": "C39",
+    "who": {
+      "from": null,
+      "to": "toyama"
+    }
+  },
+  {
+    "id": "inedits-c39-b05",
+    "source_id": "b05",
+    "date_iso": "1914-03-11",
+    "date": {
+      "fr": "11 mars 1914",
+      "en": "11 March 1914",
+      "zh": "1914年3月11日",
+      "ja": "1914年3月11日"
+    },
+    "route": {
+      "fr": "Hongkong → Toyama, 26 Reinanzaka, Tokyo",
+      "en": "Hongkong → Toyama, 26 Reinanzaka, Tokyo",
+      "ja": "香港 → Toyama, 26 Reinanzaka, 東京",
+      "zh-hant": "香港 → Toyama, 26 Reinanzaka, 東京",
+      "zh-hans": "香港 → Toyama, 26 Reinanzaka, 東京"
+    },
+    "key": "hk1914",
+    "src": "B03050087400, image 5",
+    "pages": "5",
+    "frame": "0064",
+    "cipher": "kououtoououu ycpiyaklyaai cuiuakclaaol pktlycacyya yakptaapytta iocuikuotya capplklyyu",
+    "effective": "kououtoououuycpiyaklyaaicuiuakclaaolpktlycacyyayakptaapytaiocuikuotyacapplklyyu",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [
+      [
+        "suppr",
+        56,
+        "t"
+      ]
+    ],
+    "raw": "尚欠數千卽可舉請速電匯于諾道□窣婞口鶺殪",
+    "aligned": "尚欠數千卽可舉請速電匯于諾道鉷興昌轉頌",
+    "read": "尚欠數千，卽可舉。請速電匯于諾道{廣}興昌，轉頌。",
+    "keyw": [
+      "尚欠數千卽可舉請速電匯于諾道",
+      "興昌轉頌"
+    ],
+    "tr": {
+      "fr": "Il manque encore quelques milliers, puis nous pourrons agir. Veuillez envoyer vite l’argent par télégraphe à […] Connaught Road, [Kwong] Hing Cheong, pour Song. Adresse partiellement incertaine.",
+      "en": "A few thousand are still lacking; then we can act. Please remit quickly to […] Connaught Road, [Kwong] Hing Cheong, for Song. Address partly uncertain.",
+      "ja": "まだ数千不足しているが、それで決行できる。[…] 諾道の［広］興昌に至急送金し、頌へ取り次がれたい。住所の一部は未確定。",
+      "zh-Hant": "節錄：尚欠數千卽可舉請速電匯于諾道。興昌轉頌。建議讀法：廣。"
+    },
+    "score": 2.807,
+    "null": -1.151,
+    "source": "C39",
+    "who": {
+      "from": null,
+      "to": "toyama"
+    }
+  },
+  {
+    "id": "inedits-c39-b08b",
+    "source_id": "b08b",
+    "date_iso": "1914-03-13",
+    "date": {
+      "fr": "13 mars 1914",
+      "en": "13 March 1914",
+      "zh": "1914年3月13日",
+      "ja": "1914年3月13日"
+    },
+    "route": {
+      "fr": "Tokyo → Kwongkingchong, Enock Road, Hongkong ; signé 頭山満",
+      "en": "Tokyo → Kwongkingchong, Enock Road, Hongkong ; signé 頭山満",
+      "ja": "東京 → Kwongkingchong, Enock Road, 香港 ; signé 頭山満",
+      "zh-hant": "東京 → Kwongkingchong, Enock Road, 香港 ; signé 頭山満",
+      "zh-hans": "東京 → Kwongkingchong, Enock Road, 香港 ; signé 頭山満"
+    },
+    "key": "hk1914",
+    "src": "B03050087400, image 8",
+    "pages": "8",
+    "frame": "0067b",
+    "cipher": "kcpkp ktlpk uyuou tlcot yulou totak clokt uyyia yockk lapyl liklo kyptc pkuyy aaiyy oipoy kkplo ltiky cyyoa tluou tayky",
+    "effective": "kcpkpktlpkuyuoutlcotyuloutotakcloktuyyiayockklapylliklokyptcpkuyyaaiyyoipoykkploltikycyyoatluoutayky",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "已電陸文煇借款請着人到家兄宅問陸可也餉彈當力籌文覆",
+    "aligned": "已電陸文煇借款請着人到家兄宅問陸可也餉彈當力籌文覆",
+    "read": "已電陸文煇借款，請着人到家兄宅問陸可也。餉彈當力籌。文覆。",
+    "keyw": [
+      "已電陸文煇借款請着人到家兄宅問陸可也餉彈當力籌文覆"
+    ],
+    "tr": {
+      "fr": "J’ai télégraphié à Lu Wenhui pour l’emprunt. Envoyez quelqu’un chez mon frère aîné interroger Lu. Je ferai tout pour réunir solde et munitions. Réponse de Wen.",
+      "en": "I have telegraphed Lu Wenhui about the loan. Send someone to my elder brother’s house to ask Lu. I shall do my utmost to raise pay and ammunition. Wen replies.",
+      "ja": "借款の件で陸文煇に電報した。兄の家へ人をやり陸に尋ねればよい。軍資金と弾薬は全力で調達する。文、返信。",
+      "zh-Hant": "節錄：已電陸文煇借款請着人到家兄宅問陸可也餉彈當力籌文覆。"
+    },
+    "score": 3.443,
+    "null": -1.348,
+    "source": "C39",
+    "who": {
+      "from": null,
+      "to": null
+    }
+  },
+  {
+    "id": "inedits-c39-b38",
+    "source_id": "b38",
+    "date_iso": "1914-06-20",
+    "date": {
+      "fr": "20 juin 1914",
+      "en": "20 June 1914",
+      "zh": "1914年6月20日",
+      "ja": "1914年6月20日"
+    },
+    "route": {
+      "fr": "Tokyo Aoicho → Sanghwojihpao, Shanghai ; signé 頭山満",
+      "en": "Tokyo Aoicho → Sanghwojihpao, Shanghai ; signé 頭山満",
+      "ja": "東京 Aoicho → Sanghwojihpao, 上海 ; signé 頭山満",
+      "zh-hant": "東京 Aoicho → Sanghwojihpao, 上海 ; signé 頭山満",
+      "zh-hans": "東京 Aoicho → Sanghwojihpao, 上海 ; signé 頭山満"
+    },
+    "key": "ctc",
+    "src": "B03050087400, image 38",
+    "pages": "38",
+    "frame": "0097",
+    "cipher": "19475 45951 74050 40047 00811 32701",
+    "effective": "194754595174050400470081132701",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "愛莫能助乞亮孫",
+    "aligned": "愛莫能助乞亮孫",
+    "read": "愛莫能助，乞亮。孫。",
+    "keyw": [
+      "愛莫能助乞亮孫"
+    ],
+    "tr": {
+      "fr": "Malgré ma sympathie, je ne peux aider ; veuillez me comprendre. Sun.",
+      "en": "Despite my sympathy, I cannot help; please understand. Sun.",
+      "ja": "気持ちはあっても助力できない。ご理解願う。孫。",
+      "zh-Hant": "節錄：愛莫能助乞亮孫。"
+    },
+    "score": 2.386,
+    "null": -0.455,
+    "source": "C39",
+    "who": {
+      "from": null,
+      "to": null
+    }
+  },
+  {
+    "id": "inedits-c39-b42t",
+    "source_id": "b42t",
+    "date_iso": "1914-06-24",
+    "date": {
+      "fr": "24 juin 1914",
+      "en": "24 June 1914",
+      "zh": "1914年6月24日",
+      "ja": "1914年6月24日"
+    },
+    "route": {
+      "fr": "Chicago (via Bonin) → Toyama, 26 Reinanzaka ; signé Moypoy",
+      "en": "Chicago (via Bonin) → Toyama, 26 Reinanzaka ; signé Moypoy",
+      "ja": "シカゴ (via Bonin) → Toyama, 26 Reinanzaka ; signé Moypoy",
+      "zh-hant": "芝加哥 (via Bonin) → Toyama, 26 Reinanzaka ; signé Moypoy",
+      "zh-hans": "芝加哥 (via Bonin) → Toyama, 26 Reinanzaka ; signé Moypoy"
+    },
+    "key": "ctc",
+    "src": "B03050087400, image 42",
+    "pages": "42",
+    "frame": "0101a",
+    "cipher": "7193 1885 3945 yokohama specie bank 05650 05905 78495 80565 23920 04760 10001 moypoy",
+    "effective": "71931885394505650059057849580565239200476010001",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "電悉由匯二千續匯收乞覆",
+    "aligned": "電悉由匯二千續匯收乞覆",
+    "read": "電悉，由「Yokohama Specie Bank」匯二千，續匯，收乞覆。",
+    "keyw": [
+      "電悉由匯二千續匯收乞覆"
+    ],
+    "tr": {
+      "fr": "Télégramme reçu. […] Yokohama Specie Bank : deux mille envoyés, autre envoi à suivre ; veuillez accuser réception.",
+      "en": "Telegram received. […] Yokohama Specie Bank: two thousand sent, further remittance to follow; please acknowledge receipt.",
+      "ja": "電報了解。[…] 横浜正金銀行から二千を送金し、引き続き送る。受領の返電願う。",
+      "zh-Hant": "節錄：電悉由匯二千續匯收乞覆。"
+    },
+    "score": 3.867,
+    "null": -1.225,
+    "source": "C39",
+    "who": {
+      "from": null,
+      "to": "toyama"
+    }
+  },
+  {
+    "id": "inedits-c39-b45t",
+    "source_id": "b45t",
+    "date_iso": "1914-06-28",
+    "date": {
+      "fr": "28 juin 1914",
+      "en": "28 June 1914",
+      "zh": "1914年6月28日",
+      "ja": "1914年6月28日"
+    },
+    "route": {
+      "fr": "Tokyo Aoicho → Laisao Sung, 70 Broadway Terrace, Shanghai ; signé 頭山満",
+      "en": "Tokyo Aoicho → Laisao Sung, 70 Broadway Terrace, Shanghai ; signé 頭山満",
+      "ja": "東京 Aoicho → Laisao Sung, 70 Broadway Terrace, 上海 ; signé 頭山満",
+      "zh-hant": "東京 Aoicho → Laisao Sung, 70 Broadway Terrace, 上海 ; signé 頭山満",
+      "zh-hans": "東京 Aoicho → Laisao Sung, 70 Broadway Terrace, 上海 ; signé 頭山満"
+    },
+    "key": "laisaosang1915",
+    "src": "B03050087400, image 45",
+    "pages": "45",
+    "frame": "0104a",
+    "cipher": "gasigabugo larovutuze hukubihoce dofoxavasa foyarokufu vofaqigape jorocopuja zabicoyeki",
+    "effective": "gasigabugolarovutuzehukubihocedofoxavasafoyarokufuvofaqigapejorocopujazabicoyeki",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "明日函寄高轉三百元爲兄家費收斷卽來東一行",
+    "aligned": "明日函寄高轉三百元爲兄家費收斷卽來東一行",
+    "read": "明日函寄高，轉三百元爲兄家費，收{到}卽來東一行。",
+    "keyw": [
+      "明日函寄高轉三百元爲兄家費收",
+      "卽來東一行"
+    ],
+    "tr": {
+      "fr": "Demain, une lettre sera envoyée à Gao ; trois cents yuans sont à transmettre pour vos frais de famille. Dès réception, venez faire un voyage à Tokyo. « Réception » comprend une proposition de lecture.",
+      "en": "A letter will be sent to Gao tomorrow; three hundred yuan are to be passed on for your family expenses. On receipt, come to Tokyo. “Receipt” includes a proposed reading.",
+      "ja": "明日高へ手紙を出し、三百元を家計費として取り次ぐ。受領したら一度東京へ来られたい。「到」は読みの提案。",
+      "zh-Hant": "節錄：明日函寄高轉三百元爲兄家費收。卽來東一行。建議讀法：到。"
+    },
+    "score": 3.766,
+    "null": -0.695,
+    "source": "C39",
+    "who": {
+      "from": null,
+      "to": null
+    }
+  },
+  {
+    "id": "inedits-c39-b51t",
+    "source_id": "b51t",
+    "date_iso": "1914-07-04",
+    "date": {
+      "fr": "4 juillet 1914",
+      "en": "4 July 1914",
+      "zh": "1914年7月4日",
+      "ja": "1914年7月4日"
+    },
+    "route": {
+      "fr": "Chicago → Toyama, 26 Reinanzaka ; signé Moypoy",
+      "en": "Chicago → Toyama, 26 Reinanzaka ; signé Moypoy",
+      "ja": "シカゴ → Toyama, 26 Reinanzaka ; signé Moypoy",
+      "zh-hant": "芝加哥 → Toyama, 26 Reinanzaka ; signé Moypoy",
+      "zh-hans": "芝加哥 → Toyama, 26 Reinanzaka ; signé Moypoy"
+    },
+    "key": "ctc",
+    "src": "B03050087400, image 51",
+    "pages": "51",
+    "frame": "0110a",
+    "cipher": "39450 46768 92588 74958 05650 05905 78239 26010",
+    "effective": "3945046768925887495805650059057823926010",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "由前銀行續匯二千收覆",
+    "aligned": "由前銀行續匯二千收覆",
+    "read": "由前銀行續匯二千，收覆。",
+    "keyw": [
+      "由前銀行續匯二千收覆"
+    ],
+    "tr": {
+      "fr": "Deux mille supplémentaires envoyés par la même banque ; accusez réception.",
+      "en": "A further two thousand remitted through the same bank; acknowledge receipt.",
+      "ja": "前と同じ銀行から引き続き二千を送金。受領の返電願う。",
+      "zh-Hant": "節錄：由前銀行續匯二千收覆。"
+    },
+    "score": 4.158,
+    "null": 0.446,
+    "source": "C39",
+    "who": {
+      "from": null,
+      "to": "toyama"
+    }
+  },
+  {
+    "id": "inedits-c39-b51b",
+    "source_id": "b51b",
+    "date_iso": "1914-07-05",
+    "date": {
+      "fr": "5 juillet 1914",
+      "en": "5 July 1914",
+      "zh": "1914年7月5日",
+      "ja": "1914年7月5日"
+    },
+    "route": {
+      "fr": "San Francisco → Toyama, Renanzaka ; signé Young China",
+      "en": "San Francisco → Toyama, Renanzaka ; signé Young China",
+      "ja": "サンフランシスコ → Toyama, Renanzaka ; signé Young China",
+      "zh-hant": "舊金山 → Toyama, Renanzaka ; signé Young China",
+      "zh-hans": "舊金山 → Toyama, Renanzaka ; signé Young China"
+    },
+    "key": "newyork1915",
+    "src": "B03050087400, image 51",
+    "pages": "51",
+    "frame": "0110b",
+    "cipher": "nisofihote yodekelofe renoteyo young china tupogoyi",
+    "effective": "nisofihoteyodekeloferenoteyotupogoyi",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "致張電失碼請電馮收",
+    "aligned": "致張電失碼請電馮收",
+    "read": "致張電失碼，請電馮收。",
+    "keyw": [
+      "致張電失碼請電馮收"
+    ],
+    "tr": {
+      "fr": "Le télégramme à Zhang a perdu son code ; veuillez télégraphier pour que Feng le reçoive.",
+      "en": "The telegram to Zhang has lost its code; please telegraph for Feng to receive it.",
+      "ja": "張宛の電報は符号が欠けている。馮に受け取るよう電報願う。",
+      "zh-Hant": "節錄：致張電失碼請電馮收。"
+    },
+    "score": 2.608,
+    "null": -0.917,
+    "source": "C39",
+    "who": {
+      "from": null,
+      "to": "toyama"
+    }
+  },
+  {
+    "id": "inedits-c39-m06",
+    "source_id": "m06",
+    "date_iso": "1914-07-27",
+    "date": {
+      "fr": "27 juillet 1914",
+      "en": "27 July 1914",
+      "zh": "1914年7月27日",
+      "ja": "1914年7月27日"
+    },
+    "route": {
+      "fr": "San Francisco → Hsuweilin, Tokyo",
+      "en": "San Francisco → Hsuweilin, Tokyo",
+      "ja": "サンフランシスコ → Hsuweilin, 東京",
+      "zh-hant": "舊金山 → Hsuweilin, 東京",
+      "zh-hans": "舊金山 → Hsuweilin, 東京"
+    },
+    "key": "hsu1914",
+    "src": "B03050087500, image 6",
+    "pages": "6",
+    "frame": "0117",
+    "cipher": "gucamomido nadajefahe japedoxoro duhefijari mabesinofa hedimodiva beceqecuzu yubose",
+    "effective": "gucamomidonadajefahejapedoxoroduhefijarimabesinofahedimodivabeceqecuzuyubose",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "昨秫居太平洋岸距桑洪百里平安寄信處仍前",
+    "aligned": "昨秫居太平洋岸距桑洪百里平安寄信處仍前",
+    "read": "昨{移}居太平洋岸，距桑洪百里，平安。寄信處仍前。",
+    "keyw": [
+      "昨",
+      "居太平洋岸距桑洪百里平安寄信處仍前"
+    ],
+    "tr": {
+      "fr": "Hier, [j’ai déménagé] sur la côte du Pacifique, à cent li de « Sanghong » ; tout va bien. L’adresse postale reste la même. Lieu non identifié ; le verbe est proposé.",
+      "en": "Yesterday [I moved] to the Pacific coast, a hundred li from “Sanghong”; all is well. The postal address remains unchanged. Place unidentified; verb proposed.",
+      "ja": "昨日、太平洋岸へ［転居］した。「桑洪」から百里、無事。郵便の宛先は従前どおり。地名未同定、動詞は提案。",
+      "zh-Hant": "節錄：昨。居太平洋岸距桑洪百里平安寄信處仍前。建議讀法：移。"
+    },
+    "score": 3.608,
+    "null": 0.984,
+    "source": "C39",
+    "who": {
+      "from": null,
+      "to": null
+    }
+  },
+  {
+    "id": "inedits-c39-m10",
+    "source_id": "m10",
+    "date_iso": "1914-07-31",
+    "date": {
+      "fr": "31 juillet 1914",
+      "en": "31 July 1914",
+      "zh": "1914年7月31日",
+      "ja": "1914年7月31日"
+    },
+    "route": {
+      "fr": "Changchun → Toyama, Reinanzaka [ting]",
+      "en": "Changchun → Toyama, Reinanzaka [ting]",
+      "ja": "長春 → Toyama, Reinanzaka [ting]",
+      "zh-hant": "長春 → Toyama, Reinanzaka [ting]",
+      "zh-hans": "長春 → Toyama, Reinanzaka [ting]"
+    },
+    "key": "shanghai1916",
+    "src": "B03050087500, image 10",
+    "pages": "10",
+    "frame": "0121",
+    "cipher": "ziqicaxise vitojixoma zifizekahu levobexika zimerijupo pavina",
+    "effective": "ziqicaxisevitojixomazifizekahulevobexikazimerijupopavina",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "代表返時擔任請鯈日兣來商款刮",
+    "aligned": "代表返時擔任請鯈日兣來商款刮",
+    "read": "代表返時擔任。請‹鯈›日{內}來商款‹刮›。",
+    "keyw": [
+      "代表返時擔任請",
+      "日",
+      "來商款"
+    ],
+    "tr": {
+      "fr": "Le représentant se chargera de cela à son retour. Veuillez venir […] jours pour discuter des fonds […]. Indicatif « Ting », expéditeur non identifié.",
+      "en": "The representative will undertake it on returning. Please come within […] days to discuss the funds […]. Indicator “Ting”, sender unidentified.",
+      "ja": "代表が戻った時に担当する。[…]日［内］に来て資金を相談されたい。[…] 標識は「Ting」、発信者未同定。",
+      "zh-Hant": "節錄：代表返時擔任請。日。來商款。建議讀法：內。"
+    },
+    "score": 3.66,
+    "null": 1.837,
+    "source": "C39",
+    "who": {
+      "from": null,
+      "to": "toyama"
+    }
+  },
+  {
+    "id": "inedits-c39-m17",
+    "source_id": "m17",
+    "date_iso": "1914-09-18",
+    "date": {
+      "fr": "18 septembre 1914",
+      "en": "18 September 1914",
+      "zh": "1914年9月18日",
+      "ja": "1914年9月18日"
+    },
+    "route": {
+      "fr": "San Francisco → Sunwen c/o Toyama ; signé Linsun [sixth]",
+      "en": "San Francisco → Sunwen c/o Toyama ; signé Linsun [sixth]",
+      "ja": "サンフランシスコ → Sunwen c/o Toyama ; signé Linsun [sixth]",
+      "zh-hant": "舊金山 → Sunwen c/o Toyama ; signé Linsun [sixth]",
+      "zh-hans": "舊金山 → Sunwen c/o Toyama ; signé Linsun [sixth]"
+    },
+    "key": "sanfran1916",
+    "src": "B03050087500, image 17",
+    "pages": "17",
+    "frame": "0128",
+    "cipher": "moquviyete secujuxamu dazukamico cajutogapu vituxuyone busosecora vixabevaco cadetepuyo zorezelido nivirorogi",
+    "effective": "moquviyetesecujuxamudazukamicocajutogapuvituxuyonebusosecoravixabevacocadetepuyozorezelidonivirorogi",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "客中用竭請速電匯美金二百濟急十云日匯東萬元收否並復",
+    "aligned": "客中用竭請速電匯美金二百濟急十云日匯東萬元收否並復",
+    "read": "客中用竭，請速電匯美金二百濟急。十{五}日匯東萬元，收否？並復。",
+    "keyw": [
+      "客中用竭請速電匯美金二百濟急十",
+      "日匯東萬元收否並復"
+    ],
+    "tr": {
+      "fr": "Mes fonds sont épuisés pendant ce voyage ; envoyez vite deux cents dollars américains pour parer à l’urgence. Le [15], dix mille yuans ont été envoyés au Japon : les avez-vous reçus ? Répondez aussi sur ce point.",
+      "en": "My funds are exhausted while travelling; send two hundred US dollars urgently. On the [15th], ten thousand yuan were sent to Japan: have you received them? Reply on this too.",
+      "ja": "旅先で資金が尽きた。至急二百米ドルを送金してほしい。十［五］日に日本へ一万元を送ったが受領したか。併せて返電願う。",
+      "zh-Hant": "節錄：客中用竭請速電匯美金二百濟急十。日匯東萬元收否並復。建議讀法：五。"
+    },
+    "score": 4.412,
+    "null": 0.44,
+    "source": "C39",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-a07",
+    "source_id": "a07",
+    "date_iso": "1916-04-10",
+    "date": {
+      "fr": "10 avril 1916",
+      "en": "10 April 1916",
+      "zh": "1916年4月10日",
+      "ja": "1916年4月10日"
+    },
+    "route": {
+      "fr": "Shanghai → Rosamonde (0152, 26 mots)",
+      "en": "Shanghai → Rosamonde (0152, 26 words)",
+      "ja": "上海 → Rosamonde (0152, 26 mots)",
+      "zh-hant": "上海 → Rosamonde (0152, 26 mots)",
+      "zh-hans": "上海 → Rosamonde (0152, 26 mots)"
+    },
+    "key": "shanghai1916",
+    "src": "B03050088500, image 7",
+    "pages": "7-8",
+    "frame": "0557",
+    "cipher": "vobezimeti bulabemopu kipemopusa kutasupomu sepohipera sevojuvobe xahibanina cetositaci ficeyirima qorihobici dodasiyaji lizimepoju viremavazi pitiaxalabe buzibutika vomenoyojo mojebukuji vatigokaru vogafopeqa rasexipize zipafanisa kuyimikaru zipaqarobu ramekusaha",
+    "effective": "vobezimetibulabemopukipemopusakutasupomusepohiperasevojuvobexahibaninacetositacificeyirimaqorihobicidodasiyajilizimepojuviremavazipexitibaxalabebuzibutikavomenoyojomojebukujivatigokaruvogafopeqarasexipizezipafanisakuyimekaruzipaqaroburamekusaha",
+    "inserted": [
+      131,
+      132,
+      136,
+      219
+    ],
+    "phase": 0,
+    "alignment_edits": [
+      [
+        "ajout",
+        131,
+        "e"
+      ],
+      [
+        "ajout",
+        131,
+        "x"
+      ],
+      [
+        "ajout",
+        134,
+        "b"
+      ],
+      [
+        "ajout",
+        216,
+        "e"
+      ],
+      [
+        "suppr",
+        216,
+        "i"
+      ]
+    ],
+    "raw": "日來力與海容海籌筌殉逌己約明日確覆而昨窩得信肇和應瑯又將來殖前肩令···························",
+    "aligned": "日來力與海容海籌筌殉逌己約明日確覆而昨窩得信肇和應瑯又將來殖前肩使價解與一三艦隊接洽今局勵若於王綦迓在何處籌備若何統乞電篲",
+    "read": "日來力與海容海籌，‹筌›‹殉›‹逌›，己約明日確覆而昨，‹窩›，得信肇和，‹應›‹瑯›，又將來，‹殖›‹前›‹肩›‹使›‹價›‹解›，與一三艦隊接洽，‹今›‹局›‹勵›‹若›‹於›‹王›‹綦›‹迓›，在何處籌備若何，‹統›，乞電，‹篲›。",
+    "keyw": [
+      "日來力與",
+      "海容海籌",
+      "己約明日確覆"
+    ],
+    "tr": {
+      "fr": "[…] Haï Yung et Haï Chou ; réponse définitive promise pour demain. […] Prendre contact avec les première et troisième escadres. Où en sont les préparatifs ? Télégraphiez. Plusieurs passages restent incertains.",
+      "en": "[…] Haï Yung and Haï Chou; a definite answer promised for tomorrow. […] Contact the First and Third Squadrons. How are preparations proceeding? Telegraph. Several passages remain uncertain.",
+      "ja": "[…] 海容・海籌。明日確答する約束。[…] 第一・第三艦隊と交渉。準備の状況を知らせてほしい。数か所は未確定。",
+      "zh-Hant": "節錄：日來力與。海容海籌。己約明日確覆。而昨。得信。肇和。又將來。與一三艦隊接洽。在何處籌備若何。乞電。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.25,
+    "null": -5.72,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-a09b",
+    "source_id": "a09b",
+    "date_iso": "1916-04-11",
+    "date": {
+      "fr": "11 avril 1916",
+      "en": "11 April 1916",
+      "zh": "1916年4月11日",
+      "ja": "1916年4月11日"
+    },
+    "route": {
+      "fr": "Aoyama (中山) → Kayano, 4 Yahatamachi, Seito",
+      "en": "Aoyama (中山) → Kayano, 4 Yahatamachi, Seito",
+      "ja": "青山 (中山) → Kayano, 4 Yahatamachi, 青島",
+      "zh-hant": "青山 (中山) → Kayano, 4 Yahatamachi, 青島",
+      "zh-hans": "青山 (中山) → Kayano, 4 Yahatamachi, 青島"
+    },
+    "key": "seito1916",
+    "src": "B03050088500, image 9",
+    "pages": "9",
+    "frame": "0559b",
+    "cipher": "tumuzuxizi sorovazelu kimafiqati bicutiqixi",
+    "effective": "tumuzuxizisorovazelukimafiqatibicutiqixi",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "呈大洲辭職當熠梃孫文",
+    "aligned": "呈大洲辭職當熠梃孫文",
+    "read": "‹呈›‹大›‹洲›，辭職，‹當›‹熠›‹梃›，孫文。",
+    "keyw": [
+      "辭職",
+      "孫文"
+    ],
+    "tr": {
+      "fr": "[…] a démissionné. […] Sun Wen. Nom et passage intermédiaire incertains.",
+      "en": "[…] has resigned. […] Sun Wen. Name and intervening passage uncertain.",
+      "ja": "[…] 辞職した。[…] 孫文。人名と中間部分は未確定。",
+      "zh-Hant": "節錄：辭職。孫文。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.61,
+    "null": -0.67,
+    "source": "C40",
+    "who": {
+      "from": "sun",
+      "to": "kayano"
+    }
+  },
+  {
+    "id": "inedits-c40-a10t",
+    "source_id": "a10t",
+    "date_iso": "1916-04-11",
+    "date": {
+      "fr": "11 avril 1916",
+      "en": "11 April 1916",
+      "zh": "1916年4月11日",
+      "ja": "1916年4月11日"
+    },
+    "route": {
+      "fr": "Tokyo → urgent Junzaburo Shanghai (11 mots)",
+      "en": "Tokyo → urgent Junzaburo Shanghai (11 words)",
+      "ja": "東京 → urgent Junzaburo 上海 (11 mots)",
+      "zh-hant": "東京 → urgent Junzaburo 上海 (11 mots)",
+      "zh-hans": "東京 → urgent Junzaburo 上海 (11 mots)"
+    },
+    "key": "shanghai1916",
+    "src": "B03050088500, image 10",
+    "pages": "10",
+    "frame": "0560a",
+    "cipher": "zuyixidoxi gapodolabe buzibutika vomenoyojo mojebasiqo jud.rufufa nocifipipo peqarovopo",
+    "effective": "zuyixidoxigapodolabebuzibutikavomenoyojomojebasiqojudarufufanocifipipopeqarovopo",
+    "inserted": [
+      53
+    ],
+    "phase": 0,
+    "alignment_edits": [
+      [
+        "ajout",
+        53,
+        "a"
+      ]
+    ],
+    "raw": "□兄全權與一三艦隊接洽襾機······",
+    "aligned": "□兄全權與一三艦隊接洽襾機行𤆬毋式歠統文",
+    "read": "‹□›，兄全權與一三艦隊接洽。‹襾›‹機›‹行›‹𤆬›‹毋›‹式›‹歠›‹統›，文。",
+    "keyw": [
+      "兄全權與一三艦隊接洽",
+      "文"
+    ],
+    "tr": {
+      "fr": "[…] Vous avez pleins pouvoirs pour négocier avec les première et troisième escadres. […] Wen.",
+      "en": "[…] You have full authority to negotiate with the First and Third Squadrons. […] Wen.",
+      "ja": "[…] 第一・第三艦隊との交渉を全権委任する。[…] 文。",
+      "zh-Hant": "節錄：兄全權與一三艦隊接洽。文。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.02,
+    "null": -4.24,
+    "source": "C40",
+    "who": {
+      "from": "sun",
+      "to": "yamada"
+    }
+  },
+  {
+    "id": "inedits-c40-a10b",
+    "source_id": "a10b",
+    "date_iso": "1916-04-11",
+    "date": {
+      "fr": "11 avril 1916",
+      "en": "11 April 1916",
+      "zh": "1916年4月11日",
+      "ja": "1916年4月11日"
+    },
+    "route": {
+      "fr": "Seito → Rosamonde (via Aoyama, 11 mots) [33]",
+      "en": "Seito → Rosamonde (via Aoyama, 11 words) [33]",
+      "ja": "青島 → Rosamonde (via 青山, 11 mots) [33]",
+      "zh-hant": "青島 → Rosamonde (via 青山, 11 mots) [33]",
+      "zh-hans": "青島 → Rosamonde (via 青山, 11 mots) [33]"
+    },
+    "key": "seito1916",
+    "src": "B03050088500, image 10",
+    "pages": "10",
+    "frame": "0560b",
+    "cipher": "tumuzudifu gerovazelu mocefiqoqu mumufubumu gibacugoqu zequcuquse fubumumutu muyubixico",
+    "effective": "tumuzudifugerovazelumocefiqoqumumufubumugibacugoquzequciruqusefubumumutumuyubixico",
+    "inserted": [
+      55,
+      56
+    ],
+    "phase": 0,
+    "alignment_edits": [
+      [
+        "ajout",
+        55,
+        "i"
+      ],
+      [
+        "ajout",
+        55,
+        "r"
+      ]
+    ],
+    "raw": "呈夬巛辭職請照凄件委狀寄到凝別崛仗呈報正",
+    "aligned": "呈夬巛辭職請照凄件委狀寄到分助算委仟以淪",
+    "read": "‹呈›‹夬›‹巛›，辭職請，‹照›‹凄›，件委狀寄到，‹分›‹助›‹算›‹委›‹仟›‹以›‹淪›。",
+    "keyw": [
+      "辭職請",
+      "件委狀寄到"
+    ],
+    "tr": {
+      "fr": "[…] démission ; veuillez […] envoyer la lettre de nomination […]. Fin incertaine.",
+      "en": "[…] resignation; please […] send the letter of appointment […]. Ending uncertain.",
+      "ja": "[…] 辞職。[…] 委任状を送ってほしい。末尾未確定。",
+      "zh-Hant": "節錄：辭職請。件委狀寄到。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 1.72,
+    "null": -0.34,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-a16",
+    "source_id": "a16",
+    "date_iso": "1916-04-12",
+    "date": {
+      "fr": "12 avril 1916",
+      "en": "12 April 1916",
+      "zh": "1916年4月12日",
+      "ja": "1916年4月12日"
+    },
+    "route": {
+      "fr": "Manila (65, compac) → Rosamonde (10 mots)",
+      "en": "Manila (65, compac) → Rosamonde (10 words)",
+      "ja": "マニラ (65, compac) → Rosamonde (10 mots)",
+      "zh-hant": "馬尼拉 (65, compac) → Rosamonde (10 mots)",
+      "zh-hans": "馬尼拉 (65, compac) → Rosamonde (10 mots)"
+    },
+    "key": "manila1916",
+    "src": "B03050088500, image 16",
+    "pages": "16",
+    "frame": "0566",
+    "cipher": "yuqolaregu risaviraku loqifipoke fabenulude gavugequhe xexekumopa mosigavuju yukayuquea",
+    "effective": "yuqolaregurisavirakuloqifipokefabenuludegavugequhexexekumopamosigavujuyukayuqurea",
+    "inserted": [
+      78
+    ],
+    "phase": 0,
+    "alignment_edits": [
+      [
+        "ajout",
+        78,
+        "r"
+      ]
+    ],
+    "raw": "葉輇眼電閩南不日獨立請拔接濟可呑請示蹐·",
+    "aligned": "葉輇眼電閩南不日獨立請拔接濟可呑請示蹐織",
+    "read": "‹葉›‹輇›‹眼›，電閩南不日獨立請，‹拔›，接濟，‹可›‹呑›，請示，‹蹐›‹織›。",
+    "keyw": [
+      "電閩南不日獨立請",
+      "接濟",
+      "請示"
+    ],
+    "tr": {
+      "fr": "[…] Télégramme : le sud du Fujian déclarera bientôt son indépendance. Veuillez […] fournir une aide. […] Instructions demandées.",
+      "en": "[…] Telegram: southern Fujian will soon declare independence. Please […] provide assistance. […] Instructions requested.",
+      "ja": "[…] 閩南は近く独立するとの電報。[…] 援助を求める。[…] 指示願う。",
+      "zh-Hant": "節錄：電閩南不日獨立請。接濟。請示。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.05,
+    "null": -1.51,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-a18t",
+    "source_id": "a18t",
+    "date_iso": "1916-04-12",
+    "date": {
+      "fr": "12 avril 1916",
+      "en": "12 April 1916",
+      "zh": "1916年4月12日",
+      "ja": "1916年4月12日"
+    },
+    "route": {
+      "fr": "Seito (24) → Rosamonde (17 mots) [33]",
+      "en": "Seito (24) → Rosamonde (17 words) [33]",
+      "ja": "青島 (24) → Rosamonde (17 mots) [33]",
+      "zh-hant": "青島 (24) → Rosamonde (17 mots) [33]",
+      "zh-hans": "青島 (24) → Rosamonde (17 mots) [33]"
+    },
+    "key": "seito1916",
+    "src": "B03050088500, image 18",
+    "pages": "18",
+    "frame": "0568a",
+    "cipher": "boyiduhayi bocetupehe yoniduqayu qusunuko xidoyofiri natudanudi xixelahupu gimuxacufe soposopilla camuzosiki zhibonuyipo sadusemoce sugikunbeni dizidoxico",
+    "effective": "boyiduhayibocetupeheyoniduqayuqusunepukoxidoyofirinatudanudixixelahupugimuxacufesoposopilacamuzosikihibonuyiposadusemocesugeqikunebenidizidoxico",
+    "inserted": [
+      35,
+      36,
+      123,
+      124,
+      129
+    ],
+    "phase": 0,
+    "alignment_edits": [
+      [
+        "ajout",
+        35,
+        "e"
+      ],
+      [
+        "ajout",
+        35,
+        "p"
+      ],
+      [
+        "suppr",
+        86,
+        "l"
+      ],
+      [
+        "suppr",
+        99,
+        "z"
+      ],
+      [
+        "ajout",
+        123,
+        "e"
+      ],
+      [
+        "ajout",
+        123,
+        "q"
+      ],
+      [
+        "ajout",
+        127,
+        "e"
+      ]
+    ],
+    "raw": "青島汔船社長岩城卯□駙烈响閧澦縐弇燕窴蒯贏····玔候起居請厹····",
+    "aligned": "青島汔船社長岩城又冒此間曾商借款並允便宜運送今來東玔候起居請口整短接洽正",
+    "read": "青島，‹汔›，船社長岩城，‹又›‹冒›，此間曾商借款並允便宜運送今來東，‹玔›，候起居請，‹口›‹整›‹短›，接洽正。",
+    "keyw": [
+      "青島",
+      "船社長岩城",
+      "此間曾商借款並允便宜運送今來東"
+    ],
+    "tr": {
+      "fr": "[…] Le directeur Iwaki de la compagnie de navigation de Qingdao a négocié ici un emprunt et promis un transport à bon prix. Il vient maintenant à Tokyo […]. Veuillez négocier […]. Zheng.",
+      "en": "[…] Director Iwaki of the Qingdao shipping company discussed a loan here and promised inexpensive transport. He is now coming to Tokyo […]. Please negotiate […]. Zheng.",
+      "ja": "[…] 青島の汽船会社社長・岩城と借款を相談し、安価な輸送も了承された。今、東京へ来る。[…] 交渉願う。正。",
+      "zh-Hant": "節錄：青島。船社長岩城。此間曾商借款並允便宜運送今來東。候起居請。接洽正。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 1.94,
+    "null": -3.42,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-a18b",
+    "source_id": "a18b",
+    "date_iso": "1916-04-12",
+    "date": {
+      "fr": "12 avril 1916",
+      "en": "12 April 1916",
+      "zh": "1916年4月12日",
+      "ja": "1916年4月12日"
+    },
+    "route": {
+      "fr": "Shanghai (0152) → Rosamonde (32 mots)",
+      "en": "Shanghai (0152) → Rosamonde (32 words)",
+      "ja": "上海 (0152) → Rosamonde (32 mots)",
+      "zh-hant": "上海 (0152) → Rosamonde (32 mots)",
+      "zh-hans": "上海 (0152) → Rosamonde (32 mots)"
+    },
+    "key": "shanghai1916",
+    "src": "B03050088500, image 18",
+    "pages": "18-19",
+    "frame": "0568b",
+    "cipher": "mopukipemo pusakusigo nehofisezi bufanitaje bucakavome nijeposije zipidihadi tabuqimaje bocumozuho vahikefice popasigobu qisisazoxo buhodovabu izibucajibi kavoqayopo pazipilabe mebitemide mebacubuku vobemozuno qeforataco detomoheso rivojukozi piqadoveto pubuzibuca vobekifahi vemofidike locunoyovo qubikumiso kicemetadi zidocu",
+    "effective": "mopukipemopusakusigonehofisezibufanitajebucakavomenijeposijezipidihaditabuqimajebocumozuhovahikeficepopasigobuqisisazoxobuhucodovabulizibucajibikavoqayopopazipilabemebitemidemebacubukuvobemozunoqeforatacodetomohesorivojukozipiqadovetopubuzibucavobekifahivemofidikelocunoyovoqubikumisokicemetadizidocu",
+    "inserted": [
+      123,
+      124,
+      132
+    ],
+    "phase": 0,
+    "alignment_edits": [
+      [
+        "ajout",
+        123,
+        "u"
+      ],
+      [
+        "ajout",
+        123,
+        "c"
+      ],
+      [
+        "ajout",
+        130,
+        "l"
+      ]
+    ],
+    "raw": "海容海籌厹間往他處第二艦除饅司令恇怯不能發浙然巵得款厹不反抗乃瑟··········································",
+    "aligned": "海容海籌厹間往他處第二艦除饅司令恇怯不能發浙然巵得款厹不反抗仍用禕委二小艦給款令與陸軍齊詘今日浙江獨立黨派未明溤國璋有一二日宣巧泂息溠毓旴扐夤寇險必璥",
+    "read": "海容海籌，‹厹›‹間›，往他處第二艦，‹除›‹饅›，司令恇怯不能發浙然，‹巵›，得款，‹厹›，不反抗，‹仍›‹用›‹禕›‹委›，二小艦給款令與陸軍，‹齊›‹詘›，今日浙江獨立，黨派未明。‹溤›，國璋有一二日，‹宣›‹巧›‹泂›‹息›‹溠›‹毓›‹旴›‹扐›‹夤›‹寇›‹險›‹必›‹璥›。",
+    "keyw": [
+      "海容海籌",
+      "往他處第二艦",
+      "司令恇怯不能發浙然"
+    ],
+    "tr": {
+      "fr": "[…] Haï Yung, Haï Chou et deuxième escadre ; fonds et opérations navales. […] Le Zhejiang déclare aujourd’hui son indépendance, mais son orientation politique n’est pas claire. […] Fin incertaine.",
+      "en": "[…] Haï Yung, Haï Chou and the Second Squadron; funds and naval operations. […] Zhejiang declares independence today, but its political affiliation is unclear. […] Ending uncertain.",
+      "ja": "[…] 海容・海籌と第二艦隊、資金と海軍の行動。[…] 今日浙江が独立したが、党派は不明。末尾未確定。",
+      "zh-Hant": "節錄：海容海籌。往他處第二艦。司令恇怯不能發浙然。得款。不反抗。二小艦給款令與陸軍。今日浙江獨立黨派未明。國璋有一二日。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.51,
+    "null": -6.28,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-a30",
+    "source_id": "a30",
+    "date_iso": "1916-04-14",
+    "date": {
+      "fr": "14 avril 1916",
+      "en": "14 April 1916",
+      "zh": "1916年4月14日",
+      "ja": "1916年4月14日"
+    },
+    "route": {
+      "fr": "Shanghai (0131) → Rosamonde (30 mots)",
+      "en": "Shanghai (0131) → Rosamonde (30 words)",
+      "ja": "上海 (0131) → Rosamonde (30 mots)",
+      "zh-hant": "上海 (0131) → Rosamonde (30 mots)",
+      "zh-hans": "上海 (0131) → Rosamonde (30 mots)"
+    },
+    "key": "shanghai1916",
+    "src": "B03050088500, image 30",
+    "pages": "30",
+    "frame": "0580",
+    "cipher": "moyumebibu yefipebugi masaxizabo cusiyaseta legogixipi domezutosi tocisecasi yazefosozi bukuvobehi pesexetibi difaditabu fokavomino nenosifoco senajehipe xahizesone noxagamibi xahizesone noxagamibi bugevonafi cexaqaneno tiyixijabu kutocidigi tibilisena cimivamabi hozafoluci jediviyala soyutibupi gasemadaru zimimilofi herino",
+    "effective": "moyumebibuyefipebugimasaxizabocusiyasetalegogixipidomezutositocisecasiyazefosozibukuvobehipesexetibidifaditabufokavominonenosifocosenajehipexahizesonenoxagamibixahizesonenoxagamibibugevonaficexaqanenotiyixijabukutocidigitibilisenacimivamabihozafolucijediviyalasoyutibupigasemadaruzimimilofiherino",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "浚陸互待丢肯先發又逡非常困難昨晚遂又誤期今日己運動恍怯之艦夭開去留者己確認開礽外確認開礽外亦新得礮開加入今晚快動媾美奉職無珌慚忍短柝力圖進行仰太後命",
+    "aligned": "浚陸互待丢肯先發又逡非常困難昨晚遂又誤期今日己運動恍怯之艦夭開去留者己確認開礽外確認開礽外亦新得礮開加入今晚快動媾美奉職無珌慚忍短柝力圖進行仰太後命",
+    "read": "‹浚›，陸互待，‹丢›，肯先發，‹又›‹逡›，非常困難昨晚遂又誤期今日己運動，‹恍›‹怯›，之艦，‹夭›，開去留者己確認，‹開›‹礽›‹外›，確認，‹開›‹礽›‹外›，亦新得，‹礮›‹開›，加入今晚，‹快›‹動›‹媾›，美奉職，‹無›‹珌›‹慚›‹忍›‹短›‹柝›，力圖進行，‹仰›‹太›‹後›‹命›。",
+    "keyw": [
+      "陸互待",
+      "肯先發",
+      "非常困難昨晚遂又誤期今日己運動"
+    ],
+    "tr": {
+      "fr": "[…] Les forces terrestres attendent […]. Très grandes difficultés ; hier soir encore, l’échéance a été manquée. […] Efforts pour agir. Les mots répétés du formulaire sont conservés ; plusieurs passages sont incertains.",
+      "en": "[…] The land forces are waiting […]. Very great difficulties; last night the deadline was missed again. […] Efforts to act. Repeated words on the form are retained; several passages are uncertain.",
+      "ja": "[…] 陸軍は待機。非常に困難で、昨晩も機を逸した。[…] 行動に向け努力。用紙の重複語を残し、不明部分を明示した。",
+      "zh-Hant": "節錄：陸互待。肯先發。非常困難昨晚遂又誤期今日己運動。之艦。開去留者己確認。確認。亦新得。加入今晚。美奉職。力圖進行。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.38,
+    "null": -1.29,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-a40",
+    "source_id": "a40",
+    "date_iso": "1916-04-15",
+    "date": {
+      "fr": "15 avril 1916",
+      "en": "15 April 1916",
+      "zh": "1916年4月15日",
+      "ja": "1916年4月15日"
+    },
+    "route": {
+      "fr": "Shanghai (0125) → Nakayama 109 Harajuku (15 mots) [Sixteenth]",
+      "en": "Shanghai (0125) → Nakayama 109 Harajuku (15 words) [Sixteenth]",
+      "ja": "上海 (0125) → Nakayama 109 Harajuku (15 mots) [Sixteenth]",
+      "zh-hant": "上海 (0125) → Nakayama 109 Harajuku (15 mots) [Sixteenth]",
+      "zh-hans": "上海 (0125) → Nakayama 109 Harajuku (15 mots) [Sixteenth]"
+    },
+    "key": "k16",
+    "src": "B03050088500, image 40",
+    "pages": "40",
+    "frame": "0590",
+    "cipher": "sakayusitu cekupuhufa hisetemose fimefijosi kohahevexe qubeyosavu lepaletute bocelaxome sacoxupafe sadocubeti",
+    "effective": "sakayusitucekupuhufahisetemosefimefijosikohahevexequbeyosavulepaletutebocelaxomesacoxupafesadocubeti",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "今日抵滬海陸作戰己與英士兄及中島少佐商確乞放噶統叩",
+    "aligned": "今日抵滬海陸作戰己與英士兄及中島少佐商確乞放噶統叩",
+    "read": "今日抵滬。海陸作戰己與英士兄及中島少佐商確，乞放，‹噶›，統叩。",
+    "keyw": [
+      "今日抵滬海陸作戰己與英士兄及中島少佐商確乞放",
+      "統叩"
+    ],
+    "tr": {
+      "fr": "Arrivé aujourd’hui à Shanghai. Les opérations sur terre et sur mer ont été convenues avec Yingshi et le major Nakajima. Veuillez […] Tong, respectueusement.",
+      "en": "Arrived in Shanghai today. Land and naval operations have been agreed with Yingshi and Major Nakajima. Please […] Tong, respectfully.",
+      "ja": "本日上海に到着。海陸の作戦は英士兄および中島少佐と協議済み。[…] 統、拝。",
+      "zh-Hant": "節錄：今日抵滬海陸作戰己與英士兄及中島少佐商確乞放。統叩。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 3.43,
+    "null": -0.87,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-a44t",
+    "source_id": "a44t",
+    "date_iso": "1916-04-15",
+    "date": {
+      "fr": "15 avril 1916",
+      "en": "15 April 1916",
+      "zh": "1916年4月15日",
+      "ja": "1916年4月15日"
+    },
+    "route": {
+      "fr": "Tokyo (中山) → Junzaburo Shanghai (12 mots)",
+      "en": "Tokyo (中山) → Junzaburo Shanghai (12 words)",
+      "ja": "東京 (中山) → Junzaburo 上海 (12 mots)",
+      "zh-hant": "東京 (中山) → Junzaburo 上海 (12 mots)",
+      "zh-hans": "東京 (中山) → Junzaburo 上海 (12 mots)"
+    },
+    "key": "shanghai1916",
+    "src": "B03050088500, image 44",
+    "pages": "44",
+    "frame": "0594a",
+    "cipher": "xihaniqico domehipiga gofasiyuyo numimomola cupozimeze kamohemitu busuyojobu fipiqonohi cologizofi pevopoviva",
+    "effective": "xihaniqicodomehipigagofasiyuyonumimomolacupozimezekamohemitubusuyojobufipiqonohicologizofipevopoviva",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "內域用陳圖牖名搭天洋□來請派妥人接並囑毅生幬待文删",
+    "aligned": "內域用陳圖牖名搭天洋□來請派妥人接並囑毅生幬待文删",
+    "read": "‹內›‹域›‹用›‹陳›‹圖›‹牖›，名搭天洋，‹□›，來請派妥人接並囑毅生，‹幬›，待文，‹删›。",
+    "keyw": [
+      "名搭天洋",
+      "來請派妥人接並囑毅生",
+      "待文"
+    ],
+    "tr": {
+      "fr": "[…] voyage sous le nom de […] à bord du Ten’yō […]. Envoyez une personne sûre l’accueillir et prévenez Yisheng […]. Wen.",
+      "en": "[…] travelling under the name […] aboard the Ten’yō […]. Send a reliable person to meet him and inform Yisheng […]. Wen.",
+      "ja": "[…] の名で天洋[…]に乗る。適任者を迎えに出し、毅生にも伝えてほしい。[…] 文。",
+      "zh-Hant": "節錄：名搭天洋。來請派妥人接並囑毅生。待文。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 1.59,
+    "null": -1.1,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "yamada"
+    }
+  },
+  {
+    "id": "inedits-c40-a44b",
+    "source_id": "a44b",
+    "date_iso": "1916-04-16",
+    "date": {
+      "fr": "16 avril 1916",
+      "en": "16 April 1916",
+      "zh": "1916年4月16日",
+      "ja": "1916年4月16日"
+    },
+    "route": {
+      "fr": "Tokyo (中山) → Junzaburo Shanghai (22 mots)",
+      "en": "Tokyo (中山) → Junzaburo Shanghai (22 words)",
+      "ja": "東京 (中山) → Junzaburo 上海 (22 mots)",
+      "zh-hant": "東京 (中山) → Junzaburo 上海 (22 mots)",
+      "zh-hans": "東京 (中山) → Junzaburo 上海 (22 mots)"
+    },
+    "key": "shanghai1916",
+    "src": "B03050088500, image 44",
+    "pages": "44-45",
+    "frame": "0594b",
+    "cipher": "kamumiyiqa robuzixifa xidonexima kifopebudo vimakofoqi xocixuhoga gofilazefi hemoputemi bufadituco tafopexido zoleyoveti xotodudifa xidotiquti bufiectemi kavoxikidi zajiliqoju qilujivaba yisiqataco rinidetobu zonihixaqu",
+    "effective": "kamumiyiqarobuzixifaxidoneximakifopebudovimakofoqixocixuhogagofilazefihemoputemibufaditucotafopexidozoleyovetixotodudifaxidotiqutibufihetemikavoxikidizajiliqojuqilujivabayisiqatacorinidetobuzonihixaqu",
+    "inserted": [
+      134
+    ],
+    "phase": 0,
+    "alignment_edits": [
+      [
+        "ajout",
+        134,
+        "h"
+      ],
+      [
+        "suppr",
+        135,
+        "c"
+      ]
+    ],
+    "raw": "英士統一兩兄鑒聞王乍到滬喜慰熙爍自後海軍事悉由王兄指揮務望恍兄協力·軍艦儉怨將機器局襲取立吾黨丫基祺",
+    "aligned": "英士統一兩兄鑒聞王乍到滬喜慰熙爍自後海軍事悉由王兄指揮務望恍兄協力後軍艦儉怨將機器局襲取立吾黨丫基祺",
+    "read": "英士統一兩兄鑒聞，‹王›‹乍›，到滬喜慰，‹熙›‹爍›，自後海軍事悉由王兄指揮。務望，‹恍›，兄協力，，‹後›，軍艦，‹儉›‹怨›，將機器局襲取立吾黨，‹丫›‹基›‹祺›。",
+    "keyw": [
+      "英士統一兩兄鑒聞",
+      "到滬喜慰",
+      "自後海軍事悉由王兄指揮務望"
+    ],
+    "tr": {
+      "fr": "À Yingshi et Tongyi : […] l’arrivée à Shanghai nous réjouit. Désormais, les affaires navales seront toutes dirigées par Wang. Coopérez […] pour attaquer l’arsenal et établir la position de notre parti […].",
+      "en": "To Yingshi and Tongyi: […] glad of the arrival in Shanghai. Wang will now direct all naval affairs. Cooperate […] to seize the arsenal and establish our party’s position […].",
+      "ja": "英士・統一両兄へ。[…] 上海到着を喜ぶ。今後の海軍事務は王兄が指揮する。協力し[…]機器局を襲取して党の基盤を築かれたい。",
+      "zh-Hant": "節錄：英士統一兩兄鑒聞。到滬喜慰。自後海軍事悉由王兄指揮務望。兄協力。軍艦。將機器局襲取立吾黨。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.84,
+    "null": -1.42,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "yamada"
+    }
+  },
+  {
+    "id": "inedits-c40-a41",
+    "source_id": "a41",
+    "date_iso": "1916-04-17",
+    "date": {
+      "fr": "17 avril 1916",
+      "en": "17 April 1916",
+      "zh": "1916年4月17日",
+      "ja": "1916年4月17日"
+    },
+    "route": {
+      "fr": "Shanghai (0124) → Rosamonde (20/11 mots) [Seventeenth]",
+      "en": "Shanghai (0124) → Rosamonde (20/11 words) [Seventeenth]",
+      "ja": "上海 (0124) → Rosamonde (20/11 mots) [Seventeenth]",
+      "zh-hant": "上海 (0124) → Rosamonde (20/11 mots) [Seventeenth]",
+      "zh-hans": "上海 (0124) → Rosamonde (20/11 mots) [Seventeenth]"
+    },
+    "key": "k17",
+    "src": "B03050088500, image 41",
+    "pages": "41",
+    "frame": "0591",
+    "cipher": "noyesiyuzuza zicerudosica xemanobajiho rahiviyedeku noxaveracefo tiehaqiriku pananogenoy pibuhacotuno",
+    "effective": "noyesiyuzuzazicerudosicaxemanobajihorahiviyedekunoxaveracefotikehaqirikupananogenoyapibuhacotuno",
+    "inserted": [
+      62,
+      83
+    ],
+    "phase": 0,
+    "alignment_edits": [
+      [
+        "ajout",
+        62,
+        "k"
+      ],
+      [
+        "ajout",
+        82,
+        "a"
+      ]
+    ],
+    "raw": "亞函款均收到鄂乳廹確可靠乞速電······水𦼖",
+    "aligned": "亞函款均收到鄂乳廹確可靠乞速電十萬元直交也伯蔡昕",
+    "read": "‹亞›，函款均收到，‹鄂›‹乳›‹廹›，確可靠乞速電十萬元直交，‹也›‹伯›‹蔡›‹昕›。",
+    "keyw": [
+      "函款均收到",
+      "確可靠乞速電十萬元直交"
+    ],
+    "tr": {
+      "fr": "Lettre et fonds reçus […]. […] fiable ; veuillez télégraphier d’urgence cent mille yuans, à remettre directement à […].",
+      "en": "Letter and funds received […]. […] reliable; please telegraph one hundred thousand yuan urgently, to be handed directly to […].",
+      "ja": "書簡と資金は受領。[…] 確実で信頼できる。十万元を至急電送し、直接[…]に渡してほしい。",
+      "zh-Hant": "節錄：函款均收到。確可靠乞速電十萬元直交。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.82,
+    "null": -2.96,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-a42",
+    "source_id": "a42",
+    "date_iso": "1916-04-18",
+    "date": {
+      "fr": "18 avril 1916",
+      "en": "18 April 1916",
+      "zh": "1916年4月18日",
+      "ja": "1916年4月18日"
+    },
+    "route": {
+      "fr": "Shanghai (03) → Nakayama 109 Harajuku (18 mots) [Sixteenth]",
+      "en": "Shanghai (03) → Nakayama 109 Harajuku (18 words) [Sixteenth]",
+      "ja": "上海 (03) → Nakayama 109 Harajuku (18 mots) [Sixteenth]",
+      "zh-hant": "上海 (03) → Nakayama 109 Harajuku (18 mots) [Sixteenth]",
+      "zh-hans": "上海 (03) → Nakayama 109 Harajuku (18 mots) [Sixteenth]"
+    },
+    "key": "k16",
+    "src": "B03050088500, image 42",
+    "pages": "42",
+    "frame": "0592",
+    "cipher": "hikaqezado curutasavu zelahufafu qutegekeko fedogemesa kapemidipu hikatikoke nimovefuri lirelejisa vulenaheju cizozicido cubeti",
+    "effective": "hikaqezadocurutasavuzelahufafuqutegekekofedogemesakapemidipuhikatikokenimovefurilirelejisavulenahejucizozicidocubeti",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "電悉統當中占海權以定國基今後醽電請寄萬歲館山中峯太郎轉統叩",
+    "aligned": "電悉統當中占海權以定國基今後醽電請寄萬歲館山中峯太郎轉統叩",
+    "read": "電悉統當，‹中›，占海權，以定國基。今後，‹醽›，電請寄萬歲館山中峯太郎轉。統叩。",
+    "keyw": [
+      "電悉統當",
+      "占海權以定國基今後",
+      "電請寄萬歲館山中峯太郎轉統叩"
+    ],
+    "tr": {
+      "fr": "Télégramme reçu. […] Maîtriser la mer pour asseoir les fondations du pays. Dorénavant, envoyez les télégrammes à Yamanaka Minetarō, au Banzaikan, pour transmission. Tong.",
+      "en": "Telegram received. […] Control the sea to secure the country’s foundations. Send future telegrams through Yamanaka Minetarō at the Banzaikan. Tong.",
+      "ja": "電報了解。[…] 海権を握り国の基礎を固める。今後の電報は万歳館の山中峯太郎へ、転送を依頼されたい。統。",
+      "zh-Hant": "節錄：電悉統當。占海權以定國基今後。電請寄萬歲館山中峯太郎轉統叩。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 3.97,
+    "null": -1.2,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-a43",
+    "source_id": "a43",
+    "date_iso": "1916-04-18",
+    "date": {
+      "fr": "18 avril 1916",
+      "en": "18 April 1916",
+      "zh": "1916年4月18日",
+      "ja": "1916年4月18日"
+    },
+    "route": {
+      "fr": "Shanghai (035) → Rosamonde (12/11 mots) [Seventeenth]",
+      "en": "Shanghai (035) → Rosamonde (12/11 words) [Seventeenth]",
+      "ja": "上海 (035) → Rosamonde (12/11 mots) [Seventeenth]",
+      "zh-hant": "上海 (035) → Rosamonde (12/11 mots) [Seventeenth]",
+      "zh-hans": "上海 (035) → Rosamonde (12/11 mots) [Seventeenth]"
+    },
+    "key": "k17",
+    "src": "B03050088500, image 43",
+    "pages": "43",
+    "frame": "0593",
+    "cipher": "cesinokali nokizenumo zuzahupape forahatevo cuxunokidi xifitaluko naviqigura ji",
+    "effective": "cesinokalinokizenumozuzahupapeforahatevocuxunokidixifitalukonaviqiguraji",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "陜事心待發款無謎示辦法並姣宋瓀襾借碼",
+    "aligned": "陜事心待發款無謎示辦法並姣宋瓀襾借碼",
+    "read": "陜事，‹心›，待發款，‹無›‹謎›，示辦法並，‹姣›‹宋›‹瓀›‹襾›‹借›‹碼›。",
+    "keyw": [
+      "陜事",
+      "待發款",
+      "示辦法並"
+    ],
+    "tr": {
+      "fr": "L’affaire du Shaanxi […] attend l’envoi des fonds. […] Indiquez la marche à suivre […].",
+      "en": "The Shaanxi affair […] awaits the funds. […] Indicate how to proceed […].",
+      "ja": "陝西の件は[…]送金を待っている。[…] 方法を示してほしい。",
+      "zh-Hant": "節錄：陜事。待發款。示辦法並。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 1.8,
+    "null": -0.58,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-a51t",
+    "source_id": "a51t",
+    "date_iso": "1916-04-18",
+    "date": {
+      "fr": "18 avril 1916",
+      "en": "18 April 1916",
+      "zh": "1916年4月18日",
+      "ja": "1916年4月18日"
+    },
+    "route": {
+      "fr": "Tokyo (中山) → Yulangsie, 31 Rue du Consulat, Shanghai (18 mots)",
+      "en": "Tokyo (中山) → Yulangsie, 31 Rue du Consulat, Shanghai (18 words)",
+      "ja": "東京 (中山) → Yulangsie, 31 Rue du Consulat, 上海 (18 mots)",
+      "zh-hant": "東京 (中山) → Yulangsie, 31 Rue du Consulat, 上海 (18 mots)",
+      "zh-hans": "東京 (中山) → Yulangsie, 31 Rue du Consulat, 上海 (18 mots)"
+    },
+    "key": "k17",
+    "src": "B03050088500, image 51",
+    "pages": "51",
+    "frame": "0601a",
+    "cipher": "mafipenamu yukupipibi kuxatamuju qucugobuva letubucahu rarumocesi fihayaroti nipibikize rejagisava foqicevipo tugibamenu moszuhise",
+    "effective": "mafipenamuyukupipibikuxatamujuqucugobuvaletubucahurarumocesifihayarotinipibikizerejagisavafoqicevipotugibamenumosuzuhise",
+    "inserted": [
+      113
+    ],
+    "phase": 0,
+    "alignment_edits": [
+      [
+        "ajout",
+        113,
+        "u"
+      ]
+    ],
+    "raw": "袁諐甚狡以獨立爝消民黨氣焰故陜宜緩動以待購局籌備同時而發·",
+    "aligned": "袁諐甚狡以獨立爝消民黨氣焰故陜宜緩動以待購局籌備同時而發文巧",
+    "read": "‹袁›‹諐›，甚狡以獨立，‹爝›，消民黨氣焰故陜宜緩動以待，‹購›‹局›，籌備同時而發文巧。",
+    "keyw": [
+      "甚狡以獨立",
+      "消民黨氣焰故陜宜緩動以待",
+      "籌備同時而發文巧"
+    ],
+    "tr": {
+      "fr": "[…] est très rusé et emploie l’indépendance pour […] affaiblir le parti révolutionnaire. Le Shaanxi devrait différer l’action, attendre […] les préparatifs et agir en même temps. Wen, le 18.",
+      "en": "[…] is very cunning and uses independence to […] weaken the revolutionary party. Shaanxi should delay action, await […] preparations and act simultaneously. Wen, the 18th.",
+      "ja": "[…] は独立を利用し[…]革命派の勢いをそごうとしている。陝西は行動を遅らせ、[…]準備を待って同時に動くべきである。文、十八日。",
+      "zh-Hant": "節錄：甚狡以獨立。消民黨氣焰故陜宜緩動以待。籌備同時而發文巧。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.84,
+    "null": -2.97,
+    "source": "C40",
+    "who": {
+      "from": "sun",
+      "to": null
+    }
+  },
+  {
+    "id": "inedits-c40-a54t",
+    "source_id": "a54t",
+    "date_iso": "1916-04-18",
+    "date": {
+      "fr": "18 avril 1916",
+      "en": "18 April 1916",
+      "zh": "1916年4月18日",
+      "ja": "1916年4月18日"
+    },
+    "route": {
+      "fr": "Shanghai (078) → Rosamonde (18 mots)",
+      "en": "Shanghai (078) → Rosamonde (18 words)",
+      "ja": "上海 (078) → Rosamonde (18 mots)",
+      "zh-hant": "上海 (078) → Rosamonde (18 mots)",
+      "zh-hans": "上海 (078) → Rosamonde (18 mots)"
+    },
+    "key": "shanghai1916",
+    "src": "B03050088500, image 54",
+    "pages": "54",
+    "frame": "0604a",
+    "cipher": "nohicolovi mazarobuzi hiketovoko fobufayiki tiqurijute sudoninoqe mekiqefuvo begojosopi detofaxato cotositopu siqapesize zajivosori yeyikihuki pelixijipo xosavirefi sepaxanilo",
+    "effective": "nohicolovimazarobuzihiketovokofobufayikitiqurijutesudoninoqemekiqefuvobegojosopidetofaxatocotositopusiqapesizezajivosoriyeyikihukipelixijipoxosavirefisepaxanilo",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "毅生到皽一巵晤滬事倬協商辦理江陰銑日爲本黨蚶暍昨有取銷説尚未謡實容姜尤擋前往繮報",
+    "aligned": "毅生到皽一巵晤滬事倬協商辦理江陰銑日爲本黨蚶暍昨有取銷説尚未謡實容姜尤擋前往繮報",
+    "read": "毅生到，‹皽›‹一›‹巵›‹晤›，滬事，‹倬›，協商辦理江陰銑日爲本黨，‹蚶›‹暍›，昨有取銷説尚未，‹謡›，實，‹容›‹姜›‹尤›‹擋›，前往，‹繮›，報。",
+    "keyw": [
+      "毅生到",
+      "滬事",
+      "協商辦理江陰銑日爲本黨"
+    ],
+    "tr": {
+      "fr": "Yisheng est arrivé […]. Les affaires de Shanghai […] sont à régler ensemble. Jiangyin […] appartient à notre parti […]. Hier, une annulation a été annoncée, sans confirmation […].",
+      "en": "Yisheng has arrived […]. Shanghai affairs […] are to be settled jointly. Jiangyin […] belongs to our party […]. Cancellation was reported yesterday, without confirmation […].",
+      "ja": "毅生が到着。[…] 上海の件を協議して処理。江陰は[…]党の側にあるが、昨日取消しの話があり、まだ確認できない。",
+      "zh-Hant": "節錄：毅生到。滬事。協商辦理江陰銑日爲本黨。昨有取銷説尚未。實。前往。報。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.36,
+    "null": -1.3,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-a51b",
+    "source_id": "a51b",
+    "date_iso": "1916-04-19",
+    "date": {
+      "fr": "19 avril 1916",
+      "en": "19 April 1916",
+      "zh": "1916年4月19日",
+      "ja": "1916年4月19日"
+    },
+    "route": {
+      "fr": "Tokyo (中山) → Junzaburo Shanghai (24 mots)",
+      "en": "Tokyo (中山) → Junzaburo Shanghai (24 words)",
+      "ja": "東京 (中山) → Junzaburo 上海 (24 mots)",
+      "zh-hant": "東京 (中山) → Junzaburo 上海 (24 mots)",
+      "zh-hans": "東京 (中山) → Junzaburo 上海 (24 mots)"
+    },
+    "key": "shanghai1916",
+    "src": "B03050088500, image 51",
+    "pages": "51-52",
+    "frame": "0601b",
+    "cipher": "lohinogese yicisimile zipamopumi bisizudiqi miyopogopi lopigatipi tibubufiyi metopukeje gojiyeziro nazekexido labelohiso huginamitu rijuyijoki bemojogojo bocumebipi sesijivixe zipirinide tolemitiju ketobufoma jesijutodu sosukihusi xibanivopo",
+    "effective": "lohinogeseyicisimilezipamopumibisizudiqimiyopogopilopigatipitibubufiyimetopukejegojiyezironazekaxidolabelohisohuginamiturijuyijokibemojogojobocumebipisesijuvixezipirinidetolemitijuketobufomajesijutodusosukihusixibanivopo",
+    "inserted": [
+      95,
+      155
+    ],
+    "phase": 0,
+    "alignment_edits": [
+      [
+        "ajout",
+        95,
+        "a"
+      ],
+      [
+        "suppr",
+        95,
+        "e"
+      ],
+      [
+        "ajout",
+        155,
+        "u"
+      ],
+      [
+        "suppr",
+        155,
+        "i"
+      ]
+    ],
+    "raw": "淅汪近情如何海外同忘多欄回圖効力並備有飆燾謟械諳兄與淅枰府妥商借寧波爲發陸地□則令吾黨霤占領之能否望查實印覆文",
+    "aligned": "淅汪近情如何海外同忘多欄回圖効力並備有飆燾謟械請兄與淅枰府妥商借寧波爲發陸地否則令吾黨霤占領之能否望查實印覆文",
+    "read": "‹淅›‹汪›，近情如何海外同，‹忘›，多，‹欄›，回，‹圖›，効力並備有，‹飆›‹燾›‹謟›，械，‹請›，兄與，‹淅›‹枰›‹府›，妥商借寧波爲，‹發›‹陸›，地，‹否›，則令吾黨，‹霤›，占領之能否望查實，‹印›，覆文。",
+    "keyw": [
+      "近情如何海外同",
+      "多",
+      "回"
+    ],
+    "tr": {
+      "fr": "Quelle est la situation récente […] ? Des camarades d’outre-mer […] reviennent pour agir, avec du matériel […]. Négociez l’usage de Ningbo […] ; à défaut, notre parti devrait l’occuper […]. Vérifiez et répondez. Wen.",
+      "en": "What is the latest situation […]? Overseas comrades […] are returning to act, with equipment […]. Negotiate the use of Ningbo […]; otherwise our party should occupy it […]. Check and reply. Wen.",
+      "ja": "最近の状況はどうか。海外の同志が[…]帰国し、装備も用意している。寧波の使用を相談し[…]、できなければ党で占領する[…]。確認して返電願う。文。",
+      "zh-Hant": "節錄：近情如何海外同。多。回。効力並備有。械。兄與。妥商借寧波爲。地。則令吾黨。占領之能否望查實。覆文。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.69,
+    "null": -1.12,
+    "source": "C40",
+    "who": {
+      "from": "sun",
+      "to": "yamada"
+    }
+  },
+  {
+    "id": "inedits-c40-a53",
+    "source_id": "a53",
+    "date_iso": "1916-04-19",
+    "date": {
+      "fr": "19 avril 1916",
+      "en": "19 April 1916",
+      "zh": "1916年4月19日",
+      "ja": "1916年4月19日"
+    },
+    "route": {
+      "fr": "Tokyo (中山) → Yamanaka, Banzaikwan, Shanghai (13 mots)",
+      "en": "Tokyo (中山) → Yamanaka, Banzaikwan, Shanghai (13 words)",
+      "ja": "東京 (中山) → Yamanaka, Banzaikwan, 上海 (13 mots)",
+      "zh-hant": "東京 (中山) → Yamanaka, Banzaikwan, 上海 (13 mots)",
+      "zh-hans": "東京 (中山) → Yamanaka, Banzaikwan, 上海 (13 mots)"
+    },
+    "key": "k16",
+    "src": "B03050088500, image 53",
+    "pages": "53",
+    "frame": "0603",
+    "cipher": "xequtefozu leholizese biverebehe jitefozuga zulezuleti negejutege tefadocubo kaxenoleyo jocisodeke cuyufutoge",
+    "effective": "xequtefozuleholizesebiverebehejitefozugazulezuletinegejutegetefadocubokaxenoleyojocisodekecuyufutoge",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "兄何時能動近情如何朋時時詳報以便統籌全局至要孫文皓",
+    "aligned": "兄何時能動近情如何朋時時詳報以便統籌全局至要孫文皓",
+    "read": "兄何時能動？近情如何？{望}時時詳報，以便統籌全局，至要。孫文皓。",
+    "keyw": [
+      "兄何時能動近情如何",
+      "時時詳報以便統籌全局至要孫文皓"
+    ],
+    "tr": {
+      "fr": "Quand pourrez-vous agir ? Quelle est la situation récente ? Veuillez envoyer régulièrement des rapports détaillés, afin de coordonner l’ensemble. C’est essentiel. Sun Wen, le 19. « Veuillez » est une proposition de lecture.",
+      "en": "When can you act? What is the latest situation? Please send frequent detailed reports so that the whole situation can be coordinated. Essential. Sun Wen, the 19th. “Please” is a proposed reading.",
+      "ja": "いつ行動できるか。近況はどうか。全局を統一して計画できるよう、随時詳しく知らせてほしい。至要。孫文、十九日。「望」は読みの提案。",
+      "zh-Hant": "節錄：兄何時能動近情如何。時時詳報以便統籌全局至要孫文皓。「望」為建議讀法。"
+    },
+    "score": 4.31,
+    "null": -0.69,
+    "source": "C40",
+    "who": {
+      "from": "sun",
+      "to": "yamanaka"
+    }
+  },
+  {
+    "id": "inedits-c40-a54b",
+    "source_id": "a54b",
+    "date_iso": "1916-04-19",
+    "date": {
+      "fr": "19 avril 1916",
+      "en": "19 April 1916",
+      "zh": "1916年4月19日",
+      "ja": "1916年4月19日"
+    },
+    "route": {
+      "fr": "Seito (94) → Rosamonde (17 mots) [33]",
+      "en": "Seito (94) → Rosamonde (17 words) [33]",
+      "ja": "青島 (94) → Rosamonde (17 mots) [33]",
+      "zh-hant": "青島 (94) → Rosamonde (17 mots) [33]",
+      "zh-hans": "青島 (94) → Rosamonde (17 mots) [33]"
+    },
+    "key": "seito1916",
+    "src": "B03050088500, image 54",
+    "pages": "54",
+    "frame": "0604b",
+    "cipher": "dugayuqunu dixixirina kirezunipo lumizeposa xicozacosi tumelenidi figecufapo tumuhuyedo vodoheyuzu borigiduqi yuqumolesu cutidanovi muyukepela vupojaxico",
+    "effective": "dugayuqunudixixerinakirezunipolumizeposaxicozacositumelenidifigecufapotumuhuyedovodoheyuzuborigiduqiyuqumolesucutidanovimuyukepelavupojaxico",
+    "inserted": [
+      15
+    ],
+    "phase": 0,
+    "alignment_edits": [
+      [
+        "ajout",
+        15,
+        "e"
+      ],
+      [
+        "suppr",
+        15,
+        "i"
+      ]
+    ],
+    "raw": "峯城借櫟曾由多賀拖起正袇未直接熙實責任者鈞處如晬尚城諐卽椰譫以補不足正",
+    "aligned": "峯城借款曾由多賀拖起正袇未直接熙實責任者鈞處如晬尚城諐卽椰譫以補不足正",
+    "read": "‹峯›‹城›，借款曾由多賀，‹拖›‹起›‹正›‹袇›，未直接，‹熙›，實責任者鈞處如，‹晬›‹尚›‹城›‹諐›‹卽›‹椰›‹譫›，以補不足正。",
+    "keyw": [
+      "借款曾由多賀",
+      "未直接",
+      "實責任者鈞處如"
+    ],
+    "tr": {
+      "fr": "L’emprunt a été engagé par Taga […]. Les responsables […] sont chez vous. Si […] combler ce qui manque. Zheng.",
+      "en": "The loan was initiated through Taga […]. Those responsible […] are with you. If […] make up the shortfall. Zheng.",
+      "ja": "借款は多賀を通して始まった。[…] 責任者はそちらにいる。もし[…]不足を補う。正。",
+      "zh-Hant": "節錄：借款曾由多賀。未直接。實責任者鈞處如。以補不足正。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 1.94,
+    "null": -1.18,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-b03t",
+    "source_id": "b03t",
+    "date_iso": "1916-04-19",
+    "date": {
+      "fr": "19 avril 1916",
+      "en": "19 April 1916",
+      "zh": "1916年4月19日",
+      "ja": "1916年4月19日"
+    },
+    "route": {
+      "fr": "Seito (109) → Rosamonde (23 mots) [33]",
+      "en": "Seito (109) → Rosamonde (23 words) [33]",
+      "ja": "青島 (109) → Rosamonde (23 mots) [33]",
+      "zh-hant": "青島 (109) → Rosamonde (23 mots) [33]",
+      "zh-hans": "青島 (109) → Rosamonde (23 mots) [33]"
+    },
+    "key": "seito1916",
+    "src": "B03050088600, image 3",
+    "pages": "3",
+    "frame": "0607a",
+    "cipher": "diqerusazo cabosejuji hiterekixi doyofiniji lutalavusu qekiyipume likaqufela sarefazoca bosegevogu qezusituyi mebapusore kisonidere tiyesudagu polucerozu kijiyimige copigayuqu bevotudari zazocakiyo sumadozude jeyubixico",
+    "effective": "diqerusazocabosejujihiterekixidoyofinijilutalavusuqekiyipumelikaqufelasarefazocabosegevoguqezusituyimebapusorekisonideretiyesudagupolucerozukijiyimigecopigayuqubevotudarizazocakiyosumadozudejeyubixico",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "濟卒電靳急獨立此間措手不及甞先發制人策電靳藜庋夤命着其立退莊械否庬我軍用毒藥攻城致商服電略同餘莪報正",
+    "aligned": "濟卒電靳急獨立此間措手不及甞先發制人策電靳藜庋夤命着其立退莊械否庬我軍用毒藥攻城致商服電略同餘莪報正",
+    "read": "‹濟›‹卒›，電靳急獨立此間措手不及，‹甞›，先發制人策電靳，‹藜›‹庋›‹夤›‹命›，着其立退，‹莊›‹械›，否，‹庬›，我軍用毒藥攻城致商，‹服›，電略同餘，‹莪›，報正。",
+    "keyw": [
+      "電靳急獨立此間措手不及",
+      "先發制人策電靳",
+      "着其立退"
+    ],
+    "tr": {
+      "fr": "Télégraphier à Jin pour hâter l’indépendance ; ici, nous sommes pris de court. […] Prendre les devants […] qu’il retire aussitôt […], sinon notre armée attaquera la ville au moyen de substances toxiques. […] Zheng. Plusieurs mots restent incertains.",
+      "en": "Telegraph Jin to hasten independence; we have been caught unprepared here. […] Take the initiative […] have him withdraw at once […], otherwise our army will attack the city using toxic substances. […] Zheng. Several words remain uncertain.",
+      "ja": "靳に独立を急ぐよう電報。こちらは不意を突かれた。[…] 先手を取り、[…]ただちに撤退させ、さもなくば我軍は毒薬で攻城する。[…] 正。数語未確定。",
+      "zh-Hant": "節錄：電靳急獨立此間措手不及。先發制人策電靳。着其立退。否。我軍用毒藥攻城致商。電略同餘。報正。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.43,
+    "null": -1.4,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-a52b",
+    "source_id": "a52b",
+    "date_iso": "1916-04-20",
+    "date": {
+      "fr": "20 avril 1916",
+      "en": "20 April 1916",
+      "zh": "1916年4月20日",
+      "ja": "1916年4月20日"
+    },
+    "route": {
+      "fr": "Aoyama (中山) → Kayano, 4 Yahatamachi, Seito (16 mots)",
+      "en": "Aoyama (中山) → Kayano, 4 Yahatamachi, Seito (16 words)",
+      "ja": "青山 (中山) → Kayano, 4 Yahatamachi, 青島 (16 mots)",
+      "zh-hant": "青山 (中山) → Kayano, 4 Yahatamachi, 青島 (16 mots)",
+      "zh-hans": "青山 (中山) → Kayano, 4 Yahatamachi, 青島 (16 mots)"
+    },
+    "key": "seito1916",
+    "src": "B03050088500, image 52",
+    "pages": "52",
+    "frame": "0602b",
+    "cipher": "latuyumuju zuyujirupi simuqudicu fabidanuzo hugozocohi terekiluce lafapigala hirihoziga hukolutala vedeligiyo fuzoguzesu daleyugidi",
+    "effective": "latuyumujuzuyujirupisimuqudicufabidanuzohugozocohiterekilucelafapigalahirihozigahukolutalavedeligiyofuzoguzesudaleyugidi",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "下垚忙堦務期切實準備徐雖獨立我仍攻之更涌得手也荷物已庠否覆爲",
+    "aligned": "下垚忙堦務期切實準備徐雖獨立我仍攻之更涌得手也荷物已庠否覆爲",
+    "read": "‹下›‹垚›‹忙›‹堦›，務期切實準備。徐雖獨立，我仍攻之，更，‹涌›，得手也荷物已，‹庠›，否覆，‹爲›。",
+    "keyw": [
+      "務期切實準備徐雖獨立我仍攻之更",
+      "得手也荷物已",
+      "否覆"
+    ],
+    "tr": {
+      "fr": "[…] Préparez-vous sérieusement. Même si Xu déclare son indépendance, nous l’attaquerons encore : il sera plus […] facile de réussir. La cargaison est-elle […] ? Répondez.",
+      "en": "[…] Make thorough preparations. Even if Xu declares independence, we shall still attack him; success will be […] easier. Is the cargo […]? Reply.",
+      "ja": "[…] 確実に準備されたい。徐が独立しても攻撃する。むしろ[…]成功しやすい。荷物は[…]か。返電願う。",
+      "zh-Hant": "節錄：務期切實準備徐雖獨立我仍攻之更。得手也荷物已。否覆。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 3.14,
+    "null": -1.24,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "kayano"
+    }
+  },
+  {
+    "id": "inedits-c40-b03b",
+    "source_id": "b03b",
+    "date_iso": "1916-04-20",
+    "date": {
+      "fr": "20 avril 1916",
+      "en": "20 April 1916",
+      "zh": "1916年4月20日",
+      "ja": "1916年4月20日"
+    },
+    "route": {
+      "fr": "Shanghai (018) → Rosamonde (8 mots)",
+      "en": "Shanghai (018) → Rosamonde (8 words)",
+      "ja": "上海 (018) → Rosamonde (8 mots)",
+      "zh-hant": "上海 (018) → Rosamonde (8 mots)",
+      "zh-hans": "上海 (018) → Rosamonde (8 mots)"
+    },
+    "key": "shanghai1916",
+    "src": "B03050088600, image 3",
+    "pages": "3",
+    "frame": "0607b",
+    "cipher": "kibekojobu fadizisiqe tesupotaji vuhipexevu sohorijumi tudihenilo",
+    "effective": "kibekojobufadizisiqetesupotajivuhipexevusohorijumitudihenilo",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "寧滲事必可辦次岩己赴杭商妥悃報",
+    "aligned": "寧滲事必可辦次岩己赴杭商妥悃報",
+    "read": "‹寧›‹滲›，事必可辦次岩己赴杭商妥，‹悃›，報。",
+    "keyw": [
+      "事必可辦次岩己赴杭商妥",
+      "報"
+    ],
+    "tr": {
+      "fr": "L’affaire […] peut certainement être menée à bien. Ciyan est déjà parti à Hangzhou pour en convenir ; rapport à suivre […].",
+      "en": "The […] affair can certainly be carried out. Ciyan has already gone to Hangzhou to arrange it; a report will follow […].",
+      "ja": "[…] の件は必ず実行できる。次岩はすでに杭州へ相談に行った。[…] 報告する。",
+      "zh-Hant": "節錄：事必可辦次岩己赴杭商妥。報。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 1.83,
+    "null": -0.92,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-b04t",
+    "source_id": "b04t",
+    "date_iso": "1916-04-20",
+    "date": {
+      "fr": "20 avril 1916",
+      "en": "20 April 1916",
+      "zh": "1916年4月20日",
+      "ja": "1916年4月20日"
+    },
+    "route": {
+      "fr": "Shanghai (027) → Rosamonde (15/14 mots) [Seventeenth]",
+      "en": "Shanghai (027) → Rosamonde (15/14 words) [Seventeenth]",
+      "ja": "上海 (027) → Rosamonde (15/14 mots) [Seventeenth]",
+      "zh-hant": "上海 (027) → Rosamonde (15/14 mots) [Seventeenth]",
+      "zh-hans": "上海 (027) → Rosamonde (15/14 mots) [Seventeenth]"
+    },
+    "key": "k17",
+    "src": "B03050088600, image 4",
+    "pages": "4",
+    "frame": "0608a",
+    "cipher": "hisedofoli tocesinoka lilunifate cihibekime tiyuverati tezuzacuhe novovikuvi yefivarija rudokiyolu kodiqigura ji",
+    "effective": "hisedofolitocesinokalilunifatecihibekimetiyuveratitezuzacuhenovovikuviyefivarijarudokiyolukodiqiguraji",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "巧軝悉陜事急我軍巳得勢速匯款派人去可完全收復瓀姚濛",
+    "aligned": "巧軝悉陜事急我軍巳得勢速匯款派人去可完全收復瓀姚濛",
+    "read": "巧，‹軝›，悉陜事急，我軍巳得勢，速匯款派人去，可完全收復。‹瓀›‹姚›‹濛›。",
+    "keyw": [
+      "巧",
+      "悉陜事急我軍巳得勢速匯款派人去可完全收復"
+    ],
+    "tr": {
+      "fr": "[…] reçu. L’affaire du Shaanxi est urgente ; notre armée a pris l’avantage. Envoyez vite des fonds et des hommes : la reconquête complète est possible. Fin incertaine.",
+      "en": "[…] received. The Shaanxi affair is urgent; our army has gained the advantage. Send funds and men quickly: complete recovery is possible. Ending uncertain.",
+      "ja": "[…] 了解。陝西の件は急を要す。我軍は優勢。至急送金し人を派遣すれば、完全な奪還が可能。末尾未確定。",
+      "zh-Hant": "節錄：巧。悉陜事急我軍巳得勢速匯款派人去可完全收復。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 3.21,
+    "null": -1.43,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-b11",
+    "source_id": "b11",
+    "date_iso": "1916-04-20",
+    "date": {
+      "fr": "20 avril 1916",
+      "en": "20 April 1916",
+      "zh": "1916年4月20日",
+      "ja": "1916年4月20日"
+    },
+    "route": {
+      "fr": "Seito (118) → Rosamonde (via Aoyama, 23 mots) [33]",
+      "en": "Seito (118) → Rosamonde (via Aoyama, 23 words) [33]",
+      "ja": "青島 (118) → Rosamonde (via 青山, 23 mots) [33]",
+      "zh-hant": "青島 (118) → Rosamonde (via 青山, 23 mots) [33]",
+      "zh-hans": "青島 (118) → Rosamonde (via 青山, 23 mots) [33]"
+    },
+    "key": "seito1916",
+    "src": "B03050088600, image 11",
+    "pages": "11",
+    "frame": "0615",
+    "cipher": "ruhopuletu fiqixizoca moqudugaya qulihoyepe qipafigohu vacovusune xuvihuvano kerisuzoca setuquzeze numumenudi xixerivucu famocepume kibimelesu saduqayuqu ladozifaxi doyofideli giyofuzogu zebidanuzo duqizodari dugiloxico",
+    "effective": "ruhopuletufiqixizocamoqudugayaqulihoyepeqipafigohuvacovusunexuvihuvanokerisuzocasetuquzezenumumenudixixerivucufamocepumekibimelesusaduqayuquladozifaxidoyofideligiyofuzoguzebidanuzoduqizodaridugiloxico",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "十八和文電詢峯□癑翌早熒復頃又囑復豈昨電筱到耶但借款是實請先生直向岩城交涉此間荷物已庠準備尚需時犂正",
+    "aligned": "十八和文電詢峯□癑翌早熒復頃又囑復豈昨電筱到耶但借款是實請先生直向岩城交涉此間荷物已庠準備尚需時犂正",
+    "read": "十八，‹和›，文電詢，‹峯›‹□›‹癑›‹翌›，早，‹熒›，復頃又囑復，‹豈›，昨電，‹筱›，到耶但借款是實，請先生直向岩城交涉。此間荷物已，‹庠›，準備尚需時，‹犂›，正。",
+    "keyw": [
+      "十八",
+      "文電詢",
+      "早"
+    ],
+    "tr": {
+      "fr": "[…] L’emprunt est bien réel : veuillez négocier directement avec Iwaki. Ici, la préparation de la cargaison demande encore du temps […]. Zheng. Début incertain.",
+      "en": "[…] The loan is real: please negotiate directly with Iwaki. Preparing the cargo here will still take time […]. Zheng. Opening uncertain.",
+      "ja": "[…] 借款は事実なので、先生から直接岩城と交渉願う。こちらの荷物の準備にはなお時間を要する。[…] 正。冒頭未確定。",
+      "zh-Hant": "節錄：十八。文電詢。早。復頃又囑復。昨電。到耶但借款是實請先生直向岩城交涉此間荷物已。準備尚需時。正。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.85,
+    "null": -1.22,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-b10",
+    "source_id": "b10",
+    "date_iso": "1916-04-21",
+    "date": {
+      "fr": "21 avril 1916",
+      "en": "21 April 1916",
+      "zh": "1916年4月21日",
+      "ja": "1916年4月21日"
+    },
+    "route": {
+      "fr": "Aoyama (中山) → Kayano, Yahatamachi, Seito (23 mots)",
+      "en": "Aoyama (中山) → Kayano, Yahatamachi, Seito (23 words)",
+      "ja": "青山 (中山) → Kayano, Yahatamachi, 青島 (23 mots)",
+      "zh-hant": "青山 (中山) → Kayano, Yahatamachi, 青島 (23 mots)",
+      "zh-hans": "青山 (中山) → Kayano, Yahatamachi, 青島 (23 mots)"
+    },
+    "key": "seito1916",
+    "src": "B03050088600, image 10",
+    "pages": "10",
+    "frame": "0614",
+    "cipher": "zocajuraze cudugayugu levuhukozo lurozukima duqesumaku nelafinudi xixemidotu yujorifuxo nudivoloxi xebetolaca duqisituki bigilarulu kimadugefu xorixafiro legejujela vuzedopufo hukosumaku nefigefudo ludacocidu boladoziqa",
+    "effective": "zocajurazecudugayugulevuhukozolurozukimaduqesumakunelafinudixixemidotuyujorifuxonudivoloxixebetolacaduqisitukibigilarulukimadugefuxorixafirolegejujelavuzedopufohukosumakunefigefudoludacociduboladoziqa",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "電悉聞峯堂要得陸軍當局同意乃借款按吾黨己借鉅款至今尚未生燔動當屛己有煩言恐不能再得同意熙巷托頭山交浦",
+    "aligned": "電悉聞峯堂要得陸軍當局同意乃借款按吾黨己借鉅款至今尚未生燔動當屛己有煩言恐不能再得同意熙巷托頭山交浦",
+    "read": "電悉聞，‹峯›‹堂›，要得陸軍當局同意乃借款按吾黨己借鉅款至今尚未，‹生›‹燔›，動，‹當›‹屛›，己有煩言恐不能再得同意，‹熙›‹巷›，托頭山交，‹浦›。",
+    "keyw": [
+      "電悉聞",
+      "要得陸軍當局同意乃借款按吾黨己借鉅款至今尚未",
+      "動"
+    ],
+    "tr": {
+      "fr": "Télégramme reçu. […] l’accord des autorités militaires est nécessaire à l’emprunt. Notre parti a déjà emprunté de grosses sommes sans encore […] agir ; des critiques se font entendre et un nouvel accord paraît difficile. […] Demandez à Tōyama de négocier […].",
+      "en": "Telegram received. […] Military approval is required for the loan. Our party has already borrowed large sums without yet […] acting; criticism has arisen and further approval seems difficult. […] Ask Tōyama to negotiate […].",
+      "ja": "電報了解。[…] 借款には陸軍当局の同意が必要。党は巨額を借りながらまだ[…]行動せず、不満も出ており、再度の同意は難しい。[…] 頭山に交渉を依頼されたい。",
+      "zh-Hant": "節錄：電悉聞。要得陸軍當局同意乃借款按吾黨己借鉅款至今尚未。動。己有煩言恐不能再得同意。托頭山交。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 4.04,
+    "null": -1.23,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "kayano"
+    }
+  },
+  {
+    "id": "inedits-c40-b12",
+    "source_id": "b12",
+    "date_iso": "1916-04-21",
+    "date": {
+      "fr": "21 avril 1916",
+      "en": "21 April 1916",
+      "zh": "1916年4月21日",
+      "ja": "1916年4月21日"
+    },
+    "route": {
+      "fr": "Tokyo (中山) → Yamanaka, Banzaikwan, Shanghai (21 mots)",
+      "en": "Tokyo (中山) → Yamanaka, Banzaikwan, Shanghai (21 words)",
+      "ja": "東京 (中山) → Yamanaka, Banzaikwan, 上海 (21 mots)",
+      "zh-hant": "東京 (中山) → Yamanaka, Banzaikwan, 上海 (21 mots)",
+      "zh-hans": "東京 (中山) → Yamanaka, Banzaikwan, 上海 (21 mots)"
+    },
+    "key": "k16",
+    "src": "B03050088600, image 12",
+    "pages": "12",
+    "frame": "0616",
+    "cipher": "zepisabojo dilejisavu hikaxujabe lahufazihe sasorukinu luserezecu sababugeku zogejusabe bicozuduzu famutogihi xoyobihogo carudugere xegiyehoku pupemibepi yumorebepe dohejitefo zufahokezu qatinegeju",
+    "effective": "zepisabojodilejisavuhikaxujabelahufazihesasorukinuluserezecusababugekuzogejusabebicozuduzufamutogihaxoyobihogocarudugerexegiyehokupupemibepiyumorebepedohejitefozufahokezuqatinegeju",
+    "inserted": [
+      99
+    ],
+    "phase": 0,
+    "alignment_edits": [
+      [
+        "ajout",
+        99,
+        "a"
+      ],
+      [
+        "suppr",
+        99,
+        "i"
+      ]
+    ],
+    "raw": "十九致山中電收否海軍于畫爲應募人札漏報上連普有無闚礙進耕甚堊冀到滬後各方情形如何有聞望詳報",
+    "aligned": "十九致山中電收否海軍于畫爲應募人札漏報上連普有無阻礙進耕甚堊冀到滬後各方情形如何有聞望詳報",
+    "read": "十九致山中電收否？海軍，‹于›‹畫›，爲應募人，‹札›，漏報，‹上›‹連›‹普›，有無阻礙進，‹耕›‹甚›‹堊›‹冀›，到滬後各方情形如何？，‹有›‹聞›，望詳報。",
+    "keyw": [
+      "十九致山中電收否海軍",
+      "爲應募人",
+      "漏報"
+    ],
+    "tr": {
+      "fr": "Avez-vous reçu le télégramme adressé à Yamanaka le 19 ? […] Y a-t-il des obstacles […] ? Depuis votre arrivée à Shanghai, quelle est la situation des différents côtés ? […] Rapports détaillés souhaités.",
+      "en": "Did you receive the telegram to Yamanaka on the 19th? […] Are there obstacles […]? What is the situation on each side since your arrival in Shanghai? […] Detailed reports requested.",
+      "ja": "十九日付の山中宛電報は届いたか。[…] 障害はあるか。[…] 上海到着後、各方面の状況はどうか。詳報を望む。",
+      "zh-Hant": "節錄：十九致山中電收否海軍。爲應募人。漏報。有無阻礙進。到滬後各方情形如何。望詳報。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.93,
+    "null": -1.58,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "yamanaka"
+    }
+  },
+  {
+    "id": "inedits-c40-b13",
+    "source_id": "b13",
+    "date_iso": "1916-04-21",
+    "date": {
+      "fr": "21 avril 1916",
+      "en": "21 April 1916",
+      "zh": "1916年4月21日",
+      "ja": "1916年4月21日"
+    },
+    "route": {
+      "fr": "Shanghai (0100) → Rosamonde (26 mots)",
+      "en": "Shanghai (0100) → Rosamonde (26 words)",
+      "ja": "上海 (0100) → Rosamonde (26 mots)",
+      "zh-hant": "上海 (0100) → Rosamonde (26 mots)",
+      "zh-hans": "上海 (0100) → Rosamonde (26 mots)"
+    },
+    "key": "shanghai1916",
+    "src": "B03050088600, image 13",
+    "pages": "13",
+    "frame": "0617",
+    "cipher": "noqemekira kugojorini detotiqoni bihipexohu lizirocufa sisiyezipi tositociye caxevubufi nikemohebu juyadasaku nepuririume yepoparona bifibabemo roganazone rofodonozi memekuzoga rofodonozi memekuzoga hamuyovano sasigesiyu sebesifose xabanizeka lerejageno pepiqolforo mabomipoji jisexazume",
+    "effective": "noqemekirakugojorinidetotiqonibihipexohulizirocufasisiyezipitositociyecaxevubufinikemohebujuyadasakunepuririmeyepoparonabifibabemoroganazonerofodonozimemekuzogarofodonozimemekuzogahamuyovanosasigesiyusebesifosexabanizekalerejagenopepiqoforomabomipojijisexazume",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [
+      [
+        "suppr",
+        108,
+        "u"
+      ],
+      [
+        "suppr",
+        237,
+        "l"
+      ]
+    ],
+    "raw": "江陰紫爲吾黨勢埤己改委楊虎只令昨晚豈赴並增派介石籌防告·································棁疹檢屬祲",
+    "aligned": "江陰紫爲吾黨勢埤己改委楊虎只令昨晚豈赴並增派介石籌防告集款械懇設法薏持梓琴來電招梓琴來電招蔡掫民吃名遣去速覆請鞭菩池囑猪股大尉速吰",
+    "read": "江陰，‹紫›，爲吾黨勢，‹埤›，己改委楊虎，，‹只›，令昨晚，‹豈›，赴並增派介石籌防。‹告›，集款械懇設法，‹薏›，持梓琴來電招梓琴來電招蔡，‹掫›‹民›‹吃›‹名›‹遣›‹去›，速覆請，‹鞭›‹菩›‹池›‹囑›‹猪›‹股›，大尉速，‹吰›。",
+    "keyw": [
+      "江陰",
+      "爲吾黨勢",
+      "己改委楊虎"
+    ],
+    "tr": {
+      "fr": "Jiangyin […] devenu une position de notre parti […]. Yang Hu a été nommé […] et est parti hier soir ; Jieshi (介石) est envoyé en renfort pour préparer la défense. Réunir fonds et armes […]. La répétition concernant Ziqin figure bien sur le formulaire ; fin incertaine.",
+      "en": "Jiangyin […] a position of our party […]. Yang Hu has been appointed […] and left last night; Jieshi (介石) is also sent to organise the defence. Raise funds and arms […]. The repetition about Ziqin is present on the form; ending uncertain.",
+      "ja": "江陰は[…]党の拠点。楊虎を任命し[…]昨夜出発させ、さらに介石を派遣して防備を準備する。資金・武器を集める[…]。梓琴に関する重複は用紙に実在。末尾未確定。",
+      "zh-Hant": "節錄：江陰。爲吾黨勢。己改委楊虎。令昨晚。赴並增派介石籌防。集款械懇設法。持梓琴來電招梓琴來電招蔡。速覆請。大尉速。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 1.71,
+    "null": -5.83,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-b20t",
+    "source_id": "b20t",
+    "date_iso": "1916-04-22",
+    "date": {
+      "fr": "22 avril 1916",
+      "en": "22 April 1916",
+      "zh": "1916年4月22日",
+      "ja": "1916年4月22日"
+    },
+    "route": {
+      "fr": "Tokyo (中山) → Junzaburo Shanghai (14 mots)",
+      "en": "Tokyo (中山) → Junzaburo Shanghai (14 words)",
+      "ja": "東京 (中山) → Junzaburo 上海 (14 mots)",
+      "zh-hant": "東京 (中山) → Junzaburo 上海 (14 mots)",
+      "zh-hans": "東京 (中山) → Junzaburo 上海 (14 mots)"
+    },
+    "key": "shanghai1916",
+    "src": "B03050088600, image 20",
+    "pages": "20",
+    "frame": "0624a",
+    "cipher": "nogemekigo jorinipiqa qofimebami pobaqinipa rinidetofi cebunoqixo qofilazeco zuzaratibu sakuyojojo vajovanosa sigesexase besijovopo",
+    "effective": "nogemekigojorinipiqaqofimebamipobaqiniparinidetoficebunoqixoqofilazecozuzaratibusakuyojojovajovanosasigesexasebesijovopo",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "汪陰爲吾國極雄大要塞吾黨得丹喜極自當盡力籌接濟濟民吃速遣胴文",
+    "aligned": "汪陰爲吾國極雄大要塞吾黨得丹喜極自當盡力籌接濟濟民吃速遣胴文",
+    "read": "‹汪›，陰爲吾國極雄大要塞吾黨得，‹丹›，喜極自當盡力籌接濟，‹濟›‹民›‹吃›，速遣，‹胴›，文。",
+    "keyw": [
+      "陰爲吾國極雄大要塞吾黨得",
+      "喜極自當盡力籌接濟",
+      "速遣"
+    ],
+    "tr": {
+      "fr": "[…] est une très grande forteresse de notre pays. Notre parti l’obtient […] grande joie. Je ferai tout pour réunir une aide […]. Envoyez vite […]. Wen.",
+      "en": "[…] is a very large fortress in our country. Our party obtains it […] great joy. I shall do all I can to raise assistance […]. Send […] quickly. Wen.",
+      "ja": "[…] は我が国の大要塞。党がこれを得て[…]大いに喜ぶ。援助の調達に全力を尽くす。[…] 至急派遣願う。文。",
+      "zh-Hant": "節錄：陰爲吾國極雄大要塞吾黨得。喜極自當盡力籌接濟。速遣。文。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 3.35,
+    "null": -1.32,
+    "source": "C40",
+    "who": {
+      "from": "sun",
+      "to": "yamada"
+    }
+  },
+  {
+    "id": "inedits-c40-b20b",
+    "source_id": "b20b",
+    "date_iso": "1916-04-22",
+    "date": {
+      "fr": "22 avril 1916",
+      "en": "22 April 1916",
+      "zh": "1916年4月22日",
+      "ja": "1916年4月22日"
+    },
+    "route": {
+      "fr": "Tokyo (中山) → Youngchina San Francisco (34 mots, 2 feuillets)",
+      "en": "Tokyo (中山) → Youngchina San Francisco (34 words, 2 sheets)",
+      "ja": "東京 (中山) → Youngchina サンフランシスコ (34 mots, 2 feuillets)",
+      "zh-hant": "東京 (中山) → Youngchina 舊金山 (34 mots, 2 feuillets)",
+      "zh-hans": "東京 (中山) → Youngchina 舊金山 (34 mots, 2 feuillets)"
+    },
+    "key": "sanfran1916",
+    "src": "B03050088600, image 20",
+    "pages": "20-21",
+    "frame": "0624b",
+    "cipher": "cenovirube valaqetumo sicexojoyo jirefucute xefobopuje dusadebehe lagevubezo nuzopuhoda sosufojosa cevigokuna dabukoheco gecovizeti jeyitoyuco tavizohole hogumasage nidobudora doxisofoda zuholekola cehinakohe hudeyodazu cocavotoso sedetevita dehofalute cuyavixeja hesesejoge rinemuvina datefalute cuyavisovi lenivikexe janakoxefo zopuhodazo pakamibehe",
+    "effective": "cenovirubevalaqetumosicexojoyojirefucutexefobopujedusadebehelagevubezonuzopuhodasosufojosacevigokunadabukohecogecovizetijeyitoyucotavizoholehogumasagenidobudoradoxisofodazuholekolacehinakohehudeyodazucocavotososedetevitadehofalutecuyavixejahesesejogerinemuvinadatefalutecuyavisovilenivikexejanakoxefozopuhodazopakamibehe",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "時事日非袁□以僎獨立抵制民黯文靉親入內地恐吾黨不能造大勢力故決意卄七回國飛機及各同志速回如有餘款朢速匯應急東京本部由謝持權理横濱交通部由謝心準主持餘抵內地再電文",
+    "aligned": "時事日非袁□以僎獨立抵制民黯文靉親入內地恐吾黨不能造大勢力故決意卄七回國飛機及各同志速回如有餘款朢速匯應急東京本部由謝持權理横濱交通部由謝心準主持餘抵內地再電文",
+    "read": "時事日非袁，‹□›，以，‹僎›，獨立抵制民，‹黯›，文，‹靉›，親入內地，恐吾黨不能造大勢力。故決意卄七回國。飛機及各同志速回。如有餘款，‹朢›，速匯應急。東京本部由謝持權理；横濱交通部由謝心準主持。餘抵內地再電。文。",
+    "keyw": [
+      "時事日非袁",
+      "以",
+      "獨立抵制民"
+    ],
+    "tr": {
+      "fr": "La situation se dégrade de jour en jour. Yuan […] l’indépendance pour contrer les révolutionnaires […]. Sans entrer moi-même à l’intérieur du pays, je crains que notre parti ne puisse devenir une grande force. Je décide donc de rentrer le 27. Que les avions et les camarades reviennent vite ; envoyez d’urgence les fonds disponibles. Xie Chi assure l’intérim du siège de Tokyo ; le service de liaison de Yokohama est confié à Xie Xinzhun. Je télégraphierai après mon arrivée. Wen. Quelques mots du début restent incertains.",
+      "en": "The situation worsens daily. Yuan […] independence to counter the revolutionaries […]. Unless I enter the country myself, I fear our party cannot build a strong force. I therefore decide to return on the 27th. Send the aircraft and comrades back quickly, and remit spare funds urgently. Xie Chi will act for the Tokyo headquarters; Xie Xinzhun will head the Yokohama liaison office. I shall telegraph after arriving. Wen. Some opening words remain uncertain.",
+      "ja": "時局は日々悪化。袁は[…]独立を利用して革命派に対抗する。[…] 自ら内地へ入らなければ党の大勢力を築けない恐れがあり、二十七日に帰国すると決めた。飛行機と同志は至急帰国し、余裕資金は送金願う。東京本部は謝持が代行し、横浜交通部は謝心準が主宰する。到着後また電報する。文。冒頭数語未確定。",
+      "zh-Hant": "節錄：時事日非袁。以。獨立抵制民。文。親入內地恐吾黨不能造大勢力故決意卄七回國飛機及各同志速回如有餘款。速匯應急東京本部由謝持權理横濱交通部由謝心準主持餘抵內地再電文。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 3.88,
+    "null": -1.37,
+    "source": "C40",
+    "who": {
+      "from": "sun",
+      "to": null
+    }
+  },
+  {
+    "id": "inedits-c40-b21b",
+    "source_id": "b21b",
+    "date_iso": "1916-04-22",
+    "date": {
+      "fr": "22 avril 1916",
+      "en": "22 April 1916",
+      "zh": "1916年4月22日",
+      "ja": "1916年4月22日"
+    },
+    "route": {
+      "fr": "Aoyama (中山) → Kayano, 4 Yahatamachi, Seito (34 mots, 3 feuillets)",
+      "en": "Aoyama (中山) → Kayano, 4 Yahatamachi, Seito (34 words, 3 sheets)",
+      "ja": "青山 (中山) → Kayano, 4 Yahatamachi, 青島 (34 mots, 3 feuillets)",
+      "zh-hant": "青山 (中山) → Kayano, 4 Yahatamachi, 青島 (34 mots, 3 feuillets)",
+      "zh-hans": "青山 (中山) → Kayano, 4 Yahatamachi, 青島 (34 mots, 3 feuillets)"
+    },
+    "key": "seito1916",
+    "src": "B03050088600, image 21",
+    "pages": "21-22",
+    "frame": "0625b",
+    "cipher": "pujisobubo sezoxaholu zocaqixipu ferixafepu vozesunabo sezocarude lakosusagi lomuxolado zifagilomu xomocelego gigepijagu yepijaguye kivigidizo maluhemuxu fepuvozegu tiyugositu cucelevula hixidozoca fimemefiri xanifomuyi hufokepubo licalesoka beloqilola saruxayoyo muyalafila vumigesuho xuvelahiju puyekopuse zolipegegu dixuvigidi",
+    "effective": "pujisobubosezoxaholuzocaqixipuferixafepuvozesunabosezocarudelakosusagilomuxoladozifagilomuxomocelegogigepijaguyepijaguyekivigidizomaluhemuxufepuvozegutiyugositucucelevulahixidozocafimemefirixanifomuyihufokepubolicalesokabeloqilolasaruxayoyomuyalafilavumigesuhoxuvelahijupuyekopusezolipegegudixuvigidi",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "兄迫靳雲鵬電文內有萱野名靳電北京向犂使交涉犂使請訣牕政府政府甚爲難或令萱野平墩未定要之此電無益有損伯後表面釅避與日人南關係乃不招各國之忌而免障礽幻囑爲",
+    "aligned": "兄迫靳雲鵬電文內有萱野名靳電北京向犂使交涉犂使請訣牕政府政府甚爲難或令萱野平墩未定要之此電無益有損伯後表面釅避與日人南關係乃不招各國之忌而免障礽幻囑爲",
+    "read": "兄，‹迫›，靳雲鵬電文內有萱野名靳電北京向，‹犂›，使交涉，‹犂›，使請，‹訣›‹牕›，政府政府甚爲難或令萱野，‹平›‹墩›，未定要之此電無益有損。‹伯›，後表面，‹釅›，避與日人，‹南›，關係乃不招各國之忌而免障，‹礽›‹幻›‹囑›‹爲›。",
+    "keyw": [
+      "兄",
+      "靳雲鵬電文內有萱野名靳電北京向",
+      "使交涉"
+    ],
+    "tr": {
+      "fr": "Votre télégramme à Jin Yunpeng mentionne Kayano. Jin a télégraphié à Pékin pour négocier avec l’ambassadeur […] ; le gouvernement est embarrassé […]. Ce télégramme est nuisible plutôt qu’utile. À l’avenir, évitez de laisser paraître les liens avec les Japonais, afin de ne pas susciter la méfiance des autres pays et de prévenir les obstacles […].",
+      "en": "Your telegram to Jin Yunpeng names Kayano. Jin telegraphed Beijing to approach the […] envoy; the government is embarrassed […]. This telegram does harm rather than good. In future avoid displaying connections with Japanese people, so as not to arouse other countries’ suspicion and create obstacles […].",
+      "ja": "靳雲鵬宛の電文に萱野の名があった。靳は北京へ電報して[…]公使と交渉し、政府は困惑している。[…] この電報は無益で有害。今後は表向き日本人との関係を避け、各国の猜疑や障害を招かぬようにされたい。",
+      "zh-Hant": "節錄：兄。靳雲鵬電文內有萱野名靳電北京向。使交涉。使請。政府政府甚爲難或令萱野。未定要之此電無益有損。後表面。避與日人。關係乃不招各國之忌而免障。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 3.24,
+    "null": -1.44,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "kayano"
+    }
+  },
+  {
+    "id": "inedits-c40-b25t",
+    "source_id": "b25t",
+    "date_iso": "1916-04-22",
+    "date": {
+      "fr": "22 avril 1916",
+      "en": "22 April 1916",
+      "zh": "1916年4月22日",
+      "ja": "1916年4月22日"
+    },
+    "route": {
+      "fr": "Shanghai (015) → Nakayama Harajuku (7 mots) [Sixteenth]",
+      "en": "Shanghai (015) → Nakayama Harajuku (7 words) [Sixteenth]",
+      "ja": "上海 (015) → Nakayama Harajuku (7 mots) [Sixteenth]",
+      "zh-hant": "上海 (015) → Nakayama Harajuku (7 mots) [Sixteenth]",
+      "zh-hans": "上海 (015) → Nakayama Harajuku (7 mots) [Sixteenth]"
+    },
+    "key": "k16",
+    "src": "B03050088600, image 25",
+    "pages": "25",
+    "frame": "0629a",
+    "cipher": "mutoxoyohe fuleyosaco zexoqere",
+    "effective": "mutoxoyohefuleyosacozexoqere",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "無礙大局乞勿念",
+    "aligned": "無礙大局乞勿念",
+    "read": "無礙大局，乞勿念。",
+    "keyw": [
+      "無礙大局乞勿念"
+    ],
+    "tr": {
+      "fr": "Cela ne compromet pas la situation générale ; ne vous inquiétez pas.",
+      "en": "This does not harm the overall situation; please do not worry.",
+      "ja": "大局に支障はない。ご心配なく。",
+      "zh-Hant": "節錄：無礙大局乞勿念。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 3.26,
+    "null": -0.36,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-b25b",
+    "source_id": "b25b",
+    "date_iso": "1916-04-22",
+    "date": {
+      "fr": "22 avril 1916",
+      "en": "22 April 1916",
+      "zh": "1916年4月22日",
+      "ja": "1916年4月22日"
+    },
+    "route": {
+      "fr": "Shanghai (082) → Nakayama Harajuku (29 mots) [Sixteenth]",
+      "en": "Shanghai (082) → Nakayama Harajuku (29 words) [Sixteenth]",
+      "ja": "上海 (082) → Nakayama Harajuku (29 mots) [Sixteenth]",
+      "zh-hant": "上海 (082) → Nakayama Harajuku (29 mots) [Sixteenth]",
+      "zh-hans": "上海 (082) → Nakayama Harajuku (29 mots) [Sixteenth]"
+    },
+    "key": "k16",
+    "src": "B03050088600, image 25",
+    "pages": "25",
+    "frame": "0629b",
+    "cipher": "zolisateko yuhiguhivi binacocuhu tazolisaro bicubiqogi vuqudidocu xuvixetobe dohefugudi goripemigi yocolutelo kupusapoko hacebisahu tisidocuye risapuquce mesiforasa",
+    "effective": "zolisatekoyuhiguhivibinacocuhutazolisarobicubiqogivuqudidocuxuvixetobedohefugudigoripemigiyocolutelokupusapokohacebisahutisidocuyerisapuqucemesiforasa",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "第一艦隊集遻粤浙第二逆遁長璆統擬先取大江而後閩粳佛滬事英哥主謀統副之現布置",
+    "aligned": "第一艦隊集遻粤浙第二逆遁長璆統擬先取大江而後閩粳佛滬事英哥主謀統副之現布置",
+    "read": "第一艦隊集，‹遻›，粤浙第二，‹逆›‹遁›，長，‹璆›，統擬先取大江而後閩，‹粳›‹佛›，滬事英哥主謀統副之現布置。",
+    "keyw": [
+      "第一艦隊集",
+      "粤浙第二",
+      "長"
+    ],
+    "tr": {
+      "fr": "Première escadre […] Guangdong et Zhejiang ; deuxième […] le Yangzi. Tong propose de prendre d’abord le grand fleuve, puis le Fujian […]. Pour Shanghai, Ying est l’initiateur et Tong le seconde. Dispositions en cours.",
+      "en": "First Squadron […] Guangdong and Zhejiang; Second […] the Yangzi. Tong proposes to take the great river first, then Fujian […]. For Shanghai, Ying leads the plan and Tong assists. Arrangements are being made.",
+      "ja": "第一艦隊は[…]粤・浙、第二は[…]長江。統は先に大江、次に閩[…]を取る考え。上海の件は英哥が主謀し統が補佐、現在布置中。",
+      "zh-Hant": "節錄：第一艦隊集。粤浙第二。長。統擬先取大江而後閩。滬事英哥主謀統副之現布置。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.98,
+    "null": -1.46,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-b27b",
+    "source_id": "b27b",
+    "date_iso": "1916-04-23",
+    "date": {
+      "fr": "23 avril 1916",
+      "en": "23 April 1916",
+      "zh": "1916年4月23日",
+      "ja": "1916年4月23日"
+    },
+    "route": {
+      "fr": "Shanghai (053) → Rosamonde (30 mots, 2 feuillets)",
+      "en": "Shanghai (053) → Rosamonde (30 words, 2 sheets)",
+      "ja": "上海 (053) → Rosamonde (30 mots, 2 feuillets)",
+      "zh-hant": "上海 (053) → Rosamonde (30 mots, 2 feuillets)",
+      "zh-hans": "上海 (053) → Rosamonde (30 mots, 2 feuillets)"
+    },
+    "key": "shanghai1916",
+    "src": "B03050088600, image 27",
+    "pages": "27-28",
+    "frame": "0631b",
+    "cipher": "kolanosato sivimameku ditufihezi hicozutibu gojobufozi zarizuseyi cisebuqivo qiditumezu xoluvabuko febufasema barutofeti votemikima masazeniki rezarugojo xerabuzise nasihakuka siqebocuti bibekasaku buxehayisi xatitenoqe mekisiqeza bayojosehe cikolanfosa robaxisena gepubidoni xihezekaki vayirisaqi lizigolusi",
+    "effective": "kolanosatosivimamekuditufihezihicozutibugojobufozizarizuseyicisebuqivoqiditumezuxoluvabukofebufasemabarutofetivotemikimamasazenikirezarugojoxerabuzisenasihakukasiqebocutibibekasakubuxehayisixatitenoqemekisiqezabayojosehirecikolafosarobaxisenagepubidonixihezekakivayirisaqilizigolusi",
+    "inserted": [
+      219,
+      220
+    ],
+    "phase": 0,
+    "alignment_edits": [
+      [
+        "ajout",
+        219,
+        "i"
+      ],
+      [
+        "ajout",
+        219,
+        "r"
+      ],
+      [
+        "suppr",
+        226,
+        "n"
+      ]
+    ],
+    "raw": "漢民昨到電悉後件當力爲之但唐近態不敗悉難收禕漊事進註更勝軍官肯詬家眷爲質一週叠鄈可發動伀籌五萬叉匯江陰可直接遛惻··············",
+    "aligned": "漢民昨到電悉後件當力爲之但唐近態不敗悉難收禕漊事進註更勝軍官肯詬家眷爲質一週叠鄈可發動伀籌五萬叉匯江陰可直接述那漢獧棍其耈□理再請安信箋委狀",
+    "read": "漢民昨到電悉後件當力爲之但唐近態不，‹敗›，悉難收，‹禕›‹漊›，事進，‹註›‹更›‹勝›，軍官肯，‹詬›，家眷爲質一週，‹叠›‹鄈›，可發動，‹伀›，籌五萬，‹叉›，匯江陰可直接，‹述›‹那›‹漢›‹獧›‹棍›‹其›‹耈›‹□›，理再請，‹安›‹信›‹箋›，委狀。",
+    "keyw": [
+      "漢民昨到電悉後件當力爲之但唐近態不",
+      "悉難收",
+      "事進"
+    ],
+    "tr": {
+      "fr": "Hanmin est arrivé hier. Après réception du télégramme, nous ferons notre possible […]. Des officiers acceptent de donner leurs familles en gage ; en une semaine […] l’action serait possible. Réunir cinquante mille […] et envoyer à Jiangyin […]. Fin incertaine.",
+      "en": "Hanmin arrived yesterday. After receiving the telegram we shall do our best […]. Officers agree to give their families as security; within a week […] action should be possible. Raise fifty thousand […] and remit to Jiangyin […]. Ending uncertain.",
+      "ja": "漢民が昨日到着。電報を受け、尽力する。[…] 将校が家族を質にすることを承諾し、一週間で[…]行動可能。五万を工面し江陰へ送る[…]。末尾未確定。",
+      "zh-Hant": "節錄：漢民昨到電悉後件當力爲之但唐近態不。悉難收。事進。軍官肯。家眷爲質一週。可發動。籌五萬。匯江陰可直接。理再請。委狀。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.13,
+    "null": -3.46,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-b31t",
+    "source_id": "b31t",
+    "date_iso": "1916-04-24",
+    "date": {
+      "fr": "24 avril 1916",
+      "en": "24 April 1916",
+      "zh": "1916年4月24日",
+      "ja": "1916年4月24日"
+    },
+    "route": {
+      "fr": "Aoyama (中山) → Kayano, 4 Yahatamachi, Seito (16 mots)",
+      "en": "Aoyama (中山) → Kayano, 4 Yahatamachi, Seito (16 words)",
+      "ja": "青山 (中山) → Kayano, 4 Yahatamachi, 青島 (16 mots)",
+      "zh-hant": "青山 (中山) → Kayano, 4 Yahatamachi, 青島 (16 mots)",
+      "zh-hans": "青山 (中山) → Kayano, 4 Yahatamachi, 青島 (16 mots)"
+    },
+    "key": "seito1916",
+    "src": "B03050088600, image 31",
+    "pages": "31",
+    "frame": "0635a",
+    "cipher": "qixirukola puqilosoqu cihiguzehu fozocazecu biqeruxahu kolutoqixi lupemuzogo tipujibida nugosuculi halavujumu jiyutudari ralaveqixi",
+    "effective": "qixirukolapuqilosoqucihiguzehufozocazecubiqeruxahukolutoqixilupemuzogotipujibidanugosuculihalavujumujiyutudariralaveqixi",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "文卄七日返滬庠後電聞淀南得戳文戀來魯兄準傭卽癸不必理商會也文",
+    "aligned": "文卄七日返滬庠後電聞淀南得戳文戀來魯兄準傭卽癸不必理商會也文",
+    "read": "文卄七日返滬，‹庠›，後電聞，‹淀›，南得，‹戳›‹文›‹戀›，來魯兄準，‹傭›‹卽›‹癸›，不必理商會也文。",
+    "keyw": [
+      "文卄七日返滬",
+      "後電聞",
+      "南得"
+    ],
+    "tr": {
+      "fr": "Je rentrerai à Shanghai le 27 […]. […] Vous, préparez-vous […]. Ne vous préoccupez pas de la chambre de commerce. Wen.",
+      "en": "I shall return to Shanghai on the 27th […]. […] Please prepare […]. Do not concern yourself with the chamber of commerce. Wen.",
+      "ja": "私は二十七日に上海へ戻る。[…] 準備されたい。[…] 商会のことは構わなくてよい。文。",
+      "zh-Hant": "節錄：文卄七日返滬。後電聞。南得。來魯兄準。不必理商會也文。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.36,
+    "null": -1.22,
+    "source": "C40",
+    "who": {
+      "from": "sun",
+      "to": "kayano"
+    }
+  },
+  {
+    "id": "inedits-c40-b30t",
+    "source_id": "b30t",
+    "date_iso": "1916-04-25",
+    "date": {
+      "fr": "25 avril 1916",
+      "en": "25 April 1916",
+      "zh": "1916年4月25日",
+      "ja": "1916年4月25日"
+    },
+    "route": {
+      "fr": "Tokyo (中山) → Junzaburo Shanghai (20 mots)",
+      "en": "Tokyo (中山) → Junzaburo Shanghai (20 words)",
+      "ja": "東京 (中山) → Junzaburo 上海 (20 mots)",
+      "zh-hant": "東京 (中山) → Junzaburo 上海 (20 mots)",
+      "zh-hans": "東京 (中山) → Junzaburo 上海 (20 mots)"
+    },
+    "key": "shanghai1916",
+    "src": "B03050088600, image 30",
+    "pages": "30",
+    "frame": "0634a",
+    "cipher": "karukofomo zumajexija rinidetosa gopikavixe mipojivasi gekikayaga vapobuyase yinogebupo pilozaluji lekovaseco yupalenoso sibuyojili",
+    "effective": "karukofomozumajexijarinidetosagopikavixemipojivasigekikayagavapobuyaseyinogebupopilozalujilekovasecoyupalenososibuyojili",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "若滬浙能入吾黨範圍則大局吃定矱种乘近汪丸回着山漆通㘾青木中將",
+    "aligned": "若滬浙能入吾黨範圍則大局吃定矱种乘近汪丸回着山漆通㘾青木中將",
+    "read": "若滬浙能入吾黨範圍，則大局，‹吃›，定，‹矱›‹种›，乘，‹近›‹汪›‹丸›，回着，‹山›‹漆›‹通›‹㘾›，青木中將。",
+    "keyw": [
+      "若滬浙能入吾黨範圍則大局",
+      "定",
+      "乘"
+    ],
+    "tr": {
+      "fr": "Si Shanghai et le Zhejiang entrent dans la sphère de notre parti, la situation générale sera […] fixée. […] Le lieutenant général Aoki est mentionné ; la liaison entre ces passages reste incertaine.",
+      "en": "If Shanghai and Zhejiang come within our party’s sphere, the overall situation will be […] settled. […] Lieutenant General Aoki is mentioned; the connection between these passages remains uncertain.",
+      "ja": "上海・浙江が党の勢力範囲に入れば、大局は[…]定まる。[…] 青木中将への言及があるが、その間の文意は未確定。",
+      "zh-Hant": "節錄：若滬浙能入吾黨範圍則大局。定。乘。回着。青木中將。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.45,
+    "null": -0.23,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "yamada"
+    }
+  },
+  {
+    "id": "inedits-c40-b32t",
+    "source_id": "b32t",
+    "date_iso": "1916-04-25",
+    "date": {
+      "fr": "25 avril 1916",
+      "en": "25 April 1916",
+      "zh": "1916年4月25日",
+      "ja": "1916年4月25日"
+    },
+    "route": {
+      "fr": "Seito (27) → Rosamonde (9 mots) [33]",
+      "en": "Seito (27) → Rosamonde (9 words) [33]",
+      "ja": "青島 (27) → Rosamonde (9 mots) [33]",
+      "zh-hant": "青島 (27) → Rosamonde (9 mots) [33]",
+      "zh-hans": "青島 (27) → Rosamonde (9 mots) [33]"
+    },
+    "key": "seito1916",
+    "src": "B03050088600, image 32",
+    "pages": "32",
+    "frame": "0636a",
+    "cipher": "risuzocare dolamucugu lahuredoru holapopudo cugulavugi daluhuleyu",
+    "effective": "risuzocaredolamucugulahuredoruholapopudocugulavugidaluhuleyu",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "昨電第一字並第十五册字不狃懇覆",
+    "aligned": "昨電第一字並第十五册字不狃懇覆",
+    "read": "昨電第一字並第十五，‹册›，字不，‹狃›，懇覆。",
+    "keyw": [
+      "昨電第一字並第十五",
+      "字不",
+      "懇覆"
+    ],
+    "tr": {
+      "fr": "Dans le télégramme d’hier, le premier caractère et le quinzième […] caractère sont […] ; veuillez répondre.",
+      "en": "In yesterday’s telegram the first character and the fifteenth […] character are […]; please reply.",
+      "ja": "昨日の電報の第一字と第十五[…]字は[…]。返電願う。",
+      "zh-Hant": "節錄：昨電第一字並第十五。字不。懇覆。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 3.03,
+    "null": -0.67,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-b32b",
+    "source_id": "b32b",
+    "date_iso": "1916-04-25",
+    "date": {
+      "fr": "25 avril 1916",
+      "en": "25 April 1916",
+      "zh": "1916年4月25日",
+      "ja": "1916年4月25日"
+    },
+    "route": {
+      "fr": "Shanghai (053) → Rosamonde (18 mots)",
+      "en": "Shanghai (053) → Rosamonde (18 words)",
+      "ja": "上海 (053) → Rosamonde (18 mots)",
+      "zh-hant": "上海 (053) → Rosamonde (18 mots)",
+      "zh-hans": "上海 (053) → Rosamonde (18 mots)"
+    },
+    "key": "shanghai1916",
+    "src": "B03050088600, image 32",
+    "pages": "32",
+    "frame": "0636b",
+    "cipher": "mozuvogaxi famohetuqi yihisorico dopotajivu xijamipofi ceburiraru kimasizuci silazeyiri majeseloji qaxohuqari bukuzipito qafipekofo bufavoyovo bemikubocu cozutotoki saxiganaci",
+    "effective": "mozuvogaxifamohetuqiyihisoricodopotajivuxijamipoficeburirarukimasizucisilazeyirimajeselojiqaxohuqaribukuzipitoqafipekofobufavoyovobemikubocucozutotokisaxiganaci",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "浙於兩派晟俱未用次岩入大得下級官同情自信能逐屈改終今令暫待滬事數日始發當晨完全美",
+    "aligned": "浙於兩派晟俱未用次岩入大得下級官同情自信能逐屈改終今令暫待滬事數日始發當晨完全美",
+    "read": "浙於兩派，‹晟›，俱未用次岩，‹入›，大得下級官同情自信能，‹逐›‹屈›‹改›‹終›，今令暫待滬事數日始發，‹當›‹晨›，完全美。",
+    "keyw": [
+      "浙於兩派",
+      "俱未用次岩",
+      "大得下級官同情自信能"
+    ],
+    "tr": {
+      "fr": "Au Zhejiang, les deux factions […] n’ont pas encore […] agi. Ciyan […] obtient une grande sympathie des officiers subalternes et pense pouvoir […]. Je lui ordonne d’attendre quelques jours l’affaire de Shanghai avant de partir […]. Mei.",
+      "en": "In Zhejiang the two factions […] have not yet […] acted. Ciyan […] has much sympathy among junior officers and believes he can […]. I order him to wait a few days for the Shanghai affair before setting out […]. Mei.",
+      "ja": "浙江の両派は[…]まだ行動せず。次岩は[…]下級将校の同情を大いに得て、[…]できると自信を持つ。上海の件を数日待ってから出発するよう命じた。[…] 美。",
+      "zh-Hant": "節錄：浙於兩派。俱未用次岩。大得下級官同情自信能。今令暫待滬事數日始發。完全美。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 3.12,
+    "null": -1.42,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-b38t",
+    "source_id": "b38t",
+    "date_iso": "1916-04-26",
+    "date": {
+      "fr": "26 avril 1916",
+      "en": "26 April 1916",
+      "zh": "1916年4月26日",
+      "ja": "1916年4月26日"
+    },
+    "route": {
+      "fr": "Seito (20) → Rosamonde (13 mots) [33]",
+      "en": "Seito (20) → Rosamonde (13 words) [33]",
+      "ja": "青島 (20) → Rosamonde (13 mots) [33]",
+      "zh-hant": "青島 (20) → Rosamonde (13 mots) [33]",
+      "zh-hans": "青島 (20) → Rosamonde (13 mots) [33]"
+    },
+    "key": "seito1916",
+    "src": "B03050088600, image 38",
+    "pages": "38",
+    "frame": "0642a",
+    "cipher": "risumididi geruxatuda riraleyuzo camocehuka yomilelino zixidoyofi noxixekala vutufavodo kunezubomu xelateleyu",
+    "effective": "risumididigeruxatudariraleyuzocamocehukayomilelinozixidoyofinoxixekalavutufavodokunezubomuxelateleyu",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "昨拄濞南商會覆電請焓錳觚議此間譬置不問鈞意如何乞覆",
+    "aligned": "昨拄濞南商會覆電請焓錳觚議此間譬置不問鈞意如何乞覆",
+    "read": "昨，‹拄›‹濞›，南商會覆電請，‹焓›‹錳›‹觚›，議此間，‹譬›‹置›‹不›‹問›，鈞意如何？乞覆。",
+    "keyw": [
+      "昨",
+      "南商會覆電請",
+      "議此間"
+    ],
+    "tr": {
+      "fr": "Hier […] réponse de la chambre de commerce de […]nan : demande de […] négociation. Ici […]. Quel est votre avis ? Veuillez répondre.",
+      "en": "Yesterday […] a reply from the […]nan chamber of commerce requested […] discussion. Here […]. What is your view? Please reply.",
+      "ja": "昨日、[…]南商会から[…]協議を求める返電。こちらは[…]。ご意見はどうか。返電願う。",
+      "zh-Hant": "節錄：昨。南商會覆電請。議此間。鈞意如何乞覆。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 2.79,
+    "null": -1.15,
+    "source": "C40",
+    "who": {
+      "from": null,
+      "to": "sun"
+    }
+  },
+  {
+    "id": "inedits-c40-b26b",
+    "source_id": "b26b",
+    "date_iso": "1916-04-2?",
+    "date": {
+      "fr": "avril 1916, jour illisible",
+      "en": "April 1916, day unreadable",
+      "zh": "1916年4月（日不詳）",
+      "ja": "1916年4月（日付判読不能）"
+    },
+    "route": {
+      "fr": "San Francisco (186) → Dr Sunwen 109 Harajuku (15 mots)",
+      "en": "San Francisco (186) → Dr Sunwen 109 Harajuku (15 words)",
+      "ja": "サンフランシスコ (186) → Dr Sunwen 109 Harajuku (15 mots)",
+      "zh-hant": "舊金山 (186) → Dr Sunwen 109 Harajuku (15 mots)",
+      "zh-hans": "舊金山 (186) → Dr Sunwen 109 Harajuku (15 mots)"
+    },
+    "key": "sanfran1916",
+    "src": "B03050088600, image 26",
+    "pages": "26",
+    "frame": "0630b",
+    "cipher": "kamisocico cavitupuyo sabolusice bokeluhole faladoximu fomasageni zorucegido gamoxayova boruposaze lidekufema",
+    "effective": "kamisocicocavitupuyosabolusicebokeluholefaladoximufomasagenizorucegidogamoxayovaboruposazelidekufema",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "電悉匯二萬麾舠春洋回鄧同船飛機兩月可宬債券帀收林森",
+    "aligned": "電悉匯二萬麾舠春洋回鄧同船飛機兩月可宬債券帀收林森",
+    "read": "電悉匯二萬，‹麾›‹舠›‹春›，洋回鄧同船飛機兩月可，‹宬›，債券，‹帀›，收林森。",
+    "keyw": [
+      "電悉匯二萬",
+      "洋回鄧同船飛機兩月可",
+      "債券"
+    ],
+    "tr": {
+      "fr": "Télégramme reçu ; vingt mille envoyés […]. […] rentre avec Deng sur le même bateau. Les avions pourront […] dans deux mois. Obligations […] reçues. Lin Sen. Jour exact illisible.",
+      "en": "Telegram received; twenty thousand remitted […]. […] returns on the same ship as Deng. The aircraft can […] in two months. Bonds […] received. Lin Sen. Exact day unreadable.",
+      "ja": "電報了解、二万送金。[…] 鄧と同船で帰る。飛行機は二か月で[…]。債券は[…]受領。林森。日付の日は判読不能。",
+      "zh-Hant": "節錄：電悉匯二萬。洋回鄧同船飛機兩月可。債券。收林森。未能確定之處保留標記，不補全文意。"
+    },
+    "score": 3.12,
+    "null": -0.87,
+    "source": "C40",
+    "who": {
+      "from": "lin",
+      "to": "sun"
+    }
+  }
+]

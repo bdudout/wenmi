@@ -180,7 +180,13 @@ var VERIF = {'fr': 'lettres vérifiées sur le scan : erreur probable du chiffre
           '<p class="tg-credit">' + esc(cap) + '</p></div></div>';
       }
       var groups = m.letters.match(/.{1,10}/g) || [];
-      h += '<p class="tg-label">' + esc(X ? X.read : L.read) + '</p><p class="cipher mono">' + groups.join(' ') + '</p>';
+      h += '<p class="tg-label">' + esc(X ? X.read : L.read) + '</p><p class="cipher mono">' + esc(m.cipher || groups.join(' ')) + '</p>';
+      if (m.rawText !== undefined) h += '<p class="tg-label">' + esc(X.rawLabel) + '</p><p class="readable" lang="zh-Hant">' + esc(m.rawText) + '</p>';
+      if (m.alignment && (m.alignment.phase || m.alignment.edits.length)) {
+        h += '<details class="tg-alignment"><summary>' + esc(X.alignmentLabel) + '</summary><p>' + esc(X.alignmentLegend) + '</p><p class="mono">';
+        if (m.alignment.phase) h += esc('prefix: ' + m.alignment.phase) + ' · ';
+        h += m.alignment.edits.map(function (e) { return esc((e[0] === 'ajout' ? '+' : '−') + e[2] + ' @' + (e[1] + 1)); }).join(' ; ') + '</p></details>';
+      }
       h += '<div class="tokens">';
       m.codes.forEach(function (code, i) {
         var st = m.status[i], cls = st === 'ok' ? '' : st === 'douteux' ? ' doubt' : st === 'illisible' ? ' illegible' : ' confirmed';
@@ -188,7 +194,8 @@ var VERIF = {'fr': 'lettres vérifiées sur le scan : erreur probable du chiffre
         var fx = (m.fixed || {})[String(i)];
         if (fx && X) { cls += ' fixed'; title = X.fixed[fx.how].replace('{from}', fx.from || '') + (title ? ' · ' + title : ''); }
         if ((m.verified || []).indexOf(i) >= 0) title += ' · ' + (VERIF[document.documentElement.lang] || VERIF.fr);
-        h += '<span class="token' + cls + '" title="' + esc(title) + '"><span class="u">' + m.letters.substr(4 * i, 2) + '·' + m.letters.substr(4 * i + 2, 2) +
+        var tokenLetters = m.tokenLetters ? m.tokenLetters[i] : m.letters.substr(4 * i, 2) + '·' + m.letters.substr(4 * i + 2, 2);
+        h += '<span class="token' + cls + '" title="' + esc(title) + '"><span class="u">' + esc(tokenLetters) +
           '</span><span class="c">' + code + '</span><span class="h" lang="zh-Hant">' + esc(m.chars[i]) + '</span></span>';
       });
       h += '</div>';
@@ -246,6 +253,12 @@ var VERIF = {'fr': 'lettres vérifiées sur le scan : erreur probable du chiffre
       });
       if (items) h += '<details class="tg-doubts"' + (m.expected && Object.keys(m.expected).length ? ' open' : '') + '><summary>' + esc(L.doubts) + '</summary><ul>' + items + '</ul></details>';
       return h + '</section>';
+    }
+    // Reviewed C39/C40 batch: separate section, preserving all existing series and their ordering.
+    var IX = window.WENMI_INEDITS, IXI = window.WENMI_INEDITS_I18N, ixBox = document.getElementById('inedits-corpus');
+    if (IX && IXI && ixBox) {
+      var XI = IXI[root.lang] || IXI.fr;
+      ixBox.innerHTML = IX.messages.map(function (m) { return tg(m, XI, XI); }).join('');
     }
     // ---- classement par système de chiffrement, puis par date (systems.js) ----
     var SY = window.WENMI_SYSTEMS, ST = SY ? (SY.text[root.lang] || SY.text.fr) : null;

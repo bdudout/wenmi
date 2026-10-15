@@ -1,0 +1,1775 @@
+{
+  "count": 50,
+  "counts": {
+    "C39": 11,
+    "C40": 39
+  },
+  "keys": {
+    "ctc": 4,
+    "hk1914": 2,
+    "laisaosang1915": 1,
+    "newyork1915": 1,
+    "hsu1914": 1,
+    "shanghai1916": 15,
+    "sanfran1916": 3,
+    "seito1916": 12,
+    "manila1916": 1,
+    "k16": 6,
+    "k17": 4
+  },
+  "inputs": {
+    "cryptanalysis/c40/readings.tsv": "361c7a57d4d88c81a11203ebfb0673c30173e5331753a2876153db7c27e7499f",
+    "cryptanalysis/c40/decodes.json": "bbb82875b462ab12e350c9e97e92a54945de54952e4bb0d2b37257a4bb583372",
+    "cryptanalysis/c39/readings_v2.json": "cedef9980bb332d32409c11d5a1e37a571bd4085f984ae73f617e485347ff030",
+    "cryptanalysis/c39/readings_875_v2.json": "7a5188381d04dc941eee544e48b7267ec4e5202eb9b9921551b6774a838ab99d",
+    "working/dx-reader-c39/answers/dx-relecture-c39-2026-10-15.json": "fec656822c5c2a8d2e30891aef10ef253031c9fb536d470b36f98081b956cdec",
+    "working/dx-reader-c39b/answers/dx-relecture-c39b-2026-10-15.json": "ae03cb8713d2da62cdf23d8e3bb357a06ddfc996c182cb374cb51bd7c6e58f13",
+    "working/dx-reader-c40/answers/dx-relecture-c40-2026-10-15.json": "6d15b463d55971ad2047e1e964a1e59c9a305b71ab5ed07b06f45de952303d56"
+  },
+  "selection": [
+    {
+      "id": "c40-a07",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a09b",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a10t",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a10b",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a16",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a18t",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a18b",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a30",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a39",
+      "publish": false,
+      "reason": "hors lot selon consignes (illisible ou partiel non retenu)"
+    },
+    {
+      "id": "c40-a40",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a41",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a42",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a43",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a44t",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a44b",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a51t",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a51b",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a52b",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a53",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a54t",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-a54b",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b03t",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b03b",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b04t",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b10",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b11",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b12",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b13",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b20t",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b20b",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b21b",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b23",
+      "publish": false,
+      "reason": "hors lot selon consignes (illisible ou partiel non retenu)"
+    },
+    {
+      "id": "c40-b25t",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b25b",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b26b",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b27t",
+      "publish": false,
+      "reason": "hors lot selon consignes (illisible ou partiel non retenu)"
+    },
+    {
+      "id": "c40-b27b",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b30t",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b31t",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b32t",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b32b",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b33t",
+      "publish": false,
+      "reason": "hors lot selon consignes (illisible ou partiel non retenu)"
+    },
+    {
+      "id": "c40-b38t",
+      "publish": true,
+      "reason": "seuil et lecture admis, doutes conservés"
+    },
+    {
+      "id": "c40-b38b",
+      "publish": false,
+      "reason": "hors lot selon consignes (illisible ou partiel non retenu)"
+    },
+    {
+      "id": "c40-b39t",
+      "publish": false,
+      "reason": "hors lot selon consignes (illisible ou partiel non retenu)"
+    },
+    {
+      "id": "c39-a50t",
+      "publish": true,
+      "reason": "note C39 : lu ; seuil et témoin vérifiés ; propositions explicites seulement"
+    },
+    {
+      "id": "c39-b38",
+      "publish": true,
+      "reason": "note C39 : lu ; seuil et témoin vérifiés ; propositions explicites seulement"
+    },
+    {
+      "id": "c39-b42t",
+      "publish": true,
+      "reason": "note C39 : lu ; seuil et témoin vérifiés ; propositions explicites seulement"
+    },
+    {
+      "id": "c39-b51t",
+      "publish": true,
+      "reason": "note C39 : lu ; seuil et témoin vérifiés ; propositions explicites seulement"
+    },
+    {
+      "id": "c39-b05",
+      "publish": true,
+      "reason": "note C39 : lu ; seuil et témoin vérifiés ; propositions explicites seulement"
+    },
+    {
+      "id": "c39-b08b",
+      "publish": true,
+      "reason": "note C39 : lu ; seuil et témoin vérifiés ; propositions explicites seulement"
+    },
+    {
+      "id": "c39-b45t",
+      "publish": true,
+      "reason": "note C39 : lu ; seuil et témoin vérifiés ; propositions explicites seulement"
+    },
+    {
+      "id": "c39-b51b",
+      "publish": true,
+      "reason": "note C39 : lu ; seuil et témoin vérifiés ; propositions explicites seulement"
+    },
+    {
+      "id": "c39-m06",
+      "publish": true,
+      "reason": "note C39 : lu ; seuil et témoin vérifiés ; propositions explicites seulement"
+    },
+    {
+      "id": "c39-m10",
+      "publish": true,
+      "reason": "note C39 : lu ; seuil et témoin vérifiés ; propositions explicites seulement"
+    },
+    {
+      "id": "c39-m17",
+      "publish": true,
+      "reason": "note C39 : lu ; seuil et témoin vérifiés ; propositions explicites seulement"
+    },
+    {
+      "id": "c39-b07t",
+      "publish": false,
+      "reason": "début illisible ; score LM-T 1,414 < 1,5 après insertion antérieure u en position 43"
+    },
+    {
+      "id": "c39-m12",
+      "publish": false,
+      "reason": "score 3,013 − témoin 1,613 = 1,400 < 1,5 ; texte partiel"
+    },
+    {
+      "id": "c39-m19",
+      "publish": false,
+      "reason": "note C39 : brouillon encore trop fragmentaire malgré score 1,727 > témoin −0,458 + 1,5"
+    }
+  ],
+  "stats": {
+    "tels": 50,
+    "codes": 1635,
+    "douteux": 386,
+    "illisible": 5,
+    "props": 6
+  },
+  "source_pdfs": {
+    "B03050087300": {
+      "sha256": "2b7b58b9e078477f7de17248e09a2629becf2ec7a5b5e87f7e91ba7388bb0944",
+      "bytes": 5028523
+    },
+    "B03050087400": {
+      "sha256": "39f8590cf3005d72bd71157da8aaa90be8c005839710efd6812000d64b3b540a",
+      "bytes": 6471324
+    },
+    "B03050087500": {
+      "sha256": "bfd1eb5564415778becd0a3672c8150b258c903d666cedc3c6e6368f48b0fd12",
+      "bytes": 12181548
+    },
+    "B03050088500": {
+      "sha256": "4c620e81b5f28ead7fb95b14f3c6237525d09b5948c8a98c4f1263d3e15fdd28",
+      "bytes": 13270462
+    },
+    "B03050088600": {
+      "sha256": "99c4c445e85b24be15ce21dbff69e78558df1fc01da001ae453b46cd5270c296",
+      "bytes": 11428437
+    }
+  },
+  "tables": {
+    "k16": {
+      "te": 1,
+      "tu": 21,
+      "to": 41,
+      "ti": 61,
+      "ta": 81,
+      "ve": 2,
+      "vu": 22,
+      "vo": 42,
+      "vi": 62,
+      "va": 82,
+      "xe": 3,
+      "xu": 23,
+      "xo": 43,
+      "xi": 63,
+      "xa": 83,
+      "ye": 4,
+      "yu": 24,
+      "yo": 44,
+      "yi": 64,
+      "ya": 84,
+      "ze": 5,
+      "zu": 25,
+      "zo": 45,
+      "zi": 65,
+      "za": 85,
+      "be": 6,
+      "bu": 26,
+      "bo": 46,
+      "bi": 66,
+      "ba": 86,
+      "ce": 7,
+      "cu": 27,
+      "co": 47,
+      "ci": 67,
+      "ca": 87,
+      "de": 8,
+      "du": 28,
+      "do": 48,
+      "di": 68,
+      "da": 88,
+      "fe": 9,
+      "fu": 29,
+      "fo": 49,
+      "fi": 69,
+      "fa": 89,
+      "ge": 10,
+      "gu": 30,
+      "go": 50,
+      "gi": 70,
+      "ga": 90,
+      "he": 11,
+      "hu": 31,
+      "ho": 51,
+      "hi": 71,
+      "ha": 91,
+      "je": 12,
+      "ju": 32,
+      "jo": 52,
+      "ji": 72,
+      "ja": 92,
+      "ke": 13,
+      "ku": 33,
+      "ko": 53,
+      "ki": 73,
+      "ka": 93,
+      "le": 14,
+      "lu": 34,
+      "lo": 54,
+      "li": 74,
+      "la": 94,
+      "me": 15,
+      "mu": 35,
+      "mo": 55,
+      "mi": 75,
+      "ma": 95,
+      "ne": 16,
+      "nu": 36,
+      "no": 56,
+      "ni": 76,
+      "na": 96,
+      "pe": 17,
+      "pu": 37,
+      "po": 57,
+      "pi": 77,
+      "pa": 97,
+      "qe": 18,
+      "qu": 38,
+      "qo": 58,
+      "qi": 78,
+      "qa": 98,
+      "re": 19,
+      "ru": 39,
+      "ro": 59,
+      "ri": 79,
+      "ra": 99,
+      "se": 20,
+      "su": 40,
+      "so": 60,
+      "si": 80,
+      "sa": 0
+    },
+    "k17": {
+      "pi": 1,
+      "pu": 21,
+      "pa": 41,
+      "pe": 61,
+      "po": 81,
+      "qi": 2,
+      "qu": 22,
+      "qa": 42,
+      "qe": 62,
+      "qo": 82,
+      "ri": 3,
+      "ru": 23,
+      "ra": 43,
+      "re": 63,
+      "ro": 83,
+      "si": 4,
+      "su": 24,
+      "sa": 44,
+      "se": 64,
+      "so": 84,
+      "ti": 5,
+      "tu": 25,
+      "ta": 45,
+      "te": 65,
+      "to": 85,
+      "vi": 6,
+      "vu": 26,
+      "va": 46,
+      "ve": 66,
+      "vo": 86,
+      "xi": 7,
+      "xu": 27,
+      "xa": 47,
+      "xe": 67,
+      "xo": 87,
+      "yi": 8,
+      "yu": 28,
+      "ya": 48,
+      "ye": 68,
+      "yo": 88,
+      "zi": 9,
+      "zu": 29,
+      "za": 49,
+      "ze": 69,
+      "zo": 89,
+      "bi": 10,
+      "bu": 30,
+      "ba": 50,
+      "be": 70,
+      "bo": 90,
+      "ci": 11,
+      "cu": 31,
+      "ca": 51,
+      "ce": 71,
+      "co": 91,
+      "di": 12,
+      "du": 32,
+      "da": 52,
+      "de": 72,
+      "do": 92,
+      "fi": 13,
+      "fu": 33,
+      "fa": 53,
+      "fe": 73,
+      "fo": 93,
+      "gi": 14,
+      "gu": 34,
+      "ga": 54,
+      "ge": 74,
+      "go": 94,
+      "hi": 15,
+      "hu": 35,
+      "ha": 55,
+      "he": 75,
+      "ho": 95,
+      "ji": 16,
+      "ju": 36,
+      "ja": 56,
+      "je": 76,
+      "jo": 96,
+      "ki": 17,
+      "ku": 37,
+      "ka": 57,
+      "ke": 77,
+      "ko": 97,
+      "li": 18,
+      "lu": 38,
+      "la": 58,
+      "le": 78,
+      "lo": 98,
+      "mi": 19,
+      "mu": 39,
+      "ma": 59,
+      "me": 79,
+      "mo": 99,
+      "ni": 20,
+      "nu": 40,
+      "na": 60,
+      "ne": 80,
+      "no": 0
+    },
+    "kai": {
+      "ge": 1,
+      "go": 21,
+      "ga": 41,
+      "gu": 61,
+      "gi": 81,
+      "he": 2,
+      "ho": 22,
+      "ha": 42,
+      "hu": 62,
+      "hi": 82,
+      "je": 3,
+      "jo": 23,
+      "ja": 43,
+      "ju": 63,
+      "ji": 83,
+      "ke": 4,
+      "ko": 24,
+      "ka": 44,
+      "ku": 64,
+      "ki": 84,
+      "le": 5,
+      "lo": 25,
+      "la": 45,
+      "lu": 65,
+      "li": 85,
+      "me": 6,
+      "mo": 26,
+      "ma": 46,
+      "mu": 66,
+      "mi": 86,
+      "ne": 7,
+      "no": 27,
+      "na": 47,
+      "nu": 67,
+      "ni": 87,
+      "pe": 8,
+      "po": 28,
+      "pa": 48,
+      "pu": 68,
+      "pi": 88,
+      "qe": 9,
+      "qo": 29,
+      "qa": 49,
+      "qu": 69,
+      "qi": 89,
+      "re": 10,
+      "ro": 30,
+      "ra": 50,
+      "ru": 70,
+      "ri": 90,
+      "se": 11,
+      "so": 31,
+      "sa": 51,
+      "su": 71,
+      "si": 91,
+      "te": 12,
+      "to": 32,
+      "ta": 52,
+      "tu": 72,
+      "ti": 92,
+      "ve": 13,
+      "vo": 33,
+      "va": 53,
+      "vu": 73,
+      "vi": 93,
+      "xe": 14,
+      "xo": 34,
+      "xa": 54,
+      "xu": 74,
+      "xi": 94,
+      "ye": 15,
+      "yo": 35,
+      "ya": 55,
+      "yu": 75,
+      "yi": 95,
+      "ze": 16,
+      "zo": 36,
+      "za": 56,
+      "zu": 76,
+      "zi": 96,
+      "be": 17,
+      "bo": 37,
+      "ba": 57,
+      "bu": 77,
+      "bi": 97,
+      "ce": 18,
+      "co": 38,
+      "ca": 58,
+      "cu": 78,
+      "ci": 98,
+      "de": 19,
+      "do": 39,
+      "da": 59,
+      "du": 79,
+      "di": 99,
+      "fe": 20,
+      "fo": 40,
+      "fa": 60,
+      "fu": 80,
+      "fi": 0
+    },
+    "hsu1914": {
+      "ba": 1,
+      "be": 2,
+      "bi": 3,
+      "bo": 4,
+      "bu": 5,
+      "ca": 6,
+      "ce": 7,
+      "ci": 8,
+      "co": 9,
+      "cu": 10,
+      "da": 11,
+      "de": 12,
+      "di": 13,
+      "do": 14,
+      "du": 15,
+      "fa": 16,
+      "fe": 17,
+      "fi": 18,
+      "fo": 19,
+      "fu": 20,
+      "ga": 21,
+      "ge": 22,
+      "gi": 23,
+      "go": 24,
+      "gu": 25,
+      "ha": 26,
+      "he": 27,
+      "hi": 28,
+      "ho": 29,
+      "hu": 30,
+      "ja": 31,
+      "je": 32,
+      "ji": 33,
+      "jo": 34,
+      "ju": 35,
+      "la": 36,
+      "le": 37,
+      "li": 38,
+      "lo": 39,
+      "lu": 40,
+      "ma": 41,
+      "me": 42,
+      "mi": 43,
+      "mo": 44,
+      "mu": 45,
+      "na": 46,
+      "ne": 47,
+      "ni": 48,
+      "no": 49,
+      "nu": 50,
+      "pa": 51,
+      "pe": 52,
+      "pi": 53,
+      "po": 54,
+      "pu": 55,
+      "qa": 56,
+      "qe": 57,
+      "qi": 58,
+      "qo": 59,
+      "qu": 60,
+      "ra": 61,
+      "re": 62,
+      "ri": 63,
+      "ro": 64,
+      "ru": 65,
+      "sa": 66,
+      "se": 67,
+      "si": 68,
+      "so": 69,
+      "su": 70,
+      "ta": 71,
+      "te": 72,
+      "ti": 73,
+      "to": 74,
+      "tu": 75,
+      "va": 76,
+      "ve": 77,
+      "vi": 78,
+      "vo": 79,
+      "vu": 80,
+      "wa": 81,
+      "we": 82,
+      "wi": 83,
+      "wo": 84,
+      "wu": 85,
+      "xa": 86,
+      "xe": 87,
+      "xi": 88,
+      "xo": 89,
+      "xu": 90,
+      "ya": 91,
+      "ye": 92,
+      "yi": 93,
+      "yo": 94,
+      "yu": 95,
+      "za": 96,
+      "ze": 97,
+      "zi": 98,
+      "zo": 99,
+      "zu": 0
+    },
+    "hk1914": {
+      "y": "0",
+      "k": "1",
+      "u": "2",
+      "l": "3",
+      "o": "4",
+      "c": "5",
+      "a": "6",
+      "p": "7",
+      "i": "8",
+      "t": "9",
+      "z": "0"
+    }
+  },
+  "excluded_kai_note": "Kai is retained here for reproducibility, but no Kai telegram passes all publication criteria in this batch.",
+  "messages": [
+    {
+      "id": "inedits-c39-a50t",
+      "source_id": "a50t",
+      "src": "B03050087300, image 50",
+      "cipher": "06862 97368 55239 20059 05780 61300 74058 72429",
+      "effective": "0686297368552392005905780613007405872429",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "向正金收二千卽交卓文",
+      "read": "向正金收二千，卽交卓文。",
+      "key": "ctc",
+      "score": 5.123,
+      "null": -0.26
+    },
+    {
+      "id": "inedits-c39-b05",
+      "source_id": "b05",
+      "src": "B03050087400, image 5",
+      "cipher": "kououtoououu ycpiyaklyaai cuiuakclaaol pktlycacyya yakptaapytta iocuikuotya capplklyyu",
+      "effective": "kououtoououuycpiyaklyaaicuiuakclaaolpktlycacyyayakptaapytaiocuikuotyacapplklyyu",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [
+        [
+          "suppr",
+          56,
+          "t"
+        ]
+      ],
+      "raw": "尚欠數千卽可舉請速電匯于諾道□窣婞口鶺殪",
+      "read": "尚欠數千，卽可舉。請速電匯于諾道{廣}興昌，轉頌。",
+      "key": "hk1914",
+      "score": 2.807,
+      "null": -1.151
+    },
+    {
+      "id": "inedits-c39-b08b",
+      "source_id": "b08b",
+      "src": "B03050087400, image 8",
+      "cipher": "kcpkp ktlpk uyuou tlcot yulou totak clokt uyyia yockk lapyl liklo kyptc pkuyy aaiyy oipoy kkplo ltiky cyyoa tluou tayky",
+      "effective": "kcpkpktlpkuyuoutlcotyuloutotakcloktuyyiayockklapylliklokyptcpkuyyaaiyyoipoykkploltikycyyoatluoutayky",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "已電陸文煇借款請着人到家兄宅問陸可也餉彈當力籌文覆",
+      "read": "已電陸文煇借款，請着人到家兄宅問陸可也。餉彈當力籌。文覆。",
+      "key": "hk1914",
+      "score": 3.443,
+      "null": -1.348
+    },
+    {
+      "id": "inedits-c39-b38",
+      "source_id": "b38",
+      "src": "B03050087400, image 38",
+      "cipher": "19475 45951 74050 40047 00811 32701",
+      "effective": "194754595174050400470081132701",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "愛莫能助乞亮孫",
+      "read": "愛莫能助，乞亮。孫。",
+      "key": "ctc",
+      "score": 2.386,
+      "null": -0.455
+    },
+    {
+      "id": "inedits-c39-b42t",
+      "source_id": "b42t",
+      "src": "B03050087400, image 42",
+      "cipher": "7193 1885 3945 yokohama specie bank 05650 05905 78495 80565 23920 04760 10001 moypoy",
+      "effective": "71931885394505650059057849580565239200476010001",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "電悉由匯二千續匯收乞覆",
+      "read": "電悉，由「Yokohama Specie Bank」匯二千，續匯，收乞覆。",
+      "key": "ctc",
+      "score": 3.867,
+      "null": -1.225
+    },
+    {
+      "id": "inedits-c39-b45t",
+      "source_id": "b45t",
+      "src": "B03050087400, image 45",
+      "cipher": "gasigabugo larovutuze hukubihoce dofoxavasa foyarokufu vofaqigape jorocopuja zabicoyeki",
+      "effective": "gasigabugolarovutuzehukubihocedofoxavasafoyarokufuvofaqigapejorocopujazabicoyeki",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "明日函寄高轉三百元爲兄家費收斷卽來東一行",
+      "read": "明日函寄高，轉三百元爲兄家費，收{到}卽來東一行。",
+      "key": "laisaosang1915",
+      "score": 3.766,
+      "null": -0.695
+    },
+    {
+      "id": "inedits-c39-b51t",
+      "source_id": "b51t",
+      "src": "B03050087400, image 51",
+      "cipher": "39450 46768 92588 74958 05650 05905 78239 26010",
+      "effective": "3945046768925887495805650059057823926010",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "由前銀行續匯二千收覆",
+      "read": "由前銀行續匯二千，收覆。",
+      "key": "ctc",
+      "score": 4.158,
+      "null": 0.446
+    },
+    {
+      "id": "inedits-c39-b51b",
+      "source_id": "b51b",
+      "src": "B03050087400, image 51",
+      "cipher": "nisofihote yodekelofe renoteyo young china tupogoyi",
+      "effective": "nisofihoteyodekeloferenoteyotupogoyi",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "致張電失碼請電馮收",
+      "read": "致張電失碼，請電馮收。",
+      "key": "newyork1915",
+      "score": 2.608,
+      "null": -0.917
+    },
+    {
+      "id": "inedits-c39-m06",
+      "source_id": "m06",
+      "src": "B03050087500, image 6",
+      "cipher": "gucamomido nadajefahe japedoxoro duhefijari mabesinofa hedimodiva beceqecuzu yubose",
+      "effective": "gucamomidonadajefahejapedoxoroduhefijarimabesinofahedimodivabeceqecuzuyubose",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "昨秫居太平洋岸距桑洪百里平安寄信處仍前",
+      "read": "昨{移}居太平洋岸，距桑洪百里，平安。寄信處仍前。",
+      "key": "hsu1914",
+      "score": 3.608,
+      "null": 0.984
+    },
+    {
+      "id": "inedits-c39-m10",
+      "source_id": "m10",
+      "src": "B03050087500, image 10",
+      "cipher": "ziqicaxise vitojixoma zifizekahu levobexika zimerijupo pavina",
+      "effective": "ziqicaxisevitojixomazifizekahulevobexikazimerijupopavina",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "代表返時擔任請鯈日兣來商款刮",
+      "read": "代表返時擔任。請‹鯈›日{內}來商款‹刮›。",
+      "key": "shanghai1916",
+      "score": 3.66,
+      "null": 1.837
+    },
+    {
+      "id": "inedits-c39-m17",
+      "source_id": "m17",
+      "src": "B03050087500, image 17",
+      "cipher": "moquviyete secujuxamu dazukamico cajutogapu vituxuyone busosecora vixabevaco cadetepuyo zorezelido nivirorogi",
+      "effective": "moquviyetesecujuxamudazukamicocajutogapuvituxuyonebusosecoravixabevacocadetepuyozorezelidonivirorogi",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "客中用竭請速電匯美金二百濟急十云日匯東萬元收否並復",
+      "read": "客中用竭，請速電匯美金二百濟急。十{五}日匯東萬元，收否？並復。",
+      "key": "sanfran1916",
+      "score": 4.412,
+      "null": 0.44
+    },
+    {
+      "id": "inedits-c40-a07",
+      "source_id": "a07",
+      "src": "B03050088500, image 7",
+      "cipher": "vobezimeti bulabemopu kipemopusa kutasupomu sepohipera sevojuvobe xahibanina cetositaci ficeyirima qorihobici dodasiyaji lizimepoju viremavazi pitiaxalabe buzibutika vomenoyojo mojebukuji vatigokaru vogafopeqa rasexipize zipafanisa kuyimikaru zipaqarobu ramekusaha",
+      "effective": "vobezimetibulabemopukipemopusakutasupomusepohiperasevojuvobexahibaninacetositacificeyirimaqorihobicidodasiyajilizimepojuviremavazipexitibaxalabebuzibutikavomenoyojomojebukujivatigokaruvogafopeqarasexipizezipafanisakuyimekaruzipaqaroburamekusaha",
+      "inserted": [
+        131,
+        132,
+        136,
+        219
+      ],
+      "phase": 0,
+      "alignment_edits": [
+        [
+          "ajout",
+          131,
+          "e"
+        ],
+        [
+          "ajout",
+          131,
+          "x"
+        ],
+        [
+          "ajout",
+          134,
+          "b"
+        ],
+        [
+          "ajout",
+          216,
+          "e"
+        ],
+        [
+          "suppr",
+          216,
+          "i"
+        ]
+      ],
+      "raw": "日來力與海容海籌筌殉逌己約明日確覆而昨窩得信肇和應瑯又將來殖前肩令···························",
+      "read": "日來力與海容海籌，‹筌›‹殉›‹逌›，己約明日確覆而昨，‹窩›，得信肇和，‹應›‹瑯›，又將來，‹殖›‹前›‹肩›‹使›‹價›‹解›，與一三艦隊接洽，‹今›‹局›‹勵›‹若›‹於›‹王›‹綦›‹迓›，在何處籌備若何，‹統›，乞電，‹篲›。",
+      "key": "shanghai1916",
+      "score": 2.25,
+      "null": -5.72
+    },
+    {
+      "id": "inedits-c40-a09b",
+      "source_id": "a09b",
+      "src": "B03050088500, image 9",
+      "cipher": "tumuzuxizi sorovazelu kimafiqati bicutiqixi",
+      "effective": "tumuzuxizisorovazelukimafiqatibicutiqixi",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "呈大洲辭職當熠梃孫文",
+      "read": "‹呈›‹大›‹洲›，辭職，‹當›‹熠›‹梃›，孫文。",
+      "key": "seito1916",
+      "score": 2.61,
+      "null": -0.67
+    },
+    {
+      "id": "inedits-c40-a10t",
+      "source_id": "a10t",
+      "src": "B03050088500, image 10",
+      "cipher": "zuyixidoxi gapodolabe buzibutika vomenoyojo mojebasiqo jud.rufufa nocifipipo peqarovopo",
+      "effective": "zuyixidoxigapodolabebuzibutikavomenoyojomojebasiqojudarufufanocifipipopeqarovopo",
+      "inserted": [
+        53
+      ],
+      "phase": 0,
+      "alignment_edits": [
+        [
+          "ajout",
+          53,
+          "a"
+        ]
+      ],
+      "raw": "□兄全權與一三艦隊接洽襾機······",
+      "read": "‹□›，兄全權與一三艦隊接洽。‹襾›‹機›‹行›‹𤆬›‹毋›‹式›‹歠›‹統›，文。",
+      "key": "shanghai1916",
+      "score": 2.02,
+      "null": -4.24
+    },
+    {
+      "id": "inedits-c40-a10b",
+      "source_id": "a10b",
+      "src": "B03050088500, image 10",
+      "cipher": "tumuzudifu gerovazelu mocefiqoqu mumufubumu gibacugoqu zequcuquse fubumumutu muyubixico",
+      "effective": "tumuzudifugerovazelumocefiqoqumumufubumugibacugoquzequciruqusefubumumutumuyubixico",
+      "inserted": [
+        55,
+        56
+      ],
+      "phase": 0,
+      "alignment_edits": [
+        [
+          "ajout",
+          55,
+          "i"
+        ],
+        [
+          "ajout",
+          55,
+          "r"
+        ]
+      ],
+      "raw": "呈夬巛辭職請照凄件委狀寄到凝別崛仗呈報正",
+      "read": "‹呈›‹夬›‹巛›，辭職請，‹照›‹凄›，件委狀寄到，‹分›‹助›‹算›‹委›‹仟›‹以›‹淪›。",
+      "key": "seito1916",
+      "score": 1.72,
+      "null": -0.34
+    },
+    {
+      "id": "inedits-c40-a16",
+      "source_id": "a16",
+      "src": "B03050088500, image 16",
+      "cipher": "yuqolaregu risaviraku loqifipoke fabenulude gavugequhe xexekumopa mosigavuju yukayuquea",
+      "effective": "yuqolaregurisavirakuloqifipokefabenuludegavugequhexexekumopamosigavujuyukayuqurea",
+      "inserted": [
+        78
+      ],
+      "phase": 0,
+      "alignment_edits": [
+        [
+          "ajout",
+          78,
+          "r"
+        ]
+      ],
+      "raw": "葉輇眼電閩南不日獨立請拔接濟可呑請示蹐·",
+      "read": "‹葉›‹輇›‹眼›，電閩南不日獨立請，‹拔›，接濟，‹可›‹呑›，請示，‹蹐›‹織›。",
+      "key": "manila1916",
+      "score": 2.05,
+      "null": -1.51
+    },
+    {
+      "id": "inedits-c40-a18t",
+      "source_id": "a18t",
+      "src": "B03050088500, image 18",
+      "cipher": "boyiduhayi bocetupehe yoniduqayu qusunuko xidoyofiri natudanudi xixelahupu gimuxacufe soposopilla camuzosiki zhibonuyipo sadusemoce sugikunbeni dizidoxico",
+      "effective": "boyiduhayibocetupeheyoniduqayuqusunepukoxidoyofirinatudanudixixelahupugimuxacufesoposopilacamuzosikihibonuyiposadusemocesugeqikunebenidizidoxico",
+      "inserted": [
+        35,
+        36,
+        123,
+        124,
+        129
+      ],
+      "phase": 0,
+      "alignment_edits": [
+        [
+          "ajout",
+          35,
+          "e"
+        ],
+        [
+          "ajout",
+          35,
+          "p"
+        ],
+        [
+          "suppr",
+          86,
+          "l"
+        ],
+        [
+          "suppr",
+          99,
+          "z"
+        ],
+        [
+          "ajout",
+          123,
+          "e"
+        ],
+        [
+          "ajout",
+          123,
+          "q"
+        ],
+        [
+          "ajout",
+          127,
+          "e"
+        ]
+      ],
+      "raw": "青島汔船社長岩城卯□駙烈响閧澦縐弇燕窴蒯贏····玔候起居請厹····",
+      "read": "青島，‹汔›，船社長岩城，‹又›‹冒›，此間曾商借款並允便宜運送今來東，‹玔›，候起居請，‹口›‹整›‹短›，接洽正。",
+      "key": "seito1916",
+      "score": 1.94,
+      "null": -3.42
+    },
+    {
+      "id": "inedits-c40-a18b",
+      "source_id": "a18b",
+      "src": "B03050088500, image 18",
+      "cipher": "mopukipemo pusakusigo nehofisezi bufanitaje bucakavome nijeposije zipidihadi tabuqimaje bocumozuho vahikefice popasigobu qisisazoxo buhodovabu izibucajibi kavoqayopo pazipilabe mebitemide mebacubuku vobemozuno qeforataco detomoheso rivojukozi piqadoveto pubuzibuca vobekifahi vemofidike locunoyovo qubikumiso kicemetadi zidocu",
+      "effective": "mopukipemopusakusigonehofisezibufanitajebucakavomenijeposijezipidihaditabuqimajebocumozuhovahikeficepopasigobuqisisazoxobuhucodovabulizibucajibikavoqayopopazipilabemebitemidemebacubukuvobemozunoqeforatacodetomohesorivojukozipiqadovetopubuzibucavobekifahivemofidikelocunoyovoqubikumisokicemetadizidocu",
+      "inserted": [
+        123,
+        124,
+        132
+      ],
+      "phase": 0,
+      "alignment_edits": [
+        [
+          "ajout",
+          123,
+          "u"
+        ],
+        [
+          "ajout",
+          123,
+          "c"
+        ],
+        [
+          "ajout",
+          130,
+          "l"
+        ]
+      ],
+      "raw": "海容海籌厹間往他處第二艦除饅司令恇怯不能發浙然巵得款厹不反抗乃瑟··········································",
+      "read": "海容海籌，‹厹›‹間›，往他處第二艦，‹除›‹饅›，司令恇怯不能發浙然，‹巵›，得款，‹厹›，不反抗，‹仍›‹用›‹禕›‹委›，二小艦給款令與陸軍，‹齊›‹詘›，今日浙江獨立，黨派未明。‹溤›，國璋有一二日，‹宣›‹巧›‹泂›‹息›‹溠›‹毓›‹旴›‹扐›‹夤›‹寇›‹險›‹必›‹璥›。",
+      "key": "shanghai1916",
+      "score": 2.51,
+      "null": -6.28
+    },
+    {
+      "id": "inedits-c40-a30",
+      "source_id": "a30",
+      "src": "B03050088500, image 30",
+      "cipher": "moyumebibu yefipebugi masaxizabo cusiyaseta legogixipi domezutosi tocisecasi yazefosozi bukuvobehi pesexetibi difaditabu fokavomino nenosifoco senajehipe xahizesone noxagamibi xahizesone noxagamibi bugevonafi cexaqaneno tiyixijabu kutocidigi tibilisena cimivamabi hozafoluci jediviyala soyutibupi gasemadaru zimimilofi herino",
+      "effective": "moyumebibuyefipebugimasaxizabocusiyasetalegogixipidomezutositocisecasiyazefosozibukuvobehipesexetibidifaditabufokavominonenosifocosenajehipexahizesonenoxagamibixahizesonenoxagamibibugevonaficexaqanenotiyixijabukutocidigitibilisenacimivamabihozafolucijediviyalasoyutibupigasemadaruzimimilofiherino",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "浚陸互待丢肯先發又逡非常困難昨晚遂又誤期今日己運動恍怯之艦夭開去留者己確認開礽外確認開礽外亦新得礮開加入今晚快動媾美奉職無珌慚忍短柝力圖進行仰太後命",
+      "read": "‹浚›，陸互待，‹丢›，肯先發，‹又›‹逡›，非常困難昨晚遂又誤期今日己運動，‹恍›‹怯›，之艦，‹夭›，開去留者己確認，‹開›‹礽›‹外›，確認，‹開›‹礽›‹外›，亦新得，‹礮›‹開›，加入今晚，‹快›‹動›‹媾›，美奉職，‹無›‹珌›‹慚›‹忍›‹短›‹柝›，力圖進行，‹仰›‹太›‹後›‹命›。",
+      "key": "shanghai1916",
+      "score": 2.38,
+      "null": -1.29
+    },
+    {
+      "id": "inedits-c40-a40",
+      "source_id": "a40",
+      "src": "B03050088500, image 40",
+      "cipher": "sakayusitu cekupuhufa hisetemose fimefijosi kohahevexe qubeyosavu lepaletute bocelaxome sacoxupafe sadocubeti",
+      "effective": "sakayusitucekupuhufahisetemosefimefijosikohahevexequbeyosavulepaletutebocelaxomesacoxupafesadocubeti",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "今日抵滬海陸作戰己與英士兄及中島少佐商確乞放噶統叩",
+      "read": "今日抵滬。海陸作戰己與英士兄及中島少佐商確，乞放，‹噶›，統叩。",
+      "key": "k16",
+      "score": 3.43,
+      "null": -0.87
+    },
+    {
+      "id": "inedits-c40-a44t",
+      "source_id": "a44t",
+      "src": "B03050088500, image 44",
+      "cipher": "xihaniqico domehipiga gofasiyuyo numimomola cupozimeze kamohemitu busuyojobu fipiqonohi cologizofi pevopoviva",
+      "effective": "xihaniqicodomehipigagofasiyuyonumimomolacupozimezekamohemitubusuyojobufipiqonohicologizofipevopoviva",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "內域用陳圖牖名搭天洋□來請派妥人接並囑毅生幬待文删",
+      "read": "‹內›‹域›‹用›‹陳›‹圖›‹牖›，名搭天洋，‹□›，來請派妥人接並囑毅生，‹幬›，待文，‹删›。",
+      "key": "shanghai1916",
+      "score": 1.59,
+      "null": -1.1
+    },
+    {
+      "id": "inedits-c40-a44b",
+      "source_id": "a44b",
+      "src": "B03050088500, image 44",
+      "cipher": "kamumiyiqa robuzixifa xidonexima kifopebudo vimakofoqi xocixuhoga gofilazefi hemoputemi bufadituco tafopexido zoleyoveti xotodudifa xidotiquti bufiectemi kavoxikidi zajiliqoju qilujivaba yisiqataco rinidetobu zonihixaqu",
+      "effective": "kamumiyiqarobuzixifaxidoneximakifopebudovimakofoqixocixuhogagofilazefihemoputemibufaditucotafopexidozoleyovetixotodudifaxidotiqutibufihetemikavoxikidizajiliqojuqilujivabayisiqatacorinidetobuzonihixaqu",
+      "inserted": [
+        134
+      ],
+      "phase": 0,
+      "alignment_edits": [
+        [
+          "ajout",
+          134,
+          "h"
+        ],
+        [
+          "suppr",
+          135,
+          "c"
+        ]
+      ],
+      "raw": "英士統一兩兄鑒聞王乍到滬喜慰熙爍自後海軍事悉由王兄指揮務望恍兄協力·軍艦儉怨將機器局襲取立吾黨丫基祺",
+      "read": "英士統一兩兄鑒聞，‹王›‹乍›，到滬喜慰，‹熙›‹爍›，自後海軍事悉由王兄指揮。務望，‹恍›，兄協力，，‹後›，軍艦，‹儉›‹怨›，將機器局襲取立吾黨，‹丫›‹基›‹祺›。",
+      "key": "shanghai1916",
+      "score": 2.84,
+      "null": -1.42
+    },
+    {
+      "id": "inedits-c40-a41",
+      "source_id": "a41",
+      "src": "B03050088500, image 41",
+      "cipher": "noyesiyuzuza zicerudosica xemanobajiho rahiviyedeku noxaveracefo tiehaqiriku pananogenoy pibuhacotuno",
+      "effective": "noyesiyuzuzazicerudosicaxemanobajihorahiviyedekunoxaveracefotikehaqirikupananogenoyapibuhacotuno",
+      "inserted": [
+        62,
+        83
+      ],
+      "phase": 0,
+      "alignment_edits": [
+        [
+          "ajout",
+          62,
+          "k"
+        ],
+        [
+          "ajout",
+          82,
+          "a"
+        ]
+      ],
+      "raw": "亞函款均收到鄂乳廹確可靠乞速電······水𦼖",
+      "read": "‹亞›，函款均收到，‹鄂›‹乳›‹廹›，確可靠乞速電十萬元直交，‹也›‹伯›‹蔡›‹昕›。",
+      "key": "k17",
+      "score": 2.82,
+      "null": -2.96
+    },
+    {
+      "id": "inedits-c40-a42",
+      "source_id": "a42",
+      "src": "B03050088500, image 42",
+      "cipher": "hikaqezado curutasavu zelahufafu qutegekeko fedogemesa kapemidipu hikatikoke nimovefuri lirelejisa vulenaheju cizozicido cubeti",
+      "effective": "hikaqezadocurutasavuzelahufafuqutegekekofedogemesakapemidipuhikatikokenimovefurilirelejisavulenahejucizozicidocubeti",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "電悉統當中占海權以定國基今後醽電請寄萬歲館山中峯太郎轉統叩",
+      "read": "電悉統當，‹中›，占海權，以定國基。今後，‹醽›，電請寄萬歲館山中峯太郎轉。統叩。",
+      "key": "k16",
+      "score": 3.97,
+      "null": -1.2
+    },
+    {
+      "id": "inedits-c40-a43",
+      "source_id": "a43",
+      "src": "B03050088500, image 43",
+      "cipher": "cesinokali nokizenumo zuzahupape forahatevo cuxunokidi xifitaluko naviqigura ji",
+      "effective": "cesinokalinokizenumozuzahupapeforahatevocuxunokidixifitalukonaviqiguraji",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "陜事心待發款無謎示辦法並姣宋瓀襾借碼",
+      "read": "陜事，‹心›，待發款，‹無›‹謎›，示辦法並，‹姣›‹宋›‹瓀›‹襾›‹借›‹碼›。",
+      "key": "k17",
+      "score": 1.8,
+      "null": -0.58
+    },
+    {
+      "id": "inedits-c40-a51t",
+      "source_id": "a51t",
+      "src": "B03050088500, image 51",
+      "cipher": "mafipenamu yukupipibi kuxatamuju qucugobuva letubucahu rarumocesi fihayaroti nipibikize rejagisava foqicevipo tugibamenu moszuhise",
+      "effective": "mafipenamuyukupipibikuxatamujuqucugobuvaletubucahurarumocesifihayarotinipibikizerejagisavafoqicevipotugibamenumosuzuhise",
+      "inserted": [
+        113
+      ],
+      "phase": 0,
+      "alignment_edits": [
+        [
+          "ajout",
+          113,
+          "u"
+        ]
+      ],
+      "raw": "袁諐甚狡以獨立爝消民黨氣焰故陜宜緩動以待購局籌備同時而發·",
+      "read": "‹袁›‹諐›，甚狡以獨立，‹爝›，消民黨氣焰故陜宜緩動以待，‹購›‹局›，籌備同時而發文巧。",
+      "key": "k17",
+      "score": 2.84,
+      "null": -2.97
+    },
+    {
+      "id": "inedits-c40-a54t",
+      "source_id": "a54t",
+      "src": "B03050088500, image 54",
+      "cipher": "nohicolovi mazarobuzi hiketovoko fobufayiki tiqurijute sudoninoqe mekiqefuvo begojosopi detofaxato cotositopu siqapesize zajivosori yeyikihuki pelixijipo xosavirefi sepaxanilo",
+      "effective": "nohicolovimazarobuzihiketovokofobufayikitiqurijutesudoninoqemekiqefuvobegojosopidetofaxatocotositopusiqapesizezajivosoriyeyikihukipelixijipoxosavirefisepaxanilo",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "毅生到皽一巵晤滬事倬協商辦理江陰銑日爲本黨蚶暍昨有取銷説尚未謡實容姜尤擋前往繮報",
+      "read": "毅生到，‹皽›‹一›‹巵›‹晤›，滬事，‹倬›，協商辦理江陰銑日爲本黨，‹蚶›‹暍›，昨有取銷説尚未，‹謡›，實，‹容›‹姜›‹尤›‹擋›，前往，‹繮›，報。",
+      "key": "shanghai1916",
+      "score": 2.36,
+      "null": -1.3
+    },
+    {
+      "id": "inedits-c40-a51b",
+      "source_id": "a51b",
+      "src": "B03050088500, image 51",
+      "cipher": "lohinogese yicisimile zipamopumi bisizudiqi miyopogopi lopigatipi tibubufiyi metopukeje gojiyeziro nazekexido labelohiso huginamitu rijuyijoki bemojogojo bocumebipi sesijivixe zipirinide tolemitiju ketobufoma jesijutodu sosukihusi xibanivopo",
+      "effective": "lohinogeseyicisimilezipamopumibisizudiqimiyopogopilopigatipitibubufiyimetopukejegojiyezironazekaxidolabelohisohuginamiturijuyijokibemojogojobocumebipisesijuvixezipirinidetolemitijuketobufomajesijutodusosukihusixibanivopo",
+      "inserted": [
+        95,
+        155
+      ],
+      "phase": 0,
+      "alignment_edits": [
+        [
+          "ajout",
+          95,
+          "a"
+        ],
+        [
+          "suppr",
+          95,
+          "e"
+        ],
+        [
+          "ajout",
+          155,
+          "u"
+        ],
+        [
+          "suppr",
+          155,
+          "i"
+        ]
+      ],
+      "raw": "淅汪近情如何海外同忘多欄回圖効力並備有飆燾謟械諳兄與淅枰府妥商借寧波爲發陸地□則令吾黨霤占領之能否望查實印覆文",
+      "read": "‹淅›‹汪›，近情如何海外同，‹忘›，多，‹欄›，回，‹圖›，効力並備有，‹飆›‹燾›‹謟›，械，‹請›，兄與，‹淅›‹枰›‹府›，妥商借寧波爲，‹發›‹陸›，地，‹否›，則令吾黨，‹霤›，占領之能否望查實，‹印›，覆文。",
+      "key": "shanghai1916",
+      "score": 2.69,
+      "null": -1.12
+    },
+    {
+      "id": "inedits-c40-a53",
+      "source_id": "a53",
+      "src": "B03050088500, image 53",
+      "cipher": "xequtefozu leholizese biverebehe jitefozuga zulezuleti negejutege tefadocubo kaxenoleyo jocisodeke cuyufutoge",
+      "effective": "xequtefozuleholizesebiverebehejitefozugazulezuletinegejutegetefadocubokaxenoleyojocisodekecuyufutoge",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "兄何時能動近情如何朋時時詳報以便統籌全局至要孫文皓",
+      "read": "兄何時能動？近情如何？{望}時時詳報，以便統籌全局，至要。孫文皓。",
+      "key": "k16",
+      "score": 4.31,
+      "null": -0.69
+    },
+    {
+      "id": "inedits-c40-a54b",
+      "source_id": "a54b",
+      "src": "B03050088500, image 54",
+      "cipher": "dugayuqunu dixixirina kirezunipo lumizeposa xicozacosi tumelenidi figecufapo tumuhuyedo vodoheyuzu borigiduqi yuqumolesu cutidanovi muyukepela vupojaxico",
+      "effective": "dugayuqunudixixerinakirezunipolumizeposaxicozacositumelenidifigecufapotumuhuyedovodoheyuzuborigiduqiyuqumolesucutidanovimuyukepelavupojaxico",
+      "inserted": [
+        15
+      ],
+      "phase": 0,
+      "alignment_edits": [
+        [
+          "ajout",
+          15,
+          "e"
+        ],
+        [
+          "suppr",
+          15,
+          "i"
+        ]
+      ],
+      "raw": "峯城借櫟曾由多賀拖起正袇未直接熙實責任者鈞處如晬尚城諐卽椰譫以補不足正",
+      "read": "‹峯›‹城›，借款曾由多賀，‹拖›‹起›‹正›‹袇›，未直接，‹熙›，實責任者鈞處如，‹晬›‹尚›‹城›‹諐›‹卽›‹椰›‹譫›，以補不足正。",
+      "key": "seito1916",
+      "score": 1.94,
+      "null": -1.18
+    },
+    {
+      "id": "inedits-c40-b03t",
+      "source_id": "b03t",
+      "src": "B03050088600, image 3",
+      "cipher": "diqerusazo cabosejuji hiterekixi doyofiniji lutalavusu qekiyipume likaqufela sarefazoca bosegevogu qezusituyi mebapusore kisonidere tiyesudagu polucerozu kijiyimige copigayuqu bevotudari zazocakiyo sumadozude jeyubixico",
+      "effective": "diqerusazocabosejujihiterekixidoyofinijilutalavusuqekiyipumelikaqufelasarefazocabosegevoguqezusituyimebapusorekisonideretiyesudagupolucerozukijiyimigecopigayuqubevotudarizazocakiyosumadozudejeyubixico",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "濟卒電靳急獨立此間措手不及甞先發制人策電靳藜庋夤命着其立退莊械否庬我軍用毒藥攻城致商服電略同餘莪報正",
+      "read": "‹濟›‹卒›，電靳急獨立此間措手不及，‹甞›，先發制人策電靳，‹藜›‹庋›‹夤›‹命›，着其立退，‹莊›‹械›，否，‹庬›，我軍用毒藥攻城致商，‹服›，電略同餘，‹莪›，報正。",
+      "key": "seito1916",
+      "score": 2.43,
+      "null": -1.4
+    },
+    {
+      "id": "inedits-c40-a52b",
+      "source_id": "a52b",
+      "src": "B03050088500, image 52",
+      "cipher": "latuyumuju zuyujirupi simuqudicu fabidanuzo hugozocohi terekiluce lafapigala hirihoziga hukolutala vedeligiyo fuzoguzesu daleyugidi",
+      "effective": "latuyumujuzuyujirupisimuqudicufabidanuzohugozocohiterekilucelafapigalahirihozigahukolutalavedeligiyofuzoguzesudaleyugidi",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "下垚忙堦務期切實準備徐雖獨立我仍攻之更涌得手也荷物已庠否覆爲",
+      "read": "‹下›‹垚›‹忙›‹堦›，務期切實準備。徐雖獨立，我仍攻之，更，‹涌›，得手也荷物已，‹庠›，否覆，‹爲›。",
+      "key": "seito1916",
+      "score": 3.14,
+      "null": -1.24
+    },
+    {
+      "id": "inedits-c40-b03b",
+      "source_id": "b03b",
+      "src": "B03050088600, image 3",
+      "cipher": "kibekojobu fadizisiqe tesupotaji vuhipexevu sohorijumi tudihenilo",
+      "effective": "kibekojobufadizisiqetesupotajivuhipexevusohorijumitudihenilo",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "寧滲事必可辦次岩己赴杭商妥悃報",
+      "read": "‹寧›‹滲›，事必可辦次岩己赴杭商妥，‹悃›，報。",
+      "key": "shanghai1916",
+      "score": 1.83,
+      "null": -0.92
+    },
+    {
+      "id": "inedits-c40-b04t",
+      "source_id": "b04t",
+      "src": "B03050088600, image 4",
+      "cipher": "hisedofoli tocesinoka lilunifate cihibekime tiyuverati tezuzacuhe novovikuvi yefivarija rudokiyolu kodiqigura ji",
+      "effective": "hisedofolitocesinokalilunifatecihibekimetiyuveratitezuzacuhenovovikuviyefivarijarudokiyolukodiqiguraji",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "巧軝悉陜事急我軍巳得勢速匯款派人去可完全收復瓀姚濛",
+      "read": "巧，‹軝›，悉陜事急，我軍巳得勢，速匯款派人去，可完全收復。‹瓀›‹姚›‹濛›。",
+      "key": "k17",
+      "score": 3.21,
+      "null": -1.43
+    },
+    {
+      "id": "inedits-c40-b11",
+      "source_id": "b11",
+      "src": "B03050088600, image 11",
+      "cipher": "ruhopuletu fiqixizoca moqudugaya qulihoyepe qipafigohu vacovusune xuvihuvano kerisuzoca setuquzeze numumenudi xixerivucu famocepume kibimelesu saduqayuqu ladozifaxi doyofideli giyofuzogu zebidanuzo duqizodari dugiloxico",
+      "effective": "ruhopuletufiqixizocamoqudugayaqulihoyepeqipafigohuvacovusunexuvihuvanokerisuzocasetuquzezenumumenudixixerivucufamocepumekibimelesusaduqayuquladozifaxidoyofideligiyofuzoguzebidanuzoduqizodaridugiloxico",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "十八和文電詢峯□癑翌早熒復頃又囑復豈昨電筱到耶但借款是實請先生直向岩城交涉此間荷物已庠準備尚需時犂正",
+      "read": "十八，‹和›，文電詢，‹峯›‹□›‹癑›‹翌›，早，‹熒›，復頃又囑復，‹豈›，昨電，‹筱›，到耶但借款是實，請先生直向岩城交涉。此間荷物已，‹庠›，準備尚需時，‹犂›，正。",
+      "key": "seito1916",
+      "score": 2.85,
+      "null": -1.22
+    },
+    {
+      "id": "inedits-c40-b10",
+      "source_id": "b10",
+      "src": "B03050088600, image 10",
+      "cipher": "zocajuraze cudugayugu levuhukozo lurozukima duqesumaku nelafinudi xixemidotu yujorifuxo nudivoloxi xebetolaca duqisituki bigilarulu kimadugefu xorixafiro legejujela vuzedopufo hukosumaku nefigefudo ludacocidu boladoziqa",
+      "effective": "zocajurazecudugayugulevuhukozolurozukimaduqesumakunelafinudixixemidotuyujorifuxonudivoloxixebetolacaduqisitukibigilarulukimadugefuxorixafirolegejujelavuzedopufohukosumakunefigefudoludacociduboladoziqa",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "電悉聞峯堂要得陸軍當局同意乃借款按吾黨己借鉅款至今尚未生燔動當屛己有煩言恐不能再得同意熙巷托頭山交浦",
+      "read": "電悉聞，‹峯›‹堂›，要得陸軍當局同意乃借款按吾黨己借鉅款至今尚未，‹生›‹燔›，動，‹當›‹屛›，己有煩言恐不能再得同意，‹熙›‹巷›，托頭山交，‹浦›。",
+      "key": "seito1916",
+      "score": 4.04,
+      "null": -1.23
+    },
+    {
+      "id": "inedits-c40-b12",
+      "source_id": "b12",
+      "src": "B03050088600, image 12",
+      "cipher": "zepisabojo dilejisavu hikaxujabe lahufazihe sasorukinu luserezecu sababugeku zogejusabe bicozuduzu famutogihi xoyobihogo carudugere xegiyehoku pupemibepi yumorebepe dohejitefo zufahokezu qatinegeju",
+      "effective": "zepisabojodilejisavuhikaxujabelahufazihesasorukinuluserezecusababugekuzogejusabebicozuduzufamutogihaxoyobihogocarudugerexegiyehokupupemibepiyumorebepedohejitefozufahokezuqatinegeju",
+      "inserted": [
+        99
+      ],
+      "phase": 0,
+      "alignment_edits": [
+        [
+          "ajout",
+          99,
+          "a"
+        ],
+        [
+          "suppr",
+          99,
+          "i"
+        ]
+      ],
+      "raw": "十九致山中電收否海軍于畫爲應募人札漏報上連普有無闚礙進耕甚堊冀到滬後各方情形如何有聞望詳報",
+      "read": "十九致山中電收否？海軍，‹于›‹畫›，爲應募人，‹札›，漏報，‹上›‹連›‹普›，有無阻礙進，‹耕›‹甚›‹堊›‹冀›，到滬後各方情形如何？，‹有›‹聞›，望詳報。",
+      "key": "k16",
+      "score": 2.93,
+      "null": -1.58
+    },
+    {
+      "id": "inedits-c40-b13",
+      "source_id": "b13",
+      "src": "B03050088600, image 13",
+      "cipher": "noqemekira kugojorini detotiqoni bihipexohu lizirocufa sisiyezipi tositociye caxevubufi nikemohebu juyadasaku nepuririume yepoparona bifibabemo roganazone rofodonozi memekuzoga rofodonozi memekuzoga hamuyovano sasigesiyu sebesifose xabanizeka lerejageno pepiqolforo mabomipoji jisexazume",
+      "effective": "noqemekirakugojorinidetotiqonibihipexohulizirocufasisiyezipitositociyecaxevubufinikemohebujuyadasakunepuririmeyepoparonabifibabemoroganazonerofodonozimemekuzogarofodonozimemekuzogahamuyovanosasigesiyusebesifosexabanizekalerejagenopepiqoforomabomipojijisexazume",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [
+        [
+          "suppr",
+          108,
+          "u"
+        ],
+        [
+          "suppr",
+          237,
+          "l"
+        ]
+      ],
+      "raw": "江陰紫爲吾黨勢埤己改委楊虎只令昨晚豈赴並增派介石籌防告·································棁疹檢屬祲",
+      "read": "江陰，‹紫›，爲吾黨勢，‹埤›，己改委楊虎，，‹只›，令昨晚，‹豈›，赴並增派介石籌防。‹告›，集款械懇設法，‹薏›，持梓琴來電招梓琴來電招蔡，‹掫›‹民›‹吃›‹名›‹遣›‹去›，速覆請，‹鞭›‹菩›‹池›‹囑›‹猪›‹股›，大尉速，‹吰›。",
+      "key": "shanghai1916",
+      "score": 1.71,
+      "null": -5.83
+    },
+    {
+      "id": "inedits-c40-b20t",
+      "source_id": "b20t",
+      "src": "B03050088600, image 20",
+      "cipher": "nogemekigo jorinipiqa qofimebami pobaqinipa rinidetofi cebunoqixo qofilazeco zuzaratibu sakuyojojo vajovanosa sigesexase besijovopo",
+      "effective": "nogemekigojorinipiqaqofimebamipobaqiniparinidetoficebunoqixoqofilazecozuzaratibusakuyojojovajovanosasigesexasebesijovopo",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "汪陰爲吾國極雄大要塞吾黨得丹喜極自當盡力籌接濟濟民吃速遣胴文",
+      "read": "‹汪›，陰爲吾國極雄大要塞吾黨得，‹丹›，喜極自當盡力籌接濟，‹濟›‹民›‹吃›，速遣，‹胴›，文。",
+      "key": "shanghai1916",
+      "score": 3.35,
+      "null": -1.32
+    },
+    {
+      "id": "inedits-c40-b20b",
+      "source_id": "b20b",
+      "src": "B03050088600, image 20",
+      "cipher": "cenovirube valaqetumo sicexojoyo jirefucute xefobopuje dusadebehe lagevubezo nuzopuhoda sosufojosa cevigokuna dabukoheco gecovizeti jeyitoyuco tavizohole hogumasage nidobudora doxisofoda zuholekola cehinakohe hudeyodazu cocavotoso sedetevita dehofalute cuyavixeja hesesejoge rinemuvina datefalute cuyavisovi lenivikexe janakoxefo zopuhodazo pakamibehe",
+      "effective": "cenovirubevalaqetumosicexojoyojirefucutexefobopujedusadebehelagevubezonuzopuhodasosufojosacevigokunadabukohecogecovizetijeyitoyucotavizoholehogumasagenidobudoradoxisofodazuholekolacehinakohehudeyodazucocavotososedetevitadehofalutecuyavixejahesesejogerinemuvinadatefalutecuyavisovilenivikexejanakoxefozopuhodazopakamibehe",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "時事日非袁□以僎獨立抵制民黯文靉親入內地恐吾黨不能造大勢力故決意卄七回國飛機及各同志速回如有餘款朢速匯應急東京本部由謝持權理横濱交通部由謝心準主持餘抵內地再電文",
+      "read": "時事日非袁，‹□›，以，‹僎›，獨立抵制民，‹黯›，文，‹靉›，親入內地，恐吾黨不能造大勢力。故決意卄七回國。飛機及各同志速回。如有餘款，‹朢›，速匯應急。東京本部由謝持權理；横濱交通部由謝心準主持。餘抵內地再電。文。",
+      "key": "sanfran1916",
+      "score": 3.88,
+      "null": -1.37
+    },
+    {
+      "id": "inedits-c40-b21b",
+      "source_id": "b21b",
+      "src": "B03050088600, image 21",
+      "cipher": "pujisobubo sezoxaholu zocaqixipu ferixafepu vozesunabo sezocarude lakosusagi lomuxolado zifagilomu xomocelego gigepijagu yepijaguye kivigidizo maluhemuxu fepuvozegu tiyugositu cucelevula hixidozoca fimemefiri xanifomuyi hufokepubo licalesoka beloqilola saruxayoyo muyalafila vumigesuho xuvelahiju puyekopuse zolipegegu dixuvigidi",
+      "effective": "pujisobubosezoxaholuzocaqixipuferixafepuvozesunabosezocarudelakosusagilomuxoladozifagilomuxomocelegogigepijaguyepijaguyekivigidizomaluhemuxufepuvozegutiyugositucucelevulahixidozocafimemefirixanifomuyihufokepubolicalesokabeloqilolasaruxayoyomuyalafilavumigesuhoxuvelahijupuyekopusezolipegegudixuvigidi",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "兄迫靳雲鵬電文內有萱野名靳電北京向犂使交涉犂使請訣牕政府政府甚爲難或令萱野平墩未定要之此電無益有損伯後表面釅避與日人南關係乃不招各國之忌而免障礽幻囑爲",
+      "read": "兄，‹迫›，靳雲鵬電文內有萱野名靳電北京向，‹犂›，使交涉，‹犂›，使請，‹訣›‹牕›，政府政府甚爲難或令萱野，‹平›‹墩›，未定要之此電無益有損。‹伯›，後表面，‹釅›，避與日人，‹南›，關係乃不招各國之忌而免障，‹礽›‹幻›‹囑›‹爲›。",
+      "key": "seito1916",
+      "score": 3.24,
+      "null": -1.44
+    },
+    {
+      "id": "inedits-c40-b25t",
+      "source_id": "b25t",
+      "src": "B03050088600, image 25",
+      "cipher": "mutoxoyohe fuleyosaco zexoqere",
+      "effective": "mutoxoyohefuleyosacozexoqere",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "無礙大局乞勿念",
+      "read": "無礙大局，乞勿念。",
+      "key": "k16",
+      "score": 3.26,
+      "null": -0.36
+    },
+    {
+      "id": "inedits-c40-b25b",
+      "source_id": "b25b",
+      "src": "B03050088600, image 25",
+      "cipher": "zolisateko yuhiguhivi binacocuhu tazolisaro bicubiqogi vuqudidocu xuvixetobe dohefugudi goripemigi yocolutelo kupusapoko hacebisahu tisidocuye risapuquce mesiforasa",
+      "effective": "zolisatekoyuhiguhivibinacocuhutazolisarobicubiqogivuqudidocuxuvixetobedohefugudigoripemigiyocolutelokupusapokohacebisahutisidocuyerisapuqucemesiforasa",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "第一艦隊集遻粤浙第二逆遁長璆統擬先取大江而後閩粳佛滬事英哥主謀統副之現布置",
+      "read": "第一艦隊集，‹遻›，粤浙第二，‹逆›‹遁›，長，‹璆›，統擬先取大江而後閩，‹粳›‹佛›，滬事英哥主謀統副之現布置。",
+      "key": "k16",
+      "score": 2.98,
+      "null": -1.46
+    },
+    {
+      "id": "inedits-c40-b27b",
+      "source_id": "b27b",
+      "src": "B03050088600, image 27",
+      "cipher": "kolanosato sivimameku ditufihezi hicozutibu gojobufozi zarizuseyi cisebuqivo qiditumezu xoluvabuko febufasema barutofeti votemikima masazeniki rezarugojo xerabuzise nasihakuka siqebocuti bibekasaku buxehayisi xatitenoqe mekisiqeza bayojosehe cikolanfosa robaxisena gepubidoni xihezekaki vayirisaqi lizigolusi",
+      "effective": "kolanosatosivimamekuditufihezihicozutibugojobufozizarizuseyicisebuqivoqiditumezuxoluvabukofebufasemabarutofetivotemikimamasazenikirezarugojoxerabuzisenasihakukasiqebocutibibekasakubuxehayisixatitenoqemekisiqezabayojosehirecikolafosarobaxisenagepubidonixihezekakivayirisaqilizigolusi",
+      "inserted": [
+        219,
+        220
+      ],
+      "phase": 0,
+      "alignment_edits": [
+        [
+          "ajout",
+          219,
+          "i"
+        ],
+        [
+          "ajout",
+          219,
+          "r"
+        ],
+        [
+          "suppr",
+          226,
+          "n"
+        ]
+      ],
+      "raw": "漢民昨到電悉後件當力爲之但唐近態不敗悉難收禕漊事進註更勝軍官肯詬家眷爲質一週叠鄈可發動伀籌五萬叉匯江陰可直接遛惻··············",
+      "read": "漢民昨到電悉後件當力爲之但唐近態不，‹敗›，悉難收，‹禕›‹漊›，事進，‹註›‹更›‹勝›，軍官肯，‹詬›，家眷爲質一週，‹叠›‹鄈›，可發動，‹伀›，籌五萬，‹叉›，匯江陰可直接，‹述›‹那›‹漢›‹獧›‹棍›‹其›‹耈›‹□›，理再請，‹安›‹信›‹箋›，委狀。",
+      "key": "shanghai1916",
+      "score": 2.13,
+      "null": -3.46
+    },
+    {
+      "id": "inedits-c40-b31t",
+      "source_id": "b31t",
+      "src": "B03050088600, image 31",
+      "cipher": "qixirukola puqilosoqu cihiguzehu fozocazecu biqeruxahu kolutoqixi lupemuzogo tipujibida nugosuculi halavujumu jiyutudari ralaveqixi",
+      "effective": "qixirukolapuqilosoqucihiguzehufozocazecubiqeruxahukolutoqixilupemuzogotipujibidanugosuculihalavujumujiyutudariralaveqixi",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "文卄七日返滬庠後電聞淀南得戳文戀來魯兄準傭卽癸不必理商會也文",
+      "read": "文卄七日返滬，‹庠›，後電聞，‹淀›，南得，‹戳›‹文›‹戀›，來魯兄準，‹傭›‹卽›‹癸›，不必理商會也文。",
+      "key": "seito1916",
+      "score": 2.36,
+      "null": -1.22
+    },
+    {
+      "id": "inedits-c40-b30t",
+      "source_id": "b30t",
+      "src": "B03050088600, image 30",
+      "cipher": "karukofomo zumajexija rinidetosa gopikavixe mipojivasi gekikayaga vapobuyase yinogebupo pilozaluji lekovaseco yupalenoso sibuyojili",
+      "effective": "karukofomozumajexijarinidetosagopikavixemipojivasigekikayagavapobuyaseyinogebupopilozalujilekovasecoyupalenososibuyojili",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "若滬浙能入吾黨範圍則大局吃定矱种乘近汪丸回着山漆通㘾青木中將",
+      "read": "若滬浙能入吾黨範圍，則大局，‹吃›，定，‹矱›‹种›，乘，‹近›‹汪›‹丸›，回着，‹山›‹漆›‹通›‹㘾›，青木中將。",
+      "key": "shanghai1916",
+      "score": 2.45,
+      "null": -0.23
+    },
+    {
+      "id": "inedits-c40-b32t",
+      "source_id": "b32t",
+      "src": "B03050088600, image 32",
+      "cipher": "risuzocare dolamucugu lahuredoru holapopudo cugulavugi daluhuleyu",
+      "effective": "risuzocaredolamucugulahuredoruholapopudocugulavugidaluhuleyu",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "昨電第一字並第十五册字不狃懇覆",
+      "read": "昨電第一字並第十五，‹册›，字不，‹狃›，懇覆。",
+      "key": "seito1916",
+      "score": 3.03,
+      "null": -0.67
+    },
+    {
+      "id": "inedits-c40-b32b",
+      "source_id": "b32b",
+      "src": "B03050088600, image 32",
+      "cipher": "mozuvogaxi famohetuqi yihisorico dopotajivu xijamipofi ceburiraru kimasizuci silazeyiri majeseloji qaxohuqari bukuzipito qafipekofo bufavoyovo bemikubocu cozutotoki saxiganaci",
+      "effective": "mozuvogaxifamohetuqiyihisoricodopotajivuxijamipoficeburirarukimasizucisilazeyirimajeselojiqaxohuqaribukuzipitoqafipekofobufavoyovobemikubocucozutotokisaxiganaci",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "浙於兩派晟俱未用次岩入大得下級官同情自信能逐屈改終今令暫待滬事數日始發當晨完全美",
+      "read": "浙於兩派，‹晟›，俱未用次岩，‹入›，大得下級官同情自信能，‹逐›‹屈›‹改›‹終›，今令暫待滬事數日始發，‹當›‹晨›，完全美。",
+      "key": "shanghai1916",
+      "score": 3.12,
+      "null": -1.42
+    },
+    {
+      "id": "inedits-c40-b38t",
+      "source_id": "b38t",
+      "src": "B03050088600, image 38",
+      "cipher": "risumididi geruxatuda riraleyuzo camocehuka yomilelino zixidoyofi noxixekala vutufavodo kunezubomu xelateleyu",
+      "effective": "risumididigeruxatudariraleyuzocamocehukayomilelinozixidoyofinoxixekalavutufavodokunezubomuxelateleyu",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "昨拄濞南商會覆電請焓錳觚議此間譬置不問鈞意如何乞覆",
+      "read": "昨，‹拄›‹濞›，南商會覆電請，‹焓›‹錳›‹觚›，議此間，‹譬›‹置›‹不›‹問›，鈞意如何？乞覆。",
+      "key": "seito1916",
+      "score": 2.79,
+      "null": -1.15
+    },
+    {
+      "id": "inedits-c40-b26b",
+      "source_id": "b26b",
+      "src": "B03050088600, image 26",
+      "cipher": "kamisocico cavitupuyo sabolusice bokeluhole faladoximu fomasageni zorucegido gamoxayova boruposaze lidekufema",
+      "effective": "kamisocicocavitupuyosabolusicebokeluholefaladoximufomasagenizorucegidogamoxayovaboruposazelidekufema",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "電悉匯二萬麾舠春洋回鄧同船飛機兩月可宬債券帀收林森",
+      "read": "電悉匯二萬，‹麾›‹舠›‹春›，洋回鄧同船飛機兩月可，‹宬›，債券，‹帀›，收林森。",
+      "key": "sanfran1916",
+      "score": 3.12,
+      "null": -0.87
+    }
+  ]
+}

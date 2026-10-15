@@ -329,6 +329,8 @@ figure.media video { display: block; width: 100%; height: auto; border-radius: 6
 
 /* version lisible proposée */
 .readable { font-size: 1.25rem; line-height: 2; margin: .2rem 0 .3rem; }
+/* Le décodage brut des inédits peut contenir une longue suite de codes illisibles. */
+#inedits .readable, #inedits .tg-alignment { overflow-wrap: anywhere; }
 .readable .prop, .tg-props .prop { border-radius: 3px; padding: 0 .08em; cursor: help; }
 .prop-P { background: color-mix(in srgb, var(--accent-2) 18%, transparent); box-shadow: inset 0 -2px 0 var(--accent-2); }
 .prop-Q { background: color-mix(in srgb, var(--doubt) 14%, transparent); box-shadow: inset 0 -2px 0 var(--doubt); text-decoration: underline dotted var(--doubt); }

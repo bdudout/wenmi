@@ -116,6 +116,7 @@ def build():
                 scripts += ('<script src="../assets/js/corpus.js"></script>\n<script src="../assets/js/translations.js"></script>\n'
                             '<script src="../assets/js/corpus-c1916.js"></script>\n<script src="../assets/js/corpus-n1916.js"></script>\n'
                             '<script src="../assets/js/corpus-t1915.js"></script>\n<script src="../assets/js/corpus-f1916.js"></script>\n'
+                            '<script src="../assets/js/corpus-inedits.js"></script>\n'
                             '<script src="../assets/js/systems.js"></script>\n')
             if 'decoder' in body:
                 scripts += ('<script src="../assets/js/messages.js"></script>\n<script src="../assets/js/messages-y0.js"></script>\n'
