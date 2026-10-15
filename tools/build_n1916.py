@@ -300,6 +300,96 @@ CONF['n0504a']['云'] = 'mot'   # 云云 (fin de citation), relu le 13/10/2026
 CONF.setdefault('n0615', {})['銘'] = 'nom'; CONF.setdefault('n0515', {})['云'] = 'mot'   # 兆銘 ; 云云
 CONF['n0531b']['効'] = 'variante'   # 効力 (= 效力), relu le 14/10/2026 (lot 3)
 
+# ---- Table de Huang Xing (séance C38, 15/10/2026) : 6 télégrammes Tokyo → Junzaburo sans préfixe (signés 興) et
+# 3 télégrammes Shanghai → « Ylchang » (signés 文) ; lettres lues par Brice (lot R3), lettres douteuses vérifiées à l'aveugle (H1) ----
+R.update({
+ 'n0526': ('械事已電日{當}局否？彼有不{欲}公急赴魯意。乞覆。興', []),
+ 'n0528': ('敬電因移居後到。昨彼{無}暇，今晚往商，{如}何，再覆。興', []),
+ 'n0531c': ('借款事弟未與聞，日當局亦未通告，內容尚不詳。‹旦›', []),
+ 'n0531d': ('款二十萬、武器若干，囑漢民親請青木再電當局，可望成功。興', []),
+ 'n0603b': ('今夜晤商田中：槍二千、砲六門，不日可運。後仍‹曹›望，惟不欲先及一{有}資望軍人調和，而統一之。彼意在‹炧›‹棲›，如何？請覆。興', []),
+ 'n0606': ('仍‹曹›望，惟不欲先生急赴該處，可請溥{泉}及一有資望軍人調和', []),
+ 'y0602': ('電悉。已{告}青木，請‹兇›亦盡力{所}能至。文', []),
+ 'y0606': ('烈武往‹雌›統一各軍，皆請溥{泉}。已遣‹掫›日偕許崇智往。卄萬事，青木謂已電‹筦›，請力促成。應‹懸›需。孫文。魚', []),
+ 'y0530': ('‹綹›海軍三井消息：三井、三菱、大倉□·‹揜›‹蓓›‹睞›萬，供南軍‹租›但‹頍›‹岑›黃·逝署借約‹岑›覆謂‹岑›滇合‹叱›‹巫›贛確否？成行如‹侍›應如·因應谷酌奪', []),
+})
+_LV16 = {'n0526': [P_('sens'), P_('sens', 'jumeau')], 'n0528': [P_('sens'), Q_('sens')], 'n0603b': [P_('jumeau')], 'n0606': [P_('sens', 'contexte')],
+         'y0602': [Q_('sens'), Q_('sens')], 'y0606': [P_('sens', 'contexte')]}
+for _sid, _lv in _LV16.items(): R[_sid] = (R[_sid][0], _lv)
+# relecture H1 (15/10/2026) : la lettre décodée est bien écrite ainsi ⇒ proposition « maintenue » (erreur de 1916 supposée)
+MAINT |= {('n0526', '當'), ('n0526', '欲'), ('n0528', '無'), ('n0606', '泉'), ('y0606', '泉')}
+CONF.update({'n0531d': {'干': 'mot'}, 'n0606': {'溥': 'nom'}, 'y0606': {'溥': 'nom', '偕': 'mot', '卄': 'variante'}})
+KEYS.update({'n0526': ['械事', '魯'], 'n0528': ['移居', '今晚往商'], 'n0531c': ['借款', '日當局'], 'n0531d': ['二十萬', '漢民', '青木'],
+             'n0603b': ['田中', '槍二千', '砲六門'], 'n0606': ['溥泉', '軍人調和'], 'y0602': ['青木', '盡力'], 'y0606': ['烈武', '許崇智', '青木', '孫文'],
+             'y0530': ['三井', '三菱', '大倉']})
+_TR16 = {
+ 'fr': {
+  'n0526': "L'affaire des armes a-t-elle été télégraphiée aux autorités japonaises (?) ? Ils ne souhaitent pas que vous vous rendiez en hâte au Shandong (魯). Veuillez répondre. — Xing (Huang Xing).",
+  'n0528': "Votre télégramme m'est parvenu après mon déménagement. Hier ils n'avaient pas le temps ; ce soir j'irai en discuter. Quoi qu'il en soit, je répondrai à nouveau. — Xing.",
+  'n0531c': "Je n'ai pas été mis au courant de l'emprunt ; les autorités japonaises n'ont rien notifié non plus ; le contenu en est encore inconnu. […]",
+  'n0531d': "Fonds : 200 000 ; armes : une certaine quantité. J'ai demandé à [Hu] Hanmin (漢民) d'aller en personne prier Aoki (青木) de télégraphier à nouveau aux autorités ; on peut espérer le succès. — Xing.",
+  'n0603b': "Ce soir, entretien avec Tanaka (田中) : 2 000 fusils et 6 canons pourront être expédiés sous peu. Ensuite […], mais [ils] ne souhaitent pas que vous [vous précipitiez là-bas ; on pourrait prier Puquan] et un militaire de prestige de servir de médiateurs et d'unifier [les forces]. Leur intention est […] : qu'en pensez-vous ? Veuillez répondre. — Xing. (Entre crochets, neuf codes perdus à la transmission, rétablis par le télégramme du 6 juin.)",
+  'n0606': "(Retransmission du passage du 3 juin) […] mais [ils] ne souhaitent pas que vous, Monsieur, vous précipitiez là-bas ; on pourrait prier Puquan (溥泉, Zhang Ji) et un militaire de prestige de servir de médiateurs.",
+  'y0602': "Télégramme reçu. J'ai déjà informé (?) Aoki (青木) ; prière […] de faire aussi tout ce qui est en votre pouvoir (?). — Wen (Sun Yat-sen).",
+  'y0606': "Liewu (烈武, Bai Wenwei) part […] unifier les armées ; tous demandent Puquan (溥泉, Zhang Ji). J'ai envoyé […], qui part le […] avec Xu Chongzhi (許崇智). Pour l'affaire des 200 000, Aoki dit avoir déjà télégraphié […] ; prière de pousser à la conclusion. […] — Sun Wen (孫文). Le 6.",
+  'y0530': "(Lecture lacunaire.) […] nouvelles de la Marine et de Mitsui : Mitsui, Mitsubishi, Ōkura […] l'armée du Sud […] Cen [Chunxuan] (岑) […] contrat d'emprunt […] le Yunnan […] est-ce exact ? […] décidez."},
+ 'en': {
+  'n0526': "Has the arms matter been telegraphed to the Japanese authorities (?)? They do not wish you to rush to Shandong (魯). Please reply. — Xing (Huang Xing).",
+  'n0528': "Your telegram reached me after I moved. Yesterday they had no time; this evening I shall go and discuss it. Whatever happens, I shall reply again. — Xing.",
+  'n0531c': "I have not been informed about the loan; the Japanese authorities have not notified anything either; its content is still unknown. […]",
+  'n0531d': "Funds: 200,000; arms: a certain quantity. I have asked [Hu] Hanmin (漢民) to go in person and ask Aoki (青木) to telegraph the authorities again; success can be hoped for. — Xing.",
+  'n0603b': "This evening I met Tanaka (田中) and discussed: 2,000 rifles and 6 guns can be shipped shortly. Then […], but [they] do not wish you [to rush there; Puquan could be asked,] together with a respected military man, to mediate and unify [the forces]. Their intention is […]: what do you think? Please reply. — Xing. (In brackets, nine codes lost in transmission, restored by the telegram of 6 June.)",
+  'n0606': "(Retransmission of the passage of 3 June) […] but [they] do not wish you, Sir, to rush there; Puquan (溥泉, Zhang Ji) and a respected military man could be asked to mediate.",
+  'y0602': "Telegram received. I have already informed (?) Aoki (青木); please […] also do all you can (?). — Wen (Sun Yat-sen).",
+  'y0606': "Liewu (烈武, Bai Wenwei) is going […] to unify the armies; all ask for Puquan (溥泉, Zhang Ji). I have sent […], leaving on the […] with Xu Chongzhi (許崇智). On the 200,000 matter, Aoki says he has already telegraphed […]; please press for its conclusion. […] — Sun Wen (孫文). The 6th.",
+  'y0530': "(Partial reading.) […] news of the Navy and of Mitsui: Mitsui, Mitsubishi, Ōkura […] the Southern army […] Cen [Chunxuan] (岑) […] the loan contract […] Yunnan […] is it confirmed? […] please decide."},
+ 'ja': {
+  'n0526': "武器の件は日本当局（？）に打電したか。彼らは公が急いで魯（山東）へ赴くことを望んでいない。返電を乞う。興（黄興）。",
+  'n0528': "貴電は転居後に届いた。昨日は彼らに暇がなく、今晩相談に行く。いずれにせよ改めて返電する。興。",
+  'n0531c': "借款の件は私は聞かされておらず、日本当局からも通告はなく、内容はなお不詳。……",
+  'n0531d': "資金二十万、武器若干。漢民（胡漢民）に自ら青木に当局へ再び打電するよう頼ませた。成功が見込める。興。",
+  'n0603b': "今夜、田中と会って相談した。小銃二千、砲六門は近日中に送れる。その後……、ただし〔彼らは〕先〔生が急いでそこへ赴くことを望まず、溥泉〕と声望ある軍人に調停させ、統一させるのがよい。彼の意図は……、いかがか。返電を請う。興。（〔 〕内の9符号は送信中に失われ、6月6日の電報で補われる。）",
+  'n0606': "（6月3日の電報の一節の再送）……ただし〔彼らは〕先生が急いでそこへ赴くことを望まない。溥泉（張継）と声望ある軍人に調停を頼むのがよい。",
+  'y0602': "電報拝見。すでに青木に伝えた（？）。……もできる限り尽力されたい（？）。文（孫文）。",
+  'y0606': "烈武（柏文蔚）は……へ赴いて各軍を統一する。皆、溥泉（張継）を請う。すでに……を派遣し、……日に許崇智とともに出発。二十万の件は青木がすでに……に打電したという。成立を促されたい。……孫文。魚（6日）。",
+  'y0530': "（部分的な読み）……海軍と三井の消息：三井・三菱・大倉……南軍……岑（岑春煊）……借款契約……雲南……確かか。……斟酌されたい。"},
+ 'zh-Hant': {
+  'n0526': "械事已電日[當]局否？彼有不[欲]公急赴魯意。乞覆。興（黃興）。",
+  'n0528': "敬電因移居後到。昨彼[無]暇，今晚往商，[如]何，再覆。興。",
+  'n0531c': "借款事弟未與聞，日當局亦未通告，內容尚不詳。……",
+  'n0531d': "款二十萬、武器若干，囑漢民（胡漢民）親請青木再電當局，可望成功。興。",
+  'n0603b': "今夜晤商田中：槍二千、砲六門，不日可運。後仍……望，惟不欲先〔生急赴該處，可請溥泉〕及一有資望軍人調和，而統一之。彼意在……，如何？請覆。興。（〔 〕內九碼傳送時遺失，由6月6日電補回。）",
+  'n0606': "（重發6月3日電文一段）仍……望，惟不欲先生急赴該處，可請溥泉（張繼）及一有資望軍人調和。",
+  'y0602': "電悉。已[告]青木，請……亦盡力[所]能至。文（孫文）。",
+  'y0606': "烈武（柏文蔚）往……統一各軍，皆請溥泉（張繼）。已遣……日偕許崇智往。廿萬事，青木謂已電……，請力促成。……孫文。魚（六日）。",
+  'y0530': "（部分讀出）……海軍三井消息：三井、三菱、大倉……南軍……岑（岑春煊）……借約……滇……確否？……酌奪。"},
+}
+for _lang in ('fr', 'en', 'zh-Hant', 'ja'): TR[_lang].update(_TR16[_lang])
+_INTRO16 = {
+ 'fr': ('<p><strong>Ajout du 15 octobre 2026 : la table de Huang Xing (fin mai – juin 1916).</strong> Neuf télégrammes de plus, lus avec une table nouvelle '
+        'que nous avons retrouvée (voir la <a href="method.html#huangxing">Méthode</a>) : six de Tokyo à « Junzaburo », envoyés sans préfixe et signés '
+        '<span lang="zh-Hant">興</span> (Huang Xing, à Tokyo depuis le 9 mai), et trois de Shanghai à « Ylchang » (Huang Xing), signés <span lang="zh-Hant">文</span> '
+        '(Sun Yat-sen). Les lettres ont été lues par Brice Dudout ; les lettres douteuses ont été vérifiées à l\'image sans connaître le sens. Le télégramme du 30 mai '
+        'reste en grande partie illisible.</p>'),
+ 'en': ('<p><strong>Added 15 October 2026: Huang Xing\'s table (late May – June 1916).</strong> Nine more telegrams, read with a new table we recovered '
+        '(see <a href="method.html#huangxing">Method</a>): six from Tokyo to “Junzaburo”, sent without a prefix and signed <span lang="zh-Hant">興</span> '
+        '(Huang Xing, in Tokyo since 9 May), and three from Shanghai to “Ylchang” (Huang Xing), signed <span lang="zh-Hant">文</span> (Sun Yat-sen). '
+        'The letters were read by Brice Dudout; doubtful letters were checked against the image without knowing the meaning. The telegram of 30 May remains largely unreadable.</p>'),
+ 'zh-Hant': ('<p><strong>2026年10月15日補充：黃興的碼表（1916年5月底至6月）。</strong>新增九封電報，以我們找出的新碼表讀出（見<a href="method.html#huangxing">方法</a>）：'
+        '六封由東京發往「Junzaburo」，不冠前綴，署名<span lang="zh-Hant">興</span>（黃興，5月9日抵東京）；三封由上海發往「Ylchang」（黃興），署名<span lang="zh-Hant">文</span>（孫文）。'
+        '字母由 Brice Dudout 讀出，存疑字母已在不知文意的情況下對照影像核對。5月30日一封大部分仍無法讀出。</p>'),
+ 'ja': ('<p><strong>2026年10月15日追加：黄興の表（1916年5月末〜6月）。</strong>我々が復元した新しい表で、さらに9通を読んだ（<a href="method.html#huangxing">方法</a>を参照）。'
+        '東京から「Junzaburo」宛の6通は前置語なしで、<span lang="zh-Hant">興</span>（5月9日から東京にいた黄興）の署名がある。上海から「Ylchang」（黄興）宛の3通は'
+        '<span lang="zh-Hant">文</span>（孫文）の署名がある。文字はBrice Dudoutが読み、疑わしい文字は意味を知らずに画像と照合した。5月30日の電報は大部分がなお読めない。</p>'),
+}
+_TOC16 = {'fr': ('Table de Huang Xing (Tokyo → Shanghai, signée 興)', 'Table de Huang Xing (Shanghai → « Ylchang », signée 文)', 'Table de Huang Xing'),
+          'en': ("Huang Xing's table (Tokyo → Shanghai, signed 興)", "Huang Xing's table (Shanghai → “Ylchang”, signed 文)", "Huang Xing's table"),
+          'zh-Hant': ('黃興的碼表（東京 → 上海，署名「興」）', '黃興的碼表（上海 → 「Ylchang」，署名「文」）', '黃興的碼表'),
+          'ja': ('黄興の表（東京 → 上海、「興」署名）', '黄興の表（上海 → 「Ylchang」、「文」署名）', '黄興の表')}
+for _lang in LAB:
+    LAB[_lang]['intro'] += _INTRO16[_lang]
+    LAB[_lang]['toc']['h16'], LAB[_lang]['toc']['h16-y'], LAB[_lang]['channel']['h16'] = _TOC16[_lang]
+
 # ---- Gloses des noms de navires (14/10/2026) : affichées sous la traduction ; sources : Wikipédia japonaise
 # (博愛丸, 春洋丸), indicateurs de la Tōyō Kisen ; 春日丸 : ligne de 1916 non vérifiée ----
 _G = {
@@ -319,6 +409,25 @@ _G = {
 _SHIPS = {'n0503b': ['hakuai'], 'n0504a': ['kasuga'], 'n0607': ['kasuga'], 's0505': ['shunyo']}
 NOTE = {lang: {sid: ' '.join(_G[lang][k] for k in ks) for sid, ks in _SHIPS.items()} for lang in _G}
 NOTE_LAB = {'fr': 'Note :', 'en': 'Note:', 'zh-Hant': '註：', 'ja': '注：'}
+_N16 = {
+ 'fr': {'n0603b': "Deux copies du formulaire (images 0145 et 0151–0152) : les lettres suivent la première, la seconde tranchant là où elles diffèrent. Neuf codes ont été perdus à la transmission après 先 ; le télégramme du 6 juin (0152b) renvoie ce passage.",
+        'n0606': "Retransmission du passage du 3 juin (0145) où neuf codes s'étaient perdus ; deux copies du formulaire (images 0152 et 0159).",
+        'y0530': "Lecture lacunaire : deux groupes ne se lisent pas comme syllabes (« hopt », « kbji ») et plusieurs codes restent douteux ; suite sur l'image 0116.",
+        'n0531c': "La fin (旦) diffère de la signature 興 des autres télégrammes de Tokyo ; une copie dactylographiée existe."},
+ 'en': {'n0603b': "Two copies of the form (images 0145 and 0151–0152): the letters follow the first, the second deciding where they differ. Nine codes were lost in transmission after 先; the telegram of 6 June (0152b) resends this passage.",
+        'n0606': "Retransmission of the passage of 3 June (0145) in which nine codes had been lost; two copies of the form (images 0152 and 0159).",
+        'y0530': "Partial reading: two groups do not read as syllables (“hopt”, “kbji”) and several codes remain doubtful; continued on image 0116.",
+        'n0531c': "The ending (旦) differs from the signature 興 of the other Tokyo telegrams; a typed copy exists."},
+ 'zh-Hant': {'n0603b': "電報紙有兩份抄本（影像0145及0151–0152）：字母依第一份，兩者不同處以第二份為準。「先」字後有九碼在傳送中遺失；6月6日電（0152b）補發此段。",
+        'n0606': "補發6月3日電（0145）中遺失九碼的一段；電報紙有兩份抄本（影像0152及0159）。",
+        'y0530': "部分讀出：兩組字母不成音節（「hopt」、「kbji」），多個電碼仍存疑；續見影像0116。",
+        'n0531c': "結尾（旦）與東京其他電報的署名「興」不同；另有一份打字抄本。"},
+ 'ja': {'n0603b': "用紙の写しが二通ある（画像0145、0151–0152）。文字は一通目に従い、異なる箇所は二通目で決めた。「先」の後の9符号は送信中に失われ、6月6日の電報（0152b）がこの一節を再送している。",
+        'n0606': "6月3日の電報（0145）で9符号が失われた一節の再送。用紙の写しが二通ある（画像0152、0159）。",
+        'y0530': "部分的な読み：二つの組は音節として読めず（「hopt」「kbji」）、いくつかの符号はなお疑わしい。続きは画像0116。",
+        'n0531c': "末尾（旦）は東京発の他の電報の署名「興」と異なる。タイプ打ちの写しがある。"},
+}
+for _lang in _N16: NOTE[_lang].update(_N16[_lang])
 
 def build():
     msgs = []
@@ -326,8 +435,8 @@ def build():
         if sid in LOCAL: continue                      # en cours en local : pas sur le site
         key = KEY.get(sid, 'yamada1916'); T = bkeys.KEYS[key]
         s = dx_overrides.apply_stream(s, DX.get(('n1916', sid), {}), sid)   # relecture ciblée (Brice, 13/10/2026)
-        d = [(s[i:i + 4], '%02d%02d' % (T[s[i:i + 2]], T[s[i + 2:i + 4]])) for i in range(0, len(s) - 3, 4)]; codes = [c for _, c in d];   # accepte w (yamada1916w) ; comme bkeys.decode, ignore une syllabe finale seule
-        chars = [CH(c) for c in codes]; nums = [int(c) for c in codes]
+        d = [(s[i:i + 4], ('%02d%02d' % (T[s[i:i + 2]], T[s[i + 2:i + 4]])) if s[i:i + 2] in T and s[i + 2:i + 4] in T else '····') for i in range(0, len(s) - 3, 4)]; codes = [c for _, c in d];   # accepte w (yamada1916w) ; comme bkeys.decode, ignore une syllabe finale seule ; syllabe hors table → « ···· » (illisible)
+        chars = [CH(c) if c.isdigit() else '·' for c in codes]; nums = [int(c) if c.isdigit() else 0 for c in codes]
         letters = ''.join(syl for syl, _ in d)
         text, levels = R[sid]
         toks, props = restitution.parse(text, chars)
@@ -343,7 +452,8 @@ def build():
         status = []
         for i, c in enumerate(codes):
             rare = float(uni[nums[i]]) - REF < 1; cf = CONF.get(sid, {}).get(chars[i])
-            if rare and cf and i not in marked: status.append('confirmé:' + cf)
+            if not c.isdigit(): status.append('illisible')
+            elif rare and cf and i not in marked: status.append('confirmé:' + cf)
             elif rare or i in marked or i in props: status.append('douteux')
             else: status.append('ok')
         alts = {str(i): a for i, st in enumerate(status) if st == 'douteux' and i not in props for a in [BC.alts_for(letters, i, nums, T)] if a}
@@ -355,7 +465,7 @@ def build():
             out.append(dict(i=i, ch=ch, orig=chars[i], level=lvl, reasons=reasons, letters=letters[4 * i:4 * i + 4], image='divergente' if (sid, ch) in DIVERGE else 'maintenue' if (sid, ch) in MAINT else None, **ep))
         after = list(nums)
         for p in out: after[p['i']] = int(p['code'])
-        toc = {'yamada1916w': 'yamada1916'}.get(key, key) + ('-sh' if sid.startswith('s') else '')
+        toc = {'yamada1916w': 'yamada1916'}.get(key, key) + ('-sh' if sid.startswith('s') else '-y' if sid.startswith('y') else '')
         n = '%04d' % (page + IMG_OFFSET[rec])            # n° d'image JACAR, comme les autres télégrammes du site
         VER = dx_overrides.verified(WENMI).get(('n1916', sid), [])
         msgs.append({'id': sid, 'verified': [i for i in VER if status[i] in ('douteux', 'illisible')], 'label': n + POS.get(sid, ''), 'toc': toc, 'grid': key, 'fiche': {'img': 'n' + n, 'n': n, 'keys': KEYS[sid]}, 'route': ROUTES.get(sid, ROUTE), 'record': rec, 'md': [mo, da], 'page': page,
