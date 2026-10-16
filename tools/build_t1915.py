@@ -24,6 +24,8 @@ _ny.update({'q' + v: _ny['p' + v] for v in 'aeiou'}); bkeys.KEYS.setdefault('new
 PREFIX = {'thirtieth', 'fourteen', 'bowery'}           # mots en clair (indicateur de table, adresse) : hors flux chiffré
 # n° d'image JACAR : image du PDF + décalage du dossier (premier cadre : 087600 = 0163, 087700 = 0221 ; sources/c35/README.md)
 OFF = {'B03050087600': 162, 'B03050087700': 220}
+FRAME_877 = {51: '0273', 52: '0274', 53: '0275', 54: '0277', 55: '0278'}
+SUFFIX = {'t1915-02ny': 'b', 't1915-0312': 'a', 't1915-0313': 'b'}
 TIME = {}                                              # heures des formulaires (form_times.T1915 si présent)
 TIME.update(getattr(form_times, 'T1915', {}))
 KEYW = {'t1915-0106m': ['無其事'], 't1915-0131': ['富永', '在滬候命', '切勿回東'], 't1915-02p23': ['何日往港'],
@@ -46,12 +48,12 @@ def gen_labels():
 DROP = {'fr': r" Dans la version lisible, ‹ › marque[^.]*\.\)?\.?", 'en': r" In the readable version, ‹ › marks[^.]*\.\)?\.?",
         'zh-Hant': r"可讀文本中，‹ › 表示[^。]*。", 'ja': r"読み下しでは、‹ › は[^。]*。"}
 LAB = {
- 'fr': dict(read='Lettres du formulaire (lues sur le scan, relues à l\'aveugle)', label='Traduction de travail.',
+ 'fr': dict(read='Lettres du formulaire (Claude, puis relecture de Brice)', label='Traduction de travail.',
             stats='{tels} télégrammes, {codes} codes ; {douteux} douteux.'),
- 'en': dict(read='Letters of the form (read on the scan, reread blind)', label='Working translation.',
+ 'en': dict(read='Letters of the form (Claude, then Brice’s review)', label='Working translation.',
             stats='{tels} telegrams, {codes} codes; {douteux} doubtful.'),
- 'zh-Hant': dict(read='電報紙上的字母（依掃描件讀出，盲讀複核）', label='工作譯文。', stats='電報{tels}封，電碼{codes}個；存疑{douteux}個。'),
- 'ja': dict(read='用紙の文字（スキャンから読み、ブラインドで読み直したもの）', label='試訳。', stats='電報{tels}通、符号{codes}個。疑わしいもの{douteux}個。'),
+ 'zh-Hant': dict(read='電報紙上的字母（Claude讀出，Brice複核）', label='工作譯文。', stats='電報{tels}封，電碼{codes}個；存疑{douteux}個。'),
+ 'ja': dict(read='用紙の文字（Claudeの読み、Briceの校正）', label='試訳。', stats='電報{tels}通、符号{codes}個。疑わしいもの{douteux}個。'),
 }
 
 
@@ -119,11 +121,11 @@ def build():
         after = list(nums)
         for p in out: after[p['i']] = int(p['code'])
         rec, img = re.match(r'(B\d+), image (\d+)', x['src']).groups()
-        n = '%04d' % (int(img) + OFF[rec])
+        n = x.get('jacar_frame') or (FRAME_877.get(int(img)) if rec == 'B03050087700' else None) or '%04d' % (int(img) + OFF[rec])
         mo, da = (int(v) for v in re.match(r'1915年(\d+)月(\d+)?', x['date']['zh']).groups(default='0'))
-        msgs.append({'id': x['id'][1:], 'verified': [], 'label': n + ('b' if x['id'] == 't1915-02ny' else ''), 'toc': x['key'], 'grid': x['key'],
-                     'fiche': {'img': 't' + n, 'n': n, 'keys': KEYW[x['id']]}, 'route': x['route']['en'],
-                     'routes': x['route'], 'record': rec, 'md': [mo, da], 'page': int(img), 'time': TIME.get(x['id']),
+        msgs.append({'id': x['id'][1:], 'verified': [], 'label': x.get('label') or n + SUFFIX.get(x['id'], ''), 'toc': x['key'], 'grid': x['key'],
+                     'fiche': {'img': 't' + n, 'n': n, 'keys': x.get('keyw') or KEYW[x['id']]}, 'route': x['route']['en'],
+                     'routes': x['route'], 'record': rec, 'md': [mo, da], 'page': int(img), 'time': x.get('time', TIME.get(x['id'])),
                      'letters': letters, 'codes': codes, 'chars': chars, 'status': status, 'fixed': {}, 'alts': alts, 'expected': {},
                      'readable': {'toks': [[c, i, p] for c, i, p in toks], 'props': out, 'score': [BC.mean_score(nums), BC.mean_score(after)]},
                      '_src': x})

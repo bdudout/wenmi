@@ -23,7 +23,16 @@ def corpus():
 
 
 M.CITIES['newyork'] = ('New York', '紐約', 144.2, 27.0, (14, -6))      # hors cadre : bord est, direction d'arrivée
-CITY = {'Tokyo': 'tokyo', 'Shanghai': 'shanghai', 'Manila': 'manila', 'New York': 'newyork'}
+M.CITIES['sanfrancisco'] = ('San Francisco', '舊金山', 144.2, 31.0, (14, -6))
+CITY = {'Tokyo': 'tokyo', 'Shanghai': 'shanghai', 'Manila': 'manila', 'New York': 'newyork', 'San Francisco': 'sanfrancisco'}
+PAGE_877 = {'0273': 51, '0274': 52, '0275': 53, '0277': 54, '0278': 55}
+
+
+def render(record, frame):
+    # The microfilm skips frames after PDF p. 50: frame 0274 is PDF p. 52, not 54.
+    if record == 'B03050087700' and frame in PAGE_877:
+        return FC.render(record, str(PAGE_877[frame] + 220))
+    return FC.render(record, frame)
 
 
 def stops_of(route):
@@ -43,8 +52,8 @@ def mini_map(m, all_routes):
         for k in set(stops):
             x, y = M.city_xy(k, W2, H2); r = 7 * s; dr.ellipse([x - r, y - r, x + r, y + r], fill=M.INK)
             name, cjk = M.CITIES[k][:2]
-            dx = {'tokyo': -120, 'manila': 20, 'shanghai': -138, 'newyork': -170}.get(k, 14) * s
-            dy = {'tokyo': 14, 'manila': -66, 'shanghai': 12, 'newyork': 14}.get(k, -30) * s
+            dx = {'tokyo': -120, 'manila': 20, 'shanghai': -138, 'newyork': -170, 'sanfrancisco': -190}.get(k, 14) * s
+            dy = {'tokyo': 14, 'manila': -66, 'shanghai': 12, 'newyork': 14, 'sanfrancisco': 48}.get(k, -30) * s
             dr.text((x + dx, y + dy), name, font=M.F('serif', 26 * s), fill=M.INK)
             dr.text((x + dx, y + dy + 28 * s), cjk, font=M.F('cjk', 26 * s), fill=M.MUTED)
         im = im.resize((W, im.height // s), Image.LANCZOS); im.save(os.path.join(OUT, f"map-{m['id']}.png"), optimize=True)
@@ -62,7 +71,7 @@ if __name__ == '__main__':
         img = m['fiche']['img']
         if img in done: continue
         done.add(img)
-        c = ImageOps.autocontrast(FC.form_crop(FC.render(m['record'], m['fiche']['n'])), cutoff=1)
+        c = ImageOps.autocontrast(FC.form_crop(render(m['record'], m['fiche']['n'])), cutoff=1)
         if (np.asarray(c) < 200).mean() > 0.12: c = c.filter(ImageFilter.MedianFilter(3))
         full = c.copy(); full.thumbnail((1400, 2400)); fp = os.path.join(OUT, f'scan-{img}-full.webp'); full.save(fp, quality=60)
         if os.path.getsize(fp) > 450 * 1024: full.save(fp, quality=40)

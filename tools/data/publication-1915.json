@@ -1,0 +1,371 @@
+{
+  "_note": "Publication préparée par Claude (C35, 16/10/2026) pour Codex. Lectures relues par Brice (R23 pré-rempli + R24). Ne pas retraduire le chinois ; les traductions fr/en/ja sont fournies.",
+  "telegrams_1915": [
+    {
+      "id": "t1915-0312",
+      "source_key": "S0312",
+      "date": {
+        "fr": "12 mars 1915",
+        "en": "12 March 1915",
+        "zh": "1915年3月12日",
+        "ja": "1915年3月12日"
+      },
+      "time": "1.57 pm",
+      "route": {
+        "fr": "Shanghai → « Rosamonde », Tokyo (« Thirtieth »)",
+        "en": "Shanghai → “Rosamonde”, Tokyo (“Thirtieth”)",
+        "zh-hans": "上海 →「Rosamonde」，东京（「Thirtieth」）",
+        "zh-hant": "上海 →「Rosamonde」，東京（「Thirtieth」）",
+        "ja": "上海 →「Rosamonde」、東京（「Thirtieth」）"
+      },
+      "key": "k30",
+      "src": "B03050087700, image 13",
+      "pdf_page": 13,
+      "jacar_frame": "0233",
+      "label": "0233a",
+      "cipher": "coyeyifiji vapebafehe vihoyoputa leburogune nujojolaxe gepigahuce tadecoyeke todumamuko",
+      "raw": "速撥浙蘇維持費氹千圓已電知犬塚乞速與商山",
+      "read": "速撥浙蘇維持費{二}千圓，已電知犬塚，乞速與商。山",
+      "tr": {
+        "fr": "Allouez vite les frais d'entretien pour le Zhejiang et le Jiangsu, deux mille yuans. J'ai télégraphié à Inuzuka ; entendez-vous vite avec lui. — Shan (山).",
+        "en": "Quickly allot the maintenance funds for Zhejiang and Jiangsu, two thousand yuan. I have telegraphed Inuzuka; please come to terms with him quickly. — Shan (山).",
+        "ja": "浙江・江蘇の維持費二千円を速やかに支出されたい。すでに犬塚に打電した。速やかに彼と相談されたい。山。"
+      },
+      "keyw": [
+        "浙蘇",
+        "維持費",
+        "犬塚"
+      ],
+      "persons": "U(('sig', '山')) → S('sun', ('rosa',))"
+    },
+    {
+      "id": "t1915-0313",
+      "source_key": "S0313",
+      "date": {
+        "fr": "13 mars 1915",
+        "en": "13 March 1915",
+        "zh": "1915年3月13日",
+        "ja": "1915年3月13日"
+      },
+      "time": "2.3 pm",
+      "route": {
+        "fr": "Shanghai → « Rosamonde », Tokyo (« Thirtieth »)",
+        "en": "Shanghai → “Rosamonde”, Tokyo (“Thirtieth”)",
+        "zh-hans": "上海 →「Rosamonde」，东京（「Thirtieth」）",
+        "zh-hant": "上海 →「Rosamonde」，東京（「Thirtieth」）",
+        "ja": "上海 →「Rosamonde」、東京（「Thirtieth」）"
+      },
+      "key": "k30",
+      "src": "B03050087700, image 13",
+      "pdf_page": 13,
+      "jacar_frame": "0233",
+      "label": "0233b",
+      "cipher": "zuzobibubi gasecizuse xoxunujodu ducuvataca buyesilahi fokinuqugo gigerurita gecoyebubo firatehemuko",
+      "raw": "剉昧有被刺謡已告同人勿钪江淅待款急乩速匯樨觴山",
+      "read": "‹剉›‹昧›有被刺謡，已告同人勿{疑}。江‹淅›待款急，{乞}速匯，{望}{覆}。山",
+      "tr": {
+        "fr": "[…] il court un bruit d'assassinat ; j'ai dit aux camarades de ne pas s'en inquiéter (?). Le Jiangsu et le Zhejiang (淅 pour 浙) attendent des fonds d'urgence : virez vite, je vous prie. Dans l'attente de votre réponse. — Shan (山).",
+        "en": "[…] there is a rumour of an assassination; I have told the comrades not to worry about it (?). Jiangsu and Zhejiang (淅 for 浙) are waiting urgently for funds: please remit quickly; awaiting your reply. — Shan (山).",
+        "ja": "……暗殺の噂がある。同志たちには心配しないよう（？）伝えた。江蘇・浙江（浙を淅と誤記）は資金を急ぎ待っている。速やかに送金されたい。返電を待つ。山。"
+      },
+      "keyw": [
+        "被刺謡",
+        "江浙",
+        "速匯"
+      ],
+      "persons": "U(('sig', '山')) → S('sun', ('rosa',)) ; répond à 0224 (t1915-0310, rumeurs sur la sécurité de Sun)"
+    },
+    {
+      "id": "t1915-0330",
+      "source_key": "S0330",
+      "date": {
+        "fr": "30 mars 1915",
+        "en": "30 March 1915",
+        "zh": "1915年3月30日",
+        "ja": "1915年3月30日"
+      },
+      "time": "11.30 am",
+      "route": {
+        "fr": "Shanghai → « Rosamonde », Tokyo (« Thirtieth »)",
+        "en": "Shanghai → “Rosamonde”, Tokyo (“Thirtieth”)",
+        "zh-hans": "上海 →「Rosamonde」，东京（「Thirtieth」）",
+        "zh-hant": "上海 →「Rosamonde」，東京（「Thirtieth」）",
+        "ja": "上海 →「Rosamonde」、東京（「Thirtieth」）"
+      },
+      "key": "k30",
+      "src": "B03050087700, image 23",
+      "pdf_page": 23,
+      "jacar_frame": "0243",
+      "label": "0243",
+      "cipher": "hidokinugi gegeqonoso tacamugijo vasucududi tagururimi zeruresiki suxejutuqi garufajugi muzetadebi fezefejiga bojutaqigi getususiri biraqufaoo",
+      "raw": "汝淅款罄鬍人尤難情呷丐急濟恐生意外珀悞大局乞暫移海軍之款應用望復",
+      "read": "汝‹淅›款罄，‹鬍›人尤難‹情›‹呷›‹丐›急濟。恐生意外，{有}悞大局。乞暫移海軍之款應用，望復。",
+      "tr": {
+        "fr": "Les fonds du Zhejiang (?) sont épuisés ; […] il est particulièrement difficile […]. Je crains un imprévu qui nuirait à l'ensemble de l'entreprise. Je vous prie de transférer provisoirement les fonds de la marine pour cet usage. Répondez.",
+        "en": "The Zhejiang (?) funds are exhausted; […] it is especially hard […]. I fear something unforeseen that would harm the whole undertaking. Please transfer the navy's funds temporarily for this use. Reply.",
+        "ja": "浙江（？）の資金は尽きた。……とりわけ難しい……。不測の事態が起きて大局を誤ることを恐れる。海軍の資金を一時流用させてほしい。返電を。"
+      },
+      "keyw": [
+        "大局",
+        "海軍之款"
+      ],
+      "persons": "U(('unsigned',)) → S('sun', ('rosa',))"
+    },
+    {
+      "id": "t1915-0331",
+      "source_key": "S0331",
+      "date": {
+        "fr": "31 mars 1915",
+        "en": "31 March 1915",
+        "zh": "1915年3月31日",
+        "ja": "1915年3月31日"
+      },
+      "time": "11.55 am",
+      "route": {
+        "fr": "Shanghai → « Rosamonde », Tokyo (« Thirtieth »)",
+        "en": "Shanghai → “Rosamonde”, Tokyo (“Thirtieth”)",
+        "zh-hans": "上海 →「Rosamonde」，东京（「Thirtieth」）",
+        "zh-hant": "上海 →「Rosamonde」，東京（「Thirtieth」）",
+        "ja": "上海 →「Rosamonde」、東京（「Thirtieth」）"
+      },
+      "key": "k30",
+      "src": "B03050087700, image 26",
+      "pdf_page": 26,
+      "jacar_frame": "0246",
+      "label": "0246",
+      "cipher": "luzezujeli qitaqeguge vopulejooo",
+      "raw": "安到滬事圅詳苐",
+      "read": "安到滬，事圅詳。{英}",
+      "tr": {
+        "fr": "Arrivé à Shanghai sans encombre ; détails par lettre. — Ying (英, Chen Qimei ?).",
+        "en": "Arrived safely in Shanghai; details by letter. — Ying (英, Chen Qimei?).",
+        "ja": "無事上海に着いた。詳細は書簡で。英（陳其美か）。"
+      },
+      "keyw": [
+        "安到滬"
+      ],
+      "persons": "P('chen', ('sig', '英')) → S('sun', ('rosa',))"
+    },
+    {
+      "id": "t1915-0411",
+      "source_key": "S0411",
+      "date": {
+        "fr": "11 avril 1915",
+        "en": "11 April 1915",
+        "zh": "1915年4月11日",
+        "ja": "1915年4月11日"
+      },
+      "time": "3.22 pm",
+      "route": {
+        "fr": "Shanghai → « Rosamonde », Tokyo",
+        "en": "Shanghai → “Rosamonde”, Tokyo",
+        "zh-hans": "上海 →「Rosamonde」，东京",
+        "zh-hant": "上海 →「Rosamonde」，東京",
+        "ja": "上海 →「Rosamonde」、東京"
+      },
+      "key": "k30",
+      "src": "B03050087700, image 35",
+      "pdf_page": 35,
+      "jacar_frame": "0255",
+      "label": "0255",
+      "cipher": "jolugitobi fapucecugo fimahohojo mafonetayo burojukomu nugehujova celavoledu mapigahuce cugabuyice lajolabubo",
+      "raw": "陰歷月底台機關需金五千如尊縢難籌請商犬塚君務籌電匯",
+      "read": "陰歷月底{各}機關需金五千，如尊{處}難籌，請商犬塚君務籌電匯。",
+      "tr": {
+        "fr": "À la fin du mois lunaire, les divers bureaux ont besoin de cinq mille en or ; s'il vous est difficile de les réunir, veuillez demander à M. Inuzuka de les trouver à tout prix et de les virer par télégraphe.",
+        "en": "At the end of the lunar month the various offices need five thousand in gold; if it is hard for you to raise, please ask Mr Inuzuka to find it without fail and wire it.",
+        "ja": "陰暦の月末に各機関は金五千を要する。そちらで工面が難しければ、犬塚君に必ず工面して電送するよう頼まれたい。"
+      },
+      "keyw": [
+        "陰歷月底",
+        "犬塚君",
+        "電匯"
+      ],
+      "persons": "U(('unsigned',)) → S('sun', ('rosa',))"
+    },
+    {
+      "id": "t1915-0505",
+      "source_key": "S0505",
+      "date": {
+        "fr": "5 mai 1915",
+        "en": "5 May 1915",
+        "zh": "1915年5月5日",
+        "ja": "1915年5月5日"
+      },
+      "time": "5.40 pm",
+      "route": {
+        "fr": "Shanghai → « Rosamonde », Tokyo (« Thirtieth »)",
+        "en": "Shanghai → “Rosamonde”, Tokyo (“Thirtieth”)",
+        "zh-hans": "上海 →「Rosamonde」，东京（「Thirtieth」）",
+        "zh-hant": "上海 →「Rosamonde」，東京（「Thirtieth」）",
+        "ja": "上海 →「Rosamonde」、東京（「Thirtieth」）"
+      },
+      "key": "k30",
+      "src": "B03050087700, image 41",
+      "pdf_page": 41,
+      "jacar_frame": "0261",
+      "label": "0261",
+      "cipher": "dolevideta futenugige jovaqigomu zusutufevu tamaputedi liketotule tijeyiqota vukefotexo seluzefobo jujohicuze fumatefunu jonutobufi butataquji novufuseyu yozahesuke toyuzeximi jimoxefebe yatavocufo cumafeyayu covogideco luhayucoqe julunavevo fimazufesi ritadeziyu",
+      "raw": "郭拒不見款難王寵惠紹介康梁與我瘕攜一致討袁稱軍隊及噪要已布勢力並派代表赴美與克接洽矣等云可否緩其誓約察其虛實相機利用乞教",
+      "read": "郭拒不見，款難。王寵惠紹介康梁與我{提}攜，一致討袁，稱軍隊及{機}要已布勢力，並派代表赴美與克接洽矣等云。可否緩其誓約，察其虛實，相機利用？乞教。",
+      "tr": {
+        "fr": "Guo refuse de nous recevoir ; les fonds sont difficiles. Wang Chonghui (王寵惠) propose de faire s'associer Kang [Youwei] et Liang [Qichao] avec nous, unis contre Yuan [Shikai] ; il dit qu'ils ont déjà placé leurs forces dans l'armée et aux postes clés, et qu'ils ont envoyé un représentant en Amérique pour prendre contact avec Ke[qiang] (Huang Xing), etc. Pourrait-on surseoir à leur serment, examiner ce qu'ils valent vraiment, et les utiliser selon les circonstances ? Merci de vos instructions.",
+        "en": "Guo refuses to see us; funds are hard to come by. Wang Chonghui (王寵惠) proposes to bring Kang [Youwei] and Liang [Qichao] to join hands with us, united against Yuan [Shikai]; he says they have already placed their forces in the army and in key posts, and have sent a representative to America to get in touch with Ke[qiang] (Huang Xing), etc. Could we put off their oath, look into what they are really worth, and use them as circumstances allow? Please instruct.",
+        "ja": "郭は会うことを拒み、資金は難しい。王寵恵は康〔有為〕・梁〔啓超〕を紹介してわが党と提携させ、一致して袁〔世凱〕を討とうとしている。軍隊および要所にすでに勢力を配置し、代表を米国に派遣して克〔強〕（黄興）と接洽したなどという。彼らの誓約を猶予し、その虚実を察して、機を見て利用してはどうか。ご教示を乞う。"
+      },
+      "keyw": [
+        "王寵惠",
+        "康梁",
+        "討袁",
+        "赴美與克接洽",
+        "誓約"
+      ],
+      "persons": "U(('unsigned',)) → S('sun', ('rosa',))"
+    },
+    {
+      "id": "t1915-0611",
+      "source_key": "S0611",
+      "date": {
+        "fr": "11 juin 1915",
+        "en": "11 June 1915",
+        "zh": "1915年6月11日",
+        "ja": "1915年6月11日"
+      },
+      "time": "1.45 pm",
+      "route": {
+        "fr": "Shanghai → « Rosamonde », Tokyo",
+        "en": "Shanghai → “Rosamonde”, Tokyo",
+        "zh-hans": "上海 →「Rosamonde」，东京",
+        "zh-hant": "上海 →「Rosamonde」，東京",
+        "ja": "上海 →「Rosamonde」、東京"
+      },
+      "key": "shanghai1916",
+      "src": "B03050087700, image 45",
+      "pdf_page": 45,
+      "jacar_frame": "0265",
+      "label": "0265",
+      "cipher": "papahovexo luzehebufa cozuyenici funaci",
+      "raw": "繼照收諸事當謹憔美",
+      "read": "繼照收，諸事當謹{慎}。美",
+      "tr": {
+        "fr": "Reçu la suite ; en toute chose il faut être prudent. — Mei (美, Chen Qimei).",
+        "en": "Received the rest; one must be careful in everything. — Mei (美, Chen Qimei).",
+        "ja": "続きを受け取った。万事慎重にすべし。美（陳其美）。"
+      },
+      "keyw": [
+        "謹慎"
+      ],
+      "persons": "P('chen', ('sig', '美')) → S('sun', ('rosa',))"
+    },
+    {
+      "id": "t1915-0610",
+      "source_key": "T0610",
+      "date": {
+        "fr": "10 juin 1915",
+        "en": "10 June 1915",
+        "zh": "1915年6月10日",
+        "ja": "1915年6月10日"
+      },
+      "time": "3.30 pm",
+      "route": {
+        "fr": "Tokyo → « Junzaburo », Shanghai",
+        "en": "Tokyo → “Junzaburo”, Shanghai",
+        "zh-hans": "东京 →「Junzaburo」，上海",
+        "zh-hant": "東京 →「Junzaburo」，上海",
+        "ja": "東京 →「Junzaburo」、上海"
+      },
+      "key": "shanghai1916",
+      "src": "B03050087700, image 46",
+      "pdf_page": 46,
+      "jacar_frame": "0266",
+      "label": "0266",
+      "cipher": "popaxolusi jukirovopo",
+      "raw": "款收否孫文",
+      "read": "款收否？孫文",
+      "tr": {
+        "fr": "Les fonds sont-ils reçus ? — Sun Wen.",
+        "en": "Have the funds been received? — Sun Wen.",
+        "ja": "資金は受け取ったか。孫文。"
+      },
+      "keyw": [
+        "款收否",
+        "孫文"
+      ],
+      "persons": "S('sun', ('sig', '孫文')) → U(('at', 'yamada'))"
+    },
+    {
+      "id": "t1915-1004",
+      "source_key": "F1004",
+      "date": {
+        "fr": "4 octobre 1915",
+        "en": "4 October 1915",
+        "zh": "1915年10月4日",
+        "ja": "1915年10月4日"
+      },
+      "time": null,
+      "route": {
+        "fr": "San Francisco → « Sunwen », Tokyo",
+        "en": "San Francisco → “Sunwen”, Tokyo",
+        "zh-hans": "旧金山 →「Sunwen」，东京",
+        "zh-hant": "舊金山 →「Sunwen」，東京",
+        "ja": "サンフランシスコ →「Sunwen」、東京"
+      },
+      "key": "sanfran1916",
+      "src": "B03050087700, image 52",
+      "pdf_page": 52,
+      "jacar_frame": "0274",
+      "label": "0274",
+      "cipher": "vizahopude qihadodazu koyemoqa",
+      "raw": "五圓枹銷速多寄",
+      "read": "五圓{易}銷，速多寄。",
+      "tr": {
+        "fr": "Les [titres] de cinq yuans se vendent facilement ; envoyez-en vite beaucoup.",
+        "en": "The five-yuan [bonds] sell easily; send many quickly.",
+        "ja": "五円〔の債券〕はよく売れる。速やかに多く送られたい。"
+      },
+      "keyw": [
+        "五圓",
+        "速多寄"
+      ],
+      "persons": "U(('unsigned',)) → S('sun', ('addr', 'Sunwen'))"
+    }
+  ],
+  "rosamonde_1915": [
+    {
+      "date": "6/3/1915",
+      "page": 2,
+      "position": "formulaire du bas",
+      "jacar_frame": "0222",
+      "route_fr": "Tokyo → Laisaosang",
+      "who": "sun → soong (sûr, comme les autres Tokyo → Laisaosang)",
+      "words": "13/12",
+      "cipher": "ruqqioyovd heabervble docoilworc rlliaölott dojrvrloth evsojeiutt leworcyutt uqqiosrulo heaweiojei lyoyevoclh",
+      "en": "I a[pp]rehend you going to desert me. Is it true? Tell definitely once for all to me. I shall a[pp]reciate you more for the honesty.",
+      "tr": {
+        "fr": "Je crains que tu ne m'abandonnes. Est-ce vrai ? Dis-le-moi clairement une fois pour toutes. Je ne t'en estimerai que davantage pour ta franchise.",
+        "en": null,
+        "zh-hans": "我担心你要离弃我。是真的吗？请一次说清楚。你若坦白，我会更敬重你。",
+        "zh-hant": "我擔心你要離棄我。是真的嗎？請一次說清楚。你若坦白，我會更敬重你。",
+        "ja": "あなたが私を見捨てるのではないかと案じている。本当か。はっきりと、きっぱり言ってほしい。正直に言ってくれれば、なおさらあなたを尊敬する。"
+      }
+    },
+    {
+      "date": "7/3/1915",
+      "page": 2,
+      "position": "formulaire du haut",
+      "jacar_frame": "0222",
+      "route_fr": "Tokyo → Laisaosang",
+      "who": "sun → soong",
+      "words": "4",
+      "cipher": "myhvelbrno wosewjeilc",
+      "en": "Why not give me comforts?",
+      "tr": {
+        "fr": "Pourquoi ne pas me réconforter ?",
+        "en": null,
+        "zh-hans": "为何不给我安慰？",
+        "zh-hant": "為何不給我安慰？",
+        "ja": "なぜ慰めてくれないのか。"
+      }
+    }
+  ]
+}
