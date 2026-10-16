@@ -84,6 +84,7 @@
 
   <p>明文是電報體英文，去掉空格，再切成十個字母一組。每個字母換成它在一張<strong>互換對照表</strong>中的搭檔：加密和解密用的是同一張表。</p>
   <p class="mono" style="font-size:1.05rem;line-height:1.9">a↔u &nbsp;b↔g &nbsp;c↔s &nbsp;e↔o &nbsp;f↔j &nbsp;h↔y &nbsp;i↔r &nbsp;k↔z &nbsp;l↔t &nbsp;m↔w &nbsp;n↔v &nbsp;q↔x &nbsp;— d、p 不變</p>
+  <p>上表是基本替換。1915年電報紙亦見以q代替p所預期密文字母的用法，例如3月6日複核的qq，英文讀本標作[pp]。此用法另行記錄，不暗中改動互換表。</p>
   <p>因此 <span class="mono">you</span> 寫作 <span class="mono">hea</span>，<span class="mono">love</span> 寫作 <span class="mono">teno</span>——1915年3月幾封發給 Rosamonde 的明文電報，落款就是「teno」。人名、數字和回電地址保留明文（「Inuzuka」、「100000」）。</p>
 
   <figure id="chiffrement-illustre" class="editorial-illustration rosamonde-diagram"><a href="../assets/img/rosamonde/illustrations/rosamonde-chiffrement-zh-hant.svg"><img src="../assets/img/rosamonde/illustrations/rosamonde-chiffrement-zh-hant.svg" width="900" height="1160" alt="Rosamonde 的密碼 — 為講解而編寫的例句，並非電報原文。" loading="lazy" decoding="async"></a><figcaption>Rosamonde 的密碼 — 為講解而編寫的例句，並非電報原文。</figcaption></figure>
@@ -163,7 +164,7 @@
 
   <h2 id="methode">我們如何確認</h2>
   <ol>
-    <li><strong>轉錄。</strong>電報單依據 JACAR 掃描件（200 dpi）讀出，兩次且彼此獨立：先由 Claude 讀，再由 Brice Dudout 逐行<em>盲讀</em>，既看不到第一次的讀法，也看不到明文（字母一致率 89%）。1916年5月的電報是在找到密鑰<em>之前</em>盲讀轉錄的。發表的文本逐詞採用英文更通順的那一讀；兩種讀法均予保留。</li>
+    <li><strong>轉錄。</strong>電報單依據 JACAR 掃描件（200 dpi）讀出，兩次且彼此獨立：先由 Claude 讀，再由 Brice Dudout 逐行<em>盲讀</em>，既看不到第一次的讀法，也看不到明文（字母一致率 89%）。1916年5月的電報是在找到密鑰<em>之前</em>盲讀轉錄的。發表的文本逐詞採用英文更通順的那一讀；兩種讀法均予保留。 此處獨立讀取的說明限於最初20封樣本；增補兩封屬非盲讀R23（<a href="#r23-note">來源說明</a>）。</li>
     <li><strong>統計。</strong>字母重合指數（0.062）與自然語言相符，而不像加密電碼；f 和 q 從未出現；三字母組 <span class="mono">hea</span> 出現十次。</li>
     <li><strong>尋找密鑰。</strong>先在全部26字母替換表中、再僅在互換表中做模擬退火，以英文四字母組模型評分；用隨機密鑰加密的英文文本作對照，可百分之百復原。</li>
     <li><strong>樣本外驗證。</strong>僅從1915年電報（Claude 的讀法）得出的密鑰，可以讀出1916年盲讀的轉錄：得分 −5.97，而2000張隨機互換表為 −8.01 ± 0.27（最佳 −6.93），即 z = 7.5。它同樣能讀出 Brice Dudout 對1915年電報的盲讀：−5.27 對 −8.02 ± 0.25（最佳 −6.87），z = 10.9。另一系統的電報（1916年3月3日）則仍不可讀（z = 0.6）。</li>

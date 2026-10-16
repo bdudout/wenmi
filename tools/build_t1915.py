@@ -49,11 +49,11 @@ DROP = {'fr': r" Dans la version lisible, ‹ › marque[^.]*\.\)?\.?", 'en': r"
         'zh-Hant': r"可讀文本中，‹ › 表示[^。]*。", 'ja': r"読み下しでは、‹ › は[^。]*。"}
 LAB = {
  'fr': dict(read='Lettres du formulaire (Claude, puis relecture de Brice)', label='Traduction de travail.',
-            stats='{tels} télégrammes, {codes} codes ; {douteux} douteux.'),
+            stats='{tels} télégrammes, {codes} codes ; {douteux} douteux, {illisible} illisible.'),
  'en': dict(read='Letters of the form (Claude, then Brice’s review)', label='Working translation.',
-            stats='{tels} telegrams, {codes} codes; {douteux} doubtful.'),
- 'zh-Hant': dict(read='電報紙上的字母（Claude讀出，Brice複核）', label='工作譯文。', stats='電報{tels}封，電碼{codes}個；存疑{douteux}個。'),
- 'ja': dict(read='用紙の文字（Claudeの読み、Briceの校正）', label='試訳。', stats='電報{tels}通、符号{codes}個。疑わしいもの{douteux}個。'),
+            stats='{tels} telegrams, {codes} codes; {douteux} doubtful, {illisible} illegible.'),
+ 'zh-Hant': dict(read='電報紙上的字母（Claude讀出，Brice複核）', label='工作譯文。', stats='電報{tels}封，電碼{codes}個；存疑{douteux}個，無法辨讀{illisible}個。'),
+ 'ja': dict(read='用紙の文字（Claudeの読み、Briceの校正）', label='試訳。', stats='電報{tels}通、符号{codes}個。疑わしいもの{douteux}個、判読不能{illisible}個。'),
 }
 
 
@@ -130,7 +130,7 @@ def build():
                      'readable': {'toks': [[c, i, p] for c, i, p in toks], 'props': out, 'score': [BC.mean_score(nums), BC.mean_score(after)]},
                      '_src': x})
     msgs.sort(key=lambda m: (m['md'][0], m['md'][1] or form_times.T1915_SORT_DAY.get('t' + m['id'], 0), form_times.minutes(m['time']), m['label']))
-    stats = {'tels': len(msgs), 'codes': sum(len(m['codes']) for m in msgs), 'douteux': sum(s == 'douteux' for m in msgs for s in m['status'])}
+    stats = {'tels': len(msgs), 'codes': sum(len(m['codes']) for m in msgs), 'douteux': sum(s == 'douteux' for m in msgs for s in m['status']), 'illisible': sum(s == 'illisible' for m in msgs for s in m['status'])}
     i18n = {}
     for lang in LANGS:
         g = G[SITE_LANG[lang]]; zh = 'zh' if lang.startswith('zh') else lang

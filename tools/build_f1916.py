@@ -39,7 +39,7 @@ TXT = {
    '(voir <a href="method.html#t1915">Méthode</a>). Les lettres ont été lues sur les scans par Claude et relues à l\'aveugle par Brice Dudout (pour six d\'entre eux, corrigées sur une transcription pré-remplie) ; les deux '
    'lectures ont été fusionnées code par code, puis les caractères restés incertains ont été revus à l\'image. On y suit la maladie de Chen Qimei '
    '(et les conseils de Sun sur la méthode du Dr Takano), les fonds pour l\'action à Shanghai, la défection annoncée de Long Jiguang, la deuxième escadre et le ralliement promis au Fengtian, l\'indépendance du Guangxi (15 mars) et l\'achat d\'avions à San Francisco.</p>'),
-   read='Lettres du formulaire (deux lectures fusionnées)', label='Traduction de travail.', stats='{tels} télégrammes, {codes} codes ; {douteux} douteux.'),
+   read='Lettres du formulaire (deux lectures fusionnées)', label='Traduction de travail.', stats='{tels} télégrammes, {codes} codes ; {douteux} douteux, {illisible} illisible.'),
  'en': dict(title='February–March 1916: new decipherments', intro=(
    '<p><strong>New decipherments (October 2026), unpublished as far as we know.</strong> Sixteen telegrams of February–March 1916, '
    'from the batches of the Ministry of Communications that precede those transcribed by D. Bourdeau (JACAR B03050088000 to B03050088200)' + S21 + '. '
@@ -47,13 +47,13 @@ TXT = {
    '(see <a href="method.html#t1915">Method</a>). The letters were read on the scans by Claude and reread blind by Brice Dudout (for six of them, corrected on a pre-filled transcription); the two readings were '
    'merged code by code, then the characters left uncertain were checked again on the images. They follow Chen Qimei\'s illness (and Sun\'s advice on '
    'Dr Takano\'s method), the funds for the action in Shanghai, the expected defection of Long Jiguang, the Second Squadron and the rising promised in Fengtian, the independence of Guangxi (15 March) and the purchase of aircraft in San Francisco.</p>'),
-   read='Letters of the form (two readings merged)', label='Working translation.', stats='{tels} telegrams, {codes} codes; {douteux} doubtful.'),
+   read='Letters of the form (two readings merged)', label='Working translation.', stats='{tels} telegrams, {codes} codes; {douteux} doubtful, {illisible} illegible.'),
  'zh-Hant': dict(title='1916年2—3月：新破譯的電報', intro=(
    '<p><strong>新破譯（2026年10月），就我們所知此前未曾發表。</strong>1916年2月至3月的十六封電報，出自 D. Bourdeau 所轉錄卷宗之前的遞信省抄送卷宗'
    '（JACAR B03050088000 至 B03050088200）' + S21 + '。它們以已發表的壓縮碼表（上海、青島、馬尼拉、舊金山）' + S1 + '及一張新碼表「Thirteenth」讀出'
    '（見<a href="method.html#t1915">破譯方法</a>）。字母由 Claude 依掃描件讀出，再由 Brice Dudout 盲讀（其中六封為校改預填的轉寫）；兩種讀法逐碼合併，仍存疑的字再對照圖像核查。'
    '電文中可見陳其美的病情（以及孫中山關於高野醫師療法的建議）、上海舉事的款項、龍濟光的叛離、第二艦隊與奉天的響應、廣西獨立（3月15日），以及在舊金山購買飛機。</p>'),
-   read='電報紙上的字母（兩種讀法合併）', label='工作譯文。', stats='電報{tels}封，電碼{codes}個；存疑{douteux}個。'),
+   read='電報紙上的字母（兩種讀法合併）', label='工作譯文。', stats='電報{tels}封，電碼{codes}個；存疑{douteux}個，無法辨讀{illisible}個。'),
  'zh-hans': dict(title='1916年2—3月：新破译的电报', intro=(
    '<p><strong>新破译（2026年10月），就我们所知此前未曾发表。</strong>1916年2月至3月的十六封电报，出自 D. Bourdeau 所转录卷宗之前的递信省抄送卷宗'
    '（JACAR B03050088000 至 B03050088200）' + S21 + '。它们以已发表的压缩码表（上海、青岛、马尼拉、旧金山）' + S1 + '及一张新码表“Thirteenth”读出'
@@ -64,7 +64,7 @@ TXT = {
    '（JACAR B03050088000〜B03050088200）' + S21 + 'から採った。公表済みの圧縮符号表（上海・青島・マニラ・サンフランシスコ）' + S1 + 'と新しい表「Thirteenth」で読める'
    '（<a href="method.html#t1915">解読の方法</a>を参照）。文字は Claude がスキャンから読み、Brice Dudout がブラインドで読み直した（うち6通は下書きの転写を校正）。二つの読みを符号ごとに統合し、'
    'なお不確かな字は画像で再確認した。陳其美の病（と高野博士の療法をめぐる孫文の助言）、上海での行動資金、龍済光の離反の動き、第二艦隊と奉天の呼応、広西の独立（3月15日）、サンフランシスコでの飛行機購入がたどれる。</p>'),
-   read='用紙の文字（二つの読みを統合）', label='試訳。', stats='電報{tels}通、符号{codes}個。疑わしいもの{douteux}個。'),
+   read='用紙の文字（二つの読みを統合）', label='試訳。', stats='電報{tels}通、符号{codes}個。疑わしいもの{douteux}個、判読不能{illisible}個。'),
 }
 
 
@@ -110,7 +110,7 @@ def build():
                      'readable': {'toks': [[c, i, p] for c, i, p in toks], 'props': out, 'score': [BC.mean_score(nums), BC.mean_score(after)]},
                      '_src': x})
     msgs.sort(key=lambda m: (m['md'][0], m['md'][1], m['label']))
-    stats = {'tels': len(msgs), 'codes': sum(len(m['codes']) for m in msgs), 'douteux': sum(s == 'douteux' for m in msgs for s in m['status'])}
+    stats = {'tels': len(msgs), 'codes': sum(len(m['codes']) for m in msgs), 'douteux': sum(s == 'douteux' for m in msgs for s in m['status']), 'illisible': sum(s == 'illisible' for m in msgs for s in m['status'])}
     i18n = {}
     for lang in LANGS:
         zh = 'zh' if lang.startswith('zh') else lang

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>电报全文</title>
-<meta name="description" content="迄今已读出的全部加密电报，先按加密系统、再按日期排列，并标出每个字的状态（可靠、已证实、存疑）及可能的读误、摩尔斯电码与抄写错误。">
+<meta name="description" content="1913–1916年电报的读法：数字电码、“Hong Kong”数字替换、压缩码、文密（G0与Y0）。未刊电报1913–1916按日期排列；其他系列先按系统、再按日期。每封区分转写、解码与读法提案。英文密电另见Rosamonde。">
 <link rel="alternate" hreflang="en" href="../en/telegrams.html">
 <link rel="alternate" hreflang="fr" href="../fr/telegrams.html">
 <link rel="alternate" hreflang="zh-Hans" href="../zh-hans/telegrams.html">
@@ -45,13 +45,13 @@
   <header class="lede">
     <p class="kicker">语料</p>
     <h1>电报逐封细读</h1>
-    <p class="standfirst">迄今已读出的全部加密电报，先按加密系统、再按日期排列：先是1916年的文密（G0 与 Y0 两张表），再是1915–1916年的压缩码，逐表排列。每封电报列出：电报纸上读出的字母、由此得到的电码和汉字、每个字的可信程度，以及对存疑之处可能的错误来源。加密英文电报另见专页：<a href="rosamonde.html">罗莎蒙德电报</a>；1917年6月尚未破译的电报见<a href="#t1917">页末</a>。</p>
-    <p class="byline">转写：Brice Dudout（人工盲读）；分析：与 Claude（Anthropic）合作。</p>
+    <p class="standfirst">1913–1916年电报的读法：数字电码、“Hong Kong”数字替换、压缩码、文密（G0与Y0）。<a href="#inedits">未刊电报1913–1916</a>按日期排列；其他系列先按系统、再按日期。每封区分转写、解码与读法提案。英文密电另见<a href="rosamonde.html">Rosamonde</a>。 1917年6月未破译电报见<a href="#t1917">页末</a>。</p>
+    <p class="byline">Claude读取、Brice Dudout复核；采用已发表转写或直接读图、盲读或预填转写校改，均按批次说明。</p>
   </header>
 
   <h2>阅读说明</h2>
-  <p>每封电报分三层呈现：日本抄件上<strong>读出的字母</strong>（按电报纸每十个字母一组），然后逐格列出两个<strong>音节</strong>、在该通道密钥（G0 或 Y0）下得到的<strong>电码</strong>，以及对应的<strong>汉字</strong>。</p>
-  <p id="numerotation">每封电报以其电报纸在 JACAR 缩微胶片中的影像编号标示（同一影像上有两份时，以字母区分）。各组之内，先按通道或密钥，再按电报纸上所记的交发日期与时间排列；电报纸未记时间者（续页、收报纸）不注时间。</p>
+  <p>每封区分<strong>电报纸上读出的符号</strong>、<strong>电码</strong>与<strong>汉字</strong>。压缩码及文密由两音节给出四位数；Hong Kong每字母替换一位数；数字电报直接使用公开电码。有原分组时保留；否则为比较而每十字母分组，不据此判定电码边界。</p>
+  <p id="numerotation">显示编号为JACAR影格号，同一影格的多张电报纸用字母区分。新批次另列的PDF页码可能与影格号不同。未刊批次按日期，其他系列按系统再按日期与已知时刻。文密17篇正文合计22张电报纸：G0为7张，Y0的15张合成10篇。</p>
   <div class="legend-box">
     <span><span class="token"><span class="h" lang="zh-Hant">報</span></span> 可靠：此类文字中常见的字</span>
     <span><span class="token confirmed"><span class="h" lang="zh-Hant">粤</span></span> 罕见但已确认（与电报纸日期相符、经图像复核的词、人名地名、异体字）</span>
@@ -61,13 +61,13 @@
   <p>“可靠”指该字对语言模型而言合理且与上下文一致，并不保证每个字母都正确。“存疑”的字也可能是对的（专有名词、罕用术语）：这只是提示，不是结论。</p>
 
   <h2>错误从何而来？</h2>
-  <p>从赵伸的原文到我们的读法，每个字母都经过三道环节，各有其典型错误：</p>
+  <p>从发报者的原文到我们的读法，符号可能受到三类误差影响：</p>
   <ol>
     <li><strong>莫尔斯传输。</strong>字母以点和划传送。少一个、多一个或颠倒一个符号，字母就变了：<i>e</i>（·）变成 <i>i</i>（··），<i>a</i>（·−）变成 <i>e</i>（·）或 <i>w</i>（·−−），等等。</li>
     <li><strong>日本职员抄写。</strong>职员手抄对他毫无意义的词，其笔迹中某些字母容易混淆：<i>g</i>/<i>q</i>、<i>x</i>/<i>d</i>、<i>u</i>/<i>n</i>、<i>a</i>/<i>o</i>、<i>k</i>/<i>h</i>、<i>f</i>/<i>b</i>……（研究过程中在图像上记录的成对混淆）。</li>
     <li><strong>我们的阅读。</strong>一百一十年后，同样的混淆在扫描件上再发生一次。</li>
   </ol>
-  <p>因此，对每个存疑电码，程序尝试通过上述机制<strong>只改一个字母</strong>的所有变体，保留能得到有效音节的变体，并按语言模型的评价排序（所示数字为对数似然的增益：数值越大，该变体在此处越“像中文”）。这些只是<mark class="unc">线索，而非更正</mark>：所示正文从不改动。</p>
+  <p>计算候选读法时，程序尝试与码表相容的一字母变体，按语言模型的似然增益排序。这些是<mark class="unc">线索，不是订正</mark>。并非所有批次均计算候选；采纳的提案与重新对齐另作标记，不改电报纸转写。</p>
   <div class="note">
     <h4>验证这一方法的例子</h4>
     <p>0416b号电报（7月19日）以一个无意义的电码 <code>4210</code> 结尾。同一天，经另一条通道发出的孪生电报0416a以“伸皓”（“伸，十九日”）结尾。搜寻一个字母的错误，恰好找到：<i>xifa</i> 应为 <i>xefa</i>。这既是一个合理的莫尔斯错误（·· 代替 ·），也是一个抄写混淆（i/e）。改正后的“皓”读来毫无困难。</p>
@@ -82,7 +82,7 @@
     <span><span class="unres" lang="zh-Hant">襯</span> 存疑，未恢复</span>
   </div>
   <p>将鼠标移到字上，可看到解码出的原字、改动的字母及理由。例如0406中“段無組織內閣之<span lang="zh-Hant">誕</span>意”不成文义；“之<span lang="zh-Hant">誠</span>意”只差<em>一个</em>字母（a 误为 u，莫尔斯 · − 误为 ·· −）。同一句中，“放廈”成为“政府”，每处也只差一个字母。</p>
-  <p><strong>图像核对状态。</strong>每条建议还注明电报纸复读的结果：图像上读出了建议的字母（已确认）；或者复读维持了解码的字母——若确有错误，则源于1916年（莫尔斯传输或日本抄写员）；或者核对正在进行，采用盲读，读者既不知道针对哪个字母，也不知道我们的建议。用于验证密钥的0406号电报从不作针对性复读。</p>
+  <p><strong>图像核对状态。</strong>区分图上读出提案字母、维持原字母及未定三种情况。各批介绍说明是盲读还是预填转写复核。文义合理不等于图像确认。作为密钥留出检验的0406从不接受针对性复读。</p>
   <div class="status warn">
     <h4>局限</h4>
     <ul>
@@ -90,7 +90,7 @@
       <li>电报文字极为简省，可能有几种同样合理的恢复方式，我们只给出一种。</li>
       <li>单字母错误能“解释”很多东西：26个字母、4个位置，一个电码有几十个“邻居”。只有当文意和上下文指向同一方向时，接近程度才算论据。</li>
       <li>每封电报所示的似然增益必然上升，因为我们选择的都是合理的字：这只是参考指标，不是证明。</li>
-      <li>有十四个字仍存疑而无建议；某些段落（0386、0406的结尾、0498的开头）即使恢复后仍不清楚。</li>
+      <li id="wenmi-unresolved">文密仍有12字存疑或无法辨读而无提案；某些段落（0386、0406结尾、0498开头）即使恢复后仍不清楚。</li>
     </ul>
   </div>
 
@@ -201,10 +201,10 @@
 <script src="../assets/js/translations.js?v=265e6bf252"></script>
 <script src="../assets/js/corpus-c1916.js?v=10216b43f3"></script>
 <script src="../assets/js/corpus-n1916.js?v=7338403acb"></script>
-<script src="../assets/js/corpus-t1915.js?v=d16bac2492"></script>
-<script src="../assets/js/corpus-f1916.js?v=8752ad9a7d"></script>
+<script src="../assets/js/corpus-t1915.js?v=a317e0b2f3"></script>
+<script src="../assets/js/corpus-f1916.js?v=669f3b482d"></script>
 <script src="../assets/js/corpus-inedits.js?v=54c7884c38"></script>
-<script src="../assets/js/systems.js?v=e4ea0fdec5"></script>
+<script src="../assets/js/systems.js?v=05da432f90"></script>
 <script src="../assets/js/site.js?v=0e293d349d"></script>
 </body>
 </html>

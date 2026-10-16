@@ -1,15 +1,15 @@
-<!-- {"title": "The telegrams", "description": "All the enciphered telegrams read so far, ordered by cipher system then by date, with the status of each character (sure, confirmed, doubtful) and possible reading, Morse and copying errors."} -->
+<!-- {"title": "The telegrams", "description": "Telegram readings from 1913–1916: numerical telegraph code, “Hong Kong” digit substitution, condensers and Wenmi (G0 and Y0). The Unpublished 1913–1916 batch is ordered by date; the other series by system, then date. Each entry separates transcription, decoding and proposed readings. Enciphered English has its own page, Rosamonde."} -->
 <article class="article">
   <header class="lede">
     <p class="kicker">Corpus</p>
     <h1>The telegrams, one by one</h1>
-    <p class="standfirst">All the enciphered telegrams read so far, ordered by cipher system, then by date: the 1916 Wenmi (grids G0 and Y0), then the 1915–1916 condensers, table by table. For each: the letters as read on the forms, the resulting code and character, the confidence of each character, and, for doubtful passages, the errors that could explain them. The telegrams in enciphered English have their own page, <a href="rosamonde.html">The Rosamonde telegrams</a>; those of June 1917, not deciphered, are <a href="#t1917">at the end of the page</a>.</p>
-    <p class="byline">Transcriptions by Brice Dudout (blind human readings); analysis with Claude (Anthropic).</p>
+    <p class="standfirst">Telegram readings from 1913–1916: numerical telegraph code, “Hong Kong” digit substitution, condensers and Wenmi (G0 and Y0). The <a href="#inedits">Unpublished 1913–1916</a> batch is ordered by date; the other series by system, then date. Each entry separates transcription, decoding and proposed readings. Enciphered English has its own page, <a href="rosamonde.html">Rosamonde</a>. The unbroken June 1917 telegrams are <a href="#t1917">at the end of the page</a>.</p>
+    <p class="byline">Readings by Claude and reviews by Brice Dudout; published transcription or scan reading, blind or prefilled review, specified for each batch.</p>
   </header>
 
   <h2>How to read this page</h2>
-  <p>Each telegram is given in three layers: the <strong>letters read</strong> on the Japanese copy (in groups of ten, as on the form), then, box by box, the two <strong>syllables</strong>, the telegraph <strong>code</strong> they give under the channel's key (G0 or Y0), and the corresponding Chinese <strong>character</strong>.</p>
-  <p id="numerotation">Each telegram bears the number of its form's image in the JACAR microfilm (a letter distinguishes two forms on the same image). Within each series, telegrams are ordered by channel or key, then by the date and time of filing written on the form; the time is missing when the form does not give it (continuation sheet, received-message form).</p>
+  <p>Each entry separates the <strong>symbols read on the form</strong>, the <strong>telegraph code</strong> and the <strong>Chinese character</strong>. Condensers and Wenmi turn two syllables into four digits; Hong Kong replaces each letter by a digit; numerical messages use the public code directly. Original groups are preserved where available; otherwise letters are regrouped by ten for comparison, without implying code boundaries.</p>
+  <p id="numerotation">The displayed number is the JACAR frame number; a letter distinguishes forms in the same frame. The PDF page number, separately shown for new batches, may differ. The Unpublished batch follows dates; other series follow system, then available date and time. The 17 Wenmi texts combine 22 forms: 7 for G0 and 15 combined into 10 texts for Y0.</p>
   <div class="legend-box">
     <span><span class="token"><span class="h" lang="zh-Hant">報</span></span> secure: a character expected in a text of this kind</span>
     <span><span class="token confirmed"><span class="h" lang="zh-Hant">粤</span></span> rare but confirmed (date on the form, word re-read on the image, name, graphic variant)</span>
@@ -19,13 +19,13 @@
   <p>"Secure" means the character is plausible for the language model and consistent with the rest; it does not guarantee every letter. A "doubtful" character may also be right (a proper name, a rare technical term): it is a signal, not a verdict.</p>
 
   <h2>Where can errors come from?</h2>
-  <p>Between Zhao Shen's text and our reading, every letter went through three stages, each with its typical errors:</p>
+  <p>Between the sender’s message and our reading, the symbols may have undergone three kinds of alteration:</p>
   <ol>
     <li><strong>Morse transmission.</strong> Letters travel as dots and dashes. A lost, added or inverted sign changes the letter: <i>e</i> (·) becomes <i>i</i> (··), <i>a</i> (·−) becomes <i>e</i> (·) or <i>w</i> (·−−), and so on.</li>
     <li><strong>Japanese copying.</strong> The clerk copies by hand words that mean nothing to him. Some letters in his handwriting get confused: <i>g</i>/<i>q</i>, <i>x</i>/<i>d</i>, <i>u</i>/<i>n</i>, <i>a</i>/<i>o</i>, <i>k</i>/<i>h</i>, <i>f</i>/<i>b</i>… (pairs noted on the images during the investigation).</li>
     <li><strong>Our reading.</strong> The same confusions come into play a second time, a hundred and ten years later, on the scan.</li>
   </ol>
-  <p>For each doubtful code, the computer therefore tries every variant that changes <strong>a single letter</strong> through one of these mechanisms, keeps those that give a valid syllable, and ranks them by what the language model thinks of them (the number shown is the gain in log-likelihood: the larger it is, the more Chinese the variant "sounds" at this point). These are <mark class="unc">leads, not corrections</mark>: the text shown is never changed.</p>
+  <p>Where alternatives are computed, the program tries one-letter variants compatible with the table and ranks them by the language model’s likelihood gain. These are <mark class="unc">leads, not corrections</mark>. They are not computed for every batch; retained proposals and alignments are marked separately without changing the form transcription.</p>
   <div class="note">
     <h4>The case that validates the method</h4>
     <p>Telegram 0416b (19 July) ends with a meaningless code, <code>4210</code>. The same day, its twin 0416a, sent through the other channel, ends with 伸皓, "Shen, the 19th". Searching for a single-letter error finds exactly that: <i>xifa</i> instead of <i>xefa</i>. It is both a plausible Morse error (·· instead of ·) and a copying confusion (i/e). The correction 皓 then reads without difficulty.</p>
@@ -40,7 +40,7 @@
     <span><span class="unres" lang="zh-Hant">襯</span> doubtful, not restored</span>
   </div>
   <p>Hover over a character to see the decoded character, the letters changed and the reasons. Example: in 0406, "段無組織內閣之<span lang="zh-Hant">誕</span>意" means nothing; "之<span lang="zh-Hant">誠</span>意" ("the sincere will") is <em>one</em> letter away (u instead of a, ·· − instead of · −). In the same sentence, 放廈 becomes 政府 ("the government"), each time by a single letter.</p>
-  <p><strong>Status on the image.</strong> Each proposal also states what the re-reading of the forms says: the proposed letter was read (confirmed); or the decoded letter was re-read and maintained, in which case the error, if there is one, dates from 1916 (Morse transmission or Japanese copyist); or the check is in progress, in a blind reading where the reader knows neither which letter is targeted nor what we propose. Message 0406, the held-out test of the key, is never re-read in a targeted way.</p>
+  <p><strong>Status on the image.</strong> Checks distinguish a proposed letter found on the scan, an original letter retained and an unresolved point. Reviews may be blind or based on a prefilled transcription, as specified in each batch’s introduction. A plausible proposal is not confirmation. Message 0406, the key’s held-out test, is never reread in a targeted way.</p>
   <div class="status warn">
     <h4>Limits</h4>
     <ul>
@@ -48,7 +48,7 @@
       <li>Telegraphic Chinese is extremely terse: several restorations may be equally plausible. We give only one.</li>
       <li>A one-letter error "explains" a lot: with 26 letters and 4 positions, a code has dozens of neighbours. Closeness is only an argument when meaning and context point the same way.</li>
       <li>The likelihood gain shown for each message necessarily goes up, since we chose plausible characters: it is an indicator, not a proof.</li>
-      <li>Fourteen characters remain doubtful with no proposal; some passages (0386, the end of 0406, the start of 0498) stay obscure even after restoration.</li>
+      <li id="wenmi-unresolved">In Wenmi, 12 characters remain doubtful or illegible without a proposal; some passages (0386, the end of 0406, the start of 0498) remain obscure even after restoration.</li>
     </ul>
   </div>
 

@@ -84,6 +84,7 @@
 
   <p>The plaintext is telegraphic English, without spaces, cut into ten-letter words. Each letter is replaced by its partner in a table of <strong>reciprocal pairs</strong>: the same table enciphers and deciphers.</p>
   <p class="mono" style="font-size:1.05rem;line-height:1.9">a↔u &nbsp;b↔g &nbsp;c↔s &nbsp;e↔o &nbsp;f↔j &nbsp;h↔y &nbsp;i↔r &nbsp;k↔z &nbsp;l↔t &nbsp;m↔w &nbsp;n↔v &nbsp;q↔x &nbsp;— d and p unchanged</p>
+  <p>The table above describes the base substitution. The 1915 forms also attest <code>q</code> in place of the cipher letter expected for <code>p</code>, notably the reviewed <code>qq</code> of 6 March, rendered <code>[pp]</code> in the reading. This usage is recorded without silently changing the reciprocal table.</p>
   <p>So <span class="mono">you</span> is written <span class="mono">hea</span> and <span class="mono">love</span> is written <span class="mono">teno</span> — and several plain-language telegrams of March 1915 addressed to Rosamonde are simply signed “teno”. Proper names, numbers and reply addresses stay in clear (“Inuzuka”, “100000”).</p>
 
   <figure id="chiffrement-illustre" class="editorial-illustration rosamonde-diagram"><a href="../assets/img/rosamonde/illustrations/rosamonde-chiffrement-en.svg"><img src="../assets/img/rosamonde/illustrations/rosamonde-chiffrement-en.svg" width="900" height="1160" alt="The Rosamonde cipher — Invented teaching example, not a quotation from a telegram." loading="lazy" decoding="async"></a><figcaption>The Rosamonde cipher — Invented teaching example, not a quotation from a telegram.</figcaption></figure>
@@ -163,7 +164,7 @@
 
   <h2 id="methode">How we established it</h2>
   <ol>
-    <li><strong>Transcription.</strong> The forms were read on the JACAR scans (200 dpi), twice and independently: by Claude, then by Brice Dudout <em>blind</em>, line by line, without seeing either the first reading or the plaintext (89 % of letters identical). The May 1916 telegrams had been transcribed blind <em>before</em> the key was found. The published text keeps, word by word, the reading that gives the better English; both readings are preserved.</li>
+    <li><strong>Transcription.</strong> The forms were read on the JACAR scans (200 dpi), twice and independently: by Claude, then by Brice Dudout <em>blind</em>, line by line, without seeing either the first reading or the plaintext (89 % of letters identical). The May 1916 telegrams had been transcribed blind <em>before</em> the key was found. The published text keeps, word by word, the reading that gives the better English; both readings are preserved. This account of independent readings concerns the initial sample of 20 texts; the two additions used R23, a non-blind review (<a href="#r23-note">provenance</a>).</li>
     <li><strong>Statistics.</strong> The index of coincidence of the letters (0.062) is that of a natural language, not of an enciphered code; f and q never occur; the trigram <span class="mono">hea</span> comes back ten times.</li>
     <li><strong>Key search.</strong> Simulated annealing over all 26-letter substitutions, then over reciprocal substitutions only, scored by an English quadgram model; an English text enciphered with a random key serves as a control and is recovered at 100 %.</li>
     <li><strong>Out-of-sample validation.</strong> The key taken from the 1915 telegrams alone (Claude's reading) reads the 1916 transcriptions made blind: score −5.97 against −8.01 ± 0.27 for 2,000 random reciprocal tables (best: −6.93), i.e. z = 7.5. It reads Brice Dudout's blind rereading of 1915 in the same way: −5.27 against −8.02 ± 0.25 (best: −6.87), z = 10.9. A telegram in another system (3 March 1916) stays unreadable (z = 0.6).</li>
@@ -172,7 +173,7 @@
 
   <h2 id="limites">What remains uncertain</h2>
   <ul>
-    <li>In the eleven complete telegrams of 1915, about 45 letters out of 750 are corrected (6 %), nearly all copying confusions. Still uncertain: eight words in the middle of 9 March, one word on 25 February (“throw of[f] …”) and the ending of “de[vou]t”, one group on 7 July; in 1916, two names, “Chang Ki” (Zhang Ji?) and “Tai” (Dai Jitao?); the letters in brackets, checked on the images, are errors of the forms.</li>
+    <li>In the eleven complete telegrams of the initial 1915 sample, about 45 letters out of 750 are corrected (6 %), nearly all copying confusions. Still uncertain: eight words in the middle of 9 March, one word on 25 February (“throw of[f] …”) and the ending of “de[vou]t”, one group on 7 July; in 1916, two names, “Chang Ki” (Zhang Ji?) and “Tai” (Dai Jitao?); the letters in brackets, checked on the images, are errors of the forms.</li>
     <li>The identification of sender and addressee rests on cross-checks: no form bears their names.</li>
     <li>We have found these telegrams neither in the work on the 1916 intercepts<sup class="fn"><a href="#s-bourdeau">[1]</a></sup>, nor in the historiography of the marriage<sup class="fn"><a href="#s-yang">[2, 3]</a></sup>, nor in the biography by J. Chang and J. Halliday<sup class="fn"><a href="#s-chang">[4]</a></sup>. Other works remain to be checked.</li>
   </ul>

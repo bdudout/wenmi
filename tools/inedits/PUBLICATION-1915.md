@@ -2,7 +2,7 @@
 
 Paquet de Claude, relu par Brice (R23 puis R24), appliqué sans retraduire ni corriger les textes chinois : `tools/data/publication-1915.json`. Le paquet de travail reste dans `wenmi/cryptanalysis/c35/v877/publication-codex.json`.
 
-- Neuf condensateurs ajoutés, de mars à octobre 1915 : corpus désormais de **20 télégrammes, 446 codes, 53 caractères douteux**, dont 188 codes et 21 caractères marqués dans les neuf ajouts. Les onze anciennes entrées représentent 258 codes et 32 caractères douteux ; le compteur 28 de l’ancien accueil était obsolète.
+- Neuf condensateurs ajoutés, de mars à octobre 1915 : corpus désormais de **20 télégrammes, 446 codes, 53 caractères douteux et 1 illisible**, dont 188 codes et 21 caractères marqués dans les neuf ajouts. Les onze anciennes entrées représentent 258 codes et 32 caractères douteux ; le compteur 28 de l’ancien accueil était obsolète.
 - Deux Rosamonde des 6 et 7 mars : **22 télégrammes** au total, 15 dans le tableau 1915 et 7 dans celui de 1916. Traductions du paquet conservées ; ancienne estimation de 45 corrections sur 750 lettres explicitement rattachée à l’échantillon initial.
 - Les 9 nouveaux décodages bruts, dates, heures, pages et étiquettes concordent exactement avec le paquet. Les 11 objets de messages antérieurs et les 20 anciennes lignes Rosamonde ont été comparés au commit précédent : textes inchangés.
 - Vue **0274 = page 52**, malgré les sauts de numérotation après la page 50 de B03050087700. Correspondance corrigée dans les deux builds de données et d’images. Vues 0233a et 0233b distinctes ; les deux fiches partagent le scan de la page 13.
