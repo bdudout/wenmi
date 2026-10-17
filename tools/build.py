@@ -10,7 +10,7 @@ from rosamonde_cipher_diagram import build_diagrams
 from editorial_visuals import add_editorial_visuals
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
-PAGES = ['index', 'rosamonde', 'history', 'method', 'telegrams', 'relecture', 'sources', 'gongmi']
+PAGES = ['index', 'rosamonde', 'history', 'method', 'telegrams', 'relecture', 'gongmi', 'sources']
 LANGS = {
     'en': dict(code='en', label='English', brand='The Wenmi code',
                nav=['Home', 'Rosamonde', 'The history', 'The method', 'Telegrams', '1916 condensers', 'Gongmi', 'Sources'], theme='Toggle light/dark theme',
