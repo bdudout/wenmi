@@ -24,6 +24,7 @@
     <a href="telegrams.html">電報全文</a>
     <a href="relecture.html">1916年壓縮碼</a>
     <a href="sources.html">資料來源</a>
+    <a href="gongmi.html">共密</a>
   </nav>
   <nav class="lang-switch" aria-label="語言">
     <details>
@@ -74,8 +75,11 @@
       <li><a href="#thirtyeight">新碼表「Thirtyeight」</a></li>
       <li><a href="#huangxing">新碼表：黃興的碼表</a></li>
       <li><a href="#outils">工具</a></li>
+            <li><a href="#gongmi">共密：候選方法C51</a></li>
     </ol>
   </nav>
+
+  <section class="article" id="gongmi"><h2>另一種歷史密碼：「共密」電報</h2><p>這兩封電報並非使用上文介紹的G0和Y0方格。明文電報前綴<span lang="zh-Hant">共密</span>可將其區分；但僅憑前綴，無法證明所有帶有該前綴的電報共用同一歷史密鑰。</p><p>候選模型C51按以下步驟讀取數字組：每張表單按列從右向左、從上到下讀取，再接續下一張；只移除一次明文前綴<code>0364 1378</code>；按下表替換十位數字；按通常借位計算<code>P = (9000 − 正規化後的C) mod 10000</code>；最後在中文電碼（CTC）中查找P。</p><div class="table-wrap"><table><tr><th>數字C</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr><tr><th>φ(C)</th><td>9</td><td>7</td><td>6</td><td>1</td><td>4</td><td>0</td><td>5</td><td>2</td><td>8</td><td>3</td></tr></table></div><p>該規則可使N17和N18的部分中文內容得到解釋，但仍是候選復原：尚未確認1916年實際使用的密碼本。與一份印刷版中文電碼的14項定向核對相符，但不能據此認定當時使用的就是該版本。掃描件和釋讀的不確定性見<a href="gongmi.html">N17與N18的部分校勘版</a>。</p></section>
 
   <figure class="editorial-illustration">
   <img src="../assets/img/illustrations/a-telegraph-office.webp" alt="1916年日本電報局的想像場景。真實的「文密」電報單上寫的是拉丁字母密語（見首頁掃描件）。" width="1600" height="900" loading="lazy" decoding="async">

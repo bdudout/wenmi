@@ -1,0 +1,12 @@
+/* Scoped critical-edition styles; no changes to the existing corpus. */
+.gongmi .gm-han{font:25px/1.9 serif;overflow-wrap:anywhere}
+.gongmi .gm-message{border-top:1px solid var(--line,#ccc);padding-top:1rem;margin-top:2rem}
+.gongmi .gm-scroll{overflow:auto;margin:1rem 0}.gongmi table{width:100%;border-collapse:collapse;font-size:15px}
+.gongmi td,.gongmi th{padding:8px;border:1px solid #cfc5b7;text-align:left;vertical-align:top}
+.gongmi .gm-nav{display:flex;flex-wrap:wrap;gap:16px}.gongmi summary{cursor:pointer}
+.gongmi .gm-cell-han{font:21px/1.8 serif;min-width:150px;max-width:350px;overflow-wrap:anywhere}
+.gongmi .gm-status{display:block;font-size:12px;margin-top:5px}
+.gongmi .gm-unresolved{background:rgba(180,90,60,.12)}.gongmi .gm-conjectural{background:rgba(200,150,20,.15)}
+.gongmi img{max-width:100%;height:auto}.gongmi details{margin:1rem 0}
+
+.gongmi th:first-child,.gongmi td:first-child{white-space:nowrap;min-width:3.5rem}

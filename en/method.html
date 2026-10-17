@@ -24,6 +24,7 @@
     <a href="telegrams.html">Telegrams</a>
     <a href="relecture.html">1916 condensers</a>
     <a href="sources.html">Sources</a>
+    <a href="gongmi.html">Gongmi</a>
   </nav>
   <nav class="lang-switch" aria-label="Language">
     <details>
@@ -74,8 +75,11 @@
       <li><a href="#thirtyeight">New table “Thirtyeight”</a></li>
       <li><a href="#huangxing">Huang Xing's new table</a></li>
       <li><a href="#outils">Tools</a></li>
+            <li><a href="#gongmi">Gongmi: candidate method C51</a></li>
     </ol>
   </nav>
+
+  <section class="article" id="gongmi"><h2>A separate historical system: the “共密” telegrams</h2><p>These two messages do not use the G0 and Y0 grids described above. The clear telegraph prefix <span lang="zh-Hant">共密</span> distinguishes them; the prefix alone does not prove that every message bearing it used one shared historical key.</p><p>Candidate model C51 reads the digit groups as follows: traverse each form by columns from right to left, top to bottom, then continue onto the next sheet; remove the public prefix <code>0364 1378</code> once; replace the tens digit using the table below; calculate <code>P = (9000 − normalized C) mod 10000</code> with ordinary borrowing; then look up P in the Chinese Telegraph Code (CTC).</p><div class="table-wrap"><table><tr><th>Digit C</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr><tr><th>φ(C)</th><td>9</td><td>7</td><td>6</td><td>1</td><td>4</td><td>0</td><td>5</td><td>2</td><td>8</td><td>3</td></tr></table></div><p>This rule yields interpretable Chinese passages in N17 and N18. It remains a candidate reconstruction: the historical codebook used in 1916 has not been identified. One printed CTC edition matches 14 targeted entries, which does not establish that it was the edition in use at the time. The <a href="gongmi.html">partial edition of N17 and N18</a> presents the scans and reading uncertainties.</p></section>
 
   <figure class="editorial-illustration">
   <img src="../assets/img/illustrations/a-telegraph-office.webp" alt="A Japanese telegraph office, evoking 1916. The real Wenmi forms carry cipher words in Latin letters (see the scan on the home page)." width="1600" height="900" loading="lazy" decoding="async">
