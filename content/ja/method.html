@@ -36,7 +36,6 @@
     </ol>
   </nav>
 
-  <section class="article" id="gongmi"><h2>別系統の歴史的暗号：「共密」電報</h2><p>この2通は、上で説明したG0・Y0の表を使っていない。平文の電信接頭辞<span lang="zh-Hant">共密</span>で区別できるが、この接頭辞だけでは、同じ接頭辞を持つ全電報に共通の歴史的鍵が使われたとは証明できない。</p><p>候補モデルC51は数字群を次のように読む。各用紙を列ごとに右から左、上から下へ読み、次の用紙へ続ける。平文の公開接頭辞<code>0364 1378</code>を一度除く。十の位を下表で置き換え、通常の繰り下がりで<code>P = (9000 − 正規化したC) mod 10000</code>を計算し、Pを中国電碼（CTC）で引く。</p><div class="table-wrap"><table><tr><th>数字C</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr><tr><th>φ(C)</th><td>9</td><td>7</td><td>6</td><td>1</td><td>4</td><td>0</td><td>5</td><td>2</td><td>8</td><td>3</td></tr></table></div><p>この規則でN17とN18から解釈可能な中国語の断片が得られる。ただし候補復元であり、1916年に実際に使われた暗号帳は特定されていない。印刷版CTCとは対象14項目が一致するが、当時の使用版を証明するものではない。スキャンと読みの不確かさは<a href="gongmi.html">N17・N18の部分校訂版</a>を参照。</p></section>
 
   <h2 id="tldr">要点：暗号方式</h2>
   <figure class="wide media">
@@ -279,4 +278,5 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
   <p>ソルバー、二つの鍵、判読データ、言語モデルは <a href="https://github.com/bdudout/wenmi/tree/main/solver">GitHub リポジトリの <code>solver/</code> フォルダ</a>で公開しており、探索を再現できる。調査の完全なログは追って公開する。</p>
   <hr>
   <p class="byline">出典は<a href="sources.html">出典ページ</a>を参照。論文とコードで道を開いた Daniel Bourdeau 氏、そして S. Tomokiyo 氏（Cryptiana）に感謝する。</p>
+  <section class="article" id="gongmi"><h2>別系統の歴史的暗号：「共密」電報</h2><p>この2通は、上で説明したG0・Y0の表を使っていない。平文の電信接頭辞<span lang="zh-Hant">共密</span>で区別できるが、この接頭辞だけでは、同じ接頭辞を持つ全電報に共通の歴史的鍵が使われたとは証明できない。</p><p>候補モデルC51は数字群を次のように読む。各用紙を列ごとに右から左、上から下へ読み、次の用紙へ続ける。平文の公開接頭辞<code>0364 1378</code>を一度除く。十の位を下表で置き換え、通常の繰り下がりで<code>P = (9000 − 正規化したC) mod 10000</code>を計算し、Pを中国電碼（CTC）で引く。</p><div class="table-wrap"><table><tr><th>数字C</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr><tr><th>φ(C)</th><td>9</td><td>7</td><td>6</td><td>1</td><td>4</td><td>0</td><td>5</td><td>2</td><td>8</td><td>3</td></tr></table></div><p>この規則でN17とN18から解釈可能な中国語の断片が得られる。ただし候補復元であり、1916年に実際に使われた暗号帳は特定されていない。印刷版CTCとは対象14項目が一致するが、当時の使用版を証明するものではない。スキャンと読みの不確かさは<a href="gongmi.html">N17・N18の部分校訂版</a>を参照。</p></section>
 </article>

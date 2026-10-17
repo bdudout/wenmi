@@ -36,7 +36,6 @@
     </ol>
   </nav>
 
-  <section class="article" id="gongmi"><h2>另一種歷史密碼：「共密」電報</h2><p>這兩封電報並非使用上文介紹的G0和Y0方格。明文電報前綴<span lang="zh-Hant">共密</span>可將其區分；但僅憑前綴，無法證明所有帶有該前綴的電報共用同一歷史密鑰。</p><p>候選模型C51按以下步驟讀取數字組：每張表單按列從右向左、從上到下讀取，再接續下一張；只移除一次明文前綴<code>0364 1378</code>；按下表替換十位數字；按通常借位計算<code>P = (9000 − 正規化後的C) mod 10000</code>；最後在中文電碼（CTC）中查找P。</p><div class="table-wrap"><table><tr><th>數字C</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr><tr><th>φ(C)</th><td>9</td><td>7</td><td>6</td><td>1</td><td>4</td><td>0</td><td>5</td><td>2</td><td>8</td><td>3</td></tr></table></div><p>該規則可使N17和N18的部分中文內容得到解釋，但仍是候選復原：尚未確認1916年實際使用的密碼本。與一份印刷版中文電碼的14項定向核對相符，但不能據此認定當時使用的就是該版本。掃描件和釋讀的不確定性見<a href="gongmi.html">N17與N18的部分校勘版</a>。</p></section>
 
   <h2 id="tldr">概要：加密系統</h2>
   <figure class="wide media">
@@ -279,4 +278,5 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
   <p>求解器、兩把密鑰、閱讀資料與語言模型已發布在 <a href="https://github.com/bdudout/wenmi/tree/main/solver">GitHub 儲存庫的 <code>solver/</code> 目錄</a>中，可據此重做搜尋；完整的研究日誌隨後公布。</p>
   <hr>
   <p class="byline">資料來源見<a href="sources.html">資料來源頁</a>。感謝 Daniel Bourdeau，他的文章與程式碼為本研究開闢了道路；也感謝 S. Tomokiyo（Cryptiana）。</p>
+  <section class="article" id="gongmi"><h2>另一種歷史密碼：「共密」電報</h2><p>這兩封電報並非使用上文介紹的G0和Y0方格。明文電報前綴<span lang="zh-Hant">共密</span>可將其區分；但僅憑前綴，無法證明所有帶有該前綴的電報共用同一歷史密鑰。</p><p>候選模型C51按以下步驟讀取數字組：每張表單按列從右向左、從上到下讀取，再接續下一張；只移除一次明文前綴<code>0364 1378</code>；按下表替換十位數字；按通常借位計算<code>P = (9000 − 正規化後的C) mod 10000</code>；最後在中文電碼（CTC）中查找P。</p><div class="table-wrap"><table><tr><th>數字C</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr><tr><th>φ(C)</th><td>9</td><td>7</td><td>6</td><td>1</td><td>4</td><td>0</td><td>5</td><td>2</td><td>8</td><td>3</td></tr></table></div><p>該規則可使N17和N18的部分中文內容得到解釋，但仍是候選復原：尚未確認1916年實際使用的密碼本。與一份印刷版中文電碼的14項定向核對相符，但不能據此認定當時使用的就是該版本。掃描件和釋讀的不確定性見<a href="gongmi.html">N17與N18的部分校勘版</a>。</p></section>
 </article>
