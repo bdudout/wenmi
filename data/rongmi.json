@@ -2501,8 +2501,8 @@
    },
    "summary_fr": "Huang Xing au dujun du Zhejiang après la mort de Yuan : les armes partent d’abord, le prêt d’un million suivra.",
    "repairs": [],
-   "reread_by_brice": false,
-   "raw": "轉呀都督鑒袁死大局益艱非切實預備不足以欬張國法奠定國基感佩藎籌當効棉力械先運款百萬亦可卽成興佳",
+   "reread_by_brice": true,
+   "raw": "轉呂都督鑒袁死大局益艱非切實預備不足以申張國法奠定國基感佩藎籌當効棉力械先運款百萬亦可卽成興佳",
    "groups": [
     {
      "i": 0,
@@ -2527,9 +2527,9 @@
     },
     {
      "i": 2,
-     "cipher": "8812",
-     "ctc": "0711",
-     "glyph": "呀",
+     "cipher": "8813",
+     "ctc": "0712",
+     "glyph": "呂",
      "sheet": 1
     },
     {
@@ -2653,9 +2653,9 @@
     },
     {
      "i": 20,
-     "cipher": "2089",
-     "ctc": "2947",
-     "glyph": "欬",
+     "cipher": "3089",
+     "ctc": "3947",
+     "glyph": "申",
      "sheet": 2
     },
     {
@@ -2850,11 +2850,11 @@
    ],
    "segments": [
     {
-     "raw": "轉呀都督鑒",
-     "status": "provisional",
-     "zh": "轉{呂}都督鑒：",
+     "raw": "轉呂都督鑒",
+     "status": "literal",
+     "zh": "轉呂都督鑒：",
      "fr": "À transmettre au dujun Lü :",
-     "note": "呀 → {呂} : 1 chiffre (8812 → 8813)."
+     "note": "呂 : relu par Brice Dudout (8813), confirmant la lecture probable à un chiffre près."
     },
     {
      "raw": "袁死大局益艱",
@@ -2864,11 +2864,11 @@
      "note": "Yuan Shikai meurt le 6 juin 1916."
     },
     {
-     "raw": "非切實預備不足以欬張國法奠定國基",
-     "status": "provisional",
-     "zh": "非切實預備，不足以{伸}張國法、奠定國基。",
+     "raw": "非切實預備不足以申張國法奠定國基",
+     "status": "literal",
+     "zh": "非切實預備，不足以申張國法、奠定國基。",
      "fr": "Sans préparatifs sérieux, on ne pourra pas faire respecter la loi de l’État ni en asseoir les fondements.",
-     "note": "國 : lu sous la clé v2 (9084, deux fois). 欬 → {伸} (伸張) : contexte."
+     "note": "申張 = 伸張 (申 relu par Brice Dudout)."
     },
     {
      "raw": "感佩藎籌當効棉力",
@@ -9632,7 +9632,7 @@
    },
    "summary_fr": "Huang Xing : l’affaire des fonds de Puquan (Zhang Ji) n’a plus d’espoir.",
    "repairs": [],
-   "reread_by_brice": false,
+   "reread_by_brice": true,
    "raw": "溥款事己向參薾二省談過無望興",
    "groups": [
     {
@@ -9807,8 +9807,8 @@
    },
    "summary_fr": "Huang Xing : selon Koike, Zhang Ji pourrait obtenir un petit prêt à titre personnel par l’entremise du consul Ariyoshi.",
    "repairs": [],
-   "reread_by_brice": false,
-   "raw": "頃又據小池云溥兄以個人名義隸有吉領事紹介武釆可借小款請自奪興嗒",
+   "reread_by_brice": true,
+   "raw": "頃又據小池云溥兄以個人名義請有吉領事紹介武釆可借小款請自奪興咸",
    "groups": [
     {
      "i": -1,
@@ -9917,9 +9917,9 @@
     },
     {
      "i": 14,
-     "cipher": "1847",
-     "ctc": "7153",
-     "glyph": "隸",
+     "cipher": "2847",
+     "ctc": "6153",
+     "glyph": "請",
      "sheet": 2
     },
     {
@@ -10036,9 +10036,9 @@
     },
     {
      "i": 31,
-     "cipher": "8148",
-     "ctc": "0852",
-     "glyph": "嗒",
+     "cipher": "8248",
+     "ctc": "0752",
+     "glyph": "咸",
      "sheet": 3
     }
    ],
@@ -10051,11 +10051,11 @@
      "note": "小池 = 小池張造 (directeur des Affaires politiques, Affaires étrangères), candidat."
     },
     {
-     "raw": "溥兄以個人名義隸有吉領事紹介",
+     "raw": "溥兄以個人名義請有吉領事紹介",
      "status": "provisional",
-     "zh": "溥兄以個人名義{請}有吉領事紹介，",
+     "zh": "溥兄以個人名義請有吉領事紹介，",
      "fr": "si notre ami Pu, à titre personnel, demande au consul Ariyoshi de le recommander,",
-     "note": "溥 = 張繼 (cf. N24 : « 以個人名義 »). 隸 → {請} : 1 chiffre. 有吉 = 有吉明, consul général à Shanghai (candidat)."
+     "note": "溥 = 張繼 (cf. N24 : « 以個人名義 »). 請 : relu par Brice Dudout. 有吉 = 有吉明, consul général à Shanghai (candidat)."
     },
     {
      "raw": "武釆可借小款",
@@ -10079,11 +10079,11 @@
      "note": ""
     },
     {
-     "raw": "嗒",
-     "status": "provisional",
-     "zh": "{咸}",
+     "raw": "咸",
+     "status": "literal",
+     "zh": "咸",
      "fr": "[le 15]",
-     "note": "嗒 (8148) → {咸} : 1 chiffre (8248) ; 咸 = 15, date de l’en-tête."
+     "note": "咸 = 15 : relu par Brice Dudout (8248), conforme à l’en-tête."
     }
    ],
    "sheet_count": 3
@@ -10125,8 +10125,8 @@
    },
    "summary_fr": "De Shanghai : la Constitution sera sans doute rétablie ; prudence sur la réponse publique de Sun Yat-sen ; signé Ge, Yin, Huang.",
    "repairs": [],
-   "reread_by_brice": false,
-   "raw": "舊約法可望恢復梁派見好□京滬要人無弧硬主年中山□所部停兵並電詢公已登報復電渠必發表宜慎葛殷酵屢電公須覆會逵境",
+   "reread_by_brice": true,
+   "raw": "舊約法可望恢復梁派見好北京滬要人無弧硬主張中山電所部停兵並電詢公已登報復電渠必發表宜慎葛殷黃屢電公須覆會逵境",
    "groups": [
     {
      "i": -1,
@@ -10221,9 +10221,9 @@
     },
     {
      "i": 12,
-     "cipher": "84?6",
-     "ctc": null,
-     "glyph": "□",
+     "cipher": "8446",
+     "ctc": "0554",
+     "glyph": "北",
      "sheet": 2
     },
     {
@@ -10284,9 +10284,9 @@
     },
     {
      "i": 21,
-     "cipher": "7312",
-     "ctc": "1628",
-     "glyph": "年",
+     "cipher": "7212",
+     "ctc": "1728",
+     "glyph": "張",
      "sheet": 2
     },
     {
@@ -10305,9 +10305,9 @@
     },
     {
      "i": 24,
-     "cipher": "1?57",
-     "ctc": null,
-     "glyph": "□",
+     "cipher": "1857",
+     "ctc": "7193",
+     "glyph": "電",
      "sheet": 3
     },
     {
@@ -10459,9 +10459,9 @@
     },
     {
      "i": 46,
-     "cipher": "2104",
-     "ctc": "6806",
-     "glyph": "酵",
+     "cipher": "1104",
+     "ctc": "7806",
+     "glyph": "黃",
      "sheet": 4
     },
     {
@@ -10537,18 +10537,18 @@
      "note": ""
     },
     {
-     "raw": "□京滬要人無弧硬主年",
+     "raw": "北京滬要人無弧硬主張",
      "status": "provisional",
-     "zh": "〔□〕京滬要人無{強}硬主{張}。",
+     "zh": "北京、滬要人無{強}硬主張。",
      "fr": "Les personnalités de Pékin et de Shanghai n’ont pas de position intransigeante.",
-     "note": "□ = groupe à chiffre illisible. 弧 → {強}, 年 → {張} : 1 chiffre chacun."
+     "note": "北, 張 : relus par Brice Dudout. 弧 → {強} : 1 chiffre."
     },
     {
-     "raw": "中山□所部停兵",
-     "status": "provisional",
-     "zh": "中山〔□〕所部停兵，",
-     "fr": "Zhongshan [Sun Yat-sen] […] ses troupes cessent le combat,",
-     "note": "□ = groupe à chiffre illisible."
+     "raw": "中山電所部停兵",
+     "status": "literal",
+     "zh": "中山電所部停兵，",
+     "fr": "Zhongshan [Sun Yat-sen] a ordonné par télégramme à ses troupes de cesser le combat,",
+     "note": "電 : relu par Brice Dudout."
     },
     {
      "raw": "並電詢公",
@@ -10579,11 +10579,11 @@
      "note": ""
     },
     {
-     "raw": "葛殷酵",
-     "status": "provisional",
-     "zh": "葛、殷、{黃}",
+     "raw": "葛殷黃",
+     "status": "literal",
+     "zh": "葛、殷、黃",
      "fr": "Ge, Yin, Huang",
-     "note": "Les signataires de N24 : 葛敬恩, 殷汝驪, 黃郛. 酵 → {黃} : 1 chiffre."
+     "note": "Les signataires de N24 : 葛敬恩, 殷汝驪, 黃郛 (黃 relu par Brice Dudout)."
     },
     {
      "raw": "屢電公須覆",
@@ -10644,8 +10644,8 @@
    },
    "summary_fr": "De Shanghai : manœuvres de Pékin sur la Constitution, Huang Qun à Pékin ; les parlementaires de Shanghai s’y opposent ; attendre.",
    "repairs": [],
-   "reread_by_brice": false,
-   "raw": "馮極暗昧又京電段等議決各省派三人赴京議約法滬放客早知梁陰謀詬約法換廛內閣段爲總統黃羣到京朞段變滬議員卽開會反對下恢復舊約法恐纍戰公暫靜觀會城",
+   "reread_by_brice": true,
+   "raw": "馮極暗昧又京電段等議決各省派三人赴京議約法滬放客早知梁陰謀詬約法換得內閣段爲總統黃羣到京朞段變滬議員卽開會反對不恢復舊約法恐纍戰公暫靜觀會城",
    "groups": [
     {
      "i": -1,
@@ -10894,9 +10894,9 @@
     },
     {
      "i": 34,
-     "cipher": "7371",
-     "ctc": "1679",
-     "glyph": "廛",
+     "cipher": "7271",
+     "ctc": "1779",
+     "glyph": "得",
      "sheet": 3
     },
     {
@@ -11048,9 +11048,9 @@
     },
     {
      "i": 56,
-     "cipher": "8903",
-     "ctc": "0007",
-     "glyph": "下",
+     "cipher": "8902",
+     "ctc": "0008",
+     "glyph": "不",
      "sheet": 5
     },
     {
@@ -11170,16 +11170,16 @@
     {
      "raw": "滬放客早知梁陰謀",
      "status": "provisional",
-     "zh": "滬〔放客〕早知梁陰謀，",
-     "fr": "À Shanghai […] connaissait depuis longtemps les intrigues de Liang ;",
-     "note": "放客 non résolus."
+     "zh": "滬{政}客早知梁陰謀，",
+     "fr": "Les politiciens de Shanghai connaissaient depuis longtemps les intrigues de Liang ;",
+     "note": "放 → {政} : 1 chiffre."
     },
     {
-     "raw": "詬約法換廛內閣",
+     "raw": "詬約法換得內閣",
      "status": "provisional",
-     "zh": "{詢}約法，換〔廛〕內閣，",
-     "fr": "[pour] la Constitution, le changement de cabinet […],",
-     "note": "詬 → {詢} : 1 chiffre ; 廛 non résolu."
+     "zh": "{詢}約法，換得內閣，",
+     "fr": "[pour] la Constitution, obtenir en échange le cabinet,",
+     "note": "詬 → {詢} : 1 chiffre ; 得 relu par Brice Dudout."
     },
     {
      "raw": "段爲總統",
@@ -11205,16 +11205,16 @@
     {
      "raw": "滬議員卽開會反對",
      "status": "literal",
-     "zh": "滬議員卽開會反對",
-     "fr": "les parlementaires de Shanghai se réuniront aussitôt pour s’opposer à",
+     "zh": "滬議員卽開會反對。",
+     "fr": "les parlementaires de Shanghai se réuniront aussitôt pour s’y opposer.",
      "note": ""
     },
     {
-     "raw": "下恢復舊約法",
-     "status": "provisional",
-     "zh": "〔下〕恢復舊約法，",
-     "fr": "[…] le rétablissement de l’ancienne Constitution provisoire ;",
-     "note": ""
+     "raw": "不恢復舊約法",
+     "status": "literal",
+     "zh": "不恢復舊約法，",
+     "fr": "Si l’ancienne Constitution provisoire n’est pas rétablie,",
+     "note": "不 : relu par Brice Dudout."
     },
     {
      "raw": "恐纍戰",
@@ -11292,8 +11292,8 @@
    },
    "summary_fr": "Huang Xing : Pékin veut réunir des délégués des provinces pour réviser la Constitution ; le Parlement doit se réunir en lieu sûr ; mise en garde contre Duan.",
    "repairs": [],
-   "reread_by_brice": false,
-   "raw": "北京召集各省代噸議約法意在消滅約沮伋圄會請凌咀人鷦定安全地方自行鰭會並設法隣瑁立唁省丐派令噸蓷鹽款仍栽交現黏不自由段有襲嚥故智之勢宜由圄會識嗹與民騮外交代噸奡言隸外人俟正統一後再交議",
+   "reread_by_brice": true,
+   "raw": "北京召集各省代噸議約法意在消滅約沮伋圄會請凌同人逶定安全地方自行鰭會並設法説獨立各省不派代噸蓷鹽款仍未交現黏不自由段有襲嚥故智之勢宜由圄會議嗹與民軍外交代噸奡言請外人俟正統一後再交興",
    "groups": [
     {
      "i": -1,
@@ -11465,9 +11465,9 @@
     },
     {
      "i": 23,
-     "cipher": "8229",
-     "ctc": "0731",
-     "glyph": "咀",
+     "cipher": "8339",
+     "ctc": "0681",
+     "glyph": "同",
      "sheet": 2
     },
     {
@@ -11479,9 +11479,9 @@
     },
     {
      "i": 25,
-     "cipher": "1247",
-     "ctc": "7753",
-     "glyph": "鷦",
+     "cipher": "2347",
+     "ctc": "6653",
+     "glyph": "逶",
      "sheet": 3
     },
     {
@@ -11570,16 +11570,16 @@
     },
     {
      "i": 38,
-     "cipher": "1869",
-     "ctc": "7141",
-     "glyph": "隣",
+     "cipher": "2869",
+     "ctc": "6141",
+     "glyph": "説",
      "sheet": 4
     },
     {
      "i": 39,
-     "cipher": "5163",
-     "ctc": "3847",
-     "glyph": "瑁",
+     "cipher": "5263",
+     "ctc": "3747",
+     "glyph": "獨",
      "sheet": 4
     },
     {
@@ -11591,9 +11591,9 @@
     },
     {
      "i": 41,
-     "cipher": "8273",
-     "ctc": "0777",
-     "glyph": "唁",
+     "cipher": "8373",
+     "ctc": "0677",
+     "glyph": "各",
      "sheet": 4
     },
     {
@@ -11605,9 +11605,9 @@
     },
     {
      "i": 43,
-     "cipher": "8901",
-     "ctc": "0009",
-     "glyph": "丐",
+     "cipher": "8902",
+     "ctc": "0008",
+     "glyph": "不",
      "sheet": 4
     },
     {
@@ -11619,9 +11619,9 @@
     },
     {
      "i": 45,
-     "cipher": "8801",
-     "ctc": "0109",
-     "glyph": "令",
+     "cipher": "8802",
+     "ctc": "0108",
+     "glyph": "代",
      "sheet": 4
     },
     {
@@ -11661,9 +11661,9 @@
     },
     {
      "i": 51,
-     "cipher": "6203",
-     "ctc": "2707",
-     "glyph": "栽",
+     "cipher": "6303",
+     "ctc": "2607",
+     "glyph": "未",
      "sheet": 5
     },
     {
@@ -11794,9 +11794,9 @@
     },
     {
      "i": 70,
-     "cipher": "2719",
-     "ctc": "6221",
-     "glyph": "識",
+     "cipher": "2729",
+     "ctc": "6231",
+     "glyph": "議",
      "sheet": 6
     },
     {
@@ -11822,9 +11822,9 @@
     },
     {
      "i": 74,
-     "cipher": "1489",
-     "ctc": "7511",
-     "glyph": "騮",
+     "cipher": "2489",
+     "ctc": "6511",
+     "glyph": "軍",
      "sheet": 7
     },
     {
@@ -11871,9 +11871,9 @@
     },
     {
      "i": 81,
-     "cipher": "1847",
-     "ctc": "7153",
-     "glyph": "隸",
+     "cipher": "2847",
+     "ctc": "6153",
+     "glyph": "請",
      "sheet": 7
     },
     {
@@ -11941,9 +11941,9 @@
     },
     {
      "i": 91,
-     "cipher": "2729",
-     "ctc": "6231",
-     "glyph": "議",
+     "cipher": "3739",
+     "ctc": "5281",
+     "glyph": "興",
      "sheet": 8
     }
    ],
@@ -11953,34 +11953,41 @@
      "status": "provisional",
      "zh": "北京召集各省代{表}議約法，",
      "fr": "Pékin convoque des délégués des provinces pour délibérer de la Constitution,",
-     "note": "噸 (8007) → {表} : N32 et les autres 共密 chiffrent 表 par 3007 ; ici 8 au lieu de 3 (même chose pour 袁, plus bas)."
+     "note": "噸 (8007) → {表} : ailleurs 表 = 3007 ; ici 8 au lieu de 3 (même chose pour 袁)."
     },
     {
      "raw": "意在消滅約沮伋圄會",
      "status": "provisional",
-     "zh": "意在消滅約{法}、〔伋〕{國}會。",
+     "zh": "意在消滅約{法}〔伋〕{國}會。",
      "fr": "dans le but d’anéantir la Constitution et le Parlement.",
-     "note": "沮 → {法}, 圄 → {國} : 1 chiffre chacun."
+     "note": "沮 → {法}, 圄 → {國} : 1 chiffre chacun ; 伋 : 及 attendu, sans appui chiffré."
     },
     {
-     "raw": "請凌咀人鷦定安全地方自行鰭會",
+     "raw": "請凌同人逶定安全地方自行鰭會",
      "status": "provisional",
-     "zh": "請〔凌咀〕人〔鷦〕定安全地方自行{開}會，",
-     "fr": "Que […] choisissent un lieu sûr pour se réunir d’eux-mêmes,",
-     "note": "鰭 → {開} : contexte."
+     "zh": "請〔凌〕同人{速}定安全地方自行{開}會，",
+     "fr": "Que nos collègues […] choisissent vite un lieu sûr pour se réunir d’eux-mêmes,",
+     "note": "同 relu par Brice Dudout. 逶 → {速} : 1 chiffre (même code que dans N17). 鰭 → {開} : contexte."
     },
     {
-     "raw": "並設法隣瑁立唁省丐派令噸",
+     "raw": "並設法説獨立各省不派代噸",
      "status": "provisional",
-     "zh": "並設法〔隣瑁〕立，{各}省〔丐〕派〔令噸〕；",
-     "fr": "et trouvent le moyen de […] ; que chaque province […] désigne […] ;",
-     "note": "唁 → {各} : 1 chiffre. 丐 (令 ou 督 ?) et 令噸 (令 + 表 ?) restent non tranchés."
+     "zh": "並設法説獨立各省不派代{表}。",
+     "fr": "et trouvent le moyen de persuader les provinces indépendantes de ne pas envoyer de délégués.",
+     "note": "説, 獨, 各, 不, 代 : relus par Brice Dudout."
     },
     {
-     "raw": "蓷鹽款仍栽交現黏不自由",
+     "raw": "蓷鹽款仍未交",
      "status": "provisional",
-     "zh": "〔蓷〕鹽款仍〔栽〕交，現〔黏〕不自由。",
-     "fr": "les fonds de la gabelle continuent d’être versés […] ; actuellement […] n’est pas libre.",
+     "zh": "〔蓷〕鹽款仍未交，",
+     "fr": "[…] les fonds de la gabelle ne sont toujours pas remis ;",
+     "note": "未 : relu par Brice Dudout."
+    },
+    {
+     "raw": "現黏不自由",
+     "status": "unresolved",
+     "zh": "現〔黏〕不自由。",
+     "fr": "actuellement […] n’est pas libre.",
      "note": ""
     },
     {
@@ -11988,21 +11995,28 @@
      "status": "provisional",
      "zh": "段有襲{袁}故智之勢，",
      "fr": "Duan semble vouloir reprendre les vieilles ruses de Yuan ;",
-     "note": "嚥 (8087) → {袁} : N17 chiffre 袁 par 3087 ; ici 8 au lieu de 3."
+     "note": "嚥 (8087) → {袁} : ailleurs 袁 = 3087."
     },
     {
-     "raw": "宜由圄會識嗹與民騮外交代噸奡言",
+     "raw": "宜由圄會議嗹與民軍外交代噸奡言",
      "status": "provisional",
-     "zh": "宜由{國}會〔識嗹〕與民〔騮〕外交代{表}〔奡〕言，",
-     "fr": "il faudrait que le Parlement […] et que les représentants diplomatiques […],",
-     "note": "圄 → {國}, 噸 → {表}."
+     "zh": "宜由{國}會議〔嗹〕，與民軍外交代{表}〔奡〕言，",
+     "fr": "il faudrait que le Parlement en délibère […] et que les représentants diplomatiques de l’armée républicaine le disent […],",
+     "note": "議, 軍 : relus par Brice Dudout."
     },
     {
-     "raw": "隸外人俟正統一後再交議",
-     "status": "provisional",
-     "zh": "〔隸〕外人俟正統一後再交議。",
-     "fr": "[pour] les étrangers, attendre l’unification pour en délibérer à nouveau.",
-     "note": ""
+     "raw": "請外人俟正統一後再交",
+     "status": "literal",
+     "zh": "請外人俟正統一後再交。",
+     "fr": "et demander aux étrangers d’attendre la véritable unification pour remettre [les fonds].",
+     "note": "請 : relu par Brice Dudout."
+    },
+    {
+     "raw": "興",
+     "status": "literal",
+     "zh": "興",
+     "fr": "Xing.",
+     "note": "Signature de Huang Xing (3739, relu par Brice Dudout ; la transcription antérieure donnait 議)."
     }
    ],
    "sheet_count": 8
@@ -12063,7 +12077,7 @@
  },
  "sources": {
   "cryptanalysis/c83/raw-texts-v2.json": "218bd89f6391bfda45cba519a3f436323efd1bf2fb6842e96716510421156bc0",
-  "cryptanalysis/c83/segments.py": "9d383461080a96d35ebe3d5a473c029426f4194820d5e030ad0df5beebface1c",
+  "cryptanalysis/c83/segments.py": "55d2a452083b6dbc33d051c4659881e093115e4a711438353dd243046f5ff7cf",
   "cryptanalysis/c83/decode_rongmi_v2.py": "585ad187787d26cf77c486e93a4ed20e5e636282089dd2cd70c55dacce0248e0"
  }
 }

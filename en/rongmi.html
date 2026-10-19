@@ -47,16 +47,16 @@
 <article class="article gongmi rongmi"><header class="lede">
 <p class="kicker">Decipherment · June 1916</p>
 <h1>Rongmi (容密): eleven telegrams and their key</h1><p class="standfirst">Eleven cipher telegrams exchanged in June 1916 between Tokyo and Shanghai around Huang Xing and Zhang Xiaozhun: buying arms in Japan for Zhejiang, loans, and negotiations with Beijing after Yuan Shikai’s death. A single key reads them all.<sup class="fn"><a href="sources.html#s27">[27]</a></sup></p>
-<p>Grid reading order: Brice Dudout. Transcription of the continuation sheets, key recovery, translation and probable readings: Claude (Anthropic). All digits re-read by Brice Dudout, except N14. Starting model (four digit substitutions): Codex’s trials.</p></header>
+<p>Grid reading order: Brice Dudout. Transcription of the continuation sheets, key recovery, translation and probable readings: Claude (Anthropic). All digits re-read by Brice Dudout. Starting model (four digit substitutions): Codex’s trials.</p></header>
 <div class="status warn"><p>The key is a reconstruction, not taken from a historical code book. Translations are working proposals; probable readings are shown beside the decoded text, never in place of it. Identifications of people are candidates, with their source.</p></div>
 <section id="key"><h2>The key</h2><p>Sheets are read in columns, right to left and top to bottom (reading order proposed by Brice Dudout), in groups of four digits; the public prefix <code>1369 1378</code> = <span lang="zh-Hant">容密</span> stays in clear. For each group C: replace each digit using the table for its place, then compute <code>P = (σ(C) + 0901) mod 10000</code> by ordinary addition with carries; P is the character number in the Chinese Telegraph Code (CTC).</p><div class="gm-scroll"><table><tr><th>Digit read</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr><tr><th>thousands</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>9</td><td>0</td></tr><tr><th>hundreds</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr><tr><th>tens</th><td>0</td><td>1</td><td>9</td><td>8</td><td>2</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td></tr><tr><th>units</th><td>9</td><td>8</td><td>0</td><td>1</td><td>7</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr></table></div><p>No group starts with 00: the encipherer writes 90. Example: σ(2081) = 2048 (tens 8 → 4, units 1 → 8), + 0901 = 2949 = <span lang="zh-Hant">款</span>.</p><p>The key was recovered on four telegrams (N02, N08, N11, N12), then read the other seven without refitting; refitted on the whole re-read corpus (590 groups), it returns exactly the same tables. Only the “90 = 00” rule was added afterwards, from all groups beginning 90.</p><p>In the proposed reading, <b>{x}</b> replaces an anomalous decoded character with a probable reading; the note says whether a variant of the cipher group differing by <b>a single digit</b> gives that character, or whether it is a <b>contextual reading</b>. 〔x〕: character kept, unresolved.</p></section>
 <section id="context"><h2>Context</h2><p>The dated telegrams run from 9 to 16 June 1916, just after Yuan Shikai’s death (6 June). Zhejiang, whose military governor Lü Gongwang took office on 6 May, is trying to buy arms in Japan; Zhang Xiaozhun (courtesy name 潤農), in Tokyo with Huang Xing, leads the talks (N02, N08, N12, N14) and reports to Huang Qun (溯初, N11) and Jiang Fangzhen (百里, N19a, N28).</p><p>From Shanghai, Yin Ruli, Ge Jing’en and Huang Fu (abbreviated signature 驪郛恩) relay Lü Gongwang’s questions (N21, N25, N36) and report to Huang Xing on the dealings with Beijing (N24): Li Yuanhong invites the Shanghai notables; Tang Hualong (濟武), Gu Zhongxiu (九峯), Zhang Ji (溥泉) and Fan Yuanlian (靜生) are approached; the condition set is the repeal of Yuan’s laws and a return to the 1912 Provisional Constitution, restored on 29 June.</p></section>
 <nav class="gm-nav" aria-label="Messages"><a href="#N14">N14</a><a href="#N02">N02</a><a href="#N08">N08</a><a href="#N11">N11</a><a href="#N12">N12</a><a href="#N19a">N19a</a><a href="#N28">N28</a><a href="#N21">N21</a><a href="#N25">N25</a><a href="#N36">N36</a><a href="#N24">N24</a></nav>
 <section id="N14" class="gm-message"><h2>N14</h2>
-<p>47 groups · Date: June 9, 1916 · Direction: Tokyo → Shanghai · 4 sheets · <mark class="unc">digits not yet re-read</mark></p>
+<p>47 groups · Date: June 9, 1916 · Direction: Tokyo → Shanghai · 4 sheets · digits re-read by Brice Dudout</p>
 <p>Huang Xing to the Zhejiang governor after Yuan’s death: the arms go first, the one-million loan will follow.</p>
-<h3>Raw decoding, uncorrected</h3><p class="gm-han" lang="zh-Hant">轉呀都督鑒袁死大局益艱非切實預備不足以欬張國法奠定國基感佩藎籌當効棉力械先運款百萬亦可卽成興佳</p>
-<h3>Proposed reading</h3><p class="gm-han" lang="zh-Hant">轉{呂}都督鑒：袁死，大局益艱，非切實預備，不足以{伸}張國法、奠定國基。感佩藎籌，當効棉力。械先運，款百萬亦可卽成。興佳</p>
+<h3>Raw decoding, uncorrected</h3><p class="gm-han" lang="zh-Hant">轉呂都督鑒袁死大局益艱非切實預備不足以申張國法奠定國基感佩藎籌當効棉力械先運款百萬亦可卽成興佳</p>
+<h3>Proposed reading</h3><p class="gm-han" lang="zh-Hant">轉呂都督鑒：袁死，大局益艱，非切實預備，不足以申張國法、奠定國基。感佩藎籌，當効棉力。械先運，款百萬亦可卽成。興佳</p>
 <details><summary>Forms and JACAR sources</summary>
 <p>N14-1 · B03050089300 PDF 7 L · <a href="https://www.jacar.archives.go.jp/das/meta/B03050089300">JACAR</a> · <a href="../assets/img/rongmi/N14-1.jpg">scan</a></p>
 <img loading="lazy" src="../assets/img/rongmi/N14-1.jpg" alt="JACAR B03050089300 N14-1">
@@ -71,7 +71,7 @@
 <tr><td>prefix</td><td><code>1369</code></td><td><code>2267</code></td><td lang="zh-Hant">掽</td><td>N14-1</td></tr>
 <tr><td>prefix</td><td><code>1378</code></td><td><code>2256</code></td><td lang="zh-Hant">揜</td><td>N14-1</td></tr>
 <tr><td>1</td><td><code>5669</code></td><td><code>6567</code></td><td lang="zh-Hant">轉</td><td>N14-1</td></tr>
-<tr><td>2</td><td><code>8812</code></td><td><code>0711</code></td><td lang="zh-Hant">呀</td><td>N14-1</td></tr>
+<tr><td>2</td><td><code>8813</code></td><td><code>0712</code></td><td lang="zh-Hant">呂</td><td>N14-1</td></tr>
 <tr><td>3</td><td><code>5879</code></td><td><code>6757</code></td><td lang="zh-Hant">都</td><td>N14-1</td></tr>
 <tr><td>4</td><td><code>3308</code></td><td><code>4206</code></td><td lang="zh-Hant">督</td><td>N14-1</td></tr>
 <tr><td>5</td><td><code>6105</code></td><td><code>7003</code></td><td lang="zh-Hant">鑒</td><td>N14-1</td></tr>
@@ -89,7 +89,7 @@
 <tr><td>17</td><td><code>8104</code></td><td><code>0008</code></td><td lang="zh-Hant">不</td><td>N14-2</td></tr>
 <tr><td>18</td><td><code>5424</code></td><td><code>6398</code></td><td lang="zh-Hant">足</td><td>N14-2</td></tr>
 <tr><td>19</td><td><code>8200</code></td><td><code>0110</code></td><td lang="zh-Hant">以</td><td>N14-2</td></tr>
-<tr><td>20</td><td><code>2089</code></td><td><code>2947</code></td><td lang="zh-Hant">欬</td><td>N14-2</td></tr>
+<tr><td>20</td><td><code>3089</code></td><td><code>3947</code></td><td lang="zh-Hant">申</td><td>N14-2</td></tr>
 <tr><td>21</td><td><code>0844</code></td><td><code>1728</code></td><td lang="zh-Hant">張</td><td>N14-2</td></tr>
 <tr><td>22</td><td><code>9084</code></td><td><code>0948</code></td><td lang="zh-Hant">國</td><td>N14-2</td></tr>
 <tr><td>23</td><td><code>2249</code></td><td><code>3127</code></td><td lang="zh-Hant">法</td><td>N14-2</td></tr>

@@ -47,16 +47,16 @@
 <article class="article gongmi rongmi"><header class="lede">
 <p class="kicker">破译·1916年6月</p>
 <h1>容密：十一封电报及其密钥</h1><p class="standfirst">1916年6月围绕黄兴与张孝准、在东京与上海之间往来的十一封密电：为浙江在日本购械、借款，以及袁世凯死后与北京的交涉。一把密钥即可读出全部。<sup class="fn"><a href="sources.html#s27">[27]</a></sup></p>
-<p>方格读序：Brice Dudout。续页誊录、密钥复原、翻译与推定读法：Claude（Anthropic）。全部数字由 Brice Dudout 复读（N14 除外）。起点模型（逐位四重替换）：Codex 的试验。</p></header>
+<p>方格读序：Brice Dudout。续页誊录、密钥复原、翻译与推定读法：Claude（Anthropic）。全部数字由 Brice Dudout 复读。起点模型（逐位四重替换）：Codex 的试验。</p></header>
 <div class="status warn"><p>密钥为复原所得，并非取自历史电码本。译文为工作稿；推定读法与解码文字并列，绝不替代。人物比定为候选，并注明出处。</p></div>
 <section id="key"><h2>密钥</h2><p>电报纸按列由右至左、由上而下读取（Brice Dudout 提出的读序），每四位一组；明文前缀<code>1369 1378</code>＝<span lang="zh-Hant">容密</span>不加密。对每组C：按所在数位的表替换各位数字，再以通常进位加法计算<code>P = (σ(C) + 0901) mod 10000</code>；P即中文电码（CTC）编号。</p><div class="gm-scroll"><table><tr><th>所读数字</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr><tr><th>千位</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>9</td><td>0</td></tr><tr><th>百位</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr><tr><th>十位</th><td>0</td><td>1</td><td>9</td><td>8</td><td>2</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td></tr><tr><th>个位</th><td>9</td><td>8</td><td>0</td><td>1</td><td>7</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr></table></div><p>没有以00开头的组：发报者写作90。例：σ(2081) = 2048（十位8→4，个位1→8），+0901 = 2949 = <span lang="zh-Hant">款</span>。</p><p>密钥在四封电报（N02、N08、N11、N12）上复原，其余七封无需重新拟合即可读出；以复读后的全部590组重新拟合，所得表格完全相同。仅“90＝00”一条规则是事后根据所有90开头的组补入的。</p><p>推定读法中，<b>{x}</b>以推定字替换异常的解码字；注中说明暗号组<b>仅改一位数字</b>是否即得该字，或仅为<b>据文意推定</b>。〔x〕：保留未解的字。</p></section>
 <section id="context"><h2>背景</h2><p>有日期的电报在1916年6月9日至16日之间，正值袁世凯死后（6月6日）。5月6日就任的浙江督军吕公望欲向日本购械；与黄兴同在东京的张孝准（字润农）负责交涉（N02、N08、N12、N14），并向黄群（溯初，N11）和蒋方震（百里，N19a、N28）报告。</p><p>上海方面，殷汝骊、葛敬恩、黄郛（简署“骊郛恩”）转达吕公望的询问（N21、N25、N36），并向黄兴报告与北京的交涉（N24）：黎元洪邀请沪上名流；汤化龙（济武）、谷钟秀（九峯）、张继（溥泉）、范源濂（静生）被提名；条件是废除袁氏伪法、恢复元年约法。约法于6月29日恢复。</p></section>
 <nav class="gm-nav" aria-label="Messages"><a href="#N14">N14</a><a href="#N02">N02</a><a href="#N08">N08</a><a href="#N11">N11</a><a href="#N12">N12</a><a href="#N19a">N19a</a><a href="#N28">N28</a><a href="#N21">N21</a><a href="#N25">N25</a><a href="#N36">N36</a><a href="#N24">N24</a></nav>
 <section id="N14" class="gm-message"><h2>N14</h2>
-<p>47 组 · 日期: 1916年6月9日 · 方向: 东京→上海 · 4 页 · <mark class="unc">数字尚未复读</mark></p>
+<p>47 组 · 日期: 1916年6月9日 · 方向: 东京→上海 · 4 页 · 数字经 Brice Dudout 复读</p>
 <p>袁死后黄兴致浙江督军：械先运，百万借款随后可成。</p>
-<h3>未经修正的解码结果</h3><p class="gm-han" lang="zh-Hant">轉呀都督鑒袁死大局益艱非切實預備不足以欬張國法奠定國基感佩藎籌當効棉力械先運款百萬亦可卽成興佳</p>
-<h3>推定读法</h3><p class="gm-han" lang="zh-Hant">轉{呂}都督鑒：袁死，大局益艱，非切實預備，不足以{伸}張國法、奠定國基。感佩藎籌，當効棉力。械先運，款百萬亦可卽成。興佳</p>
+<h3>未经修正的解码结果</h3><p class="gm-han" lang="zh-Hant">轉呂都督鑒袁死大局益艱非切實預備不足以申張國法奠定國基感佩藎籌當効棉力械先運款百萬亦可卽成興佳</p>
+<h3>推定读法</h3><p class="gm-han" lang="zh-Hant">轉呂都督鑒：袁死，大局益艱，非切實預備，不足以申張國法、奠定國基。感佩藎籌，當効棉力。械先運，款百萬亦可卽成。興佳</p>
 <details><summary>电报纸与JACAR来源</summary>
 <p>N14-1 · B03050089300 PDF 7 L · <a href="https://www.jacar.archives.go.jp/das/meta/B03050089300">JACAR</a> · <a href="../assets/img/rongmi/N14-1.jpg">scan</a></p>
 <img loading="lazy" src="../assets/img/rongmi/N14-1.jpg" alt="JACAR B03050089300 N14-1">
@@ -71,7 +71,7 @@
 <tr><td>前缀</td><td><code>1369</code></td><td><code>2267</code></td><td lang="zh-Hant">掽</td><td>N14-1</td></tr>
 <tr><td>前缀</td><td><code>1378</code></td><td><code>2256</code></td><td lang="zh-Hant">揜</td><td>N14-1</td></tr>
 <tr><td>1</td><td><code>5669</code></td><td><code>6567</code></td><td lang="zh-Hant">轉</td><td>N14-1</td></tr>
-<tr><td>2</td><td><code>8812</code></td><td><code>0711</code></td><td lang="zh-Hant">呀</td><td>N14-1</td></tr>
+<tr><td>2</td><td><code>8813</code></td><td><code>0712</code></td><td lang="zh-Hant">呂</td><td>N14-1</td></tr>
 <tr><td>3</td><td><code>5879</code></td><td><code>6757</code></td><td lang="zh-Hant">都</td><td>N14-1</td></tr>
 <tr><td>4</td><td><code>3308</code></td><td><code>4206</code></td><td lang="zh-Hant">督</td><td>N14-1</td></tr>
 <tr><td>5</td><td><code>6105</code></td><td><code>7003</code></td><td lang="zh-Hant">鑒</td><td>N14-1</td></tr>
@@ -89,7 +89,7 @@
 <tr><td>17</td><td><code>8104</code></td><td><code>0008</code></td><td lang="zh-Hant">不</td><td>N14-2</td></tr>
 <tr><td>18</td><td><code>5424</code></td><td><code>6398</code></td><td lang="zh-Hant">足</td><td>N14-2</td></tr>
 <tr><td>19</td><td><code>8200</code></td><td><code>0110</code></td><td lang="zh-Hant">以</td><td>N14-2</td></tr>
-<tr><td>20</td><td><code>2089</code></td><td><code>2947</code></td><td lang="zh-Hant">欬</td><td>N14-2</td></tr>
+<tr><td>20</td><td><code>3089</code></td><td><code>3947</code></td><td lang="zh-Hant">申</td><td>N14-2</td></tr>
 <tr><td>21</td><td><code>0844</code></td><td><code>1728</code></td><td lang="zh-Hant">張</td><td>N14-2</td></tr>
 <tr><td>22</td><td><code>9084</code></td><td><code>0948</code></td><td lang="zh-Hant">國</td><td>N14-2</td></tr>
 <tr><td>23</td><td><code>2249</code></td><td><code>3127</code></td><td lang="zh-Hant">法</td><td>N14-2</td></tr>
