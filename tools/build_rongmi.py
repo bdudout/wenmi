@@ -288,13 +288,19 @@ def key_table(L):
 
 sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c84'))
 import tr_i18n as TRX                                 # noqa: E402
-TLABEL = {'fr': 'Traduction', 'en': 'Translation', 'ja': '日本語訳', 'zh-hans': '今译（推定读法加标点）', 'zh-hant': '今譯（推定讀法加標點）'}
+sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c88'))
+import baihua as BH                                   # noqa: E402
+import c1916_i18n as _C                               # noqa: E402
+_T2 = _C.t2s_table(WENMI)
+TLABEL = {'fr': 'Traduction', 'en': 'Translation', 'ja': '日本語訳', 'zh-hans': '白话译文', 'zh-hant': '白話譯文'}
 def translation(mid, L):
     if L == 'fr':
         segs = M[mid]['segments'] if mid in M else [dict(fr=x[3]) for x in __import__('segments_gongmi').SEG[mid]]
         return ' '.join(x['fr'] for x in segs)
     if L == 'en': return TRX.EN.get(mid, '')
     if L == 'ja': return TRX.JA.get(mid, '')
+    if L == 'zh-hant': return BH.BAIHUA.get(mid, '')
+    if L == 'zh-hans': return _C.to_hans(BH.BAIHUA.get(mid, ''), _T2)
     return ''
 
 def message_section(mid, L, h2=None):

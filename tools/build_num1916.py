@@ -27,6 +27,7 @@ CLEAR = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c88', 'clear-data.j
 D.update(CLEAR)
 sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c88'))
 import segments_clear as SCL                          # noqa: E402
+import baihua as BH                                   # noqa: E402
 for _L, _d in (('EN', SCL.EN), ('JA', SCL.JA)): getattr(TR, _L).update(_d)
 for _L in SCL.NOTE: TR.NOTE.setdefault(_L, {}).update(SCL.NOTE[_L])
 G = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c62', 'publication-v3', 'data', 'gongmi.json'), encoding='utf-8'))['messages']
@@ -164,7 +165,7 @@ I18N = {
             channel={'rongmi': 'Rongmi key (v2)', 'gongmi': 'Gongmi key (C51)', 'clair': 'In clear (Chinese telegraph code)'}),
  'ja': dict(title='1916年6月の数字電報（容密・共密）', read='用紙の数字組（平文の前置きがあればその後に本文）', label='作業訳。', noteLabel='注：',
             channel={'rongmi': '容密の鍵（v2）', 'gongmi': '共密の鍵（C51）', 'clair': '平文（中文電碼）'}),
- 'zh-Hant': dict(title='1916年6月的數字電報（容密、共密）', read='電報紙上的數字組（如有明文前綴，其後為正文）', label='推定讀法（加標點）。', noteLabel='注：',
+ 'zh-Hant': dict(title='1916年6月的數字電報（容密、共密）', read='電報紙上的數字組（如有明文前綴，其後為正文）', label='白話譯文：', noteLabel='注：',
             channel={'rongmi': '容密密鑰（v2）', 'gongmi': '共密密鑰（C51）', 'clair': '明碼（中文電碼）'}),
 }
 ROUTE = {'fr': {'T': 'Tokyo → Shanghai', 'S': 'Shanghai → Tokyo'}, 'en': {'T': 'Tokyo → Shanghai', 'S': 'Shanghai → Tokyo'},
@@ -183,7 +184,7 @@ if __name__ == '__main__':
         i18n['fr']['tr'][mm['id']] = ' '.join(s[3] for s in segs)
         i18n['en']['tr'][mm['id']] = TR.EN[mid]
         i18n['ja']['tr'][mm['id']] = TR.JA[mid]
-        i18n['zh-Hant']['tr'][mm['id']] = zh_reading(segs, d) + (f'（{DAYZH[d]}）' if d in DAYZH else '')
+        i18n['zh-Hant']['tr'][mm['id']] = BH.BAIHUA[mid]
         rr = D[mid]['reread_by_brice']
         UNR = {'fr': 'Chiffres pas encore relus par Brice Dudout.', 'en': 'Digits not yet re-read by Brice Dudout.', 'ja': '数字はまだBrice Dudoutが再読していない。', 'zh-Hant': '數字尚未經 Brice Dudout 複讀。'}
         RR = {'fr': 'Chiffres relus par Brice Dudout.', 'en': 'Digits re-read by Brice Dudout.', 'ja': '数字はBrice Dudoutが再読済み。', 'zh-Hant': '數字已經 Brice Dudout 複讀。'}
@@ -192,7 +193,7 @@ if __name__ == '__main__':
     T2 = c1916_i18n.t2s_table(WENMI)
     i18n['zh-Hans'] = c1916_i18n.to_hans(i18n['zh-Hant'], T2)
     i18n['zh-Hans']['channel'] = {'rongmi': '容密密钥（v2）', 'gongmi': '共密密钥（C51）', 'clair': '明码（中文电码）'}
-    i18n['zh-Hans']['label'] = '推定读法（加标点）。'
+    i18n['zh-Hans']['label'] = '白话译文：'
     open(os.path.join(SITE, 'assets', 'js', 'corpus-num1916.js'), 'w', encoding='utf-8').write(
         '// Généré par tools/build_num1916.py — ne pas éditer à la main.\nwindow.WENMI_NUM1916 = ' + json.dumps(dict(messages=msgs), ensure_ascii=False) +
         ';\nwindow.WENMI_NUM1916_I18N = ' + json.dumps(i18n, ensure_ascii=False) + ';\n')
