@@ -1,0 +1,700 @@
+{
+ "batch": "reread-c87",
+ "built_from": {
+  "cryptanalysis/c87/transcription-claude-v1.txt": "dd03dce259f0a12b7c96a77a28be129140ff358a05155165546c3cd5dc42d2c5"
+ },
+ "exported_at": "2026-10-19T12:43:54.450Z",
+ "reader": "Brice",
+ "sheets": [
+  {
+   "id": "N19b-1",
+   "scan": "B03050089300 p27R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {},
+   "columns_right_to_left_top_to_bottom": [
+    "1369137869",
+    "5262776225",
+    "0937849436",
+    "3581920844",
+    "0965083443"
+   ]
+  },
+  {
+   "id": "N19b-3",
+   "scan": "B03050089300 p28R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "7,2": "2",
+    "9,2": "2"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "5117575402",
+    "4144394256",
+    "5638857282",
+    "0002108827",
+    "6486436257"
+   ]
+  },
+  {
+   "id": "N19b-4",
+   "scan": "B03050089300 p28L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {},
+   "columns_right_to_left_top_to_bottom": [
+    "0285934151",
+    "5185081906",
+    "5262259029",
+    "6737847984",
+    "9405932499"
+   ]
+  },
+  {
+   "id": "N19b-5",
+   "scan": "B03050089300 p29R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {},
+   "columns_right_to_left_top_to_bottom": [
+    "8784875915",
+    "7787321083",
+    "3121500558",
+    "6851178200",
+    "1702810243"
+   ]
+  },
+  {
+   "id": "N19b-6",
+   "scan": "B03050089300 p29L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {},
+   "columns_right_to_left_top_to_bottom": [
+    "6410112162",
+    "3249085681",
+    "0881995185",
+    "2133639816",
+    "3184910427"
+   ]
+  },
+  {
+   "id": "N19b-7",
+   "scan": "B03050089300 p30R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "8,0": "2"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "2058852027",
+    "9681990857",
+    "1368090226",
+    "8286011776",
+    "8127162422"
+   ]
+  },
+  {
+   "id": "N19b-8",
+   "scan": "B03050089300 p30L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "1,0": "2",
+    "3,0": "2",
+    "4,4": "2",
+    "5,4": "2"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "3232663550",
+    "1919577249",
+    "3982771791",
+    "8631819933",
+    "5317220102"
+   ]
+  },
+  {
+   "id": "N19b-9",
+   "scan": "B03050089300 p31R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {},
+   "columns_right_to_left_top_to_bottom": [
+    "6390859562",
+    "2507928717",
+    "8306690857",
+    "8585495871",
+    "5455025320"
+   ]
+  },
+  {
+   "id": "N19b-10",
+   "scan": "B03050089300 p31L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "5,4": "2"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "5607711631",
+    "8897074981",
+    "9916242056",
+    "6197065243",
+    "5030320586"
+   ]
+  },
+  {
+   "id": "N19b-11",
+   "scan": "B03050089300 p32R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "9,3": "1"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "1396225663",
+    "9883058631",
+    "8676394981",
+    "0211040851",
+    "8396208115"
+   ]
+  },
+  {
+   "id": "N19b-12",
+   "scan": "B03050089300 p32L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {},
+   "columns_right_to_left_top_to_bottom": [
+    "7813241424",
+    "0780811942",
+    "1543323258",
+    "",
+    ""
+   ]
+  },
+  {
+   "id": "N04-2",
+   "scan": "B03050089200 p21L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "2,4": "1",
+    "9,1": "3"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "9318856006",
+    "0554005763",
+    "5100312170",
+    "0160392815",
+    "7114667193"
+   ]
+  },
+  {
+   "id": "N04-3",
+   "scan": "B03050089200 p22R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "9,2": "1"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "3747453906",
+    "7741640191",
+    "0366055401",
+    "2771046511",
+    "6656571000"
+   ]
+  },
+  {
+   "id": "N04-4",
+   "scan": "B03050089200 p22L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {},
+   "columns_right_to_left_top_to_bottom": [
+    "0171267236",
+    "3945010024",
+    "5536770455",
+    "7181260166",
+    "5166181415"
+   ]
+  },
+  {
+   "id": "N04-5",
+   "scan": "B03050089200 p23R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {},
+   "columns_right_to_left_top_to_bottom": [
+    "1942398104",
+    "3413956567",
+    "6671294900",
+    "5765110523",
+    "7108482746"
+   ]
+  },
+  {
+   "id": "N04-6",
+   "scan": "B03050089200 p23L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {},
+   "columns_right_to_left_top_to_bottom": [
+    "3903561444",
+    "3981258960",
+    "6039731717",
+    "2456022200",
+    "8651740500"
+   ]
+  },
+  {
+   "id": "N04-7",
+   "scan": "B03050089200 p24R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "0,0": "2"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "2076064400",
+    "7618014550",
+    "6134608031",
+    "2705232598",
+    "3718615152"
+   ]
+  },
+  {
+   "id": "N04-8",
+   "scan": "B03050089200 p24L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {},
+   "columns_right_to_left_top_to_bottom": [
+    "81",
+    "",
+    "",
+    "",
+    ""
+   ]
+  },
+  {
+   "id": "N31-2",
+   "scan": "B03050089400 p38R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "0,2": "2",
+    "0,3": "2",
+    "1,1": "2",
+    "4,1": "2"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "9810327312",
+    "2234297371",
+    "2771932455",
+    "2589050961",
+    "5302752973"
+   ]
+  },
+  {
+   "id": "N31-3",
+   "scan": "B03050089400 p38L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "9,2": "1"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "7127667371",
+    "9326390078",
+    "5267441181",
+    "947052",
+    ""
+   ]
+  },
+  {
+   "id": "N34-2",
+   "scan": "B03050089400 p45R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "5,4": "2",
+    "8,1": "2"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "4417300341",
+    "3932066924",
+    "6574650966",
+    "0008249452",
+    "6844727193"
+   ]
+  },
+  {
+   "id": "N34-3",
+   "scan": "B03050089400 p45L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "1,0": "2",
+    "3,3": "2",
+    "3,2": "2",
+    "6,4": "2",
+    "6,0": "2",
+    "8,0": "2"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "0230392829",
+    "5909481367",
+    "1122718143",
+    "9362494161",
+    "1416372501"
+   ]
+  },
+  {
+   "id": "N34-4",
+   "scan": "B03050089400 p46R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "2,1": "1",
+    "6,2": "1",
+    "5,3": "7",
+    "5,2": "6"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "1065302624",
+    "2812523568",
+    "5013761395",
+    "6656571027",
+    "4615266502"
+   ]
+  },
+  {
+   "id": "N34-5",
+   "scan": "B03050089400 p46L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "0,1": "5",
+    "0,0": "3",
+    "4,4": "2",
+    "5,4": "2"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "3541394574",
+    "5726155259",
+    "3234257805",
+    "2418842040",
+    "7308223472"
+   ]
+  },
+  {
+   "id": "N34-6",
+   "scan": "B03050089400 p47R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {},
+   "columns_right_to_left_top_to_bottom": [
+    "3071931947",
+    "0948003718",
+    "2063077181",
+    "0037194233",
+    "0024566056"
+   ]
+  },
+  {
+   "id": "N34-7",
+   "scan": "B03050089400 p47L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {},
+   "columns_right_to_left_top_to_bottom": [
+    "5903247801",
+    "6053284631",
+    "0017477175",
+    "5961463808",
+    "0961304645"
+   ]
+  },
+  {
+   "id": "N34-8",
+   "scan": "B03050089400 p48R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {},
+   "columns_right_to_left_top_to_bottom": [
+    "2262994147",
+    "0171248011",
+    "2971813267",
+    "0467663426",
+    "0742492920"
+   ]
+  },
+  {
+   "id": "N34-9",
+   "scan": "B03050089400 p48L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {},
+   "columns_right_to_left_top_to_bottom": [
+    "7614471013",
+    "0057208766",
+    "4430460948",
+    "0501096114",
+    "7231091766"
+   ]
+  },
+  {
+   "id": "N34-10",
+   "scan": "B03050089400 p49R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "6,0": "2",
+    "9,1": "7",
+    "9,0": "1"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "1628712211",
+    "1506815297",
+    "0271295302",
+    "5139700095",
+    "2598156322"
+   ]
+  },
+  {
+   "id": "N34-11",
+   "scan": "B03050089400 p49L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "6,0": "2"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "5106712173",
+    "4763492449",
+    "3919364515",
+    "5205307195",
+    "8870220354"
+   ]
+  },
+  {
+   "id": "N34-12",
+   "scan": "B03050089400 p50R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "1,4": "2"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "1713463900",
+    "0080524506",
+    "2416252670",
+    "9481367270",
+    "4260911266"
+   ]
+  },
+  {
+   "id": "N34-13",
+   "scan": "B03050089400 p50L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "3,4": "2"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "0606175176",
+    "9617107946",
+    "1800644094",
+    "8008661531",
+    "7832974119"
+   ]
+  },
+  {
+   "id": "N34-14",
+   "scan": "B03050089400 p51R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "7,2": "3",
+    "7,1": "5"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "3001020362",
+    "3125996586",
+    "3137061339",
+    "8115137193",
+    "1144511329"
+   ]
+  },
+  {
+   "id": "N34-15",
+   "scan": "B03050089400 p51L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "2,2": "2"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "7417887912",
+    "0337316313",
+    "832585",
+    "",
+    ""
+   ]
+  },
+  {
+   "id": "N03-2",
+   "scan": "B03050089200 p20L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "2,0": "1",
+    "4,1": "2"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "7512952536",
+    "55762480",
+    "",
+    "",
+    ""
+   ]
+  },
+  {
+   "id": "N01-2",
+   "scan": "B03050089000 p35L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {},
+   "columns_right_to_left_top_to_bottom": [
+    "5048503548",
+    "2809338306",
+    "8250954547",
+    "3405184238",
+    "1938624535"
+   ]
+  },
+  {
+   "id": "N01-3",
+   "scan": "B03050089000 p36R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {},
+   "columns_right_to_left_top_to_bottom": [
+    "5739348083",
+    "8942804307",
+    "0385830429",
+    "3832731680",
+    "7948155677"
+   ]
+  },
+  {
+   "id": "N01-4",
+   "scan": "B03050089000 p36L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "1,0": "3"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "1306788163",
+    "7473428526",
+    "830737",
+    "",
+    ""
+   ]
+  },
+  {
+   "id": "N05-2",
+   "scan": "B03050089200 p25L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "1,3": "2"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "2046679950",
+    "9997984793",
+    "7854997659",
+    "3231329463",
+    "5565649794"
+   ]
+  },
+  {
+   "id": "N05-3",
+   "scan": "B03050089200 p26R",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {
+    "2,0": "2",
+    "4,3": "3",
+    "4,1": "2",
+    "9,0": "2"
+   },
+   "columns_right_to_left_top_to_bottom": [
+    "9527673322",
+    "0256205487",
+    "9519757694",
+    "5387359881",
+    "5430335942"
+   ]
+  },
+  {
+   "id": "N05-4",
+   "scan": "B03050089200 p26L",
+   "checked": true,
+   "comment": "",
+   "revealed_my_readings": false,
+   "edits": {},
+   "columns_right_to_left_top_to_bottom": [
+    "20",
+    "",
+    "",
+    "",
+    ""
+   ]
+  }
+ ]
+}

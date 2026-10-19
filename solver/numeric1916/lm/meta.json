@@ -1,0 +1,25 @@
+{
+ "lw": 0.6,
+ "lt": 0.3,
+ "aw": 0.5,
+ "aj": 0.5,
+ "at": 0.2,
+ "telegrams": 97,
+ "tel_chars": 3860,
+ "pairs": 103325,
+ "telegrams_sha256": "a195cffecafaedcf7f89be62eabe76074e63b9e16bfb67ad55f4d7159ddb5624",
+ "validation": {
+  "cv5_top1": [
+   42.9,
+   56.2
+  ],
+  "cv5_false_alarm": [
+   35.8,
+   23.2
+  ],
+  "real_corrections_top1": [
+   34.6,
+   49.5
+  ]
+ }
+}

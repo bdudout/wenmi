@@ -14,6 +14,8 @@ Ce dossier contient de quoi **vérifier et rejouer** le déchiffrement présent�
 | `data/cen_v8.json` | canal Tokyo → Zhaoqing : syllabes lues sur les formulaires (lectures humaines), 7 télégrammes |
 | `data/yunnan_v3.json` | canal Tokyo ↔ Yunnan : syllabes lues (lectures humaines), 15 formulaires |
 | `data/relecture-1916.csv` | relecture des télégrammes à condensateur de mars–mai 1916 (transcription publiée) sur les scans, en deux lots de lecture aveugle : B1 (45 propositions d'une lettre), B2 (propositions du crible, lectures du texte publié, corrections appliquées) ; mot transcrit, mot lu sur le scan, lettre, caractères avant/après, verdict (voir la page « Condensateurs 1916 ») |
+| `numeric1916/` | télégrammes numériques de juin 1916 (共密, 容密, 辰密) : les trois clés, les chiffres relus, la reproduction des textes publiés, les recherches de clé avec témoins (voir son README) |
+| `rongmi/`, `chenmi/` | décodeurs autonomes 容密 et 辰密 |
 | `lm3/` | modèle de langue (unigrammes et bigrammes de codes télégraphiques) et table code → caractère |
 
 ## Décoder
@@ -81,3 +83,6 @@ test (the consonant carries the tens digit); `anchor_coord.cpp` is the annealing
 cells identical to G0, and the held-out message 0406 reads at +3.87 per character under the found table versus +4.28
 under G0. Data: human readings of the JACAR forms (Brice Dudout), Unihan telegraph codes, a language model built from
 Sun Yat-sen's writings on Chinese Wikisource. Built on Daniel Bourdeau's work.
+
+The June 1916 numeric telegrams (Gongmi 共密, Rongmi 容密, Chenmi 辰密) have their own folder, `numeric1916/`: the three keys,
+the digits as re-read, exact reproduction of the 29 published raw texts, and from-scratch key searches with null controls (see its README).

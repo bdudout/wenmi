@@ -1,0 +1,10126 @@
+{
+ "source": "wenmi/cryptanalysis/c94/export_solver.py",
+ "order": "colonnes de droite à gauche, chaque colonne de haut en bas, feuillet après feuillet (Brice Dudout) ; groupes de 4 chiffres ; « ? » = chiffre illisible",
+ "messages": {
+  "N01": {
+   "family": "open",
+   "prefix": null,
+   "groups": [
+    {
+     "cipher": "8443",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5694",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4259",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5691",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2072",
+     "sheet": "1"
+    },
+    {
+     "cipher": "9036",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8353",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4532",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5753",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3434",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4594",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1878",
+     "sheet": "1"
+    }
+   ],
+   "dir": null,
+   "date": null,
+   "date_note": null,
+   "sheets": [],
+   "raw_published": null,
+   "reading_published": null,
+   "reread_by_brice": true,
+   "note": "Non lu ; premier feuillet seulement (C45/C46). aucun préfixe connu"
+  },
+  "N02": {
+   "family": "rongmi",
+   "prefix": "1369 1378",
+   "groups": [
+    {
+     "cipher": "5669",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8813",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5879",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3308",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2057",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6079",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3868",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4603",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1777",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0553",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3358",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8764",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1624",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8659",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6512",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6146",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1926",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6079",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2055",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5150",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3249",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6226",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2081",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9062",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8165",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8659",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4663",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8200",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8477",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2317",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2164",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8396",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2081",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0546",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2682",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6495",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3953",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6226",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1616",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3044",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8198",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4244",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1039",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8396",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2081",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8165",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3203",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4603",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8104",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1550",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8764",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1273",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3032",
+     "sheet": "5"
+    },
+    {
+     "cipher": "0586",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1083",
+     "sheet": "5"
+    },
+    {
+     "cipher": "4256",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8482",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3087",
+     "sheet": "5"
+    },
+    {
+     "cipher": "2056",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8165",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3203",
+     "sheet": "5"
+    },
+    {
+     "cipher": "4663",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8477",
+     "sheet": "6"
+    },
+    {
+     "cipher": "1444",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8549",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5478",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8203",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8715",
+     "sheet": "6"
+    },
+    {
+     "cipher": "1155",
+     "sheet": "6"
+    },
+    {
+     "cipher": "0864",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8200",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5438",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5765",
+     "sheet": "6"
+    },
+    {
+     "cipher": "1119",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8715",
+     "sheet": "7"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8826",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5612",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8645",
+     "sheet": "7"
+    },
+    {
+     "cipher": "6204",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8119",
+     "sheet": "7"
+    },
+    {
+     "cipher": "3252",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5100",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5826",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8462",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5486",
+     "sheet": "7"
+    },
+    {
+     "cipher": "3687",
+     "sheet": "8"
+    },
+    {
+     "cipher": "3575",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8189",
+     "sheet": "8"
+    },
+    {
+     "cipher": "5877",
+     "sheet": "8"
+    },
+    {
+     "cipher": "0458",
+     "sheet": "8"
+    },
+    {
+     "cipher": "0442",
+     "sheet": "8"
+    },
+    {
+     "cipher": "2326",
+     "sheet": "8"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": null,
+   "date_note": "non lue (formulaire « Copy »)",
+   "sheets": [
+    [
+     "B03050089200",
+     7,
+     "L"
+    ],
+    [
+     "B03050089200",
+     8,
+     "R"
+    ],
+    [
+     "B03050089200",
+     8,
+     "L"
+    ],
+    [
+     "B03050089200",
+     9,
+     "R"
+    ],
+    [
+     "B03050089200",
+     9,
+     "L"
+    ],
+    [
+     "B03050089200",
+     10,
+     "R"
+    ],
+    [
+     "B03050089200",
+     10,
+     "L"
+    ],
+    [
+     "B03050089200",
+     11,
+     "R"
+    ]
+   ],
+   "raw_published": "轉呂都督步鎗約萬枝山砲可望十餘門機鎗正設皽需款在五十蓐以內淅江借款尚無頭緒需時甚久肇慶借款五百萬不日可拗當局意能先由此五百蓐內撥出購付卽戸徂以起運懇卽電商軍務院並盻覆酒公賣章程乞郵寄孝準",
+   "reading_published": "轉呂都督：步鎗約萬枝，山砲可望十餘門，機鎗正設〔皽〕。需款在五十{萬}以內。{浙}江借款尚無頭緒，需時甚久。肇慶借款五百萬，不日可{成}。當局意能先由此五百{萬}內撥出購付，卽〔戸徂〕以起運。懇卽電商軍務院，並{盼}覆。酒公賣章程乞郵寄。孝準",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N03": {
+   "family": "open",
+   "prefix": null,
+   "groups": [
+    {
+     "cipher": "0051",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1371",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3694",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2143",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1105",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4641",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7938",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1156",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1400",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3521",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3283",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4482",
+     "sheet": "1"
+    }
+   ],
+   "dir": null,
+   "date": null,
+   "date_note": null,
+   "sheets": [],
+   "raw_published": null,
+   "reading_published": null,
+   "reread_by_brice": true,
+   "note": "Non lu ; premier feuillet seulement (C45/C46). aucun préfixe connu"
+  },
+  "N04": {
+   "family": "clair",
+   "prefix": null,
+   "groups": [
+    {
+     "cipher": "6567",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7402",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1946",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7893",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7024",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6006",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1016",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0494",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4428",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6175",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0338",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7003",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7193",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1885",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6006",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0554",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0057",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6351",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0031",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2170",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0160",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3928",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1571",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1466",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7193",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3747",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4539",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0677",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4164",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0191",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0366",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0554",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0127",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7104",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6511",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6656",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5710",
+     "sheet": "4"
+    },
+    {
+     "cipher": "0001",
+     "sheet": "4"
+    },
+    {
+     "cipher": "7126",
+     "sheet": "4"
+    },
+    {
+     "cipher": "7236",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3945",
+     "sheet": "4"
+    },
+    {
+     "cipher": "0100",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2455",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3677",
+     "sheet": "4"
+    },
+    {
+     "cipher": "0455",
+     "sheet": "5"
+    },
+    {
+     "cipher": "7181",
+     "sheet": "5"
+    },
+    {
+     "cipher": "2601",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6651",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6618",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1415",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1942",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3981",
+     "sheet": "5"
+    },
+    {
+     "cipher": "0434",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1395",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6567",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6671",
+     "sheet": "6"
+    },
+    {
+     "cipher": "2949",
+     "sheet": "6"
+    },
+    {
+     "cipher": "0057",
+     "sheet": "6"
+    },
+    {
+     "cipher": "6511",
+     "sheet": "6"
+    },
+    {
+     "cipher": "0523",
+     "sheet": "6"
+    },
+    {
+     "cipher": "7108",
+     "sheet": "6"
+    },
+    {
+     "cipher": "4827",
+     "sheet": "6"
+    },
+    {
+     "cipher": "4639",
+     "sheet": "6"
+    },
+    {
+     "cipher": "0356",
+     "sheet": "6"
+    },
+    {
+     "cipher": "1444",
+     "sheet": "6"
+    },
+    {
+     "cipher": "3981",
+     "sheet": "6"
+    },
+    {
+     "cipher": "2589",
+     "sheet": "7"
+    },
+    {
+     "cipher": "6060",
+     "sheet": "7"
+    },
+    {
+     "cipher": "3973",
+     "sheet": "7"
+    },
+    {
+     "cipher": "1717",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2456",
+     "sheet": "7"
+    },
+    {
+     "cipher": "0222",
+     "sheet": "7"
+    },
+    {
+     "cipher": "0086",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5174",
+     "sheet": "7"
+    },
+    {
+     "cipher": "0500",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2076",
+     "sheet": "7"
+    },
+    {
+     "cipher": "0644",
+     "sheet": "7"
+    },
+    {
+     "cipher": "0076",
+     "sheet": "8"
+    },
+    {
+     "cipher": "1801",
+     "sheet": "8"
+    },
+    {
+     "cipher": "4550",
+     "sheet": "8"
+    },
+    {
+     "cipher": "6134",
+     "sheet": "8"
+    },
+    {
+     "cipher": "6080",
+     "sheet": "8"
+    },
+    {
+     "cipher": "3127",
+     "sheet": "8"
+    },
+    {
+     "cipher": "0523",
+     "sheet": "8"
+    },
+    {
+     "cipher": "2598",
+     "sheet": "8"
+    },
+    {
+     "cipher": "3718",
+     "sheet": "8"
+    },
+    {
+     "cipher": "6151",
+     "sheet": "8"
+    },
+    {
+     "cipher": "5281",
+     "sheet": "8"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": null,
+   "date_note": "non lue",
+   "sheets": [
+    [
+     "B03050089200",
+     21,
+     "R"
+    ],
+    [
+     "B03050089200",
+     21,
+     "L"
+    ],
+    [
+     "B03050089200",
+     22,
+     "R"
+    ],
+    [
+     "B03050089200",
+     22,
+     "L"
+    ],
+    [
+     "B03050089200",
+     23,
+     "R"
+    ],
+    [
+     "B03050089200",
+     23,
+     "L"
+    ],
+    [
+     "B03050089200",
+     24,
+     "R"
+    ],
+    [
+     "B03050089200",
+     24,
+     "L"
+    ]
+   ],
+   "raw_published": "轉飬愚龍門襾堂劍秋諸兄鑒電悉襾北事賴主持佩甚已屬電獨立各省促其北伐陜軍逼處一隅非由他方牽制難期進迸尊意當切實轉達款事軍務院統築全局當有計畫弟於個人能力所及亦必竭誠設法務望猛談興",
+   "reading_published": "轉〔飬〕愚、龍門、{西}堂、劍秋諸兄鑒：電悉。{西}北事賴主持，佩甚。已屬電獨立各省，促其北伐。{陝}軍逼處一隅，非由他方牽制，難期進〔迸〕。尊意當切實轉達。款事軍務院統{籌}全局，當有計畫。弟於個人能力所及，亦必竭誠設法，務望猛{進}。興",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N05": {
+   "family": "chenmi",
+   "prefix": null,
+   "groups": [
+    {
+     "cipher": "2777",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6162",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6736",
+     "sheet": "1"
+    },
+    {
+     "cipher": "9608",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2254",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8435",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7101",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7392",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1909",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8735",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6788",
+     "sheet": "1"
+    },
+    {
+     "cipher": "9608",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5620",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4667",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9950",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9997",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9847",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9378",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5499",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7659",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3231",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3294",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6355",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6564",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9794",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9527",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6733",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2202",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5620",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5487",
+     "sheet": "3"
+    },
+    {
+     "cipher": "9519",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7576",
+     "sheet": "3"
+    },
+    {
+     "cipher": "9453",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8735",
+     "sheet": "3"
+    },
+    {
+     "cipher": "9881",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5430",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3359",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4220",
+     "sheet": "3"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": 3,
+   "date_note": "3 juin 1916 (inventaire YC)",
+   "sheets": [
+    [
+     "B03050089200",
+     25,
+     "R"
+    ],
+    [
+     "B03050089200",
+     25,
+     "L"
+    ],
+    [
+     "B03050089200",
+     26,
+     "R"
+    ],
+    [
+     "B03050089200",
+     26,
+     "L"
+    ]
+   ],
+   "raw_published": "轉烈武兄鑒山東方面如欲兄當統一事任可直承諾請溥泉偕劃此間當盡力援助如何盻覆興",
+   "reading_published": "轉烈武兄鑒：山東方面如欲兄當統一事任，可直承諾；請溥泉偕{行}。此間當盡力援助。如何，{盼}覆。興。",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N06": {
+   "family": "open",
+   "prefix": null,
+   "groups": [
+    {
+     "cipher": "4564",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5111",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7685",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7003",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0735",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1378",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7225",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2456",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2796",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7501",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8733",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4092",
+     "sheet": "1"
+    }
+   ],
+   "dir": null,
+   "date": null,
+   "date_note": null,
+   "sheets": [],
+   "raw_published": null,
+   "reading_published": null,
+   "reread_by_brice": true,
+   "note": "Non lu ; premier feuillet seulement (C45/C46). en-tête en clair puis préfixe 和密"
+  },
+  "N07": {
+   "family": "open",
+   "prefix": null,
+   "groups": [
+    {
+     "cipher": "0364",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1378",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3230",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6476",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3278",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4840",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0207",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3026",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4850",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7501",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0484",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5121",
+     "sheet": "1"
+    }
+   ],
+   "dir": null,
+   "date": null,
+   "date_note": null,
+   "sheets": [],
+   "raw_published": null,
+   "reading_published": null,
+   "reread_by_brice": true,
+   "note": "Non lu ; premier feuillet seulement (C45/C46). préfixe 共密, clé C51 illisible (seul 共密 reçu à Tokyo)"
+  },
+  "N08": {
+   "family": "rongmi",
+   "prefix": "1369 1378",
+   "groups": [
+    {
+     "cipher": "6225",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0937",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5478",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1180",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2081",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0652",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0571",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3443",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8826",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0857",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8156",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0241",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3868",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8764",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5638",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8572",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2796",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8303",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3596",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0454",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2056",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9068",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8104",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2016",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1738",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0412",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0896",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1543",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0652",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0571",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8156",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2227",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1476",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8162",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6272",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0857",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8764",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5638",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8396",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2081",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2055",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8603",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5785",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5772",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4939",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2326",
+     "sheet": "4"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": null,
+   "date_note": "non lue (« Copy »)",
+   "sheets": [
+    [
+     "B03050089200",
+     47,
+     "R"
+    ],
+    [
+     "B03050089200",
+     47,
+     "L"
+    ],
+    [
+     "B03050089200",
+     48,
+     "R"
+    ],
+    [
+     "B03050089200",
+     48,
+     "L"
+    ]
+   ],
+   "raw_published": "電悉購戍款已屢磋商後交大約可辦到爲保秘密此地不檢查子彈數已屢交涉據云隨後可辦借款正加速進行準",
+   "reading_published": "電悉。購{械}款已屢磋商，後交大約可辦到。爲保秘密，此地不檢查。子彈數已屢交涉，據云隨後可辦。借款正加速進行。準",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N09": {
+   "family": "open",
+   "prefix": null,
+   "groups": [
+    {
+     "cipher": "6567",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7456",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5105",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0357",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0238",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7003",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0051",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1378",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7096",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4044",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4014",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8129",
+     "sheet": "1"
+    }
+   ],
+   "dir": null,
+   "date": null,
+   "date_note": null,
+   "sheets": [],
+   "raw_published": null,
+   "reading_published": null,
+   "reread_by_brice": true,
+   "note": "Non lu ; premier feuillet seulement (C45/C46). en-tête en clair puis préfixe 乾密"
+  },
+  "N10": {
+   "family": "clair",
+   "prefix": null,
+   "groups": [
+    {
+     "cipher": "1367",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0917",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2480",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0355",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0451",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3337",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6153",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6567",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0707",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0230",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0207",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0451",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0520",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6500",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0068",
+     "sheet": "2"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": null,
+   "date_note": "non lue (formulaire « Copy », parmi des télégrammes du 8 juin)",
+   "sheets": [
+    [
+     "B03050089200",
+     50,
+     "R"
+    ],
+    [
+     "B03050089200",
+     50,
+     "L"
+    ]
+   ],
+   "raw_published": "家嚴日內到滬請轉告候信到動身亞",
+   "reading_published": "家嚴日內到滬，請轉告。候信到動身。亞。",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N11": {
+   "family": "rongmi",
+   "prefix": "1369 1378",
+   "groups": [
+    {
+     "cipher": "5669",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2409",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8585",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8482",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3093",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6105",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0937",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0517",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5117",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0427",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3656",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8102",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5104",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3223",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0994",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2084",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2032",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2499",
+     "sheet": "2"
+    },
+    {
+     "cipher": "4209",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1505",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1011",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3983",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1139",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8179",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8217",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0546",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1709",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0593",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3953",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1684",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6232",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8620",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5520",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0253",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1200",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5499",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1505",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1119",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6272",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1616",
+     "sheet": "4"
+    },
+    {
+     "cipher": "0454",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3477",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3381",
+     "sheet": "4"
+    },
+    {
+     "cipher": "0819",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8520",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1158",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4256",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8786",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3032",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3289",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3182",
+     "sheet": "5"
+    },
+    {
+     "cipher": "2796",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8199",
+     "sheet": "5"
+    },
+    {
+     "cipher": "0442",
+     "sheet": "5"
+    },
+    {
+     "cipher": "2326",
+     "sheet": "5"
+    },
+    {
+     "cipher": "0781",
+     "sheet": "5"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": 8,
+   "date_note": "jour 8 (庚) ; mois non lu",
+   "sheets": [
+    [
+     "B03050089200",
+     51,
+     "R"
+    ],
+    [
+     "B03050089200",
+     51,
+     "L"
+    ],
+    [
+     "B03050089200",
+     52,
+     "R"
+    ],
+    [
+     "B03050089200",
+     52,
+     "L"
+    ],
+    [
+     "B03050089200",
+     53,
+     "R"
+    ]
+   ],
+   "raw_published": "轉溯初先生鑒電悉尊見實第一要着急欲歸滬聆教惟經手事件尚未就緒暫難卬身如承賜教懇隨時密電示知弟力所能及當盡瘁爲之孝準庚",
+   "reading_published": "轉溯初先生鑒：電悉。尊見實第一要着，急欲歸滬聆教，惟經手事件尚未就緒，暫難{抽}身。如承賜教，懇隨時密電示知，弟力所能及，當盡瘁爲之。孝準庚",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N12": {
+   "family": "rongmi",
+   "prefix": "1369 1378",
+   "groups": [
+    {
+     "cipher": "8119",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5669",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8118",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5879",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3308",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6105",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2057",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6079",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8470",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4651",
+     "sheet": "1"
+    },
+    {
+     "cipher": "9?26",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6079",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8463",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0652",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2326",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8352",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5765",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5745",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3983",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1139",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8138",
+     "sheet": "2"
+    },
+    {
+     "cipher": "4466",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0679",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6481",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8396",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2081",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3203",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4603",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5478",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1880",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2011",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0513",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8252",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8715",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3087",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8468",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8143",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1121",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5805",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1209",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3032",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8878",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8200",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8281",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4156",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2796",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8265",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8189",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1486",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8171",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8217",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5218",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3824",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3477",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8200",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8231",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1486",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8102",
+     "sheet": "5"
+    },
+    {
+     "cipher": "4350",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8199",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8156",
+     "sheet": "6"
+    },
+    {
+     "cipher": "2227",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5826",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8462",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5486",
+     "sheet": "6"
+    },
+    {
+     "cipher": "0519",
+     "sheet": "6"
+    },
+    {
+     "cipher": "1578",
+     "sheet": "6"
+    },
+    {
+     "cipher": "3203",
+     "sheet": "6"
+    },
+    {
+     "cipher": "4603",
+     "sheet": "6"
+    },
+    {
+     "cipher": "0510",
+     "sheet": "6"
+    },
+    {
+     "cipher": "2081",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8294",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8104",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8754",
+     "sheet": "7"
+    },
+    {
+     "cipher": "3717",
+     "sheet": "7"
+    },
+    {
+     "cipher": "3263",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5785",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5100",
+     "sheet": "7"
+    },
+    {
+     "cipher": "0442",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2326",
+     "sheet": "7"
+    },
+    {
+     "cipher": "0781",
+     "sheet": "7"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": 8,
+   "date_note": "jour 8 (庚) ; mois non lu",
+   "sheets": [
+    [
+     "B03050089200",
+     53,
+     "L"
+    ],
+    [
+     "B03050089200",
+     54,
+     "R"
+    ],
+    [
+     "B03050089200",
+     54,
+     "L"
+    ],
+    [
+     "B03050089200",
+     55,
+     "R"
+    ],
+    [
+     "B03050089200",
+     55,
+     "L"
+    ],
+    [
+     "B03050089200",
+     56,
+     "R"
+    ],
+    [
+     "B03050089200",
+     56,
+     "L"
+    ]
+   ],
+   "raw_published": "並轉丢都督鑒步鎗八蔆□鎗六已準備運送經手人芳川願借款百萬購械檳將來卽由其中扣還抵當品以何者爲佳乞擇二件詳細電示以便擇一與之交涉酒公賣對於百萬小款似不合算盼速覆孝準庚",
+   "reading_published": "並轉{呂}都督鑒：步鎗八〔蔆〕，{機}鎗六〔…〕，已準備運送。經手人芳川願借款百萬購械，〔檳〕將來卽由其中扣還。抵當品以何者爲佳？乞擇二件詳細電示，以便擇一與之交涉。酒公賣對於百萬小款似不合算，盼速覆。孝準庚",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N13": {
+   "family": "chenmi",
+   "prefix": "6591 1378",
+   "groups": [
+    {
+     "cipher": "8449",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3255",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1522",
+     "sheet": "1"
+    },
+    {
+     "cipher": "9952",
+     "sheet": "1"
+    },
+    {
+     "cipher": "9608",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2254",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4278",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1345",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8438",
+     "sheet": "1"
+    },
+    {
+     "cipher": "9383",
+     "sheet": "1"
+    },
+    {
+     "cipher": "9337",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5473",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2114",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1863",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2120",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3840",
+     "sheet": "2"
+    },
+    {
+     "cipher": "4920",
+     "sheet": "2"
+    },
+    {
+     "cipher": "4123",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9900",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8168",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9950",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9958",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7998",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7221",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6738",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2912",
+     "sheet": "3"
+    },
+    {
+     "cipher": "9907",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8634",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4127",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8735",
+     "sheet": "3"
+    },
+    {
+     "cipher": "9830",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2114",
+     "sheet": "3"
+    },
+    {
+     "cipher": "9970",
+     "sheet": "3"
+    },
+    {
+     "cipher": "9970",
+     "sheet": "3"
+    },
+    {
+     "cipher": "9926",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7950",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3348",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5903",
+     "sheet": "4"
+    },
+    {
+     "cipher": "9388",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8373",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3294",
+     "sheet": "4"
+    },
+    {
+     "cipher": "9388",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3104",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8988",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2740",
+     "sheet": "4"
+    },
+    {
+     "cipher": "9320",
+     "sheet": "4"
+    },
+    {
+     "cipher": "7885",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5692",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8442",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3659",
+     "sheet": "5"
+    },
+    {
+     "cipher": "7475",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5134",
+     "sheet": "5"
+    },
+    {
+     "cipher": "7684",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5511",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5903",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5475",
+     "sheet": "5"
+    },
+    {
+     "cipher": "7339",
+     "sheet": "5"
+    },
+    {
+     "cipher": "7876",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8294",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1863",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3303",
+     "sheet": "5"
+    },
+    {
+     "cipher": "7218",
+     "sheet": "6"
+    },
+    {
+     "cipher": "6307",
+     "sheet": "6"
+    },
+    {
+     "cipher": "9320",
+     "sheet": "6"
+    },
+    {
+     "cipher": "9926",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8592",
+     "sheet": "6"
+    },
+    {
+     "cipher": "3454",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5292",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8169",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5321",
+     "sheet": "6"
+    },
+    {
+     "cipher": "9900",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8168",
+     "sheet": "6"
+    },
+    {
+     "cipher": "2740",
+     "sheet": "6"
+    },
+    {
+     "cipher": "9464",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2158",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8461",
+     "sheet": "7"
+    },
+    {
+     "cipher": "1845",
+     "sheet": "7"
+    },
+    {
+     "cipher": "7313",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5450",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2655",
+     "sheet": "7"
+    },
+    {
+     "cipher": "9697",
+     "sheet": "7"
+    },
+    {
+     "cipher": "7339",
+     "sheet": "7"
+    },
+    {
+     "cipher": "3101",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5915",
+     "sheet": "7"
+    },
+    {
+     "cipher": "9987",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2114",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5292",
+     "sheet": "8"
+    },
+    {
+     "cipher": "4220",
+     "sheet": "8"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": 9,
+   "date_note": "9 juin 1916 (en-tête du formulaire)",
+   "sheets": [
+    [
+     "B03050089300",
+     3,
+     "L"
+    ],
+    [
+     "B03050089300",
+     4,
+     "R"
+    ],
+    [
+     "B03050089300",
+     4,
+     "L"
+    ],
+    [
+     "B03050089300",
+     5,
+     "R"
+    ],
+    [
+     "B03050089300",
+     5,
+     "L"
+    ],
+    [
+     "B03050089300",
+     6,
+     "R"
+    ],
+    [
+     "B03050089300",
+     6,
+     "L"
+    ],
+    [
+     "B03050089300",
+     7,
+     "R"
+    ]
+   ],
+   "raw_published": "小詠鳳三兄鑒致黎岑及各省電頗難著筆苟主張一不恐有歧趨之嫌若如來電云云人必視爲取巧請取護國軍同意畎尊處擬稿拍發爲盼日態度頗觀望滬同人宜表示強硬主張軍務院尤須明白近兩日變狀乞電示興",
+   "reading_published": "小、詠、鳳三兄鑒：致黎、岑及各省電頗難著筆。苟主張{不}{一}，恐有歧趨之嫌；若如來電云云，人必視爲取巧。請取護國軍同意，{由}尊處擬稿拍發爲盼。日態度頗觀望，滬同人宜表示強硬主張，軍務院尤須明白。近兩日變狀，乞電示。興。",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N14": {
+   "family": "rongmi",
+   "prefix": "1369 1378",
+   "groups": [
+    {
+     "cipher": "5669",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8813",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5879",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3308",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6105",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5015",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2036",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0241",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0586",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3297",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4441",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6398",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8596",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0427",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6417",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8352",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8104",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5424",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8200",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3089",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0844",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9084",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2249",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0278",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0475",
+     "sheet": "3"
+    },
+    {
+     "cipher": "9084",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0117",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1081",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8270",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4770",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3725",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3032",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8601",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1874",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8520",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1880",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8482",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5765",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2081",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3203",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4603",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8158",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8764",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8715",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1173",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4332",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8265",
+     "sheet": "4"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": 9,
+   "date_note": "9 juin 1916 (en-tête ; 佳 = 9 concorde)",
+   "sheets": [
+    [
+     "B03050089300",
+     7,
+     "L"
+    ],
+    [
+     "B03050089300",
+     8,
+     "R"
+    ],
+    [
+     "B03050089300",
+     8,
+     "L"
+    ],
+    [
+     "B03050089300",
+     9,
+     "R"
+    ]
+   ],
+   "raw_published": "轉呂都督鑒袁死大局益艱非切實預備不足以申張國法奠定國基感佩藎籌當効棉力械先運款百萬亦可卽成興佳",
+   "reading_published": "轉呂都督鑒：袁死，大局益艱，非切實預備，不足以申張國法、奠定國基。感佩藎籌，當効棉力。械先運，款百萬亦可卽成。興佳",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N16": {
+   "family": "chenmi",
+   "prefix": "6591 1378",
+   "groups": [
+    {
+     "cipher": "9947",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2777",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4651",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1522",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8449",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3232",
+     "sheet": "1"
+    },
+    {
+     "cipher": "9670",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2254",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1345",
+     "sheet": "1"
+    },
+    {
+     "cipher": "9670",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1906",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6413",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9730",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9950",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9991",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8317",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9378",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1907",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9672",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9519",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7418",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9851",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7998",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9958",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7316",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8512",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3527",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2915",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8708",
+     "sheet": "3"
+    },
+    {
+     "cipher": "9425",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4729",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5903",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1345",
+     "sheet": "3"
+    },
+    {
+     "cipher": "9670",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7736",
+     "sheet": "3"
+    },
+    {
+     "cipher": "9757",
+     "sheet": "3"
+    },
+    {
+     "cipher": "9700",
+     "sheet": "4"
+    },
+    {
+     "cipher": "9914",
+     "sheet": "4"
+    },
+    {
+     "cipher": "9385",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8970",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6425",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5356",
+     "sheet": "4"
+    },
+    {
+     "cipher": "9957",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4626",
+     "sheet": "4"
+    },
+    {
+     "cipher": "9672",
+     "sheet": "4"
+    },
+    {
+     "cipher": "9378",
+     "sheet": "4"
+    },
+    {
+     "cipher": "9313",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4239",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6283",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6736",
+     "sheet": "5"
+    },
+    {
+     "cipher": "4924",
+     "sheet": "5"
+    },
+    {
+     "cipher": "9213",
+     "sheet": "5"
+    },
+    {
+     "cipher": "2495",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3339",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6567",
+     "sheet": "5"
+    },
+    {
+     "cipher": "9749",
+     "sheet": "5"
+    },
+    {
+     "cipher": "9676",
+     "sheet": "5"
+    },
+    {
+     "cipher": "2718",
+     "sheet": "5"
+    },
+    {
+     "cipher": "4626",
+     "sheet": "5"
+    },
+    {
+     "cipher": "4707",
+     "sheet": "5"
+    },
+    {
+     "cipher": "9672",
+     "sheet": "5"
+    },
+    {
+     "cipher": "9950",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8317",
+     "sheet": "6"
+    },
+    {
+     "cipher": "9859",
+     "sheet": "6"
+    },
+    {
+     "cipher": "9730",
+     "sheet": "6"
+    },
+    {
+     "cipher": "1345",
+     "sheet": "6"
+    },
+    {
+     "cipher": "9670",
+     "sheet": "6"
+    },
+    {
+     "cipher": "1647",
+     "sheet": "6"
+    },
+    {
+     "cipher": "2639",
+     "sheet": "6"
+    },
+    {
+     "cipher": "6736",
+     "sheet": "6"
+    },
+    {
+     "cipher": "9115",
+     "sheet": "6"
+    },
+    {
+     "cipher": "9950",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8470",
+     "sheet": "6"
+    },
+    {
+     "cipher": "4989",
+     "sheet": "7"
+    },
+    {
+     "cipher": "9696",
+     "sheet": "7"
+    },
+    {
+     "cipher": "9519",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8996",
+     "sheet": "7"
+    },
+    {
+     "cipher": "9907",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5620",
+     "sheet": "7"
+    },
+    {
+     "cipher": "9378",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2726",
+     "sheet": "7"
+    },
+    {
+     "cipher": "9590",
+     "sheet": "7"
+    },
+    {
+     "cipher": "7256",
+     "sheet": "7"
+    },
+    {
+     "cipher": "9683",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2114",
+     "sheet": "7"
+    },
+    {
+     "cipher": "3294",
+     "sheet": "7"
+    },
+    {
+     "cipher": "9388",
+     "sheet": "8"
+    },
+    {
+     "cipher": "3104",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8988",
+     "sheet": "8"
+    },
+    {
+     "cipher": "2740",
+     "sheet": "8"
+    },
+    {
+     "cipher": "9320",
+     "sheet": "8"
+    },
+    {
+     "cipher": "7885",
+     "sheet": "8"
+    },
+    {
+     "cipher": "9858",
+     "sheet": "8"
+    },
+    {
+     "cipher": "7475",
+     "sheet": "8"
+    },
+    {
+     "cipher": "5134",
+     "sheet": "8"
+    },
+    {
+     "cipher": "5511",
+     "sheet": "8"
+    },
+    {
+     "cipher": "2114",
+     "sheet": "8"
+    },
+    {
+     "cipher": "9950",
+     "sheet": "8"
+    },
+    {
+     "cipher": "4403",
+     "sheet": "9"
+    },
+    {
+     "cipher": "7218",
+     "sheet": "9"
+    },
+    {
+     "cipher": "2684",
+     "sheet": "9"
+    },
+    {
+     "cipher": "3527",
+     "sheet": "9"
+    },
+    {
+     "cipher": "6413",
+     "sheet": "9"
+    },
+    {
+     "cipher": "6219",
+     "sheet": "9"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": 10,
+   "date_note": "10 juin 1916 (en-tête du formulaire ; 灰 en fin de texte)",
+   "sheets": [
+    [
+     "B03050089300",
+     11,
+     "L"
+    ],
+    [
+     "B03050089300",
+     12,
+     "R"
+    ],
+    [
+     "B03050089300",
+     12,
+     "L"
+    ],
+    [
+     "B03050089300",
+     13,
+     "R"
+    ],
+    [
+     "B03050089300",
+     13,
+     "L"
+    ],
+    [
+     "B03050089300",
+     14,
+     "R"
+    ],
+    [
+     "B03050089300",
+     14,
+     "L"
+    ],
+    [
+     "B03050089300",
+     15,
+     "R"
+    ],
+    [
+     "B03050089300",
+     15,
+     "L"
+    ]
+   ],
+   "raw_published": "並轉組鳳小諸公鑒黎公非準備一二師可靠兵力政令恐不易實行趙夷午素爲黎公所信倚今又在湯督下練兵可否與濟武等商量設法俾其迅練精兵一師以備黎公驅遣武器一層竭全力圖之當可辦到昨克電請取護國軍同意代擬稿發電一羶望速行準灰",
+   "reading_published": "並轉組、鳳、小諸公鑒：黎公非準備一二師可靠兵力，政令恐不易實行。趙夷午素爲黎公所信倚，今又在湯督下練兵，可否與濟武等商量設法，俾其迅練精兵一師，以備黎公驅遣。武器一層，竭全力圖之，當可辦到。昨克電請取護國軍同意，代擬稿發電，一{節}望速行。準。灰。",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N17": {
+   "family": "gongmi",
+   "prefix": "0364 1378",
+   "groups": [
+    {
+     "cipher": "1188",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4080",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4113",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7528",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8883",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7811",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7566",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4217",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7647",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2294",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7068",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1565",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8669",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7645",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7037",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6611",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8934",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7250",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6714",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8304",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6832",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8545",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6436",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2902",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6436",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7122",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8923",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8943",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2847",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7672",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8256",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5566",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6074",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4101",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7666",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2875",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8622",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2347",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2847",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1188",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8699",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5649",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3133",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8909",
+     "sheet": "4"
+    },
+    {
+     "cipher": "7197",
+     "sheet": "4"
+    },
+    {
+     "cipher": "7232",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3737",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4294",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5813",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8366",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8062",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6435",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8941",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8467",
+     "sheet": "5"
+    },
+    {
+     "cipher": "4951",
+     "sheet": "5"
+    },
+    {
+     "cipher": "2674",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8801",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8366",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8664",
+     "sheet": "5"
+    },
+    {
+     "cipher": "2938",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8801",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8905",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8891",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5902",
+     "sheet": "6"
+    },
+    {
+     "cipher": "4437",
+     "sheet": "6"
+    },
+    {
+     "cipher": "2432",
+     "sheet": "6"
+    },
+    {
+     "cipher": "3880",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8341",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8408",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8883",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8210",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5326",
+     "sheet": "6"
+    },
+    {
+     "cipher": "3741",
+     "sheet": "6"
+    },
+    {
+     "cipher": "6486",
+     "sheet": "7"
+    },
+    {
+     "cipher": "4080",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5100",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8869",
+     "sheet": "7"
+    },
+    {
+     "cipher": "1969",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8295",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8918",
+     "sheet": "7"
+    },
+    {
+     "cipher": "6438",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8406",
+     "sheet": "7"
+    },
+    {
+     "cipher": "3087",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2870",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8349",
+     "sheet": "7"
+    },
+    {
+     "cipher": "3976",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8467",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8675",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8408",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8646",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8707",
+     "sheet": "8"
+    },
+    {
+     "cipher": "1910",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8062",
+     "sheet": "8"
+    },
+    {
+     "cipher": "6435",
+     "sheet": "8"
+    },
+    {
+     "cipher": "2140",
+     "sheet": "8"
+    },
+    {
+     "cipher": "6560",
+     "sheet": "8"
+    },
+    {
+     "cipher": "4101",
+     "sheet": "8"
+    },
+    {
+     "cipher": "4010",
+     "sheet": "8"
+    },
+    {
+     "cipher": "6077",
+     "sheet": "9"
+    },
+    {
+     "cipher": "7201",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8645",
+     "sheet": "9"
+    },
+    {
+     "cipher": "1969",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8026",
+     "sheet": "9"
+    },
+    {
+     "cipher": "7588",
+     "sheet": "9"
+    },
+    {
+     "cipher": "5291",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8456",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8623",
+     "sheet": "9"
+    },
+    {
+     "cipher": "2862",
+     "sheet": "9"
+    },
+    {
+     "cipher": "1910",
+     "sheet": "9"
+    },
+    {
+     "cipher": "7709",
+     "sheet": "9"
+    },
+    {
+     "cipher": "5964",
+     "sheet": "9"
+    },
+    {
+     "cipher": "2489",
+     "sheet": "10"
+    },
+    {
+     "cipher": "8918",
+     "sheet": "10"
+    },
+    {
+     "cipher": "6741",
+     "sheet": "10"
+    },
+    {
+     "cipher": "2140",
+     "sheet": "10"
+    },
+    {
+     "cipher": "8695",
+     "sheet": "10"
+    },
+    {
+     "cipher": "3976",
+     "sheet": "10"
+    },
+    {
+     "cipher": "5326",
+     "sheet": "10"
+    },
+    {
+     "cipher": "2261",
+     "sheet": "10"
+    },
+    {
+     "cipher": "4704",
+     "sheet": "10"
+    },
+    {
+     "cipher": "8997",
+     "sheet": "10"
+    },
+    {
+     "cipher": "6844",
+     "sheet": "10"
+    },
+    {
+     "cipher": "5964",
+     "sheet": "10"
+    },
+    {
+     "cipher": "1115",
+     "sheet": "11"
+    },
+    {
+     "cipher": "2902",
+     "sheet": "11"
+    },
+    {
+     "cipher": "8934",
+     "sheet": "11"
+    },
+    {
+     "cipher": "8646",
+     "sheet": "11"
+    },
+    {
+     "cipher": "8971",
+     "sheet": "11"
+    },
+    {
+     "cipher": "8432",
+     "sheet": "11"
+    },
+    {
+     "cipher": "8256",
+     "sheet": "11"
+    },
+    {
+     "cipher": "8909",
+     "sheet": "11"
+    },
+    {
+     "cipher": "8526",
+     "sheet": "11"
+    },
+    {
+     "cipher": "8675",
+     "sheet": "11"
+    },
+    {
+     "cipher": "6570",
+     "sheet": "11"
+    },
+    {
+     "cipher": "5039",
+     "sheet": "11"
+    },
+    {
+     "cipher": "7566",
+     "sheet": "11"
+    },
+    {
+     "cipher": "5938",
+     "sheet": "12"
+    },
+    {
+     "cipher": "7647",
+     "sheet": "12"
+    },
+    {
+     "cipher": "1724",
+     "sheet": "12"
+    },
+    {
+     "cipher": "8431",
+     "sheet": "12"
+    },
+    {
+     "cipher": "8476",
+     "sheet": "12"
+    },
+    {
+     "cipher": "4113",
+     "sheet": "12"
+    },
+    {
+     "cipher": "8909",
+     "sheet": "12"
+    },
+    {
+     "cipher": "7375",
+     "sheet": "12"
+    },
+    {
+     "cipher": "8902",
+     "sheet": "12"
+    },
+    {
+     "cipher": "8726",
+     "sheet": "12"
+    },
+    {
+     "cipher": "6061",
+     "sheet": "12"
+    },
+    {
+     "cipher": "6544",
+     "sheet": "12"
+    },
+    {
+     "cipher": "8446",
+     "sheet": "13"
+    },
+    {
+     "cipher": "8971",
+     "sheet": "13"
+    },
+    {
+     "cipher": "6652",
+     "sheet": "13"
+    },
+    {
+     "cipher": "7360",
+     "sheet": "13"
+    },
+    {
+     "cipher": "8822",
+     "sheet": "13"
+    },
+    {
+     "cipher": "6076",
+     "sheet": "13"
+    },
+    {
+     "cipher": "1188",
+     "sheet": "13"
+    },
+    {
+     "cipher": "8699",
+     "sheet": "13"
+    },
+    {
+     "cipher": "6981",
+     "sheet": "13"
+    },
+    {
+     "cipher": "8902",
+     "sheet": "13"
+    },
+    {
+     "cipher": "3793",
+     "sheet": "13"
+    },
+    {
+     "cipher": "8361",
+     "sheet": "13"
+    },
+    {
+     "cipher": "8545",
+     "sheet": "13"
+    },
+    {
+     "cipher": "8983",
+     "sheet": "queue"
+    },
+    {
+     "cipher": "3887",
+     "sheet": "queue"
+    },
+    {
+     "cipher": "3739",
+     "sheet": "queue"
+    },
+    {
+     "cipher": "5550",
+     "sheet": "queue"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": 10,
+   "date_note": "10 juin 1916 (cartouche ; 灰 = 10 concorde)",
+   "sheets": [
+    [
+     "B03050089300",
+     16,
+     "R"
+    ],
+    [
+     "B03050089300",
+     16,
+     "L"
+    ],
+    [
+     "B03050089300",
+     17,
+     "R"
+    ],
+    [
+     "B03050089300",
+     17,
+     "L"
+    ],
+    [
+     "B03050089300",
+     18,
+     "R"
+    ],
+    [
+     "B03050089300",
+     18,
+     "L"
+    ],
+    [
+     "B03050089300",
+     19,
+     "R"
+    ],
+    [
+     "B03050089300",
+     19,
+     "L"
+    ],
+    [
+     "B03050089300",
+     20,
+     "R"
+    ],
+    [
+     "B03050089300",
+     20,
+     "L"
+    ],
+    [
+     "B03050089300",
+     21,
+     "R"
+    ],
+    [
+     "B03050089300",
+     21,
+     "L"
+    ],
+    [
+     "B03050089300",
+     22,
+     "R"
+    ],
+    [
+     "B03050089300",
+     22,
+     "L"
+    ]
+   ],
+   "raw_published": "黎總統就任大局粗定鄙意首先宜慰撫人心排却挾制最要最急之事請密商濟武組安諸兄逶請黎公漠行一恢復舊約法及國會二勿發赦令及免訢令三使段等辭職另加任命爲臨時總理但閣員中曾助袁謀叛者勿再加入俟開國會釣新組織正式內閣四將王占元調開委民軍中握釣兵者爲郙督五招民黨要人入京協商一切再日當局決定非南匿統一廖不借款於北京政府似此黎公應不至受制並聞興灰",
+   "reading_published": "黎總統就任，大局粗定。鄙意首先宜慰撫人心，排却挾制。最要最急之事，請密商濟武、組安諸兄，{速}請黎公〔漠〕行：一、恢復舊約法及國會；二、勿發赦令及免{訴}令；三、使段等辭職，另加任命爲臨時總理，但閣員中曾助袁謀叛者勿再加入，俟開國會，{重}新組織正式內閣；四、將王占元調開，委民軍中握{重}兵者爲{都}督；五、招民黨要人入京協商一切。再，日當局決定：非南{北}統一，〔廖〕不借款於北京政府。似此黎公應不至受制。並聞。興灰",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N18": {
+   "family": "gongmi",
+   "prefix": "0364 1378",
+   "groups": [
+    {
+     "cipher": "3466",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1857",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7135",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1188",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5902",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3633",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2826",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7250",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6620",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2727",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8696",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8225",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5964",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1115",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2902",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5999",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5039",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5466",
+     "sheet": "2"
+    },
+    {
+     "cipher": "4899",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7691",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8062",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6652",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8902",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1839",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2655",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6544",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5813",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5888",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6077",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2400",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6062",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2379",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6076",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4862",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4806",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5759",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6431",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6074",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8550",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5326",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8923",
+     "sheet": "4"
+    },
+    {
+     "cipher": "7275",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6794",
+     "sheet": "4"
+    },
+    {
+     "cipher": "7142",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4842",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8593",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6462",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1839",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6653",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8883",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6039",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8062",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8943",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8707",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6486",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6156",
+     "sheet": "5"
+    },
+    {
+     "cipher": "7878",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8861",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8675",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5938",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3039",
+     "sheet": "5"
+    },
+    {
+     "cipher": "4874",
+     "sheet": "queue"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": 11,
+   "date_note": "11 juin 1916 (cartouche ; 真 = 11 concorde)",
+   "sheets": [
+    [
+     "B03050089300",
+     23,
+     "R"
+    ],
+    [
+     "B03050089300",
+     23,
+     "L"
+    ],
+    [
+     "B03050089300",
+     24,
+     "R"
+    ],
+    [
+     "B03050089300",
+     24,
+     "L"
+    ],
+    [
+     "B03050089300",
+     25,
+     "R"
+    ],
+    [
+     "B03050089300",
+     25,
+     "L"
+    ]
+   ],
+   "raw_published": "蒸電悉黎段若誠心擁護共和民黨要求當然相容國政不難趨於法治正軌欲達此監的湏有武力爲之後援恐目前暫難放任歸國事俟時機如何再決襋真",
+   "reading_published": "蒸電悉。黎、段若誠心擁護共和，民黨要求當然相容，國政不難趨於法治正軌。欲達此{目}的，湏有武力爲之後援。恐目前暫難放任。歸國事俟時機如何再決。{興}真",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N19a": {
+   "family": "rongmi",
+   "prefix": "1369 1378",
+   "groups": [
+    {
+     "cipher": "5669",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3203",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5981",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8494",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8104",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4256",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0994",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3263",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0472",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8731",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8252",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1791",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8102",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8826",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5100",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2326",
+     "sheet": "2"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": null,
+   "date_note": "11 juin 1916 ? (inventaire)",
+   "sheets": [
+    [
+     "B03050089300",
+     26,
+     "R"
+    ],
+    [
+     "B03050089300",
+     26,
+     "L"
+    ]
+   ],
+   "raw_published": "轉百里兄不能急盼官君來東一商電覆準",
+   "reading_published": "轉百里兄：不能急，盼官君來東一商。電覆。準",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N19b": {
+   "family": "rongmi",
+   "prefix": "1369 1378",
+   "groups": [
+    {
+     "cipher": "6952",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6277",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0937",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8494",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3635",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8192",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0844",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0965",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0834",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4335",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3868",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3249",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8786",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9084",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1637",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8119",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3801",
+     "sheet": "2"
+    },
+    {
+     "cipher": "4040",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1580",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8477",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6182",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1158",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5117",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5754",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0241",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4439",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4256",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5638",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8572",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8200",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0210",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8827",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6486",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4362",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5702",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8593",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4151",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5185",
+     "sheet": "4"
+    },
+    {
+     "cipher": "0819",
+     "sheet": "4"
+    },
+    {
+     "cipher": "0652",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "4"
+    },
+    {
+     "cipher": "9029",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6737",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8479",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8494",
+     "sheet": "4"
+    },
+    {
+     "cipher": "0593",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2499",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8784",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8759",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1577",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8732",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1083",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3121",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5005",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5868",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5117",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8200",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1702",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8102",
+     "sheet": "5"
+    },
+    {
+     "cipher": "4364",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1011",
+     "sheet": "6"
+    },
+    {
+     "cipher": "2162",
+     "sheet": "6"
+    },
+    {
+     "cipher": "3249",
+     "sheet": "6"
+    },
+    {
+     "cipher": "0856",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8108",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8199",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5185",
+     "sheet": "6"
+    },
+    {
+     "cipher": "2133",
+     "sheet": "6"
+    },
+    {
+     "cipher": "6398",
+     "sheet": "6"
+    },
+    {
+     "cipher": "1631",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8491",
+     "sheet": "6"
+    },
+    {
+     "cipher": "0427",
+     "sheet": "6"
+    },
+    {
+     "cipher": "2058",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8520",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2796",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8199",
+     "sheet": "7"
+    },
+    {
+     "cipher": "0857",
+     "sheet": "7"
+    },
+    {
+     "cipher": "1368",
+     "sheet": "7"
+    },
+    {
+     "cipher": "0902",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2682",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8601",
+     "sheet": "7"
+    },
+    {
+     "cipher": "1776",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8127",
+     "sheet": "7"
+    },
+    {
+     "cipher": "1624",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2232",
+     "sheet": "7"
+    },
+    {
+     "cipher": "3266",
+     "sheet": "8"
+    },
+    {
+     "cipher": "3550",
+     "sheet": "8"
+    },
+    {
+     "cipher": "1919",
+     "sheet": "8"
+    },
+    {
+     "cipher": "5772",
+     "sheet": "8"
+    },
+    {
+     "cipher": "4939",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8277",
+     "sheet": "8"
+    },
+    {
+     "cipher": "1791",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8631",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8199",
+     "sheet": "8"
+    },
+    {
+     "cipher": "3353",
+     "sheet": "8"
+    },
+    {
+     "cipher": "1722",
+     "sheet": "8"
+    },
+    {
+     "cipher": "0102",
+     "sheet": "8"
+    },
+    {
+     "cipher": "6390",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8595",
+     "sheet": "9"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "9"
+    },
+    {
+     "cipher": "0792",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8717",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8306",
+     "sheet": "9"
+    },
+    {
+     "cipher": "6908",
+     "sheet": "9"
+    },
+    {
+     "cipher": "5785",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8549",
+     "sheet": "9"
+    },
+    {
+     "cipher": "5871",
+     "sheet": "9"
+    },
+    {
+     "cipher": "5455",
+     "sheet": "9"
+    },
+    {
+     "cipher": "0253",
+     "sheet": "9"
+    },
+    {
+     "cipher": "2056",
+     "sheet": "9"
+    },
+    {
+     "cipher": "0771",
+     "sheet": "10"
+    },
+    {
+     "cipher": "1631",
+     "sheet": "10"
+    },
+    {
+     "cipher": "8897",
+     "sheet": "10"
+    },
+    {
+     "cipher": "0749",
+     "sheet": "10"
+    },
+    {
+     "cipher": "8199",
+     "sheet": "10"
+    },
+    {
+     "cipher": "1624",
+     "sheet": "10"
+    },
+    {
+     "cipher": "2056",
+     "sheet": "10"
+    },
+    {
+     "cipher": "6197",
+     "sheet": "10"
+    },
+    {
+     "cipher": "0652",
+     "sheet": "10"
+    },
+    {
+     "cipher": "4350",
+     "sheet": "10"
+    },
+    {
+     "cipher": "3032",
+     "sheet": "10"
+    },
+    {
+     "cipher": "0586",
+     "sheet": "10"
+    },
+    {
+     "cipher": "1396",
+     "sheet": "11"
+    },
+    {
+     "cipher": "2256",
+     "sheet": "11"
+    },
+    {
+     "cipher": "6398",
+     "sheet": "11"
+    },
+    {
+     "cipher": "8305",
+     "sheet": "11"
+    },
+    {
+     "cipher": "8631",
+     "sheet": "11"
+    },
+    {
+     "cipher": "8676",
+     "sheet": "11"
+    },
+    {
+     "cipher": "3949",
+     "sheet": "11"
+    },
+    {
+     "cipher": "8102",
+     "sheet": "11"
+    },
+    {
+     "cipher": "1104",
+     "sheet": "11"
+    },
+    {
+     "cipher": "0851",
+     "sheet": "11"
+    },
+    {
+     "cipher": "8396",
+     "sheet": "11"
+    },
+    {
+     "cipher": "2081",
+     "sheet": "11"
+    },
+    {
+     "cipher": "1578",
+     "sheet": "11"
+    },
+    {
+     "cipher": "1324",
+     "sheet": "12"
+    },
+    {
+     "cipher": "1424",
+     "sheet": "12"
+    },
+    {
+     "cipher": "0780",
+     "sheet": "12"
+    },
+    {
+     "cipher": "8119",
+     "sheet": "12"
+    },
+    {
+     "cipher": "4215",
+     "sheet": "12"
+    },
+    {
+     "cipher": "4332",
+     "sheet": "12"
+    },
+    {
+     "cipher": "3258",
+     "sheet": "12"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": 11,
+   "date_note": "11 juin 1916 (en-tête ; 真 = 11 concorde)",
+   "sheets": [
+    [
+     "B03050089300",
+     27,
+     "R"
+    ],
+    [
+     "B03050089300",
+     27,
+     "L"
+    ],
+    [
+     "B03050089300",
+     28,
+     "R"
+    ],
+    [
+     "B03050089300",
+     28,
+     "L"
+    ],
+    [
+     "B03050089300",
+     29,
+     "R"
+    ],
+    [
+     "B03050089300",
+     29,
+     "L"
+    ],
+    [
+     "B03050089300",
+     30,
+     "R"
+    ],
+    [
+     "B03050089300",
+     30,
+     "L"
+    ],
+    [
+     "B03050089300",
+     31,
+     "R"
+    ],
+    [
+     "B03050089300",
+     31,
+     "L"
+    ],
+    [
+     "B03050089300",
+     32,
+     "R"
+    ],
+    [
+     "B03050089300",
+     32,
+     "L"
+    ]
+   ],
+   "raw_published": "齊隹電悉兄等主張恢復舊約皽及國會並籧織新內閣所見遠大若能辦到以外問題自迎刃而解弟已電垣鳳兩兄就滬取各方同意發表鄙見以期一致惟求皽律上之解決非有充實武力爲之後援必無効果仍望浙省積極進行作東南之砥柱垚面分電幹卿俠黃速出鄂贛如此庶有和平之望此間已與當局接洽非俟南北統一憯得借款於摘政府並聞興真",
+   "reading_published": "齊、{佳}電悉。兄等主張恢復舊約{法}及國會，並{組}織新內閣，所見遠大。若能辦到，以外問題自迎刃而解。弟已電垣、鳳兩兄就滬取各方同意，發表鄙見，以期一致。惟求{法}律上之解決，非有充實武力爲之後援，必無効果。仍望浙省積極進行，作東南之砥柱。{一}面分電幹卿、俠黃速出鄂、贛，如此庶有和平之望。此間已與當局接洽，非俟南北統一，〔憯〕得借款於{北}政府。並聞。興真",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N21": {
+   "family": "rongmi",
+   "prefix": "1369 1378",
+   "groups": [
+    {
+     "cipher": "2232",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3089",
+     "sheet": "1"
+    },
+    {
+     "cipher": "044?",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5669",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4364",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8494",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1541",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1656",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0844",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2439",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5625",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8482",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3093",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6105",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2232",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3094",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2057",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5925",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0553",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3358",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1926",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6160",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5925",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3528",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8230",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8281",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0744",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0801",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8468",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1543",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8759",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4439",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0748",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3358",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0896",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2110",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6146",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5925",
+     "sheet": "4"
+    },
+    {
+     "cipher": "0896",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8786",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1926",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6160",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5925",
+     "sheet": "4"
+    },
+    {
+     "cipher": "0896",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2110",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1237",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8759",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4439",
+     "sheet": "4"
+    },
+    {
+     "cipher": "0748",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5915",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6128",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6387",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8469",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3358",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8108",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6138",
+     "sheet": "5"
+    },
+    {
+     "cipher": "0568",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8878",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6562",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6346",
+     "sheet": "5"
+    },
+    {
+     "cipher": "9052",
+     "sheet": "6"
+    },
+    {
+     "cipher": "0488",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8352",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8726",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8569",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8252",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8759",
+     "sheet": "6"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8170",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8878",
+     "sheet": "6"
+    },
+    {
+     "cipher": "3569",
+     "sheet": "6"
+    },
+    {
+     "cipher": "1643",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5973",
+     "sheet": "6"
+    },
+    {
+     "cipher": "9052",
+     "sheet": "7"
+    },
+    {
+     "cipher": "1709",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5218",
+     "sheet": "7"
+    },
+    {
+     "cipher": "0937",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8112",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5638",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2249",
+     "sheet": "7"
+    },
+    {
+     "cipher": "0571",
+     "sheet": "7"
+    },
+    {
+     "cipher": "1528",
+     "sheet": "7"
+    },
+    {
+     "cipher": "1543",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8158",
+     "sheet": "7"
+    },
+    {
+     "cipher": "6272",
+     "sheet": "7"
+    },
+    {
+     "cipher": "3058",
+     "sheet": "8"
+    },
+    {
+     "cipher": "5275",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8715",
+     "sheet": "8"
+    },
+    {
+     "cipher": "5218",
+     "sheet": "8"
+    },
+    {
+     "cipher": "3824",
+     "sheet": "8"
+    },
+    {
+     "cipher": "3417",
+     "sheet": "8"
+    },
+    {
+     "cipher": "0427",
+     "sheet": "8"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "8"
+    },
+    {
+     "cipher": "5100",
+     "sheet": "8"
+    },
+    {
+     "cipher": "4369",
+     "sheet": "8"
+    },
+    {
+     "cipher": "3252",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8813",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8462",
+     "sheet": "8"
+    },
+    {
+     "cipher": "1624",
+     "sheet": "9"
+    },
+    {
+     "cipher": "1541",
+     "sheet": "9"
+    },
+    {
+     "cipher": "2758",
+     "sheet": "9"
+    },
+    {
+     "cipher": "4215",
+     "sheet": "9"
+    },
+    {
+     "cipher": "6699",
+     "sheet": "9"
+    },
+    {
+     "cipher": "5886",
+     "sheet": "9"
+    },
+    {
+     "cipher": "0961",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8499",
+     "sheet": "9"
+    }
+   ],
+   "dir": "Shanghai → Tokyo, 青山南町三ノ五三",
+   "date": 13,
+   "date_note": "13 juin 1916 (en-tête ; 元 = 13 concorde)",
+   "sheets": [
+    [
+     "B03050089400",
+     6,
+     "R"
+    ],
+    [
+     "B03050089400",
+     6,
+     "L"
+    ],
+    [
+     "B03050089400",
+     7,
+     "R"
+    ],
+    [
+     "B03050089400",
+     7,
+     "L"
+    ],
+    [
+     "B03050089400",
+     8,
+     "R"
+    ],
+    [
+     "B03050089400",
+     8,
+     "L"
+    ],
+    [
+     "B03050089400",
+     9,
+     "R"
+    ],
+    [
+     "B03050089400",
+     9,
+     "L"
+    ],
+    [
+     "B03050089400",
+     10,
+     "R"
+    ]
+   ],
+   "raw_published": "浙申□轉致兄電文曰張潤農先生鑒浙用步銃山砲機關銃究係何年式其數各若干砲彈每門銃彈及機關銃彈每挺各若干醅附革具砲上阮屬品馱靄均完備否前來各電于品種晞量均未詳悉且辦法屢易數亦隨異請卽詳細確實電覆至盻呂公望文特聞驪郛恩元",
+   "reading_published": "〔浙申□〕轉致兄電文曰：張潤農先生鑒：浙用步銃、山砲、機關銃究係何年式？其數各若干？砲彈每門、銃彈及機關銃彈每挺各若干？〔醅〕附革具、砲上{附}屬品、馱〔靄〕均完備否？前來各電于品種、{數}量均未詳悉，且辦法屢易，數亦隨異。請卽詳細確實電覆，至{盼}。呂公望 文特聞。驪郛恩元",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N23": {
+   "family": "gongmi",
+   "prefix": "0364 1378",
+   "groups": [
+    {
+     "cipher": "8666",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8622",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1905",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5066",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8918",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7580",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5991",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4805",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6431",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1857",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3793",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1710",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6304",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6431",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8271",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8624",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5326",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7283",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8736",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6061",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2847",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8622",
+     "sheet": "2"
+    },
+    {
+     "cipher": "?916",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7294",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8775",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8859",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5326",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2902",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7212",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4061",
+     "sheet": "3"
+    }
+   ],
+   "dir": "Shanghai → Tokyo, 青山南町三ノ五三",
+   "date": 13,
+   "date_note": "13 juin 1916 (en-tête)",
+   "sheets": [
+    [
+     "B03050089400",
+     14,
+     "R"
+    ],
+    [
+     "B03050089400",
+     14,
+     "L"
+    ],
+    [
+     "B03050089400",
+     15,
+     "R"
+    ]
+   ],
+   "raw_published": "克兄鑕田中小池皆有電至青木有唈允爲弟僅款請兄□往催促爲要張繼",
+   "reading_published": "克兄{鑒}：田中、小池皆有電至青木，有〔唈〕允爲弟{借}款，請兄{親}往催促爲要。張繼",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N24": {
+   "family": "rongmi",
+   "prefix": "1369 1378",
+   "groups": [
+    {
+     "cipher": "5669",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6908",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8486",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0840",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8482",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3093",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6105",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8265",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1550",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6913",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3333",
+     "sheet": "2"
+    },
+    {
+     "cipher": "9044",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2231",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8108",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0667",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8462",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8476",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8151",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5465",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8606",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2530",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1550",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8832",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0482",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6140",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1637",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8585",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5392",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8462",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5275",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2586",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2058",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8188",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0528",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2403",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2245",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6396",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3093",
+     "sheet": "4"
+    },
+    {
+     "cipher": "9096",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8138",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8200",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8343",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8138",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8733",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4140",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8476",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8151",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8192",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1260",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8468",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8192",
+     "sheet": "5"
+    },
+    {
+     "cipher": "0844",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8732",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8265",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1158",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6217",
+     "sheet": "5"
+    },
+    {
+     "cipher": "0857",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3983",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8457",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8107",
+     "sheet": "6"
+    },
+    {
+     "cipher": "3333",
+     "sheet": "6"
+    },
+    {
+     "cipher": "3528",
+     "sheet": "6"
+    },
+    {
+     "cipher": "2133",
+     "sheet": "6"
+    },
+    {
+     "cipher": "0475",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8482",
+     "sheet": "6"
+    },
+    {
+     "cipher": "3087",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8832",
+     "sheet": "6"
+    },
+    {
+     "cipher": "2333",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8799",
+     "sheet": "6"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "6"
+    },
+    {
+     "cipher": "3060",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5233",
+     "sheet": "7"
+    },
+    {
+     "cipher": "3282",
+     "sheet": "7"
+    },
+    {
+     "cipher": "1083",
+     "sheet": "7"
+    },
+    {
+     "cipher": "4369",
+     "sheet": "7"
+    },
+    {
+     "cipher": "1081",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8282",
+     "sheet": "7"
+    },
+    {
+     "cipher": "6398",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8109",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8201",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8784",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2226",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5015",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5749",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8324",
+     "sheet": "8"
+    },
+    {
+     "cipher": "2249",
+     "sheet": "8"
+    },
+    {
+     "cipher": "0427",
+     "sheet": "8"
+    },
+    {
+     "cipher": "4939",
+     "sheet": "8"
+    },
+    {
+     "cipher": "5730",
+     "sheet": "8"
+    },
+    {
+     "cipher": "2666",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8499",
+     "sheet": "8"
+    },
+    {
+     "cipher": "0744",
+     "sheet": "8"
+    },
+    {
+     "cipher": "3868",
+     "sheet": "8"
+    },
+    {
+     "cipher": "2249",
+     "sheet": "8"
+    },
+    {
+     "cipher": "1684",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8104",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8476",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8151",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8162",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8162",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8125",
+     "sheet": "9"
+    },
+    {
+     "cipher": "1540",
+     "sheet": "9"
+    },
+    {
+     "cipher": "0844",
+     "sheet": "9"
+    },
+    {
+     "cipher": "9084",
+     "sheet": "9"
+    },
+    {
+     "cipher": "2349",
+     "sheet": "9"
+    },
+    {
+     "cipher": "3087",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8151",
+     "sheet": "9"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "9"
+    },
+    {
+     "cipher": "1895",
+     "sheet": "9"
+    },
+    {
+     "cipher": "3333",
+     "sheet": "10"
+    },
+    {
+     "cipher": "5233",
+     "sheet": "10"
+    },
+    {
+     "cipher": "3868",
+     "sheet": "10"
+    },
+    {
+     "cipher": "2249",
+     "sheet": "10"
+    },
+    {
+     "cipher": "0834",
+     "sheet": "10"
+    },
+    {
+     "cipher": "4335",
+     "sheet": "10"
+    },
+    {
+     "cipher": "4489",
+     "sheet": "10"
+    },
+    {
+     "cipher": "0652",
+     "sheet": "10"
+    },
+    {
+     "cipher": "5465",
+     "sheet": "10"
+    },
+    {
+     "cipher": "5785",
+     "sheet": "10"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "10"
+    },
+    {
+     "cipher": "5734",
+     "sheet": "10"
+    },
+    {
+     "cipher": "5638",
+     "sheet": "11"
+    },
+    {
+     "cipher": "3252",
+     "sheet": "11"
+    },
+    {
+     "cipher": "5785",
+     "sheet": "11"
+    },
+    {
+     "cipher": "1396",
+     "sheet": "11"
+    },
+    {
+     "cipher": "2256",
+     "sheet": "11"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "11"
+    },
+    {
+     "cipher": "8572",
+     "sheet": "11"
+    },
+    {
+     "cipher": "8715",
+     "sheet": "11"
+    },
+    {
+     "cipher": "8764",
+     "sheet": "11"
+    },
+    {
+     "cipher": "0479",
+     "sheet": "11"
+    },
+    {
+     "cipher": "8283",
+     "sheet": "11"
+    },
+    {
+     "cipher": "0480",
+     "sheet": "11"
+    },
+    {
+     "cipher": "0444",
+     "sheet": "11"
+    },
+    {
+     "cipher": "0286",
+     "sheet": "12"
+    },
+    {
+     "cipher": "8499",
+     "sheet": "12"
+    },
+    {
+     "cipher": "6587",
+     "sheet": "12"
+    },
+    {
+     "cipher": "2257",
+     "sheet": "12"
+    },
+    {
+     "cipher": "5436",
+     "sheet": "12"
+    },
+    {
+     "cipher": "0450",
+     "sheet": "12"
+    },
+    {
+     "cipher": "8119",
+     "sheet": "12"
+    },
+    {
+     "cipher": "8764",
+     "sheet": "12"
+    },
+    {
+     "cipher": "6390",
+     "sheet": "12"
+    },
+    {
+     "cipher": "6217",
+     "sheet": "12"
+    },
+    {
+     "cipher": "8102",
+     "sheet": "12"
+    },
+    {
+     "cipher": "8596",
+     "sheet": "12"
+    },
+    {
+     "cipher": "8631",
+     "sheet": "13"
+    },
+    {
+     "cipher": "1577",
+     "sheet": "13"
+    },
+    {
+     "cipher": "2889",
+     "sheet": "13"
+    },
+    {
+     "cipher": "3691",
+     "sheet": "13"
+    },
+    {
+     "cipher": "8759",
+     "sheet": "13"
+    },
+    {
+     "cipher": "3266",
+     "sheet": "13"
+    },
+    {
+     "cipher": "8189",
+     "sheet": "13"
+    },
+    {
+     "cipher": "5791",
+     "sheet": "13"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "13"
+    },
+    {
+     "cipher": "8161",
+     "sheet": "13"
+    },
+    {
+     "cipher": "5250",
+     "sheet": "13"
+    },
+    {
+     "cipher": "3949",
+     "sheet": "13"
+    },
+    {
+     "cipher": "8102",
+     "sheet": "13"
+    },
+    {
+     "cipher": "1926",
+     "sheet": "14"
+    },
+    {
+     "cipher": "8104",
+     "sheet": "14"
+    },
+    {
+     "cipher": "8764",
+     "sheet": "14"
+    },
+    {
+     "cipher": "0298",
+     "sheet": "14"
+    },
+    {
+     "cipher": "0454",
+     "sheet": "14"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "14"
+    },
+    {
+     "cipher": "0652",
+     "sheet": "14"
+    },
+    {
+     "cipher": "0818",
+     "sheet": "14"
+    },
+    {
+     "cipher": "3422",
+     "sheet": "14"
+    },
+    {
+     "cipher": "8266",
+     "sheet": "14"
+    },
+    {
+     "cipher": "4215",
+     "sheet": "14"
+    },
+    {
+     "cipher": "8162",
+     "sheet": "14"
+    },
+    {
+     "cipher": "8162",
+     "sheet": "15"
+    },
+    {
+     "cipher": "2333",
+     "sheet": "15"
+    },
+    {
+     "cipher": "1427",
+     "sheet": "15"
+    },
+    {
+     "cipher": "0475",
+     "sheet": "15"
+    },
+    {
+     "cipher": "1578",
+     "sheet": "15"
+    },
+    {
+     "cipher": "8125",
+     "sheet": "15"
+    },
+    {
+     "cipher": "1611",
+     "sheet": "15"
+    },
+    {
+     "cipher": "5436",
+     "sheet": "15"
+    },
+    {
+     "cipher": "8151",
+     "sheet": "15"
+    },
+    {
+     "cipher": "2758",
+     "sheet": "15"
+    },
+    {
+     "cipher": "4215",
+     "sheet": "15"
+    },
+    {
+     "cipher": "9029",
+     "sheet": "15"
+    },
+    {
+     "cipher": "6737",
+     "sheet": "15"
+    },
+    {
+     "cipher": "8479",
+     "sheet": "16"
+    },
+    {
+     "cipher": "8494",
+     "sheet": "16"
+    },
+    {
+     "cipher": "0705",
+     "sheet": "16"
+    },
+    {
+     "cipher": "1646",
+     "sheet": "16"
+    },
+    {
+     "cipher": "2101",
+     "sheet": "16"
+    },
+    {
+     "cipher": "2169",
+     "sheet": "16"
+    },
+    {
+     "cipher": "6699",
+     "sheet": "16"
+    },
+    {
+     "cipher": "4616",
+     "sheet": "16"
+    },
+    {
+     "cipher": "1519",
+     "sheet": "16"
+    },
+    {
+     "cipher": "0961",
+     "sheet": "16"
+    },
+    {
+     "cipher": "6908",
+     "sheet": "16"
+    },
+    {
+     "cipher": "5886",
+     "sheet": "16"
+    },
+    {
+     "cipher": "8762",
+     "sheet": "17"
+    },
+    {
+     "cipher": "1422",
+     "sheet": "17"
+    }
+   ],
+   "dir": "Shanghai → Tokyo, 青山南町三ノ五三",
+   "date": null,
+   "date_note": "en-tête non lu ; postérieur au 9 juin (佳日)",
+   "sheets": [
+    [
+     "B03050089400",
+     15,
+     "L"
+    ],
+    [
+     "B03050089400",
+     16,
+     "R"
+    ],
+    [
+     "B03050089400",
+     16,
+     "L"
+    ],
+    [
+     "B03050089400",
+     17,
+     "R"
+    ],
+    [
+     "B03050089400",
+     17,
+     "L"
+    ],
+    [
+     "B03050089400",
+     18,
+     "R"
+    ],
+    [
+     "B03050089400",
+     18,
+     "L"
+    ],
+    [
+     "B03050089400",
+     19,
+     "R"
+    ],
+    [
+     "B03050089400",
+     19,
+     "L"
+    ],
+    [
+     "B03050089400",
+     20,
+     "R"
+    ],
+    [
+     "B03050089400",
+     20,
+     "L"
+    ],
+    [
+     "B03050089400",
+     21,
+     "R"
+    ],
+    [
+     "B03050089400",
+     21,
+     "L"
+    ],
+    [
+     "B03050089400",
+     22,
+     "R"
+    ],
+    [
+     "B03050089400",
+     22,
+     "L"
+    ],
+    [
+     "B03050089400",
+     23,
+     "R"
+    ],
+    [
+     "B03050089400",
+     23,
+     "L"
+    ]
+   ],
+   "raw_published": "轉黃克強先生鑒佳日黎電硏囑海上巨公入京贊助滠日唐宅開會初議公請濟武九峯溥泉靜生四人以個人名義入京主持其主張同佳電所陳後經再三硏究決定先由唐湯去電略謂盛意至感但非下令取消袁逆偽法實行遵照元年約法暫不入京云云今斌張國淦由京電梁硏謂約法復舊芝已贊速電遲辦盻速接洽電到卽可宣佈宗孰奉元首派赴寧並可面陳一切南方獨立各省乞通電亟謀統一機不可失密電已弛禁併聞云云湯改定於今晚赴京特聞垣鳳兩兄常晤殷汝驪葛敬恩黃郛叩攴",
+   "reading_published": "轉黃克強先生鑒：佳日黎電〔硏〕囑海上巨公入京贊助。〔滠〕日唐宅開會，初議公請濟武、九峯、溥泉、靜生四人以個人名義入京主持，其主張同佳電所陳。後經再三硏究，決定先由唐、湯去電，略謂：盛意至感，但非下令取消袁逆僞法，實行遵照元年約法，暫不入京云云。今〔斌〕張國淦由京電梁〔硏〕，謂約法復舊，芝已贊，速電遲辦，{盼}速接洽。電到卽可宣佈。〔宗孰〕奉元首派赴寧，並可面陳一切。南方獨立各省乞通電亟謀統一，機不可失。密電已弛禁。併聞云云。湯改定於今晚赴京。特聞。垣、鳳兩兄常晤。殷汝驪、葛敬恩、黃郛叩〔攴〕",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N25": {
+   "family": "rongmi",
+   "prefix": "1369 1378",
+   "groups": [
+    {
+     "cipher": "6404",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0851",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8813",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3307",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8252",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1656",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2695",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1228",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8478",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0744",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2146",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5647",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1543",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3868",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8171",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8659",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8470",
+     "sheet": "2"
+    },
+    {
+     "cipher": "4603",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2695",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5826",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2776",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1228",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3572",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8478",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0744",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0777",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1423",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3868",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8659",
+     "sheet": "3"
+    },
+    {
+     "cipher": "9096",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4603",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8200",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8108",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8171",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6401",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1463",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8764",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2796",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8102",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3569",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1309",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1292",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8878",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4369",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5826",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1228",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8478",
+     "sheet": "4"
+    },
+    {
+     "cipher": "0744",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1423",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8476",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3868",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8188",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8659",
+     "sheet": "5"
+    },
+    {
+     "cipher": "4603",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8294",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5140",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8104",
+     "sheet": "5"
+    },
+    {
+     "cipher": "0477",
+     "sheet": "5"
+    },
+    {
+     "cipher": "9052",
+     "sheet": "5"
+    },
+    {
+     "cipher": "0637",
+     "sheet": "5"
+    },
+    {
+     "cipher": "4350",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8569",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5796",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5822",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5638",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8200",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8108",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8759",
+     "sheet": "6"
+    },
+    {
+     "cipher": "6401",
+     "sheet": "6"
+    },
+    {
+     "cipher": "9052",
+     "sheet": "6"
+    },
+    {
+     "cipher": "9063",
+     "sheet": "6"
+    },
+    {
+     "cipher": "3826",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5826",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8462",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5486",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5481",
+     "sheet": "7"
+    },
+    {
+     "cipher": "0210",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2758",
+     "sheet": "7"
+    },
+    {
+     "cipher": "4218",
+     "sheet": "7"
+    },
+    {
+     "cipher": "1526",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8119",
+     "sheet": "7"
+    },
+    {
+     "cipher": "3252",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5100",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8162",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8162",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2758",
+     "sheet": "8"
+    },
+    {
+     "cipher": "4215",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8783",
+     "sheet": "8"
+    },
+    {
+     "cipher": "2232",
+     "sheet": "8"
+    },
+    {
+     "cipher": "3307",
+     "sheet": "8"
+    },
+    {
+     "cipher": "0652",
+     "sheet": "8"
+    },
+    {
+     "cipher": "2257",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8803",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8490",
+     "sheet": "8"
+    },
+    {
+     "cipher": "4652",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8731",
+     "sheet": "8"
+    },
+    {
+     "cipher": "5436",
+     "sheet": "8"
+    },
+    {
+     "cipher": "1550",
+     "sheet": "9"
+    },
+    {
+     "cipher": "4350",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8462",
+     "sheet": "9"
+    },
+    {
+     "cipher": "1396",
+     "sheet": "9"
+    },
+    {
+     "cipher": "2256",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8012",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8596",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8572",
+     "sheet": "9"
+    },
+    {
+     "cipher": "8189",
+     "sheet": "9"
+    },
+    {
+     "cipher": "5499",
+     "sheet": "9"
+    },
+    {
+     "cipher": "1505",
+     "sheet": "9"
+    },
+    {
+     "cipher": "6699",
+     "sheet": "9"
+    },
+    {
+     "cipher": "5886",
+     "sheet": "9"
+    },
+    {
+     "cipher": "0961",
+     "sheet": "10"
+    },
+    {
+     "cipher": "1423",
+     "sheet": "10"
+    }
+   ],
+   "dir": "Shanghai → Tokyo",
+   "date": null,
+   "date_note": "14 juin 1916 ? (inventaire)",
+   "sheets": [
+    [
+     "B03050089400",
+     24,
+     "R"
+    ],
+    [
+     "B03050089400",
+     24,
+     "L"
+    ],
+    [
+     "B03050089400",
+     25,
+     "R"
+    ],
+    [
+     "B03050089400",
+     25,
+     "L"
+    ],
+    [
+     "B03050089400",
+     26,
+     "R"
+    ],
+    [
+     "B03050089400",
+     26,
+     "L"
+    ],
+    [
+     "B03050089400",
+     27,
+     "R"
+    ],
+    [
+     "B03050089400",
+     27,
+     "L"
+    ],
+    [
+     "B03050089400",
+     28,
+     "R"
+    ],
+    [
+     "B03050089400",
+     28,
+     "L"
+    ]
+   ],
+   "raw_published": "頃得呂睢來電曰烟捐全年比較數約二十八萬烟酒牌捐税全年庫收約十四萬以上二項擬可爲一種据押品至酒捐全年收入約九十萬似覺不宜均希與前途酌辦以上各項均圩紩酒公賣賟外特聲明並盻覆云云特聞又浙睢已派吳兆蓮君赴日與公接洽□切到乞賜教驪郛恩收",
+   "reading_published": "頃得呂{督}來電曰：烟捐全年比較數約二十八萬；烟酒牌捐税全年庫收約十四萬以上；二項擬可爲一種{抵}押品。至酒捐全年收入約九十萬，似覺不宜。均希與前途酌辦。以上各項均〔圩紩〕酒公賣〔賟〕外，特聲明，並{盼}覆云云。特聞。又浙{督}已派吳兆蓮君赴日與公接洽，〔□〕切到乞賜教。驪郛恩〔收〕",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N26": {
+   "family": "chenmi",
+   "prefix": "6591 1378",
+   "groups": [
+    {
+     "cipher": "9986",
+     "sheet": "1"
+    },
+    {
+     "cipher": "9859",
+     "sheet": "1"
+    },
+    {
+     "cipher": "9952",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5455",
+     "sheet": "1"
+    },
+    {
+     "cipher": "9607",
+     "sheet": "1"
+    },
+    {
+     "cipher": "9933",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5455",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2481",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6413",
+     "sheet": "1"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": 13,
+   "date_note": "13 juin 1916 ? (cachet peu lisible)",
+   "sheets": [
+    [
+     "B03050089400",
+     31,
+     "R"
+    ]
+   ],
+   "raw_published": "九以三百元交百里準",
+   "reading_published": "{乞}以三百元交百里。準。",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N27": {
+   "family": "gongmi",
+   "prefix": "0364 1378",
+   "groups": [
+    {
+     "cipher": "5608",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6061",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8943",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7491",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8334",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8321",
+     "sheet": "1"
+    },
+    {
+     "cipher": "9880",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8941",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4896",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2849",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2395",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5469",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6452",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3739",
+     "sheet": "2"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": 15,
+   "date_note": "15 juin 1916 (en-tête)",
+   "sheets": [
+    [
+     "B03050089400",
+     31,
+     "L"
+    ],
+    [
+     "B03050089400",
+     32,
+     "R"
+    ]
+   ],
+   "raw_published": "溥款事己向參薾二省談過無望興",
+   "reading_published": "溥款事，己向〔參薾〕二省談過，無望。興",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N28": {
+   "family": "rongmi",
+   "prefix": "1369 1378",
+   "groups": [
+    {
+     "cipher": "5669",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3203",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5981",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8494",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8252",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8104",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1526",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0652",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6225",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5203",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8404",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3725",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8107",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3203",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8156",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8494",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2326",
+     "sheet": "2"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": 14,
+   "date_note": "14 juin 1916 (cartouche)",
+   "sheets": [
+    [
+     "B03050089400",
+     32,
+     "L"
+    ],
+    [
+     "B03050089400",
+     33,
+     "R"
+    ]
+   ],
+   "raw_published": "轉百里兄來電不明已電詠儀籌三百交兄準",
+   "reading_published": "轉百里兄：來電不明。已電詠儀籌三百交兄。準",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N29": {
+   "family": "clair",
+   "prefix": null,
+   "groups": [
+    {
+     "cipher": "4258",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1456",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0341",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3932",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7003",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5913",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6627",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5261",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2426",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7411",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5642",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1161",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7611",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7812",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0361",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5387",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5174",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0181",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3124",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0956",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3112",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0052",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5492",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0668",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6666",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2589",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6672",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2974",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2482",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5281",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0076",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1715",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2110",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0361",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5071",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2052",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2598",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6850",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0667",
+     "sheet": "4"
+    },
+    {
+     "cipher": "0741",
+     "sheet": "4"
+    },
+    {
+     "cipher": "7364",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1783",
+     "sheet": "4"
+    },
+    {
+     "cipher": "0229",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2589",
+     "sheet": "4"
+    },
+    {
+     "cipher": "0251",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3973",
+     "sheet": "4"
+    },
+    {
+     "cipher": "0047",
+     "sheet": "4"
+    },
+    {
+     "cipher": "7151",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2514",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6015",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4355",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3634",
+     "sheet": "5"
+    },
+    {
+     "cipher": "4411",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5281",
+     "sheet": "5"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": 14,
+   "date_note": "14 juin 1916 ? (inventaire, cartouche à contrôler)",
+   "sheets": [
+    [
+     "B03050089400",
+     33,
+     "L"
+    ],
+    [
+     "B03050089400",
+     34,
+     "R"
+    ],
+    [
+     "B03050089400",
+     34,
+     "L"
+    ],
+    [
+     "B03050089400",
+     35,
+     "R"
+    ],
+    [
+     "B03050089400",
+     35,
+     "L"
+    ]
+   ],
+   "raw_published": "石屛先生鑒袁逆自斃餘孽奪魄黎公若能依泊圖治亂萌可遏有違此旨興亦弗承公老成望重叱咤風從倘有偉畫乞隨時見示爲禱興",
+   "reading_published": "石屛先生鑒：袁逆自斃，餘孽奪魄。黎公若能依{法}圖治，亂萌可遏；有違此旨，興亦弗承。公老成望重，叱咤風從，倘有偉畫，乞隨時見示爲禱。興。",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N30": {
+   "family": "gongmi",
+   "prefix": "0364 1378",
+   "groups": [
+    {
+     "cipher": "1602",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8368",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6646",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7580",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5991",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8999",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5608",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8622",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8800",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8718",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8934",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8338",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3910",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1847",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6431",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8371",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1615",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8943",
+     "sheet": "2"
+    },
+    {
+     "cipher": "4109",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8956",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6074",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2165",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8392",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8726",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7580",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6061",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2847",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3799",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7899",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3739",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8148",
+     "sheet": "3"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": 15,
+   "date_note": "15 juin 1916 (en-tête ; 咸 = 15 si 嗒 → 咸)",
+   "sheets": [
+    [
+     "B03050089400",
+     36,
+     "R"
+    ],
+    [
+     "B03050089400",
+     36,
+     "L"
+    ],
+    [
+     "B03050089400",
+     37,
+     "R"
+    ]
+   ],
+   "raw_published": "頃又據小池云溥兄以個人名義隸有吉領事紹介武釆可借小款請自奪興嗒",
+   "reading_published": "頃又據小池云：溥兄以個人名義請有吉領事紹介，武〔釆〕可借小款，請自奪。興咸",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N31": {
+   "family": "clair",
+   "prefix": null,
+   "groups": [
+    {
+     "cipher": "2429",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7193",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1885",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2254",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4574",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0005",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6892",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5887",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0061",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0245",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0102",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0644",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4098",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1032",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7312",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2234",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2973",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7127",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7193",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2455",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2589",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0509",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6153",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0275",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2973",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7127",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6673",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7193",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2639",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0078",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5267",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4411",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8194",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7052",
+     "sheet": "3"
+    }
+   ],
+   "dir": "Tokyo → Mukden (奉天)",
+   "date": null,
+   "date_note": "15 juin 1916 ? (inventaire) ; réponse à un télégramme 文 (12)",
+   "sheets": [
+    [
+     "B03050089400",
+     37,
+     "L"
+    ],
+    [
+     "B03050089400",
+     38,
+     "R"
+    ],
+    [
+     "B03050089400",
+     38,
+     "L"
+    ]
+   ],
+   "raw_published": "文電悉揚第三銀行云偈付及登報須接正隆電方有効請催正隆遘電東享至禱嚌閼",
+   "reading_published": "文電悉。〔揚〕第三銀行云：〔偈〕付及登報，須接正隆電方有効。請催正隆{速}電東{京}。至禱。〔嚌閼〕",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N32": {
+   "family": "gongmi",
+   "prefix": "0364 1378",
+   "groups": [
+    {
+     "cipher": "3737",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4294",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5813",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8392",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6452",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7197",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7232",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6227",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5875",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2985",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7890",
+     "sheet": "1"
+    },
+    {
+     "cipher": "84?6",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8971",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5623",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2902",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8934",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5469",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7219",
+     "sheet": "2"
+    },
+    {
+     "cipher": "4731",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8929",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7312",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8918",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7578",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1?57",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6974",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2248",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8745",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8695",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8983",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1857",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2806",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8699",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7479",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4952",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7928",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7232",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1857",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5745",
+     "sheet": "4"
+    },
+    {
+     "cipher": "7109",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4951",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3007",
+     "sheet": "4"
+    },
+    {
+     "cipher": "7645",
+     "sheet": "4"
+    },
+    {
+     "cipher": "7043",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3486",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5901",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2104",
+     "sheet": "4"
+    },
+    {
+     "cipher": "7541",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1857",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8699",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1688",
+     "sheet": "5"
+    },
+    {
+     "cipher": "2900",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6435",
+     "sheet": "5"
+    },
+    {
+     "cipher": "2348",
+     "sheet": "5"
+    },
+    {
+     "cipher": "7996",
+     "sheet": "5"
+    }
+   ],
+   "dir": "Shanghai → Tokyo, 青山南町三ノ五三",
+   "date": 14,
+   "date_note": "14 juin 1916 (en-tête)",
+   "sheets": [
+    [
+     "B03050089400",
+     39,
+     "R"
+    ],
+    [
+     "B03050089400",
+     39,
+     "L"
+    ],
+    [
+     "B03050089400",
+     40,
+     "R"
+    ],
+    [
+     "B03050089400",
+     40,
+     "L"
+    ],
+    [
+     "B03050089400",
+     41,
+     "R"
+    ]
+   ],
+   "raw_published": "舊約法可望恢復梁派見好□京滬要人無弧硬主年中山□所部停兵並電詢公已登報復電渠必發表宜慎葛殷酵屢電公須覆會逵境",
+   "reading_published": "舊約法可望恢復，梁派見好。北京、滬要人無{強}硬主張。中山電所部停兵，並電詢公，已登報復電，渠必發表，宜慎。葛、殷、黃屢電，公須覆。〔會逵境〕",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N33": {
+   "family": "gongmi",
+   "prefix": "0364 1378",
+   "groups": [
+    {
+     "cipher": "1542",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6183",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6468",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6405",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8368",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8971",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1857",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5902",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4437",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2729",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5938",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8373",
+     "sheet": "2"
+    },
+    {
+     "cipher": "4896",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5875",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8905",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8934",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2636",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8971",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2729",
+     "sheet": "2"
+    },
+    {
+     "cipher": "4294",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5813",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5623",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6653",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7644",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6537",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4761",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6227",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1887",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2870",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2800",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4294",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5813",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6745",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7371",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8645",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1969",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5902",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5326",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4080",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4113",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1104",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3912",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8549",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8971",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6451",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5902",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2721",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5623",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2729",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8295",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8387",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1910",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6435",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8364",
+     "sheet": "5"
+    },
+    {
+     "cipher": "7583",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8903",
+     "sheet": "5"
+    },
+    {
+     "cipher": "7197",
+     "sheet": "5"
+    },
+    {
+     "cipher": "7232",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3737",
+     "sheet": "5"
+    },
+    {
+     "cipher": "4294",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5813",
+     "sheet": "5"
+    },
+    {
+     "cipher": "7142",
+     "sheet": "6"
+    },
+    {
+     "cipher": "4041",
+     "sheet": "6"
+    },
+    {
+     "cipher": "6991",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8699",
+     "sheet": "6"
+    },
+    {
+     "cipher": "6462",
+     "sheet": "6"
+    },
+    {
+     "cipher": "1726",
+     "sheet": "6"
+    },
+    {
+     "cipher": "2926",
+     "sheet": "6"
+    },
+    {
+     "cipher": "6435",
+     "sheet": "6"
+    },
+    {
+     "cipher": "7906",
+     "sheet": "6"
+    }
+   ],
+   "dir": "Shanghai → Tokyo, 三ノ五三",
+   "date": 15,
+   "date_note": "15 juin 1916 (en-tête)",
+   "sheets": [
+    [
+     "B03050089400",
+     41,
+     "L"
+    ],
+    [
+     "B03050089400",
+     42,
+     "R"
+    ],
+    [
+     "B03050089400",
+     42,
+     "L"
+    ],
+    [
+     "B03050089400",
+     43,
+     "R"
+    ],
+    [
+     "B03050089400",
+     43,
+     "L"
+    ],
+    [
+     "B03050089400",
+     44,
+     "R"
+    ]
+   ],
+   "raw_published": "馮極暗昧又京電段等議決各省派三人赴京議約法滬放客早知梁陰謀詬約法換廛內閣段爲總統黃羣到京朞段變滬議員卽開會反對下恢復舊約法恐纍戰公暫靜觀會城",
+   "reading_published": "馮極暗昧。又京電：段等議決各省派三人赴京議約法。滬{政}客早知梁陰謀，{詢}約法，換得內閣，段爲總統。黃羣到京，〔朞〕段變，滬議員卽開會反對。不恢復舊約法，恐〔纍〕戰，公暫靜觀。〔會城〕",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N34": {
+   "family": "clair",
+   "prefix": null,
+   "groups": [
+    {
+     "cipher": "7308",
+     "sheet": "1"
+    },
+    {
+     "cipher": "3945",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0022",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5478",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2450",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1032",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6567",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0171",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7812",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7193",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0061",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6806",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0344",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1730",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0341",
+     "sheet": "2"
+    },
+    {
+     "cipher": "3932",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0669",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2465",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7465",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0966",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0008",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2494",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5268",
+     "sheet": "2"
+    },
+    {
+     "cipher": "4472",
+     "sheet": "2"
+    },
+    {
+     "cipher": "7193",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0230",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3928",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2959",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0948",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1367",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1122",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7181",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4393",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6249",
+     "sheet": "3"
+    },
+    {
+     "cipher": "4161",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1416",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3725",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0110",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6530",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2624",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2812",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5235",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6850",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1376",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1395",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6656",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5710",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2746",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1526",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6502",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3541",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3945",
+     "sheet": "5"
+    },
+    {
+     "cipher": "7457",
+     "sheet": "5"
+    },
+    {
+     "cipher": "2615",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5259",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3234",
+     "sheet": "5"
+    },
+    {
+     "cipher": "2578",
+     "sheet": "5"
+    },
+    {
+     "cipher": "0524",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1884",
+     "sheet": "5"
+    },
+    {
+     "cipher": "2040",
+     "sheet": "5"
+    },
+    {
+     "cipher": "7308",
+     "sheet": "5"
+    },
+    {
+     "cipher": "2234",
+     "sheet": "6"
+    },
+    {
+     "cipher": "7230",
+     "sheet": "6"
+    },
+    {
+     "cipher": "7193",
+     "sheet": "6"
+    },
+    {
+     "cipher": "1947",
+     "sheet": "6"
+    },
+    {
+     "cipher": "0948",
+     "sheet": "6"
+    },
+    {
+     "cipher": "0037",
+     "sheet": "6"
+    },
+    {
+     "cipher": "1820",
+     "sheet": "6"
+    },
+    {
+     "cipher": "6307",
+     "sheet": "6"
+    },
+    {
+     "cipher": "7181",
+     "sheet": "6"
+    },
+    {
+     "cipher": "0037",
+     "sheet": "6"
+    },
+    {
+     "cipher": "1942",
+     "sheet": "6"
+    },
+    {
+     "cipher": "3300",
+     "sheet": "6"
+    },
+    {
+     "cipher": "2456",
+     "sheet": "7"
+    },
+    {
+     "cipher": "6056",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5903",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2478",
+     "sheet": "7"
+    },
+    {
+     "cipher": "0160",
+     "sheet": "7"
+    },
+    {
+     "cipher": "5328",
+     "sheet": "7"
+    },
+    {
+     "cipher": "4631",
+     "sheet": "7"
+    },
+    {
+     "cipher": "0017",
+     "sheet": "7"
+    },
+    {
+     "cipher": "4771",
+     "sheet": "7"
+    },
+    {
+     "cipher": "7559",
+     "sheet": "7"
+    },
+    {
+     "cipher": "6146",
+     "sheet": "7"
+    },
+    {
+     "cipher": "3808",
+     "sheet": "7"
+    },
+    {
+     "cipher": "0961",
+     "sheet": "8"
+    },
+    {
+     "cipher": "3046",
+     "sheet": "8"
+    },
+    {
+     "cipher": "4522",
+     "sheet": "8"
+    },
+    {
+     "cipher": "6299",
+     "sheet": "8"
+    },
+    {
+     "cipher": "4147",
+     "sheet": "8"
+    },
+    {
+     "cipher": "0171",
+     "sheet": "8"
+    },
+    {
+     "cipher": "2480",
+     "sheet": "8"
+    },
+    {
+     "cipher": "1129",
+     "sheet": "8"
+    },
+    {
+     "cipher": "7181",
+     "sheet": "8"
+    },
+    {
+     "cipher": "3267",
+     "sheet": "8"
+    },
+    {
+     "cipher": "0467",
+     "sheet": "8"
+    },
+    {
+     "cipher": "6634",
+     "sheet": "8"
+    },
+    {
+     "cipher": "2607",
+     "sheet": "9"
+    },
+    {
+     "cipher": "4249",
+     "sheet": "9"
+    },
+    {
+     "cipher": "2076",
+     "sheet": "9"
+    },
+    {
+     "cipher": "1447",
+     "sheet": "9"
+    },
+    {
+     "cipher": "1013",
+     "sheet": "9"
+    },
+    {
+     "cipher": "0057",
+     "sheet": "9"
+    },
+    {
+     "cipher": "2087",
+     "sheet": "9"
+    },
+    {
+     "cipher": "6644",
+     "sheet": "9"
+    },
+    {
+     "cipher": "3046",
+     "sheet": "9"
+    },
+    {
+     "cipher": "0948",
+     "sheet": "9"
+    },
+    {
+     "cipher": "0501",
+     "sheet": "9"
+    },
+    {
+     "cipher": "0961",
+     "sheet": "9"
+    },
+    {
+     "cipher": "1472",
+     "sheet": "10"
+    },
+    {
+     "cipher": "3109",
+     "sheet": "10"
+    },
+    {
+     "cipher": "1766",
+     "sheet": "10"
+    },
+    {
+     "cipher": "1628",
+     "sheet": "10"
+    },
+    {
+     "cipher": "7122",
+     "sheet": "10"
+    },
+    {
+     "cipher": "1115",
+     "sheet": "10"
+    },
+    {
+     "cipher": "0681",
+     "sheet": "10"
+    },
+    {
+     "cipher": "5297",
+     "sheet": "10"
+    },
+    {
+     "cipher": "0271",
+     "sheet": "10"
+    },
+    {
+     "cipher": "2953",
+     "sheet": "10"
+    },
+    {
+     "cipher": "0251",
+     "sheet": "10"
+    },
+    {
+     "cipher": "3970",
+     "sheet": "10"
+    },
+    {
+     "cipher": "0095",
+     "sheet": "11"
+    },
+    {
+     "cipher": "2598",
+     "sheet": "11"
+    },
+    {
+     "cipher": "1563",
+     "sheet": "11"
+    },
+    {
+     "cipher": "2251",
+     "sheet": "11"
+    },
+    {
+     "cipher": "0671",
+     "sheet": "11"
+    },
+    {
+     "cipher": "2173",
+     "sheet": "11"
+    },
+    {
+     "cipher": "4763",
+     "sheet": "11"
+    },
+    {
+     "cipher": "4924",
+     "sheet": "11"
+    },
+    {
+     "cipher": "4939",
+     "sheet": "11"
+    },
+    {
+     "cipher": "1936",
+     "sheet": "11"
+    },
+    {
+     "cipher": "4515",
+     "sheet": "11"
+    },
+    {
+     "cipher": "2053",
+     "sheet": "11"
+    },
+    {
+     "cipher": "0719",
+     "sheet": "12"
+    },
+    {
+     "cipher": "5887",
+     "sheet": "12"
+    },
+    {
+     "cipher": "0220",
+     "sheet": "12"
+    },
+    {
+     "cipher": "3541",
+     "sheet": "12"
+    },
+    {
+     "cipher": "7134",
+     "sheet": "12"
+    },
+    {
+     "cipher": "6390",
+     "sheet": "12"
+    },
+    {
+     "cipher": "0008",
+     "sheet": "12"
+    },
+    {
+     "cipher": "0524",
+     "sheet": "12"
+    },
+    {
+     "cipher": "5062",
+     "sheet": "12"
+    },
+    {
+     "cipher": "4162",
+     "sheet": "12"
+    },
+    {
+     "cipher": "5267",
+     "sheet": "12"
+    },
+    {
+     "cipher": "0948",
+     "sheet": "12"
+    },
+    {
+     "cipher": "1367",
+     "sheet": "13"
+    },
+    {
+     "cipher": "2704",
+     "sheet": "13"
+    },
+    {
+     "cipher": "2609",
+     "sheet": "13"
+    },
+    {
+     "cipher": "1126",
+     "sheet": "13"
+    },
+    {
+     "cipher": "6060",
+     "sheet": "13"
+    },
+    {
+     "cipher": "6175",
+     "sheet": "13"
+    },
+    {
+     "cipher": "1769",
+     "sheet": "13"
+    },
+    {
+     "cipher": "6171",
+     "sheet": "13"
+    },
+    {
+     "cipher": "0794",
+     "sheet": "13"
+    },
+    {
+     "cipher": "6180",
+     "sheet": "13"
+    },
+    {
+     "cipher": "0644",
+     "sheet": "13"
+    },
+    {
+     "cipher": "0948",
+     "sheet": "13"
+    },
+    {
+     "cipher": "0086",
+     "sheet": "14"
+    },
+    {
+     "cipher": "6153",
+     "sheet": "14"
+    },
+    {
+     "cipher": "1783",
+     "sheet": "14"
+    },
+    {
+     "cipher": "2974",
+     "sheet": "14"
+    },
+    {
+     "cipher": "1193",
+     "sheet": "14"
+    },
+    {
+     "cipher": "3001",
+     "sheet": "14"
+    },
+    {
+     "cipher": "0203",
+     "sheet": "14"
+    },
+    {
+     "cipher": "6231",
+     "sheet": "14"
+    },
+    {
+     "cipher": "2599",
+     "sheet": "14"
+    },
+    {
+     "cipher": "6586",
+     "sheet": "14"
+    },
+    {
+     "cipher": "3137",
+     "sheet": "14"
+    },
+    {
+     "cipher": "0613",
+     "sheet": "14"
+    },
+    {
+     "cipher": "3981",
+     "sheet": "15"
+    },
+    {
+     "cipher": "1513",
+     "sheet": "15"
+    },
+    {
+     "cipher": "7193",
+     "sheet": "15"
+    },
+    {
+     "cipher": "1144",
+     "sheet": "15"
+    },
+    {
+     "cipher": "5113",
+     "sheet": "15"
+    },
+    {
+     "cipher": "2974",
+     "sheet": "15"
+    },
+    {
+     "cipher": "1788",
+     "sheet": "15"
+    },
+    {
+     "cipher": "7912",
+     "sheet": "15"
+    },
+    {
+     "cipher": "0337",
+     "sheet": "15"
+    },
+    {
+     "cipher": "3163",
+     "sheet": "15"
+    },
+    {
+     "cipher": "1383",
+     "sheet": "15"
+    },
+    {
+     "cipher": "2585",
+     "sheet": "15"
+    }
+   ],
+   "dir": "Shanghai → Tokyo, 青山南町三ノ五三",
+   "date": 15,
+   "date_note": "15 juin 1916 (en-tête) ; télégramme cité daté 寒 = 14",
+   "sheets": [
+    [
+     "B03050089400",
+     44,
+     "L"
+    ],
+    [
+     "B03050089400",
+     45,
+     "R"
+    ],
+    [
+     "B03050089400",
+     45,
+     "L"
+    ],
+    [
+     "B03050089400",
+     46,
+     "R"
+    ],
+    [
+     "B03050089400",
+     46,
+     "L"
+    ],
+    [
+     "B03050089400",
+     47,
+     "R"
+    ],
+    [
+     "B03050089400",
+     47,
+     "L"
+    ],
+    [
+     "B03050089400",
+     48,
+     "R"
+    ],
+    [
+     "B03050089400",
+     48,
+     "L"
+    ],
+    [
+     "B03050089400",
+     49,
+     "R"
+    ],
+    [
+     "B03050089400",
+     49,
+     "L"
+    ],
+    [
+     "B03050089400",
+     50,
+     "R"
+    ],
+    [
+     "B03050089400",
+     50,
+     "L"
+    ],
+    [
+     "B03050089400",
+     51,
+     "R"
+    ],
+    [
+     "B03050089400",
+     51,
+     "L"
+    ]
+   ],
+   "raw_published": "頃由中華新報轉來黎電云酵克強先生台旆駐地不明致稽電候甚歉國家多難禍讜相尋猥以輇材楣膺重寄實逼處棃嵐躭無由馭朽臨深曷勝悚懼頃接青電愛國之忱責難之意溢於言表旣佩良箴並紉高誼球在民窮財盡來日大難渺前途未知所屆執事手造民國功在山河往年陽夏同舟備欽偉略仍望左提右挈糾繆繩愆窘我周行俾無隕越不勝翹盼至國家根本夤計諸待諮商謀及國人請從此始殢俟議朞辦注卽當崢電奉聞此復氙元洪寒會",
+   "reading_published": "頃由中華新報轉來黎電云：〔酵〕克強先生台旆：駐地不明，致稽電候，甚歉。國家多難，禍〔讜〕相尋，猥以輇材〔楣〕膺重寄，實逼處〔棃嵐躭〕無由〔馭〕朽臨深，曷勝悚懼。頃接青電，愛國之忱、責難之意溢於言表，旣佩良箴，並紉高誼。〔球〕在民窮財盡，來日大難，渺前途未知所屆。執事手造民國，功在山河。往年陽夏同舟，備欽偉略。仍望左提右挈，糾繆繩愆，〔窘〕我周行，俾無隕越，不勝翹盼。至國家根本{大}計，諸待諮商，謀及國人，請從此始。{一}俟議〔朞〕辦{法}，卽當〔崢〕電奉聞。此復。〔氙〕元洪寒〔會〕",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N35": {
+   "family": "gongmi",
+   "prefix": "0364 1378",
+   "groups": [
+    {
+     "cipher": "8446",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8971",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8396",
+     "sheet": "1"
+    },
+    {
+     "cipher": "1898",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8373",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4896",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8802",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8007",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2729",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4294",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5813",
+     "sheet": "1"
+    },
+    {
+     "cipher": "7068",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8099",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5856",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5681",
+     "sheet": "2"
+    },
+    {
+     "cipher": "4294",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5803",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8817",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8065",
+     "sheet": "2"
+    },
+    {
+     "cipher": "6435",
+     "sheet": "2"
+    },
+    {
+     "cipher": "2847",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8503",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8229",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8934",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1247",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7647",
+     "sheet": "3"
+    },
+    {
+     "cipher": "7666",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8644",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8094",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6545",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3799",
+     "sheet": "3"
+    },
+    {
+     "cipher": "3133",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1398",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6435",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8983",
+     "sheet": "3"
+    },
+    {
+     "cipher": "2970",
+     "sheet": "3"
+    },
+    {
+     "cipher": "5813",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1869",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5163",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4421",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8273",
+     "sheet": "4"
+    },
+    {
+     "cipher": "4896",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8901",
+     "sheet": "4"
+    },
+    {
+     "cipher": "5875",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8801",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8007",
+     "sheet": "4"
+    },
+    {
+     "cipher": "9887",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1290",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6061",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8955",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6203",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8976",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5103",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1189",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8902",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3799",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5065",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5902",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6431",
+     "sheet": "5"
+    },
+    {
+     "cipher": "2908",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8087",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6651",
+     "sheet": "6"
+    },
+    {
+     "cipher": "6425",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8923",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8412",
+     "sheet": "6"
+    },
+    {
+     "cipher": "7645",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5065",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8065",
+     "sheet": "6"
+    },
+    {
+     "cipher": "6435",
+     "sheet": "6"
+    },
+    {
+     "cipher": "2719",
+     "sheet": "6"
+    },
+    {
+     "cipher": "8195",
+     "sheet": "6"
+    },
+    {
+     "cipher": "3770",
+     "sheet": "6"
+    },
+    {
+     "cipher": "5964",
+     "sheet": "6"
+    },
+    {
+     "cipher": "1489",
+     "sheet": "7"
+    },
+    {
+     "cipher": "7880",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8976",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8802",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8007",
+     "sheet": "7"
+    },
+    {
+     "cipher": "7843",
+     "sheet": "7"
+    },
+    {
+     "cipher": "2944",
+     "sheet": "7"
+    },
+    {
+     "cipher": "1847",
+     "sheet": "7"
+    },
+    {
+     "cipher": "7880",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8934",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8707",
+     "sheet": "7"
+    },
+    {
+     "cipher": "6077",
+     "sheet": "7"
+    },
+    {
+     "cipher": "4113",
+     "sheet": "7"
+    },
+    {
+     "cipher": "8909",
+     "sheet": "8"
+    },
+    {
+     "cipher": "7275",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8675",
+     "sheet": "8"
+    },
+    {
+     "cipher": "8976",
+     "sheet": "8"
+    },
+    {
+     "cipher": "2729",
+     "sheet": "8"
+    }
+   ],
+   "dir": "Tokyo → Shanghai",
+   "date": 16,
+   "date_note": "16 juin 1916 (en-tête)",
+   "sheets": [
+    [
+     "B03050089500",
+     2,
+     "R"
+    ],
+    [
+     "B03050089500",
+     2,
+     "L"
+    ],
+    [
+     "B03050089500",
+     3,
+     "R"
+    ],
+    [
+     "B03050089500",
+     3,
+     "L"
+    ],
+    [
+     "B03050089500",
+     4,
+     "R"
+    ],
+    [
+     "B03050089500",
+     4,
+     "L"
+    ],
+    [
+     "B03050089500",
+     5,
+     "R"
+    ],
+    [
+     "B03050089500",
+     5,
+     "L"
+    ]
+   ],
+   "raw_published": "北京召集各省代噸議約法意在消滅約沮伋圄會請凌咀人鷦定安全地方自行鰭會並設法隣瑁立唁省丐派令噸蓷鹽款仍栽交現黏不自由段有襲嚥故智之勢宜由圄會識嗹與民騮外交代噸奡言隸外人俟正統一後再交議",
+   "reading_published": "北京召集各省代{表}議約法，意在消滅約{法}〔伋〕{國}會。請〔凌〕同人{速}定安全地方自行{開}會，並設法説獨立各省不派代{表}。〔蓷〕鹽款仍未交，現〔黏〕不自由。段有襲{袁}故智之勢，宜由{國}會議〔嗹〕，與民軍外交代{表}〔奡〕言，請外人俟正統一後再交。興",
+   "reread_by_brice": true,
+   "note": ""
+  },
+  "N36": {
+   "family": "rongmi",
+   "prefix": "1369 1378",
+   "groups": [
+    {
+     "cipher": "6908",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8486",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0840",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8482",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4094",
+     "sheet": "1"
+    },
+    {
+     "cipher": "0844",
+     "sheet": "1"
+    },
+    {
+     "cipher": "2448",
+     "sheet": "1"
+    },
+    {
+     "cipher": "5625",
+     "sheet": "1"
+    },
+    {
+     "cipher": "8482",
+     "sheet": "1"
+    },
+    {
+     "cipher": "4094",
+     "sheet": "1"
+    },
+    {
+     "cipher": "9052",
+     "sheet": "1"
+    },
+    {
+     "cipher": "6105",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8805",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8490",
+     "sheet": "2"
+    },
+    {
+     "cipher": "4652",
+     "sheet": "2"
+    },
+    {
+     "cipher": "8741",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5170",
+     "sheet": "2"
+    },
+    {
+     "cipher": "0656",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1609",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1791",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1880",
+     "sheet": "2"
+    },
+    {
+     "cipher": "1924",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5785",
+     "sheet": "2"
+    },
+    {
+     "cipher": "5765",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0253",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8496",
+     "sheet": "3"
+    },
+    {
+     "cipher": "6081",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8104",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1174",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8204",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8407",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8503",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8170",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1826",
+     "sheet": "3"
+    },
+    {
+     "cipher": "0744",
+     "sheet": "3"
+    },
+    {
+     "cipher": "8463",
+     "sheet": "3"
+    },
+    {
+     "cipher": "1634",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8107",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8659",
+     "sheet": "4"
+    },
+    {
+     "cipher": "1550",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8200",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8569",
+     "sheet": "4"
+    },
+    {
+     "cipher": "3087",
+     "sheet": "4"
+    },
+    {
+     "cipher": "2232",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8352",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6081",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8203",
+     "sheet": "4"
+    },
+    {
+     "cipher": "6399",
+     "sheet": "4"
+    },
+    {
+     "cipher": "8104",
+     "sheet": "5"
+    },
+    {
+     "cipher": "0934",
+     "sheet": "5"
+    },
+    {
+     "cipher": "3252",
+     "sheet": "5"
+    },
+    {
+     "cipher": "6521",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5785",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5772",
+     "sheet": "5"
+    },
+    {
+     "cipher": "4939",
+     "sheet": "5"
+    },
+    {
+     "cipher": "8462",
+     "sheet": "5"
+    },
+    {
+     "cipher": "1624",
+     "sheet": "5"
+    },
+    {
+     "cipher": "5929",
+     "sheet": "5"
+    }
+   ],
+   "dir": "Shanghai → Tokyo, 三ノ五三",
+   "date": 16,
+   "date_note": "16 juin 1916 (en-tête ; 銑 = 16 concorde)",
+   "sheets": [
+    [
+     "B03050089500",
+     6,
+     "L"
+    ],
+    [
+     "B03050089500",
+     7,
+     "R"
+    ],
+    [
+     "B03050089500",
+     7,
+     "L"
+    ],
+    [
+     "B03050089500",
+     8,
+     "R"
+    ],
+    [
+     "B03050089500",
+     8,
+     "L"
+    ]
+   ],
+   "raw_published": "黃克強先繒張滕農先繒均鑒吵兆蓮厫計巷昭東械樨速運如儿鍠不戚代價准于椰年六月三十日以前由浙備鍠付靠不悞盻騙速進行公望銑",
+   "reading_published": "黃克強先{生}、張{潤}農先{生}均鑒：{吳}兆蓮{君}〔計巷昭〕東械〔樨〕速運，〔如儿〕{款}〔不戚〕代價准于〔椰〕年六月三十日以前由浙備{款}付，〔靠〕不悞。{盼}〔騙〕速進行。公望銑",
+   "reread_by_brice": true,
+   "note": ""
+  }
+ }
+}
