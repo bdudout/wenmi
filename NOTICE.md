@@ -24,7 +24,7 @@ exemple est pédagogique, non une citation de télégramme.
 
 ## Éléments non couverts par cette licence
 
-- **Scans des télégrammes** (`assets/img/jacar-B03050090000-fr0416b.jpg`, `assets/img/fiches/scan-*.webp` et `assets/img/gongmi/source-*`) : documents des Archives diplomatiques du ministère des Affaires étrangères du Japon, diffusés par JACAR (Japan Center for Asian Historical Records), références B03050089900, B03050090000, B03050090100 et B03050089300 (les formulaires 共密 N17/N18). Reproduits avec mention de la source et de l’institution détentrice ; voir les [conditions d’utilisation des images JACAR](https://www.jacar.archives.go.jp/aj/www/doc/en).
+- **Scans des télégrammes** (`assets/img/jacar-B03050090000-fr0416b.jpg`, `assets/img/fiches/scan-*.webp` `assets/img/gongmi/source-*` et `assets/img/rongmi/*`) : documents des Archives diplomatiques du ministère des Affaires étrangères du Japon, diffusés par JACAR (Japan Center for Asian Historical Records), références B03050089900, B03050090000, B03050090100 B03050089200, B03050089300, B03050089400 et B03050089500 (formulaires 共密 et 容密). Reproduits avec mention de la source et de l’institution détentrice ; voir les [conditions d’utilisation des images JACAR](https://www.jacar.archives.go.jp/aj/www/doc/en).
 - **Portraits** (`assets/img/portraits/`) : photographies du domaine public, Wikimedia Commons (liens et crédits dans
   `assets/img/portraits/credits.json` et sous chaque image).
 - **Fond de carte** : Natural Earth (1:110m), domaine public.
@@ -35,4 +35,4 @@ exemple est pédagogique, non une citation de télégramme.
 
 Unless stated otherwise, the texts, translations, code, reading data, generated images and videos in this repository are
 released under **CC BY 4.0**. Please credit "Brice Dudout, The Wenmi code, 2026" with a link to
-<https://github.com/bdudout/wenmi>. Exceptions: JACAR telegram scans (`assets/img/jacar-B03050090000-fr0416b.jpg`, `assets/img/fiches/scan-*.webp`, and `assets/img/gongmi/source-*`; Diplomatic Archives of the Ministry of Foreign Affairs of Japan, refs. B03050089900, B03050090000, B03050090100, and B03050089300; see <https://www.jacar.archives.go.jp/aj/www/doc/en>), public-domain portraits from Wikimedia Commons, Natural Earth base map (public domain), and data derived from Wikisource texts and the Unicode Unihan database.
+<https://github.com/bdudout/wenmi>. Exceptions: JACAR telegram scans (`assets/img/jacar-B03050090000-fr0416b.jpg`, `assets/img/fiches/scan-*.webp`, `assets/img/gongmi/source-*`, and `assets/img/rongmi/*`; Diplomatic Archives of the Ministry of Foreign Affairs of Japan, refs. B03050089900, B03050090000, B03050090100, and B03050089200–B03050089500; see <https://www.jacar.archives.go.jp/aj/www/doc/en>), public-domain portraits from Wikimedia Commons, Natural Earth base map (public domain), and data derived from Wikisource texts and the Unicode Unihan database.

@@ -1,0 +1,332 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Page « 容密 » (content/<langue>/rongmi.html) et bloc N23 de la page « 共密 », dans les cinq langues.
+
+Usage : python3 tools/build_rongmi.py ../wenmi
+Lit wenmi/cryptanalysis/c83/site-data.json (export_site.py) et les scans JACAR de wenmi/working/ylc-ocr/png ;
+écrit data/rongmi.json, assets/img/rongmi/*.jpg, content/*/rongmi.html et insère/actualise le bloc
+<!-- N23:begin --> … <!-- N23:end --> dans content/*/gongmi.html (idempotent). Lancer ensuite tools/build.py."""
+import html, json, os, re, sys
+from PIL import Image
+
+SITE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
+WENMI = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else os.path.join(SITE, '..', 'wenmi'))
+D = json.load(open(os.path.join(WENMI, 'cryptanalysis/c83/site-data.json'), encoding='utf-8'))
+M = D['messages']
+LANGS = ['fr', 'en', 'ja', 'zh-hans', 'zh-hant']
+ORDER = ['N14', 'N02', 'N08', 'N11', 'N12', 'N19a', 'N28', 'N21', 'N25', 'N36', 'N24']
+e = html.escape
+JACAR = 'https://www.jacar.archives.go.jp/das/meta/'
+
+# ---------------------------------------------------------------- images
+IMG = os.path.join(SITE, 'assets', 'img', 'rongmi')
+os.makedirs(IMG, exist_ok=True)
+def scan_path(arch, page):
+    for name in (f'{arch}-{page:02d}.png', f'{arch}-{page}.png'):
+        p = os.path.join(WENMI, 'working', 'ylc-ocr', 'png', name)
+        if os.path.exists(p):
+            return p
+    raise FileNotFoundError(arch, page)
+def make_images(mid):
+    out = []
+    for n, (arch, page, side) in enumerate(M[mid]['meta']['sheets'], 1):
+        name = f'{mid}-{n}.jpg'
+        dst = os.path.join(IMG, name)
+        if not os.path.exists(dst):
+            im = Image.open(scan_path(arch, page)).convert('L')
+            w, h = im.size
+            box = (int(w * .47), int(h * .14), int(w * .81), int(h * .89)) if side == 'R' else (int(w * .19), int(h * .14), int(w * .53), int(h * .89))
+            c = im.crop(box)
+            c = c.resize((760, int(c.height * 760 / c.width)))
+            c.save(dst, quality=72, optimize=True)
+        out.append((n, arch, page, side, '../assets/img/rongmi/' + name))
+    return out
+
+# ---------------------------------------------------------------- textes
+T = {
+'fr': dict(
+  title='容密 — onze télégrammes de juin 1916 et leur clé',
+  desc='Édition des onze télégrammes 容密 lisibles (juin 1916, Huang Xing, Zhang Xiaozhun, Zhejiang) et de la clé retrouvée, avec lectures probables signalées.',
+  kicker='Déchiffrement · Juin 1916', h1='容密 : onze télégrammes et leur clé',
+  stand='Onze télégrammes chiffrés échangés en juin 1916 entre Tokyo et Shanghai, autour de Huang Xing et de Zhang Xiaozhun : achat d’armes au Japon pour le Zhejiang, emprunts, et négociation avec Pékin après la mort de Yuan Shikai. Une seule clé les lit tous.',
+  credits='Parcours des grilles : Brice Dudout. Transcription des feuillets de suite, recherche de la clé, traduction et lectures probables : Claude (Anthropic). Relecture de tous les chiffres : Brice Dudout, sauf N14. Modèle de départ (quatre substitutions de chiffres) : essais de Codex.',
+  warn='Clé reconstruite, pas retrouvée dans un livre de code historique. Les traductions sont des propositions de travail ; les lectures probables sont distinguées du texte décodé, jamais substituées à lui. Les identifications de personnes sont des candidats, avec leur source.',
+  keyh='La clé',
+  keyp='Les feuillets se lisent par colonnes, de droite à gauche et de haut en bas (parcours proposé par Brice Dudout), en groupes de quatre chiffres ; le préfixe public <code>1369 1378</code> = <span lang="zh-Hant">容密</span> reste en clair. Pour chaque groupe C : remplacer chaque chiffre selon le tableau de son rang, puis calculer <code>P = (σ(C) + 0901) mod 10000</code> par addition ordinaire avec retenues ; P est le numéro du caractère dans le code télégraphique chinois (CTC).',
+  rows=['Chiffre lu', 'milliers', 'centaines', 'dizaines', 'unités'],
+  keynote='Aucun groupe ne commence par 00 : le chiffreur écrit 90. Exemple : 2081 → σ = 2081 → 2081 + 0901 = 2982, mais avec les dizaines 8 → 4 et les unités 1 → 8 : σ(2081) = 2048, + 0901 = 2949 = <span lang="zh-Hant">款</span>.',
+  keyhow='La clé a été retrouvée sur quatre télégrammes (N02, N08, N11, N12), puis lue sans réajustement sur les sept autres ; réajustée sur l’ensemble relu (590 groupes), elle redonne exactement les mêmes tableaux. Seule la règle « 90 = 00 » a été ajoutée ensuite, d’après tous les groupes en 90xx.',
+  legend='Dans la lecture proposée, <b>{x}</b> remplace un caractère décodé anormal par une lecture probable ; la note précise si une variante du groupe chiffré à <b>un seul chiffre près</b> donne ce caractère, ou s’il s’agit d’une <b>lecture de contexte</b>. 〔x〕 : caractère conservé, non résolu.',
+  groups='groupes', date='Date', dirl='Sens', sheets='feuillets', reread='chiffres relus par Brice Dudout', notreread='chiffres non encore relus',
+  repair='cadrage : un chiffre {k} au feuillet {s} (déduit du décodage, à vérifier sur le scan)', omitted='omis', extra='en trop',
+  raw='Décodage brut, sans correction', reading='Lecture proposée', summary='En bref',
+  scans='Formulaires et sources JACAR', table='Chiffres et CTC, groupe par groupe', th=['#', 'C', 'CTC', '字', 'Feuillet'], prefix='préfixe',
+  crit='Traduction critique alignée', critp='Traduction de travail par segments ; les lacunes et degrés d’incertitude restent visibles.',
+  st={'literal': 'Segment lisible, non certifié', 'provisional': 'Interprétation provisoire', 'unresolved': 'Non restitué', 'conjectural': 'Conjecture explicite'},
+  ctx='Contexte', ctxp=['Les télégrammes datés vont du 9 au 16 juin 1916, juste après la mort de Yuan Shikai (6 juin). Le Zhejiang, dont le dujun Lü Gongwang est en poste depuis le 6 mai, cherche à acheter des armes au Japon ; Zhang Xiaozhun (字 潤農), à Tokyo avec Huang Xing, mène les négociations (N02, N08, N12, N14) et rend compte à Huang Qun (溯初, N11) et à Jiang Fangzhen (百里, N19a, N28).',
+                       'De Shanghai, Yin Ruli, Ge Jing’en et Huang Fu (signature abrégée 驪郛恩) transmettent les questions de Lü Gongwang (N21, N25, N36) et rendent compte à Huang Xing des tractations avec Pékin (N24) : Li Yuanhong invite les personnalités de Shanghai ; Tang Hualong (濟武), Gu Zhongxiu (九峯), Zhang Ji (溥泉) et Fan Yuanlian (靜生) sont pressentis ; on pose comme condition l’abolition des lois de Yuan et le retour à la Constitution provisoire de 1912, rétablie le 29 juin.'],
+  srcp='Sources : formulaires JACAR <a href="sources.html#s27">[27]</a> ; noms de courtoisie et fonctions : biographies citées en <a href="sources.html#s28">[28]</a> ; codes de jours : <a href="https://archives.sinica.edu.tw/freePage/150/32">Academia Sinica</a>. Décodeur : <a href="https://github.com/bdudout/wenmi/tree/main/solver/rongmi">solver/rongmi</a>.',
+  methodlink='Voir aussi la <a href="method.html#rongmi">méthode</a> et la page <a href="gongmi.html">共密</a>.',
+  dirs={'TS': 'Tokyo → Shanghai', 'ST': 'Shanghai → Tokyo'},
+  n23h='N23 — Zhang Ji à Huang Xing (13 juin 1916)',
+  n23p='Lu après la publication de N17–N18, avec la même clé C51, sur une transcription de Claude relue par Brice Dudout (19 octobre 2026). Un chiffre manque entre les feuillets 2 et 3 (déduit du décodage). Lectures probables entre accolades.',
+),
+'en': dict(
+  title='Rongmi — eleven telegrams of June 1916 and their key',
+  desc='Edition of the eleven readable Rongmi (容密) telegrams (June 1916, Huang Xing, Zhang Xiaozhun, Zhejiang) and of the recovered key, with probable readings marked.',
+  kicker='Decipherment · June 1916', h1='Rongmi (容密): eleven telegrams and their key',
+  stand='Eleven cipher telegrams exchanged in June 1916 between Tokyo and Shanghai around Huang Xing and Zhang Xiaozhun: buying arms in Japan for Zhejiang, loans, and negotiations with Beijing after Yuan Shikai’s death. A single key reads them all.',
+  credits='Grid reading order: Brice Dudout. Transcription of the continuation sheets, key recovery, translation and probable readings: Claude (Anthropic). All digits re-read by Brice Dudout, except N14. Starting model (four digit substitutions): Codex’s trials.',
+  warn='The key is a reconstruction, not taken from a historical code book. Translations are working proposals; probable readings are shown beside the decoded text, never in place of it. Identifications of people are candidates, with their source.',
+  keyh='The key',
+  keyp='Sheets are read in columns, right to left and top to bottom (reading order proposed by Brice Dudout), in groups of four digits; the public prefix <code>1369 1378</code> = <span lang="zh-Hant">容密</span> stays in clear. For each group C: replace each digit using the table for its place, then compute <code>P = (σ(C) + 0901) mod 10000</code> by ordinary addition with carries; P is the character number in the Chinese Telegraph Code (CTC).',
+  rows=['Digit read', 'thousands', 'hundreds', 'tens', 'units'],
+  keynote='No group starts with 00: the encipherer writes 90. Example: σ(2081) = 2048 (tens 8 → 4, units 1 → 8), + 0901 = 2949 = <span lang="zh-Hant">款</span>.',
+  keyhow='The key was recovered on four telegrams (N02, N08, N11, N12), then read the other seven without refitting; refitted on the whole re-read corpus (590 groups), it returns exactly the same tables. Only the “90 = 00” rule was added afterwards, from all groups beginning 90.',
+  legend='In the proposed reading, <b>{x}</b> replaces an anomalous decoded character with a probable reading; the note says whether a variant of the cipher group differing by <b>a single digit</b> gives that character, or whether it is a <b>contextual reading</b>. 〔x〕: character kept, unresolved.',
+  groups='groups', date='Date', dirl='Direction', sheets='sheets', reread='digits re-read by Brice Dudout', notreread='digits not yet re-read',
+  repair='framing: one digit {k} on sheet {s} (inferred from decoding, to check on the scan)', omitted='missing', extra='too many',
+  raw='Raw decoding, uncorrected', reading='Proposed reading', summary='In short',
+  scans='Forms and JACAR sources', table='Digits and CTC, group by group', th=['#', 'C', 'CTC', 'Char.', 'Sheet'], prefix='prefix',
+  crit='Aligned critical translation', critp='The segment-by-segment working translation is in French.', critlink='See the French aligned translation',
+  ctx='Context', ctxp=['The dated telegrams run from 9 to 16 June 1916, just after Yuan Shikai’s death (6 June). Zhejiang, whose military governor Lü Gongwang took office on 6 May, is trying to buy arms in Japan; Zhang Xiaozhun (courtesy name 潤農), in Tokyo with Huang Xing, leads the talks (N02, N08, N12, N14) and reports to Huang Qun (溯初, N11) and Jiang Fangzhen (百里, N19a, N28).',
+                       'From Shanghai, Yin Ruli, Ge Jing’en and Huang Fu (abbreviated signature 驪郛恩) relay Lü Gongwang’s questions (N21, N25, N36) and report to Huang Xing on the dealings with Beijing (N24): Li Yuanhong invites the Shanghai notables; Tang Hualong (濟武), Gu Zhongxiu (九峯), Zhang Ji (溥泉) and Fan Yuanlian (靜生) are approached; the condition set is the repeal of Yuan’s laws and a return to the 1912 Provisional Constitution, restored on 29 June.'],
+  srcp='Sources: JACAR forms <a href="sources.html#s27">[27]</a>; courtesy names and offices: biographies cited in <a href="sources.html#s28">[28]</a>; day codes: <a href="https://archives.sinica.edu.tw/freePage/150/32">Academia Sinica</a>. Decoder: <a href="https://github.com/bdudout/wenmi/tree/main/solver/rongmi">solver/rongmi</a>.',
+  methodlink='See also the <a href="method.html#rongmi">method</a> and the <a href="gongmi.html">Gongmi</a> page.',
+  dirs={'TS': 'Tokyo → Shanghai', 'ST': 'Shanghai → Tokyo'},
+  n23h='N23 — Zhang Ji to Huang Xing (13 June 1916)',
+  n23p='Read after the publication of N17–N18, with the same C51 key, from Claude’s transcription re-read by Brice Dudout (19 October 2026). One digit is missing between sheets 2 and 3 (inferred from decoding). Probable readings in braces.',
+),
+'ja': dict(
+  title='容密——1916年6月の電報11通とその鍵',
+  desc='解読できた容密電報11通（1916年6月、黄興・張孝準・浙江）と復元した鍵。推定読みは区別して示す。',
+  kicker='解読・1916年6月', h1='容密：電報11通とその鍵',
+  stand='1916年6月、黄興と張孝準をめぐって東京と上海の間で交わされた暗号電報11通。浙江のための日本での武器購入、借款、袁世凱の死後の北京との交渉。ひとつの鍵ですべてが読める。',
+  credits='升目の読み順：Brice Dudout。続き用紙の翻字、鍵の復元、翻訳と推定読み：Claude（Anthropic）。数字はN14を除きすべてBrice Dudoutが再読。出発点のモデル（桁ごとの4つの置換）：Codexの試行。',
+  warn='鍵は復元であり、歴史的な電碼本から得たものではない。翻訳は作業案であり、推定読みは解読文と並べて示し、置き換えない。人物の比定は出典つきの候補である。',
+  keyh='鍵',
+  keyp='用紙は列ごとに右から左、上から下へ読み（Brice Dudoutの提案した順序）、4桁ずつ区切る。公開の前置き<code>1369 1378</code>＝<span lang="zh-Hant">容密</span>は平文のまま。各組Cについて、各桁を位ごとの表で置き換え、<code>P = (σ(C) + 0901) mod 10000</code>を通常の繰り上がりつき加算で求める。Pが中文電碼（CTC）の番号である。',
+  rows=['読んだ数字', '千の位', '百の位', '十の位', '一の位'],
+  keynote='00で始まる組はなく、暗号作成者は90と書く。例：σ(2081) = 2048（十の位8→4、一の位1→8）、+0901 = 2949 = <span lang="zh-Hant">款</span>。',
+  keyhow='鍵は4通（N02、N08、N11、N12）で復元し、残り7通は再調整なしで読めた。再読済みの全体（590組）で再調整しても同じ表に戻る。「90＝00」の規則だけは、90で始まるすべての組から後で加えた。',
+  legend='推定読みでは<b>{x}</b>が異常な解読字を推定字に置き換える。注に、暗号組を<b>1桁だけ</b>変えるとその字になるか、<b>文脈による読み</b>かを記す。〔x〕：未解決のまま残した字。',
+  groups='組', date='日付', dirl='発着', sheets='枚', reread='数字はBrice Dudoutが再読', notreread='数字は未再読',
+  repair='区切り：用紙{s}で1桁{k}（解読から推定、スキャンで要確認）', omitted='脱落', extra='過剰',
+  raw='未修正の解読結果', reading='推定読み', summary='概要',
+  scans='用紙とJACAR出典', table='組ごとの数字とCTC', th=['#', 'C', 'CTC', '字', '用紙'], prefix='前置き',
+  crit='対照校訂訳', critp='段落ごとの作業訳はフランス語版にある。', critlink='フランス語の対照訳を見る',
+  ctx='背景', ctxp=['日付のある電報は1916年6月9日から16日、袁世凱の死（6月6日）の直後である。5月6日に就任した浙江督軍呂公望は日本で武器を買おうとしており、黄興とともに東京にいる張孝準（字潤農）が交渉にあたり（N02、N08、N12、N14）、黄群（溯初、N11）と蔣方震（百里、N19a、N28）に報告する。',
+                     '上海からは殷汝驪・葛敬恩・黄郛（略署名「驪郛恩」）が呂公望の問い合わせを伝え（N21、N25、N36）、北京との交渉を黄興に報告する（N24）。黎元洪は上海の名士を招き、湯化龍（濟武）・谷鍾秀（九峯）・張継（溥泉）・范源濂（靜生）が候補とされ、袁の法令の廃止と1912年の臨時約法への復帰が条件とされた。約法は6月29日に回復される。'],
+  srcp='出典：JACARの用紙<a href="sources.html#s27">[27]</a>、字と役職：<a href="sources.html#s28">[28]</a>の伝記、日付の韻目：<a href="https://archives.sinica.edu.tw/freePage/150/32">中央研究院</a>。解読プログラム：<a href="https://github.com/bdudout/wenmi/tree/main/solver/rongmi">solver/rongmi</a>。',
+  methodlink='<a href="method.html#rongmi">方法</a>と<a href="gongmi.html">共密</a>のページも参照。',
+  dirs={'TS': '東京→上海', 'ST': '上海→東京'},
+  n23h='N23——張継から黄興へ（1916年6月13日）',
+  n23p='N17・N18の公開後、同じC51の鍵で読んだもの。Claudeの翻字をBrice Dudoutが再読（2026年10月19日）。用紙2と3の間で1桁脱落（解読から推定）。推定読みは波括弧内。',
+),
+'zh-hans': dict(
+  title='容密——1916年6月的十一封电报及其密钥',
+  desc='可读的十一封容密电报（1916年6月，黄兴、张孝准、浙江）及复原的密钥，推定读法另行标出。',
+  kicker='破译·1916年6月', h1='容密：十一封电报及其密钥',
+  stand='1916年6月围绕黄兴与张孝准、在东京与上海之间往来的十一封密电：为浙江在日本购械、借款，以及袁世凯死后与北京的交涉。一把密钥即可读出全部。',
+  credits='方格读序：Brice Dudout。续页誊录、密钥复原、翻译与推定读法：Claude（Anthropic）。全部数字由 Brice Dudout 复读（N14 除外）。起点模型（逐位四重替换）：Codex 的试验。',
+  warn='密钥为复原所得，并非取自历史电码本。译文为工作稿；推定读法与解码文字并列，绝不替代。人物比定为候选，并注明出处。',
+  keyh='密钥',
+  keyp='电报纸按列由右至左、由上而下读取（Brice Dudout 提出的读序），每四位一组；明文前缀<code>1369 1378</code>＝<span lang="zh-Hant">容密</span>不加密。对每组C：按所在数位的表替换各位数字，再以通常进位加法计算<code>P = (σ(C) + 0901) mod 10000</code>；P即中文电码（CTC）编号。',
+  rows=['所读数字', '千位', '百位', '十位', '个位'],
+  keynote='没有以00开头的组：发报者写作90。例：σ(2081) = 2048（十位8→4，个位1→8），+0901 = 2949 = <span lang="zh-Hant">款</span>。',
+  keyhow='密钥在四封电报（N02、N08、N11、N12）上复原，其余七封无需重新拟合即可读出；以复读后的全部590组重新拟合，所得表格完全相同。仅“90＝00”一条规则是事后根据所有90开头的组补入的。',
+  legend='推定读法中，<b>{x}</b>以推定字替换异常的解码字；注中说明暗号组<b>仅改一位数字</b>是否即得该字，或仅为<b>据文意推定</b>。〔x〕：保留未解的字。',
+  groups='组', date='日期', dirl='方向', sheets='页', reread='数字经 Brice Dudout 复读', notreread='数字尚未复读',
+  repair='分组：第{s}页一位数字{k}（据解码推断，待核对扫描件）', omitted='脱漏', extra='多出',
+  raw='未经修正的解码结果', reading='推定读法', summary='提要',
+  scans='电报纸与JACAR来源', table='逐组数字与CTC', th=['#', 'C', 'CTC', '字', '页'], prefix='前缀',
+  crit='对照校订译文', critp='逐段工作译文见法文版。', critlink='查看法文逐段对照译稿',
+  ctx='背景', ctxp=['有日期的电报在1916年6月9日至16日之间，正值袁世凯死后（6月6日）。5月6日就任的浙江督军吕公望欲向日本购械；与黄兴同在东京的张孝准（字润农）负责交涉（N02、N08、N12、N14），并向黄群（溯初，N11）和蒋方震（百里，N19a、N28）报告。',
+                      '上海方面，殷汝骊、葛敬恩、黄郛（简署“骊郛恩”）转达吕公望的询问（N21、N25、N36），并向黄兴报告与北京的交涉（N24）：黎元洪邀请沪上名流；汤化龙（济武）、谷钟秀（九峯）、张继（溥泉）、范源濂（静生）被提名；条件是废除袁氏伪法、恢复元年约法。约法于6月29日恢复。'],
+  srcp='来源：JACAR电报纸<a href="sources.html#s27">[27]</a>；字号与职务：<a href="sources.html#s28">[28]</a>所引传记；韵目代日：<a href="https://archives.sinica.edu.tw/freePage/150/32">中央研究院</a>。解码程序：<a href="https://github.com/bdudout/wenmi/tree/main/solver/rongmi">solver/rongmi</a>。',
+  methodlink='另见<a href="method.html#rongmi">方法</a>与<a href="gongmi.html">共密</a>页面。',
+  dirs={'TS': '东京→上海', 'ST': '上海→东京'},
+  n23h='N23——张继致黄兴（1916年6月13日）',
+  n23p='在N17、N18发表后，以同一C51密钥读出；据Claude誊录、Brice Dudout复读（2026年10月19日）。第2、3页之间脱漏一位数字（据解码推断）。推定读法见花括号。',
+),
+'zh-hant': dict(
+  title='容密——1916年6月的十一封電報及其密鑰',
+  desc='可讀的十一封容密電報（1916年6月，黃興、張孝準、浙江）及復原的密鑰，推定讀法另行標出。',
+  kicker='破譯·1916年6月', h1='容密：十一封電報及其密鑰',
+  stand='1916年6月圍繞黃興與張孝準、在東京與上海之間往來的十一封密電：為浙江在日本購械、借款，以及袁世凱死後與北京的交涉。一把密鑰即可讀出全部。',
+  credits='方格讀序：Brice Dudout。續頁謄錄、密鑰復原、翻譯與推定讀法：Claude（Anthropic）。全部數字由 Brice Dudout 複讀（N14 除外）。起點模型（逐位四重替換）：Codex 的試驗。',
+  warn='密鑰為復原所得，並非取自歷史電碼本。譯文為工作稿；推定讀法與解碼文字並列，絕不替代。人物比定為候選，並注明出處。',
+  keyh='密鑰',
+  keyp='電報紙按列由右至左、由上而下讀取（Brice Dudout 提出的讀序），每四位一組；明文前綴<code>1369 1378</code>＝<span lang="zh-Hant">容密</span>不加密。對每組C：按所在數位的表替換各位數字，再以通常進位加法計算<code>P = (σ(C) + 0901) mod 10000</code>；P即中文電碼（CTC）編號。',
+  rows=['所讀數字', '千位', '百位', '十位', '個位'],
+  keynote='沒有以00開頭的組：發報者寫作90。例：σ(2081) = 2048（十位8→4，個位1→8），+0901 = 2949 = <span lang="zh-Hant">款</span>。',
+  keyhow='密鑰在四封電報（N02、N08、N11、N12）上復原，其餘七封無需重新擬合即可讀出；以複讀後的全部590組重新擬合，所得表格完全相同。僅「90＝00」一條規則是事後根據所有90開頭的組補入的。',
+  legend='推定讀法中，<b>{x}</b>以推定字替換異常的解碼字；注中說明暗號組<b>僅改一位數字</b>是否即得該字，或僅為<b>據文意推定</b>。〔x〕：保留未解的字。',
+  groups='組', date='日期', dirl='方向', sheets='頁', reread='數字經 Brice Dudout 複讀', notreread='數字尚未複讀',
+  repair='分組：第{s}頁一位數字{k}（據解碼推斷，待核對掃描件）', omitted='脫漏', extra='多出',
+  raw='未經修正的解碼結果', reading='推定讀法', summary='提要',
+  scans='電報紙與JACAR來源', table='逐組數字與CTC', th=['#', 'C', 'CTC', '字', '頁'], prefix='前綴',
+  crit='對照校訂譯文', critp='逐段工作譯文見法文版。', critlink='查看法文逐段對照譯稿',
+  ctx='背景', ctxp=['有日期的電報在1916年6月9日至16日之間，正值袁世凱死後（6月6日）。5月6日就任的浙江督軍呂公望欲向日本購械；與黃興同在東京的張孝準（字潤農）負責交涉（N02、N08、N12、N14），並向黃群（溯初，N11）和蔣方震（百里，N19a、N28）報告。',
+                      '上海方面，殷汝驪、葛敬恩、黃郛（簡署「驪郛恩」）轉達呂公望的詢問（N21、N25、N36），並向黃興報告與北京的交涉（N24）：黎元洪邀請滬上名流；湯化龍（濟武）、谷鍾秀（九峯）、張繼（溥泉）、范源濂（靜生）被提名；條件是廢除袁氏偽法、恢復元年約法。約法於6月29日恢復。'],
+  srcp='來源：JACAR電報紙<a href="sources.html#s27">[27]</a>；字號與職務：<a href="sources.html#s28">[28]</a>所引傳記；韻目代日：<a href="https://archives.sinica.edu.tw/freePage/150/32">中央研究院</a>。解碼程式：<a href="https://github.com/bdudout/wenmi/tree/main/solver/rongmi">solver/rongmi</a>。',
+  methodlink='另見<a href="method.html#rongmi">方法</a>與<a href="gongmi.html">共密</a>頁面。',
+  dirs={'TS': '東京→上海', 'ST': '上海→東京'},
+  n23h='N23——張繼致黃興（1916年6月13日）',
+  n23p='在N17、N18發表後，以同一C51密鑰讀出；據Claude謄錄、Brice Dudout複讀（2026年10月19日）。第2、3頁之間脫漏一位數字（據解碼推斷）。推定讀法見花括號。',
+),
+}
+SUMMARY = {
+ 'en': {'N02': 'Zhang Xiaozhun to the Zhejiang governor: quantities of arms (rifles, mountain guns, machine guns), the Zhejiang and Zhaoqing loans, the wine monopoly.',
+        'N08': 'Arms purchase and loan: talks under way, secrecy at customs, ammunition.',
+        'N11': 'Zhang Xiaozhun to Huang Qun (溯初): he would like to return to Shanghai but is held in Japan by his business.',
+        'N12': 'Arms ready to leave; an intermediary, Yoshikawa, offers a one-million loan; which security to choose.',
+        'N14': 'Huang Xing to the Zhejiang governor after Yuan’s death: the arms go first, the one-million loan will follow.',
+        'N19a': 'To Jiang Fangzhen (百里): asks that a Mr Guan come to Japan.',
+        'N28': 'To Jiang Fangzhen: three hundred raised through Yongyi.',
+        'N21': 'Lü Gongwang’s questions, relayed from Shanghai, on the models and quantities of arms and ammunition.',
+        'N25': 'The securities offered by Zhejiang (tobacco and wine taxes); Wu Zhaolian sent to Japan.',
+        'N36': 'Lü Gongwang to Huang Xing and Zhang Xiaozhun: ship the arms quickly, payment before 30 June.',
+        'N24': 'Report from Shanghai to Huang Xing: conditions set to Beijing (repeal of Yuan’s laws, 1912 Constitution), Tang Hualong’s departure.',
+        'N23': 'Zhang Ji to Huang Xing: Tanaka and Koike have cabled Aoki; go and press the loan.'},
+ 'ja': {'N02': '張孝準から浙江督軍へ：武器の数量（小銃・山砲・機関銃）、浙江と肇慶の借款、酒公売。',
+        'N08': '武器購入と借款：交渉中、税関での秘密保持、弾薬。',
+        'N11': '張孝準から黄群（溯初）へ：上海に戻りたいが日本での用務に引き止められている。',
+        'N12': '武器は発送準備済み。仲介者芳川が百万の借款を申し出る。担保をどれにするか。',
+        'N14': '袁の死後、黄興から浙江督軍へ：武器を先に送り、百万の借款も続く。',
+        'N19a': '蔣方震（百里）へ：官某の来日を望む。',
+        'N28': '蔣方震へ：詠儀を通じて三百を用意。',
+        'N21': '上海から転送された呂公望の問い合わせ：武器と弾薬の型式と数量。',
+        'N25': '浙江が示す担保（煙税・酒税）、呉兆蓮の日本派遣。',
+        'N36': '呂公望から黄興・張孝準へ：武器を急いで送れ、代金は6月30日までに。',
+        'N24': '上海から黄興への報告：北京への条件（袁の法令廃止、1912年約法）、湯化龍の上京。',
+        'N23': '張継から黄興へ：田中と小池が青木に打電、借款の催促に行かれたい。'},
+ 'zh-hans': {'N02': '张孝准致浙江督军：械数（步枪、山炮、机枪）、浙江与肇庆借款、酒公卖。',
+        'N08': '购械与借款：交涉中，海关保密，子弹。',
+        'N11': '张孝准致黄群（溯初）：欲回沪，惟因在日事务未了。',
+        'N12': '械已备运；经手人芳川愿借款百万；抵押品如何选择。',
+        'N14': '袁死后黄兴致浙江督军：械先运，百万借款随后可成。',
+        'N19a': '致蒋方震（百里）：盼官君来日一商。',
+        'N28': '致蒋方震：已电咏仪筹三百。',
+        'N21': '自上海转来吕公望的询问：枪械弹药的型式与数量。',
+        'N25': '浙江所拟抵押品（烟捐、酒捐）；派吴兆莲赴日。',
+        'N36': '吕公望致黄兴、张孝准：械速运，代价六月三十日前付清。',
+        'N24': '上海向黄兴的报告：对北京的条件（取消袁氏伪法、恢复元年约法），汤化龙赴京。',
+        'N23': '张继致黄兴：田中、小池皆有电至青木，请亲往催促借款。'},
+ 'zh-hant': {'N02': '張孝準致浙江督軍：械數（步槍、山砲、機槍）、浙江與肇慶借款、酒公賣。',
+        'N08': '購械與借款：交涉中，海關保密，子彈。',
+        'N11': '張孝準致黃群（溯初）：欲回滬，惟因在日事務未了。',
+        'N12': '械已備運；經手人芳川願借款百萬；抵押品如何選擇。',
+        'N14': '袁死後黃興致浙江督軍：械先運，百萬借款隨後可成。',
+        'N19a': '致蔣方震（百里）：盼官君來日一商。',
+        'N28': '致蔣方震：已電詠儀籌三百。',
+        'N21': '自上海轉來呂公望的詢問：槍械彈藥的型式與數量。',
+        'N25': '浙江所擬抵押品（煙捐、酒捐）；派吳兆蓮赴日。',
+        'N36': '呂公望致黃興、張孝準：械速運，代價六月三十日前付清。',
+        'N24': '上海向黃興的報告：對北京的條件（取消袁氏偽法、恢復元年約法），湯化龍赴京。',
+        'N23': '張繼致黃興：田中、小池皆有電至青木，請親往催促借款。'},
+}
+UNREAD = {'fr': 'date non lue', 'en': 'date not read', 'ja': '日付未読', 'zh-hans': '日期未读', 'zh-hant': '日期未讀'}
+def date_str(mid, L):
+    m = M[mid]['meta']
+    if L == 'fr':
+        return m['date_note']
+    d = m['date']
+    special = {'N11': 8, 'N12': 8}
+    if mid in special:
+        return {'en': 'day 8 (庚); month not read', 'ja': '8日（庚）、月は未読', 'zh-hans': '8日（庚），月份未读', 'zh-hant': '8日（庚），月份未讀'}[L]
+    if mid == 'N24':
+        return {'en': 'header not read; after 9 June', 'ja': '見出し未読、6月9日以降', 'zh-hans': '电头未读；6月9日之后', 'zh-hant': '電頭未讀；6月9日之後'}[L]
+    if mid in ('N19a', 'N25'):
+        dd = 11 if mid == 'N19a' else 14
+        return {'en': f'June {dd}, 1916 ? (inventory)', 'ja': f'1916年6月{dd}日？（目録）', 'zh-hans': f'1916年6月{dd}日？（目录）', 'zh-hant': f'1916年6月{dd}日？（目錄）'}[L]
+    if d is None:
+        return UNREAD[L]
+    return {'en': f'June {d}, 1916', 'ja': f'1916年6月{d}日', 'zh-hans': f'1916年6月{d}日', 'zh-hant': f'1916年6月{d}日'}[L]
+def direction(mid, L):
+    return T[L]['dirs']['TS' if M[mid]['meta']['dir'].startswith('Tokyo') else 'ST']
+def summary(mid, L):
+    return M[mid]['summary_fr'] if L == 'fr' else SUMMARY[L][mid]
+
+def key_table(L):
+    t = T[L]; s = D['key_rongmi']['sigma']
+    rows = ''.join(f'<tr><th>{t["rows"][j + 1]}</th>' + ''.join(f'<td>{v}</td>' for v in s[j]) + '</tr>' for j in range(4))
+    return f'<div class="gm-scroll"><table><tr><th>{t["rows"][0]}</th>' + ''.join(f'<td>{d}</td>' for d in range(10)) + f'</tr>{rows}</table></div>'
+
+def message_section(mid, L, h2=None):
+    t = T[L]; m = M[mid]; segs = m['segments']
+    reading = ''.join(s['zh'] for s in segs)
+    info = [f'{len(m["groups"]) - 2} {t["groups"]}', f'{t["date"]} : {e(date_str(mid, L))}' if L == 'fr' else f'{t["date"]}: {e(date_str(mid, L))}',
+            f'{t["dirl"]} : {e(direction(mid, L))}' if L == 'fr' else f'{t["dirl"]}: {e(direction(mid, L))}',
+            f'{m["sheet_count"]} {t["sheets"]}', t['reread'] if m['reread_by_brice'] else f'<mark class="unc">{t["notreread"]}</mark>']
+    reps = []
+    for kind, pos in m['repairs']:
+        k = min(pos // 4, len(m['groups']) - 1)
+        reps.append(t['repair'].format(k=t['omitted'] if kind == 'ins' else t['extra'], s=m['groups'][k]['sheet']))
+    scans = ''.join(f'<p>{mid}-{n} · {a} PDF {p} {s} · <a href="{JACAR}{a}">JACAR</a> · <a href="{src}">scan</a></p>\n<img loading="lazy" src="{src}" alt="JACAR {a} {mid}-{n}">\n'
+                    for n, a, p, s, src in make_images(mid))
+    rows = []
+    for g in m['groups']:
+        idx = t['prefix'] if g is m['groups'][0] or g is m['groups'][1] else str(g['i'])
+        rows.append(f'<tr><td>{idx}</td><td><code>{e(g["cipher"])}</code></td><td><code>{g["ctc"] or "—"}</code></td><td lang="zh-Hant">{e(g["glyph"])}</td><td>{mid}-{g["sheet"]}</td></tr>')
+    return (f'<section id="{mid}" class="gm-message"><h2>{e(h2 or mid)}</h2>\n<p>{" · ".join(info)}</p>\n'
+            + (f'<p><mark class="unc">{" ; ".join(e(r) for r in reps)}</mark></p>\n' if reps else '')
+            + f'<p>{e(summary(mid, L))}</p>\n'
+            f'<h3>{t["raw"]}</h3><p class="gm-han" lang="zh-Hant">{e(m["raw"])}</p>\n'
+            f'<h3>{t["reading"]}</h3><p class="gm-han" lang="zh-Hant">{e(reading)}</p>\n'
+            f'<details><summary>{t["scans"]}</summary>\n{scans}</details>'
+            f'<details><summary>{t["table"]}</summary>\n<div class="gm-scroll"><table><thead><tr>' + ''.join(f'<th>{h}</th>' for h in t['th']) + '</tr></thead><tbody>\n'
+            + '\n'.join(rows) + '\n</tbody></table></div></details></section>\n')
+
+def critical_rows(mid):
+    t = T['fr']; out = []
+    for s in M[mid]['segments']:
+        note = f'<p>{e(s["note"])}</p>' if s['note'] else ''
+        out.append(f'<tr class="gm-{s["status"]}"><td class="gm-cell-han" lang="zh-Hant">{e(s["zh"])}</td><td>{e(s["fr"])}<small class="gm-status">{t["st"][s["status"]]}</small>{note}</td></tr>')
+    return f'<h3 id="crit-{mid}">{mid}</h3><div class="gm-scroll"><table><thead><tr><th>Lecture proposée</th><th>Traduction</th></tr></thead><tbody>' + ''.join(out) + '</tbody></table></div>'
+
+def page(L):
+    t = T[L]
+    head = f'<!-- {json.dumps(dict(title=t["title"], description=t["desc"]), ensure_ascii=False)} -->\n<link rel="stylesheet" href="../assets/css/gongmi.css">\n'
+    body = [f'<article class="article gongmi rongmi"><header class="lede">\n<p class="kicker">{t["kicker"]}</p>\n<h1>{t["h1"]}</h1><p class="standfirst">{t["stand"]}<sup class="fn"><a href="sources.html#s27">[27]</a></sup></p>\n<p>{t["credits"]}</p></header>',
+            f'<div class="status warn"><p>{t["warn"]}</p></div>',
+            f'<section id="key"><h2>{t["keyh"]}</h2><p>{t["keyp"]}</p>{key_table(L)}<p>{t["keynote"]}</p><p>{t["keyhow"]}</p><p>{t["legend"]}</p></section>',
+            f'<section id="context"><h2>{t["ctx"]}</h2>' + ''.join(f'<p>{e(p)}</p>' for p in t['ctxp']) + '</section>',
+            '<nav class="gm-nav" aria-label="Messages">' + ''.join(f'<a href="#{m}">{m}</a>' for m in ORDER) + '</nav>']
+    body += [message_section(m, L) for m in ORDER]
+    if L == 'fr':
+        body.append(f'<section id="critical"><h2>{t["crit"]}</h2><p>{t["critp"]}</p>' + ''.join(critical_rows(m) for m in ORDER) + '</section>')
+    else:
+        body.append(f'<section id="critical"><h2>{t["crit"]}</h2><p>{t["critp"]} <a href="../fr/rongmi.html#critical">{t["critlink"]}</a></p></section>')
+    body.append(f'<p>{t["srcp"]}</p>\n<p>{t["methodlink"]}</p>\n</article>')
+    return head + '\n'.join(body) + '\n'
+
+def n23_block(L):
+    t = T[L]
+    inner = message_section('N23', L, h2=t['n23h']).replace('<section id="N23" class="gm-message">', '<section id="N23" class="gm-message">', 1)
+    inner = inner.replace(f'<h2>{e(t["n23h"])}</h2>\n', f'<h2>{e(t["n23h"])}</h2>\n<p>{t["n23p"]}</p>\n', 1)
+    crit = critical_rows('N23') if L == 'fr' else ''
+    return f'<!-- N23:begin -->\n{inner}{crit}\n<!-- N23:end -->\n'
+
+def insert_n23(L):
+    p = os.path.join(SITE, 'content', L, 'gongmi.html')
+    s = open(p, encoding='utf-8').read()
+    s = re.sub(r'<!-- N23:begin -->.*?<!-- N23:end -->\n', '', s, flags=re.S)
+    anchor = '<section id="critical">' if L == 'fr' else None
+    blk = n23_block(L)
+    if anchor and anchor in s:
+        s = s.replace(anchor, blk + anchor, 1)
+    else:  # avant le paragraphe des sources (dernier <p>Sources… / équivalent) : juste avant </article>
+        i = s.rfind('<p>', 0, s.rfind('</article>'))
+        i = s.rfind('<p>', 0, i)
+        s = s[:i] + blk + s[i:]
+    s = s.replace('<nav class="gm-nav" aria-label="Messages"><a href="#N17">N17</a><a href="#N18">N18</a></nav>',
+                  '<nav class="gm-nav" aria-label="Messages"><a href="#N17">N17</a><a href="#N18">N18</a><a href="#N23">N23</a></nav>')
+    open(p, 'w', encoding='utf-8').write(s)
+
+if __name__ == '__main__':
+    json.dump(D, open(os.path.join(SITE, 'data', 'rongmi.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    for L in LANGS:
+        open(os.path.join(SITE, 'content', L, 'rongmi.html'), 'w', encoding='utf-8').write(page(L))
+        insert_n23(L)
+    print('rongmi:', len(ORDER), 'messages,', len(os.listdir(IMG)), 'images ; N23 inséré dans gongmi (5 langues)')

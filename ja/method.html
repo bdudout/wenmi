@@ -24,6 +24,7 @@
     <a href="telegrams.html">電報一覧</a>
     <a href="relecture.html">1916年圧縮符号</a>
     <a href="gongmi.html">共密</a>
+    <a href="rongmi.html">容密</a>
     <a href="sources.html">出典</a>
   </nav>
   <nav class="lang-switch" aria-label="言語">
@@ -76,6 +77,7 @@
       <li><a href="#huangxing">新しい表：黄興の表</a></li>
       <li><a href="#outils">道具</a></li>
             <li><a href="#gongmi">共密：候補方式C51</a></li>
+            <li><a href="#rongmi">容密：復元した鍵</a></li>
     </ol>
   </nav>
 
@@ -347,6 +349,7 @@ Y0 = {c + v: 6 * i + r for i, c in enumerate(CONS)
   <hr>
   <p class="byline">出典は<a href="sources.html">出典ページ</a>を参照。論文とコードで道を開いた Daniel Bourdeau 氏、そして S. Tomokiyo 氏（Cryptiana）に感謝する。</p>
   <section class="article" id="gongmi"><h2>別系統の歴史的暗号：「共密」電報</h2><p>この2通は、上で説明したG0・Y0の表を使っていない。平文の電信接頭辞<span lang="zh-Hant">共密</span>で区別できるが、この接頭辞だけでは、同じ接頭辞を持つ全電報に共通の歴史的鍵が使われたとは証明できない。</p><p>候補モデルC51は数字群を次のように読む。各用紙を列ごとに右から左、上から下へ読み、次の用紙へ続ける。平文の公開接頭辞<code>0364 1378</code>を一度除く。十の位を下表で置き換え、通常の繰り下がりで<code>P = (9000 − 正規化したC) mod 10000</code>を計算し、Pを中国電碼（CTC）で引く。</p><div class="table-wrap"><table><tr><th>数字C</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr><tr><th>φ(C)</th><td>9</td><td>7</td><td>6</td><td>1</td><td>4</td><td>0</td><td>5</td><td>2</td><td>8</td><td>3</td></tr></table></div><p>この規則でN17とN18から解釈可能な中国語の断片が得られる。ただし候補復元であり、1916年に実際に使われた暗号帳は特定されていない。印刷版CTCとは対象14項目が一致するが、当時の使用版を証明するものではない。スキャンと読みの不確かさは<a href="gongmi.html">N17・N18の部分校訂版</a>を参照。</p></section>
+  <section class="article" id="rongmi"><h2>第三の系統：「容密」電報</h2><p>1916年6月の電報11通に公開の前置き<span lang="zh-Hant">容密</span>（<code>1369 1378</code>）がある。升目の読み順は<span lang="zh-Hant">共密</span>と同じだが鍵は異なる。各桁を位ごと（千・百・十・一）の表で置き換え、通常の繰り上がりで<code>0901</code>を加え、結果を中文電碼で読む。</p><p>鍵は2026年10月、それまで翻字されていなかった続き用紙によって資料が約90組から600組近くに増えたときに見つかった。最初の用紙だけでは失敗していた4置換モデルが読めるようになり、次いでよく使う語での千のずれ（借款が借甸になる）から繰り上がりつき加算が判明した。4通で見つけた鍵は残り7通を再調整なしで読み、全数字の人手による再読でも変わらない。表・例・電報：<a href="rongmi.html#key">容密のページ</a>。</p></section>
 </article>
 </main>
 
