@@ -10,7 +10,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="../zh-hans/juin1916.html">
 <link rel="alternate" hreflang="zh-Hant" href="../zh-hant/juin1916.html">
 <link rel="alternate" hreflang="ja" href="../ja/juin1916.html">
-<link rel="stylesheet" href="../assets/css/style.css?v=eae123a5f4">
+<link rel="stylesheet" href="../assets/css/style.css?v=6d43bf7a0a">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%239b2c1f'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f7f3ea' font-family='serif'%3E%E6%96%87%3C/text%3E%3C/svg%3E">
 </head>
 <body>
@@ -18,14 +18,9 @@
   <a class="brand" href="index.html"><span class="seal" lang="zh-Hant">文密</span> Le code Wenmi</a>
   <nav class="menu">
     <a href="index.html">Accueil</a>
-    <a href="rosamonde.html">Rosamonde</a>
-    <a href="history.html">L'histoire</a>
+    <details class="nav-group current"><summary aria-current="page">Histoire</summary><div class="sub"><a href="history.html">L'histoire</a><a href="juin1916.html" aria-current="page">Juin 1916</a><a href="rosamonde.html">Rosamonde</a></div></details>
     <a href="method.html">La méthode</a>
-    <a href="telegrams.html">Télégrammes</a>
-    <a href="relecture.html">Condensateurs 1916</a>
-    <a href="gongmi.html">Gongmi</a>
-    <a href="rongmi.html">Rongmi</a>
-    <a href="juin1916.html" aria-current="page">Juin 1916</a>
+    <details class="nav-group"><summary>Télégrammes</summary><div class="sub"><a href="telegrams.html">Tous les télégrammes</a><a href="relecture.html">Condensateurs 1916</a><a href="gongmi.html">Gongmi</a><a href="rongmi.html">Rongmi</a></div></details>
     <a href="sources.html">Sources</a>
   </nav>
   <nav class="lang-switch" aria-label="Langue">
@@ -54,7 +49,7 @@
 
   <h2 id="corpus">Un trou dans les archives</h2>
   <p>Les brouillons des télégrammes de Huang Xing pour mai–octobre 1916, conservés par l’historien Hsueh Chun-tu (薛君度), ont été publiés en Chine sous le titre <span lang="zh-Hant">黃興等電稿</span> : 126 pièces, présentées comme inédites jusque-là<sup class="fn"><a href="sources.html#s29">[29]</a></sup>. Entre la pièce du 8 juin et celle du 20 juin, elles ne contiennent <strong>rien</strong>. Or les télégrammes interceptés au Japon et déchiffrés ici (<span lang="zh-Hant">容密</span>, <span lang="zh-Hant">共密</span>) sont datés, pour la plupart, du 8 au 16 juin<sup class="fn"><a href="sources.html#s25">[25]</a><a href="sources.html#s27">[27]</a></sup> : ils tombent exactement dans ce trou. Nous n’avons retrouvé aucun de leurs textes dans cette édition ni en ligne ; une vérification dans le recueil <span lang="zh-Hant">黃興集</span> et dans les correspondances de Li Yuanhong reste à faire.</p>
-  <p>L’édition de 1916 confirme aussi le contexte des nôtres : Huang Xing y répond le 20 juin aux télégrammes <span lang="zh-Hant">寒</span> (14) et <span lang="zh-Hant">洽</span> de Li Yuanhong — le premier est N34, que nous lisons en clair ; la pièce du 8 juin, signée Yin Ruli, Ge Jing’en et Huang Fu, annonce la réunion « chez Tang » dont <a href="telegrams.html#tnum-N24">N24</a> donne la suite.</p>
+  <p>L’édition de 1916 confirme aussi le contexte des nôtres : Huang Xing y répond le 20 juin aux télégrammes <span lang="zh-Hant">寒</span> (14) et <span lang="zh-Hant">洽</span> de Li Yuanhong — le premier est <a href="telegrams.html#tnum-N34">N34</a>, que nous lisons en clair ; la pièce du 8 juin, signée Yin Ruli, Ge Jing’en et Huang Fu, annonce la réunion « chez Tang » dont <a href="telegrams.html#tnum-N24">N24</a> donne la suite.</p>
 
   <h2 id="codes">Un code par correspondant</h2>
   <p>Les brouillons publiés notent, en tête de chaque télégramme, le nom du code employé : <span lang="zh-Hant">辰密</span> pour Zeng Jiwu (曾繼梧) au Hunan, <span lang="zh-Hant">共密</span> pour Li Shucheng et Chen Jiahui, <span lang="zh-Hant">安密</span> pour Tan Yankai, <span lang="zh-Hant">嚴密</span> pour Peng Yunyi, etc.<sup class="fn"><a href="sources.html#s29">[29]</a></sup> Les préfixes en clair des formulaires interceptés (<span lang="zh-Hant">容密</span>, <span lang="zh-Hant">共密</span>, <span lang="zh-Hant">辰密</span>, <span lang="zh-Hant">和密</span>, <span lang="zh-Hant">乾密</span>) sont donc les noms de livres de chiffrement attribués à des correspondants. Cela explique pourquoi chaque famille a sa propre clé, et pourquoi la clé de <span lang="zh-Hant">辰密</span> reste à trouver : elle n’a rien à voir avec les deux autres.</p>
@@ -65,12 +60,12 @@
 
   <h2 id="constitution">Le retour à la Constitution de 1912</h2>
   <p>Dès le 10 juin, Huang Xing fixe cinq conditions pour Li Yuanhong : rétablir la Constitution provisoire de 1912 et l’ancien Parlement, refuser toute amnistie, faire démissionner le cabinet de Duan Qirui, déplacer Wang Zhanyuan, faire venir à Pékin les chefs républicains (<a href="telegrams.html#tnum-N17">N17</a>). Le lendemain, il ajoute qu’« une solution juridique n’aura aucun effet sans force armée pour l’appuyer », demande au Zhejiang d’être « le pilier du Sud-Est » et à Lu Rongting et Li Liejun de marcher sur le Hubei et le Jiangxi (<a href="telegrams.html#tnum-N19b">N19b</a>).</p>
-  <p>À Shanghai, le groupe de Huang Fu raconte la suite (<a href="telegrams.html#tnum-N24">N24</a>) : Li Yuanhong invite les notables à Pékin ; on pense à y envoyer Tang Hualong, Gu Zhongxiu, Zhang Ji et Fan Yuanlian à titre personnel ; puis on décide que Tang Shaoyi et Tang Hualong répondront qu’ils ne viendront pas tant qu’un ordre n’aura pas aboli les lois de Yuan et rétabli la Constitution de 1912. Zhang Guogan, secrétaire général de la présidence, télégraphie que Duan y consent ; Tang Hualong part pour Pékin le soir même. Le 14, Li Yuanhong répond lui-même à Huang Xing (N34) : il rappelle leur combat commun à Wuhan en 1911 (<span lang="zh-Hant">陽夏同舟</span>), lui demande de « le soutenir et de corriger ses erreurs », et promet de consulter le pays sur les « grandes affaires de l’État ». Le 16, Huang Xing met encore en garde contre une manœuvre de Pékin pour réviser la Constitution par des délégués des provinces et contre Duan, qui « reprend les vieilles ruses de Yuan » (<a href="telegrams.html#tnum-N35">N35</a>). La Constitution de 1912 est rétablie le 29 juin.</p>
+  <p>À Shanghai, le groupe de Huang Fu raconte la suite (<a href="telegrams.html#tnum-N24">N24</a>) : Li Yuanhong invite les notables à Pékin ; on pense à y envoyer Tang Hualong, Gu Zhongxiu, Zhang Ji et Fan Yuanlian à titre personnel ; puis on décide que Tang Shaoyi et Tang Hualong répondront qu’ils ne viendront pas tant qu’un ordre n’aura pas aboli les lois de Yuan et rétabli la Constitution de 1912. Zhang Guogan, secrétaire général de la présidence, télégraphie que Duan y consent ; Tang Hualong part pour Pékin le soir même. Le 14, Li Yuanhong répond lui-même à Huang Xing (<a href="telegrams.html#tnum-N34">N34</a>) : il rappelle leur combat commun à Wuhan en 1911 (<span lang="zh-Hant">陽夏同舟</span>), lui demande de « le soutenir et de corriger ses erreurs », et promet de consulter le pays sur les « grandes affaires de l’État ». Le 16, Huang Xing met encore en garde contre une manœuvre de Pékin pour réviser la Constitution par des délégués des provinces et contre Duan, qui « reprend les vieilles ruses de Yuan » (<a href="telegrams.html#tnum-N35">N35</a>). La Constitution de 1912 est rétablie le 29 juin.</p>
 
   <h2 id="autres">Autres éclairages</h2>
   <ul>
     <li>Sun Yat-sen ordonne par télégramme à ses troupes de cesser le combat ; sa réponse publiée dans la presse inquiète les amis de Huang Xing (<a href="telegrams.html#tnum-N32">N32</a>).</li>
-    <li>Huang Xing soutient l’armée du Shaanxi et pousse les provinces indépendantes à marcher vers le nord (N04, en clair).</li>
+    <li>Huang Xing soutient l’armée du Shaanxi et pousse les provinces indépendantes à marcher vers le nord (<a href="telegrams.html#tnum-N04">N04</a>, en clair).</li>
     <li>Les intermédiaires japonais : le consul Koike et le consul général Ariyoshi (<a href="telegrams.html#tnum-N30">N30</a>), Tanaka et Aoki (<a href="telegrams.html#tnum-N23">N23</a>) <mark class="unc">— identifications probables, non démontrées</mark>.</li>
   </ul>
 
@@ -89,8 +84,8 @@
 <script src="../assets/js/corpus-t1915.js?v=a317e0b2f3"></script>
 <script src="../assets/js/corpus-f1916.js?v=669f3b482d"></script>
 <script src="../assets/js/corpus-inedits.js?v=54c7884c38"></script>
-<script src="../assets/js/corpus-num1916.js?v=3bdc40e7b6"></script>
-<script src="../assets/js/systems.js?v=a3ac394c2c"></script>
-<script src="../assets/js/site.js?v=58eb078d44"></script>
+<script src="../assets/js/corpus-num1916.js?v=3ac22ea57f"></script>
+<script src="../assets/js/systems.js?v=20f4259dfa"></script>
+<script src="../assets/js/site.js?v=c37895ddb1"></script>
 </body>
 </html>

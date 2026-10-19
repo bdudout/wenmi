@@ -9,7 +9,7 @@ import c1916_i18n as C
 WENMI = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else os.path.join(SITE, '..', 'wenmi'))
 
 def tg(n):  # lien vers une fiche de la page Télégrammes (N04, N34 : en clair, pas encore de fiche)
-    return n if n in ('N04', 'N34') else f'<a href="telegrams.html#tnum-{n}">{n}</a>'
+    return f'<a href="telegrams.html#tnum-{n}">{n}</a>'
 def S(*n):
     return '<sup class="fn">' + ''.join(f'<a href="sources.html#s{x}">[{x}]</a>' for x in n) + '</sup>'
 def Q(zh):

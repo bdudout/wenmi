@@ -286,6 +286,17 @@ def key_table(L):
     rows = ''.join(f'<tr><th>{t["rows"][j + 1]}</th>' + ''.join(f'<td>{v}</td>' for v in s[j]) + '</tr>' for j in range(4))
     return f'<div class="gm-scroll"><table><tr><th>{t["rows"][0]}</th>' + ''.join(f'<td>{d}</td>' for d in range(10)) + f'</tr>{rows}</table></div>'
 
+sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c84'))
+import tr_i18n as TRX                                 # noqa: E402
+TLABEL = {'fr': 'Traduction', 'en': 'Translation', 'ja': '日本語訳', 'zh-hans': '今译（推定读法加标点）', 'zh-hant': '今譯（推定讀法加標點）'}
+def translation(mid, L):
+    if L == 'fr':
+        segs = M[mid]['segments'] if mid in M else [dict(fr=x[3]) for x in __import__('segments_gongmi').SEG[mid]]
+        return ' '.join(x['fr'] for x in segs)
+    if L == 'en': return TRX.EN.get(mid, '')
+    if L == 'ja': return TRX.JA.get(mid, '')
+    return ''
+
 def message_section(mid, L, h2=None):
     t = T[L]; m = M[mid]; segs = m['segments']
     reading = ''.join(s['zh'] for s in segs)
@@ -307,6 +318,8 @@ def message_section(mid, L, h2=None):
             + f'<p>{e(summary(mid, L))}</p>\n'
             f'<h3>{t["raw"]}</h3><p class="gm-han" lang="zh-Hant">{e(m["raw"])}</p>\n'
             f'<h3>{t["reading"]}</h3><p class="gm-han" lang="zh-Hant">{e(reading)}</p>\n'
+            + (f'<h3>{TLABEL[L]}</h3><p class="gm-tr">{e(translation(mid, L))}</p>\n' if translation(mid, L) else '')
+            + ''
             f'<details><summary>{t["scans"]}</summary>\n{scans}</details>'
             f'<details><summary>{t["table"]}</summary>\n<div class="gm-scroll"><table><thead><tr>' + ''.join(f'<th>{h}</th>' for h in t['th']) + '</tr></thead><tbody>\n'
             + '\n'.join(rows) + '\n</tbody></table></div></details></section>\n')
@@ -409,6 +422,14 @@ def gongmi_block(L):
 def update_gongmi(L):
     p = os.path.join(SITE, 'content', L, 'gongmi.html')
     s = open(p, encoding='utf-8').read()
+    s = re.sub(r'<!-- TR:begin -->.*?<!-- TR:end -->', '', s, flags=re.S)
+    for mid in ('N17', 'N18'):
+        tr = translation(mid, L)
+        if not tr: continue
+        i = s.find(f'<section id="{mid}" class="gm-message">')
+        if i < 0: continue
+        j = s.find('</p>', s.find('class="gm-han"', i)) + 4
+        s = s[:j] + f'<!-- TR:begin --><h3>{TLABEL[L]}</h3><p class="gm-tr">{e(tr)}</p><!-- TR:end -->' + s[j:]
     s = re.sub(r'<!-- (N23|C84):begin -->.*?<!-- \1:end -->\n', '', s, flags=re.S)
     title, desc, h1, stand, *_ = GM_HEAD[L]
     s = re.sub(r'^<!-- \{.*?\} -->', '<!-- ' + json.dumps(dict(title=title, description=desc), ensure_ascii=False) + ' -->', s, count=1)

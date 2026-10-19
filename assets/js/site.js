@@ -31,6 +31,12 @@ var VERIF = {'fr': 'lettres vérifiées sur le scan : erreur probable du chiffre
     });
   }
 
+  // ---------- groupes du menu : un seul ouvert, fermeture au clic extérieur ou par Échap ----------
+  var groups = Array.prototype.slice.call(document.querySelectorAll('.menu .nav-group'));
+  groups.forEach(function (g) { g.addEventListener('toggle', function () { if (g.open) groups.forEach(function (o) { if (o !== g) o.open = false; }); }); });
+  document.addEventListener('click', function (ev) { groups.forEach(function (g) { if (g.open && !g.contains(ev.target)) g.open = false; }); });
+  document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') groups.forEach(function (g) { if (g.open) { g.open = false; g.querySelector('summary').focus(); } }); });
+
   // ---------- hauteur réelle de l'en-tête : le sommaire flottant se cale dessous ----------
   var head = document.querySelector('.site-header');
   function headH() { if (head) root.style.setProperty('--head-h', head.offsetHeight + 'px'); }

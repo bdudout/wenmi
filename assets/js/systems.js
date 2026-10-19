@@ -9,7 +9,7 @@ window.WENMI_SYSTEMS = {
     N1916: { honolulu1916w: 'honolulu1916', yamada1916: 'yamada1916', yamada1916w: 'yamada1916', man2: 'manila1916b', k38: 'k38', h16: 'h16' },
     T1915: { manila1916b: 'manila1916b', laisaosang1915: 'laisaosang1915', newyork1915: 'newyork1915', k30: 'k30', shanghai1916: 'shanghai1916', sanfran1916: 'sanfran1916' },
     F1916: { shanghai1916: 'shanghai1916', k13: 'k13', seito1916: 'seito1916', manila1916: 'manila1916', sanfran1916: 'sanfran1916' },
-    NUM1916: { gongmi: 'gongmi', rongmi: 'rongmi' }
+    NUM1916: { gongmi: 'gongmi', rongmi: 'rongmi', clair: 'clair' }
   },
   year: { CORPUS: 1916, C1916: 1916, N1916: 1916, T1915: 1915, F1916: 1916, NUM1916: 1916 },
   // jour approché pour le classement (date du formulaire illisible ; cf. tools/form_times.py)
@@ -18,7 +18,7 @@ window.WENMI_SYSTEMS = {
     { id: 'wenmi', systems: ['G0', 'Y0'] },
     { id: 'condensers', anchors: ['c1916', 'n1916', 't1915', 'f1916'],
       systems: ['manila1916b', 'laisaosang1915', 'newyork1915', 'k30', 'shanghai1916', 'k13', 'seito1916', 'manila1916', 'sanfran1916', 'honolulu1916', 'yamada1916', 'k38', 'h16'] },
-    { id: 'numeric', anchors: ['num1916'], systems: ['gongmi', 'rongmi'] }
+    { id: 'numeric', anchors: ['num1916'], systems: ['gongmi', 'rongmi', 'clair'] }
   ],
   text: {
     fr: {
@@ -45,7 +45,8 @@ window.WENMI_SYSTEMS = {
         k38: ['Table « Thirtyeight »', 'Tokyo → « Junzaburo », 11–12 mai 1916 ; indicateur en clair « Thirtyeight ». Table retrouvée en octobre 2026.'],
         h16: ['Table de Huang Xing', 'Tokyo (Huang Xing) → « Junzaburo », sans indicateur, et Shanghai → « Ylchang » (Huang Xing), fin mai – juin 1916. Table retrouvée en octobre 2026. À ne pas confondre avec le code à trois kana d\'un autre télégramme de Huang Xing (25 mai 1916, à Lin Hu et Li Genyuan), dont le système a été identifié par D. Bourdeau et la formule par S. Tomokiyo[22, 23].'],
         gongmi: ['Clé « 共密 » (C51)', 'Tokyo ↔ Shanghai, 10–16 juin 1916 ; Huang Xing, Zhang Ji. Dizaines remplacées (0→9, 1→7, 2→6, 3→1, 4→4, 5→0, 6→5, 7→2, 8→8, 9→3), puis P = 9000 − C. Clé reconstruite par Codex en octobre 2026 (voir la page <a href="gongmi.html">共密</a>).'],
-        rongmi: ['Clé « 容密 » (v2)', 'Tokyo ↔ Shanghai, 8–16 juin 1916 ; Zhang Xiaozhun, Huang Xing, Lü Gongwang, Yin Ruli, Ge Jing’en, Huang Fu. Chaque chiffre est remplacé selon son rang, puis P = C + 0901 avec retenues. Clé retrouvée en octobre 2026 (voir la page <a href="rongmi.html">容密</a> et la <a href="method.html#rongmi">méthode</a>).']
+        rongmi: ['Clé « 容密 » (v2)', 'Tokyo ↔ Shanghai, 8–16 juin 1916 ; Zhang Xiaozhun, Huang Xing, Lü Gongwang, Yin Ruli, Ge Jing’en, Huang Fu. Chaque chiffre est remplacé selon son rang, puis P = C + 0901 avec retenues. Clé retrouvée en octobre 2026 (voir la page <a href="rongmi.html">容密</a> et la <a href="method.html#rongmi">méthode</a>).'],
+        clair: ['En clair', 'Télégrammes du même dossier envoyés sans chiffrement, directement en code télégraphique chinois : la réponse de Li Yuanhong à Huang Xing (14 juin), un télégramme de Huang Xing sur le Shaanxi et un télégramme vers Mukden.']
       },
       rosamonde: ['L\'anglais chiffré de Rosamonde (1915–1916)', '<p>Vingt-deux télégrammes en anglais, chiffrés par une substitution réciproque de lettres, entre Sun Yat-sen et Soong Ching-ling : présentés sur une page à part, <a href="rosamonde.html">Les télégrammes de Rosamonde</a>.</p>'],
       count: '{n} télégrammes', count1: '1 télégramme'
@@ -74,7 +75,8 @@ window.WENMI_SYSTEMS = {
         k38: ['“Thirtyeight” table', 'Tokyo → “Junzaburo”, 11–12 May 1916; clear indicator “Thirtyeight”. Table recovered in October 2026.'],
         h16: ['Huang Xing\'s table', 'Tokyo (Huang Xing) → “Junzaburo”, without indicator, and Shanghai → “Ylchang” (Huang Xing), late May – June 1916. Table recovered in October 2026. Not to be confused with the three-kana code of another telegram of Huang Xing (25 May 1916, to Lin Hu and Li Genyuan), whose system was identified by D. Bourdeau and whose formula by S. Tomokiyo[22, 23].'],
         gongmi: ['“Gongmi” (共密) key (C51)', 'Tokyo ↔ Shanghai, 10–16 June 1916; Huang Xing, Zhang Ji. Tens digit replaced (0→9, 1→7, 2→6, 3→1, 4→4, 5→0, 6→5, 7→2, 8→8, 9→3), then P = 9000 − C. Key reconstructed by Codex in October 2026 (see the <a href="gongmi.html">Gongmi</a> page).'],
-        rongmi: ['“Rongmi” (容密) key (v2)', 'Tokyo ↔ Shanghai, 8–16 June 1916; Zhang Xiaozhun, Huang Xing, Lü Gongwang, Yin Ruli, Ge Jing’en, Huang Fu. Each digit is replaced according to its place, then P = C + 0901 with carries. Key recovered in October 2026 (see the <a href="rongmi.html">Rongmi</a> page and the <a href="method.html#rongmi">method</a>).']
+        rongmi: ['“Rongmi” (容密) key (v2)', 'Tokyo ↔ Shanghai, 8–16 June 1916; Zhang Xiaozhun, Huang Xing, Lü Gongwang, Yin Ruli, Ge Jing’en, Huang Fu. Each digit is replaced according to its place, then P = C + 0901 with carries. Key recovered in October 2026 (see the <a href="rongmi.html">Rongmi</a> page and the <a href="method.html#rongmi">method</a>).'],
+        clair: ['In clear', 'Telegrams from the same file sent without encipherment, directly in Chinese telegraph code: Li Yuanhong’s reply to Huang Xing (14 June), a telegram of Huang Xing about Shaanxi, and one to Mukden.']
       },
       rosamonde: ['Rosamonde\'s enciphered English (1915–1916)', '<p>Twenty-two telegrams in English, enciphered by a reciprocal letter substitution, between Sun Yat-sen and Soong Ching-ling: presented on a separate page, <a href="rosamonde.html">The Rosamonde telegrams</a>.</p>'],
       count: '{n} telegrams', count1: '1 telegram'
@@ -103,7 +105,8 @@ window.WENMI_SYSTEMS = {
         k38: ['「Thirtyeight」表', '東京 →「Junzaburo」，1916年5月11至12日；明碼標記「Thirtyeight」。2026年10月復原。'],
         h16: ['黃興的表', '東京（黃興）→「Junzaburo」（無標記）及上海 →「Ylchang」（黃興），1916年5月底至6月。2026年10月復原。勿與黃興另一封電報（1916年5月25日致林虎、李根源）的三假名電碼混淆：該系統由 D. Bourdeau 識別，其對應公式由 S. Tomokiyo 找出[22, 23]。'],
         gongmi: ['「共密」密鑰（C51）', '東京↔上海，1916年6月10–16日；黃興、張繼。替換十位數（0→9、1→7、2→6、3→1、4→4、5→0、6→5、7→2、8→8、9→3），再計算P = 9000 − C。密鑰由 Codex 於2026年10月復原（見<a href="gongmi.html">共密</a>頁面）。'],
-        rongmi: ['「容密」密鑰（v2）', '東京↔上海，1916年6月8–16日；張孝準、黃興、呂公望、殷汝驪、葛敬恩、黃郛。每位數字按其數位替換，再以進位計算P = C + 0901。密鑰於2026年10月找到（見<a href="rongmi.html">容密</a>頁面及<a href="method.html#rongmi">破譯方法</a>）。']
+        rongmi: ['「容密」密鑰（v2）', '東京↔上海，1916年6月8–16日；張孝準、黃興、呂公望、殷汝驪、葛敬恩、黃郛。每位數字按其數位替換，再以進位計算P = C + 0901。密鑰於2026年10月找到（見<a href="rongmi.html">容密</a>頁面及<a href="method.html#rongmi">破譯方法</a>）。'],
+        clair: ['明碼', '同一卷宗中未加密、直接以中文電碼拍發的電報：黎元洪覆黃興電（6月14日）、黃興論陝事電及致奉天電。']
       },
       rosamonde: ['羅莎蒙德的加密英文（1915–1916年）', '<p>孫中山與宋慶齡之間二十二封以字母互換加密的英文電報，另見專頁：<a href="rosamonde.html">羅莎蒙德電報</a>。</p>'],
       count: '{n} 封電報', count1: '1 封電報'
@@ -132,7 +135,8 @@ window.WENMI_SYSTEMS = {
         k38: ['“Thirtyeight”表', '东京 →“Junzaburo”，1916年5月11至12日；明码标记“Thirtyeight”。2026年10月复原。'],
         h16: ['黄兴的表', '东京（黄兴）→“Junzaburo”（无标记）及上海 →“Ylchang”（黄兴），1916年5月底至6月。2026年10月复原。勿与黄兴另一封电报（1916年5月25日致林虎、李根源）的三假名电码混淆：该系统由 D. Bourdeau 识别，其对应公式由 S. Tomokiyo 找出[22, 23]。'],
         gongmi: ['“共密”密钥（C51）', '东京↔上海，1916年6月10–16日；黄兴、张继。替换十位数（0→9、1→7、2→6、3→1、4→4、5→0、6→5、7→2、8→8、9→3），再计算P = 9000 − C。密钥由 Codex 于2026年10月复原（见<a href="gongmi.html">共密</a>页面）。'],
-        rongmi: ['“容密”密钥（v2）', '东京↔上海，1916年6月8–16日；张孝准、黄兴、吕公望、殷汝骊、葛敬恩、黄郛。每位数字按其数位替换，再以进位计算P = C + 0901。密钥于2026年10月找到（见<a href="rongmi.html">容密</a>页面及<a href="method.html#rongmi">破译方法</a>）。']
+        rongmi: ['“容密”密钥（v2）', '东京↔上海，1916年6月8–16日；张孝准、黄兴、吕公望、殷汝骊、葛敬恩、黄郛。每位数字按其数位替换，再以进位计算P = C + 0901。密钥于2026年10月找到（见<a href="rongmi.html">容密</a>页面及<a href="method.html#rongmi">破译方法</a>）。'],
+        clair: ['明码', '同一卷宗中未加密、直接以中文电码拍发的电报：黎元洪复黄兴电（6月14日）、黄兴论陕事电及致奉天电。']
       },
       rosamonde: ['罗莎蒙德的加密英文（1915–1916年）', '<p>孙中山与宋庆龄之间二十二封以字母互换加密的英文电报，另见专页：<a href="rosamonde.html">罗莎蒙德电报</a>。</p>'],
       count: '{n} 封电报', count1: '1 封电报'
@@ -161,7 +165,8 @@ window.WENMI_SYSTEMS = {
         k38: ['「Thirtyeight」表', '東京 →「Junzaburo」、1916年5月11〜12日。平文の標識「Thirtyeight」。2026年10月に復元。'],
         h16: ['黄興の表', '東京（黄興）→「Junzaburo」（標識なし）および上海 →「Ylchang」（黄興）、1916年5月末〜6月。2026年10月に復元。黄興の別の電報（1916年5月25日、林虎・李根源宛）の三仮名コードとは別物である。その方式は D. Bourdeau が、対応の公式は S. Tomokiyo が明らかにした[22, 23]。'],
         gongmi: ['「共密」の鍵（C51）', '東京↔上海、1916年6月10〜16日。黄興、張継。十の位を置き換え（0→9、1→7、2→6、3→1、4→4、5→0、6→5、7→2、8→8、9→3）、P = 9000 − C。鍵は2026年10月にCodexが復元（<a href="gongmi.html">共密</a>のページ参照）。'],
-        rongmi: ['「容密」の鍵（v2）', '東京↔上海、1916年6月8〜16日。張孝準、黄興、呂公望、殷汝驪、葛敬恩、黄郛。各桁を位ごとに置き換え、繰り上がりつきでP = C + 0901。鍵は2026年10月に発見（<a href="rongmi.html">容密</a>のページと<a href="method.html#rongmi">方法</a>参照）。']
+        rongmi: ['「容密」の鍵（v2）', '東京↔上海、1916年6月8〜16日。張孝準、黄興、呂公望、殷汝驪、葛敬恩、黄郛。各桁を位ごとに置き換え、繰り上がりつきでP = C + 0901。鍵は2026年10月に発見（<a href="rongmi.html">容密</a>のページと<a href="method.html#rongmi">方法</a>参照）。'],
+        clair: ['平文', '同じ綴りのうち暗号化せず中文電碼で直接打たれた電報：黎元洪から黄興への返電（6月14日）、陝西に関する黄興の電報、奉天宛ての電報。']
       },
       rosamonde: ['ロザモンドの暗号英語（1915–1916年）', '<p>孫文と宋慶齢のあいだの、文字の相互置換で暗号化した英語の電報二十二通。別ページで紹介する：<a href="rosamonde.html">ロザモンド電報</a>。</p>'],
       count: '{n} 通', count1: '1 通'
