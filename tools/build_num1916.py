@@ -27,6 +27,10 @@ CLEAR = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c88', 'clear-data.j
 D.update(CLEAR)
 CHEN = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c92', 'site-data.json'), encoding='utf-8'))['messages']
 D.update(CHEN)
+V4 = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c99', 'site-data.json'), encoding='utf-8'))['messages']
+D.update(V4)
+sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c99'))
+import segments_v4 as SV4                             # noqa: E402
 sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c92'))
 import segments_chenmi as SCH, chenmi_key as CHK   # noqa: E402
 sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c88'))
@@ -37,9 +41,10 @@ for _L in SCL.NOTE: TR.NOTE.setdefault(_L, {}).update(SCL.NOTE[_L])
 for _L, _d in (('EN', SCH.EN), ('JA', SCH.JA)): getattr(TR, _L).update(_d)
 for _L in SCH.NOTE: TR.NOTE.setdefault(_L, {}).update(SCH.NOTE[_L])
 BH.BAIHUA.update(SCH.BAIHUA)
+BH.BAIHUA.update(SV4.BAIHUA); TR.EN.update(SV4.EN); TR.JA.update(SV4.JA)
 G = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c62', 'publication-v3', 'data', 'gongmi.json'), encoding='utf-8'))['messages']
 V = {}
-for f in ('c83/variants.json', 'c84/gongmi-variants.json', 'c92/variants.json', 'c88/clear-variants.json'):
+for f in ('c83/variants.json', 'c84/gongmi-variants.json', 'c92/variants.json', 'c88/clear-variants.json', 'c99/variants.json'):
     for r in json.load(open(os.path.join(WENMI, 'cryptanalysis', f), encoding='utf-8')):
         for h in r.get('hits', []):
             gl, var = (h['glyph'], h['variant']) if isinstance(h, dict) else (h[0], h[1])
@@ -56,12 +61,14 @@ KEYS = {'N29': ['石屛', '袁逆自斃', '依法圖治'], 'N10': ['家嚴', '�
         'N25': ['烟捐', '酒捐', '吳兆蓮'], 'N36': ['黃克強', '六月三十日'], 'N24': ['黎電', '元年約法', '殷汝驪'], 'N23': ['田中', '小池', '張繼'],
         'N17': ['黎總統', '舊約法', '日當局'], 'N18': ['擁護共和', '武力'], 'N27': ['溥', '無望'], 'N30': ['小池', '有吉領事'],
         'N32': ['舊約法', '中山', '葛殷黃'], 'N33': ['馮', '黃羣', '約法'], 'N35': ['國會', '段', '袁'],
-        'N05': ['烈武', '山東', '溥泉'], 'N13': ['黎岑', '護國軍', '日態度'], 'N16': ['趙夷午', '精兵一師', '湯督'], 'N26': ['三百元', '百里']}
-ORDER = ['N10', 'N04', 'N31', 'N34', 'N29', 'N14', 'N19b', 'N02', 'N08', 'N11', 'N12', 'N19a', 'N28', 'N21', 'N25', 'N36', 'N24', 'N17', 'N18', 'N23', 'N27', 'N30', 'N32', 'N33', 'N35', 'N05', 'N13', 'N16', 'N26']
+        'N05': ['烈武', '山東', '溥泉'], 'N13': ['黎岑', '護國軍', '日態度'], 'N16': ['趙夷午', '精兵一師', '湯督'], 'N26': ['三百元', '百里'],
+        'V4B': ['約法', '丁世嶧', '湯濟武'], 'V4D': ['青木', '汝驪', '曉垣'], 'V4E': ['粤', '急返', '何船']}
+ORDER = ['N10', 'N04', 'N31', 'N34', 'N29', 'N14', 'N19b', 'N02', 'N08', 'N11', 'N12', 'N19a', 'N28', 'N21', 'N25', 'N36', 'N24', 'N17', 'N18', 'N23', 'N27', 'N30', 'N32', 'N33', 'N35', 'N05', 'N13', 'N16', 'N26', 'V4B', 'V4D', 'V4E']
 FAM = {m: '容密' for m in D if D[m]['family'] == '容密'}
 FAM.update({m: '明碼' for m in CLEAR})
 FAM.update({m: '共密' for m in ['N17', 'N18', 'N23', 'N27', 'N30', 'N32', 'N33', 'N35']})
 FAM.update({m: '辰密' for m in CHEN})
+FAM.update({'V4B': '容密', 'V4D': '容密', 'V4E': '共密'})
 TOC = {'容密': 'rongmi', '共密': 'gongmi', '明碼': 'clair', '辰密': 'chenmi'}
 
 def lm_score(codes):
@@ -139,7 +146,7 @@ def message(mid):
         withp[p['i']] = p['code'] or dec[p['i']]
     arch, page, side = meta['sheets'][0]
     mm = dict(id='num-' + mid, label=mid, toc=TOC[fam], grid=TOC[fam],
-              route=meta['dir'].split(',')[0], record=arch, md=[6, meta['date'] or 0], page=page, time='', prefix=bool(prefix),
+              route=meta['dir'].split(',')[0], record=arch, md=[meta.get('month', 6), meta['date'] or 0], page=page, time='', prefix=bool(prefix),
               letters=''.join(g['cipher'] for g in groups), cipher=(prefix + ' · ' if prefix else '') + ' '.join(g['cipher'] for g in groups),
               tokenLetters=[g['cipher'] for g in groups], codes=codes, chars=[g['glyph'] for g in groups], status=status,
               fixed={}, alts={}, expected={}, verified=[],
@@ -150,8 +157,8 @@ def message(mid):
 def fiche(mid, mm, meta):
     out = os.path.join(SITE, 'assets', 'img', 'fiches')
     arch, page, side = meta['sheets'][0]
-    for name in (f'{arch}-{page:02d}.png', f'{arch}-{page}.png'):
-        p = os.path.join(WENMI, 'working', 'ylc-ocr', 'png', name)
+    for name in [f'{d}/{arch}-{pg}.png' for d in ('ylc-ocr/png', 'v4-png') for pg in (f'{page:02d}', f'{page}')]:
+        p = os.path.join(WENMI, 'working', name)
         if os.path.exists(p): break
     im = Image.open(p).convert('L'); w, h = im.size
     box = (int(w * .47), int(h * .14), int(w * .81), int(h * .89)) if side == 'R' else (int(w * .19), int(h * .14), int(w * .53), int(h * .89))
@@ -192,7 +199,7 @@ if __name__ == '__main__':
         fiche(mid, mm, meta); msgs.append(mm)
         d = meta['date']; rk = 'T' if meta['dir'].startswith('Tokyo') else 'S'
         for L in I18N:
-            i18n[L]['date'][mm['id']] = DATE[L](d, meta['date_note']) + (' ?' if L != 'fr' and d and '?' in meta['date_note'] else '')
+            i18n[L]['date'][mm['id']] = (DATE[L](d, meta['date_note']).replace('June', 'July').replace('6月', '7月') if meta.get('month') == 7 else DATE[L](d, meta['date_note'])) + (' ?' if L != 'fr' and d and '?' in meta['date_note'] else '')
             i18n[L]['route'][mm['id']] = ROUTE[L][rk]
         i18n['fr']['tr'][mm['id']] = ' '.join(s[3] for s in segs)
         i18n['en']['tr'][mm['id']] = TR.EN[mid]
@@ -202,7 +209,8 @@ if __name__ == '__main__':
         UNR = {'fr': 'Chiffres pas encore relus par Brice Dudout.', 'en': 'Digits not yet re-read by Brice Dudout.', 'ja': '数字はまだBrice Dudoutが再読していない。', 'zh-Hant': '數字尚未經 Brice Dudout 複讀。'}
         RR = {'fr': 'Chiffres relus par Brice Dudout.', 'en': 'Digits re-read by Brice Dudout.', 'ja': '数字はBrice Dudoutが再読済み。', 'zh-Hant': '數字已經 Brice Dudout 複讀。'}
         for L in ('fr', 'en', 'ja', 'zh-Hant'):
-            i18n[L]['note'][mm['id']] = ((TR.NOTE[L][mid] + ' ') if mid in TR.NOTE[L] else '') + (RR if rr else UNR)[L]
+            PRT = {'fr': 'Chiffres relus par Brice Dudout sur 4 feuillets sur 22 seulement (premier et derniers).', 'en': 'Digits re-read by Brice Dudout on only 4 of 22 sheets (first and last).', 'ja': '数字の再読は22枚中4枚（最初と最後）のみ。', 'zh-Hant': '22頁中僅4頁（首頁與末頁）數字經 Brice Dudout 複讀。'}
+            i18n[L]['note'][mm['id']] = ((TR.NOTE[L][mid] + ' ') if mid in TR.NOTE[L] else '') + (PRT if D[mid].get('reread_partial') else (RR if rr else UNR))[L]
     T2 = c1916_i18n.t2s_table(WENMI)
     i18n['zh-Hans'] = c1916_i18n.to_hans(i18n['zh-Hant'], T2)
     i18n['zh-Hans']['channel'] = {'rongmi': '容密密钥（v2）', 'gongmi': '共密密钥（C51）', 'clair': '明码（中文电码）', 'chenmi': '辰密密钥（C92）'}

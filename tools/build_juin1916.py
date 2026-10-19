@@ -17,7 +17,7 @@ def Q(zh):
 def unc(t):
     return f'<mark class="unc">{t}</mark>'
 
-FR = f'''<!-- {{"title": "Juin 1916 : ce que disent les télégrammes de Huang Xing", "description": "Ce que vingt-quatre télégrammes chiffrés de juin 1916, déchiffrés en octobre 2026, apprennent sur Huang Xing, le Japon, le Zhejiang et le retour à la Constitution de 1912 après la mort de Yuan Shikai."}} -->
+FR = f'''<!-- {{"title": "Juin 1916 : ce que disent les télégrammes de Huang Xing", "description": "Ce que vingt-sept télégrammes chiffrés de juin 1916, déchiffrés en octobre 2026, apprennent sur Huang Xing, le Japon, le Zhejiang et le retour à la Constitution de 1912 après la mort de Yuan Shikai."}} -->
 <article class="article">
   <header class="lede">
     <p class="kicker">Histoire · Juin 1916</p>
@@ -47,6 +47,7 @@ FR = f'''<!-- {{"title": "Juin 1916 : ce que disent les télégrammes de Huang X
   <h2 id="autres">Autres éclairages</h2>
   <ul>
     <li>Sun Yat-sen ordonne par télégramme à ses troupes de cesser le combat ; sa réponse publiée dans la presse inquiète les amis de Huang Xing ({tg("N32")}).</li>
+    <li>Fin juin, le compromis sur la Constitution (Duan Qirui consulterait à titre personnel les parlementaires réunis à Shanghai, par l’intermédiaire de Ding Shiyi et Xiao Jinrong) est « de nouveau retourné » : Duan revient aux trois délégués par province ({tg("V4B")}, 容密). Au même moment, Yin Ruli part pour Pékin avec Li Shucheng, et l’achat d’armes se poursuit avec Aoki et Takakura ({tg("V4D")}).</li>
     <li>À Tan Renfeng (譚人鳳, 石屛), vétéran hunanais, Huang Xing pose sa condition : « si Li [Yuanhong] gouverne selon la loi, les germes du désordre pourront être arrêtés ; s’il s’en écarte, je ne l’accepterai pas non plus » ({tg("N29")}, en clair).</li>
     <li>Huang Xing soutient l’armée du Shaanxi et pousse les provinces indépendantes à marcher vers le nord ({tg("N04")}, en clair).</li>
     <li>Les intermédiaires japonais : le consul Koike et le consul général Ariyoshi ({tg("N30")}), Tanaka et Aoki ({tg("N23")}) {unc("— identifications probables, non démontrées")}.</li>
@@ -57,7 +58,7 @@ FR = f'''<!-- {{"title": "Juin 1916 : ce que disent les télégrammes de Huang X
 </article>
 '''
 
-EN = f'''<!-- {{"title": "June 1916: what Huang Xing’s telegrams say", "description": "What twenty-four cipher telegrams of June 1916, deciphered in October 2026, tell us about Huang Xing, Japan, Zhejiang and the return to the 1912 Constitution after Yuan Shikai’s death."}} -->
+EN = f'''<!-- {{"title": "June 1916: what Huang Xing’s telegrams say", "description": "What twenty-seven cipher telegrams of June 1916, deciphered in October 2026, tell us about Huang Xing, Japan, Zhejiang and the return to the 1912 Constitution after Yuan Shikai’s death."}} -->
 <article class="article">
   <header class="lede">
     <p class="kicker">History · June 1916</p>
@@ -87,6 +88,7 @@ EN = f'''<!-- {{"title": "June 1916: what Huang Xing’s telegrams say", "descri
   <h2 id="autres">Other glimpses</h2>
   <ul>
     <li>Sun Yat-sen orders his troops by telegram to cease fighting; his reply, published in the press, worries Huang Xing’s friends ({tg("N32")}).</li>
+    <li>In late June the compromise on the Constitution (Duan Qirui would consult the parliamentarians in Shanghai in a personal capacity, through Ding Shiyi and Xiao Jinrong) is “overturned again”: Duan goes back to three delegates per province ({tg("V4B")}, Rongmi). Meanwhile Yin Ruli leaves for Beijing with Li Shucheng, and the arms purchase goes on with Aoki and Takakura ({tg("V4D")}).</li>
     <li>To Tan Renfeng (譚人鳳, 石屛), a Hunanese veteran, Huang Xing sets his condition: “if Li [Yuanhong] governs according to the law, the seeds of disorder can be checked; should he depart from it, I will not accept it either” ({tg("N29")}, in clear).</li>
     <li>Huang Xing backs the Shaanxi army and urges the independent provinces to march north ({tg("N04")}, in clear).</li>
     <li>Japanese go-betweens: Consul Koike and Consul General Ariyoshi ({tg("N30")}), Tanaka and Aoki ({tg("N23")}) {unc("— probable identifications, not proven")}.</li>
@@ -97,7 +99,7 @@ EN = f'''<!-- {{"title": "June 1916: what Huang Xing’s telegrams say", "descri
 </article>
 '''
 
-HANT = f'''<!-- {{"title": "1916年6月：黃興電報所見", "description": "2026年10月破譯的1916年6月二十四封密電，對黃興、日本、浙江以及袁世凱死後恢復元年約法的新見。"}} -->
+HANT = f'''<!-- {{"title": "1916年6月：黃興電報所見", "description": "2026年10月破譯的1916年6月二十七封密電，對黃興、日本、浙江以及袁世凱死後恢復元年約法的新見。"}} -->
 <article class="article">
   <header class="lede">
     <p class="kicker">歷史·1916年6月</p>
@@ -127,6 +129,7 @@ HANT = f'''<!-- {{"title": "1916年6月：黃興電報所見", "description": "2
   <h2 id="autres">其他</h2>
   <ul>
     <li>孫中山電令所部停兵；其覆電已登報，黃興友人以為宜慎（{tg("N32")}）。</li>
+    <li>6月底，約法問題的折衷方案（段祺瑞以私人身分經丁世嶧、蕭晉榮電詢在滬國會議員）「又翻」：段又堅持各省派三人之說（{tg("V4B")}，容密）。同時殷汝驪偕李書城入京，購械事仍與青木、高倉接洽（{tg("V4D")}）。</li>
     <li>黃興致湘籍老同志譚人鳳（石屛），表明條件：「黎公若能依法圖治，亂萌可遏；有違此旨，興亦弗承」（{tg("N29")}，明碼）。</li>
     <li>黃興支持陝軍，並促獨立各省北伐（{tg("N04")}，明碼）。</li>
     <li>日方中介：小池領事、有吉總領事（{tg("N30")}），田中、青木（{tg("N23")}）{unc("——可能的比定，尚未證實")}。</li>
@@ -137,7 +140,7 @@ HANT = f'''<!-- {{"title": "1916年6月：黃興電報所見", "description": "2
 </article>
 '''
 
-JA = f'''<!-- {{"title": "1916年6月：黄興の電報が語ること", "description": "2026年10月に解読された1916年6月の暗号電報24通から、黄興・日本・浙江と、袁世凱死後の元年約法回復について分かること。"}} -->
+JA = f'''<!-- {{"title": "1916年6月：黄興の電報が語ること", "description": "2026年10月に解読された1916年6月の暗号電報27通から、黄興・日本・浙江と、袁世凱死後の元年約法回復について分かること。"}} -->
 <article class="article">
   <header class="lede">
     <p class="kicker">歴史・1916年6月</p>
@@ -167,6 +170,7 @@ JA = f'''<!-- {{"title": "1916年6月：黄興の電報が語ること", "descri
   <h2 id="autres">その他</h2>
   <ul>
     <li>孫文は電報で所部に停戦を命じ、新聞に出たその返電が黄興の同志を心配させた（{tg("N32")}）。</li>
+    <li>6月末、約法をめぐる妥協案（段祺瑞が丁世嶧・蕭晋栄を通じて上海の国会議員に私人として電問する）は「また覆った」。段は各省三人代表案に戻る（{tg("V4B")}、容密）。同じころ殷汝驪は李書城とともに北京へ向かい、武器購入は青木・高倉と続く（{tg("V4D")}）。</li>
     <li>湖南の古参譚人鳳（石屛）にあてて、黄興は条件を示す。「黎公がもし法によって治めるなら乱の芽は抑えられよう。この趣旨に背くなら興もまた承服しない」（{tg("N29")}、平文）。</li>
     <li>黄興は陝西軍を支持し、独立各省に北伐を促した（{tg("N04")}、平文）。</li>
     <li>日本側の仲介者：小池領事と有吉総領事（{tg("N30")}）、田中と青木（{tg("N23")}）{unc("——推定であり、証明されていない")}。</li>

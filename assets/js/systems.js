@@ -45,7 +45,7 @@ window.WENMI_SYSTEMS = {
         k38: ['Table « Thirtyeight »', 'Tokyo → « Junzaburo », 11–12 mai 1916 ; indicateur en clair « Thirtyeight ». Table retrouvée en octobre 2026.'],
         h16: ['Table de Huang Xing', 'Tokyo (Huang Xing) → « Junzaburo », sans indicateur, et Shanghai → « Ylchang » (Huang Xing), fin mai – juin 1916. Table retrouvée en octobre 2026. À ne pas confondre avec le code à trois kana d\'un autre télégramme de Huang Xing (25 mai 1916, à Lin Hu et Li Genyuan), dont le système a été identifié par D. Bourdeau et la formule par S. Tomokiyo[22, 23].'],
         gongmi: ['Clé « 共密 » (C51)', 'Tokyo ↔ Shanghai, 10–16 juin 1916 ; Huang Xing, Zhang Ji. Dizaines remplacées (0→9, 1→7, 2→6, 3→1, 4→4, 5→0, 6→5, 7→2, 8→8, 9→3), puis P = 9000 − C. Clé reconstruite par Codex en octobre 2026 (voir la page <a href="gongmi.html">共密</a>).'],
-        rongmi: ['Clé « 容密 » (v2)', 'Tokyo ↔ Shanghai, 8–16 juin 1916 ; Zhang Xiaozhun, Huang Xing, Lü Gongwang, Yin Ruli, Ge Jing’en, Huang Fu. Chaque chiffre est remplacé selon son rang, puis P = C + 0901 avec retenues. Clé retrouvée en octobre 2026 (voir la page <a href="rongmi.html">容密</a> et la <a href="method.html#rongmi">méthode</a>).'],
+        rongmi: ['Clé « 容密 » (v2)', 'Tokyo ↔ Shanghai, 8–29 juin 1916 ; Zhang Xiaozhun, Huang Xing, Lü Gongwang, Yin Ruli, Ge Jing’en, Huang Fu. Chaque chiffre est remplacé selon son rang, puis P = C + 0901 avec retenues. Clé retrouvée en octobre 2026 (voir la page <a href="rongmi.html">容密</a> et la <a href="method.html#rongmi">méthode</a>).'],
         chenmi: ['Clé « 辰密 » (C92)', 'Tokyo → Shanghai (« ヒツキン », 霞飛路 277), 3–13 juin 1916 ; Huang Xing, Zhang Xiaozhun, le groupe hunanais de Shanghai. Pages renumérotées à rebours sur les nombres sans zéro (99 = page 00), dizaines et unités permutées, unité 9 = 10. Clé retrouvée en octobre 2026 (voir la page <a href="chenmi.html">辰密</a> et la <a href="method.html#chenmi">méthode</a>).'],
         clair: ['En clair', 'Télégrammes du même dossier envoyés sans chiffrement, directement en code télégraphique chinois : la réponse de Li Yuanhong à Huang Xing (14 juin), une lettre de Huang Xing à Tan Renfeng sur Li Yuanhong, un télégramme de Huang Xing sur le Shaanxi, un télégramme vers Mukden et un bref message signé 亞.']
       },
@@ -76,7 +76,7 @@ window.WENMI_SYSTEMS = {
         k38: ['“Thirtyeight” table', 'Tokyo → “Junzaburo”, 11–12 May 1916; clear indicator “Thirtyeight”. Table recovered in October 2026.'],
         h16: ['Huang Xing\'s table', 'Tokyo (Huang Xing) → “Junzaburo”, without indicator, and Shanghai → “Ylchang” (Huang Xing), late May – June 1916. Table recovered in October 2026. Not to be confused with the three-kana code of another telegram of Huang Xing (25 May 1916, to Lin Hu and Li Genyuan), whose system was identified by D. Bourdeau and whose formula by S. Tomokiyo[22, 23].'],
         gongmi: ['“Gongmi” (共密) key (C51)', 'Tokyo ↔ Shanghai, 10–16 June 1916; Huang Xing, Zhang Ji. Tens digit replaced (0→9, 1→7, 2→6, 3→1, 4→4, 5→0, 6→5, 7→2, 8→8, 9→3), then P = 9000 − C. Key reconstructed by Codex in October 2026 (see the <a href="gongmi.html">Gongmi</a> page).'],
-        rongmi: ['“Rongmi” (容密) key (v2)', 'Tokyo ↔ Shanghai, 8–16 June 1916; Zhang Xiaozhun, Huang Xing, Lü Gongwang, Yin Ruli, Ge Jing’en, Huang Fu. Each digit is replaced according to its place, then P = C + 0901 with carries. Key recovered in October 2026 (see the <a href="rongmi.html">Rongmi</a> page and the <a href="method.html#rongmi">method</a>).'],
+        rongmi: ['“Rongmi” (容密) key (v2)', 'Tokyo ↔ Shanghai, 8–29 June 1916; Zhang Xiaozhun, Huang Xing, Lü Gongwang, Yin Ruli, Ge Jing’en, Huang Fu. Each digit is replaced according to its place, then P = C + 0901 with carries. Key recovered in October 2026 (see the <a href="rongmi.html">Rongmi</a> page and the <a href="method.html#rongmi">method</a>).'],
         chenmi: ['“Chenmi” (辰密) key (C92)', 'Tokyo → Shanghai (“ヒツキン”, 277 Avenue Joffre), 3–13 June 1916; Huang Xing, Zhang Xiaozhun, the Hunanese group in Shanghai. Pages renumbered backwards over the numbers without a zero (99 = page 00), tens and units permuted, units 9 = 10. Key recovered in October 2026 (see the <a href="chenmi.html">Chenmi</a> page and the <a href="method.html#chenmi">method</a>).'],
         clair: ['In clear', 'Telegrams from the same file sent without encipherment, directly in Chinese telegraph code: Li Yuanhong’s reply to Huang Xing (14 June), Huang Xing’s message to Tan Renfeng about Li Yuanhong, a telegram of Huang Xing about Shaanxi, one to Mukden, and a short message signed 亞.']
       },
@@ -107,7 +107,7 @@ window.WENMI_SYSTEMS = {
         k38: ['「Thirtyeight」表', '東京 →「Junzaburo」，1916年5月11至12日；明碼標記「Thirtyeight」。2026年10月復原。'],
         h16: ['黃興的表', '東京（黃興）→「Junzaburo」（無標記）及上海 →「Ylchang」（黃興），1916年5月底至6月。2026年10月復原。勿與黃興另一封電報（1916年5月25日致林虎、李根源）的三假名電碼混淆：該系統由 D. Bourdeau 識別，其對應公式由 S. Tomokiyo 找出[22, 23]。'],
         gongmi: ['「共密」密鑰（C51）', '東京↔上海，1916年6月10–16日；黃興、張繼。替換十位數（0→9、1→7、2→6、3→1、4→4、5→0、6→5、7→2、8→8、9→3），再計算P = 9000 − C。密鑰由 Codex 於2026年10月復原（見<a href="gongmi.html">共密</a>頁面）。'],
-        rongmi: ['「容密」密鑰（v2）', '東京↔上海，1916年6月8–16日；張孝準、黃興、呂公望、殷汝驪、葛敬恩、黃郛。每位數字按其數位替換，再以進位計算P = C + 0901。密鑰於2026年10月找到（見<a href="rongmi.html">容密</a>頁面及<a href="method.html#rongmi">破譯方法</a>）。'],
+        rongmi: ['「容密」密鑰（v2）', '東京↔上海，1916年6月8–29日；張孝準、黃興、呂公望、殷汝驪、葛敬恩、黃郛。每位數字按其數位替換，再以進位計算P = C + 0901。密鑰於2026年10月找到（見<a href="rongmi.html">容密</a>頁面及<a href="method.html#rongmi">破譯方法</a>）。'],
         chenmi: ['「辰密」密鑰（C92）', '東京→上海（「ヒツキン」，霞飛路277號），1916年6月3–13日；黃興、張孝準、上海湘籍諸人。以不含零的數倒數編頁（99＝第00頁），十位與個位置換，個位9作10。密鑰於2026年10月找到（見<a href="chenmi.html">辰密</a>頁面及<a href="method.html#chenmi">破譯方法</a>）。'],
         clair: ['明碼', '同一卷宗中未加密、直接以中文電碼拍發的電報：黎元洪覆黃興電（6月14日）、黃興致譚人鳳論黎元洪電、黃興論陝事電、致奉天電及署名「亞」的短電。']
       },
@@ -138,7 +138,7 @@ window.WENMI_SYSTEMS = {
         k38: ['“Thirtyeight”表', '东京 →“Junzaburo”，1916年5月11至12日；明码标记“Thirtyeight”。2026年10月复原。'],
         h16: ['黄兴的表', '东京（黄兴）→“Junzaburo”（无标记）及上海 →“Ylchang”（黄兴），1916年5月底至6月。2026年10月复原。勿与黄兴另一封电报（1916年5月25日致林虎、李根源）的三假名电码混淆：该系统由 D. Bourdeau 识别，其对应公式由 S. Tomokiyo 找出[22, 23]。'],
         gongmi: ['“共密”密钥（C51）', '东京↔上海，1916年6月10–16日；黄兴、张继。替换十位数（0→9、1→7、2→6、3→1、4→4、5→0、6→5、7→2、8→8、9→3），再计算P = 9000 − C。密钥由 Codex 于2026年10月复原（见<a href="gongmi.html">共密</a>页面）。'],
-        rongmi: ['“容密”密钥（v2）', '东京↔上海，1916年6月8–16日；张孝准、黄兴、吕公望、殷汝骊、葛敬恩、黄郛。每位数字按其数位替换，再以进位计算P = C + 0901。密钥于2026年10月找到（见<a href="rongmi.html">容密</a>页面及<a href="method.html#rongmi">破译方法</a>）。'],
+        rongmi: ['“容密”密钥（v2）', '东京↔上海，1916年6月8–29日；张孝准、黄兴、吕公望、殷汝骊、葛敬恩、黄郛。每位数字按其数位替换，再以进位计算P = C + 0901。密钥于2026年10月找到（见<a href="rongmi.html">容密</a>页面及<a href="method.html#rongmi">破译方法</a>）。'],
         chenmi: ['“辰密”密钥（C92）', '东京→上海（“ヒツキン”，霞飞路277号），1916年6月3–13日；黄兴、张孝准、上海湘籍诸人。以不含零的数倒数编页（99＝第00页），十位与个位置换，个位9作10。密钥于2026年10月找到（见<a href="chenmi.html">辰密</a>页面及<a href="method.html#chenmi">破译方法</a>）。'],
         clair: ['明码', '同一卷宗中未加密、直接以中文电码拍发的电报：黎元洪复黄兴电（6月14日）、黄兴致谭人凤论黎元洪电、黄兴论陕事电、致奉天电及署名“亚”的短电。']
       },
@@ -169,7 +169,7 @@ window.WENMI_SYSTEMS = {
         k38: ['「Thirtyeight」表', '東京 →「Junzaburo」、1916年5月11〜12日。平文の標識「Thirtyeight」。2026年10月に復元。'],
         h16: ['黄興の表', '東京（黄興）→「Junzaburo」（標識なし）および上海 →「Ylchang」（黄興）、1916年5月末〜6月。2026年10月に復元。黄興の別の電報（1916年5月25日、林虎・李根源宛）の三仮名コードとは別物である。その方式は D. Bourdeau が、対応の公式は S. Tomokiyo が明らかにした[22, 23]。'],
         gongmi: ['「共密」の鍵（C51）', '東京↔上海、1916年6月10〜16日。黄興、張継。十の位を置き換え（0→9、1→7、2→6、3→1、4→4、5→0、6→5、7→2、8→8、9→3）、P = 9000 − C。鍵は2026年10月にCodexが復元（<a href="gongmi.html">共密</a>のページ参照）。'],
-        rongmi: ['「容密」の鍵（v2）', '東京↔上海、1916年6月8〜16日。張孝準、黄興、呂公望、殷汝驪、葛敬恩、黄郛。各桁を位ごとに置き換え、繰り上がりつきでP = C + 0901。鍵は2026年10月に発見（<a href="rongmi.html">容密</a>のページと<a href="method.html#rongmi">方法</a>参照）。'],
+        rongmi: ['「容密」の鍵（v2）', '東京↔上海、1916年6月8〜29日。張孝準、黄興、呂公望、殷汝驪、葛敬恩、黄郛。各桁を位ごとに置き換え、繰り上がりつきでP = C + 0901。鍵は2026年10月に発見（<a href="rongmi.html">容密</a>のページと<a href="method.html#rongmi">方法</a>参照）。'],
         chenmi: ['「辰密」の鍵（C92）', '東京→上海（「ヒツキン」、霞飛路277）、1916年6月3〜13日。黄興、張孝準、上海の湖南派。0を含まない数を逆に数えて頁とし（99＝00頁）、十の位と一の位を置換、一の位9＝10。鍵は2026年10月に発見（<a href="chenmi.html">辰密</a>のページと<a href="method.html#chenmi">方法</a>参照）。'],
         clair: ['平文', '同じ綴りのうち暗号化せず中文電碼で直接打たれた電報：黎元洪から黄興への返電（6月14日）、黎元洪について譚人鳳にあてた黄興の電報、陝西に関する黄興の電報、奉天宛ての電報、「亞」署名の短電。']
       },

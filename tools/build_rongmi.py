@@ -13,8 +13,12 @@ SITE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 WENMI = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else os.path.join(SITE, '..', 'wenmi'))
 D = json.load(open(os.path.join(WENMI, 'cryptanalysis/c83/site-data.json'), encoding='utf-8'))
 M = D['messages']
+V4 = json.load(open(os.path.join(WENMI, 'cryptanalysis/c99/site-data.json'), encoding='utf-8'))['messages']
+M.update(V4)
+sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c99'))
+import segments_v4 as SV4                             # noqa: E402
 LANGS = ['fr', 'en', 'ja', 'zh-hans', 'zh-hant']
-ORDER = ['N14', 'N19b', 'N02', 'N08', 'N11', 'N12', 'N19a', 'N28', 'N21', 'N25', 'N36', 'N24']
+ORDER = ['N14', 'N19b', 'N02', 'N08', 'N11', 'N12', 'N19a', 'N28', 'N21', 'N25', 'N36', 'N24', 'V4B', 'V4D']
 e = html.escape
 JACAR = 'https://www.jacar.archives.go.jp/das/meta/'
 
@@ -22,10 +26,11 @@ JACAR = 'https://www.jacar.archives.go.jp/das/meta/'
 IMG = os.path.join(SITE, 'assets', 'img', 'rongmi')
 os.makedirs(IMG, exist_ok=True)
 def scan_path(arch, page):
-    for name in (f'{arch}-{page:02d}.png', f'{arch}-{page}.png'):
-        p = os.path.join(WENMI, 'working', 'ylc-ocr', 'png', name)
-        if os.path.exists(p):
-            return p
+    for d in ('ylc-ocr/png', 'v4-png'):
+        for name in (f'{arch}-{page:02d}.png', f'{arch}-{page}.png'):
+            p = os.path.join(WENMI, 'working', d, name)
+            if os.path.exists(p):
+                return p
     raise FileNotFoundError(arch, page)
 def make_images(mid):
     out = []
@@ -45,10 +50,10 @@ def make_images(mid):
 # ---------------------------------------------------------------- textes
 T = {
 'fr': dict(
-  title='容密 — douze télégrammes de juin 1916 et leur clé',
-  desc='Édition des douze télégrammes 容密 lisibles (juin 1916, Huang Xing, Zhang Xiaozhun, Zhejiang) et de la clé retrouvée, avec lectures probables signalées.',
-  kicker='Déchiffrement · Juin 1916', h1='容密 : douze télégrammes et leur clé',
-  stand='Douze télégrammes chiffrés échangés en juin 1916 entre Tokyo et Shanghai, autour de Huang Xing et de Zhang Xiaozhun : achat d’armes au Japon pour le Zhejiang, emprunts, et négociation avec Pékin après la mort de Yuan Shikai. Une seule clé les lit tous.',
+  title='容密 — quatorze télégrammes de juin 1916 et leur clé',
+  desc='Édition des quatorze télégrammes 容密 lisibles (juin 1916, Huang Xing, Zhang Xiaozhun, Zhejiang) et de la clé retrouvée, avec lectures probables signalées.',
+  kicker='Déchiffrement · Juin 1916', h1='容密 : quatorze télégrammes et leur clé',
+  stand='Quatorze télégrammes chiffrés échangés en juin 1916 entre Tokyo et Shanghai, autour de Huang Xing et de Zhang Xiaozhun : achat d’armes au Japon pour le Zhejiang, emprunts, et négociation avec Pékin après la mort de Yuan Shikai. Une seule clé les lit tous.',
   credits='Parcours des grilles : Brice Dudout. Transcription des feuillets de suite, recherche de la clé, traduction et lectures probables : Claude (Anthropic). Relecture de tous les chiffres : Brice Dudout. Modèle de départ (quatre substitutions de chiffres) : essais de Codex.',
   warn='Clé reconstruite, pas retrouvée dans un livre de code historique. Les traductions sont des propositions de travail ; les lectures probables sont distinguées du texte décodé, jamais substituées à lui. Les identifications de personnes sont des candidats, avec leur source.',
   keyh='La clé',
@@ -64,7 +69,7 @@ T = {
   crit='Traduction critique alignée', critp='Traduction de travail par segments ; les lacunes et degrés d’incertitude restent visibles.',
   st={'literal': 'Segment lisible, non certifié', 'provisional': 'Interprétation provisoire', 'unresolved': 'Non restitué', 'conjectural': 'Conjecture explicite'},
   ctx='Contexte', ctxp=['Les télégrammes datés vont du 9 au 16 juin 1916, juste après la mort de Yuan Shikai (6 juin). Le Zhejiang, dont le dujun Lü Gongwang est en poste depuis le 6 mai, cherche à acheter des armes au Japon ; Zhang Xiaozhun (字 潤農), à Tokyo avec Huang Xing, mène les négociations (N02, N08, N12, N14) et rend compte à Huang Qun (溯初, N11) et à Jiang Fangzhen (百里, N19a, N28).',
-                       'De Shanghai, Yin Ruli, Ge Jing’en et Huang Fu (signature abrégée 驪郛恩) transmettent les questions de Lü Gongwang (N21, N25, N36) et rendent compte à Huang Xing des tractations avec Pékin (N24) : Li Yuanhong invite les personnalités de Shanghai ; Tang Hualong (濟武), Gu Zhongxiu (九峯), Zhang Ji (溥泉) et Fan Yuanlian (靜生) sont pressentis ; on pose comme condition l’abolition des lois de Yuan et le retour à la Constitution provisoire de 1912, rétablie le 29 juin.'],
+                       'De Shanghai, Yin Ruli, Ge Jing’en et Huang Fu (signature abrégée 驪郛恩) transmettent les questions de Lü Gongwang (N21, N25, N36) et rendent compte à Huang Xing des tractations avec Pékin (N24) : Li Yuanhong invite les personnalités de Shanghai ; Tang Hualong (濟武), Gu Zhongxiu (九峯), Zhang Ji (溥泉) et Fan Yuanlian (靜生) sont pressentis ; on pose comme condition l’abolition des lois de Yuan et le retour à la Constitution provisoire de 1912, rétablie le 29 juin.','Deux autres télégrammes 容密 de fin juin, interceptés et classés au volume suivant (V4B, V4D), ainsi qu’un 共密 du 2 juillet (V4E), se lisent avec les mêmes clés sans réajustement : poursuite des achats d’armes (Aoki, Takakura), départ de Yin Ruli et de Li Shucheng pour Pékin, et revirement de Duan Qirui sur la procédure de rétablissement de la Constitution.'],
   srcp='Sources : formulaires JACAR <a href="sources.html#s27">[27]</a> ; noms de courtoisie et fonctions : biographies citées en <a href="sources.html#s28">[28]</a> ; codes de jours : <a href="https://archives.sinica.edu.tw/freePage/150/32">Academia Sinica</a>. Décodeur : <a href="https://github.com/bdudout/wenmi/tree/main/solver/rongmi">solver/rongmi</a>.',
   methodlink='Voir aussi la <a href="method.html#rongmi">méthode</a> et les pages <a href="gongmi.html">共密</a> et <a href="chenmi.html">辰密</a>.',
   dirs={'TS': 'Tokyo → Shanghai', 'ST': 'Shanghai → Tokyo'},
@@ -72,10 +77,10 @@ T = {
   n23p='Lu après la publication de N17–N18, avec la même clé C51, sur une transcription de Claude relue par Brice Dudout (19 octobre 2026). Un chiffre manque entre les feuillets 2 et 3 (déduit du décodage). Lectures probables entre accolades.',
 ),
 'en': dict(
-  title='Rongmi — twelve telegrams of June 1916 and their key',
-  desc='Edition of the eleven readable Rongmi (容密) telegrams (June 1916, Huang Xing, Zhang Xiaozhun, Zhejiang) and of the recovered key, with probable readings marked.',
-  kicker='Decipherment · June 1916', h1='Rongmi (容密): twelve telegrams and their key',
-  stand='Twelve cipher telegrams exchanged in June 1916 between Tokyo and Shanghai around Huang Xing and Zhang Xiaozhun: buying arms in Japan for Zhejiang, loans, and negotiations with Beijing after Yuan Shikai’s death. A single key reads them all.',
+  title='Rongmi — fourteen telegrams of June 1916 and their key',
+  desc='Edition of the fourteen readable Rongmi (容密) telegrams (June 1916, Huang Xing, Zhang Xiaozhun, Zhejiang) and of the recovered key, with probable readings marked.',
+  kicker='Decipherment · June 1916', h1='Rongmi (容密): fourteen telegrams and their key',
+  stand='Fourteen cipher telegrams exchanged in June 1916 between Tokyo and Shanghai around Huang Xing and Zhang Xiaozhun: buying arms in Japan for Zhejiang, loans, and negotiations with Beijing after Yuan Shikai’s death. A single key reads them all.',
   credits='Grid reading order: Brice Dudout. Transcription of the continuation sheets, key recovery, translation and probable readings: Claude (Anthropic). All digits re-read by Brice Dudout. Starting model (four digit substitutions): Codex’s trials.',
   warn='The key is a reconstruction, not taken from a historical code book. Translations are working proposals; probable readings are shown beside the decoded text, never in place of it. Identifications of people are candidates, with their source.',
   keyh='The key',
@@ -90,7 +95,7 @@ T = {
   scans='Forms and JACAR sources', table='Digits and CTC, group by group', th=['#', 'C', 'CTC', 'Char.', 'Sheet'], prefix='prefix',
   crit='Aligned critical translation', critp='The segment-by-segment working translation is in French.', critlink='See the French aligned translation',
   ctx='Context', ctxp=['The dated telegrams run from 9 to 16 June 1916, just after Yuan Shikai’s death (6 June). Zhejiang, whose military governor Lü Gongwang took office on 6 May, is trying to buy arms in Japan; Zhang Xiaozhun (courtesy name 潤農), in Tokyo with Huang Xing, leads the talks (N02, N08, N12, N14) and reports to Huang Qun (溯初, N11) and Jiang Fangzhen (百里, N19a, N28).',
-                       'From Shanghai, Yin Ruli, Ge Jing’en and Huang Fu (abbreviated signature 驪郛恩) relay Lü Gongwang’s questions (N21, N25, N36) and report to Huang Xing on the dealings with Beijing (N24): Li Yuanhong invites the Shanghai notables; Tang Hualong (濟武), Gu Zhongxiu (九峯), Zhang Ji (溥泉) and Fan Yuanlian (靜生) are approached; the condition set is the repeal of Yuan’s laws and a return to the 1912 Provisional Constitution, restored on 29 June.'],
+                       'From Shanghai, Yin Ruli, Ge Jing’en and Huang Fu (abbreviated signature 驪郛恩) relay Lü Gongwang’s questions (N21, N25, N36) and report to Huang Xing on the dealings with Beijing (N24): Li Yuanhong invites the Shanghai notables; Tang Hualong (濟武), Gu Zhongxiu (九峯), Zhang Ji (溥泉) and Fan Yuanlian (靜生) are approached; the condition set is the repeal of Yuan’s laws and a return to the 1912 Provisional Constitution, restored on 29 June.','Two more Rongmi telegrams from late June, intercepted and filed in the next volume (V4B, V4D), and a Gongmi of 2 July (V4E) read with the same keys without refitting: the arms purchase continues (Aoki, Takakura), Yin Ruli and Li Shucheng leave for Beijing, and Duan Qirui reverses himself on the procedure for restoring the Constitution.'],
   srcp='Sources: JACAR forms <a href="sources.html#s27">[27]</a>; courtesy names and offices: biographies cited in <a href="sources.html#s28">[28]</a>; day codes: <a href="https://archives.sinica.edu.tw/freePage/150/32">Academia Sinica</a>. Decoder: <a href="https://github.com/bdudout/wenmi/tree/main/solver/rongmi">solver/rongmi</a>.',
   methodlink='See also the <a href="method.html#rongmi">method</a> and the <a href="gongmi.html">Gongmi</a> and <a href="chenmi.html">Chenmi</a> pages.',
   dirs={'TS': 'Tokyo → Shanghai', 'ST': 'Shanghai → Tokyo'},
@@ -98,10 +103,10 @@ T = {
   n23p='Read after the publication of N17–N18, with the same C51 key, from Claude’s transcription re-read by Brice Dudout (19 October 2026). One digit is missing between sheets 2 and 3 (inferred from decoding). Probable readings in braces.',
 ),
 'ja': dict(
-  title='容密——1916年6月の電報12通とその鍵',
-  desc='解読できた容密電報12通（1916年6月、黄興・張孝準・浙江）と復元した鍵。推定読みは区別して示す。',
-  kicker='解読・1916年6月', h1='容密：電報12通とその鍵',
-  stand='1916年6月、黄興と張孝準をめぐって東京と上海の間で交わされた暗号電報12通。浙江のための日本での武器購入、借款、袁世凱の死後の北京との交渉。ひとつの鍵ですべてが読める。',
+  title='容密——1916年6月の電報14通とその鍵',
+  desc='解読できた容密電報14通（1916年6月、黄興・張孝準・浙江）と復元した鍵。推定読みは区別して示す。',
+  kicker='解読・1916年6月', h1='容密：電報14通とその鍵',
+  stand='1916年6月、黄興と張孝準をめぐって東京と上海の間で交わされた暗号電報14通。浙江のための日本での武器購入、借款、袁世凱の死後の北京との交渉。ひとつの鍵ですべてが読める。',
   credits='升目の読み順：Brice Dudout。続き用紙の翻字、鍵の復元、翻訳と推定読み：Claude（Anthropic）。数字はすべてBrice Dudoutが再読。出発点のモデル（桁ごとの4つの置換）：Codexの試行。',
   warn='鍵は復元であり、歴史的な電碼本から得たものではない。翻訳は作業案であり、推定読みは解読文と並べて示し、置き換えない。人物の比定は出典つきの候補である。',
   keyh='鍵',
@@ -116,7 +121,7 @@ T = {
   scans='用紙とJACAR出典', table='組ごとの数字とCTC', th=['#', 'C', 'CTC', '字', '用紙'], prefix='前置き',
   crit='対照校訂訳', critp='段落ごとの作業訳はフランス語版にある。', critlink='フランス語の対照訳を見る',
   ctx='背景', ctxp=['日付のある電報は1916年6月9日から16日、袁世凱の死（6月6日）の直後である。5月6日に就任した浙江督軍呂公望は日本で武器を買おうとしており、黄興とともに東京にいる張孝準（字潤農）が交渉にあたり（N02、N08、N12、N14）、黄群（溯初、N11）と蔣方震（百里、N19a、N28）に報告する。',
-                     '上海からは殷汝驪・葛敬恩・黄郛（略署名「驪郛恩」）が呂公望の問い合わせを伝え（N21、N25、N36）、北京との交渉を黄興に報告する（N24）。黎元洪は上海の名士を招き、湯化龍（濟武）・谷鍾秀（九峯）・張継（溥泉）・范源濂（靜生）が候補とされ、袁の法令の廃止と1912年の臨時約法への復帰が条件とされた。約法は6月29日に回復される。'],
+                     '上海からは殷汝驪・葛敬恩・黄郛（略署名「驪郛恩」）が呂公望の問い合わせを伝え（N21、N25、N36）、北京との交渉を黄興に報告する（N24）。黎元洪は上海の名士を招き、湯化龍（濟武）・谷鍾秀（九峯）・張継（溥泉）・范源濂（靜生）が候補とされ、袁の法令の廃止と1912年の臨時約法への復帰が条件とされた。約法は6月29日に回復される。','翌巻に綴じられた6月末の容密電報2通（V4B・V4D）と7月2日の共密1通（V4E）も、同じ鍵で再調整なしに読める。武器購入の継続（青木・高倉）、殷汝驪と李書城の北京行き、約法回復の手続きをめぐる段祺瑞の翻意。'],
   srcp='出典：JACARの用紙<a href="sources.html#s27">[27]</a>、字と役職：<a href="sources.html#s28">[28]</a>の伝記、日付の韻目：<a href="https://archives.sinica.edu.tw/freePage/150/32">中央研究院</a>。解読プログラム：<a href="https://github.com/bdudout/wenmi/tree/main/solver/rongmi">solver/rongmi</a>。',
   methodlink='<a href="method.html#rongmi">方法</a>・<a href="gongmi.html">共密</a>・<a href="chenmi.html">辰密</a>のページも参照。',
   dirs={'TS': '東京→上海', 'ST': '上海→東京'},
@@ -124,10 +129,10 @@ T = {
   n23p='N17・N18の公開後、同じC51の鍵で読んだもの。Claudeの翻字をBrice Dudoutが再読（2026年10月19日）。用紙2と3の間で1桁脱落（解読から推定）。推定読みは波括弧内。',
 ),
 'zh-hans': dict(
-  title='容密——1916年6月的十二封电报及其密钥',
-  desc='可读的十二封容密电报（1916年6月，黄兴、张孝准、浙江）及复原的密钥，推定读法另行标出。',
-  kicker='破译·1916年6月', h1='容密：十二封电报及其密钥',
-  stand='1916年6月围绕黄兴与张孝准、在东京与上海之间往来的十二封密电：为浙江在日本购械、借款，以及袁世凯死后与北京的交涉。一把密钥即可读出全部。',
+  title='容密——1916年6月的十四封电报及其密钥',
+  desc='可读的十四封容密电报（1916年6月，黄兴、张孝准、浙江）及复原的密钥，推定读法另行标出。',
+  kicker='破译·1916年6月', h1='容密：十四封电报及其密钥',
+  stand='1916年6月围绕黄兴与张孝准、在东京与上海之间往来的十四封密电：为浙江在日本购械、借款，以及袁世凯死后与北京的交涉。一把密钥即可读出全部。',
   credits='方格读序：Brice Dudout。续页誊录、密钥复原、翻译与推定读法：Claude（Anthropic）。全部数字由 Brice Dudout 复读。起点模型（逐位四重替换）：Codex 的试验。',
   warn='密钥为复原所得，并非取自历史电码本。译文为工作稿；推定读法与解码文字并列，绝不替代。人物比定为候选，并注明出处。',
   keyh='密钥',
@@ -142,7 +147,7 @@ T = {
   scans='电报纸与JACAR来源', table='逐组数字与CTC', th=['#', 'C', 'CTC', '字', '页'], prefix='前缀',
   crit='对照校订译文', critp='逐段工作译文见法文版。', critlink='查看法文逐段对照译稿',
   ctx='背景', ctxp=['有日期的电报在1916年6月9日至16日之间，正值袁世凯死后（6月6日）。5月6日就任的浙江督军吕公望欲向日本购械；与黄兴同在东京的张孝准（字润农）负责交涉（N02、N08、N12、N14），并向黄群（溯初，N11）和蒋方震（百里，N19a、N28）报告。',
-                      '上海方面，殷汝骊、葛敬恩、黄郛（简署“骊郛恩”）转达吕公望的询问（N21、N25、N36），并向黄兴报告与北京的交涉（N24）：黎元洪邀请沪上名流；汤化龙（济武）、谷钟秀（九峯）、张继（溥泉）、范源濂（静生）被提名；条件是废除袁氏伪法、恢复元年约法。约法于6月29日恢复。'],
+                      '上海方面，殷汝骊、葛敬恩、黄郛（简署“骊郛恩”）转达吕公望的询问（N21、N25、N36），并向黄兴报告与北京的交涉（N24）：黎元洪邀请沪上名流；汤化龙（济武）、谷钟秀（九峯）、张继（溥泉）、范源濂（静生）被提名；条件是废除袁氏伪法、恢复元年约法。约法于6月29日恢复。','另卷所收6月底的两封容密电报（V4B、V4D）及7月2日的一封共密（V4E），以同一密钥无需重新拟合即可读出：继续购械（青木、高仓），殷汝骊与李书城入京，段祺瑞在恢复约法程序上的反复。'],
   srcp='来源：JACAR电报纸<a href="sources.html#s27">[27]</a>；字号与职务：<a href="sources.html#s28">[28]</a>所引传记；韵目代日：<a href="https://archives.sinica.edu.tw/freePage/150/32">中央研究院</a>。解码程序：<a href="https://github.com/bdudout/wenmi/tree/main/solver/rongmi">solver/rongmi</a>。',
   methodlink='另见<a href="method.html#rongmi">方法</a>、<a href="gongmi.html">共密</a>与<a href="chenmi.html">辰密</a>页面。',
   dirs={'TS': '东京→上海', 'ST': '上海→东京'},
@@ -150,10 +155,10 @@ T = {
   n23p='在N17、N18发表后，以同一C51密钥读出；据Claude誊录、Brice Dudout复读（2026年10月19日）。第2、3页之间脱漏一位数字（据解码推断）。推定读法见花括号。',
 ),
 'zh-hant': dict(
-  title='容密——1916年6月的十二封電報及其密鑰',
-  desc='可讀的十二封容密電報（1916年6月，黃興、張孝準、浙江）及復原的密鑰，推定讀法另行標出。',
-  kicker='破譯·1916年6月', h1='容密：十二封電報及其密鑰',
-  stand='1916年6月圍繞黃興與張孝準、在東京與上海之間往來的十二封密電：為浙江在日本購械、借款，以及袁世凱死後與北京的交涉。一把密鑰即可讀出全部。',
+  title='容密——1916年6月的十四封電報及其密鑰',
+  desc='可讀的十四封容密電報（1916年6月，黃興、張孝準、浙江）及復原的密鑰，推定讀法另行標出。',
+  kicker='破譯·1916年6月', h1='容密：十四封電報及其密鑰',
+  stand='1916年6月圍繞黃興與張孝準、在東京與上海之間往來的十四封密電：為浙江在日本購械、借款，以及袁世凱死後與北京的交涉。一把密鑰即可讀出全部。',
   credits='方格讀序：Brice Dudout。續頁謄錄、密鑰復原、翻譯與推定讀法：Claude（Anthropic）。全部數字由 Brice Dudout 複讀。起點模型（逐位四重替換）：Codex 的試驗。',
   warn='密鑰為復原所得，並非取自歷史電碼本。譯文為工作稿；推定讀法與解碼文字並列，絕不替代。人物比定為候選，並注明出處。',
   keyh='密鑰',
@@ -168,7 +173,7 @@ T = {
   scans='電報紙與JACAR來源', table='逐組數字與CTC', th=['#', 'C', 'CTC', '字', '頁'], prefix='前綴',
   crit='對照校訂譯文', critp='逐段工作譯文見法文版。', critlink='查看法文逐段對照譯稿',
   ctx='背景', ctxp=['有日期的電報在1916年6月9日至16日之間，正值袁世凱死後（6月6日）。5月6日就任的浙江督軍呂公望欲向日本購械；與黃興同在東京的張孝準（字潤農）負責交涉（N02、N08、N12、N14），並向黃群（溯初，N11）和蔣方震（百里，N19a、N28）報告。',
-                      '上海方面，殷汝驪、葛敬恩、黃郛（簡署「驪郛恩」）轉達呂公望的詢問（N21、N25、N36），並向黃興報告與北京的交涉（N24）：黎元洪邀請滬上名流；湯化龍（濟武）、谷鍾秀（九峯）、張繼（溥泉）、范源濂（靜生）被提名；條件是廢除袁氏偽法、恢復元年約法。約法於6月29日恢復。'],
+                      '上海方面，殷汝驪、葛敬恩、黃郛（簡署「驪郛恩」）轉達呂公望的詢問（N21、N25、N36），並向黃興報告與北京的交涉（N24）：黎元洪邀請滬上名流；湯化龍（濟武）、谷鍾秀（九峯）、張繼（溥泉）、范源濂（靜生）被提名；條件是廢除袁氏偽法、恢復元年約法。約法於6月29日恢復。','另卷所收6月底的兩封容密電報（V4B、V4D）及7月2日的一封共密（V4E），以同一密鑰無需重新擬合即可讀出：繼續購械（青木、高倉），殷汝驪與李書城入京，段祺瑞在恢復約法程序上的反覆。'],
   srcp='來源：JACAR電報紙<a href="sources.html#s27">[27]</a>；字號與職務：<a href="sources.html#s28">[28]</a>所引傳記；韻目代日：<a href="https://archives.sinica.edu.tw/freePage/150/32">中央研究院</a>。解碼程式：<a href="https://github.com/bdudout/wenmi/tree/main/solver/rongmi">solver/rongmi</a>。',
   methodlink='另見<a href="method.html#rongmi">方法</a>、<a href="gongmi.html">共密</a>與<a href="chenmi.html">辰密</a>頁面。',
   dirs={'TS': '東京→上海', 'ST': '上海→東京'},
@@ -259,6 +264,7 @@ SUMMARY['en']['N19b']='Huang Xing to the Shanghai senders (reply to the 8th and 
 SUMMARY['ja']['N19b']='黄興から上海の発信者へ（8日・9日電への返電）：約法と国会の回復に賛成、ただし武力なしには無効。浙江は東南の砥柱たれ。陸栄廷・李烈鈞は鄂・贛に出兵を。日本は統一まで北京に借款しない。'
 SUMMARY['zh-hant']['N19b']='黃興覆滬上諸君（齊、佳兩電）：贊成恢復約法與國會，惟非有武力後援必無効果；浙省宜作東南砥柱；陸榮廷、李烈鈞速出鄂贛；日本非南北統一不借款於北京。'
 SUMMARY['zh-hans']['N19b']='黄兴复沪上诸君（齐、佳两电）：赞成恢复约法与国会，惟非有武力后援必无効果；浙省宜作东南砥柱；陆荣廷、李烈钧速出鄂赣；日本非南北统一不借款于北京。'
+for _L in ('en', 'ja', 'zh-hant', 'zh-hans'): SUMMARY[_L].update(SV4.SUMMARY[_L])
 UNREAD = {'fr': 'date non lue', 'en': 'date not read', 'ja': '日付未読', 'zh-hans': '日期未读', 'zh-hant': '日期未讀'}
 def date_str(mid, L):
     m = M[mid]['meta']
@@ -270,6 +276,12 @@ def date_str(mid, L):
         return {'en': 'day 8 (庚); month not read', 'ja': '8日（庚）、月は未読', 'zh-hans': '8日（庚），月份未读', 'zh-hant': '8日（庚），月份未讀'}[L]
     if mid == 'N24':
         return {'en': 'header not read; after 9 June', 'ja': '見出し未読、6月9日以降', 'zh-hans': '电头未读；6月9日之后', 'zh-hant': '電頭未讀；6月9日之後'}[L]
+    if mid == 'V4E':
+        return {'en': 'received 2 July 1916', 'ja': '1916年7月2日受信', 'zh-hans': '1916年7月2日收到', 'zh-hant': '1916年7月2日收到'}[L]
+    if mid == 'V4D':
+        return {'en': 'date not read; late June 1916', 'ja': '日付未読、1916年6月末', 'zh-hans': '日期未读；1916年6月底', 'zh-hant': '日期未讀；1916年6月底'}[L]
+    if mid == 'V4B':
+        return {'en': 'June 25, 1916 ?', 'ja': '1916年6月25日？', 'zh-hans': '1916年6月25日？', 'zh-hant': '1916年6月25日？'}[L]
     if mid in ('N19a', 'N25'):
         dd = 11 if mid == 'N19a' else 14
         return {'en': f'June {dd}, 1916 ? (inventory)', 'ja': f'1916年6月{dd}日？（目録）', 'zh-hans': f'1916年6月{dd}日？（目录）', 'zh-hant': f'1916年6月{dd}日？（目錄）'}[L]
@@ -290,6 +302,7 @@ sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c84'))
 import tr_i18n as TRX                                 # noqa: E402
 sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c88'))
 import baihua as BH                                   # noqa: E402
+BH.BAIHUA.update(SV4.BAIHUA); TRX.EN.update(SV4.EN); TRX.JA.update(SV4.JA)
 import c1916_i18n as _C                               # noqa: E402
 _T2 = _C.t2s_table(WENMI)
 TLABEL = {'fr': 'Traduction', 'en': 'Translation', 'ja': '日本語訳', 'zh-hans': '白话译文', 'zh-hant': '白話譯文'}
@@ -303,12 +316,13 @@ def translation(mid, L):
     if L == 'zh-hans': return _C.to_hans(BH.BAIHUA.get(mid, ''), _T2)
     return ''
 
+PARTIAL = {'fr': 'chiffres relus par Brice Dudout sur 4 feuillets sur 22 seulement', 'en': 'digits re-read by Brice Dudout on only 4 of 22 sheets', 'ja': '再読は22枚中4枚のみ', 'zh-hans': '22页中仅4页数字经复读', 'zh-hant': '22頁中僅4頁數字經複讀'}
 def message_section(mid, L, h2=None):
     t = T[L]; m = M[mid]; segs = m['segments']
     reading = ''.join(s['zh'] for s in segs)
     info = [f'{len(m["groups"]) - 2} {t["groups"]}', f'{t["date"]} : {e(date_str(mid, L))}' if L == 'fr' else f'{t["date"]}: {e(date_str(mid, L))}',
             f'{t["dirl"]} : {e(direction(mid, L))}' if L == 'fr' else f'{t["dirl"]}: {e(direction(mid, L))}',
-            f'{m["sheet_count"]} {t["sheets"]}', t['reread'] if m['reread_by_brice'] else f'<mark class="unc">{t["notreread"]}</mark>']
+            f'{m["sheet_count"]} {t["sheets"]}', t['reread'] if m['reread_by_brice'] else f'<mark class="unc">{PARTIAL[L] if m.get("reread_partial") else t["notreread"]}</mark>']
     reps = []
     for kind, pos in m['repairs']:
         k = min(pos // 4, len(m['groups']) - 1)
@@ -377,37 +391,37 @@ def insert_n23(L):
     open(p, 'w', encoding='utf-8').write(s)
 
 # ---------------------------------------------------------------- 共密 : six autres télégrammes et lectures probables (C84)
-GM_EXTRA = ['N23', 'N27', 'N30', 'N32', 'N33', 'N35']
+GM_EXTRA = ['N23', 'N27', 'N30', 'N32', 'N33', 'N35', 'V4E']
 GM_HEAD = {
- 'fr': ('共密 — huit télégrammes de juin 1916, une clé candidate', 'Édition critique partielle des télégrammes 共密 N17, N18, N23, N27, N30, N32, N33 et N35 sous la clé C51, avec lectures probables signalées.',
-        'Édition critique partielle de huit télégrammes',
-        'Huit télégrammes de juin 1916 (Huang Xing, Zhang Ji et le groupe de Shanghai) se lisent, au moins en partie, avec la clé candidate C51 ; N07 reste illisible. Les caractères incertains restent signalés.',
+ 'fr': ('共密 — neuf télégrammes de juin 1916, une clé candidate', 'Édition critique partielle des télégrammes 共密 N17, N18, N23, N27, N30, N32, N33, N35 et V4E sous la clé C51, avec lectures probables signalées.',
+        'Édition critique partielle de neuf télégrammes',
+        'Neuf télégrammes de juin 1916 (Huang Xing, Zhang Ji et le groupe de Shanghai) se lisent, au moins en partie, avec la clé candidate C51 ; N07 reste illisible. Les caractères incertains restent signalés.',
         'Six télégrammes de plus et lectures probables (octobre 2026)',
         'Après la publication de N17 et N18, les corps de N23, N27, N30, N32, N33 et N35 ont été rassemblés (transcriptions de Codex et de Claude, toutes relues par Brice Dudout le 19 octobre 2026, sans voir le déchiffrement). Les vérifications de contexte les relient au dossier 容密 : 溥 = 溥泉 (Zhang Ji) dans N27 et N30, qui reprend le « 以個人名義 » de N24 ; N32 est signé 葛、殷、黃 (Ge Jing’en, Yin Ruli, Huang Fu). N35 écrit 8 là où les autres télégrammes 共密 écrivent 3 pour les mêmes mots (表 3007, 袁 3087). La relecture a confirmé six lectures probables à un chiffre près (呂, 請, 咸, 張, 黃, 各) et restitué la signature 興 de N35 (lue 議 auparavant). Les lectures probables suivent la même convention que la page <a href="rongmi.html">容密</a>.',
         'Lectures probables pour N17 et N18', ['Brut', 'Lecture probable', 'Appui']),
- 'en': ('Gongmi — eight telegrams from June 1916, a candidate key', 'A partial critical edition of Gongmi telegrams N17, N18, N23, N27, N30, N32, N33 and N35 under key C51, with probable readings marked.',
-        'A partial critical edition of eight telegrams',
-        'Eight telegrams of June 1916 (Huang Xing, Zhang Ji and the Shanghai group) can be read, at least in part, with candidate key C51; N07 remains unread. Uncertain characters remain marked.',
+ 'en': ('Gongmi — nine telegrams from June 1916, a candidate key', 'A partial critical edition of Gongmi telegrams N17, N18, N23, N27, N30, N32, N33, N35 and V4E under key C51, with probable readings marked.',
+        'A partial critical edition of nine telegrams',
+        'Nine telegrams of June 1916 (Huang Xing, Zhang Ji and the Shanghai group) can be read, at least in part, with candidate key C51; N07 remains unread. Uncertain characters remain marked.',
         'Six more telegrams and probable readings (October 2026)',
         'After N17 and N18 were published, the bodies of N23, N27, N30, N32, N33 and N35 were assembled (transcriptions by Codex and Claude, all re-read by Brice Dudout on 19 October 2026 without seeing the decipherment). Context checks tie them to the Rongmi file: 溥 = Puquan (Zhang Ji) in N27 and N30, echoing N24’s “in his personal capacity”; N32 is signed 葛、殷、黃 (Ge Jing’en, Yin Ruli, Huang Fu). N35 writes 8 where the other Gongmi telegrams write 3 for the same words (表 3007, 袁 3087). The re-reading confirmed six single-digit probable readings (呂, 請, 咸, 張, 黃, 各) and restored N35’s signature 興 (previously read 議). Probable readings follow the convention of the <a href="rongmi.html">Rongmi</a> page.',
         'Probable readings for N17 and N18', ['Raw', 'Probable reading', 'Support']),
- 'ja': ('共密 — 1916年6月の電報8通と候補の鍵', '候補の鍵C51による共密電報N17・N18・N23・N27・N30・N32・N33・N35の部分校訂版。推定読みを明示する。',
-        '1916年6月の電報8通 — 部分校訂版',
-        '1916年6月の電報8通（黄興、張継、上海のグループ）が候補の鍵C51で少なくとも部分的に読める。N07は未解読。不確かな字は明示する。',
+ 'ja': ('共密 — 1916年6月の電報9通と候補の鍵', '候補の鍵C51による共密電報N17・N18・N23・N27・N30・N32・N33・N35・V4Eの部分校訂版。推定読みを明示する。',
+        '1916年6月の電報9通 — 部分校訂版',
+        '1916年6月の電報9通（黄興、張継、上海のグループ）が候補の鍵C51で少なくとも部分的に読める。N07は未解読。不確かな字は明示する。',
         'さらに6通と推定読み（2026年10月）',
-        'N17・N18の公開後、N23・N27・N30・N32・N33・N35の本文をまとめた（CodexとClaudeの翻字を、2026年10月19日にBrice Dudoutが解読結果を見ずにすべて再読）。文脈の確認で容密の資料と結びつく：N27・N30の「溥」は溥泉（張継）で、N24の「以個人名義」と一致する。N32の署名は葛・殷・黄（葛敬恩・殷汝驪・黄郛）。N35は同じ語（表3007、袁3087）について、他の共密電報が3と書くところを8と書く。推定読みは<a href="rongmi.html">容密</a>のページと同じ表記。',
+        'N17・N18の公開後、N23・N27・N30・N32・N33・N35・V4Eの本文をまとめた（CodexとClaudeの翻字を、2026年10月19日にBrice Dudoutが解読結果を見ずにすべて再読）。文脈の確認で容密の資料と結びつく：N27・N30の「溥」は溥泉（張継）で、N24の「以個人名義」と一致する。N32の署名は葛・殷・黄（葛敬恩・殷汝驪・黄郛）。N35は同じ語（表3007、袁3087）について、他の共密電報が3と書くところを8と書く。推定読みは<a href="rongmi.html">容密</a>のページと同じ表記。',
         'N17・N18の推定読み', ['原文', '推定読み', '根拠']),
- 'zh-hans': ('共密——1916年6月的八封电报与候选密钥', '采用候选密钥C51对共密电报N17、N18、N23、N27、N30、N32、N33、N35进行部分校勘，推定读法另行标出。',
-        '1916年6月的八封电报——部分校勘版',
-        '1916年6月的八封电报（黄兴、张继及上海方面）可用候选密钥C51至少部分读出；N07仍未解。不确定的字均予标明。',
+ 'zh-hans': ('共密——1916年6月的九封电报与候选密钥', '采用候选密钥C51对共密电报N17、N18、N23、N27、N30、N32、N33、N35、V4E进行部分校勘，推定读法另行标出。',
+        '1916年6月的九封电报——部分校勘版',
+        '1916年6月的九封电报（黄兴、张继及上海方面）可用候选密钥C51至少部分读出；N07仍未解。不确定的字均予标明。',
         '另外六封电报与推定读法（2026年10月）',
-        'N17、N18发表后，又整理出N23、N27、N30、N32、N33、N35的正文（Codex 与 Claude 的誊录均于2026年10月19日经 Brice Dudout 在未见译文的情况下复读）。经背景核对，它们与容密档案相关联：N27、N30中的“溥”即溥泉（张继），与N24的“以个人名义”相合；N32署名葛、殷、黄（葛敬恩、殷汝骊、黄郛）。N35在相同的字（表3007、袁3087）上写8，其他共密电报写3。推定读法的标示与<a href="rongmi.html">容密</a>页面相同。',
+        'N17、N18发表后，又整理出N23、N27、N30、N32、N33、N35、V4E的正文（Codex 与 Claude 的誊录均于2026年10月19日经 Brice Dudout 在未见译文的情况下复读）。经背景核对，它们与容密档案相关联：N27、N30中的“溥”即溥泉（张继），与N24的“以个人名义”相合；N32署名葛、殷、黄（葛敬恩、殷汝骊、黄郛）。N35在相同的字（表3007、袁3087）上写8，其他共密电报写3。推定读法的标示与<a href="rongmi.html">容密</a>页面相同。',
         'N17与N18的推定读法', ['原文', '推定读法', '依据']),
- 'zh-hant': ('共密——1916年6月的八封電報與候選密鑰', '採用候選密鑰C51對共密電報N17、N18、N23、N27、N30、N32、N33、N35進行部分校勘，推定讀法另行標出。',
-        '1916年6月的八封電報——部分校勘版',
-        '1916年6月的八封電報（黃興、張繼及上海方面）可用候選密鑰C51至少部分讀出；N07仍未解。不確定的字均予標明。',
+ 'zh-hant': ('共密——1916年6月的九封電報與候選密鑰', '採用候選密鑰C51對共密電報N17、N18、N23、N27、N30、N32、N33、N35、V4E進行部分校勘，推定讀法另行標出。',
+        '1916年6月的九封電報——部分校勘版',
+        '1916年6月的九封電報（黃興、張繼及上海方面）可用候選密鑰C51至少部分讀出；N07仍未解。不確定的字均予標明。',
         '另外六封電報與推定讀法（2026年10月）',
-        'N17、N18發表後，又整理出N23、N27、N30、N32、N33、N35的正文（Codex 與 Claude 的謄錄均於2026年10月19日經 Brice Dudout 在未見譯文的情況下複讀）。經背景核對，它們與容密檔案相關聯：N27、N30中的「溥」即溥泉（張繼），與N24的「以個人名義」相合；N32署名葛、殷、黃（葛敬恩、殷汝驪、黃郛）。N35在相同的字（表3007、袁3087）上寫8，其他共密電報寫3。推定讀法的標示與<a href="rongmi.html">容密</a>頁面相同。',
+        'N17、N18發表後，又整理出N23、N27、N30、N32、N33、N35、V4E的正文（Codex 與 Claude 的謄錄均於2026年10月19日經 Brice Dudout 在未見譯文的情況下複讀）。經背景核對，它們與容密檔案相關聯：N27、N30中的「溥」即溥泉（張繼），與N24的「以個人名義」相合；N32署名葛、殷、黃（葛敬恩、殷汝驪、黃郛）。N35在相同的字（表3007、袁3087）上寫8，其他共密電報寫3。推定讀法的標示與<a href="rongmi.html">容密</a>頁面相同。',
         'N17與N18的推定讀法', ['原文', '推定讀法', '依據']),
 }
 SUPPORT = {'fr': ('1 chiffre', 'contexte'), 'en': ('1 digit', 'context'), 'ja': ('1桁', '文脈'), 'zh-hans': ('一位数字', '文意'), 'zh-hant': ('一位數字', '文意')}
