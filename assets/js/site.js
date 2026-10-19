@@ -263,7 +263,7 @@ var VERIF = {'fr': 'lettres vérifiées sur le scan : erreur probable du chiffre
     // ---- classement par système de chiffrement, puis par date (systems.js) ----
     var SY = window.WENMI_SYSTEMS, ST = SY ? (SY.text[root.lang] || SY.text.fr) : null;
     var CORP = [['CORPUS', C, I, null, true]];
-    [['C1916', 'WENMI_C1916'], ['N1916', 'WENMI_N1916'], ['T1915', 'WENMI_T1915'], ['F1916', 'WENMI_F1916']].forEach(function (c) {
+    [['C1916', 'WENMI_C1916'], ['N1916', 'WENMI_N1916'], ['T1915', 'WENMI_T1915'], ['F1916', 'WENMI_F1916'], ['NUM1916', 'WENMI_NUM1916']].forEach(function (c) {
       var K = window[c[1]], KX = window[c[1] + '_I18N'];
       if (K && KX) { var KI = KX[root.lang] || KX.fr; CORP.push([c[0], K, KI, KI, false]); }
     });

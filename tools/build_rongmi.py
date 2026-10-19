@@ -226,6 +226,35 @@ SUMMARY = {
         'N24': '上海向黃興的報告：對北京的條件（取消袁氏偽法、恢復元年約法），湯化龍赴京。',
         'N23': '張繼致黃興：田中、小池皆有電至青木，請親往催促借款。'},
 }
+SUMMARY['en'].update({'N17': 'Huang Xing to Shanghai after Li Yuanhong took office: five measures (Constitution and Parliament, Duan’s resignation, governors, consulting the South); Japan will not lend to Beijing without unification.',
+ 'N18': 'Reply to the telegram of the 10th: the Republic first, armed force as support; the return to China will wait.',
+ 'N27': 'Huang Xing: the matter of Puquan’s (Zhang Ji’s) funds is hopeless.',
+ 'N30': 'Huang Xing: according to Koike, Zhang Ji could obtain a small loan in his own name through Consul Ariyoshi.',
+ 'N32': 'From Shanghai: the Constitution will probably be restored; caution about Sun Yat-sen’s published reply; signed Ge, Yin, Huang.',
+ 'N33': 'From Shanghai: Beijing’s manoeuvres over the Constitution, Huang Qun in Beijing; the Shanghai parliamentarians object; wait and see.',
+ 'N35': 'Huang Xing: Beijing wants provincial delegates to revise the Constitution; Parliament should meet in a safe place; beware of Duan.'})
+SUMMARY['ja'].update({'N17': '黎元洪の就任後、黄興から上海へ：五つの方策（約法と国会、段の辞職、督軍、南方との協議）。日本は統一なしには北京に借款しない。',
+ 'N18': '10日の電報への返電：まず共和、武力の後ろ盾。帰国は後で決める。',
+ 'N27': '黄興：溥泉（張継）の資金の件は望みがない。',
+ 'N30': '黄興：小池によれば、張継は有吉領事の紹介で個人名義の小口借款を得られる。',
+ 'N32': '上海から：約法は回復の見込み。孫文の公表された返電に注意。署名は葛・殷・黄。',
+ 'N33': '上海から：約法をめぐる北京の策動、黄群の上京。上海の議員は反対。静観を。',
+ 'N35': '黄興：北京は各省代表に約法を改めさせようとしている。国会は安全な場所で開くべき。段に警戒。'})
+SUMMARY['zh-hant'].update({'N17': '黎元洪就任後黃興致上海：五項主張（約法與國會、段辭職、都督、南方協商）；日本非南北統一不借款於北京。',
+ 'N18': '覆十日電：擁護共和，須有武力後援；歸國事再決。',
+ 'N27': '黃興：溥泉（張繼）款事無望。',
+ 'N30': '黃興：據小池云，張繼以個人名義請有吉領事紹介，可借小款。',
+ 'N32': '上海來電：舊約法可望恢復；孫中山覆電已登報，宜慎；葛、殷、黃署名。',
+ 'N33': '上海來電：北京於約法之策動，黃群到京；滬議員反對；暫靜觀。',
+ 'N35': '黃興：北京欲召各省代表議約法；國會宜擇安全地自行開會；段有襲袁故智之勢。'})
+SUMMARY['zh-hans'].update({'N17': '黎元洪就任后黄兴致上海：五项主张（约法与国会、段辞职、都督、南方协商）；日本非南北统一不借款于北京。',
+ 'N18': '复十日电：拥护共和，须有武力后援；归国事再决。',
+ 'N27': '黄兴：溥泉（张继）款事无望。',
+ 'N30': '黄兴：据小池云，张继以个人名义请有吉领事绍介，可借小款。',
+ 'N32': '上海来电：旧约法可望恢复；孙中山复电已登报，宜慎；葛、殷、黄署名。',
+ 'N33': '上海来电：北京于约法之策动，黄群到京；沪议员反对；暂静观。',
+ 'N35': '黄兴：北京欲召各省代表议约法；国会宜择安全地自行开会；段有袭袁故智之势。'})
+
 UNREAD = {'fr': 'date non lue', 'en': 'date not read', 'ja': '日付未読', 'zh-hans': '日期未读', 'zh-hant': '日期未讀'}
 def date_str(mid, L):
     m = M[mid]['meta']
@@ -324,9 +353,79 @@ def insert_n23(L):
                   '<nav class="gm-nav" aria-label="Messages"><a href="#N17">N17</a><a href="#N18">N18</a><a href="#N23">N23</a></nav>')
     open(p, 'w', encoding='utf-8').write(s)
 
+# ---------------------------------------------------------------- 共密 : six autres télégrammes et lectures probables (C84)
+GM_EXTRA = ['N23', 'N27', 'N30', 'N32', 'N33', 'N35']
+GM_HEAD = {
+ 'fr': ('共密 — huit télégrammes de juin 1916, une clé candidate', 'Édition critique partielle des télégrammes 共密 N17, N18, N23, N27, N30, N32, N33 et N35 sous la clé C51, avec lectures probables signalées.',
+        'Édition critique partielle de huit télégrammes',
+        'Huit télégrammes de juin 1916 (Huang Xing, Zhang Ji et le groupe de Shanghai) se lisent, au moins en partie, avec la clé candidate C51 ; N07 reste illisible. Les caractères incertains restent signalés.',
+        'Six télégrammes de plus et lectures probables (octobre 2026)',
+        'Après la publication de N17 et N18, les corps de N23, N27, N30, N32, N33 et N35 ont été rassemblés (N23 relu par Brice Dudout ; les autres d’après la transcription de Codex, pas encore relue). Les vérifications de contexte les relient au dossier 容密 : 溥 = 溥泉 (Zhang Ji) dans N27 et N30, qui reprend le « 以個人名義 » de N24 ; N32 est signé 葛、殷、黃 (Ge Jing’en, Yin Ruli, Huang Fu). N35 écrit 8 là où les autres télégrammes 共密 écrivent 3 pour les mêmes mots (表 3007, 袁 3087). Les lectures probables suivent la même convention que la page <a href="rongmi.html">容密</a>.',
+        'Lectures probables pour N17 et N18', ['Brut', 'Lecture probable', 'Appui']),
+ 'en': ('Gongmi — eight telegrams from June 1916, a candidate key', 'A partial critical edition of Gongmi telegrams N17, N18, N23, N27, N30, N32, N33 and N35 under key C51, with probable readings marked.',
+        'A partial critical edition of eight telegrams',
+        'Eight telegrams of June 1916 (Huang Xing, Zhang Ji and the Shanghai group) can be read, at least in part, with candidate key C51; N07 remains unread. Uncertain characters remain marked.',
+        'Six more telegrams and probable readings (October 2026)',
+        'After N17 and N18 were published, the bodies of N23, N27, N30, N32, N33 and N35 were assembled (N23 re-read by Brice Dudout; the others from Codex’s transcription, not yet re-read). Context checks tie them to the Rongmi file: 溥 = Puquan (Zhang Ji) in N27 and N30, echoing N24’s “in his personal capacity”; N32 is signed 葛、殷、黃 (Ge Jing’en, Yin Ruli, Huang Fu). N35 writes 8 where the other Gongmi telegrams write 3 for the same words (表 3007, 袁 3087). Probable readings follow the convention of the <a href="rongmi.html">Rongmi</a> page.',
+        'Probable readings for N17 and N18', ['Raw', 'Probable reading', 'Support']),
+ 'ja': ('共密 — 1916年6月の電報8通と候補の鍵', '候補の鍵C51による共密電報N17・N18・N23・N27・N30・N32・N33・N35の部分校訂版。推定読みを明示する。',
+        '1916年6月の電報8通 — 部分校訂版',
+        '1916年6月の電報8通（黄興、張継、上海のグループ）が候補の鍵C51で少なくとも部分的に読める。N07は未解読。不確かな字は明示する。',
+        'さらに6通と推定読み（2026年10月）',
+        'N17・N18の公開後、N23・N27・N30・N32・N33・N35の本文をまとめた（N23はBrice Dudoutが再読、他はCodexの翻字で未再読）。文脈の確認で容密の資料と結びつく：N27・N30の「溥」は溥泉（張継）で、N24の「以個人名義」と一致する。N32の署名は葛・殷・黄（葛敬恩・殷汝驪・黄郛）。N35は同じ語（表3007、袁3087）について、他の共密電報が3と書くところを8と書く。推定読みは<a href="rongmi.html">容密</a>のページと同じ表記。',
+        'N17・N18の推定読み', ['原文', '推定読み', '根拠']),
+ 'zh-hans': ('共密——1916年6月的八封电报与候选密钥', '采用候选密钥C51对共密电报N17、N18、N23、N27、N30、N32、N33、N35进行部分校勘，推定读法另行标出。',
+        '1916年6月的八封电报——部分校勘版',
+        '1916年6月的八封电报（黄兴、张继及上海方面）可用候选密钥C51至少部分读出；N07仍未解。不确定的字均予标明。',
+        '另外六封电报与推定读法（2026年10月）',
+        'N17、N18发表后，又整理出N23、N27、N30、N32、N33、N35的正文（N23经 Brice Dudout 复读；其余据 Codex 誊录，尚未复读）。经背景核对，它们与容密档案相关联：N27、N30中的“溥”即溥泉（张继），与N24的“以个人名义”相合；N32署名葛、殷、黄（葛敬恩、殷汝骊、黄郛）。N35在相同的字（表3007、袁3087）上写8，其他共密电报写3。推定读法的标示与<a href="rongmi.html">容密</a>页面相同。',
+        'N17与N18的推定读法', ['原文', '推定读法', '依据']),
+ 'zh-hant': ('共密——1916年6月的八封電報與候選密鑰', '採用候選密鑰C51對共密電報N17、N18、N23、N27、N30、N32、N33、N35進行部分校勘，推定讀法另行標出。',
+        '1916年6月的八封電報——部分校勘版',
+        '1916年6月的八封電報（黃興、張繼及上海方面）可用候選密鑰C51至少部分讀出；N07仍未解。不確定的字均予標明。',
+        '另外六封電報與推定讀法（2026年10月）',
+        'N17、N18發表後，又整理出N23、N27、N30、N32、N33、N35的正文（N23經 Brice Dudout 複讀；其餘據 Codex 謄錄，尚未複讀）。經背景核對，它們與容密檔案相關聯：N27、N30中的「溥」即溥泉（張繼），與N24的「以個人名義」相合；N32署名葛、殷、黃（葛敬恩、殷汝驪、黃郛）。N35在相同的字（表3007、袁3087）上寫8，其他共密電報寫3。推定讀法的標示與<a href="rongmi.html">容密</a>頁面相同。',
+        'N17與N18的推定讀法', ['原文', '推定讀法', '依據']),
+}
+SUPPORT = {'fr': ('1 chiffre', 'contexte'), 'en': ('1 digit', 'context'), 'ja': ('1桁', '文脈'), 'zh-hans': ('一位数字', '文意'), 'zh-hant': ('一位數字', '文意')}
+
+def gongmi_block(L):
+    title, desc, h1, stand, h2, intro, h3, th = GM_HEAD[L]
+    rows = []
+    for mid in ('N17', 'N18'):
+        for s in M[mid]['segments']:
+            for mm in re.finditer(r'\{([^}]*)\}', s['zh']):
+                sup = SUPPORT[L][0] if '1 chiffre' in s['note'] else SUPPORT[L][1]
+                rows.append(f'<tr><td>{mid}</td><td lang="zh-Hant">{e(s["raw"])}</td><td lang="zh-Hant">{e(mm.group(1))}</td><td>{sup}</td></tr>')
+    table = f'<h3>{h3}</h3><div class="gm-scroll"><table><thead><tr><th>#</th><th>{th[0]}</th><th>{th[1]}</th><th>{th[2]}</th></tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>'
+    secs = ''.join(message_section(m, L, h2=(T[L]['n23h'] if m == 'N23' else None)) for m in GM_EXTRA)
+    crit = ''.join(critical_rows(m) for m in GM_EXTRA + ['N17', 'N18']) if L == 'fr' else ''
+    return f'<!-- C84:begin -->\n<section id="c84"><h2>{h2}</h2><p>{intro}</p>{table}</section>\n{secs}{crit}\n<!-- C84:end -->\n'
+
+def update_gongmi(L):
+    p = os.path.join(SITE, 'content', L, 'gongmi.html')
+    s = open(p, encoding='utf-8').read()
+    s = re.sub(r'<!-- (N23|C84):begin -->.*?<!-- \1:end -->\n', '', s, flags=re.S)
+    title, desc, h1, stand, *_ = GM_HEAD[L]
+    s = re.sub(r'^<!-- \{.*?\} -->', '<!-- ' + json.dumps(dict(title=title, description=desc), ensure_ascii=False) + ' -->', s, count=1)
+    s = re.sub(r'<h1>.*?</h1><p class="standfirst">.*?<sup', f'<h1>{h1}</h1><p class="standfirst">{stand}<sup', s, count=1, flags=re.S)
+    blk = gongmi_block(L)
+    anchor = '<section id="critical">'
+    if L == 'fr' and anchor in s:
+        s = s.replace(anchor, blk + anchor, 1)
+    else:
+        i = s.rfind('<p>', 0, s.rfind('</article>')); i = s.rfind('<p>', 0, i)
+        s = s[:i] + blk + s[i:]
+    s = re.sub(r'<nav class="gm-nav" aria-label="Messages">.*?</nav>',
+               '<nav class="gm-nav" aria-label="Messages">' + ''.join(f'<a href="#{m}">{m}</a>' for m in ['N17', 'N18'] + GM_EXTRA) + '<a href="#c84">+</a></nav>', s, count=1)
+    open(p, 'w', encoding='utf-8').write(s)
+
+
 if __name__ == '__main__':
     json.dump(D, open(os.path.join(SITE, 'data', 'rongmi.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     for L in LANGS:
         open(os.path.join(SITE, 'content', L, 'rongmi.html'), 'w', encoding='utf-8').write(page(L))
-        insert_n23(L)
-    print('rongmi:', len(ORDER), 'messages,', len(os.listdir(IMG)), 'images ; N23 inséré dans gongmi (5 langues)')
+        update_gongmi(L)
+    print('rongmi:', len(ORDER), 'messages,', len(os.listdir(IMG)), 'images ; 共密 mis à jour (5 langues)')
+
+
