@@ -14,7 +14,7 @@ WENMI = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else os.path.join(SITE,
 D = json.load(open(os.path.join(WENMI, 'cryptanalysis/c83/site-data.json'), encoding='utf-8'))
 M = D['messages']
 LANGS = ['fr', 'en', 'ja', 'zh-hans', 'zh-hant']
-ORDER = ['N14', 'N02', 'N08', 'N11', 'N12', 'N19a', 'N28', 'N21', 'N25', 'N36', 'N24']
+ORDER = ['N14', 'N19b', 'N02', 'N08', 'N11', 'N12', 'N19a', 'N28', 'N21', 'N25', 'N36', 'N24']
 e = html.escape
 JACAR = 'https://www.jacar.archives.go.jp/das/meta/'
 
@@ -45,17 +45,17 @@ def make_images(mid):
 # ---------------------------------------------------------------- textes
 T = {
 'fr': dict(
-  title='容密 — onze télégrammes de juin 1916 et leur clé',
-  desc='Édition des onze télégrammes 容密 lisibles (juin 1916, Huang Xing, Zhang Xiaozhun, Zhejiang) et de la clé retrouvée, avec lectures probables signalées.',
-  kicker='Déchiffrement · Juin 1916', h1='容密 : onze télégrammes et leur clé',
-  stand='Onze télégrammes chiffrés échangés en juin 1916 entre Tokyo et Shanghai, autour de Huang Xing et de Zhang Xiaozhun : achat d’armes au Japon pour le Zhejiang, emprunts, et négociation avec Pékin après la mort de Yuan Shikai. Une seule clé les lit tous.',
+  title='容密 — douze télégrammes de juin 1916 et leur clé',
+  desc='Édition des douze télégrammes 容密 lisibles (juin 1916, Huang Xing, Zhang Xiaozhun, Zhejiang) et de la clé retrouvée, avec lectures probables signalées.',
+  kicker='Déchiffrement · Juin 1916', h1='容密 : douze télégrammes et leur clé',
+  stand='Douze télégrammes chiffrés échangés en juin 1916 entre Tokyo et Shanghai, autour de Huang Xing et de Zhang Xiaozhun : achat d’armes au Japon pour le Zhejiang, emprunts, et négociation avec Pékin après la mort de Yuan Shikai. Une seule clé les lit tous.',
   credits='Parcours des grilles : Brice Dudout. Transcription des feuillets de suite, recherche de la clé, traduction et lectures probables : Claude (Anthropic). Relecture de tous les chiffres : Brice Dudout. Modèle de départ (quatre substitutions de chiffres) : essais de Codex.',
   warn='Clé reconstruite, pas retrouvée dans un livre de code historique. Les traductions sont des propositions de travail ; les lectures probables sont distinguées du texte décodé, jamais substituées à lui. Les identifications de personnes sont des candidats, avec leur source.',
   keyh='La clé',
   keyp='Les feuillets se lisent par colonnes, de droite à gauche et de haut en bas (parcours proposé par Brice Dudout), en groupes de quatre chiffres ; le préfixe public <code>1369 1378</code> = <span lang="zh-Hant">容密</span> reste en clair. Pour chaque groupe C : remplacer chaque chiffre selon le tableau de son rang, puis calculer <code>P = (σ(C) + 0901) mod 10000</code> par addition ordinaire avec retenues ; P est le numéro du caractère dans le code télégraphique chinois (CTC).',
   rows=['Chiffre lu', 'milliers', 'centaines', 'dizaines', 'unités'],
   keynote='Aucun groupe ne commence par 00 : le chiffreur écrit 90. Exemple : 2081 → σ = 2081 → 2081 + 0901 = 2982, mais avec les dizaines 8 → 4 et les unités 1 → 8 : σ(2081) = 2048, + 0901 = 2949 = <span lang="zh-Hant">款</span>.',
-  keyhow='La clé a été retrouvée sur quatre télégrammes (N02, N08, N11, N12), puis lue sans réajustement sur les sept autres ; réajustée sur l’ensemble relu (590 groupes), elle redonne exactement les mêmes tableaux. Seule la règle « 90 = 00 » a été ajoutée ensuite, d’après tous les groupes en 90xx.',
+  keyhow='La clé a été retrouvée sur quatre télégrammes (N02, N08, N11, N12), puis lue sans réajustement sur les huit autres ; réajustée sur l’ensemble relu (590 groupes), elle redonne exactement les mêmes tableaux. Seule la règle « 90 = 00 » a été ajoutée ensuite, d’après tous les groupes en 90xx.',
   legend='Dans la lecture proposée, <b>{x}</b> remplace un caractère décodé anormal par une lecture probable ; la note précise si une variante du groupe chiffré à <b>un seul chiffre près</b> donne ce caractère, ou s’il s’agit d’une <b>lecture de contexte</b>. 〔x〕 : caractère conservé, non résolu.',
   groups='groupes', date='Date', dirl='Sens', sheets='feuillets', reread='chiffres relus par Brice Dudout', notreread='chiffres non encore relus',
   repair='cadrage : un chiffre {k} au feuillet {s} (déduit du décodage, à vérifier sur le scan)', omitted='omis', extra='en trop',
@@ -72,10 +72,10 @@ T = {
   n23p='Lu après la publication de N17–N18, avec la même clé C51, sur une transcription de Claude relue par Brice Dudout (19 octobre 2026). Un chiffre manque entre les feuillets 2 et 3 (déduit du décodage). Lectures probables entre accolades.',
 ),
 'en': dict(
-  title='Rongmi — eleven telegrams of June 1916 and their key',
+  title='Rongmi — twelve telegrams of June 1916 and their key',
   desc='Edition of the eleven readable Rongmi (容密) telegrams (June 1916, Huang Xing, Zhang Xiaozhun, Zhejiang) and of the recovered key, with probable readings marked.',
-  kicker='Decipherment · June 1916', h1='Rongmi (容密): eleven telegrams and their key',
-  stand='Eleven cipher telegrams exchanged in June 1916 between Tokyo and Shanghai around Huang Xing and Zhang Xiaozhun: buying arms in Japan for Zhejiang, loans, and negotiations with Beijing after Yuan Shikai’s death. A single key reads them all.',
+  kicker='Decipherment · June 1916', h1='Rongmi (容密): twelve telegrams and their key',
+  stand='Twelve cipher telegrams exchanged in June 1916 between Tokyo and Shanghai around Huang Xing and Zhang Xiaozhun: buying arms in Japan for Zhejiang, loans, and negotiations with Beijing after Yuan Shikai’s death. A single key reads them all.',
   credits='Grid reading order: Brice Dudout. Transcription of the continuation sheets, key recovery, translation and probable readings: Claude (Anthropic). All digits re-read by Brice Dudout. Starting model (four digit substitutions): Codex’s trials.',
   warn='The key is a reconstruction, not taken from a historical code book. Translations are working proposals; probable readings are shown beside the decoded text, never in place of it. Identifications of people are candidates, with their source.',
   keyh='The key',
@@ -98,17 +98,17 @@ T = {
   n23p='Read after the publication of N17–N18, with the same C51 key, from Claude’s transcription re-read by Brice Dudout (19 October 2026). One digit is missing between sheets 2 and 3 (inferred from decoding). Probable readings in braces.',
 ),
 'ja': dict(
-  title='容密——1916年6月の電報11通とその鍵',
-  desc='解読できた容密電報11通（1916年6月、黄興・張孝準・浙江）と復元した鍵。推定読みは区別して示す。',
-  kicker='解読・1916年6月', h1='容密：電報11通とその鍵',
-  stand='1916年6月、黄興と張孝準をめぐって東京と上海の間で交わされた暗号電報11通。浙江のための日本での武器購入、借款、袁世凱の死後の北京との交渉。ひとつの鍵ですべてが読める。',
+  title='容密——1916年6月の電報12通とその鍵',
+  desc='解読できた容密電報12通（1916年6月、黄興・張孝準・浙江）と復元した鍵。推定読みは区別して示す。',
+  kicker='解読・1916年6月', h1='容密：電報12通とその鍵',
+  stand='1916年6月、黄興と張孝準をめぐって東京と上海の間で交わされた暗号電報12通。浙江のための日本での武器購入、借款、袁世凱の死後の北京との交渉。ひとつの鍵ですべてが読める。',
   credits='升目の読み順：Brice Dudout。続き用紙の翻字、鍵の復元、翻訳と推定読み：Claude（Anthropic）。数字はすべてBrice Dudoutが再読。出発点のモデル（桁ごとの4つの置換）：Codexの試行。',
   warn='鍵は復元であり、歴史的な電碼本から得たものではない。翻訳は作業案であり、推定読みは解読文と並べて示し、置き換えない。人物の比定は出典つきの候補である。',
   keyh='鍵',
   keyp='用紙は列ごとに右から左、上から下へ読み（Brice Dudoutの提案した順序）、4桁ずつ区切る。公開の前置き<code>1369 1378</code>＝<span lang="zh-Hant">容密</span>は平文のまま。各組Cについて、各桁を位ごとの表で置き換え、<code>P = (σ(C) + 0901) mod 10000</code>を通常の繰り上がりつき加算で求める。Pが中文電碼（CTC）の番号である。',
   rows=['読んだ数字', '千の位', '百の位', '十の位', '一の位'],
   keynote='00で始まる組はなく、暗号作成者は90と書く。例：σ(2081) = 2048（十の位8→4、一の位1→8）、+0901 = 2949 = <span lang="zh-Hant">款</span>。',
-  keyhow='鍵は4通（N02、N08、N11、N12）で復元し、残り7通は再調整なしで読めた。再読済みの全体（590組）で再調整しても同じ表に戻る。「90＝00」の規則だけは、90で始まるすべての組から後で加えた。',
+  keyhow='鍵は4通（N02、N08、N11、N12）で復元し、残り8通は再調整なしで読めた。再読済みの全体（590組）で再調整しても同じ表に戻る。「90＝00」の規則だけは、90で始まるすべての組から後で加えた。',
   legend='推定読みでは<b>{x}</b>が異常な解読字を推定字に置き換える。注に、暗号組を<b>1桁だけ</b>変えるとその字になるか、<b>文脈による読み</b>かを記す。〔x〕：未解決のまま残した字。',
   groups='組', date='日付', dirl='発着', sheets='枚', reread='数字はBrice Dudoutが再読', notreread='数字は未再読',
   repair='区切り：用紙{s}で1桁{k}（解読から推定、スキャンで要確認）', omitted='脱落', extra='過剰',
@@ -124,17 +124,17 @@ T = {
   n23p='N17・N18の公開後、同じC51の鍵で読んだもの。Claudeの翻字をBrice Dudoutが再読（2026年10月19日）。用紙2と3の間で1桁脱落（解読から推定）。推定読みは波括弧内。',
 ),
 'zh-hans': dict(
-  title='容密——1916年6月的十一封电报及其密钥',
-  desc='可读的十一封容密电报（1916年6月，黄兴、张孝准、浙江）及复原的密钥，推定读法另行标出。',
-  kicker='破译·1916年6月', h1='容密：十一封电报及其密钥',
-  stand='1916年6月围绕黄兴与张孝准、在东京与上海之间往来的十一封密电：为浙江在日本购械、借款，以及袁世凯死后与北京的交涉。一把密钥即可读出全部。',
+  title='容密——1916年6月的十二封电报及其密钥',
+  desc='可读的十二封容密电报（1916年6月，黄兴、张孝准、浙江）及复原的密钥，推定读法另行标出。',
+  kicker='破译·1916年6月', h1='容密：十二封电报及其密钥',
+  stand='1916年6月围绕黄兴与张孝准、在东京与上海之间往来的十二封密电：为浙江在日本购械、借款，以及袁世凯死后与北京的交涉。一把密钥即可读出全部。',
   credits='方格读序：Brice Dudout。续页誊录、密钥复原、翻译与推定读法：Claude（Anthropic）。全部数字由 Brice Dudout 复读。起点模型（逐位四重替换）：Codex 的试验。',
   warn='密钥为复原所得，并非取自历史电码本。译文为工作稿；推定读法与解码文字并列，绝不替代。人物比定为候选，并注明出处。',
   keyh='密钥',
   keyp='电报纸按列由右至左、由上而下读取（Brice Dudout 提出的读序），每四位一组；明文前缀<code>1369 1378</code>＝<span lang="zh-Hant">容密</span>不加密。对每组C：按所在数位的表替换各位数字，再以通常进位加法计算<code>P = (σ(C) + 0901) mod 10000</code>；P即中文电码（CTC）编号。',
   rows=['所读数字', '千位', '百位', '十位', '个位'],
   keynote='没有以00开头的组：发报者写作90。例：σ(2081) = 2048（十位8→4，个位1→8），+0901 = 2949 = <span lang="zh-Hant">款</span>。',
-  keyhow='密钥在四封电报（N02、N08、N11、N12）上复原，其余七封无需重新拟合即可读出；以复读后的全部590组重新拟合，所得表格完全相同。仅“90＝00”一条规则是事后根据所有90开头的组补入的。',
+  keyhow='密钥在四封电报（N02、N08、N11、N12）上复原，其余八封无需重新拟合即可读出；以复读后的全部590组重新拟合，所得表格完全相同。仅“90＝00”一条规则是事后根据所有90开头的组补入的。',
   legend='推定读法中，<b>{x}</b>以推定字替换异常的解码字；注中说明暗号组<b>仅改一位数字</b>是否即得该字，或仅为<b>据文意推定</b>。〔x〕：保留未解的字。',
   groups='组', date='日期', dirl='方向', sheets='页', reread='数字经 Brice Dudout 复读', notreread='数字尚未复读',
   repair='分组：第{s}页一位数字{k}（据解码推断，待核对扫描件）', omitted='脱漏', extra='多出',
@@ -150,17 +150,17 @@ T = {
   n23p='在N17、N18发表后，以同一C51密钥读出；据Claude誊录、Brice Dudout复读（2026年10月19日）。第2、3页之间脱漏一位数字（据解码推断）。推定读法见花括号。',
 ),
 'zh-hant': dict(
-  title='容密——1916年6月的十一封電報及其密鑰',
-  desc='可讀的十一封容密電報（1916年6月，黃興、張孝準、浙江）及復原的密鑰，推定讀法另行標出。',
-  kicker='破譯·1916年6月', h1='容密：十一封電報及其密鑰',
-  stand='1916年6月圍繞黃興與張孝準、在東京與上海之間往來的十一封密電：為浙江在日本購械、借款，以及袁世凱死後與北京的交涉。一把密鑰即可讀出全部。',
+  title='容密——1916年6月的十二封電報及其密鑰',
+  desc='可讀的十二封容密電報（1916年6月，黃興、張孝準、浙江）及復原的密鑰，推定讀法另行標出。',
+  kicker='破譯·1916年6月', h1='容密：十二封電報及其密鑰',
+  stand='1916年6月圍繞黃興與張孝準、在東京與上海之間往來的十二封密電：為浙江在日本購械、借款，以及袁世凱死後與北京的交涉。一把密鑰即可讀出全部。',
   credits='方格讀序：Brice Dudout。續頁謄錄、密鑰復原、翻譯與推定讀法：Claude（Anthropic）。全部數字由 Brice Dudout 複讀。起點模型（逐位四重替換）：Codex 的試驗。',
   warn='密鑰為復原所得，並非取自歷史電碼本。譯文為工作稿；推定讀法與解碼文字並列，絕不替代。人物比定為候選，並注明出處。',
   keyh='密鑰',
   keyp='電報紙按列由右至左、由上而下讀取（Brice Dudout 提出的讀序），每四位一組；明文前綴<code>1369 1378</code>＝<span lang="zh-Hant">容密</span>不加密。對每組C：按所在數位的表替換各位數字，再以通常進位加法計算<code>P = (σ(C) + 0901) mod 10000</code>；P即中文電碼（CTC）編號。',
   rows=['所讀數字', '千位', '百位', '十位', '個位'],
   keynote='沒有以00開頭的組：發報者寫作90。例：σ(2081) = 2048（十位8→4，個位1→8），+0901 = 2949 = <span lang="zh-Hant">款</span>。',
-  keyhow='密鑰在四封電報（N02、N08、N11、N12）上復原，其餘七封無需重新擬合即可讀出；以複讀後的全部590組重新擬合，所得表格完全相同。僅「90＝00」一條規則是事後根據所有90開頭的組補入的。',
+  keyhow='密鑰在四封電報（N02、N08、N11、N12）上復原，其餘八封無需重新擬合即可讀出；以複讀後的全部590組重新擬合，所得表格完全相同。僅「90＝00」一條規則是事後根據所有90開頭的組補入的。',
   legend='推定讀法中，<b>{x}</b>以推定字替換異常的解碼字；注中說明暗號組<b>僅改一位數字</b>是否即得該字，或僅為<b>據文意推定</b>。〔x〕：保留未解的字。',
   groups='組', date='日期', dirl='方向', sheets='頁', reread='數字經 Brice Dudout 複讀', notreread='數字尚未複讀',
   repair='分組：第{s}頁一位數字{k}（據解碼推斷，待核對掃描件）', omitted='脫漏', extra='多出',
@@ -255,6 +255,10 @@ SUMMARY['zh-hans'].update({'N17': '黎元洪就任后黄兴致上海：五项主
  'N33': '上海来电：北京于约法之策动，黄群到京；沪议员反对；暂静观。',
  'N35': '黄兴：北京欲召各省代表议约法；国会宜择安全地自行开会；段有袭袁故智之势。'})
 
+SUMMARY['en']['N19b']='Huang Xing to the Shanghai senders (reply to the 8th and 9th): yes to the 1912 Constitution and Parliament, but nothing without armed force; Zhejiang must be the pillar of the South-East; Lu Rongting and Li Liejun should march on Hubei and Jiangxi; Japan will not lend to Beijing before unification.'
+SUMMARY['ja']['N19b']='黄興から上海の発信者へ（8日・9日電への返電）：約法と国会の回復に賛成、ただし武力なしには無効。浙江は東南の砥柱たれ。陸栄廷・李烈鈞は鄂・贛に出兵を。日本は統一まで北京に借款しない。'
+SUMMARY['zh-hant']['N19b']='黃興覆滬上諸君（齊、佳兩電）：贊成恢復約法與國會，惟非有武力後援必無効果；浙省宜作東南砥柱；陸榮廷、李烈鈞速出鄂贛；日本非南北統一不借款於北京。'
+SUMMARY['zh-hans']['N19b']='黄兴复沪上诸君（齐、佳两电）：赞成恢复约法与国会，惟非有武力后援必无効果；浙省宜作东南砥柱；陆荣廷、李烈钧速出鄂赣；日本非南北统一不借款于北京。'
 UNREAD = {'fr': 'date non lue', 'en': 'date not read', 'ja': '日付未読', 'zh-hans': '日期未读', 'zh-hant': '日期未讀'}
 def date_str(mid, L):
     m = M[mid]['meta']
