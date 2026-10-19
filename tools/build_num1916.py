@@ -39,7 +39,7 @@ for _L in SCH.NOTE: TR.NOTE.setdefault(_L, {}).update(SCH.NOTE[_L])
 BH.BAIHUA.update(SCH.BAIHUA)
 G = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c62', 'publication-v3', 'data', 'gongmi.json'), encoding='utf-8'))['messages']
 V = {}
-for f in ('c83/variants.json', 'c84/gongmi-variants.json', 'c92/variants.json'):
+for f in ('c83/variants.json', 'c84/gongmi-variants.json', 'c92/variants.json', 'c88/clear-variants.json'):
     for r in json.load(open(os.path.join(WENMI, 'cryptanalysis', f), encoding='utf-8')):
         for h in r.get('hits', []):
             gl, var = (h['glyph'], h['variant']) if isinstance(h, dict) else (h[0], h[1])
@@ -51,13 +51,13 @@ for k, v in CTC.items():
 SIG2 = [[0, 1, 2, 3, 4, 5, 6, 7, 9, 0], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 9, 8, 2, 7, 6, 5, 4, 3], [9, 8, 0, 1, 7, 2, 3, 4, 5, 6]]
 PUNCT = set('，。、：；？！「」『』（）…—　 ,.;:?!()')
 
-KEYS = {'N04': ['西北', '北伐', '陝軍'], 'N31': ['第三銀行', '正隆'], 'N34': ['黎元洪', '陽夏同舟', '根本大計'], 'N19b': ['約法', '武力', '南北統一'], 'N02': ['步鎗', '肇慶借款', '酒公賣'], 'N08': ['購械', '子彈', '借款'], 'N11': ['溯初', '歸滬'], 'N12': ['芳川', '百萬', '抵當品'],
+KEYS = {'N29': ['石屛', '袁逆自斃', '依法圖治'], 'N10': ['家嚴', '到滬'], 'N04': ['西北', '北伐', '陝軍'], 'N31': ['第三銀行', '正隆'], 'N34': ['黎元洪', '陽夏同舟', '根本大計'], 'N19b': ['約法', '武力', '南北統一'], 'N02': ['步鎗', '肇慶借款', '酒公賣'], 'N08': ['購械', '子彈', '借款'], 'N11': ['溯初', '歸滬'], 'N12': ['芳川', '百萬', '抵當品'],
         'N14': ['袁死', '械先運'], 'N19a': ['百里', '官君'], 'N28': ['百里', '詠儀'], 'N21': ['張潤農', '機關銃', '呂公望'],
         'N25': ['烟捐', '酒捐', '吳兆蓮'], 'N36': ['黃克強', '六月三十日'], 'N24': ['黎電', '元年約法', '殷汝驪'], 'N23': ['田中', '小池', '張繼'],
         'N17': ['黎總統', '舊約法', '日當局'], 'N18': ['擁護共和', '武力'], 'N27': ['溥', '無望'], 'N30': ['小池', '有吉領事'],
         'N32': ['舊約法', '中山', '葛殷黃'], 'N33': ['馮', '黃羣', '約法'], 'N35': ['國會', '段', '袁'],
         'N05': ['烈武', '山東', '溥泉'], 'N13': ['黎岑', '護國軍', '日態度'], 'N16': ['趙夷午', '精兵一師', '湯督'], 'N26': ['三百元', '百里']}
-ORDER = ['N04', 'N31', 'N34', 'N14', 'N19b', 'N02', 'N08', 'N11', 'N12', 'N19a', 'N28', 'N21', 'N25', 'N36', 'N24', 'N17', 'N18', 'N23', 'N27', 'N30', 'N32', 'N33', 'N35', 'N05', 'N13', 'N16', 'N26']
+ORDER = ['N10', 'N04', 'N31', 'N34', 'N29', 'N14', 'N19b', 'N02', 'N08', 'N11', 'N12', 'N19a', 'N28', 'N21', 'N25', 'N36', 'N24', 'N17', 'N18', 'N23', 'N27', 'N30', 'N32', 'N33', 'N35', 'N05', 'N13', 'N16', 'N26']
 FAM = {m: '容密' for m in D if D[m]['family'] == '容密'}
 FAM.update({m: '明碼' for m in CLEAR})
 FAM.update({m: '共密' for m in ['N17', 'N18', 'N23', 'N27', 'N30', 'N32', 'N33', 'N35']})
@@ -192,7 +192,7 @@ if __name__ == '__main__':
         fiche(mid, mm, meta); msgs.append(mm)
         d = meta['date']; rk = 'T' if meta['dir'].startswith('Tokyo') else 'S'
         for L in I18N:
-            i18n[L]['date'][mm['id']] = DATE[L](d, meta['date_note'])
+            i18n[L]['date'][mm['id']] = DATE[L](d, meta['date_note']) + (' ?' if L != 'fr' and d and '?' in meta['date_note'] else '')
             i18n[L]['route'][mm['id']] = ROUTE[L][rk]
         i18n['fr']['tr'][mm['id']] = ' '.join(s[3] for s in segs)
         i18n['en']['tr'][mm['id']] = TR.EN[mid]

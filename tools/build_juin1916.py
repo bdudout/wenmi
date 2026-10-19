@@ -47,6 +47,7 @@ FR = f'''<!-- {{"title": "Juin 1916 : ce que disent les télégrammes de Huang X
   <h2 id="autres">Autres éclairages</h2>
   <ul>
     <li>Sun Yat-sen ordonne par télégramme à ses troupes de cesser le combat ; sa réponse publiée dans la presse inquiète les amis de Huang Xing ({tg("N32")}).</li>
+    <li>À Tan Renfeng (譚人鳳, 石屛), vétéran hunanais, Huang Xing pose sa condition : « si Li [Yuanhong] gouverne selon la loi, les germes du désordre pourront être arrêtés ; s’il s’en écarte, je ne l’accepterai pas non plus » ({tg("N29")}, en clair).</li>
     <li>Huang Xing soutient l’armée du Shaanxi et pousse les provinces indépendantes à marcher vers le nord ({tg("N04")}, en clair).</li>
     <li>Les intermédiaires japonais : le consul Koike et le consul général Ariyoshi ({tg("N30")}), Tanaka et Aoki ({tg("N23")}) {unc("— identifications probables, non démontrées")}.</li>
   </ul>
@@ -86,6 +87,7 @@ EN = f'''<!-- {{"title": "June 1916: what Huang Xing’s telegrams say", "descri
   <h2 id="autres">Other glimpses</h2>
   <ul>
     <li>Sun Yat-sen orders his troops by telegram to cease fighting; his reply, published in the press, worries Huang Xing’s friends ({tg("N32")}).</li>
+    <li>To Tan Renfeng (譚人鳳, 石屛), a Hunanese veteran, Huang Xing sets his condition: “if Li [Yuanhong] governs according to the law, the seeds of disorder can be checked; should he depart from it, I will not accept it either” ({tg("N29")}, in clear).</li>
     <li>Huang Xing backs the Shaanxi army and urges the independent provinces to march north ({tg("N04")}, in clear).</li>
     <li>Japanese go-betweens: Consul Koike and Consul General Ariyoshi ({tg("N30")}), Tanaka and Aoki ({tg("N23")}) {unc("— probable identifications, not proven")}.</li>
   </ul>
@@ -125,6 +127,7 @@ HANT = f'''<!-- {{"title": "1916年6月：黃興電報所見", "description": "2
   <h2 id="autres">其他</h2>
   <ul>
     <li>孫中山電令所部停兵；其覆電已登報，黃興友人以為宜慎（{tg("N32")}）。</li>
+    <li>黃興致湘籍老同志譚人鳳（石屛），表明條件：「黎公若能依法圖治，亂萌可遏；有違此旨，興亦弗承」（{tg("N29")}，明碼）。</li>
     <li>黃興支持陝軍，並促獨立各省北伐（{tg("N04")}，明碼）。</li>
     <li>日方中介：小池領事、有吉總領事（{tg("N30")}），田中、青木（{tg("N23")}）{unc("——可能的比定，尚未證實")}。</li>
   </ul>
@@ -164,6 +167,7 @@ JA = f'''<!-- {{"title": "1916年6月：黄興の電報が語ること", "descri
   <h2 id="autres">その他</h2>
   <ul>
     <li>孫文は電報で所部に停戦を命じ、新聞に出たその返電が黄興の同志を心配させた（{tg("N32")}）。</li>
+    <li>湖南の古参譚人鳳（石屛）にあてて、黄興は条件を示す。「黎公がもし法によって治めるなら乱の芽は抑えられよう。この趣旨に背くなら興もまた承服しない」（{tg("N29")}、平文）。</li>
     <li>黄興は陝西軍を支持し、独立各省に北伐を促した（{tg("N04")}、平文）。</li>
     <li>日本側の仲介者：小池領事と有吉総領事（{tg("N30")}）、田中と青木（{tg("N23")}）{unc("——推定であり、証明されていない")}。</li>
   </ul>
