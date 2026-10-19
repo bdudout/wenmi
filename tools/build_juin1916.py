@@ -17,7 +17,7 @@ def Q(zh):
 def unc(t):
     return f'<mark class="unc">{t}</mark>'
 
-FR = f'''<!-- {{"title": "Juin 1916 : ce que disent les télégrammes de Huang Xing", "description": "Ce que vingt télégrammes chiffrés de juin 1916, déchiffrés en octobre 2026, apprennent sur Huang Xing, le Japon, le Zhejiang et le retour à la Constitution de 1912 après la mort de Yuan Shikai."}} -->
+FR = f'''<!-- {{"title": "Juin 1916 : ce que disent les télégrammes de Huang Xing", "description": "Ce que vingt-quatre télégrammes chiffrés de juin 1916, déchiffrés en octobre 2026, apprennent sur Huang Xing, le Japon, le Zhejiang et le retour à la Constitution de 1912 après la mort de Yuan Shikai."}} -->
 <article class="article">
   <header class="lede">
     <p class="kicker">Histoire · Juin 1916</p>
@@ -27,7 +27,7 @@ FR = f'''<!-- {{"title": "Juin 1916 : ce que disent les télégrammes de Huang X
   </header>
 
   <h2 id="corpus">Un trou dans les archives</h2>
-  <p>Les brouillons des télégrammes de Huang Xing pour mai–octobre 1916, conservés par l’historien Hsueh Chun-tu (薛君度), ont été publiés en Chine sous le titre {Q("黃興等電稿")} : 126 pièces, présentées comme inédites jusque-là{S(29)}. Entre la pièce du 8 juin et celle du 20 juin, elles ne contiennent <strong>rien</strong>. Or les télégrammes interceptés au Japon et déchiffrés ici ({Q("容密")}, {Q("共密")}) sont datés, pour la plupart, du 8 au 16 juin{S(25, 27)} : ils tombent exactement dans ce trou. Nous n’avons retrouvé aucun de leurs textes dans cette édition ni en ligne ; une vérification dans le recueil {Q("黃興集")} et dans les correspondances de Li Yuanhong reste à faire.</p>
+  <p>Les brouillons des télégrammes de Huang Xing pour mai–octobre 1916, conservés par l’historien Hsueh Chun-tu (薛君度), ont été publiés en Chine sous le titre {Q("黃興等電稿")} : 126 pièces, présentées comme inédites jusque-là{S(29)}. Entre la pièce du 8 juin et celle du 20 juin, elles ne contiennent <strong>rien</strong>. Or les télégrammes interceptés au Japon et déchiffrés ici ({Q("容密")}, {Q("共密")}, {Q("辰密")}) sont datés, pour la plupart, du 8 au 16 juin{S(25, 27)} : ils tombent exactement dans ce trou. Nous n’avons retrouvé aucun de leurs textes dans cette édition ni en ligne ; une vérification dans le recueil {Q("黃興集")} et dans les correspondances de Li Yuanhong reste à faire.</p>
   <p>L’édition de 1916 confirme aussi le contexte des nôtres : Huang Xing y répond le 20 juin aux télégrammes {Q("寒")} (14) et {Q("洽")} de Li Yuanhong — le premier est {tg("N34")}, que nous lisons en clair ; la pièce du 8 juin, signée Yin Ruli, Ge Jing’en et Huang Fu, annonce la réunion « chez Tang » dont {tg("N24")} donne la suite.</p>
 
   <h2 id="codes">Un code par correspondant</h2>
@@ -41,6 +41,9 @@ FR = f'''<!-- {{"title": "Juin 1916 : ce que disent les télégrammes de Huang X
   <p>Dès le 10 juin, Huang Xing fixe cinq conditions pour Li Yuanhong : rétablir la Constitution provisoire de 1912 et l’ancien Parlement, refuser toute amnistie, faire démissionner le cabinet de Duan Qirui, déplacer Wang Zhanyuan, faire venir à Pékin les chefs républicains ({tg("N17")}). Le lendemain, il ajoute qu’« une solution juridique n’aura aucun effet sans force armée pour l’appuyer », demande au Zhejiang d’être « le pilier du Sud-Est » et à Lu Rongting et Li Liejun de marcher sur le Hubei et le Jiangxi ({tg("N19b")}).</p>
   <p>À Shanghai, le groupe de Huang Fu raconte la suite ({tg("N24")}) : Li Yuanhong invite les notables à Pékin ; on pense à y envoyer Tang Hualong, Gu Zhongxiu, Zhang Ji et Fan Yuanlian à titre personnel ; puis on décide que Tang Shaoyi et Tang Hualong répondront qu’ils ne viendront pas tant qu’un ordre n’aura pas aboli les lois de Yuan et rétabli la Constitution de 1912. Zhang Guogan, secrétaire général de la présidence, télégraphie que Duan y consent ; Tang Hualong part pour Pékin le soir même. Le 14, Li Yuanhong répond lui-même à Huang Xing ({tg("N34")}) : il rappelle leur combat commun à Wuhan en 1911 ({Q("陽夏同舟")}), lui demande de « le soutenir et de corriger ses erreurs », et promet de consulter le pays sur les « grandes affaires de l’État ». Le 16, Huang Xing met encore en garde contre une manœuvre de Pékin pour réviser la Constitution par des délégués des provinces et contre Duan, qui « reprend les vieilles ruses de Yuan » ({tg("N35")}). La Constitution de 1912 est rétablie le 29 juin.</p>
 
+  <h2 id="hunan">Le Hunan : une division pour Li Yuanhong</h2>
+  <p>Les quatre télégrammes {Q("辰密")}, déchiffrés en dernier, vont tous à l’adresse télégraphique du groupe hunanais de Shanghai (Tan Yankai, Chen Jiahui){S(27)}. Le 9 juin, Huang Xing y explique que le télégramme collectif à Li Yuanhong, à Cen Chunxuan et aux provinces est « très difficile à rédiger » : il faut une position unanime, l’accord de l’Armée de protection de la nation, et ne pas paraître opportuniste ; il note que « le Japon reste très attentiste » ({tg("N13")}). Le lendemain, Zhang Xiaozhun propose de donner au nouveau président une force sûre : faire former par Zhao Hengti (趙恆惕), qui « a toujours eu la confiance de Li » et entraîne alors des troupes au Hunan sous le dujun Tang Xiangming, « une division d’élite à la disposition de Li », en passant par Tang Hualong, frère aîné du dujun ; les armes seraient fournies ({tg("N16")}). C’est la traduction pratique du « pas de solution juridique sans force armée » de {tg("N19b")}.</p>
+
   <h2 id="autres">Autres éclairages</h2>
   <ul>
     <li>Sun Yat-sen ordonne par télégramme à ses troupes de cesser le combat ; sa réponse publiée dans la presse inquiète les amis de Huang Xing ({tg("N32")}).</li>
@@ -53,7 +56,7 @@ FR = f'''<!-- {{"title": "Juin 1916 : ce que disent les télégrammes de Huang X
 </article>
 '''
 
-EN = f'''<!-- {{"title": "June 1916: what Huang Xing’s telegrams say", "description": "What twenty cipher telegrams of June 1916, deciphered in October 2026, tell us about Huang Xing, Japan, Zhejiang and the return to the 1912 Constitution after Yuan Shikai’s death."}} -->
+EN = f'''<!-- {{"title": "June 1916: what Huang Xing’s telegrams say", "description": "What twenty-four cipher telegrams of June 1916, deciphered in October 2026, tell us about Huang Xing, Japan, Zhejiang and the return to the 1912 Constitution after Yuan Shikai’s death."}} -->
 <article class="article">
   <header class="lede">
     <p class="kicker">History · June 1916</p>
@@ -63,7 +66,7 @@ EN = f'''<!-- {{"title": "June 1916: what Huang Xing’s telegrams say", "descri
   </header>
 
   <h2 id="corpus">A gap in the record</h2>
-  <p>The drafts of Huang Xing’s telegrams for May–October 1916, kept by the historian Hsueh Chun-tu (薛君度), were published in China as {Q("黃興等電稿")}: 126 pieces, described as previously unpublished{S(29)}. Between the piece of 8 June and that of 20 June they contain <strong>nothing</strong>. The telegrams intercepted in Japan and deciphered here ({Q("容密")}, {Q("共密")}) are mostly dated 8 to 16 June{S(25, 27)}: they fall exactly into that gap. We found none of their texts in that edition or online; the {Q("黃興集")} collection and Li Yuanhong’s correspondence still have to be checked.</p>
+  <p>The drafts of Huang Xing’s telegrams for May–October 1916, kept by the historian Hsueh Chun-tu (薛君度), were published in China as {Q("黃興等電稿")}: 126 pieces, described as previously unpublished{S(29)}. Between the piece of 8 June and that of 20 June they contain <strong>nothing</strong>. The telegrams intercepted in Japan and deciphered here ({Q("容密")}, {Q("共密")}, {Q("辰密")}) are mostly dated 8 to 16 June{S(25, 27)}: they fall exactly into that gap. We found none of their texts in that edition or online; the {Q("黃興集")} collection and Li Yuanhong’s correspondence still have to be checked.</p>
   <p>The edition also confirms their context: on 20 June Huang Xing answers Li Yuanhong’s telegrams {Q("寒")} (14th) and {Q("洽")} — the first is {tg("N34")}, which we read in clear; the piece of 8 June, signed Yin Ruli, Ge Jing’en and Huang Fu, announces the meeting “at Tang’s house” whose sequel is {tg("N24")}.</p>
 
   <h2 id="codes">One code per correspondent</h2>
@@ -77,6 +80,9 @@ EN = f'''<!-- {{"title": "June 1916: what Huang Xing’s telegrams say", "descri
   <p>On 10 June Huang Xing sets five conditions for Li Yuanhong: restore the 1912 Provisional Constitution and the old Parliament, refuse any amnesty, make Duan Qirui’s cabinet resign, move Wang Zhanyuan, and bring the republican leaders to Beijing ({tg("N17")}). The next day he adds that “a legal solution will have no effect without armed force behind it”, asks Zhejiang to be “the pillar of the South-East”, and asks Lu Rongting and Li Liejun to march on Hubei and Jiangxi ({tg("N19b")}).</p>
   <p>In Shanghai, Huang Fu’s group reports what followed ({tg("N24")}): Li Yuanhong invites the notables to Beijing; Tang Hualong, Gu Zhongxiu, Zhang Ji and Fan Yuanlian are considered for a personal mission; then it is decided that Tang Shaoyi and Tang Hualong will answer that they will not come until an order abolishes Yuan’s laws and restores the 1912 Constitution. Zhang Guogan, the presidential secretary-general, wires that Duan agrees; Tang Hualong leaves for Beijing that evening. On the 14th Li Yuanhong himself answers Huang Xing ({tg("N34")}): he recalls their common fight at Wuhan in 1911 ({Q("陽夏同舟")}), asks him to “support him and correct his mistakes”, and promises to consult the country on “the great affairs of State”. On the 16th Huang Xing still warns against a Beijing manoeuvre to revise the Constitution through provincial delegates, and against Duan, “taking up Yuan’s old tricks” ({tg("N35")}). The 1912 Constitution was restored on 29 June.</p>
 
+  <h2 id="hunan">Hunan: a division for Li Yuanhong</h2>
+  <p>The four {Q("辰密")} telegrams, deciphered last, all go to the telegraphic address of the Hunanese group in Shanghai (Tan Yankai, Chen Jiahui){S(27)}. On 9 June Huang Xing explains that the joint telegram to Li Yuanhong, Cen Chunxuan and the provinces is “very hard to word”: it needs a unanimous position, the agreement of the National Protection Army, and must not look opportunistic; he notes that “Japan is very much wait-and-see” ({tg("N13")}). The next day Zhang Xiaozhun proposes giving the new president a reliable force: having Zhao Hengti (趙恆惕), who “has always had Li’s trust” and is then training troops in Hunan under Governor Tang Xiangming, form “an elite division at Li’s disposal”, through Tang Hualong, the governor’s elder brother; the arms would be supplied ({tg("N16")}). This is the practical side of the “no legal solution without armed force” of {tg("N19b")}.</p>
+
   <h2 id="autres">Other glimpses</h2>
   <ul>
     <li>Sun Yat-sen orders his troops by telegram to cease fighting; his reply, published in the press, worries Huang Xing’s friends ({tg("N32")}).</li>
@@ -89,7 +95,7 @@ EN = f'''<!-- {{"title": "June 1916: what Huang Xing’s telegrams say", "descri
 </article>
 '''
 
-HANT = f'''<!-- {{"title": "1916年6月：黃興電報所見", "description": "2026年10月破譯的1916年6月二十封密電，對黃興、日本、浙江以及袁世凱死後恢復元年約法的新見。"}} -->
+HANT = f'''<!-- {{"title": "1916年6月：黃興電報所見", "description": "2026年10月破譯的1916年6月二十四封密電，對黃興、日本、浙江以及袁世凱死後恢復元年約法的新見。"}} -->
 <article class="article">
   <header class="lede">
     <p class="kicker">歷史·1916年6月</p>
@@ -99,7 +105,7 @@ HANT = f'''<!-- {{"title": "1916年6月：黃興電報所見", "description": "2
   </header>
 
   <h2 id="corpus">檔案中的空白</h2>
-  <p>黃興1916年5月至10月的電稿，由薛君度保存，後以《黃興等電稿》為題在中國發表，共126件，稱此前從未發表{S(29)}。其中6月8日一件與6月20日一件之間<strong>別無他件</strong>。而本站破譯的日本截獲電報（容密、共密）大多在6月8日至16日之間{S(25, 27)}，恰好填補此一空白。我們在該書及網上均未找到其電文；《黃興集》與黎元洪函電尚待查核。</p>
+  <p>黃興1916年5月至10月的電稿，由薛君度保存，後以《黃興等電稿》為題在中國發表，共126件，稱此前從未發表{S(29)}。其中6月8日一件與6月20日一件之間<strong>別無他件</strong>。而本站破譯的日本截獲電報（容密、共密、辰密）大多在6月8日至16日之間{S(25, 27)}，恰好填補此一空白。我們在該書及網上均未找到其電文；《黃興集》與黎元洪函電尚待查核。</p>
   <p>該書亦印證其背景：6月20日黃興覆黎元洪「寒」（十四日）、「洽」兩電——前者即{tg("N34")}，本站可直接讀出；6月8日殷汝驪、葛敬恩、黃郛來電提及「唐宅會議」，其後續見{tg("N24")}。</p>
 
   <h2 id="codes">一位通信者一種密碼</h2>
@@ -113,6 +119,9 @@ HANT = f'''<!-- {{"title": "1916年6月：黃興電報所見", "description": "2
   <p>6月10日，黃興向黎元洪提出五項主張：恢復舊約法及國會，勿發赦令，使段祺瑞內閣辭職，將王占元調開，招民黨要人入京（{tg("N17")}）。翌日又稱「惟求法律上之解決，非有充實武力為之後援，必無効果」，望浙省「作東南之砥柱」，並請陸榮廷、李烈鈞速出鄂贛（{tg("N19b")}）。</p>
   <p>上海黃郛等人報告其後經過（{tg("N24")}）：黎元洪電邀滬上巨公入京；初議請湯化龍、谷鍾秀、張繼、范源濂以個人名義入京；後決定由唐紹儀、湯化龍覆電，非下令取消袁逆偽法、實行遵照元年約法，暫不入京。張國淦自京電告段已贊同；湯化龍當晚赴京。14日黎元洪親覆黃興（{tg("N34")}）：提及「往年陽夏同舟」，望其「左提右挈，糾繆繩愆」，並稱國家根本大計將謀及國人。16日黃興仍警告北京欲召各省代表議約法之策，及段「有襲袁故智之勢」（{tg("N35")}）。元年約法於6月29日恢復。</p>
 
+  <h2 id="hunan">湖南：為黎元洪練一師兵</h2>
+  <p>最後破譯的四封{Q("辰密")}電報，都發往上海湘籍諸人（譚延闓、陳嘉會）的電報地址{S(27)}。6月9日黃興說，致黎元洪、岑春煊及各省的聯名電「頗難著筆」：須主張一致、取得護國軍同意，又不可被視為取巧；並稱「日態度頗觀望」（{tg("N13")}）。翌日張孝準提議使新總統有可靠武力：經由湘督湯薌銘之兄湯化龍設法，讓「素為黎公所信倚」、正在湯督下練兵的趙恆惕「迅練精兵一師，以備黎公驅遣」，武器則竭力籌辦（{tg("N16")}）。這正是{tg("N19b")}「非有充實武力為之後援，必無効果」的具體辦法。</p>
+
   <h2 id="autres">其他</h2>
   <ul>
     <li>孫中山電令所部停兵；其覆電已登報，黃興友人以為宜慎（{tg("N32")}）。</li>
@@ -125,7 +134,7 @@ HANT = f'''<!-- {{"title": "1916年6月：黃興電報所見", "description": "2
 </article>
 '''
 
-JA = f'''<!-- {{"title": "1916年6月：黄興の電報が語ること", "description": "2026年10月に解読された1916年6月の暗号電報20通から、黄興・日本・浙江と、袁世凱死後の元年約法回復について分かること。"}} -->
+JA = f'''<!-- {{"title": "1916年6月：黄興の電報が語ること", "description": "2026年10月に解読された1916年6月の暗号電報24通から、黄興・日本・浙江と、袁世凱死後の元年約法回復について分かること。"}} -->
 <article class="article">
   <header class="lede">
     <p class="kicker">歴史・1916年6月</p>
@@ -135,7 +144,7 @@ JA = f'''<!-- {{"title": "1916年6月：黄興の電報が語ること", "descri
   </header>
 
   <h2 id="corpus">史料の空白</h2>
-  <p>薛君度が保存していた黄興の1916年5〜10月の電稿は『黄興等電稿』として中国で公刊された（126件、それまで未発表とされる）{S(29)}。そこには6月8日の一件と6月20日の一件の間に<strong>何もない</strong>。日本で傍受され本サイトで解読した電報（容密・共密）の大半は6月8〜16日付であり{S(25, 27)}、ちょうどこの空白に当たる。同書にもインターネット上にもその本文は見つからなかった。『黄興集』と黎元洪の函電の確認は今後の課題である。</p>
+  <p>薛君度が保存していた黄興の1916年5〜10月の電稿は『黄興等電稿』として中国で公刊された（126件、それまで未発表とされる）{S(29)}。そこには6月8日の一件と6月20日の一件の間に<strong>何もない</strong>。日本で傍受され本サイトで解読した電報（容密・共密・辰密）の大半は6月8〜16日付であり{S(25, 27)}、ちょうどこの空白に当たる。同書にもインターネット上にもその本文は見つからなかった。『黄興集』と黎元洪の函電の確認は今後の課題である。</p>
   <p>同書は背景も裏づける。6月20日、黄興は黎元洪の「寒」（14日）・「洽」両電に返電しているが、前者が{tg("N34")}（平文で読める）である。また6月8日の殷汝驪・葛敬恩・黄郛の電報は「唐宅の会議」を伝え、その続きが{tg("N24")}である。</p>
 
   <h2 id="codes">通信相手ごとの暗号</h2>
@@ -148,6 +157,9 @@ JA = f'''<!-- {{"title": "1916年6月：黄興の電報が語ること", "descri
   <h2 id="constitution">元年約法の回復</h2>
   <p>6月10日、黄興は黎元洪に対する五つの条件を示した。旧約法と旧国会の回復、赦令を出さないこと、段祺瑞内閣の辞職、王占元の転任、民党要人の北京招致である（{tg("N17")}）。翌日には「法律上の解決も、充実した武力の後ろ盾がなければ効果はない」と述べ、浙江に「東南の砥柱」となるよう、陸栄廷と李烈鈞には鄂・贛へ出兵するよう求めた（{tg("N19b")}）。</p>
   <p>上海の黄郛らはその後の経過を伝える（{tg("N24")}）。黎元洪は上海の名士を北京に招き、湯化龍・谷鍾秀・張継・范源濂を個人名義で派遣する案が出たが、結局、唐紹儀と湯化龍が「袁逆の偽法を取り消し元年約法の遵守を命じないかぎり北京には入らない」と返電することになった。総統府秘書長の張国淦は段の同意を北京から伝え、湯化龍はその晩北京へ向かった。14日、黎元洪自身が黄興に返電した（{tg("N34")}）。1911年の武漢での共闘（「陽夏同舟」）に触れ、「左提右挈、糾繆縄愆」を求め、国家の根本大計を国民に諮ると約した。16日にも黄興は、各省代表に約法を議させる北京の策と、「袁の故智を襲う」段への警戒を説いている（{tg("N35")}）。元年約法は6月29日に回復された。</p>
+
+  <h2 id="hunan">湖南：黎元洪のための一個師</h2>
+  <p>最後に解読した{Q("辰密")}電報4通は、すべて上海の湖南派（譚延闓・陳嘉会）の電信あて名に送られている{S(27)}。6月9日、黄興は黎元洪・岑春煊・各省あての連名電が「頗る筆を著け難い」と述べる。主張を一致させ、護国軍の同意を得、機会主義と見られてはならない。また「日本の態度は頗る観望的」と記す（{tg("N13")}）。翌日、張孝準は新大総統に確かな武力を与える案を出す。湖南督軍湯薌銘の兄湯化龍を通じて、「もとより黎公の信頼を受け」、湯督のもとで兵を練っている趙恒惕に「精兵一個師を迅速に練らせ、黎公の指揮に備える」。武器は全力で用意する（{tg("N16")}）。{tg("N19b")}の「武力の後ろ盾なくして法律上の解決は無効」の具体策である。</p>
 
   <h2 id="autres">その他</h2>
   <ul>
