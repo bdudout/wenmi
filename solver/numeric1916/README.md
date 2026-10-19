@@ -11,14 +11,19 @@ relancer la recherche des clés sans a priori, avec des témoins. Python 3 + Num
 |---|---|
 | `common.py` | les trois clés (共密 C51, 容密 v2, 辰密 C92), le code télégraphique, le modèle de langue, le chargement des données |
 | `decode.py` | décoder des groupes (`--key rongmi 2081 3308`) ou un télégramme publié (`--message N16`) ; `--list` |
-| `verify.py` | contrôle : reproduction exacte des 29 textes bruts publiés à partir des chiffres ; score de chaque clé contre des clés aléatoires de même forme et contre les chiffres mélangés |
+| `verify.py` | contrôle : reproduction exacte des 32 textes bruts publiés à partir des chiffres ; score de chaque clé contre des clés aléatoires de même forme et contre les chiffres mélangés |
 | `search_gongmi.py` | recherche de la clé 共密 : les 10 000 constantes K, permutation des dizaines optimale pour chacune |
 | `search_rongmi.py` | recherche de la clé 容密 : quatre substitutions de chiffres (recuit), puis constante K et retenues |
 | `search_chenmi.py` | recherche de la clé 辰密 : pages, dizaines et unités permutées (recuit + affectation), comparaison avec le décompte sans zéro |
 | `search_common.py` | affectation exacte (algorithme hongrois) et témoins par mélange |
-| `data/messages.json` | 34 télégrammes : chiffres **tels que relus** par Brice Dudout, feuillets JACAR (cote, page PDF, côté), date, texte brut et lecture proposés tels que publiés ; 5 télégrammes non lus (premier feuillet) |
+| `data/messages.json` | 37 télégrammes : chiffres **tels que relus** par Brice Dudout, feuillets JACAR (cote, page PDF, côté), date, texte brut et lecture proposés tels que publiés ; 5 télégrammes non lus (premier feuillet) |
 | `data/reread/` | les exports bruts des relectures de Brice Dudout, case par case, colonne par colonne (droite → gauche) |
 | `lm/` | modèle de langue des clés (unigrammes et bigrammes de codes CTC, entraîné sur les textes déjà publiés du site, 1915–1916) et table code → caractère |
+
+## Remarque sur V4B, V4D, V4E
+
+Pour ces trois télégrammes du vol. 4, les groupes de `data/messages.json` intègrent les glissements de cadrage déduits du décodage
+(un chiffre manquant ou en trop, champ `repairs` des pages du site) ; ils restent à vérifier sur les scans.
 
 ## Lecture des feuillets
 
@@ -40,7 +45,7 @@ P est le numéro du caractère dans le code télégraphique chinois (CTC). Aucun
 ## Résultats attendus
 
 ```
-python3 verify.py                 # 29/29 ; 共密 3,50 · 容密 3,26 · 辰密 3,77 contre des témoins ≤ −1,2
+python3 verify.py                 # 32/32 ; 共密 3,50 · 容密 3,26 · 辰密 3,77 contre des témoins ≤ −1,2
 python3 search_gongmi.py          # retrouve K = 9000 et φ exactement (quelques secondes)
 python3 search_rongmi.py          # étape 1 lisible (≈ 2,2, avec l'anomalie historique 借甸 pour 借款) ; étape 2 : K = 0900
                                   #   et des tables équivalentes à une retenue près (la clé publiée, K = 0901, fait mieux : 3,26)
@@ -65,7 +70,7 @@ This folder lets anyone **independently re-check** the decipherment of the June 
 (Gongmi, Rongmi and Chenmi pages): re-read the digits on the JACAR scans, replay the keys, and re-run the key searches from
 scratch against null controls. Python 3 + NumPy only. `data/messages.json` holds the digits **as re-read** by Brice Dudout,
 with sheet references and the published raw text and proposed reading; `data/reread/` holds the raw cell-by-cell re-reading exports.
-`verify.py` reproduces all 29 published raw texts and scores each key against random keys of the same form and shuffled digits;
+`verify.py` reproduces all 32 published raw texts and scores each key against random keys of the same form and shuffled digits;
 `search_*.py` recover the keys without prior knowledge (Gongmi exactly; Rongmi up to one carry; Chenmi's page table compared with
 the zero-free countdown). The final manual steps (Rongmi “90 = 00”, Chenmi page rule and “9 = 10”) are described on the site’s
 Method page. Corrections and counter-checks are welcome.
