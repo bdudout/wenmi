@@ -31,7 +31,7 @@ FR = f'''<!-- {{"title": "Juin 1916 : ce que disent les télégrammes de Huang X
   <p>L’édition de 1916 confirme aussi le contexte des nôtres : Huang Xing y répond le 20 juin aux télégrammes {Q("寒")} (14) et {Q("洽")} de Li Yuanhong — le premier est {tg("N34")}, que nous lisons en clair ; la pièce du 8 juin, signée Yin Ruli, Ge Jing’en et Huang Fu, annonce la réunion « chez Tang » dont {tg("N24")} donne la suite.</p>
 
   <h2 id="codes">Un code par correspondant</h2>
-  <p>Les brouillons publiés notent, en tête de chaque télégramme, le nom du code employé : {Q("辰密")} pour Zeng Jiwu (曾繼梧) au Hunan, {Q("共密")} pour Li Shucheng et Chen Jiahui, {Q("安密")} pour Tan Yankai, {Q("嚴密")} pour Peng Yunyi, etc.{S(29)} Les préfixes en clair des formulaires interceptés ({Q("容密")}, {Q("共密")}, {Q("辰密")}, {Q("和密")}, {Q("乾密")}) sont donc les noms de livres de chiffrement attribués à des correspondants. Cela explique pourquoi chaque famille a sa propre clé, et pourquoi la clé de {Q("辰密")} reste à trouver : elle n’a rien à voir avec les deux autres.</p>
+  <p>Les brouillons publiés notent, en tête de chaque télégramme, le nom du code employé : {Q("辰密")} pour Zeng Jiwu (曾繼梧) au Hunan, {Q("共密")} pour Li Shucheng et Chen Jiahui, {Q("安密")} pour Tan Yankai, {Q("嚴密")} pour Peng Yunyi, etc.{S(29)} Les préfixes en clair des formulaires interceptés ({Q("容密")}, {Q("共密")}, {Q("辰密")}, {Q("和密")}, {Q("乾密")}) sont donc les noms de livres de chiffrement attribués à des correspondants. Cela explique pourquoi chaque famille a sa propre clé, et pourquoi celle de {Q("辰密")}, trouvée en octobre 2026, ne ressemble pas aux deux autres : c’est le code télégraphique lui-même, réordonné (voir la page <a href="chenmi.html">辰密</a>).</p>
 
   <h2 id="japon">Le Japon : des armes, des emprunts, et une condition</h2>
   <p>Les télégrammes {Q("容密")} de Zhang Xiaozhun (張孝準), ancien élève de l’École des officiers de Tokyo installé près de Huang Xing, détaillent une commande d’armes japonaises pour le Zhejiang, dont le gouverneur militaire Lü Gongwang est en poste depuis le 6 mai : environ dix mille fusils, une dizaine de canons de montagne, des mitrailleuses ({tg("N02")}, {tg("N12")}) ; des munitions comptées par pièce ({tg("N21")}) ; un paiement promis « avant le 30 juin » ({tg("N36")}). Le financement passe par un emprunt d’un million proposé par un intermédiaire nommé {Q("芳川")} ({tg("N12")}) et par l’emprunt de cinq millions du Conseil des affaires militaires de Zhaoqing ({tg("N02")}). Le Zhejiang offre en gage ses taxes sur le tabac (environ 280 000 et 140 000 par an) et juge sa taxe sur l’alcool (environ 900 000) trop précieuse ({tg("N25")}) ; il envoie un émissaire, Wu Zhaolian, au Japon ({tg("N25")}, {tg("N36")}).</p>
@@ -49,7 +49,7 @@ FR = f'''<!-- {{"title": "Juin 1916 : ce que disent les télégrammes de Huang X
   </ul>
 
   <h2 id="limites">Limites</h2>
-  <p>Les clés sont reconstruites, pas retrouvées dans un livre de code ; tous les chiffres ont été relus par Brice Dudout sur les scans, mais quelques caractères restent non résolus et les traductions sont des propositions. Les points ci-dessus ne prétendent pas à la nouveauté absolue : ils n’apparaissent ni dans l’édition des brouillons de Huang Xing ni dans les sources consultées en ligne, ce qui ne prouve pas qu’ils soient inconnus des historiens. Textes, clés et scans : pages <a href="rongmi.html">容密</a>, <a href="gongmi.html">共密</a> et <a href="telegrams.html#grp-numeric">Télégrammes</a>.</p>
+  <p>Les clés sont reconstruites, pas retrouvées dans un livre de code ; tous les chiffres ont été relus par Brice Dudout sur les scans, mais quelques caractères restent non résolus et les traductions sont des propositions. Les points ci-dessus ne prétendent pas à la nouveauté absolue : ils n’apparaissent ni dans l’édition des brouillons de Huang Xing ni dans les sources consultées en ligne, ce qui ne prouve pas qu’ils soient inconnus des historiens. Textes, clés et scans : pages <a href="rongmi.html">容密</a>, <a href="gongmi.html">共密</a>, <a href="chenmi.html">辰密</a> et <a href="telegrams.html#grp-numeric">Télégrammes</a>.</p>
 </article>
 '''
 
@@ -67,7 +67,7 @@ EN = f'''<!-- {{"title": "June 1916: what Huang Xing’s telegrams say", "descri
   <p>The edition also confirms their context: on 20 June Huang Xing answers Li Yuanhong’s telegrams {Q("寒")} (14th) and {Q("洽")} — the first is {tg("N34")}, which we read in clear; the piece of 8 June, signed Yin Ruli, Ge Jing’en and Huang Fu, announces the meeting “at Tang’s house” whose sequel is {tg("N24")}.</p>
 
   <h2 id="codes">One code per correspondent</h2>
-  <p>The published drafts record, at the head of each telegram, the name of the code used: {Q("辰密")} for Zeng Jiwu (曾繼梧) in Hunan, {Q("共密")} for Li Shucheng and Chen Jiahui, {Q("安密")} for Tan Yankai, {Q("嚴密")} for Peng Yunyi, and so on{S(29)}. The clear prefixes on the intercepted forms ({Q("容密")}, {Q("共密")}, {Q("辰密")}, {Q("和密")}, {Q("乾密")}) are therefore names of cipher books assigned to correspondents. This explains why each family has its own key, and why the {Q("辰密")} key is still to be found: it has nothing to do with the other two.</p>
+  <p>The published drafts record, at the head of each telegram, the name of the code used: {Q("辰密")} for Zeng Jiwu (曾繼梧) in Hunan, {Q("共密")} for Li Shucheng and Chen Jiahui, {Q("安密")} for Tan Yankai, {Q("嚴密")} for Peng Yunyi, and so on{S(29)}. The clear prefixes on the intercepted forms ({Q("容密")}, {Q("共密")}, {Q("辰密")}, {Q("和密")}, {Q("乾密")}) are therefore names of cipher books assigned to correspondents. This explains why each family has its own key, and why the {Q("辰密")} key, found in October 2026, is unlike the other two: it is the telegraph code itself, reordered (see the <a href="chenmi.html">Chenmi</a> page).</p>
 
   <h2 id="japon">Japan: arms, loans, and a condition</h2>
   <p>The {Q("容密")} telegrams of Zhang Xiaozhun (張孝準), a graduate of the Tokyo military academy working alongside Huang Xing, detail an order of Japanese arms for Zhejiang, whose military governor Lü Gongwang had taken office on 6 May: about ten thousand rifles, ten or so mountain guns, machine guns ({tg("N02")}, {tg("N12")}); ammunition counted per weapon ({tg("N21")}); payment promised “before 30 June” ({tg("N36")}). Funding comes from a one-million loan offered by an intermediary named {Q("芳川")} ({tg("N12")}) and from the five-million loan of the Military Affairs Council at Zhaoqing ({tg("N02")}). Zhejiang offers its tobacco taxes as security (about 280,000 and 140,000 a year) and judges its wine tax (about 900,000) too valuable ({tg("N25")}); it sends an envoy, Wu Zhaolian, to Japan ({tg("N25")}, {tg("N36")}).</p>
@@ -85,7 +85,7 @@ EN = f'''<!-- {{"title": "June 1916: what Huang Xing’s telegrams say", "descri
   </ul>
 
   <h2 id="limites">Limits</h2>
-  <p>The keys are reconstructions, not taken from a code book; every digit was re-read on the scans by Brice Dudout, but a few characters remain unresolved and the translations are proposals. The points above do not claim absolute novelty: they appear neither in the edition of Huang Xing’s drafts nor in the sources consulted online, which does not prove that historians do not know them. Texts, keys and scans: the <a href="rongmi.html">Rongmi</a>, <a href="gongmi.html">Gongmi</a> and <a href="telegrams.html#grp-numeric">Telegrams</a> pages.</p>
+  <p>The keys are reconstructions, not taken from a code book; every digit was re-read on the scans by Brice Dudout, but a few characters remain unresolved and the translations are proposals. The points above do not claim absolute novelty: they appear neither in the edition of Huang Xing’s drafts nor in the sources consulted online, which does not prove that historians do not know them. Texts, keys and scans: the <a href="rongmi.html">Rongmi</a>, <a href="gongmi.html">Gongmi</a>, <a href="chenmi.html">Chenmi</a> and <a href="telegrams.html#grp-numeric">Telegrams</a> pages.</p>
 </article>
 '''
 
@@ -103,7 +103,7 @@ HANT = f'''<!-- {{"title": "1916年6月：黃興電報所見", "description": "2
   <p>該書亦印證其背景：6月20日黃興覆黎元洪「寒」（十四日）、「洽」兩電——前者即{tg("N34")}，本站可直接讀出；6月8日殷汝驪、葛敬恩、黃郛來電提及「唐宅會議」，其後續見{tg("N24")}。</p>
 
   <h2 id="codes">一位通信者一種密碼</h2>
-  <p>已發表的電稿在每電之首註明所用密碼之名：致湖南曾繼梧用「辰密」，李書城、陳嘉會用「共密」，譚延闓用「安密」，彭允彝用「嚴密」等{S(29)}。截獲電報紙上的明文前綴（容密、共密、辰密、和密、乾密）因此是分配給各通信者的密碼本名稱。這解釋了為何各系統各有其密鑰，也解釋了「辰密」的密鑰為何仍未找到：它與另外兩種毫無關係。</p>
+  <p>已發表的電稿在每電之首註明所用密碼之名：致湖南曾繼梧用「辰密」，李書城、陳嘉會用「共密」，譚延闓用「安密」，彭允彝用「嚴密」等{S(29)}。截獲電報紙上的明文前綴（容密、共密、辰密、和密、乾密）因此是分配給各通信者的密碼本名稱。這解釋了為何各系統各有其密鑰，也解釋了2026年10月找到的「辰密」密鑰為何與另外兩種不同：它是將電碼本身重新排列（見<a href="chenmi.html">辰密</a>頁面）。</p>
 
   <h2 id="japon">日本：軍械、借款與條件</h2>
   <p>張孝準（日本陸軍士官學校出身，在黃興身邊）的容密電報詳述為浙江向日本訂購軍械：浙江督軍呂公望5月6日就任；步槍約萬枝，山砲十餘門，另有機槍（{tg("N02")}、{tg("N12")}）；每門、每挺彈藥數（{tg("N21")}）；代價准於「六月三十日以前」付清（{tg("N36")}）。經費來自經手人「芳川」所提百萬借款（{tg("N12")}）及肇慶軍務院五百萬借款（{tg("N02")}）。浙江以烟捐（全年約二十八萬及十四萬）作抵押，認為酒捐（約九十萬）不宜（{tg("N25")}），並派吳兆蓮赴日（{tg("N25")}、{tg("N36")}）。</p>
@@ -121,7 +121,7 @@ HANT = f'''<!-- {{"title": "1916年6月：黃興電報所見", "description": "2
   </ul>
 
   <h2 id="limites">局限</h2>
-  <p>密鑰為復原所得，並非取自電碼本；全部數字已由 Brice Dudout 依掃描件複讀，但仍有少數字未解，譯文為推定。上述各點並不宣稱絕對首見：它們既不見於黃興電稿，也不見於網上所查資料，但這不證明史家未曾知悉。電文、密鑰與掃描件見<a href="rongmi.html">容密</a>、<a href="gongmi.html">共密</a>及<a href="telegrams.html#grp-numeric">電報全文</a>頁面。</p>
+  <p>密鑰為復原所得，並非取自電碼本；全部數字已由 Brice Dudout 依掃描件複讀，但仍有少數字未解，譯文為推定。上述各點並不宣稱絕對首見：它們既不見於黃興電稿，也不見於網上所查資料，但這不證明史家未曾知悉。電文、密鑰與掃描件見<a href="rongmi.html">容密</a>、<a href="gongmi.html">共密</a>、<a href="chenmi.html">辰密</a>及<a href="telegrams.html#grp-numeric">電報全文</a>頁面。</p>
 </article>
 '''
 
@@ -139,7 +139,7 @@ JA = f'''<!-- {{"title": "1916年6月：黄興の電報が語ること", "descri
   <p>同書は背景も裏づける。6月20日、黄興は黎元洪の「寒」（14日）・「洽」両電に返電しているが、前者が{tg("N34")}（平文で読める）である。また6月8日の殷汝驪・葛敬恩・黄郛の電報は「唐宅の会議」を伝え、その続きが{tg("N24")}である。</p>
 
   <h2 id="codes">通信相手ごとの暗号</h2>
-  <p>公刊された電稿は各電の冒頭に使用した暗号の名を記している。湖南の曾継梧には「辰密」、李書城・陳嘉会には「共密」、譚延闓には「安密」、彭允彝には「厳密」などである{S(29)}。傍受された用紙の平文の前置き（容密・共密・辰密・和密・乾密）は、通信相手ごとに割り当てられた暗号書の名なのである。各系統が独自の鍵を持つこと、そして「辰密」の鍵が他の二つと無関係でまだ見つからないことは、これで説明がつく。</p>
+  <p>公刊された電稿は各電の冒頭に使用した暗号の名を記している。湖南の曾継梧には「辰密」、李書城・陳嘉会には「共密」、譚延闓には「安密」、彭允彝には「厳密」などである{S(29)}。傍受された用紙の平文の前置き（容密・共密・辰密・和密・乾密）は、通信相手ごとに割り当てられた暗号書の名なのである。各系統が独自の鍵を持つこと、そして2026年10月に見つかった「辰密」の鍵が他の二つと似ず、電碼そのものを並べ替えたものであること（<a href="chenmi.html">辰密</a>のページ参照）は、これで説明がつく。</p>
 
   <h2 id="japon">日本：武器、借款、そして条件</h2>
   <p>黄興のそばにいた張孝準（陸軍士官学校出身）の容密電報は、5月6日に就任した浙江督軍呂公望のための日本製武器の注文を詳しく伝える。小銃約一万挺、山砲十余門、機関銃（{tg("N02")}、{tg("N12")}）、一門・一挺あたりの弾薬数（{tg("N21")}）、代金は「6月30日までに」支払うとの約束（{tg("N36")}）。資金は仲介者「芳川」の提示する百万の借款（{tg("N12")}）と、肇慶軍務院の五百万の借款（{tg("N02")}）による。浙江は煙税（年約28万と14万）を担保とし、酒税（約90万）は適当でないとして（{tg("N25")}）、呉兆蓮を日本に派遣した（{tg("N25")}、{tg("N36")}）。</p>
@@ -157,7 +157,7 @@ JA = f'''<!-- {{"title": "1916年6月：黄興の電報が語ること", "descri
   </ul>
 
   <h2 id="limites">限界</h2>
-  <p>鍵は復元であり電碼本から得たものではない。全数字はBrice Dudoutがスキャンで再読したが、いくつかの字は未解決で、翻訳は作業案である。以上の点は絶対の新発見を主張するものではない。黄興の電稿にもインターネット上の資料にも見当たらないが、それは歴史家が知らないことを意味しない。本文・鍵・スキャンは<a href="rongmi.html">容密</a>、<a href="gongmi.html">共密</a>、<a href="telegrams.html#grp-numeric">電報一覧</a>のページを参照。</p>
+  <p>鍵は復元であり電碼本から得たものではない。全数字はBrice Dudoutがスキャンで再読したが、いくつかの字は未解決で、翻訳は作業案である。以上の点は絶対の新発見を主張するものではない。黄興の電稿にもインターネット上の資料にも見当たらないが、それは歴史家が知らないことを意味しない。本文・鍵・スキャンは<a href="rongmi.html">容密</a>、<a href="gongmi.html">共密</a>、<a href="chenmi.html">辰密</a>、<a href="telegrams.html#grp-numeric">電報一覧</a>のページを参照。</p>
 </article>
 '''
 
@@ -170,7 +170,7 @@ S29 = {
 
 if __name__ == '__main__':
     T2 = C.t2s_table(WENMI)
-    HANS = C.to_hans({'x': HANT}, T2)['x']
+    HANS = C.to_hans({'x': HANT}, T2)['x'].replace('干密', '乾密')
     HANS = HANS.replace('<span lang="zh-Hant">', '<span lang="zh-Hant">')  # termes cités gardés en traditionnel (déjà marqués)
     S29['zh-hans'] = C.to_hans({'x': S29['zh-hant']}, T2)['x']
     pages = {'fr': FR, 'en': EN, 'ja': JA, 'zh-hant': HANT, 'zh-hans': HANS}

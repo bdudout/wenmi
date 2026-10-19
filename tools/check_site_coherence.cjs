@@ -41,7 +41,7 @@ for (const file of files) {
       });
     }
     for (const [field,value] of Object.entries({tels:m.texts,codes:m.codes,douteux:m.doubtful,illisible:m.illegible,props:m.proposals})) {
-      if(field in corpus.stats)assert.equal(corpus.stats[field],value,`${name}.stats.${field}`);
+      if(corpus.stats && field in corpus.stats)assert.equal(corpus.stats[field],value,`${name}.stats.${field}`);
     }
     if(old)assert.deepEqual(corpus.messages,old[name].messages,`${name}: telegram data changed`);
     const i18n = current[name+'_I18N'];

@@ -1,0 +1,2151 @@
+{
+ "generated_by": "c92/export_site.py",
+ "messages": {
+  "N05": {
+   "family": "辰密",
+   "key": "辰密 (C92)",
+   "meta": {
+    "dir": "Tokyo → Shanghai",
+    "date": 3,
+    "date_note": "3 juin 1916 (inventaire YC)",
+    "sheets": [
+     [
+      "B03050089200",
+      25,
+      "R"
+     ],
+     [
+      "B03050089200",
+      25,
+      "L"
+     ],
+     [
+      "B03050089200",
+      26,
+      "R"
+     ],
+     [
+      "B03050089200",
+      26,
+      "L"
+     ]
+    ],
+    "prefix": false
+   },
+   "summary_fr": "Huang Xing à Bo Wenwei (烈武) : s’il est appelé à unifier le commandement au Shandong, qu’il accepte, avec Zhang Ji ; aide promise.",
+   "repairs": [],
+   "reread_by_brice": true,
+   "raw": "轉烈武兄鑒山東方面如欲兄當統一事任可直承諾請溥泉偕劃此間當盡力援助如何盻覆興",
+   "groups": [
+    {
+     "i": 1,
+     "cipher": "2777",
+     "ctc": "6567",
+     "glyph": "轉",
+     "sheet": 1
+    },
+    {
+     "i": 2,
+     "cipher": "6162",
+     "ctc": "3525",
+     "glyph": "烈",
+     "sheet": 1
+    },
+    {
+     "i": 3,
+     "cipher": "6736",
+     "ctc": "2976",
+     "glyph": "武",
+     "sheet": 1
+    },
+    {
+     "i": 4,
+     "cipher": "9608",
+     "ctc": "0338",
+     "glyph": "兄",
+     "sheet": 1
+    },
+    {
+     "i": 5,
+     "cipher": "2254",
+     "ctc": "7003",
+     "glyph": "鑒",
+     "sheet": 1
+    },
+    {
+     "i": 6,
+     "cipher": "8435",
+     "ctc": "1472",
+     "glyph": "山",
+     "sheet": 1
+    },
+    {
+     "i": 7,
+     "cipher": "7101",
+     "ctc": "2639",
+     "glyph": "東",
+     "sheet": 1
+    },
+    {
+     "i": 8,
+     "cipher": "7392",
+     "ctc": "2455",
+     "glyph": "方",
+     "sheet": 1
+    },
+    {
+     "i": 9,
+     "cipher": "1909",
+     "ctc": "7240",
+     "glyph": "面",
+     "sheet": 1
+    },
+    {
+     "i": 10,
+     "cipher": "8735",
+     "ctc": "1172",
+     "glyph": "如",
+     "sheet": 1
+    },
+    {
+     "i": 11,
+     "cipher": "6788",
+     "ctc": "2948",
+     "glyph": "欲",
+     "sheet": 1
+    },
+    {
+     "i": 12,
+     "cipher": "9608",
+     "ctc": "0338",
+     "glyph": "兄",
+     "sheet": 1
+    },
+    {
+     "i": 13,
+     "cipher": "5620",
+     "ctc": "3981",
+     "glyph": "當",
+     "sheet": 1
+    },
+    {
+     "i": 14,
+     "cipher": "4667",
+     "ctc": "4827",
+     "glyph": "統",
+     "sheet": 2
+    },
+    {
+     "i": 15,
+     "cipher": "9950",
+     "ctc": "0001",
+     "glyph": "一",
+     "sheet": 2
+    },
+    {
+     "i": 16,
+     "cipher": "9997",
+     "ctc": "0057",
+     "glyph": "事",
+     "sheet": 2
+    },
+    {
+     "i": 17,
+     "cipher": "9847",
+     "ctc": "0117",
+     "glyph": "任",
+     "sheet": 2
+    },
+    {
+     "i": 18,
+     "cipher": "9378",
+     "ctc": "0668",
+     "glyph": "可",
+     "sheet": 2
+    },
+    {
+     "i": 19,
+     "cipher": "5499",
+     "ctc": "4160",
+     "glyph": "直",
+     "sheet": 2
+    },
+    {
+     "i": 20,
+     "cipher": "7659",
+     "ctc": "2110",
+     "glyph": "承",
+     "sheet": 2
+    },
+    {
+     "i": 21,
+     "cipher": "3231",
+     "ctc": "6179",
+     "glyph": "諾",
+     "sheet": 2
+    },
+    {
+     "i": 22,
+     "cipher": "3294",
+     "ctc": "6153",
+     "glyph": "請",
+     "sheet": 2
+    },
+    {
+     "i": 23,
+     "cipher": "6355",
+     "ctc": "3302",
+     "glyph": "溥",
+     "sheet": 2
+    },
+    {
+     "i": 24,
+     "cipher": "6564",
+     "ctc": "3123",
+     "glyph": "泉",
+     "sheet": 2
+    },
+    {
+     "i": 25,
+     "cipher": "9794",
+     "ctc": "0253",
+     "glyph": "偕",
+     "sheet": 2
+    },
+    {
+     "i": 26,
+     "cipher": "9527",
+     "ctc": "0487",
+     "glyph": "劃",
+     "sheet": 3
+    },
+    {
+     "i": 27,
+     "cipher": "6733",
+     "ctc": "2974",
+     "glyph": "此",
+     "sheet": 3
+    },
+    {
+     "i": 28,
+     "cipher": "2202",
+     "ctc": "7035",
+     "glyph": "間",
+     "sheet": 3
+    },
+    {
+     "i": 29,
+     "cipher": "5620",
+     "ctc": "3981",
+     "glyph": "當",
+     "sheet": 3
+    },
+    {
+     "i": 30,
+     "cipher": "5487",
+     "ctc": "4147",
+     "glyph": "盡",
+     "sheet": 3
+    },
+    {
+     "i": 31,
+     "cipher": "9519",
+     "ctc": "0500",
+     "glyph": "力",
+     "sheet": 3
+    },
+    {
+     "i": 32,
+     "cipher": "7576",
+     "ctc": "2266",
+     "glyph": "援",
+     "sheet": 3
+    },
+    {
+     "i": 33,
+     "cipher": "9453",
+     "ctc": "0504",
+     "glyph": "助",
+     "sheet": 3
+    },
+    {
+     "i": 34,
+     "cipher": "8735",
+     "ctc": "1172",
+     "glyph": "如",
+     "sheet": 3
+    },
+    {
+     "i": 35,
+     "cipher": "9881",
+     "ctc": "0149",
+     "glyph": "何",
+     "sheet": 3
+    },
+    {
+     "i": 36,
+     "cipher": "5430",
+     "ctc": "4171",
+     "glyph": "盻",
+     "sheet": 3
+    },
+    {
+     "i": 37,
+     "cipher": "3359",
+     "ctc": "6010",
+     "glyph": "覆",
+     "sheet": 3
+    },
+    {
+     "i": 38,
+     "cipher": "4220",
+     "ctc": "5281",
+     "glyph": "興",
+     "sheet": 3
+    }
+   ],
+   "segments": [
+    {
+     "raw": "轉烈武兄鑒",
+     "status": "literal",
+     "zh": "轉烈武兄鑒：",
+     "fr": "À transmettre à frère Liewu :",
+     "note": "烈武 = 柏文蔚 (字 烈武), candidat."
+    },
+    {
+     "raw": "山東方面如欲兄當統一事任",
+     "status": "literal",
+     "zh": "山東方面如欲兄當統一事任，",
+     "fr": "si, du côté du Shandong, on souhaite que vous preniez la direction unifiée,",
+     "note": ""
+    },
+    {
+     "raw": "可直承諾",
+     "status": "literal",
+     "zh": "可直承諾；",
+     "fr": "vous pouvez accepter directement ;",
+     "note": ""
+    },
+    {
+     "raw": "請溥泉偕劃",
+     "status": "provisional",
+     "zh": "請溥泉偕{行}。",
+     "fr": "priez Puquan (Zhang Ji) de vous accompagner.",
+     "note": "劃 → {行} : 1 chiffre (9527 → 3527). 溥泉 = 張繼."
+    },
+    {
+     "raw": "此間當盡力援助",
+     "status": "literal",
+     "zh": "此間當盡力援助。",
+     "fr": "D’ici, nous vous aiderons de toutes nos forces.",
+     "note": ""
+    },
+    {
+     "raw": "如何盻覆",
+     "status": "provisional",
+     "zh": "如何，{盼}覆。",
+     "fr": "Qu’en pensez-vous ? J’attends la réponse.",
+     "note": "盻 → {盼} : contexte ; même code 盻 (4171) qu’en 容密, différence probable de livre de code."
+    },
+    {
+     "raw": "興",
+     "status": "literal",
+     "zh": "興。",
+     "fr": "Xing.",
+     "note": "Signature de Huang Xing."
+    }
+   ],
+   "sheet_count": "4"
+  },
+  "N13": {
+   "family": "辰密",
+   "key": "辰密 (C92)",
+   "meta": {
+    "dir": "Tokyo → Shanghai",
+    "date": 9,
+    "date_note": "9 juin 1916 (en-tête du formulaire)",
+    "sheets": [
+     [
+      "B03050089300",
+      3,
+      "L"
+     ],
+     [
+      "B03050089300",
+      4,
+      "R"
+     ],
+     [
+      "B03050089300",
+      4,
+      "L"
+     ],
+     [
+      "B03050089300",
+      5,
+      "R"
+     ],
+     [
+      "B03050089300",
+      5,
+      "L"
+     ],
+     [
+      "B03050089300",
+      6,
+      "R"
+     ],
+     [
+      "B03050089300",
+      6,
+      "L"
+     ],
+     [
+      "B03050089300",
+      7,
+      "R"
+     ]
+    ],
+    "prefix": true
+   },
+   "summary_fr": "Huang Xing au groupe hunanais de Shanghai : le télégramme collectif à Li Yuanhong et Cen Chunxuan est délicat ; faire approuver par l’Armée de protection ; le Japon attentiste ; fermeté à Shanghai.",
+   "repairs": [],
+   "reread_by_brice": true,
+   "raw": "小詠鳳三兄鑒致黎岑及各省電頗難著筆苟主張一不恐有歧趨之嫌若如來電云云人必視爲取巧請取護國軍同意畎尊處擬稿拍發爲盼日態度頗觀望滬同人宜表示強硬主張軍務院尤須明白近兩日變狀乞電示興",
+   "groups": [
+    {
+     "i": 0,
+     "cipher": "6591",
+     "ctc": "6591",
+     "glyph": "辰",
+     "sheet": 1
+    },
+    {
+     "i": 0,
+     "cipher": "1378",
+     "ctc": "1378",
+     "glyph": "密",
+     "sheet": 1
+    },
+    {
+     "i": 1,
+     "cipher": "8449",
+     "ctc": "1420",
+     "glyph": "小",
+     "sheet": 1
+    },
+    {
+     "i": 2,
+     "cipher": "3255",
+     "ctc": "6102",
+     "glyph": "詠",
+     "sheet": 1
+    },
+    {
+     "i": 3,
+     "cipher": "1522",
+     "ctc": "7685",
+     "glyph": "鳳",
+     "sheet": 1
+    },
+    {
+     "i": 4,
+     "cipher": "9952",
+     "ctc": "0005",
+     "glyph": "三",
+     "sheet": 1
+    },
+    {
+     "i": 5,
+     "cipher": "9608",
+     "ctc": "0338",
+     "glyph": "兄",
+     "sheet": 1
+    },
+    {
+     "i": 6,
+     "cipher": "2254",
+     "ctc": "7003",
+     "glyph": "鑒",
+     "sheet": 1
+    },
+    {
+     "i": 7,
+     "cipher": "4278",
+     "ctc": "5268",
+     "glyph": "致",
+     "sheet": 1
+    },
+    {
+     "i": 8,
+     "cipher": "1345",
+     "ctc": "7812",
+     "glyph": "黎",
+     "sheet": 1
+    },
+    {
+     "i": 9,
+     "cipher": "8438",
+     "ctc": "1478",
+     "glyph": "岑",
+     "sheet": 1
+    },
+    {
+     "i": 10,
+     "cipher": "9383",
+     "ctc": "0644",
+     "glyph": "及",
+     "sheet": 1
+    },
+    {
+     "i": 11,
+     "cipher": "9337",
+     "ctc": "0677",
+     "glyph": "各",
+     "sheet": 1
+    },
+    {
+     "i": 12,
+     "cipher": "5473",
+     "ctc": "4164",
+     "glyph": "省",
+     "sheet": 2
+    },
+    {
+     "i": 13,
+     "cipher": "2114",
+     "ctc": "7193",
+     "glyph": "電",
+     "sheet": 2
+    },
+    {
+     "i": 14,
+     "cipher": "1863",
+     "ctc": "7324",
+     "glyph": "頗",
+     "sheet": 2
+    },
+    {
+     "i": 15,
+     "cipher": "2120",
+     "ctc": "7181",
+     "glyph": "難",
+     "sheet": 2
+    },
+    {
+     "i": 16,
+     "cipher": "3840",
+     "ctc": "5511",
+     "glyph": "著",
+     "sheet": 2
+    },
+    {
+     "i": 17,
+     "cipher": "4920",
+     "ctc": "4581",
+     "glyph": "筆",
+     "sheet": 2
+    },
+    {
+     "i": 18,
+     "cipher": "4123",
+     "ctc": "5384",
+     "glyph": "苟",
+     "sheet": 2
+    },
+    {
+     "i": 19,
+     "cipher": "9900",
+     "ctc": "0031",
+     "glyph": "主",
+     "sheet": 2
+    },
+    {
+     "i": 20,
+     "cipher": "8168",
+     "ctc": "1728",
+     "glyph": "張",
+     "sheet": 2
+    },
+    {
+     "i": 21,
+     "cipher": "9950",
+     "ctc": "0001",
+     "glyph": "一",
+     "sheet": 2
+    },
+    {
+     "i": 22,
+     "cipher": "9958",
+     "ctc": "0008",
+     "glyph": "不",
+     "sheet": 2
+    },
+    {
+     "i": 23,
+     "cipher": "7998",
+     "ctc": "1858",
+     "glyph": "恐",
+     "sheet": 2
+    },
+    {
+     "i": 24,
+     "cipher": "7221",
+     "ctc": "2589",
+     "glyph": "有",
+     "sheet": 3
+    },
+    {
+     "i": 25,
+     "cipher": "6738",
+     "ctc": "2978",
+     "glyph": "歧",
+     "sheet": 3
+    },
+    {
+     "i": 26,
+     "cipher": "2912",
+     "ctc": "6395",
+     "glyph": "趨",
+     "sheet": 3
+    },
+    {
+     "i": 27,
+     "cipher": "9907",
+     "ctc": "0037",
+     "glyph": "之",
+     "sheet": 3
+    },
+    {
+     "i": 28,
+     "cipher": "8634",
+     "ctc": "1273",
+     "glyph": "嫌",
+     "sheet": 3
+    },
+    {
+     "i": 29,
+     "cipher": "4127",
+     "ctc": "5387",
+     "glyph": "若",
+     "sheet": 3
+    },
+    {
+     "i": 30,
+     "cipher": "8735",
+     "ctc": "1172",
+     "glyph": "如",
+     "sheet": 3
+    },
+    {
+     "i": 31,
+     "cipher": "9830",
+     "ctc": "0171",
+     "glyph": "來",
+     "sheet": 3
+    },
+    {
+     "i": 32,
+     "cipher": "2114",
+     "ctc": "7193",
+     "glyph": "電",
+     "sheet": 3
+    },
+    {
+     "i": 33,
+     "cipher": "9970",
+     "ctc": "0061",
+     "glyph": "云",
+     "sheet": 3
+    },
+    {
+     "i": 34,
+     "cipher": "9970",
+     "ctc": "0061",
+     "glyph": "云",
+     "sheet": 3
+    },
+    {
+     "i": 35,
+     "cipher": "9926",
+     "ctc": "0086",
+     "glyph": "人",
+     "sheet": 3
+    },
+    {
+     "i": 36,
+     "cipher": "7950",
+     "ctc": "1801",
+     "glyph": "必",
+     "sheet": 3
+    },
+    {
+     "i": 37,
+     "cipher": "3348",
+     "ctc": "6018",
+     "glyph": "視",
+     "sheet": 4
+    },
+    {
+     "i": 38,
+     "cipher": "5903",
+     "ctc": "3634",
+     "glyph": "爲",
+     "sheet": 4
+    },
+    {
+     "i": 39,
+     "cipher": "9388",
+     "ctc": "0648",
+     "glyph": "取",
+     "sheet": 4
+    },
+    {
+     "i": 40,
+     "cipher": "8373",
+     "ctc": "1564",
+     "glyph": "巧",
+     "sheet": 4
+    },
+    {
+     "i": 41,
+     "cipher": "3294",
+     "ctc": "6153",
+     "glyph": "請",
+     "sheet": 4
+    },
+    {
+     "i": 42,
+     "cipher": "9388",
+     "ctc": "0648",
+     "glyph": "取",
+     "sheet": 4
+    },
+    {
+     "i": 43,
+     "cipher": "3104",
+     "ctc": "6233",
+     "glyph": "護",
+     "sheet": 4
+    },
+    {
+     "i": 44,
+     "cipher": "8988",
+     "ctc": "0948",
+     "glyph": "國",
+     "sheet": 4
+    },
+    {
+     "i": 45,
+     "cipher": "2740",
+     "ctc": "6511",
+     "glyph": "軍",
+     "sheet": 4
+    },
+    {
+     "i": 46,
+     "cipher": "9320",
+     "ctc": "0681",
+     "glyph": "同",
+     "sheet": 4
+    },
+    {
+     "i": 47,
+     "cipher": "7885",
+     "ctc": "1942",
+     "glyph": "意",
+     "sheet": 4
+    },
+    {
+     "i": 48,
+     "cipher": "5692",
+     "ctc": "3955",
+     "glyph": "畎",
+     "sheet": 4
+    },
+    {
+     "i": 49,
+     "cipher": "8442",
+     "ctc": "1415",
+     "glyph": "尊",
+     "sheet": 5
+    },
+    {
+     "i": 50,
+     "cipher": "3659",
+     "ctc": "5710",
+     "glyph": "處",
+     "sheet": 5
+    },
+    {
+     "i": 51,
+     "cipher": "7475",
+     "ctc": "2362",
+     "glyph": "擬",
+     "sheet": 5
+    },
+    {
+     "i": 52,
+     "cipher": "5134",
+     "ctc": "4473",
+     "glyph": "稿",
+     "sheet": 5
+    },
+    {
+     "i": 53,
+     "cipher": "7684",
+     "ctc": "2143",
+     "glyph": "拍",
+     "sheet": 5
+    },
+    {
+     "i": 54,
+     "cipher": "5511",
+     "ctc": "4099",
+     "glyph": "發",
+     "sheet": 5
+    },
+    {
+     "i": 55,
+     "cipher": "5903",
+     "ctc": "3634",
+     "glyph": "爲",
+     "sheet": 5
+    },
+    {
+     "i": 56,
+     "cipher": "5475",
+     "ctc": "4162",
+     "glyph": "盼",
+     "sheet": 5
+    },
+    {
+     "i": 57,
+     "cipher": "7339",
+     "ctc": "2480",
+     "glyph": "日",
+     "sheet": 5
+    },
+    {
+     "i": 58,
+     "cipher": "7876",
+     "ctc": "1966",
+     "glyph": "態",
+     "sheet": 5
+    },
+    {
+     "i": 59,
+     "cipher": "8294",
+     "ctc": "1653",
+     "glyph": "度",
+     "sheet": 5
+    },
+    {
+     "i": 60,
+     "cipher": "1863",
+     "ctc": "7324",
+     "glyph": "頗",
+     "sheet": 5
+    },
+    {
+     "i": 61,
+     "cipher": "3303",
+     "ctc": "6034",
+     "glyph": "觀",
+     "sheet": 5
+    },
+    {
+     "i": 62,
+     "cipher": "7218",
+     "ctc": "2598",
+     "glyph": "望",
+     "sheet": 6
+    },
+    {
+     "i": 63,
+     "cipher": "6307",
+     "ctc": "3337",
+     "glyph": "滬",
+     "sheet": 6
+    },
+    {
+     "i": 64,
+     "cipher": "9320",
+     "ctc": "0681",
+     "glyph": "同",
+     "sheet": 6
+    },
+    {
+     "i": 65,
+     "cipher": "9926",
+     "ctc": "0086",
+     "glyph": "人",
+     "sheet": 6
+    },
+    {
+     "i": 66,
+     "cipher": "8592",
+     "ctc": "1355",
+     "glyph": "宜",
+     "sheet": 6
+    },
+    {
+     "i": 67,
+     "cipher": "3454",
+     "ctc": "5903",
+     "glyph": "表",
+     "sheet": 6
+    },
+    {
+     "i": 68,
+     "cipher": "5292",
+     "ctc": "4355",
+     "glyph": "示",
+     "sheet": 6
+    },
+    {
+     "i": 69,
+     "cipher": "8169",
+     "ctc": "1730",
+     "glyph": "強",
+     "sheet": 6
+    },
+    {
+     "i": 70,
+     "cipher": "5321",
+     "ctc": "4289",
+     "glyph": "硬",
+     "sheet": 6
+    },
+    {
+     "i": 71,
+     "cipher": "9900",
+     "ctc": "0031",
+     "glyph": "主",
+     "sheet": 6
+    },
+    {
+     "i": 72,
+     "cipher": "8168",
+     "ctc": "1728",
+     "glyph": "張",
+     "sheet": 6
+    },
+    {
+     "i": 73,
+     "cipher": "2740",
+     "ctc": "6511",
+     "glyph": "軍",
+     "sheet": 6
+    },
+    {
+     "i": 74,
+     "cipher": "9464",
+     "ctc": "0523",
+     "glyph": "務",
+     "sheet": 7
+    },
+    {
+     "i": 75,
+     "cipher": "2158",
+     "ctc": "7108",
+     "glyph": "院",
+     "sheet": 7
+    },
+    {
+     "i": 76,
+     "cipher": "8461",
+     "ctc": "1429",
+     "glyph": "尤",
+     "sheet": 7
+    },
+    {
+     "i": 77,
+     "cipher": "1845",
+     "ctc": "7312",
+     "glyph": "須",
+     "sheet": 7
+    },
+    {
+     "i": 78,
+     "cipher": "7313",
+     "ctc": "2494",
+     "glyph": "明",
+     "sheet": 7
+    },
+    {
+     "i": 79,
+     "cipher": "5450",
+     "ctc": "4101",
+     "glyph": "白",
+     "sheet": 7
+    },
+    {
+     "i": 80,
+     "cipher": "2655",
+     "ctc": "6602",
+     "glyph": "近",
+     "sheet": 7
+    },
+    {
+     "i": 81,
+     "cipher": "9697",
+     "ctc": "0357",
+     "glyph": "兩",
+     "sheet": 7
+    },
+    {
+     "i": 82,
+     "cipher": "7339",
+     "ctc": "2480",
+     "glyph": "日",
+     "sheet": 7
+    },
+    {
+     "i": 83,
+     "cipher": "3101",
+     "ctc": "6239",
+     "glyph": "變",
+     "sheet": 7
+    },
+    {
+     "i": 84,
+     "cipher": "5915",
+     "ctc": "3692",
+     "glyph": "狀",
+     "sheet": 7
+    },
+    {
+     "i": 85,
+     "cipher": "9987",
+     "ctc": "0047",
+     "glyph": "乞",
+     "sheet": 7
+    },
+    {
+     "i": 86,
+     "cipher": "2114",
+     "ctc": "7193",
+     "glyph": "電",
+     "sheet": 7
+    },
+    {
+     "i": 87,
+     "cipher": "5292",
+     "ctc": "4355",
+     "glyph": "示",
+     "sheet": 8
+    },
+    {
+     "i": 88,
+     "cipher": "4220",
+     "ctc": "5281",
+     "glyph": "興",
+     "sheet": 8
+    }
+   ],
+   "segments": [
+    {
+     "raw": "小詠鳳三兄鑒",
+     "status": "provisional",
+     "zh": "小、詠、鳳三兄鑒：",
+     "fr": "Aux trois frères Xiao, Yong et Feng :",
+     "note": "鳳 = 陳嘉會 (鳳先) ; 小 (aussi en N16) et 詠 non identifiés (小垣 = 李書城 ?)."
+    },
+    {
+     "raw": "致黎岑及各省電頗難著筆",
+     "status": "literal",
+     "zh": "致黎、岑及各省電頗難著筆。",
+     "fr": "Le télégramme à Li [Yuanhong], à Cen [Chunxuan] et aux provinces est très difficile à rédiger.",
+     "note": "岑 = 岑春煊, vice-chef du Conseil militaire (軍務院)."
+    },
+    {
+     "raw": "苟主張一不恐有歧趨之嫌",
+     "status": "provisional",
+     "zh": "苟主張{不}{一}，恐有歧趨之嫌；",
+     "fr": "si nos positions ne sont pas unanimes, on risque de paraître divisés ;",
+     "note": "一不 → {不}{一} : contexte ; les deux groupes (9950 一, 9958 不) sont probablement inversés à l’encodage."
+    },
+    {
+     "raw": "若如來電云云人必視爲取巧",
+     "status": "literal",
+     "zh": "若如來電云云，人必視爲取巧。",
+     "fr": "si l’on écrit comme le dit votre télégramme, on y verra un calcul opportuniste.",
+     "note": ""
+    },
+    {
+     "raw": "請取護國軍同意畎尊處擬稿拍發爲盼",
+     "status": "provisional",
+     "zh": "請取護國軍同意，{由}尊處擬稿拍發爲盼。",
+     "fr": "Obtenez l’accord de l’Armée de protection de la nation, puis rédigez le télégramme et envoyez-le de votre côté.",
+     "note": "畎 → {由} : 1 chiffre (5692 → 5682)."
+    },
+    {
+     "raw": "日態度頗觀望",
+     "status": "literal",
+     "zh": "日態度頗觀望，",
+     "fr": "Le Japon reste très attentiste ;",
+     "note": "Cf. l’édition des brouillons, pièce 6 (20/6) : « 實日當局意存觀望 »."
+    },
+    {
+     "raw": "滬同人宜表示強硬主張",
+     "status": "literal",
+     "zh": "滬同人宜表示強硬主張，",
+     "fr": "les camarades de Shanghai doivent afficher une position ferme,",
+     "note": ""
+    },
+    {
+     "raw": "軍務院尤須明白",
+     "status": "literal",
+     "zh": "軍務院尤須明白。",
+     "fr": "et le Conseil militaire surtout doit être clair.",
+     "note": ""
+    },
+    {
+     "raw": "近兩日變狀乞電示",
+     "status": "literal",
+     "zh": "近兩日變狀，乞電示。",
+     "fr": "Télégraphiez-moi l’évolution de ces deux derniers jours.",
+     "note": ""
+    },
+    {
+     "raw": "興",
+     "status": "literal",
+     "zh": "興。",
+     "fr": "Xing.",
+     "note": "Signature de Huang Xing, sans code de jour."
+    }
+   ],
+   "sheet_count": "8"
+  },
+  "N16": {
+   "family": "辰密",
+   "key": "辰密 (C92)",
+   "meta": {
+    "dir": "Tokyo → Shanghai",
+    "date": 10,
+    "date_note": "10 juin 1916 (en-tête du formulaire ; 灰 en fin de texte)",
+    "sheets": [
+     [
+      "B03050089300",
+      11,
+      "L"
+     ],
+     [
+      "B03050089300",
+      12,
+      "R"
+     ],
+     [
+      "B03050089300",
+      12,
+      "L"
+     ],
+     [
+      "B03050089300",
+      13,
+      "R"
+     ],
+     [
+      "B03050089300",
+      13,
+      "L"
+     ],
+     [
+      "B03050089300",
+      14,
+      "R"
+     ],
+     [
+      "B03050089300",
+      14,
+      "L"
+     ],
+     [
+      "B03050089300",
+      15,
+      "R"
+     ],
+     [
+      "B03050089300",
+      15,
+      "L"
+     ]
+    ],
+    "prefix": true
+   },
+   "summary_fr": "Zhang Xiaozhun au même groupe : donner à Li Yuanhong une division sûre en faisant former des troupes par Zhao Hengti au Hunan ; armes promises ; presser l’affaire du télégramme de Huang Xing.",
+   "repairs": [],
+   "reread_by_brice": true,
+   "raw": "並轉組鳳小諸公鑒黎公非準備一二師可靠兵力政令恐不易實行趙夷午素爲黎公所信倚今又在湯督下練兵可否與濟武等商量設法俾其迅練精兵一師以備黎公驅遣武器一層竭全力圖之當可辦到昨克電請取護國軍同意代擬稿發電一羶望速行準灰",
+   "groups": [
+    {
+     "i": 0,
+     "cipher": "6591",
+     "ctc": "6591",
+     "glyph": "辰",
+     "sheet": 1
+    },
+    {
+     "i": 0,
+     "cipher": "1378",
+     "ctc": "1378",
+     "glyph": "密",
+     "sheet": 1
+    },
+    {
+     "i": 1,
+     "cipher": "9947",
+     "ctc": "0017",
+     "glyph": "並",
+     "sheet": 1
+    },
+    {
+     "i": 2,
+     "cipher": "2777",
+     "ctc": "6567",
+     "glyph": "轉",
+     "sheet": 1
+    },
+    {
+     "i": 3,
+     "cipher": "4651",
+     "ctc": "4809",
+     "glyph": "組",
+     "sheet": 1
+    },
+    {
+     "i": 4,
+     "cipher": "1522",
+     "ctc": "7685",
+     "glyph": "鳳",
+     "sheet": 1
+    },
+    {
+     "i": 5,
+     "cipher": "8449",
+     "ctc": "1420",
+     "glyph": "小",
+     "sheet": 1
+    },
+    {
+     "i": 6,
+     "cipher": "3232",
+     "ctc": "6175",
+     "glyph": "諸",
+     "sheet": 1
+    },
+    {
+     "i": 7,
+     "cipher": "9670",
+     "ctc": "0361",
+     "glyph": "公",
+     "sheet": 1
+    },
+    {
+     "i": 8,
+     "cipher": "2254",
+     "ctc": "7003",
+     "glyph": "鑒",
+     "sheet": 1
+    },
+    {
+     "i": 9,
+     "cipher": "1345",
+     "ctc": "7812",
+     "glyph": "黎",
+     "sheet": 1
+    },
+    {
+     "i": 10,
+     "cipher": "9670",
+     "ctc": "0361",
+     "glyph": "公",
+     "sheet": 1
+    },
+    {
+     "i": 11,
+     "cipher": "1906",
+     "ctc": "7236",
+     "glyph": "非",
+     "sheet": 1
+    },
+    {
+     "i": 12,
+     "cipher": "6413",
+     "ctc": "3294",
+     "glyph": "準",
+     "sheet": 2
+    },
+    {
+     "i": 13,
+     "cipher": "9730",
+     "ctc": "0271",
+     "glyph": "備",
+     "sheet": 2
+    },
+    {
+     "i": 14,
+     "cipher": "9950",
+     "ctc": "0001",
+     "glyph": "一",
+     "sheet": 2
+    },
+    {
+     "i": 15,
+     "cipher": "9991",
+     "ctc": "0059",
+     "glyph": "二",
+     "sheet": 2
+    },
+    {
+     "i": 16,
+     "cipher": "8317",
+     "ctc": "1597",
+     "glyph": "師",
+     "sheet": 2
+    },
+    {
+     "i": 17,
+     "cipher": "9378",
+     "ctc": "0668",
+     "glyph": "可",
+     "sheet": 2
+    },
+    {
+     "i": 18,
+     "cipher": "1907",
+     "ctc": "7237",
+     "glyph": "靠",
+     "sheet": 2
+    },
+    {
+     "i": 19,
+     "cipher": "9672",
+     "ctc": "0365",
+     "glyph": "兵",
+     "sheet": 2
+    },
+    {
+     "i": 20,
+     "cipher": "9519",
+     "ctc": "0500",
+     "glyph": "力",
+     "sheet": 2
+    },
+    {
+     "i": 21,
+     "cipher": "7418",
+     "ctc": "2398",
+     "glyph": "政",
+     "sheet": 2
+    },
+    {
+     "i": 22,
+     "cipher": "9851",
+     "ctc": "0109",
+     "glyph": "令",
+     "sheet": 2
+    },
+    {
+     "i": 23,
+     "cipher": "7998",
+     "ctc": "1858",
+     "glyph": "恐",
+     "sheet": 2
+    },
+    {
+     "i": 24,
+     "cipher": "9958",
+     "ctc": "0008",
+     "glyph": "不",
+     "sheet": 3
+    },
+    {
+     "i": 25,
+     "cipher": "7316",
+     "ctc": "2496",
+     "glyph": "易",
+     "sheet": 3
+    },
+    {
+     "i": 26,
+     "cipher": "8512",
+     "ctc": "1395",
+     "glyph": "實",
+     "sheet": 3
+    },
+    {
+     "i": 27,
+     "cipher": "3527",
+     "ctc": "5887",
+     "glyph": "行",
+     "sheet": 3
+    },
+    {
+     "i": 28,
+     "cipher": "2915",
+     "ctc": "6392",
+     "glyph": "趙",
+     "sheet": 3
+    },
+    {
+     "i": 29,
+     "cipher": "8708",
+     "ctc": "1138",
+     "glyph": "夷",
+     "sheet": 3
+    },
+    {
+     "i": 30,
+     "cipher": "9425",
+     "ctc": "0582",
+     "glyph": "午",
+     "sheet": 3
+    },
+    {
+     "i": 31,
+     "cipher": "4729",
+     "ctc": "4790",
+     "glyph": "素",
+     "sheet": 3
+    },
+    {
+     "i": 32,
+     "cipher": "5903",
+     "ctc": "3634",
+     "glyph": "爲",
+     "sheet": 3
+    },
+    {
+     "i": 33,
+     "cipher": "1345",
+     "ctc": "7812",
+     "glyph": "黎",
+     "sheet": 3
+    },
+    {
+     "i": 34,
+     "cipher": "9670",
+     "ctc": "0361",
+     "glyph": "公",
+     "sheet": 3
+    },
+    {
+     "i": 35,
+     "cipher": "7736",
+     "ctc": "2076",
+     "glyph": "所",
+     "sheet": 3
+    },
+    {
+     "i": 36,
+     "cipher": "9757",
+     "ctc": "0207",
+     "glyph": "信",
+     "sheet": 3
+    },
+    {
+     "i": 37,
+     "cipher": "9700",
+     "ctc": "0231",
+     "glyph": "倚",
+     "sheet": 4
+    },
+    {
+     "i": 38,
+     "cipher": "9914",
+     "ctc": "0093",
+     "glyph": "今",
+     "sheet": 4
+    },
+    {
+     "i": 39,
+     "cipher": "9385",
+     "ctc": "0642",
+     "glyph": "又",
+     "sheet": 4
+    },
+    {
+     "i": 40,
+     "cipher": "8970",
+     "ctc": "0961",
+     "glyph": "在",
+     "sheet": 4
+    },
+    {
+     "i": 41,
+     "cipher": "6425",
+     "ctc": "3282",
+     "glyph": "湯",
+     "sheet": 4
+    },
+    {
+     "i": 42,
+     "cipher": "5356",
+     "ctc": "4206",
+     "glyph": "督",
+     "sheet": 4
+    },
+    {
+     "i": 43,
+     "cipher": "9957",
+     "ctc": "0007",
+     "glyph": "下",
+     "sheet": 4
+    },
+    {
+     "i": 44,
+     "cipher": "4626",
+     "ctc": "4886",
+     "glyph": "練",
+     "sheet": 4
+    },
+    {
+     "i": 45,
+     "cipher": "9672",
+     "ctc": "0365",
+     "glyph": "兵",
+     "sheet": 4
+    },
+    {
+     "i": 46,
+     "cipher": "9378",
+     "ctc": "0668",
+     "glyph": "可",
+     "sheet": 4
+    },
+    {
+     "i": 47,
+     "cipher": "9313",
+     "ctc": "0694",
+     "glyph": "否",
+     "sheet": 4
+    },
+    {
+     "i": 48,
+     "cipher": "4239",
+     "ctc": "5280",
+     "glyph": "與",
+     "sheet": 4
+    },
+    {
+     "i": 49,
+     "cipher": "6283",
+     "ctc": "3444",
+     "glyph": "濟",
+     "sheet": 5
+    },
+    {
+     "i": 50,
+     "cipher": "6736",
+     "ctc": "2976",
+     "glyph": "武",
+     "sheet": 5
+    },
+    {
+     "i": 51,
+     "cipher": "4924",
+     "ctc": "4583",
+     "glyph": "等",
+     "sheet": 5
+    },
+    {
+     "i": 52,
+     "cipher": "9213",
+     "ctc": "0794",
+     "glyph": "商",
+     "sheet": 5
+    },
+    {
+     "i": 53,
+     "cipher": "2495",
+     "ctc": "6852",
+     "glyph": "量",
+     "sheet": 5
+    },
+    {
+     "i": 54,
+     "cipher": "3339",
+     "ctc": "6080",
+     "glyph": "設",
+     "sheet": 5
+    },
+    {
+     "i": 55,
+     "cipher": "6567",
+     "ctc": "3127",
+     "glyph": "法",
+     "sheet": 5
+    },
+    {
+     "i": 56,
+     "cipher": "9749",
+     "ctc": "0220",
+     "glyph": "俾",
+     "sheet": 5
+    },
+    {
+     "i": 57,
+     "cipher": "9676",
+     "ctc": "0366",
+     "glyph": "其",
+     "sheet": 5
+    },
+    {
+     "i": 58,
+     "cipher": "2718",
+     "ctc": "6598",
+     "glyph": "迅",
+     "sheet": 5
+    },
+    {
+     "i": 59,
+     "cipher": "4626",
+     "ctc": "4886",
+     "glyph": "練",
+     "sheet": 5
+    },
+    {
+     "i": 60,
+     "cipher": "4707",
+     "ctc": "4737",
+     "glyph": "精",
+     "sheet": 5
+    },
+    {
+     "i": 61,
+     "cipher": "9672",
+     "ctc": "0365",
+     "glyph": "兵",
+     "sheet": 5
+    },
+    {
+     "i": 62,
+     "cipher": "9950",
+     "ctc": "0001",
+     "glyph": "一",
+     "sheet": 6
+    },
+    {
+     "i": 63,
+     "cipher": "8317",
+     "ctc": "1597",
+     "glyph": "師",
+     "sheet": 6
+    },
+    {
+     "i": 64,
+     "cipher": "9859",
+     "ctc": "0110",
+     "glyph": "以",
+     "sheet": 6
+    },
+    {
+     "i": 65,
+     "cipher": "9730",
+     "ctc": "0271",
+     "glyph": "備",
+     "sheet": 6
+    },
+    {
+     "i": 66,
+     "cipher": "1345",
+     "ctc": "7812",
+     "glyph": "黎",
+     "sheet": 6
+    },
+    {
+     "i": 67,
+     "cipher": "9670",
+     "ctc": "0361",
+     "glyph": "公",
+     "sheet": 6
+    },
+    {
+     "i": 68,
+     "cipher": "1647",
+     "ctc": "7517",
+     "glyph": "驅",
+     "sheet": 6
+    },
+    {
+     "i": 69,
+     "cipher": "2639",
+     "ctc": "6680",
+     "glyph": "遣",
+     "sheet": 6
+    },
+    {
+     "i": 70,
+     "cipher": "6736",
+     "ctc": "2976",
+     "glyph": "武",
+     "sheet": 6
+    },
+    {
+     "i": 71,
+     "cipher": "9115",
+     "ctc": "0892",
+     "glyph": "器",
+     "sheet": 6
+    },
+    {
+     "i": 72,
+     "cipher": "9950",
+     "ctc": "0001",
+     "glyph": "一",
+     "sheet": 6
+    },
+    {
+     "i": 73,
+     "cipher": "8470",
+     "ctc": "1461",
+     "glyph": "層",
+     "sheet": 6
+    },
+    {
+     "i": 74,
+     "cipher": "4989",
+     "ctc": "4550",
+     "glyph": "竭",
+     "sheet": 7
+    },
+    {
+     "i": 75,
+     "cipher": "9696",
+     "ctc": "0356",
+     "glyph": "全",
+     "sheet": 7
+    },
+    {
+     "i": 76,
+     "cipher": "9519",
+     "ctc": "0500",
+     "glyph": "力",
+     "sheet": 7
+    },
+    {
+     "i": 77,
+     "cipher": "8996",
+     "ctc": "0956",
+     "glyph": "圖",
+     "sheet": 7
+    },
+    {
+     "i": 78,
+     "cipher": "9907",
+     "ctc": "0037",
+     "glyph": "之",
+     "sheet": 7
+    },
+    {
+     "i": 79,
+     "cipher": "5620",
+     "ctc": "3981",
+     "glyph": "當",
+     "sheet": 7
+    },
+    {
+     "i": 80,
+     "cipher": "9378",
+     "ctc": "0668",
+     "glyph": "可",
+     "sheet": 7
+    },
+    {
+     "i": 81,
+     "cipher": "2726",
+     "ctc": "6586",
+     "glyph": "辦",
+     "sheet": 7
+    },
+    {
+     "i": 82,
+     "cipher": "9590",
+     "ctc": "0451",
+     "glyph": "到",
+     "sheet": 7
+    },
+    {
+     "i": 83,
+     "cipher": "7256",
+     "ctc": "2506",
+     "glyph": "昨",
+     "sheet": 7
+    },
+    {
+     "i": 84,
+     "cipher": "9683",
+     "ctc": "0344",
+     "glyph": "克",
+     "sheet": 7
+    },
+    {
+     "i": 85,
+     "cipher": "2114",
+     "ctc": "7193",
+     "glyph": "電",
+     "sheet": 7
+    },
+    {
+     "i": 86,
+     "cipher": "3294",
+     "ctc": "6153",
+     "glyph": "請",
+     "sheet": 7
+    },
+    {
+     "i": 87,
+     "cipher": "9388",
+     "ctc": "0648",
+     "glyph": "取",
+     "sheet": 8
+    },
+    {
+     "i": 88,
+     "cipher": "3104",
+     "ctc": "6233",
+     "glyph": "護",
+     "sheet": 8
+    },
+    {
+     "i": 89,
+     "cipher": "8988",
+     "ctc": "0948",
+     "glyph": "國",
+     "sheet": 8
+    },
+    {
+     "i": 90,
+     "cipher": "2740",
+     "ctc": "6511",
+     "glyph": "軍",
+     "sheet": 8
+    },
+    {
+     "i": 91,
+     "cipher": "9320",
+     "ctc": "0681",
+     "glyph": "同",
+     "sheet": 8
+    },
+    {
+     "i": 92,
+     "cipher": "7885",
+     "ctc": "1942",
+     "glyph": "意",
+     "sheet": 8
+    },
+    {
+     "i": 93,
+     "cipher": "9858",
+     "ctc": "0108",
+     "glyph": "代",
+     "sheet": 8
+    },
+    {
+     "i": 94,
+     "cipher": "7475",
+     "ctc": "2362",
+     "glyph": "擬",
+     "sheet": 8
+    },
+    {
+     "i": 95,
+     "cipher": "5134",
+     "ctc": "4473",
+     "glyph": "稿",
+     "sheet": 8
+    },
+    {
+     "i": 96,
+     "cipher": "5511",
+     "ctc": "4099",
+     "glyph": "發",
+     "sheet": 8
+    },
+    {
+     "i": 97,
+     "cipher": "2114",
+     "ctc": "7193",
+     "glyph": "電",
+     "sheet": 8
+    },
+    {
+     "i": 98,
+     "cipher": "9950",
+     "ctc": "0001",
+     "glyph": "一",
+     "sheet": 8
+    },
+    {
+     "i": 99,
+     "cipher": "4403",
+     "ctc": "5034",
+     "glyph": "羶",
+     "sheet": 9
+    },
+    {
+     "i": 100,
+     "cipher": "7218",
+     "ctc": "2598",
+     "glyph": "望",
+     "sheet": 9
+    },
+    {
+     "i": 101,
+     "cipher": "2684",
+     "ctc": "6643",
+     "glyph": "速",
+     "sheet": 9
+    },
+    {
+     "i": 102,
+     "cipher": "3527",
+     "ctc": "5887",
+     "glyph": "行",
+     "sheet": 9
+    },
+    {
+     "i": 103,
+     "cipher": "6413",
+     "ctc": "3294",
+     "glyph": "準",
+     "sheet": 9
+    },
+    {
+     "i": 104,
+     "cipher": "6219",
+     "ctc": "3500",
+     "glyph": "灰",
+     "sheet": 9
+    }
+   ],
+   "segments": [
+    {
+     "raw": "並轉組鳳小諸公鑒",
+     "status": "provisional",
+     "zh": "並轉組、鳳、小諸公鑒：",
+     "fr": "À transmettre aussi à Zu, Feng, Xiao et aux autres :",
+     "note": "組 = 譚延闓 (組安), alors à Shanghai ; 鳳 = 陳嘉會 ; 小 : cf. N13."
+    },
+    {
+     "raw": "黎公非準備一二師可靠兵力",
+     "status": "literal",
+     "zh": "黎公非準備一二師可靠兵力，",
+     "fr": "sans une ou deux divisions de troupes sûres,",
+     "note": ""
+    },
+    {
+     "raw": "政令恐不易實行",
+     "status": "literal",
+     "zh": "政令恐不易實行。",
+     "fr": "les ordres de Li [Yuanhong] seront difficiles à faire appliquer.",
+     "note": ""
+    },
+    {
+     "raw": "趙夷午素爲黎公所信倚",
+     "status": "literal",
+     "zh": "趙夷午素爲黎公所信倚，",
+     "fr": "Zhao Yiwu a toujours eu la confiance de Li,",
+     "note": "趙夷午 = 趙恆惕 (字 夷午)."
+    },
+    {
+     "raw": "今又在湯督下練兵",
+     "status": "literal",
+     "zh": "今又在湯督下練兵，",
+     "fr": "et il entraîne maintenant des troupes sous le dujun Tang ;",
+     "note": "湯督 = 湯薌銘, dujun du Hunan (indépendance proclamée le 29 mai 1916)."
+    },
+    {
+     "raw": "可否與濟武等商量設法",
+     "status": "literal",
+     "zh": "可否與濟武等商量設法，",
+     "fr": "pourriez-vous voir avec Jiwu et les autres comment faire",
+     "note": "濟武 = 湯化龍, frère aîné de 湯薌銘."
+    },
+    {
+     "raw": "俾其迅練精兵一師以備黎公驅遣",
+     "status": "literal",
+     "zh": "俾其迅練精兵一師，以備黎公驅遣。",
+     "fr": "pour qu’il forme rapidement une division d’élite, à la disposition de Li.",
+     "note": ""
+    },
+    {
+     "raw": "武器一層竭全力圖之當可辦到",
+     "status": "literal",
+     "zh": "武器一層，竭全力圖之，當可辦到。",
+     "fr": "Quant aux armes, nous y mettrons toutes nos forces, et cela devrait pouvoir se faire.",
+     "note": ""
+    },
+    {
+     "raw": "昨克電請取護國軍同意代擬稿發電",
+     "status": "literal",
+     "zh": "昨克電請取護國軍同意，代擬稿發電，",
+     "fr": "Hier, Ke[qiang] a télégraphié pour demander d’obtenir l’accord de l’Armée de protection et de rédiger et envoyer le télégramme à sa place :",
+     "note": "克 = 黃克強 (Huang Xing) ; c’est N13, du 9 juin."
+    },
+    {
+     "raw": "一羶望速行",
+     "status": "provisional",
+     "zh": "一{節}望速行。",
+     "fr": "que ce point soit réglé vite.",
+     "note": "羶 → {節} : 1 chiffre (4403 → 4803)."
+    },
+    {
+     "raw": "準灰",
+     "status": "literal",
+     "zh": "準。灰。",
+     "fr": "Zhun. Le 10.",
+     "note": "準 = 張孝準 ; 灰 = 10ᵉ jour, conforme à l’en-tête 10/6."
+    }
+   ],
+   "sheet_count": "9"
+  },
+  "N26": {
+   "family": "辰密",
+   "key": "辰密 (C92)",
+   "meta": {
+    "dir": "Tokyo → Shanghai",
+    "date": 13,
+    "date_note": "13 juin 1916 ? (cachet peu lisible)",
+    "sheets": [
+     [
+      "B03050089400",
+      31,
+      "R"
+     ]
+    ],
+    "prefix": true
+   },
+   "summary_fr": "Zhang Xiaozhun : remettre 300 yuans à Jiang Fangzhen (百里).",
+   "repairs": [],
+   "reread_by_brice": true,
+   "raw": "九以三百元交百里準",
+   "groups": [
+    {
+     "i": 0,
+     "cipher": "6591",
+     "ctc": "6591",
+     "glyph": "辰",
+     "sheet": 1
+    },
+    {
+     "i": 0,
+     "cipher": "1378",
+     "ctc": "1378",
+     "glyph": "密",
+     "sheet": 1
+    },
+    {
+     "i": 1,
+     "cipher": "9986",
+     "ctc": "0046",
+     "glyph": "九",
+     "sheet": 1
+    },
+    {
+     "i": 2,
+     "cipher": "9859",
+     "ctc": "0110",
+     "glyph": "以",
+     "sheet": 1
+    },
+    {
+     "i": 3,
+     "cipher": "9952",
+     "ctc": "0005",
+     "glyph": "三",
+     "sheet": 1
+    },
+    {
+     "i": 4,
+     "cipher": "5455",
+     "ctc": "4102",
+     "glyph": "百",
+     "sheet": 1
+    },
+    {
+     "i": 5,
+     "cipher": "9607",
+     "ctc": "0337",
+     "glyph": "元",
+     "sheet": 1
+    },
+    {
+     "i": 6,
+     "cipher": "9933",
+     "ctc": "0074",
+     "glyph": "交",
+     "sheet": 1
+    },
+    {
+     "i": 7,
+     "cipher": "5455",
+     "ctc": "4102",
+     "glyph": "百",
+     "sheet": 1
+    },
+    {
+     "i": 8,
+     "cipher": "2481",
+     "ctc": "6849",
+     "glyph": "里",
+     "sheet": 1
+    },
+    {
+     "i": 9,
+     "cipher": "6413",
+     "ctc": "3294",
+     "glyph": "準",
+     "sheet": 1
+    }
+   ],
+   "segments": [
+    {
+     "raw": "九以三百元交百里",
+     "status": "provisional",
+     "zh": "{乞}以三百元交百里。",
+     "fr": "Veuillez remettre trois cents yuans à Baili.",
+     "note": "九 → {乞} : 1 chiffre (9986 → 9987). 百里 = 蔣方震 ; cf. 容密 N28 (« 籌三百交兄 »)."
+    },
+    {
+     "raw": "準",
+     "status": "literal",
+     "zh": "準。",
+     "fr": "Zhun.",
+     "note": "準 = 張孝準."
+    }
+   ],
+   "sheet_count": "1"
+  }
+ },
+ "key_chenmi": {
+  "pages": "décompte des nombres sans zéro 99→00 … 11→80",
+  "tens": [
+   3,
+   9,
+   8,
+   7,
+   1,
+   0,
+   2,
+   6,
+   4,
+   5
+  ],
+  "units": [
+   1,
+   9,
+   5,
+   4,
+   3,
+   2,
+   6,
+   7,
+   8,
+   10
+  ]
+ }
+}
