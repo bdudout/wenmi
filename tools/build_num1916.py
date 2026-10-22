@@ -27,12 +27,16 @@ CLEAR = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c88', 'clear-data.j
 D.update(CLEAR)
 CHEN = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c92', 'site-data.json'), encoding='utf-8'))['messages']
 D.update(CHEN)
+QIAN = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c107', 'site-data.json'), encoding='utf-8'))['messages']   # 乾密 (modèle 明密 de S. Tomokiyo)
+D.update(QIAN)
 V4 = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c99', 'site-data.json'), encoding='utf-8'))['messages']
 D.update(V4)
 sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c99'))
 import segments_v4 as SV4                             # noqa: E402
 sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c92'))
 import segments_chenmi as SCH, chenmi_key as CHK   # noqa: E402
+sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c107'))
+import segments_qianmi as SQI, qianmi_key as QIK    # noqa: E402
 sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c88'))
 import segments_clear as SCL                          # noqa: E402
 import baihua as BH                                   # noqa: E402
@@ -40,11 +44,14 @@ for _L, _d in (('EN', SCL.EN), ('JA', SCL.JA)): getattr(TR, _L).update(_d)
 for _L in SCL.NOTE: TR.NOTE.setdefault(_L, {}).update(SCL.NOTE[_L])
 for _L, _d in (('EN', SCH.EN), ('JA', SCH.JA)): getattr(TR, _L).update(_d)
 for _L in SCH.NOTE: TR.NOTE.setdefault(_L, {}).update(SCH.NOTE[_L])
+for _L, _d in (('EN', SQI.EN), ('JA', SQI.JA)): getattr(TR, _L).update(_d)
+for _L in SQI.NOTE: TR.NOTE.setdefault(_L, {}).update(SQI.NOTE[_L])
+BH.BAIHUA.update(SQI.BAIHUA)
 BH.BAIHUA.update(SCH.BAIHUA)
 BH.BAIHUA.update(SV4.BAIHUA); TR.EN.update(SV4.EN); TR.JA.update(SV4.JA)
 G = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c62', 'publication-v3', 'data', 'gongmi.json'), encoding='utf-8'))['messages']
 V = {}
-for f in ('c83/variants.json', 'c84/gongmi-variants.json', 'c92/variants.json', 'c88/clear-variants.json', 'c99/variants.json'):
+for f in ('c83/variants.json', 'c84/gongmi-variants.json', 'c92/variants.json', 'c88/clear-variants.json', 'c99/variants.json', 'c107/variants.json'):
     for r in json.load(open(os.path.join(WENMI, 'cryptanalysis', f), encoding='utf-8')):
         for h in r.get('hits', []):
             gl, var = (h['glyph'], h['variant']) if isinstance(h, dict) else (h[0], h[1])
@@ -61,15 +68,16 @@ KEYS = {'N29': ['石屛', '袁逆自斃', '依法圖治'], 'N10': ['家嚴', '�
         'N25': ['烟捐', '酒捐', '吳兆蓮'], 'N36': ['黃克強', '六月三十日'], 'N24': ['黎電', '元年約法', '殷汝驪'], 'N23': ['田中', '小池', '張繼'],
         'N17': ['黎總統', '舊約法', '日當局'], 'N18': ['擁護共和', '武力'], 'N27': ['溥', '無望'], 'N30': ['小池', '有吉領事'],
         'N32': ['舊約法', '中山', '葛殷黃'], 'N33': ['馮', '黃羣', '約法'], 'N35': ['國會', '段', '袁'],
-        'N05': ['烈武', '山東', '溥泉'], 'N13': ['黎岑', '護國軍', '日態度'], 'N16': ['趙夷午', '精兵一師', '湯督'], 'N26': ['三百元', '百里'],
+        'N05': ['烈武', '山東', '溥泉'], 'N13': ['黎岑', '護國軍', '日態度'], 'N16': ['趙夷午', '精兵一師', '湯督'], 'N26': ['三百元', '百里'], 'N09': ['袁死', '態度未變', '交涉'],
         'V4B': ['約法', '丁世嶧', '湯濟武'], 'V4D': ['青木', '汝驪', '曉垣'], 'V4E': ['粤', '急返', '何船']}
-ORDER = ['N10', 'N04', 'N31', 'N34', 'N29', 'N14', 'N19b', 'N02', 'N08', 'N11', 'N12', 'N19a', 'N28', 'N21', 'N25', 'N36', 'N24', 'N17', 'N18', 'N23', 'N27', 'N30', 'N32', 'N33', 'N35', 'N05', 'N13', 'N16', 'N26', 'V4B', 'V4D', 'V4E']
+ORDER = ['N10', 'N04', 'N31', 'N34', 'N29', 'N14', 'N19b', 'N02', 'N08', 'N11', 'N12', 'N19a', 'N28', 'N21', 'N25', 'N36', 'N24', 'N17', 'N18', 'N23', 'N27', 'N30', 'N32', 'N33', 'N35', 'N05', 'N09', 'N13', 'N16', 'N26', 'V4B', 'V4D', 'V4E']
 FAM = {m: '容密' for m in D if D[m]['family'] == '容密'}
 FAM.update({m: '明碼' for m in CLEAR})
 FAM.update({m: '共密' for m in ['N17', 'N18', 'N23', 'N27', 'N30', 'N32', 'N33', 'N35']})
 FAM.update({m: '辰密' for m in CHEN})
+FAM.update({m: '乾密' for m in QIAN})
 FAM.update({'V4B': '容密', 'V4D': '容密', 'V4E': '共密'})
-TOC = {'容密': 'rongmi', '共密': 'gongmi', '明碼': 'clair', '辰密': 'chenmi'}
+TOC = {'容密': 'rongmi', '共密': 'gongmi', '明碼': 'clair', '辰密': 'chenmi', '乾密': 'qianmi'}
 
 def lm_score(codes):
     c = [int(x) for x in codes if x is not None]
@@ -88,6 +96,7 @@ def encode_rongmi(p):
 def encode_chenmi(p):
     for c in range(1100, 10000):
         if '0' not in f'{c:04d}'[:2] and CHK.decode(f'{c:04d}') == p: return f'{c:04d}'
+def encode_qianmi(p): return QIK.encode(p)
 def encode_gongmi(p):
     for c in range(10000):
         if decode_code(c) == p: return f'{c:04d}'
@@ -96,7 +105,9 @@ def message(mid):
     fam = FAM[mid]
     if mid in D:
         d = D[mid]; segs = [(s['raw'], s['status'], s['zh'], s['fr'], s['note']) for s in d['segments']]
-        if fam == '明碼' or d['meta'].get('prefix') is False:
+        if fam == '乾密':   # adresse en clair, puis préfixe 0051 1378, puis corps chiffré
+            groups = [g for g in d['groups'] if g.get('kind') != 'prefix']; prefix = ' '.join(g['cipher'] for g in d['groups'] if g.get('kind') == 'prefix')
+        elif fam == '明碼' or d['meta'].get('prefix') is False:
             groups = list(d['groups']); prefix = ''
         else:
             groups = [g for g in d['groups']][2:]; prefix = ' '.join(g['cipher'] for g in d['groups'][:2])
@@ -117,7 +128,7 @@ def message(mid):
                 g = groups[k]; code = INV.get(new)
                 via = V.get((mid, g['cipher']), {}).get(new)
                 level = 'P' if via else 'Q'
-                to = via or (code if fam == '明碼' else (code and ({'容密': encode_rongmi, '辰密': encode_chenmi}.get(fam, encode_gongmi)(int(code))))) or g['cipher']
+                to = via or (code if fam == '明碼' else (code and ({'容密': encode_rongmi, '辰密': encode_chenmi, '乾密': encode_qianmi}.get(fam, encode_gongmi)(int(code))))) or g['cipher']
                 edits = [dict(**{'from': a, 'to': b}, kind=('copie' if via else 'autre')) for a, b in zip(g['cipher'], to) if a != b]
                 props.append(dict(i=k, ch=new, orig=g['glyph'], level=level, reasons=['sens'] if via else ['contexte'], letters=g['cipher'],
                                   image=None, code=code or '', to_letters=to, edits=edits))
@@ -180,13 +191,13 @@ DATE = {
 }
 I18N = {
  'fr': dict(title='Télégrammes numériques de juin 1916 (容密, 共密, 辰密)', read='Groupes de chiffres du formulaire (préfixe en clair éventuel, puis corps)', label='Traduction de travail.', noteLabel='Note :',
-            channel={'rongmi': 'Clé 容密 (v2)', 'gongmi': 'Clé 共密 (C51)', 'clair': 'En clair (code télégraphique chinois)', 'chenmi': 'Clé 辰密 (C92)'}),
+            channel={'rongmi': 'Clé 容密 (v2)', 'gongmi': 'Clé 共密 (C51)', 'clair': 'En clair (code télégraphique chinois)', 'chenmi': 'Clé 辰密 (C92)', 'qianmi': 'Clé 乾密 (C104, modèle de S. Tomokiyo)'}),
  'en': dict(title='Numeric telegrams of June 1916 (Rongmi, Gongmi, Chenmi)', read='Digit groups of the form (clear prefix if any, then body)', label='Working translation.', noteLabel='Note:',
-            channel={'rongmi': 'Rongmi key (v2)', 'gongmi': 'Gongmi key (C51)', 'clair': 'In clear (Chinese telegraph code)', 'chenmi': 'Chenmi key (C92)'}),
+            channel={'rongmi': 'Rongmi key (v2)', 'gongmi': 'Gongmi key (C51)', 'clair': 'In clear (Chinese telegraph code)', 'chenmi': 'Chenmi key (C92)', 'qianmi': 'Qianmi key (C104, after S. Tomokiyo’s model)'}),
  'ja': dict(title='1916年6月の数字電報（容密・共密・辰密）', read='用紙の数字組（平文の前置きがあればその後に本文）', label='作業訳。', noteLabel='注：',
-            channel={'rongmi': '容密の鍵（v2）', 'gongmi': '共密の鍵（C51）', 'clair': '平文（中文電碼）', 'chenmi': '辰密の鍵（C92）'}),
+            channel={'rongmi': '容密の鍵（v2）', 'gongmi': '共密の鍵（C51）', 'clair': '平文（中文電碼）', 'chenmi': '辰密の鍵（C92）', 'qianmi': '乾密の鍵（C104、S. Tomokiyo氏のモデル）'}),
  'zh-Hant': dict(title='1916年6月的數字電報（容密、共密、辰密）', read='電報紙上的數字組（如有明文前綴，其後為正文）', label='白話譯文：', noteLabel='注：',
-            channel={'rongmi': '容密密鑰（v2）', 'gongmi': '共密密鑰（C51）', 'clair': '明碼（中文電碼）', 'chenmi': '辰密密鑰（C92）'}),
+            channel={'rongmi': '容密密鑰（v2）', 'gongmi': '共密密鑰（C51）', 'clair': '明碼（中文電碼）', 'chenmi': '辰密密鑰（C92）', 'qianmi': '乾密密鑰（C104，依S. Tomokiyo模型）'}),
 }
 ROUTE = {'fr': {'T': 'Tokyo → Shanghai', 'S': 'Shanghai → Tokyo'}, 'en': {'T': 'Tokyo → Shanghai', 'S': 'Shanghai → Tokyo'},
          'ja': {'T': '東京→上海', 'S': '上海→東京'}, 'zh-Hant': {'T': '東京→上海', 'S': '上海→東京'}}
@@ -213,7 +224,7 @@ if __name__ == '__main__':
             i18n[L]['note'][mm['id']] = ((TR.NOTE[L][mid] + ' ') if mid in TR.NOTE[L] else '') + (PRT if D[mid].get('reread_partial') else (RR if rr else UNR))[L]
     T2 = c1916_i18n.t2s_table(WENMI)
     i18n['zh-Hans'] = c1916_i18n.to_hans(i18n['zh-Hant'], T2)
-    i18n['zh-Hans']['channel'] = {'rongmi': '容密密钥（v2）', 'gongmi': '共密密钥（C51）', 'clair': '明码（中文电码）', 'chenmi': '辰密密钥（C92）'}
+    i18n['zh-Hans']['channel'] = {'rongmi': '容密密钥（v2）', 'gongmi': '共密密钥（C51）', 'clair': '明码（中文电码）', 'chenmi': '辰密密钥（C92）', 'qianmi': '乾密密钥（C104，依S. Tomokiyo模型）'}
     i18n['zh-Hans']['label'] = '白话译文：'
     open(os.path.join(SITE, 'assets', 'js', 'corpus-num1916.js'), 'w', encoding='utf-8').write(
         '// Généré par tools/build_num1916.py — ne pas éditer à la main.\nwindow.WENMI_NUM1916 = ' + json.dumps(dict(messages=msgs), ensure_ascii=False) +

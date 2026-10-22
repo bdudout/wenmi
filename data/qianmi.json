@@ -1,0 +1,309 @@
+{
+ "generated_by": "c107/export_site.py",
+ "messages": {
+  "N09": {
+   "family": "乾密",
+   "key": "乾密 (C104, modèle 明密 de S. Tomokiyo)",
+   "meta": {
+    "dir": "Tokyo → Shanghai",
+    "date": null,
+    "date_note": "entre le 6 et le 9 juin 1916 (formulaire « Copy » sans date ; place dans le dossier, et 袁死)",
+    "sheets": [
+     [
+      "B03050089200",
+      49,
+      "R"
+     ],
+     [
+      "B03050089200",
+      49,
+      "L"
+     ]
+    ],
+    "sheet_digits": [
+     50,
+     50
+    ],
+    "prefix": true
+   },
+   "summary_fr": "Huang Xing, aussitôt après la mort de Yuan Shikai : à Tokyo, l’attitude n’a pas changé ; il attend que les négociations avancent pour télégraphier de nouveau.",
+   "repairs": [],
+   "reread_by_brice": true,
+   "raw": "轉馬耿兩倥鑒袁死此間態度卵變侯交涉有望再電命興",
+   "groups": [
+    {
+     "kind": "clair",
+     "cipher": "6567",
+     "ctc": "6567",
+     "glyph": "轉",
+     "i": 1,
+     "sheet": 1
+    },
+    {
+     "kind": "clair",
+     "cipher": "7456",
+     "ctc": "7456",
+     "glyph": "馬",
+     "i": 2,
+     "sheet": 1
+    },
+    {
+     "kind": "clair",
+     "cipher": "5105",
+     "ctc": "5105",
+     "glyph": "耿",
+     "i": 3,
+     "sheet": 1
+    },
+    {
+     "kind": "clair",
+     "cipher": "0357",
+     "ctc": "0357",
+     "glyph": "兩",
+     "i": 4,
+     "sheet": 1
+    },
+    {
+     "kind": "clair",
+     "cipher": "0238",
+     "ctc": "0238",
+     "glyph": "倥",
+     "i": 5,
+     "sheet": 1
+    },
+    {
+     "kind": "clair",
+     "cipher": "7003",
+     "ctc": "7003",
+     "glyph": "鑒",
+     "i": 6,
+     "sheet": 1
+    },
+    {
+     "kind": "prefix",
+     "cipher": "0051",
+     "ctc": "0051",
+     "glyph": "乾",
+     "i": 7,
+     "sheet": 1
+    },
+    {
+     "kind": "prefix",
+     "cipher": "1378",
+     "ctc": "1378",
+     "glyph": "密",
+     "i": 8,
+     "sheet": 1
+    },
+    {
+     "kind": "key",
+     "cipher": "7096",
+     "ctc": "5913",
+     "glyph": "袁",
+     "i": 9,
+     "sheet": 1
+    },
+    {
+     "kind": "key",
+     "cipher": "4044",
+     "ctc": "2984",
+     "glyph": "死",
+     "i": 10,
+     "sheet": 1
+    },
+    {
+     "kind": "key",
+     "cipher": "4014",
+     "ctc": "2974",
+     "glyph": "此",
+     "i": 11,
+     "sheet": 1
+    },
+    {
+     "kind": "key",
+     "cipher": "8129",
+     "ctc": "7035",
+     "glyph": "間",
+     "i": 12,
+     "sheet": 1
+    },
+    {
+     "kind": "key",
+     "cipher": "3001",
+     "ctc": "1966",
+     "glyph": "態",
+     "i": 13,
+     "sheet": 1
+    },
+    {
+     "kind": "key",
+     "cipher": "2786",
+     "ctc": "1653",
+     "glyph": "度",
+     "i": 14,
+     "sheet": 2
+    },
+    {
+     "kind": "key",
+     "cipher": "1750",
+     "ctc": "0607",
+     "glyph": "卵",
+     "i": 15,
+     "sheet": 2
+    },
+    {
+     "kind": "key",
+     "cipher": "7325",
+     "ctc": "6239",
+     "glyph": "變",
+     "i": 16,
+     "sheet": 2
+    },
+    {
+     "kind": "key",
+     "cipher": "1241",
+     "ctc": "0186",
+     "glyph": "侯",
+     "i": 17,
+     "sheet": 2
+    },
+    {
+     "kind": "key",
+     "cipher": "1114",
+     "ctc": "0074",
+     "glyph": "交",
+     "i": 18,
+     "sheet": 2
+    },
+    {
+     "kind": "key",
+     "cipher": "4279",
+     "ctc": "3195",
+     "glyph": "涉",
+     "i": 19,
+     "sheet": 2
+    },
+    {
+     "kind": "key",
+     "cipher": "3645",
+     "ctc": "2589",
+     "glyph": "有",
+     "i": 20,
+     "sheet": 2
+    },
+    {
+     "kind": "key",
+     "cipher": "3677",
+     "ctc": "2598",
+     "glyph": "望",
+     "i": 21,
+     "sheet": 2
+    },
+    {
+     "kind": "key",
+     "cipher": "1419",
+     "ctc": "0375",
+     "glyph": "再",
+     "i": 22,
+     "sheet": 2
+    },
+    {
+     "kind": "key",
+     "cipher": "8276",
+     "ctc": "7193",
+     "glyph": "電",
+     "i": 23,
+     "sheet": 2
+    },
+    {
+     "kind": "key",
+     "cipher": "1838",
+     "ctc": "0730",
+     "glyph": "命",
+     "i": 24,
+     "sheet": 2
+    },
+    {
+     "kind": "key",
+     "cipher": "6343",
+     "ctc": "5281",
+     "glyph": "興",
+     "i": 25,
+     "sheet": 2
+    }
+   ],
+   "segments": [
+    {
+     "raw": "轉馬耿兩倥鑒",
+     "status": "provisional",
+     "zh": "轉馬、耿兩{兄}鑒：",
+     "fr": "À transmettre à Ma et à Geng, mes deux frères :",
+     "note": "Adresse en clair (code télégraphique public). 倥 (0238) → {兄} (0338) : 1 chiffre. 馬 et 耿 non identifiés."
+    },
+    {
+     "raw": "袁死",
+     "status": "literal",
+     "zh": "袁死。",
+     "fr": "Yuan est mort.",
+     "note": "Yuan Shikai meurt le 6 juin 1916."
+    },
+    {
+     "raw": "此間態度卵變",
+     "status": "provisional",
+     "zh": "此間態度{未}變，",
+     "fr": "Ici, l’attitude n’a pas changé ;",
+     "note": "卵 (1750) → {未} : 1 chiffre (3750). Chiffres relus deux fois par Brice Dudout (C102b, C105, en aveugle). 此間 = Tokyo, sans doute les autorités japonaises (cf. N13 : « 日態度頗觀望 »)."
+    },
+    {
+     "raw": "侯交涉有望",
+     "status": "provisional",
+     "zh": "{候}交涉有望，",
+     "fr": "j’attendrai que les négociations soient en bonne voie",
+     "note": "侯 → {候} : contexte (graphies voisines) ; variante à un chiffre possible : 便 (1245)."
+    },
+    {
+     "raw": "再電命",
+     "status": "provisional",
+     "zh": "再電{告}。",
+     "fr": "pour télégraphier de nouveau.",
+     "note": "命 → {告} : contexte ; aucune variante à un chiffre ne donne un mot meilleur."
+    },
+    {
+     "raw": "興",
+     "status": "literal",
+     "zh": "興。",
+     "fr": "Xing.",
+     "note": "Signature de Huang Xing, sans code de jour."
+    }
+   ],
+   "sheet_count": "2"
+  }
+ },
+ "key_qianmi": {
+  "page": "w − 11",
+  "COL": [
+   6,
+   7,
+   3,
+   2,
+   8,
+   0,
+   4,
+   9,
+   5,
+   1
+  ],
+  "ROW": [
+   7,
+   6,
+   2,
+   1,
+   4,
+   9,
+   3,
+   8,
+   10,
+   5
+  ]
+ }
+}

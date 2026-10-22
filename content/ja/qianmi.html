@@ -1,0 +1,54 @@
+<!-- {"title": "乾密——1916年6月の電報1通とその鍵", "description": "乾密電報N09（黄興、東京、1916年6月）と、S. Tomokiyo氏の着想にもとづいて復元した鍵（番号を付け替えた「明密」電碼本）。"} -->
+<link rel="stylesheet" href="../assets/css/gongmi.css">
+<article class="article gongmi rongmi chenmi qianmi"><header class="lede">
+<p class="kicker">解読・1916年6月</p>
+<h1>乾密：電報1通とその鍵</h1><p class="standfirst">袁世凱の死の直後に黄興が東京から送った暗号電報。東京の態度は変わらず、交渉の進展を待つという。鍵は番号を付け替えた「明密」電碼本で、S. Tomokiyo氏の着想にしたがって復元した。<sup class="fn"><a href="sources.html#s27">[27]</a></sup></p>
+<p>鍵のモデル（番号を付け替えた明密電碼本）の着想：S. Tomokiyo（Cryptiana）<a href="sources.html#s22">[22]</a>。升目の読み順と全数字の再読：Brice Dudout。翻字、鍵の探索、推定読み、翻訳：Claude（Anthropic）。</p></header>
+<div class="status warn"><p>読めた電報は1通のみで、鍵は17組にもとづく。対照・署名・日付の検証は通るが、3字は推定読みであり、同じ差出人の乾密電報N03はこの鍵では読めない（別の鍵か数字の誤り）。翻訳は作業案、人物の比定は候補である。</p></div>
+<section id="key"><h2>鍵</h2><p>用紙は列ごとに右から左、上から下へ読み（Brice Dudoutの提案した順序）、4桁ずつ区切る。最初の6組はあて先で平文（公開の電碼）、続いて公開の前置き<code>0051 1378</code>＝<span lang="zh-Hant">乾密</span>、以下17組が暗号。各組は番号を書き換えた「明密」電碼本の<b>頁＋列＋行</b>として読む：<code>P = 100 × 頁 + 10 × 列 + 行</code>。行は1〜10（10行目は列の最下段のxxx0）。Pは中文電碼（CTC）の番号。</p><p><b>頁</b>（最初の2桁）：書かれた頁から11を引く。11＝00頁、12＝01、…、50＝39など。</p><div class="gm-scroll"><table><tr><td><code>11</code>→00</td><td><code>12</code>→01</td><td><code>13</code>→02</td><td><code>14</code>→03</td><td><code>15</code>→04</td><td><code>16</code>→05</td><td><code>17</code>→06</td><td><code>18</code>→07</td><td><code>19</code>→08</td><td><code>20</code>→09</td><td>…</td><td><code>50</code>→39</td></tr></table></div><div class="gm-scroll"><table><tr><th>読んだ数字</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr><tr><th>列</th><td>6</td><td>7</td><td>3</td><td>2</td><td>8</td><td>0</td><td>4</td><td>9</td><td>5</td><td>1</td></tr><tr><th>行</th><td>7</td><td>6</td><td>2</td><td>1</td><td>4</td><td>9</td><td>3</td><td>8</td><td>10</td><td>5</td></tr></table></div><p>例：</p><div class="gm-scroll"><table><tr><th>組</th><th>頁</th><th>列</th><th>行</th><th>P</th><th>CTC</th></tr><tr><td><code>7096</code></td><td>70 → 59</td><td>9 → 1</td><td>6 → 3</td><td>5913</td><td lang="zh-Hant">袁</td></tr><tr><td><code>4044</code></td><td>40 → 29</td><td>4 → 8</td><td>4 → 4</td><td>2984</td><td lang="zh-Hant">死</td></tr><tr><td><code>1114</code></td><td>11 → 00</td><td>1 → 7</td><td>4 → 4</td><td>0074</td><td lang="zh-Hant">交</td></tr></table></div><p><b>S. Tomokiyo氏の着想。</b>2026年10月23日、S. Tomokiyo氏は、私たちの<a href="gongmi.html">共密</a>・<a href="rongmi.html">容密</a>・<a href="chenmi.html">辰密</a>の三つの鍵が、計算を伴わない「明密」電碼本の頁・列・行の番号の付け替えにすぎないことを示した<a href="sources.html#s22">[22]</a>。<b>私たちの発見。</b>このモデルを未解読の「X密」電報に適用した：頁は単純な規則（逆順・循環・0なし）で番号づけ、列と行は自由に置換し、言語モデルで当てはめる。計算前に定めた手順で、同じ長さの合成電文（陽性対照）と攪拌した数字（陰性対照）を用いた。N09ははっきり抜きんでて（4.47、最良の対照は2.88）、本文が読め、期待どおり署名「興」で終わり、「袁死」で始まる。これは綴りの中の位置（6月6〜9日）と合う。異常な3組はBrice Dudoutが画像上で2回、2回目は盲検で読み直し、数字は確かである。</p><p>推定読みでは<b>{x}</b>が異常な解読字を推定字に置き換える。注に、暗号組を<b>1桁だけ</b>変えるとその字になるか、<b>文脈による読み</b>かを記す。〔x〕：未解決のまま残した字。</p></section>
+<section id="context"><h2>背景</h2><p>用紙（JACAR B03050089200、PDF 49）は日付のない写し（「Copy」）。差出人は東京の黄興宅、青山南町三ノ五三。受信人は上海フランス租界カヒロ（霞飛路）の「ジヨンシヨウ」で、二字の日本語読みだが比定できない。本文のあて先は平文で「馬・耿の両兄に転送」とあり、馬・耿は未比定。</p><p>乾密の前置きは、6月初めに同じ家から出たN03にも見えるが、N03はN09の鍵では読めない。両電報は綴りの中で6月3日と8日の電報の間に置かれている。</p><p>「此間態度未變」（当地の態度は変わらない）は、6月9日のN13「日態度頗觀望」（日本はなお観望）と呼応する。</p></section>
+<section id="history"><h2>歴史的背景</h2><p>袁世凱は1916年6月6日に死去した。東京にいた黄興は、蜂起した諸省のため日本での武器購入と借款を何週間も交渉していた（<a href="rongmi.html">容密</a>の電報を参照）。N09は知らせ直後の状況を伝える：日本の態度は動かず、交渉がまとまるのを待って改めて打電する。数日後のN13・N17は、日本は観望しており、南北統一までは北京に貸さないと補っている。</p></section>
+<section id="N09" class="gm-message"><h2>N09</h2>
+<p>17 組 · 日付: 1916年6月6〜9日（日付のない写し） · 発着: 東京→上海 · 2 枚 · 数字はBrice Dudoutが再読</p>
+<p>袁世凱の死の直後、黄興から：東京の態度は変わらない。交渉に望みが出るのを待って改めて打電する。</p>
+<h3>未修正の解読結果</h3><p class="gm-han" lang="zh-Hant">轉馬耿兩倥鑒袁死此間態度卵變侯交涉有望再電命興</p>
+<h3>推定読み</h3><p class="gm-han" lang="zh-Hant">轉馬、耿兩{兄}鑒：袁死。此間態度{未}變，{候}交涉有望，再電{告}。興。</p>
+<h3>日本語訳</h3><p class="gm-tr">馬・耿の両兄に転送：袁死す。当地の態度は変わらない。交渉に望みが出るのを待って、改めて打電する。興。</p>
+<details><summary>用紙とJACAR出典</summary>
+<p>N09-1 · B03050089200 PDF 49 R · <a href="https://www.jacar.archives.go.jp/das/meta/B03050089200">JACAR</a> · <a href="../assets/img/qianmi/N09-1.jpg">scan</a></p>
+<img loading="lazy" src="../assets/img/qianmi/N09-1.jpg" alt="JACAR B03050089200 N09-1">
+<p>N09-2 · B03050089200 PDF 49 L · <a href="https://www.jacar.archives.go.jp/das/meta/B03050089200">JACAR</a> · <a href="../assets/img/qianmi/N09-2.jpg">scan</a></p>
+<img loading="lazy" src="../assets/img/qianmi/N09-2.jpg" alt="JACAR B03050089200 N09-2">
+</details><details><summary>組ごとの数字とCTC</summary>
+<div class="gm-scroll"><table><thead><tr><th>#</th><th>C</th><th>CTC</th><th>字</th><th>用紙</th></tr></thead><tbody>
+<tr><td>平文</td><td><code>6567</code></td><td><code>6567</code></td><td lang="zh-Hant">轉</td><td>N09-1</td></tr>
+<tr><td>平文</td><td><code>7456</code></td><td><code>7456</code></td><td lang="zh-Hant">馬</td><td>N09-1</td></tr>
+<tr><td>平文</td><td><code>5105</code></td><td><code>5105</code></td><td lang="zh-Hant">耿</td><td>N09-1</td></tr>
+<tr><td>平文</td><td><code>0357</code></td><td><code>0357</code></td><td lang="zh-Hant">兩</td><td>N09-1</td></tr>
+<tr><td>平文</td><td><code>0238</code></td><td><code>0238</code></td><td lang="zh-Hant">倥</td><td>N09-1</td></tr>
+<tr><td>平文</td><td><code>7003</code></td><td><code>7003</code></td><td lang="zh-Hant">鑒</td><td>N09-1</td></tr>
+<tr><td>前置き</td><td><code>0051</code></td><td><code>0051</code></td><td lang="zh-Hant">乾</td><td>N09-1</td></tr>
+<tr><td>前置き</td><td><code>1378</code></td><td><code>1378</code></td><td lang="zh-Hant">密</td><td>N09-1</td></tr>
+<tr><td>9</td><td><code>7096</code></td><td><code>5913</code></td><td lang="zh-Hant">袁</td><td>N09-1</td></tr>
+<tr><td>10</td><td><code>4044</code></td><td><code>2984</code></td><td lang="zh-Hant">死</td><td>N09-1</td></tr>
+<tr><td>11</td><td><code>4014</code></td><td><code>2974</code></td><td lang="zh-Hant">此</td><td>N09-1</td></tr>
+<tr><td>12</td><td><code>8129</code></td><td><code>7035</code></td><td lang="zh-Hant">間</td><td>N09-1</td></tr>
+<tr><td>13</td><td><code>3001</code></td><td><code>1966</code></td><td lang="zh-Hant">態</td><td>N09-1</td></tr>
+<tr><td>14</td><td><code>2786</code></td><td><code>1653</code></td><td lang="zh-Hant">度</td><td>N09-2</td></tr>
+<tr><td>15</td><td><code>1750</code></td><td><code>0607</code></td><td lang="zh-Hant">卵</td><td>N09-2</td></tr>
+<tr><td>16</td><td><code>7325</code></td><td><code>6239</code></td><td lang="zh-Hant">變</td><td>N09-2</td></tr>
+<tr><td>17</td><td><code>1241</code></td><td><code>0186</code></td><td lang="zh-Hant">侯</td><td>N09-2</td></tr>
+<tr><td>18</td><td><code>1114</code></td><td><code>0074</code></td><td lang="zh-Hant">交</td><td>N09-2</td></tr>
+<tr><td>19</td><td><code>4279</code></td><td><code>3195</code></td><td lang="zh-Hant">涉</td><td>N09-2</td></tr>
+<tr><td>20</td><td><code>3645</code></td><td><code>2589</code></td><td lang="zh-Hant">有</td><td>N09-2</td></tr>
+<tr><td>21</td><td><code>3677</code></td><td><code>2598</code></td><td lang="zh-Hant">望</td><td>N09-2</td></tr>
+<tr><td>22</td><td><code>1419</code></td><td><code>0375</code></td><td lang="zh-Hant">再</td><td>N09-2</td></tr>
+<tr><td>23</td><td><code>8276</code></td><td><code>7193</code></td><td lang="zh-Hant">電</td><td>N09-2</td></tr>
+<tr><td>24</td><td><code>1838</code></td><td><code>0730</code></td><td lang="zh-Hant">命</td><td>N09-2</td></tr>
+<tr><td>25</td><td><code>6343</code></td><td><code>5281</code></td><td lang="zh-Hant">興</td><td>N09-2</td></tr>
+</tbody></table></div></details></section>
+
+<section id="critical"><h2>対照校訂訳</h2><p>段落ごとの作業訳はフランス語版にある。 <a href="../fr/qianmi.html#critical">フランス語の対照訳を見る</a></p></section>
+<p>出典：JACARの用紙<a href="sources.html#s27">[27]</a>、鍵のモデル：S. Tomokiyo<a href="sources.html#s22">[22]</a>、日付の韻目：<a href="https://archives.sinica.edu.tw/freePage/150/32">中央研究院</a>。解読プログラムと鍵の分解の検証：<a href="https://github.com/bdudout/wenmi/tree/main/solver/numeric1916">solver/numeric1916</a>。</p>
+<p><a href="method.html#qianmi">方法</a>と<a href="chenmi.html">辰密</a>・<a href="rongmi.html">容密</a>・<a href="gongmi.html">共密</a>のページも参照。</p>
+</article>
