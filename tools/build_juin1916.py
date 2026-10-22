@@ -50,6 +50,7 @@ FR = f'''<!-- {{"title": "Juin 1916 : ce que disent les télégrammes de Huang X
     <li>Fin juin, le compromis sur la Constitution (Duan Qirui consulterait à titre personnel les parlementaires réunis à Shanghai, par l’intermédiaire de Ding Shiyi et Xiao Jinrong) est « de nouveau retourné » : Duan revient aux trois délégués par province ({tg("V4B")}, 容密). Au même moment, Yin Ruli part pour Pékin avec Li Shucheng, et l’achat d’armes se poursuit avec Aoki et Takakura ({tg("V4D")}).</li>
     <li>À Tan Renfeng (譚人鳳, 石屛), vétéran hunanais, Huang Xing pose sa condition : « si Li [Yuanhong] gouverne selon la loi, les germes du désordre pourront être arrêtés ; s’il s’en écarte, je ne l’accepterai pas non plus » ({tg("N29")}, en clair).</li>
     <li>Huang Xing soutient l’armée du Shaanxi et pousse les provinces indépendantes à marcher vers le nord ({tg("N04")}, en clair).</li>
+    <li>Un canal vers Mukden (奉天), en clair : le 12 juin, un correspondant signé 季 annonce l’opposition au paiement d’une lettre de change n<sup>o</sup> 169, avec trois jours d’annonce dans la presse ({tg("N20")}) ; Tokyo répond que la banque attend un télégramme de la Shōryū ({tg("N31")}). Le 13, « 侃 » promet de rentrer dès que la date de la réunion sera fixée ({tg("N22")}).</li>
     <li>Les intermédiaires japonais : le consul Koike et le consul général Ariyoshi ({tg("N30")}), Tanaka et Aoki ({tg("N23")}) {unc("— identifications probables, non démontrées")}.</li>
   </ul>
 
@@ -91,6 +92,7 @@ EN = f'''<!-- {{"title": "June 1916: what Huang Xing’s telegrams say", "descri
     <li>In late June the compromise on the Constitution (Duan Qirui would consult the parliamentarians in Shanghai in a personal capacity, through Ding Shiyi and Xiao Jinrong) is “overturned again”: Duan goes back to three delegates per province ({tg("V4B")}, Rongmi). Meanwhile Yin Ruli leaves for Beijing with Li Shucheng, and the arms purchase goes on with Aoki and Takakura ({tg("V4D")}).</li>
     <li>To Tan Renfeng (譚人鳳, 石屛), a Hunanese veteran, Huang Xing sets his condition: “if Li [Yuanhong] governs according to the law, the seeds of disorder can be checked; should he depart from it, I will not accept it either” ({tg("N29")}, in clear).</li>
     <li>Huang Xing backs the Shaanxi army and urges the independent provinces to march north ({tg("N04")}, in clear).</li>
+    <li>A channel to Mukden (奉天), in clear: on 12 June a correspondent signing 季 announces that payment of bill of exchange no. 169 is being stopped, with three days of notices in the press ({tg("N20")}); Tokyo replies that the bank is waiting for a telegram from the Shōryū ({tg("N31")}). On the 13th, “侃” promises to return as soon as the date of the meeting is fixed ({tg("N22")}).</li>
     <li>Japanese go-betweens: Consul Koike and Consul General Ariyoshi ({tg("N30")}), Tanaka and Aoki ({tg("N23")}) {unc("— probable identifications, not proven")}.</li>
   </ul>
 
@@ -132,6 +134,7 @@ HANT = f'''<!-- {{"title": "1916年6月：黃興電報所見", "description": "2
     <li>6月底，約法問題的折衷方案（段祺瑞以私人身分經丁世嶧、蕭晉榮電詢在滬國會議員）「又翻」：段又堅持各省派三人之說（{tg("V4B")}，容密）。同時殷汝驪偕李書城入京，購械事仍與青木、高倉接洽（{tg("V4D")}）。</li>
     <li>黃興致湘籍老同志譚人鳳（石屛），表明條件：「黎公若能依法圖治，亂萌可遏；有違此旨，興亦弗承」（{tg("N29")}，明碼）。</li>
     <li>黃興支持陝軍，並促獨立各省北伐（{tg("N04")}，明碼）。</li>
+    <li>通往奉天的明碼電報：6月12日，署名「季」者告知第一六九號匯票已請停付，並登報三日（{tg("N20")}）；東京覆稱銀行須待正隆來電（{tg("N31")}）。13日，「侃」說俟確定開會卽歸（{tg("N22")}）。</li>
     <li>日方中介：小池領事、有吉總領事（{tg("N30")}），田中、青木（{tg("N23")}）{unc("——可能的比定，尚未證實")}。</li>
   </ul>
 
@@ -173,6 +176,7 @@ JA = f'''<!-- {{"title": "1916年6月：黄興の電報が語ること", "descri
     <li>6月末、約法をめぐる妥協案（段祺瑞が丁世嶧・蕭晋栄を通じて上海の国会議員に私人として電問する）は「また覆った」。段は各省三人代表案に戻る（{tg("V4B")}、容密）。同じころ殷汝驪は李書城とともに北京へ向かい、武器購入は青木・高倉と続く（{tg("V4D")}）。</li>
     <li>湖南の古参譚人鳳（石屛）にあてて、黄興は条件を示す。「黎公がもし法によって治めるなら乱の芽は抑えられよう。この趣旨に背くなら興もまた承服しない」（{tg("N29")}、平文）。</li>
     <li>黄興は陝西軍を支持し、独立各省に北伐を促した（{tg("N04")}、平文）。</li>
+    <li>奉天との平文電報：6月12日、「季」と署名する相手が、為替手形第169号の支払い停止と三日間の新聞公告を伝え（{tg("N20")}）、東京は、銀行は正隆からの電報を待っていると答える（{tg("N31")}）。13日には「侃」が、会の日取りが決まればすぐ帰ると伝える（{tg("N22")}）。</li>
     <li>日本側の仲介者：小池領事と有吉総領事（{tg("N30")}）、田中と青木（{tg("N23")}）{unc("——推定であり、証明されていない")}。</li>
   </ul>
 
