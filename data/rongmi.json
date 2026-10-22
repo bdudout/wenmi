@@ -747,9 +747,9 @@
     {
      "raw": "機鎗正設皽需款在五十蓐以內",
      "status": "provisional",
-     "zh": "機鎗正設〔皽〕。需款在五十{萬}以內。",
-     "fr": "mitrailleuses : en cours de […]. Les fonds nécessaires restent dans la limite de cinq cent mille.",
-     "note": "皽 non résolu. 蓐 (4663) → {萬} : 1 chiffre (4603) et contexte (五百萬 plus loin)."
+     "zh": "機鎗正設{法}，需款在五十{萬}以內。",
+     "fr": "mitrailleuses : on s’en occupe. Les fonds nécessaires restent dans la limite de cinq cent mille.",
+     "note": "皽 (3249) → {法} : même code que 法律 dans N19b (code récurrent). 蓐 (4663) → {萬} : 1 chiffre (4603) et contexte (五百萬 plus loin)."
     },
     {
      "raw": "淅江借款尚無頭緒需時甚久",
@@ -6644,9 +6644,9 @@
     {
      "raw": "□切到乞賜教",
      "status": "provisional",
-     "zh": "〔□〕切到乞賜教。",
-     "fr": "à son arrivée, veuillez le conseiller.",
-     "note": "□ = groupe hors table."
+     "zh": "{一}切到乞賜教。",
+     "fr": "à son arrivée, veuillez le conseiller en tout.",
+     "note": "□ (8012, hors table) → {一} : 1 chiffre (deux chiffres voisins échangés, 8102), d’où 一切 ; C103, à la suite de la remarque de S. Tomokiyo sur ce groupe."
     },
     {
      "raw": "驪郛恩",
@@ -16249,7 +16249,7 @@
  },
  "sources": {
   "cryptanalysis/c83/raw-texts-v2.json": "550d4a71bd33e41543ee87f0a1bae45d047c8eae24aa8769af2758039fe67e35",
-  "cryptanalysis/c83/segments.py": "230fb334384f981b9e8c32c02cc04fc211eb88f01feadc02906e950595b984b9",
+  "cryptanalysis/c83/segments.py": "799be95aca8a423779800801f5d6d0329dcd60fd8cc0d459e20afafce7c7071f",
   "cryptanalysis/c83/decode_rongmi_v2.py": "585ad187787d26cf77c486e93a4ed20e5e636282089dd2cd70c55dacce0248e0"
  }
 }

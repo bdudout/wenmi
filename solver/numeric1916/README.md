@@ -15,6 +15,7 @@ relancer la recherche des clés sans a priori, avec des témoins. Python 3 + Num
 | `search_gongmi.py` | recherche de la clé 共密 : les 10 000 constantes K, permutation des dizaines optimale pour chacune |
 | `search_rongmi.py` | recherche de la clé 容密 : quatre substitutions de chiffres (recuit), puis constante K et retenues |
 | `search_chenmi.py` | recherche de la clé 辰密 : pages, dizaines et unités permutées (recuit + affectation), comparaison avec le décompte sans zéro |
+| `mingmi.py` | les trois clés vues comme des renumérotations de pages, colonnes et lignes d’un livre 明密 (reformulation de S. Tomokiyo, Cryptiana, 23/10/2026) : vérifie la factorisation exacte sur les 10 000 groupes et imprime les tables |
 | `search_common.py` | affectation exacte (algorithme hongrois) et témoins par mélange |
 | `data/messages.json` | 37 télégrammes : chiffres **tels que relus** par Brice Dudout, feuillets JACAR (cote, page PDF, côté), date, texte brut et lecture proposés tels que publiés ; 5 télégrammes non lus (premier feuillet) |
 | `data/reread/` | les exports bruts des relectures de Brice Dudout, case par case, colonne par colonne (droite → gauche) |
@@ -73,4 +74,5 @@ with sheet references and the published raw text and proposed reading; `data/rer
 `verify.py` reproduces all 32 published raw texts and scores each key against random keys of the same form and shuffled digits;
 `search_*.py` recover the keys without prior knowledge (Gongmi exactly; Rongmi up to one carry; Chenmi's page table compared with
 the zero-free countdown). The final manual steps (Rongmi “90 = 00”, Chenmi page rule and “9 = 10”) are described on the site’s
-Method page. Corrections and counter-checks are welcome.
+Method page. `mingmi.py` checks S. Tomokiyo's reformulation (Cryptiana, 23 October 2026): each key is exactly a renumbering of
+the pages, columns and rows of a 明密 codebook, with no residual carry, over all 10,000 group values. Corrections and counter-checks are welcome.
