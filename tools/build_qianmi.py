@@ -130,6 +130,7 @@ T['zh-hans'] = {k: (_C.to_hans(v, _T2) if isinstance(v, str) else [_C.to_hans(x,
 for k in ('srcp', 'methodlink', 'keyp', 'pagep', 'keyhow', 'credits', 'histp'):   # liens et balises lang="zh-Hant" intacts
     v = T['zh-hant'][k]
     T['zh-hans'][k] = ([_C.to_hans(x, _T2) for x in v] if isinstance(v, list) else _C.to_hans(v, _T2))
+T['zh-hans'] = {k: (v.replace('干密', '乾密') if isinstance(v, str) else [x.replace('干密', '乾密') for x in v] if isinstance(v, list) else v) for k, v in T['zh-hans'].items()}   # 乾密 : nom propre
 T['zh-hans']['legend'] = BR.T['zh-hans']['legend']
 T['zh-hans']['title'] = '乾密——1916年6月的一封电报及其密钥'
 
@@ -139,7 +140,7 @@ def translation(mid, L):
     if L == 'en': return SQ.EN[mid]
     if L == 'ja': return SQ.JA[mid]
     if L == 'zh-hant': return SQ.BAIHUA[mid]
-    return _C.to_hans(SQ.BAIHUA[mid], _T2)
+    return _C.to_hans(SQ.BAIHUA[mid], _T2).replace('干密', '乾密')
 def date_str(mid, L):
     return {'fr': M[mid]['meta']['date_note'], 'en': 'between 6 and 9 June 1916 (undated “Copy” form)', 'ja': '1916年6月6〜9日（日付のない写し）',
             'zh-hant': '1916年6月6日至9日之間（無日期抄件）', 'zh-hans': '1916年6月6日至9日之间（无日期抄件）'}[L]

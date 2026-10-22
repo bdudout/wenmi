@@ -224,6 +224,7 @@ if __name__ == '__main__':
             i18n[L]['note'][mm['id']] = ((TR.NOTE[L][mid] + ' ') if mid in TR.NOTE[L] else '') + (PRT if D[mid].get('reread_partial') else (RR if rr else UNR))[L]
     T2 = c1916_i18n.t2s_table(WENMI)
     i18n['zh-Hans'] = c1916_i18n.to_hans(i18n['zh-Hant'], T2)
+    i18n['zh-Hans'] = json.loads(json.dumps(i18n['zh-Hans'], ensure_ascii=False).replace('干密', '乾密'))   # 乾密 : nom propre, pas 干
     i18n['zh-Hans']['channel'] = {'rongmi': '容密密钥（v2）', 'gongmi': '共密密钥（C51）', 'clair': '明码（中文电码）', 'chenmi': '辰密密钥（C92）', 'qianmi': '乾密密钥（C104，依S. Tomokiyo模型）'}
     i18n['zh-Hans']['label'] = '白话译文：'
     open(os.path.join(SITE, 'assets', 'js', 'corpus-num1916.js'), 'w', encoding='utf-8').write(

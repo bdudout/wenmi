@@ -57,7 +57,7 @@ if __name__ == '__main__':
         d = S['zh-hant'] if L == 'zh-hans' else S[L]
         sec = d['body'](tables(d['h']), ex(d['x']))
         if L == 'zh-hans':
-            sec = C.to_hans(sec, T2).replace('lang="zh-Hant">乾密', 'lang="zh-Hant">乾密')
+            sec = C.to_hans(sec, T2).replace('干密', '乾密')
         p = os.path.join(SITE, 'content', L, 'method.html'); s = open(p, encoding='utf-8').read()
         s = re.sub(r'\n  <section class="article" id="qianmi">.*?</section>', '', s, flags=re.S)
         i = s.find('id="chenmi"'); assert i > 0, L
