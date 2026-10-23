@@ -37,10 +37,12 @@ FR = f'''<!-- {{"title": "Les livres X密 : un code par correspondant", "descrip
   <p>C’est la première réaction de Huang Xing que nous ayons à la mort de Yuan Shikai, le 6 juin. Elle est sobre : la nouvelle ne change rien à Tokyo, et il ne relancera ses correspondants qu’avec du concret. Les « négociations » sont sans doute celles que racontent les télégrammes {Q('容密')} : des armes et des emprunts au Japon pour les provinces soulevées. La suite confirme ce jugement. Le 9 juin, dans {tg('N13')}, il écrit que « le Japon reste très attentiste » ; le 10, dans {tg('N17')}, que les autorités japonaises ne prêteront pas à Pékin avant l’unification du Nord et du Sud.</p>
   <p>L’adresse, en clair, demande de transmettre à « Ma et Geng, mes deux frères ». Ils ne sont pas identifiés. Pour Geng, une piste : dans une lettre du 1er juin 1916 publiée avec les brouillons, Sun Hongyi dit s’être concerté avec Zhang Ji, Bo Wenwei, {unc('耿鶴生')} et He Chengjun (何成濬), « hommes du parti qui ont des forces »{S(29)}. Le destinataire japonais, ジヨンシヨウ, habite comme le groupe hunanais l’avenue Joffre (霞飛路) de la concession française.</p>
 
+  <h2 id="gaimusho">Le ministère japonais avait la clé de N01</h2>
+  <p>Dans le même dossier, une feuille du ministère japonais des Affaires étrangères, de juin 1916, porte deux tables de chiffres rang par rang, l’une pour chiffrer, l’autre pour déchiffrer{S(27)}. Nous ne savions pas à quoi elles servaient. Elles lisent {tg('N01')}, un appel de Shanghai à Huang Xing reçu en mai : « {Q('袁逆將倒，時局益艱……盼承指導，俾有遵循')} » (« Yuan va tomber, la situation se tend… nous attendons vos directives »), signé d’une quinzaine de caractères (建 pour Niu Yongjian, 闓 pour Tan Yankai, 秀 pour Gu Zhongxiu, 驪 pour Yin Ruli…). Mieux : la clé que notre recherche avait trouvée pour N01, avec le modèle de Satoshi Tomokiyo et sans ces tables, est identique à celle du ministère. Le Japon lisait donc ce canal dès 1916 ; nous ignorons s’il en avait cassé ou obtenu la clé. Voir la <a href="method.html#gaimusho">méthode</a>.</p>
+
   <h2 id="resiste">Ce qui résiste encore</h2>
   <ul>
     <li><strong>N03</strong>, autre {Q('乾密')} parti de la même maison au début de juin, reste illisible avec la clé de N09 : autre jour, autre clé, ou chiffres fautifs.</li>
-    <li><strong>N01</strong> donne une lecture partielle : un appel de Shanghai adressé à Huang Xing, avec une liste de signataires. Elle est trop incertaine pour être publiée. Un essai fondé sur les noms des signataires de Shanghai a échoué.</li>
     <li><strong>N06</strong> ({Q('和密')}, onze groupes) est trop court ; <strong>N07</strong> ne s’ouvre pas avec ce modèle.</li>
   </ul>
   <p>Pour avancer, il faudrait d’autres télégrammes des mêmes livres. Les recueils de Taïwan signalés par Satoshi Tomokiyo, ou les livres eux-mêmes, en seraient le meilleur chemin.</p>
@@ -73,10 +75,12 @@ EN = f'''<!-- {{"title": "The X密 books: one code per correspondent", "descript
   <p>This is the first reaction of Huang Xing to Yuan Shikai’s death (6 June) that we have. It is sober: the news changes nothing in Tokyo, and he will contact his correspondents again only with something concrete. The “negotiations” are probably those told in the {Q('容密')} telegrams: arms and loans in Japan for the provinces in revolt. What follows bears this out. On 9 June, in {tg('N13')}, he writes that “Japan is still waiting and seeing”; on the 10th, in {tg('N17')}, that the Japanese authorities will not lend to Beijing before North and South are unified.</p>
   <p>The address, in clear, asks for the message to be passed to “Ma and Geng, my two brothers”. They are not identified. For Geng, one lead: in a letter of 1 June 1916 published with the drafts, Sun Hongyi says he conferred with Zhang Ji, Bo Wenwei, {unc('耿鶴生')} and He Chengjun (何成濬), “men of the party who have forces”{S(29)}. The Japanese addressee, ジヨンシヨウ, lives, like the Hunanese group, on Avenue Joffre (霞飛路) in the French concession.</p>
 
+  <h2 id="gaimusho">The Japanese Ministry had N01’s key</h2>
+  <p>In the same file, a sheet of the Japanese Foreign Ministry from June 1916 carries two tables of digits, place by place, one to encipher and one to decipher{S(27)}. We did not know what they were for. They read {tg('N01')}, an appeal from Shanghai to Huang Xing received in May: “{Q('袁逆將倒，時局益艱……盼承指導，俾有遵循')}” (“Yuan is about to fall, the situation grows tense… we await your guidance”), signed with some fifteen characters (建 for Niu Yongjian, 闓 for Tan Yankai, 秀 for Gu Zhongxiu, 驪 for Yin Ruli…). Better still: the key our search had found for N01, with Satoshi Tomokiyo’s model and without these tables, is identical to the Ministry’s. Japan was therefore reading this channel in 1916; we do not know whether it broke or obtained the key. See the <a href="method.html#gaimusho">method</a>.</p>
+
   <h2 id="resiste">What still resists</h2>
   <ul>
     <li><strong>N03</strong>, another {Q('乾密')} telegram sent from the same house in early June, stays unreadable with N09’s key: another day, another key, or faulty digits.</li>
-    <li><strong>N01</strong> gives a partial reading: an appeal from Shanghai to Huang Xing, with a list of signatories. It is too uncertain to publish. A trial based on the names of the Shanghai signatories failed.</li>
     <li><strong>N06</strong> ({Q('和密')}, eleven groups) is too short; <strong>N07</strong> does not open with this model.</li>
   </ul>
   <p>Further progress needs other telegrams in the same books. The collections in Taiwan mentioned by Satoshi Tomokiyo, or the books themselves, would be the best way.</p>
@@ -109,10 +113,12 @@ HANT = f'''<!-- {{"title": "X密電碼本：一人一本", "description": "2026�
   <p>這是我們所見黃興對袁世凱之死（6月6日）的第一個反應，語氣冷靜：消息並未改變東京的情勢，有了實際結果才再聯絡。所說「交涉」，大概就是{Q('容密')}電報所記在日本為起義各省購械借款之事。其後的電報印證了這一判斷：6月9日的{tg('N13')}說「日態度頗觀望」，10日的{tg('N17')}說日本當局在南北統一前不借款予北京。</p>
   <p>電文地址為明碼，「轉馬、耿兩兄」，二人未比定。關於耿，有一條線索：與電稿同刊的孫洪伊1916年6月1日函，說曾與張溥泉、柏烈武、{unc('耿鶴生')}、何成濬諸君再四磋商，「皆民黨中確有實力之人」{S(29)}。日方記錄的收報人「ジヨンシヨウ」，與湘籍諸人一樣住在法租界霞飛路。</p>
 
+  <h2 id="gaimusho">日本外務省握有N01的密鑰</h2>
+  <p>同一卷宗中，有一張1916年6月的日本外務省用紙，上有兩張按位排列的數字表，一張加密，一張解讀{S(27)}。過去不知其用途。它們讀出了{tg('N01')}：5月收到的上海致黃興呼籲，「{Q('袁逆將倒，時局益艱……盼承指導，俾有遵循')}」，附約十五個單字署名（建＝鈕永建，闓＝譚延闓，秀＝谷鍾秀，驪＝殷汝驪……）。更有甚者：我們依Satoshi Tomokiyo的模型、在不知此表時為N01找到的密鑰，與外務省的表完全相同。可見日本早在1916年已能讀這條線路；是破譯還是取得密鑰，尚不可知。見<a href="method.html#gaimusho">破譯方法</a>。</p>
+
   <h2 id="resiste">仍未讀出的</h2>
   <ul>
     <li><strong>N03</strong>：六月初自同一寓所發出的另一封{Q('乾密')}，用N09的密鑰仍不可讀——另一日、另一把鑰匙，或數字有誤。</li>
-    <li><strong>N01</strong>：可得部分讀法，是上海致黃興的呼籲，附有署名名單，但仍不足以發表；以上海署名者之名所作的試驗未成功。</li>
     <li><strong>N06</strong>（{Q('和密')}，十一組）太短；<strong>N07</strong>用此模型打不開。</li>
   </ul>
   <p>要再前進，需要同一批電碼本的其他電報；Satoshi Tomokiyo提到的臺灣藏本，或電碼本本身，是最好的途徑。</p>
@@ -145,10 +151,12 @@ JA = f'''<!-- {{"title": "X密の電碼本：相手ごとに一冊", "descriptio
   <p>袁世凱の死（6月6日）に対する黄興の反応として、私たちが手にする最初のものである。調子は冷静で、知らせは東京では何も変えず、具体的な成果が出てから連絡するという。「交渉」はおそらく、{Q('容密')}電報が伝える、蜂起した諸省のための日本での武器購入と借款である。その後の電報もこの判断を裏づける。6月9日の{tg('N13')}は「日本はなお観望」と書き、10日の{tg('N17')}は、日本当局は南北統一まで北京に貸さないと述べる。</p>
   <p>平文のあて先には「馬・耿の両兄に転送」とある。二人は未比定である。耿については手がかりがある。電稿とともに刊行された1916年6月1日付の孫洪伊の書簡に、張溥泉・柏烈武・{unc('耿鶴生')}・何成濬の諸君と再三協議したとあり、「みな民党中の実力ある人」とされる{S(29)}。日本側が記した受信人「ジヨンシヨウ」は、湖南派と同じくフランス租界の霞飛路に住んでいる。</p>
 
+  <h2 id="gaimusho">外務省はN01の鍵を持っていた</h2>
+  <p>同じ綴りに、1916年6月の外務省用紙があり、桁ごとの数字表が2つ（暗号化用と解読用）書かれている{S(27)}。用途はこれまで不明だった。この表で読めるのは{tg('N01')}、5月に受信した上海から黄興への呼びかけである：「{Q('袁逆將倒，時局益艱……盼承指導，俾有遵循')}」。一字の署名が15ほど続く（建＝鈕永建、闓＝譚延闓、秀＝谷鍾秀、驪＝殷汝驪など）。さらに、私たちがSatoshi Tomokiyo氏のモデルで、この表を知らずにN01について得た鍵は、外務省の表と完全に一致する。日本は1916年にこの経路を読んでいたことになる。解読したのか入手したのかは分からない。<a href="method.html#gaimusho">方法</a>参照。</p>
+
   <h2 id="resiste">まだ読めないもの</h2>
   <ul>
     <li><strong>N03</strong>：6月初めに同じ家から出た別の{Q('乾密')}電報。N09の鍵では読めない。日が違うのか、鍵が別なのか、数字が誤っているのか。</li>
-    <li><strong>N01</strong>：部分的な読みは得られる。上海から黄興への呼びかけで、署名者の名簿を伴うが、公表するには不確かである。上海の署名者の名にもとづく試みは失敗した。</li>
     <li><strong>N06</strong>（{Q('和密')}、11組）は短すぎる。<strong>N07</strong>はこのモデルでは開かない。</li>
   </ul>
   <p>先へ進むには、同じ電碼本による別の電報が必要である。Satoshi Tomokiyo氏の言う台湾の所蔵本、あるいは電碼本そのものが、最良の道だろう。</p>
