@@ -316,17 +316,17 @@ R.update({
  'n0606': ('仍‹曹›望，惟不欲先生急赴該處，可請溥{泉}及一有資望軍人調和', []),
  'y0602': ('電悉。已{告}青木，請‹兇›亦盡力{所}能至。文', []),
  'y0606': ('烈武往‹雌›統一各軍，皆請溥{泉}。已遣‹掫›日偕許崇智往。卄萬事，青木謂已電‹筦›，請力促成。應‹懸›需。孫文。魚', []),
- 'y0530': ('‹綹›海軍三井消息：三井、三菱、大倉□·‹揜›‹蓓›‹睞›萬，供南軍‹租›但‹頍›‹岑›黃·逝署借約‹岑›覆謂‹岑›滇合‹叱›‹巫›贛確否？成行如‹侍›應如·因應谷酌奪', []),
+ 'y0530': ('據海軍、三井消息：三井、三菱、大倉□{擬}提五{百}萬，供南軍‹𥞊›‹伺›‹頍›。岑、黃、孫‹逖›署借約。岑覆，謂‹岑›滇合‹叱›‹巒›。贛確否？成行如‹侍›，應如‹泒›，因應谷酌奪', []),
 })
 _LV16 = {'n0526': [P_('sens'), P_('sens', 'jumeau')], 'n0528': [P_('sens'), Q_('sens')], 'n0603b': [P_('jumeau')], 'n0606': [P_('sens', 'contexte')],
-         'y0602': [Q_('sens'), Q_('sens')], 'y0606': [P_('sens', 'contexte')]}
+         'y0602': [Q_('sens'), Q_('sens')], 'y0606': [P_('sens', 'contexte')], 'y0530': [P_('sens'), P_('sens')]}
 for _sid, _lv in _LV16.items(): R[_sid] = (R[_sid][0], _lv)
 # relecture H1 (15/10/2026) : la lettre décodée est bien écrite ainsi ⇒ proposition « maintenue » (erreur de 1916 supposée)
 MAINT |= {('n0526', '當'), ('n0526', '欲'), ('n0528', '無'), ('n0606', '泉'), ('y0606', '泉')}
 CONF.update({'n0531d': {'干': 'mot'}, 'n0606': {'溥': 'nom'}, 'y0606': {'溥': 'nom', '偕': 'mot', '卄': 'variante'}})
 KEYS.update({'n0526': ['械事', '魯'], 'n0528': ['移居', '今晚往商'], 'n0531c': ['借款', '日當局'], 'n0531d': ['二十萬', '漢民', '青木'],
              'n0603b': ['田中', '槍二千', '砲六門'], 'n0606': ['溥泉', '軍人調和'], 'y0602': ['青木', '盡力'], 'y0606': ['烈武', '許崇智', '青木', '孫文'],
-             'y0530': ['三井', '三菱', '大倉']})
+             'y0530': ['三井', '三菱', '大倉', '五百萬', '岑', '孫', '借約']})
 _TR16 = {
  'fr': {
   'n0526': "L'affaire des armes a-t-elle été télégraphiée aux autorités japonaises (?) ? Ils ne souhaitent pas que vous vous rendiez en hâte au Shandong (魯). Veuillez répondre. — Xing (Huang Xing).",
@@ -337,7 +337,7 @@ _TR16 = {
   'n0606': "(Retransmission du passage du 3 juin) […] mais [ils] ne souhaitent pas que vous, Monsieur, vous précipitiez là-bas ; on pourrait prier Puquan (溥泉, Zhang Ji) et un militaire de prestige de servir de médiateurs.",
   'y0602': "Télégramme reçu. J'ai déjà informé (?) Aoki (青木) ; prière […] de faire aussi tout ce qui est en votre pouvoir (?). — Wen (Sun Yat-sen).",
   'y0606': "Liewu (烈武, Bai Wenwei) part […] unifier les armées ; tous demandent Puquan (溥泉, Zhang Ji). J'ai envoyé […], qui part le […] avec Xu Chongzhi (許崇智). Pour l'affaire des 200 000, Aoki dit avoir déjà télégraphié […] ; prière de pousser à la conclusion. […] — Sun Wen (孫文). Le 6.",
-  'y0530': "(Lecture lacunaire.) […] nouvelles de la Marine et de Mitsui : Mitsui, Mitsubishi, Ōkura […] l'armée du Sud […] Cen [Chunxuan] (岑) […] contrat d'emprunt […] le Yunnan […] est-ce exact ? […] décidez."},
+  'y0530': "D'après des nouvelles de la Marine et de Mitsui : Mitsui, Mitsubishi et Ōkura […] envisagent de fournir cinq millions à l'armée du Sud […]. Cen [Chunxuan] (岑), Huang [Xing] (黃) et Sun [Yat-sen] (孫) […] signeraient le contrat d'emprunt. Cen a répondu que […] le Yunnan […]. Le Jiangxi (贛) est-il confirmé ? […] décidez selon les circonstances."},
  'en': {
   'n0526': "Has the arms matter been telegraphed to the Japanese authorities (?)? They do not wish you to rush to Shandong (魯). Please reply. — Xing (Huang Xing).",
   'n0528': "Your telegram reached me after I moved. Yesterday they had no time; this evening I shall go and discuss it. Whatever happens, I shall reply again. — Xing.",
@@ -347,7 +347,7 @@ _TR16 = {
   'n0606': "(Retransmission of the passage of 3 June) […] but [they] do not wish you, Sir, to rush there; Puquan (溥泉, Zhang Ji) and a respected military man could be asked to mediate.",
   'y0602': "Telegram received. I have already informed (?) Aoki (青木); please […] also do all you can (?). — Wen (Sun Yat-sen).",
   'y0606': "Liewu (烈武, Bai Wenwei) is going […] to unify the armies; all ask for Puquan (溥泉, Zhang Ji). I have sent […], leaving on the […] with Xu Chongzhi (許崇智). On the 200,000 matter, Aoki says he has already telegraphed […]; please press for its conclusion. […] — Sun Wen (孫文). The 6th.",
-  'y0530': "(Partial reading.) […] news of the Navy and of Mitsui: Mitsui, Mitsubishi, Ōkura […] the Southern army […] Cen [Chunxuan] (岑) […] the loan contract […] Yunnan […] is it confirmed? […] please decide."},
+  'y0530': "According to news from the Navy and from Mitsui: Mitsui, Mitsubishi and Ōkura […] intend to provide five million to the Southern army […]. Cen [Chunxuan] (岑), Huang [Xing] (黃) and Sun [Yat-sen] (孫) […] would sign the loan contract. Cen replied that […] Yunnan […]. Is Jiangxi (贛) confirmed? […] decide as circumstances require."},
  'ja': {
   'n0526': "武器の件は日本当局（？）に打電したか。彼らは公が急いで魯（山東）へ赴くことを望んでいない。返電を乞う。興（黄興）。",
   'n0528': "貴電は転居後に届いた。昨日は彼らに暇がなく、今晩相談に行く。いずれにせよ改めて返電する。興。",
@@ -357,7 +357,7 @@ _TR16 = {
   'n0606': "（6月3日の電報の一節の再送）……ただし〔彼らは〕先生が急いでそこへ赴くことを望まない。溥泉（張継）と声望ある軍人に調停を頼むのがよい。",
   'y0602': "電報拝見。すでに青木に伝えた（？）。……もできる限り尽力されたい（？）。文（孫文）。",
   'y0606': "烈武（柏文蔚）は……へ赴いて各軍を統一する。皆、溥泉（張継）を請う。すでに……を派遣し、……日に許崇智とともに出発。二十万の件は青木がすでに……に打電したという。成立を促されたい。……孫文。魚（6日）。",
-  'y0530': "（部分的な読み）……海軍と三井の消息：三井・三菱・大倉……南軍……岑（岑春煊）……借款契約……雲南……確かか。……斟酌されたい。"},
+  'y0530': "海軍と三井の消息によれば、三井・三菱・大倉……五百万を南軍に供する予定……。岑（岑春煊）・黄（黄興）・孫（孫文）……借款契約に署名……。岑は……雲南……と回答。江西（贛）は確かか。……臨機に斟酌されたい。"},
  'zh-Hant': {
   'n0526': "械事已電日[當]局否？彼有不[欲]公急赴魯意。乞覆。興（黃興）。",
   'n0528': "敬電因移居後到。昨彼[無]暇，今晚往商，[如]何，再覆。興。",
@@ -367,7 +367,7 @@ _TR16 = {
   'n0606': "（重發6月3日電文一段）仍……望，惟不欲先生急赴該處，可請溥泉（張繼）及一有資望軍人調和。",
   'y0602': "電悉。已[告]青木，請……亦盡力[所]能至。文（孫文）。",
   'y0606': "烈武（柏文蔚）往……統一各軍，皆請溥泉（張繼）。已遣……日偕許崇智往。廿萬事，青木謂已電……，請力促成。……孫文。魚（六日）。",
-  'y0530': "（部分讀出）……海軍三井消息：三井、三菱、大倉……南軍……岑（岑春煊）……借約……滇……確否？……酌奪。"},
+  'y0530': "據海軍、三井消息：三井、三菱、大倉……擬提五百萬，供南軍……。岑（岑春煊）、黃（黃興）、孫（孫文）……署借約。岑覆，謂……滇……。贛確否？……因應酌奪。"},
 }
 for _lang in ('fr', 'en', 'zh-Hant', 'ja'): TR[_lang].update(_TR16[_lang])
 _INTRO16 = {
@@ -417,19 +417,19 @@ NOTE_LAB = {'fr': 'Note :', 'en': 'Note:', 'zh-Hant': '註：', 'ja': '注：'}
 _N16 = {
  'fr': {'n0603b': "Deux copies du formulaire (images 0145 et 0151–0152) : les lettres suivent la première, la seconde tranchant là où elles diffèrent. Neuf codes ont été perdus à la transmission après 先 ; le télégramme du 6 juin (0152b) renvoie ce passage.",
         'n0606': "Retransmission du passage du 3 juin (0145) où neuf codes s'étaient perdus ; deux copies du formulaire (images 0152 et 0159).",
-        'y0530': "Lecture lacunaire : deux groupes ne se lisent pas comme syllabes (« hopt », « kbji ») et plusieurs codes restent douteux ; suite sur l'image 0116.",
+        'y0530': "Lecture revue le 24/10/2026 à l'image, avec la transcription de Daniel Bourdeau (courriel du 23/10/2026) : « hone » (據), « hinu » (提) et « cubo jisu » (孫, auparavant « kbji », illisible). Chez ce copiste, v et w ont la même forme : chaque lettre est lue selon le code (三井 avec v, 南軍 et 成行 avec w). {擬} (« hopt » écrit) et {百} (« gidi » écrit) sont des propositions d'une lettre ; plusieurs codes restent douteux ; suite sur l'image 0116.",
         'n0531c': "La fin (旦) diffère de la signature 興 des autres télégrammes de Tokyo ; une copie dactylographiée existe."},
  'en': {'n0603b': "Two copies of the form (images 0145 and 0151–0152): the letters follow the first, the second deciding where they differ. Nine codes were lost in transmission after 先; the telegram of 6 June (0152b) resends this passage.",
         'n0606': "Retransmission of the passage of 3 June (0145) in which nine codes had been lost; two copies of the form (images 0152 and 0159).",
-        'y0530': "Partial reading: two groups do not read as syllables (“hopt”, “kbji”) and several codes remain doubtful; continued on image 0116.",
+        'y0530': "Reading revised on 24/10/2026 on the image, with Daniel Bourdeau’s transcription (email of 23/10/2026): “hone” (據), “hinu” (提) and “cubo jisu” (孫, formerly “kbji”, unreadable). This copyist writes v and w alike: each letter is read as the code requires (三井 with v, 南軍 and 成行 with w). {擬} (written “hopt”) and {百} (written “gidi”) are one-letter proposals; several codes remain doubtful; continued on image 0116.",
         'n0531c': "The ending (旦) differs from the signature 興 of the other Tokyo telegrams; a typed copy exists."},
  'zh-Hant': {'n0603b': "電報紙有兩份抄本（影像0145及0151–0152）：字母依第一份，兩者不同處以第二份為準。「先」字後有九碼在傳送中遺失；6月6日電（0152b）補發此段。",
         'n0606': "補發6月3日電（0145）中遺失九碼的一段；電報紙有兩份抄本（影像0152及0159）。",
-        'y0530': "部分讀出：兩組字母不成音節（「hopt」、「kbji」），多個電碼仍存疑；續見影像0116。",
+        'y0530': "2026年10月24日據影像並參照 Daniel Bourdeau 的謄錄（2026年10月23日來信）修訂：「hone」（據）、「hinu」（提）、「cubo jisu」（孫，原讀「kbji」不成音節）。此抄寫者的 v 與 w 字形相同，各依電碼判讀（三井作 v，南軍、成行作 w）。{擬}（寫作「hopt」）與{百}（寫作「gidi」）為一字母之擬改；多個電碼仍存疑；續見影像0116。",
         'n0531c': "結尾（旦）與東京其他電報的署名「興」不同；另有一份打字抄本。"},
  'ja': {'n0603b': "用紙の写しが二通ある（画像0145、0151–0152）。文字は一通目に従い、異なる箇所は二通目で決めた。「先」の後の9符号は送信中に失われ、6月6日の電報（0152b）がこの一節を再送している。",
         'n0606': "6月3日の電報（0145）で9符号が失われた一節の再送。用紙の写しが二通ある（画像0152、0159）。",
-        'y0530': "部分的な読み：二つの組は音節として読めず（「hopt」「kbji」）、いくつかの符号はなお疑わしい。続きは画像0116。",
+        'y0530': "2026年10月24日、画像とDaniel Bourdeau氏の翻字（2026年10月23日のメール）により改訂：「hone」（據）、「hinu」（提）、「cubo jisu」（孫。以前は音節にならない「kbji」）。この写し手はvとwを同じ形で書くため、各文字は符号に従って読む（三井はv、南軍・成行はw）。{擬}（「hopt」と書かれる）と{百}（「gidi」と書かれる）は一文字の修正案。いくつかの符号はなお疑わしい。続きは画像0116。",
         'n0531c': "末尾（旦）は東京発の他の電報の署名「興」と異なる。タイプ打ちの写しがある。"},
 }
 for _lang in _N16: NOTE[_lang].update(_N16[_lang])
