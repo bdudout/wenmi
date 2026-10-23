@@ -25,6 +25,7 @@ from decode_common import decode_code                 # noqa: E402
 D = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c83', 'site-data.json'), encoding='utf-8'))['messages']
 CLEAR = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c88', 'clear-data.json'), encoding='utf-8'))['messages']
 CLEAR.update(json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c108', 'clear-data.json'), encoding='utf-8'))['messages'])   # N20, N22 (C108)
+CLEAR.update(json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c109', 'clear-data.json'), encoding='utf-8'))['messages'])   # N15 (C109, non relu)
 D.update(CLEAR)
 CHEN = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c92', 'site-data.json'), encoding='utf-8'))['messages']
 D.update(CHEN)
@@ -43,7 +44,11 @@ import segments_clear as SCL                          # noqa: E402
 import baihua as BH                                   # noqa: E402
 sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c108'))
 import segments_clear108 as SC108                     # noqa: E402
-for _L, _d in (('EN', SCL.EN), ('JA', SCL.JA), ('EN', SC108.EN), ('JA', SC108.JA)): getattr(TR, _L).update(_d)
+sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c109'))
+import segments_n15 as SC109                          # noqa: E402
+for _L, _d in (('EN', SCL.EN), ('JA', SCL.JA), ('EN', SC108.EN), ('JA', SC108.JA), ('EN', SC109.EN), ('JA', SC109.JA)): getattr(TR, _L).update(_d)
+for _L in SC109.NOTE: TR.NOTE.setdefault(_L, {}).update(SC109.NOTE[_L])
+BH.BAIHUA.update(SC109.BAIHUA)
 for _L in SC108.NOTE: TR.NOTE.setdefault(_L, {}).update(SC108.NOTE[_L])
 BH.BAIHUA.update(SC108.BAIHUA)
 for _L in SCL.NOTE: TR.NOTE.setdefault(_L, {}).update(SCL.NOTE[_L])
@@ -56,7 +61,7 @@ BH.BAIHUA.update(SCH.BAIHUA)
 BH.BAIHUA.update(SV4.BAIHUA); TR.EN.update(SV4.EN); TR.JA.update(SV4.JA)
 G = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c62', 'publication-v3', 'data', 'gongmi.json'), encoding='utf-8'))['messages']
 V = {}
-for f in ('c83/variants.json', 'c84/gongmi-variants.json', 'c92/variants.json', 'c88/clear-variants.json', 'c99/variants.json', 'c107/variants.json', 'c108/variants.json'):
+for f in ('c83/variants.json', 'c84/gongmi-variants.json', 'c92/variants.json', 'c88/clear-variants.json', 'c99/variants.json', 'c107/variants.json', 'c108/variants.json', 'c109/variants.json'):
     for r in json.load(open(os.path.join(WENMI, 'cryptanalysis', f), encoding='utf-8')):
         for h in r.get('hits', []):
             gl, var = (h['glyph'], h['variant']) if isinstance(h, dict) else (h[0], h[1])
@@ -73,9 +78,9 @@ KEYS = {'N29': ['石屛', '袁逆自斃', '依法圖治'], 'N10': ['家嚴', '�
         'N25': ['烟捐', '酒捐', '吳兆蓮'], 'N36': ['黃克強', '六月三十日'], 'N24': ['黎電', '元年約法', '殷汝驪'], 'N23': ['田中', '小池', '張繼'],
         'N17': ['黎總統', '舊約法', '日當局'], 'N18': ['擁護共和', '武力'], 'N27': ['溥', '無望'], 'N30': ['小池', '有吉領事'],
         'N32': ['舊約法', '中山', '葛殷黃'], 'N33': ['馮', '黃羣', '約法'], 'N35': ['國會', '段', '袁'],
-        'N05': ['烈武', '山東', '溥泉'], 'N13': ['黎岑', '護國軍', '日態度'], 'N16': ['趙夷午', '精兵一師', '湯督'], 'N26': ['三百元', '百里'], 'N09': ['袁死', '態度未變', '交涉'], 'N20': ['正隆', '爲替手形', '第三銀行'], 'N22': ['開會', '卽歸'],
+        'N05': ['烈武', '山東', '溥泉'], 'N13': ['黎岑', '護國軍', '日態度'], 'N16': ['趙夷午', '精兵一師', '湯督'], 'N26': ['三百元', '百里'], 'N09': ['袁死', '態度未變', '交涉'], 'N20': ['正隆', '爲替手形', '第三銀行'], 'N22': ['開會', '卽歸'], 'N15': ['譚人鳳', '無以應', '愧甚'],
         'V4B': ['約法', '丁世嶧', '湯濟武'], 'V4D': ['青木', '汝驪', '曉垣'], 'V4E': ['粤', '急返', '何船']}
-ORDER = ['N10', 'N04', 'N20', 'N22', 'N31', 'N34', 'N29', 'N14', 'N19b', 'N02', 'N08', 'N11', 'N12', 'N19a', 'N28', 'N21', 'N25', 'N36', 'N24', 'N17', 'N18', 'N23', 'N27', 'N30', 'N32', 'N33', 'N35', 'N05', 'N09', 'N13', 'N16', 'N26', 'V4B', 'V4D', 'V4E']
+ORDER = ['N10', 'N04', 'N15', 'N20', 'N22', 'N31', 'N34', 'N29', 'N14', 'N19b', 'N02', 'N08', 'N11', 'N12', 'N19a', 'N28', 'N21', 'N25', 'N36', 'N24', 'N17', 'N18', 'N23', 'N27', 'N30', 'N32', 'N33', 'N35', 'N05', 'N09', 'N13', 'N16', 'N26', 'V4B', 'V4D', 'V4E']
 FAM = {m: '容密' for m in D if D[m]['family'] == '容密'}
 FAM.update({m: '明碼' for m in CLEAR})
 FAM.update({m: '共密' for m in ['N17', 'N18', 'N23', 'N27', 'N30', 'N32', 'N33', 'N35']})
