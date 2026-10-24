@@ -48,6 +48,7 @@ FR = f'''<!-- {{"title": "Juin 1916 : ce que disent les télégrammes de Huang X
   <ul>
     <li>Sun Yat-sen ordonne par télégramme à ses troupes de cesser le combat ; sa réponse publiée dans la presse inquiète les amis de Huang Xing ({tg("N32")}).</li>
     <li>Fin juin, le compromis sur la Constitution (Duan Qirui consulterait à titre personnel les parlementaires réunis à Shanghai, par l’intermédiaire de Ding Shiyi et Xiao Jinrong) est « de nouveau retourné » : Duan revient aux trois délégués par province ({tg("V4B")}, 容密). Au même moment, Yin Ruli part pour Pékin avec Li Shucheng, et l’achat d’armes se poursuit avec Aoki et Takakura ({tg("V4D")}).</li>
+    <li>Le 25 juin, onze notables réunis à Shanghai (Tang Shaoyi, Tan Yankai, Sun Hongyi, Niu Yongjian, Zhang Ji, Gu Zhongxiu…) pressent Huang Xing de rentrer : « vous avez fondé la République de vos mains, tout le pays vous révère » ({tg("V4A")}, en clair). Le 27, Huang Xing salue la flotte qui vient de se rallier (Li Dingxin, Lin Baoyi, Zeng Zhaolin) : elle est « le roc au milieu du courant » ({tg("V4C")}, en clair). Chiffres de ces deux télégrammes pas encore relus.</li>
     <li>À Tan Renfeng (譚人鳳, 石屛), vétéran hunanais, Huang Xing pose sa condition : « si Li [Yuanhong] gouverne selon la loi, les germes du désordre pourront être arrêtés ; s’il s’en écarte, je ne l’accepterai pas non plus » ({tg("N29")}, 14 juin, en clair). Quatre jours plus tôt, il lui répondait seulement : « pour l’instant, rien à répondre ; j’en suis très confus » ({tg("N15")}, en clair, chiffres pas encore relus).</li>
     <li>Huang Xing soutient l’armée du Shaanxi et pousse les provinces indépendantes à marcher vers le nord ({tg("N04")}, en clair).</li>
     <li>Un canal vers Mukden (奉天), en clair : le 12 juin, un correspondant signé 季 annonce l’opposition au paiement d’une lettre de change n<sup>o</sup> 169, avec trois jours d’annonce dans la presse ({tg("N20")}) ; Tokyo répond que la banque attend un télégramme de la Shōryū ({tg("N31")}). Le 13, « 侃 » promet de rentrer dès que la date de la réunion sera fixée ({tg("N22")}).</li>
@@ -90,6 +91,7 @@ EN = f'''<!-- {{"title": "June 1916: what Huang Xing’s telegrams say", "descri
   <ul>
     <li>Sun Yat-sen orders his troops by telegram to cease fighting; his reply, published in the press, worries Huang Xing’s friends ({tg("N32")}).</li>
     <li>In late June the compromise on the Constitution (Duan Qirui would consult the parliamentarians in Shanghai in a personal capacity, through Ding Shiyi and Xiao Jinrong) is “overturned again”: Duan goes back to three delegates per province ({tg("V4B")}, Rongmi). Meanwhile Yin Ruli leaves for Beijing with Li Shucheng, and the arms purchase goes on with Aoki and Takakura ({tg("V4D")}).</li>
+    <li>On 25 June, eleven notables gathered in Shanghai (Tang Shaoyi, Tan Yankai, Sun Hongyi, Niu Yongjian, Zhang Ji, Gu Zhongxiu…) urge Huang Xing to come back: “you built the Republic with your own hands, the whole country looks up to you” ({tg("V4A")}, in clear). On the 27th, Huang Xing hails the fleet that has just rallied (Li Dingxin, Lin Baoyi, Zeng Zhaolin): it is “the rock in midstream” ({tg("V4C")}, in clear). The digits of these two telegrams have not yet been re-read.</li>
     <li>To Tan Renfeng (譚人鳳, 石屛), a Hunanese veteran, Huang Xing sets his condition: “if Li [Yuanhong] governs according to the law, the seeds of disorder can be checked; should he depart from it, I will not accept it either” ({tg("N29")}, 14 June, in clear). Four days earlier he had only answered: “for the moment I have nothing to answer; I am deeply sorry” ({tg("N15")}, in clear, digits not yet re-read).</li>
     <li>Huang Xing backs the Shaanxi army and urges the independent provinces to march north ({tg("N04")}, in clear).</li>
     <li>A channel to Mukden (奉天), in clear: on 12 June a correspondent signing 季 announces that payment of bill of exchange no. 169 is being stopped, with three days of notices in the press ({tg("N20")}); Tokyo replies that the bank is waiting for a telegram from the Shōryū ({tg("N31")}). On the 13th, “侃” promises to return as soon as the date of the meeting is fixed ({tg("N22")}).</li>
@@ -132,6 +134,7 @@ HANT = f'''<!-- {{"title": "1916年6月：黃興電報所見", "description": "2
   <ul>
     <li>孫中山電令所部停兵；其覆電已登報，黃興友人以為宜慎（{tg("N32")}）。</li>
     <li>6月底，約法問題的折衷方案（段祺瑞以私人身分經丁世嶧、蕭晉榮電詢在滬國會議員）「又翻」：段又堅持各省派三人之說（{tg("V4B")}，容密）。同時殷汝驪偕李書城入京，購械事仍與青木、高倉接洽（{tg("V4D")}）。</li>
+    <li>6月25日，唐紹儀、譚延闓、孫洪伊、鈕永建、張繼、谷鍾秀等十一人聯名電促黃興返滬：「公手造共和，舉國宗仰」（{tg("V4A")}，明碼）。27日，黃興致電新近響應的海軍李鼎新、林葆懌、曾兆麟，稱其「作中流之砥柱」（{tg("V4C")}，明碼）。此二電數字尚未複讀。</li>
     <li>黃興致湘籍老同志譚人鳳（石屛），表明條件：「黎公若能依法圖治，亂萌可遏；有違此旨，興亦弗承」（{tg("N29")}，6月14日，明碼）。四天前他只覆以「刻無以應，愧甚」（{tg("N15")}，明碼，數字尚未複讀）。</li>
     <li>黃興支持陝軍，並促獨立各省北伐（{tg("N04")}，明碼）。</li>
     <li>通往奉天的明碼電報：6月12日，署名「季」者告知第一六九號匯票已請停付，並登報三日（{tg("N20")}）；東京覆稱銀行須待正隆來電（{tg("N31")}）。13日，「侃」說俟確定開會卽歸（{tg("N22")}）。</li>
@@ -174,6 +177,7 @@ JA = f'''<!-- {{"title": "1916年6月：黄興の電報が語ること", "descri
   <ul>
     <li>孫文は電報で所部に停戦を命じ、新聞に出たその返電が黄興の同志を心配させた（{tg("N32")}）。</li>
     <li>6月末、約法をめぐる妥協案（段祺瑞が丁世嶧・蕭晋栄を通じて上海の国会議員に私人として電問する）は「また覆った」。段は各省三人代表案に戻る（{tg("V4B")}、容密）。同じころ殷汝驪は李書城とともに北京へ向かい、武器購入は青木・高倉と続く（{tg("V4D")}）。</li>
+    <li>6月25日、唐紹儀・譚延闓・孫洪伊・鈕永建・張継・谷鍾秀ら十一人が連名で黄興に上海帰還を促す。「公は手ずから共和を造り、国を挙げて仰ぎ慕う」（{tg("V4A")}、平文）。27日、黄興は呼応したばかりの海軍（李鼎新・林葆懌・曽兆麟）に「中流の砥柱」となったと称える（{tg("V4C")}、平文）。両電の数字は未再読。</li>
     <li>湖南の古参譚人鳳（石屛）にあてて、黄興は条件を示す。「黎公がもし法によって治めるなら乱の芽は抑えられよう。この趣旨に背くなら興もまた承服しない」（{tg("N29")}、6月14日、平文）。その4日前には「目下お答えするすべがなく、まことに恐縮」とだけ返していた（{tg("N15")}、平文、数字は未再読）。</li>
     <li>黄興は陝西軍を支持し、独立各省に北伐を促した（{tg("N04")}、平文）。</li>
     <li>奉天との平文電報：6月12日、「季」と署名する相手が、為替手形第169号の支払い停止と三日間の新聞公告を伝え（{tg("N20")}）、東京は、銀行は正隆からの電報を待っていると答える（{tg("N31")}）。13日には「侃」が、会の日取りが決まればすぐ帰ると伝える（{tg("N22")}）。</li>

@@ -49,7 +49,7 @@ window.WENMI_SYSTEMS = {
         gaimusho: ['Tables du ministère japonais des Affaires étrangères (N01)', 'Shanghai → Tokyo (青山南町三ノ五三), mai 1916 ; appel des amis de Shanghai à Huang Xing. Sans préfixe. La clé est donnée par deux tables de déchiffrement sur papier du 外務省 conservées dans le même dossier (JACAR B03050089200, PDF 16, juin 1916) : elle est identique à celle que notre recherche avait trouvée sans elles (voir la <a href="method.html#gaimusho">méthode</a>) [27].'],
         qianmi: ['Clé « 乾密 » (C104)', 'Tokyo (青山南町三ノ五三) → Shanghai, 6–9 juin 1916 ; Huang Xing. Livre « 明密 » renuméroté : page = page écrite − 11, colonnes et lignes permutées. Modèle de clé : idée de S. Tomokiyo (Cryptiana) [22] ; clé retrouvée en octobre 2026 (voir la page <a href="qianmi.html">乾密</a> et la <a href="method.html#qianmi">méthode</a>).'],
         chenmi: ['Clé « 辰密 » (C92)', 'Tokyo → Shanghai (« ヒツキン », 霞飛路 277), 3–13 juin 1916 ; Huang Xing, Zhang Xiaozhun, le groupe hunanais de Shanghai. Pages renumérotées à rebours sur les nombres sans zéro (99 = page 00), dizaines et unités permutées, unité 9 = 10. Clé retrouvée en octobre 2026 (voir la page <a href="chenmi.html">辰密</a> et la <a href="method.html#chenmi">méthode</a>).'],
-        clair: ['En clair', 'Télégrammes du même dossier envoyés sans chiffrement, directement en code télégraphique chinois : la réponse de Li Yuanhong à Huang Xing (14 juin), une lettre de Huang Xing à Tan Renfeng sur Li Yuanhong, un télégramme de Huang Xing sur le Shaanxi, un télégramme vers Mukden et un bref message signé 亞.']
+        clair: ['En clair', 'Télégrammes du même dossier envoyés sans chiffrement, directement en code télégraphique chinois : la réponse de Li Yuanhong à Huang Xing (14 juin), une lettre de Huang Xing à Tan Renfeng sur Li Yuanhong, un télégramme de Huang Xing sur le Shaanxi, un télégramme vers Mukden, un bref message signé 亞 ; puis, dans le volume suivant (juin–novembre 1916), l’appel des notables de Shanghai à Huang Xing (25 juin), son salut à la flotte ralliée (27 juin), des messages signés 羣 et 鍾 (juillet–août) et les télégrammes envoyés à Shanghai après sa mort (novembre).']
       },
       rosamonde: ['L\'anglais chiffré de Rosamonde (1915–1916)', '<p>Vingt-deux télégrammes en anglais, chiffrés par une substitution réciproque de lettres, entre Sun Yat-sen et Soong Ching-ling : présentés sur une page à part, <a href="rosamonde.html">Les télégrammes de Rosamonde</a>.</p>'],
       count: '{n} télégrammes', count1: '1 télégramme'
@@ -82,7 +82,7 @@ window.WENMI_SYSTEMS = {
         gaimusho: ['Japanese Foreign Ministry tables (N01)', 'Shanghai → Tokyo (青山南町三ノ五三), May 1916; an appeal from the Shanghai friends to Huang Xing. No prefix. The key is given by two decipherment tables on 外務省 paper kept in the same file (JACAR B03050089200, PDF 16, June 1916): it is identical to the key our search had found without them (see the <a href="method.html#gaimusho">method</a>) [27].'],
         qianmi: ['“Qianmi” (乾密) key (C104)', 'Tokyo (青山南町三ノ五三) → Shanghai, 6–9 June 1916; Huang Xing. Renumbered “明密” book: page = written page − 11, columns and rows permuted. Key model: S. Tomokiyo’s idea (Cryptiana) [22]; key recovered in October 2026 (see the <a href="qianmi.html">Qianmi</a> page and the <a href="method.html#qianmi">method</a>).'],
         chenmi: ['“Chenmi” (辰密) key (C92)', 'Tokyo → Shanghai (“ヒツキン”, 277 Avenue Joffre), 3–13 June 1916; Huang Xing, Zhang Xiaozhun, the Hunanese group in Shanghai. Pages renumbered backwards over the numbers without a zero (99 = page 00), tens and units permuted, units 9 = 10. Key recovered in October 2026 (see the <a href="chenmi.html">Chenmi</a> page and the <a href="method.html#chenmi">method</a>).'],
-        clair: ['In clear', 'Telegrams from the same file sent without encipherment, directly in Chinese telegraph code: Li Yuanhong’s reply to Huang Xing (14 June), Huang Xing’s message to Tan Renfeng about Li Yuanhong, a telegram of Huang Xing about Shaanxi, one to Mukden, and a short message signed 亞.']
+        clair: ['In clear', 'Telegrams from the same file sent without encipherment, directly in Chinese telegraph code: Li Yuanhong’s reply to Huang Xing (14 June), Huang Xing’s message to Tan Renfeng about Li Yuanhong, a telegram of Huang Xing about Shaanxi, one to Mukden, and a short message signed 亞; then, in the next volume (June–November 1916), the Shanghai notables’ appeal to Huang Xing (25 June), his salute to the rallied fleet (27 June), messages signed 羣 and 鍾 (July–August) and the telegrams sent to Shanghai after his death (November).']
       },
       rosamonde: ['Rosamonde\'s enciphered English (1915–1916)', '<p>Twenty-two telegrams in English, enciphered by a reciprocal letter substitution, between Sun Yat-sen and Soong Ching-ling: presented on a separate page, <a href="rosamonde.html">The Rosamonde telegrams</a>.</p>'],
       count: '{n} telegrams', count1: '1 telegram'
@@ -115,7 +115,7 @@ window.WENMI_SYSTEMS = {
         gaimusho: ['日本外務省解讀表（N01）', '上海→東京（青山南町三ノ五三），1916年5月；上海同人致黃興的呼籲。無前綴。密鑰見於同一卷宗中兩張外務省用紙的解讀表（JACAR B03050089200，PDF第16頁，1916年6月），與我們未見此表時搜尋所得的密鑰完全相同（見<a href="method.html#gaimusho">破譯方法</a>）[27]。'],
         qianmi: ['「乾密」密鑰（C104）', '東京（青山南町三ノ五三）→上海，1916年6月6–9日；黃興。重新編號的「明密」電碼本：頁＝所寫頁數−11，列與行置換。密鑰模型：S. Tomokiyo的構想（Cryptiana）[22]；密鑰於2026年10月找到（見<a href="qianmi.html">乾密</a>頁面及<a href="method.html#qianmi">破譯方法</a>）。'],
         chenmi: ['「辰密」密鑰（C92）', '東京→上海（「ヒツキン」，霞飛路277號），1916年6月3–13日；黃興、張孝準、上海湘籍諸人。以不含零的數倒數編頁（99＝第00頁），十位與個位置換，個位9作10。密鑰於2026年10月找到（見<a href="chenmi.html">辰密</a>頁面及<a href="method.html#chenmi">破譯方法</a>）。'],
-        clair: ['明碼', '同一卷宗中未加密、直接以中文電碼拍發的電報：黎元洪覆黃興電（6月14日）、黃興致譚人鳳論黎元洪電、黃興論陝事電、致奉天電及署名「亞」的短電。']
+        clair: ['明碼', '同一卷宗中未加密、直接以中文電碼拍發的電報：黎元洪覆黃興電（6月14日）、黃興致譚人鳳論黎元洪電、黃興論陝事電、致奉天電及署名「亞」的短電；以及下一卷（1916年6–11月）中滬上諸公促黃興返滬電（6月25日）、黃興致響應海軍電（6月27日）、署名「羣」「鍾」的電報（7–8月）和黃興逝世後發往上海的電報（11月）。']
       },
       rosamonde: ['羅莎蒙德的加密英文（1915–1916年）', '<p>孫中山與宋慶齡之間二十二封以字母互換加密的英文電報，另見專頁：<a href="rosamonde.html">羅莎蒙德電報</a>。</p>'],
       count: '{n} 封電報', count1: '1 封電報'
@@ -148,7 +148,7 @@ window.WENMI_SYSTEMS = {
         gaimusho: ['日本外务省解读表（N01）', '上海→东京（青山南町三ノ五三），1916年5月；上海同人致黄兴的呼吁。无前缀。密钥见于同一卷宗中两张外务省用纸的解读表（JACAR B03050089200，PDF第16页，1916年6月），与我们未见此表时搜寻所得的密钥完全相同（见<a href="method.html#gaimusho">破译方法</a>）[27]。'],
         qianmi: ['“乾密”密钥（C104）', '东京（青山南町三ノ五三）→上海，1916年6月6–9日；黄兴。重新编号的“明密”电码本：页＝所写页数−11，列与行置换。密钥模型：S. Tomokiyo的构想（Cryptiana）[22]；密钥于2026年10月找到（见<a href="qianmi.html">乾密</a>页面及<a href="method.html#qianmi">破译方法</a>）。'],
         chenmi: ['“辰密”密钥（C92）', '东京→上海（“ヒツキン”，霞飞路277号），1916年6月3–13日；黄兴、张孝准、上海湘籍诸人。以不含零的数倒数编页（99＝第00页），十位与个位置换，个位9作10。密钥于2026年10月找到（见<a href="chenmi.html">辰密</a>页面及<a href="method.html#chenmi">破译方法</a>）。'],
-        clair: ['明码', '同一卷宗中未加密、直接以中文电码拍发的电报：黎元洪复黄兴电（6月14日）、黄兴致谭人凤论黎元洪电、黄兴论陕事电、致奉天电及署名“亚”的短电。']
+        clair: ['明码', '同一卷宗中未加密、直接以中文电码拍发的电报：黎元洪复黄兴电（6月14日）、黄兴致谭人凤论黎元洪电、黄兴论陕事电、致奉天电及署名“亚”的短电；以及下一卷（1916年6–11月）中沪上诸公促黄兴返沪电（6月25日）、黄兴致响应海军电（6月27日）、署名“群”“钟”的电报（7–8月）和黄兴逝世后发往上海的电报（11月）。']
       },
       rosamonde: ['罗莎蒙德的加密英文（1915–1916年）', '<p>孙中山与宋庆龄之间二十二封以字母互换加密的英文电报，另见专页：<a href="rosamonde.html">罗莎蒙德电报</a>。</p>'],
       count: '{n} 封电报', count1: '1 封电报'
@@ -181,7 +181,7 @@ window.WENMI_SYSTEMS = {
         gaimusho: ['外務省の解読表（N01）', '上海→東京（青山南町三ノ五三）、1916年5月。上海の同志から黄興への呼びかけ。前置きなし。鍵は同じ綴りに残る外務省用紙の解読表2枚（JACAR B03050089200、PDF 16、1916年6月）に示され、私たちがそれを知らずに探索で得た鍵と完全に一致する（<a href="method.html#gaimusho">方法</a>参照）[27]。'],
         qianmi: ['「乾密」の鍵（C104）', '東京（青山南町三ノ五三）→上海、1916年6月6〜9日。黄興。番号を付け替えた「明密」電碼本：頁＝書かれた頁−11、列と行を置換。鍵のモデル：S. Tomokiyo氏の着想（Cryptiana）[22]。鍵は2026年10月に発見（<a href="qianmi.html">乾密</a>のページと<a href="method.html#qianmi">方法</a>参照）。'],
         chenmi: ['「辰密」の鍵（C92）', '東京→上海（「ヒツキン」、霞飛路277）、1916年6月3〜13日。黄興、張孝準、上海の湖南派。0を含まない数を逆に数えて頁とし（99＝00頁）、十の位と一の位を置換、一の位9＝10。鍵は2026年10月に発見（<a href="chenmi.html">辰密</a>のページと<a href="method.html#chenmi">方法</a>参照）。'],
-        clair: ['平文', '同じ綴りのうち暗号化せず中文電碼で直接打たれた電報：黎元洪から黄興への返電（6月14日）、黎元洪について譚人鳳にあてた黄興の電報、陝西に関する黄興の電報、奉天宛ての電報、「亞」署名の短電。']
+        clair: ['平文', '同じ綴りのうち暗号化せず中文電碼で直接打たれた電報：黎元洪から黄興への返電（6月14日）、黎元洪について譚人鳳にあてた黄興の電報、陝西に関する黄興の電報、奉天宛ての電報、「亞」署名の短電。さらに次の巻（1916年6〜11月）では、上海の名士が黄興に帰還を促す電報（6月25日）、呼応した海軍への黄興の祝電（6月27日）、「羣」「鍾」署名の電報（7〜8月）、黄興の死後に上海へ送られた電報（11月）。']
       },
       rosamonde: ['ロザモンドの暗号英語（1915–1916年）', '<p>孫文と宋慶齢のあいだの、文字の相互置換で暗号化した英語の電報二十二通。別ページで紹介する：<a href="rosamonde.html">ロザモンド電報</a>。</p>'],
       count: '{n} 通', count1: '1 通'

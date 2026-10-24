@@ -26,6 +26,7 @@ D = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c83', 'site-data.json')
 CLEAR = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c88', 'clear-data.json'), encoding='utf-8'))['messages']
 CLEAR.update(json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c108', 'clear-data.json'), encoding='utf-8'))['messages'])   # N20, N22 (C108)
 CLEAR.update(json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c109', 'clear-data.json'), encoding='utf-8'))['messages'])   # N15 (C109, non relu)
+CLEAR.update(json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c115', 'clear-data.json'), encoding='utf-8'))['messages'])   # vol. 4 en clair (C115, non relus)
 D.update(CLEAR)
 CHEN = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c92', 'site-data.json'), encoding='utf-8'))['messages']
 D.update(CHEN)
@@ -50,6 +51,11 @@ sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c108'))
 import segments_clear108 as SC108                     # noqa: E402
 sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c109'))
 import segments_n15 as SC109                          # noqa: E402
+sys.path.insert(0, os.path.join(WENMI, 'cryptanalysis', 'c115'))
+import segments_v4clear as SC115                      # noqa: E402
+for _L, _d in (('EN', SC115.EN), ('JA', SC115.JA)): getattr(TR, _L).update(_d)
+for _L in SC115.NOTE: TR.NOTE.setdefault(_L, {}).update(SC115.NOTE[_L])
+BH.BAIHUA.update(SC115.BAIHUA)
 for _L, _d in (('EN', SCL.EN), ('JA', SCL.JA), ('EN', SC108.EN), ('JA', SC108.JA), ('EN', SC109.EN), ('JA', SC109.JA)): getattr(TR, _L).update(_d)
 for _L in SC109.NOTE: TR.NOTE.setdefault(_L, {}).update(SC109.NOTE[_L])
 BH.BAIHUA.update(SC109.BAIHUA)
@@ -68,7 +74,7 @@ BH.BAIHUA.update(SCH.BAIHUA)
 BH.BAIHUA.update(SV4.BAIHUA); TR.EN.update(SV4.EN); TR.JA.update(SV4.JA)
 G = json.load(open(os.path.join(WENMI, 'cryptanalysis', 'c62', 'publication-v3', 'data', 'gongmi.json'), encoding='utf-8'))['messages']
 V = {}
-for f in ('c83/variants.json', 'c84/gongmi-variants.json', 'c92/variants.json', 'c88/clear-variants.json', 'c99/variants.json', 'c107/variants.json', 'c108/variants.json', 'c109/variants.json', 'c112/variants.json'):
+for f in ('c83/variants.json', 'c84/gongmi-variants.json', 'c92/variants.json', 'c88/clear-variants.json', 'c99/variants.json', 'c107/variants.json', 'c108/variants.json', 'c109/variants.json', 'c112/variants.json', 'c115/variants.json'):
     for r in json.load(open(os.path.join(WENMI, 'cryptanalysis', f), encoding='utf-8')):
         for h in r.get('hits', []):
             gl, var = (h['glyph'], h['variant']) if isinstance(h, dict) else (h[0], h[1])
@@ -86,8 +92,10 @@ KEYS = {'N29': ['石屛', '袁逆自斃', '依法圖治'], 'N10': ['家嚴', '�
         'N17': ['黎總統', '舊約法', '日當局'], 'N18': ['擁護共和', '武力'], 'N27': ['溥', '無望'], 'N30': ['小池', '有吉領事'],
         'N32': ['舊約法', '中山', '葛殷黃'], 'N33': ['馮', '黃羣', '約法'], 'N35': ['國會', '段', '袁'],
         'N05': ['烈武', '山東', '溥泉'], 'N13': ['黎岑', '護國軍', '日態度'], 'N16': ['趙夷午', '精兵一師', '湯督'], 'N26': ['三百元', '百里'], 'N09': ['袁死', '態度未變', '交涉'], 'N20': ['正隆', '爲替手形', '第三銀行'], 'N22': ['開會', '卽歸'], 'N15': ['譚人鳳', '無以應', '愧甚'], 'N01': ['袁逆將倒', '舉國屬望', '外務省'],
-        'V4B': ['約法', '丁世嶧', '湯濟武'], 'V4D': ['青木', '汝驪', '曉垣'], 'V4E': ['粤', '急返', '何船']}
-ORDER = ['N01', 'N10', 'N04', 'N15', 'N20', 'N22', 'N31', 'N34', 'N29', 'N14', 'N19b', 'N02', 'N08', 'N11', 'N12', 'N19a', 'N28', 'N21', 'N25', 'N36', 'N24', 'N17', 'N18', 'N23', 'N27', 'N30', 'N32', 'N33', 'N35', 'N05', 'N09', 'N13', 'N16', 'N26', 'V4B', 'V4D', 'V4E']
+        'V4B': ['約法', '丁世嶧', '湯濟武'], 'V4D': ['青木', '汝驪', '曉垣'], 'V4E': ['粤', '急返', '何船'],
+        'V4A': ['唐紹儀', '共和', '言歸海上'], 'V4C': ['海軍', '露布', '中流砥柱'], 'V4F': ['五百元', '紹雲'], 'V4G': ['肇慶', '返粤', '北上'],
+        'V4H': ['筑後', '區君'], 'V4I': ['趙伸', '哀悼'], 'V4J': ['宮崎寅藏', '熊野'], 'V4K': ['弄璋', '加賀']}
+ORDER = ['N01', 'N10', 'N04', 'N15', 'N20', 'N22', 'N31', 'N34', 'N29', 'N14', 'N19b', 'N02', 'N08', 'N11', 'N12', 'N19a', 'N28', 'N21', 'N25', 'N36', 'N24', 'N17', 'N18', 'N23', 'N27', 'N30', 'N32', 'N33', 'N35', 'N05', 'N09', 'N13', 'N16', 'N26', 'V4A', 'V4B', 'V4C', 'V4D', 'V4E', 'V4F', 'V4G', 'V4H', 'V4J', 'V4I', 'V4K']
 FAM = {m: '容密' for m in D if D[m]['family'] == '容密'}
 FAM.update({m: '明碼' for m in CLEAR})
 FAM.update({m: '共密' for m in ['N17', 'N18', 'N23', 'N27', 'N30', 'N32', 'N33', 'N35']})
@@ -197,7 +205,7 @@ def fiche(mid, mm, meta):
     c = ImageOps.autocontrast(im.crop(box), cutoff=1)
     full = c.copy(); full.thumbnail((1400, 2400)); full.save(os.path.join(out, f'scan-num-{mid}-full.webp'), quality=60)
     th = c.copy(); th.thumbnail((520, 820)); th.save(os.path.join(out, f'scan-num-{mid}.webp'), quality=70)
-    src = 'map-n0517.png' if meta['dir'].startswith('Tokyo') else 'map-s0505.png'   # même trajet Tokyo ↔ Shanghai
+    src = 'map-n0517.png' if meta['dir'].startswith(('Tokyo', 'Japon')) else 'map-s0505.png'   # même trajet Tokyo ↔ Shanghai
     if 'Mukden' not in meta['dir']: shutil.copyfile(os.path.join(out, src), os.path.join(out, f'map-num-{mid}.png'))
 
 def zh_reading(segs, day):
@@ -206,25 +214,27 @@ def zh_reading(segs, day):
     return t
 
 DAYZH = {8: '八日', 9: '九日', 10: '十日', 11: '十一日', 13: '十三日', 14: '十四日', 15: '十五日', 16: '十六日', 12: '十二日'}
+MONTH_EN = {5: 'May', 6: 'June', 7: 'July', 8: 'August', 9: 'September', 10: 'October', 11: 'November'}
 DATE = {
- 'fr': lambda d, n: n, 'en': lambda d, n: f'{d} June 1916' if d else 'June 1916 (day not read)',
- 'ja': lambda d, n: f'1916年6月{d}日' if d else '1916年6月（日付未読）', 'zh-Hant': lambda d, n: f'1916年6月{d}日' if d else '1916年6月（日期未讀）',
+ 'fr': lambda d, n, mo: n, 'en': lambda d, n, mo: f'{d} {MONTH_EN[mo]} 1916' if d else f'{MONTH_EN[mo]} 1916 (day not read)',
+ 'ja': lambda d, n, mo: f'1916年{mo}月{d}日' if d else f'1916年{mo}月（日付未読）', 'zh-Hant': lambda d, n, mo: f'1916年{mo}月{d}日' if d else f'1916年{mo}月（日期未讀）',
 }
 I18N = {
- 'fr': dict(title='Télégrammes numériques de juin 1916 (容密, 共密, 辰密)', read='Groupes de chiffres du formulaire (préfixe en clair éventuel, puis corps)', label='Traduction de travail.', noteLabel='Note :',
+ 'fr': dict(title='Télégrammes numériques de 1916 (容密, 共密, 辰密, 乾密, en clair)', read='Groupes de chiffres du formulaire (préfixe en clair éventuel, puis corps)', label='Traduction de travail.', noteLabel='Note :',
             channel={'rongmi': 'Clé 容密 (v2)', 'gongmi': 'Clé 共密 (C51)', 'clair': 'En clair (code télégraphique chinois)', 'chenmi': 'Clé 辰密 (C92)', 'qianmi': 'Clé 乾密 (C104, modèle de S. Tomokiyo)', 'gaimusho': 'Tables du ministère japonais des Affaires étrangères (C110)'}),
- 'en': dict(title='Numeric telegrams of June 1916 (Rongmi, Gongmi, Chenmi)', read='Digit groups of the form (clear prefix if any, then body)', label='Working translation.', noteLabel='Note:',
+ 'en': dict(title='Numeric telegrams of 1916 (Rongmi, Gongmi, Chenmi, Qianmi, in clear)', read='Digit groups of the form (clear prefix if any, then body)', label='Working translation.', noteLabel='Note:',
             channel={'rongmi': 'Rongmi key (v2)', 'gongmi': 'Gongmi key (C51)', 'clair': 'In clear (Chinese telegraph code)', 'chenmi': 'Chenmi key (C92)', 'qianmi': 'Qianmi key (C104, after S. Tomokiyo’s model)', 'gaimusho': 'Japanese Foreign Ministry tables (C110)'}),
- 'ja': dict(title='1916年6月の数字電報（容密・共密・辰密）', read='用紙の数字組（平文の前置きがあればその後に本文）', label='作業訳。', noteLabel='注：',
+ 'ja': dict(title='1916年の数字電報（容密・共密・辰密・乾密・平文）', read='用紙の数字組（平文の前置きがあればその後に本文）', label='作業訳。', noteLabel='注：',
             channel={'rongmi': '容密の鍵（v2）', 'gongmi': '共密の鍵（C51）', 'clair': '平文（中文電碼）', 'chenmi': '辰密の鍵（C92）', 'qianmi': '乾密の鍵（C104、S. Tomokiyo氏のモデル）', 'gaimusho': '外務省の解読表（C110）'}),
- 'zh-Hant': dict(title='1916年6月的數字電報（容密、共密、辰密）', read='電報紙上的數字組（如有明文前綴，其後為正文）', label='白話譯文：', noteLabel='注：',
+ 'zh-Hant': dict(title='1916年的數字電報（容密、共密、辰密、乾密、明碼）', read='電報紙上的數字組（如有明文前綴，其後為正文）', label='白話譯文：', noteLabel='注：',
             channel={'rongmi': '容密密鑰（v2）', 'gongmi': '共密密鑰（C51）', 'clair': '明碼（中文電碼）', 'chenmi': '辰密密鑰（C92）', 'qianmi': '乾密密鑰（C104，依S. Tomokiyo模型）', 'gaimusho': '日本外務省解讀表（C110）'}),
 }
-ROUTE = {'fr': {'T': 'Tokyo → Shanghai', 'S': 'Shanghai → Tokyo', 'TM': 'Tokyo → Mukden', 'MT': 'Mukden → Tokyo'},
-         'en': {'T': 'Tokyo → Shanghai', 'S': 'Shanghai → Tokyo', 'TM': 'Tokyo → Mukden', 'MT': 'Mukden → Tokyo'},
-         'ja': {'T': '東京→上海', 'S': '上海→東京', 'TM': '東京→奉天', 'MT': '奉天→東京'}, 'zh-Hant': {'T': '東京→上海', 'S': '上海→東京', 'TM': '東京→奉天', 'MT': '奉天→東京'}}
+ROUTE = {'fr': {'T': 'Tokyo → Shanghai', 'S': 'Shanghai → Tokyo', 'TM': 'Tokyo → Mukden', 'MT': 'Mukden → Tokyo', 'JS': 'Japon → Shanghai'},
+         'en': {'T': 'Tokyo → Shanghai', 'S': 'Shanghai → Tokyo', 'TM': 'Tokyo → Mukden', 'MT': 'Mukden → Tokyo', 'JS': 'Japan → Shanghai'},
+         'ja': {'T': '東京→上海', 'S': '上海→東京', 'TM': '東京→奉天', 'MT': '奉天→東京', 'JS': '日本→上海'}, 'zh-Hant': {'T': '東京→上海', 'S': '上海→東京', 'TM': '東京→奉天', 'MT': '奉天→東京', 'JS': '日本→上海'}}
 def route_key(d):
     if 'Mukden' in d: return 'TM' if d.startswith('Tokyo') else 'MT'
+    if d.startswith('Japon'): return 'JS'
     return 'T' if d.startswith('Tokyo') else 'S'
 
 if __name__ == '__main__':
@@ -235,7 +245,7 @@ if __name__ == '__main__':
         fiche(mid, mm, meta); msgs.append(mm)
         d = meta['date']; rk = route_key(meta['dir'])
         for L in I18N:
-            i18n[L]['date'][mm['id']] = (DATE[L](d, meta['date_note']).replace('June', 'July').replace('6月', '7月') if meta.get('month') == 7 else DATE[L](d, meta['date_note']).replace('June', 'May').replace('6月', '5月') if meta.get('month') == 5 else DATE[L](d, meta['date_note'])) + (' ?' if L != 'fr' and d and '?' in meta['date_note'] else '')
+            i18n[L]['date'][mm['id']] = DATE[L](d, meta['date_note'], meta.get('month', 6)) + (' ?' if L != 'fr' and d and '?' in meta['date_note'] else '')
             i18n[L]['route'][mm['id']] = ROUTE[L][rk]
         i18n['fr']['tr'][mm['id']] = ' '.join(s[3] for s in segs)
         i18n['en']['tr'][mm['id']] = TR.EN[mid]
