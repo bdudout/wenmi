@@ -169,6 +169,7 @@ R.update({
  's0508': ('已{到}津學生請酌撥款維持，待得濟南令役餘令。楊丙停歷招集。邵事目前不能辦，本部文下足則六十勿匯可也。齊', []),
  's0515': ('速辦十圓、百圓券各二{萬}，加福建專用章，交陳羣轉黃展雲。此間款盡，難再籌。請酌覆各處', []),
  's0621': ('正金六月二‹旰›千{圓}收否？滬窘‹鼙›東京電籌濟。軍票應署經手發行人。知坂本飛行校停辦', []),   # 0328 (C118 ; relectures Brice C122/C123, 25/10/2026)
+ 'q0426': ('前電悉。此間得日因瓦斯故障及‹凰›‹忙›‹圩›‹顛›，須稍遲{延}發。請令趕製旂大小{各}百面。並祝‹醆›駕平安。‹居›正', []),   # Seito 26/4 (C117 ; relecture Brice 25/10/2026)
  'h0430': ('黃鄧到日，換船赴滬。鐵城', []),
  'h0516': ('不能往金，卽歸國。公到滬如何？‹贛›‹箬›定‹吟›電{復}。鐵城', []),
  'm0503': ('款匯港，債券無存，請{該}趣漢英‹擐›券伍仟圓、証書及{陞}等功章速附來。弟擬日間回國。誠叩', []),
@@ -177,12 +178,12 @@ R.update({
 P_, Q_ = lambda *r: ('P', list(r)), lambda *r: ('Q', list(r))
 _LV = {'n0503a': [Q_('sens'), P_('sens', 'contexte'), Q_('sens')], 'n0510': [P_('sens'), P_('sens'), P_('structure')], 'n0511': [], 'h0430': [], 'h0516': [P_('sens')], 'n0512': [], 'n0504a': [],
        'n0504b': [], 'n0506': [P_('sens')], 'n0508': [Q_('sens')], 'n0515': [P_('sens'), Q_('sens')],
-       's0505': [Q_('sens')], 's0506': [Q_('sens')], 's0508': [P_('sens')], 's0515': [P_('sens', 'contexte')], 's0621': [P_('sens', 'code voisin')],
+       's0505': [Q_('sens')], 's0506': [Q_('sens')], 's0508': [P_('sens')], 's0515': [P_('sens', 'contexte')], 's0621': [P_('sens', 'code voisin')], 'q0426': [P_('sens'), P_('sens')],
        'm0503': [Q_('sens'), P_('sens', 'jumeau')]}
 # propositions maintenues alors que la relecture de Brice (lot V7) ne les voit pas sur l'image
 DIVERGE = set()   # 14/10/2026 : toutes tranchées par la relecture V1 (une lettre comparée à la même main, aveugle au sens)
 # relecture V1 : la lettre décodée est confirmée à l'image, la proposition est maintenue (erreur d'origine, 1916, supposée)
-MAINT = {('n0503a', '滬'), ('n0503a', '擬'), ('n0515', '款'), ('s0515', '萬'), ('s0621', '圓'), ('s0508', '到'), ('m0503', '陞')}
+MAINT = {('n0503a', '滬'), ('n0503a', '擬'), ('n0515', '款'), ('s0515', '萬'), ('s0621', '圓'), ('q0426', '延'), ('s0508', '到'), ('m0503', '陞')}
 # (n0615 如 : lettre proposée lue à l'image au lot V1 → lettres corrigées, dx_corrections.json)
 for _sid, _lv in _LV.items(): R[_sid] = (R[_sid][0], _lv)
 CONF.update({'n0601': {'云': 'mot'}})   # 云云 (fin de citation) ; 兆銘 (Wang Zhaoming)
@@ -192,7 +193,7 @@ KEYS.update({'n0503a': ['兆銘', '債券', '仲愷'], 'n0503b': ['博愛丸'], 
              'n0504b': ['現款六仟', '深谷', '中須賀'], 'n0506': ['楊丙', '天津', '學生'], 'n0508': ['覺生', '周村', '濰縣', '邵子峯'],
              'n0510': ['克強', '避人', '舉事', '金山'], 'n0512': ['犬塚', '法船', 'Porthos', '行李'], 'n0511': ['張繼', '回日'], 'h0430': ['黃', '換船', '鐵城'], 'h0516': ['歸國', '到滬', '鐵城'], 'n0515': ['克強', '參謀部', '席正銘', '保定軍校', '天津'],
              's0505': ['百圓券', '春洋丸', '梅喬林', '文'], 's0506': ['邵', '安東', '正金'], 's0508': ['學生', '濟南', '楊丙', '邵'],
-             's0515': ['福建', '陳羣', '黃展雲'], 's0621': ['正金', '軍票', '署名', '坂本', '飛行校'], 'm0503': ['債券', '陞等功章', '誠']})
+             's0515': ['福建', '陳羣', '黃展雲'], 's0621': ['正金', '軍票', '署名', '坂本', '飛行校'], 'q0426': ['青島', '居正', '瓦斯', '旂'], 'm0503': ['債券', '陞等功章', '誠']})
 _MAI = {
  'fr': {
   'n0503a': "Bien arrivé à Shanghai ? […] la lettre de Jiangmen a été reçue, mais la réponse s'est perdue (?). Les représentants de San Francisco (金山) et de Los Angeles (羅省) […], Ma Xing […], trois personnes, sont arrivés hier au Japon : peut-on les presser de se rendre à Shanghai ? [Wang] Zhaoming compte trouver Du Shi pour aider à rédiger les obligations ; demandez à frère [Liao] Zhongkai s'il peut s'en charger. — Le 3.",
@@ -210,6 +211,7 @@ _MAI = {
   's0508': "Les étudiants déjà arrivés à Tianjin : allouez[-leur] des fonds pour les entretenir, en attendant l'ordre de Jinan […]. Que Yang Bing cesse de recruter. L'affaire de Shao ne peut être traitée pour l'instant ; une fois le document du quartier général arrivé, s'il y a assez, inutile de virer les soixante (?). — Le 8.",
   's0515': "Faites vite [faire] des billets de 10 et de 100 yuans, 20 000 de chaque, avec le sceau spécial du Fujian, à remettre à Chen Qun (陳羣) pour Huang Zhanyun (黃展雲). Les fonds d'ici sont épuisés ; il est difficile d'en lever d'autres. Veuillez en décider et répondre partout.",
   's0621': "Yokohama Specie Bank (正金) : les deux […] mille yuans de juin ont-ils été reçus ? Shanghai est à court ; […] télégraphier à Tokyo pour réunir des fonds. Les billets militaires doivent porter la signature de la personne chargée de les émettre. Je prends note que l'école d'aviation de Sakamoto (坂本) cesse ses activités.",
+  'q0426': "Télégramme précédent reçu. Ici, ces jours-ci (?), à cause d'une panne de gaz et de […], le départ doit être un peu retardé. Faites fabriquer d'urgence des drapeaux, grands et petits, cent de chaque. Et je vous souhaite un bon voyage. Ju Zheng (居正).",
   'h0430': 'Huang (黃, Huang Xing) et Deng (鄧) arrivent au Japon et y changent de navire pour Shanghai. — Tiecheng (鐵城, Wu Tiecheng).',
   'h0516': 'Je ne peux pas aller à Jin (金, Jinshan, San Francisco ?) ; je rentre aussitôt au pays. Comment vont les choses depuis votre arrivée à Shanghai ? […] répondez par télégramme. — Tiecheng (鐵城, Wu Tiecheng).',
   'm0503': "Fonds virés à Hong Kong ; il ne reste plus d'obligations ; prière […] 5 000 yuans de billets ; les certificats et les médailles de promotion et de mérite, envoyez-les vite. Je compte rentrer au pays ces jours-ci. — Cheng (誠), salutations.",
@@ -230,6 +232,7 @@ _MAI = {
   's0508': "The students already arrived in Tianjin: please allot funds to keep them, pending the Jinan order […]. Yang Bing should stop recruiting. Shao's affair cannot be handled for now; once the headquarters' document has come, if it is enough, there is no need to remit the sixty (?). — The 8th.",
   's0515': "Get notes of 10 and 100 yuan made quickly, 20,000 of each, with the special seal for Fujian, to be handed to Chen Qun (陳羣) for Huang Zhanyun (黃展雲). Funds here are exhausted; it is hard to raise more. Please decide and reply everywhere.",
   's0621': "Yokohama Specie Bank (正金): have the two […] thousand yuan of June been received? Shanghai is short of money; […] cable Tokyo to raise funds. The military notes should bear the signature of the person in charge of issuing them. Noted that Sakamoto’s (坂本) flying school is closing.",
+  'q0426': "Previous telegram received. Here, these days (?), because of a gas breakdown and […], the departure must be somewhat delayed. Have flags made urgently, large and small, a hundred of each. And I wish you a safe journey. Ju Zheng (居正).",
   'h0430': 'Huang (黃, Huang Xing) and Deng (鄧) arrive in Japan and change ship there for Shanghai. — Tiecheng (鐵城, Wu Tiecheng).',
   'h0516': 'I cannot go to Jin (金, Jinshan, San Francisco?); I am returning home at once. How are things since your arrival in Shanghai? […] reply by telegram. — Tiecheng (鐵城, Wu Tiecheng).',
   'm0503': "Funds remitted to Hong Kong; no bonds are left; please […] 5,000 yuan in notes; the certificates and the promotion and merit medals, send them quickly. I expect to return home in the next few days. — Cheng (誠), with respects.",
@@ -250,6 +253,7 @@ _MAI = {
   's0508': "すでに天津に着いた学生には資金を配分して維持し、済南の命令を待つ……。楊丙は募集を停止。邵の件は目下処理できない。本部の文書が届き、足りるなら六十（？）は送金しなくてよい。齊（8日）。",
   's0515': "至急、十円券・百円券を各二万作り、福建専用印を付けて陳羣に渡し、黄展雲へ転送されたい。こちらの資金は尽き、これ以上調達しがたい。斟酌して各所に返答されたい。",
   's0621': "正金：六月分の二〔…〕千円は受け取ったか。上海は窮している。〔…〕東京に電報して資金を工面されたい。軍票には発行担当者が署名すべきである。坂本の飛行学校が閉鎖されることは承知した。",
+  'q0426': "前電拝承。当地では、ガスの故障と〔…〕のため、出発を少し遅らせねばならない。大小の旗を各百枚、至急作らせられたい。あわせて道中のご平安を祈る。居正。",
   'h0430': '黄（黄興）と鄧が日本に着き、船を乗り換えて上海へ向かう。鉄城（呉鉄城）。',
   'h0516': '金（金山＝サンフランシスコ？）へは行けない。すぐに帰国する。上海に着かれてからいかがか。〔…〕電報で返事を。鉄城（呉鉄城）。',
   'm0503': "資金は香港へ送金した。債券は残っていない。……券五千円、証書および昇進・功労章を至急送られたい。近日中に帰国するつもり。誠拝。",
@@ -304,6 +308,8 @@ for _lang in LAB:
     _c = LAB[_lang]['channel']; LAB[_lang]['toc'] = {'yamada1916': _c['yamada1916'], 'k38': _CH_MAI[_lang]['k38'], 'yamada1916-sh': _TOC_SH[_lang], 'man2': _CH_MAI[_lang]['man2'], 'honolulu1916w': {'fr': 'Clé « Honolulu », variante « Aloha » (Honolulu → Tokyo)', 'en': '“Honolulu” key, “Aloha” variant (Honolulu → Tokyo)', 'zh-Hant': '「檀香山」密鑰「Aloha」變體（檀香山 → 東京）', 'ja': '「ホノルル」鍵の「Aloha」変種（ホノルル → 東京）'}[_lang]}
     _c['yamada1916'] = {'fr': 'Condensateur « Yamada »', 'en': 'Condenser “Yamada”', 'zh-Hant': '壓縮碼「山田」', 'ja': '圧縮符号「山田」'}[_lang]
     LAB[_lang]['intro'] += _INTRO_MAI[_lang]; LAB[_lang]['channel'].update({'honolulu1916w': {'fr': 'Clé « Honolulu » (grille de Bourdeau), alphabet « Aloha » sans q, avec w', 'en': '“Honolulu” key (Bourdeau’s grid), “Aloha” alphabet without q, with w', 'zh-Hant': '「檀香山」密鑰（Bourdeau 的方格），「Aloha」字母表無 q 有 w', 'ja': '「ホノルル」鍵（Bourdeauの表）、「Aloha」文字表（q なし、w あり）'}[_lang], 'yamada1916w': {'fr': 'Condensateur « Yamada » (w = p)', 'en': 'Condenser “Yamada” (w = p)', 'zh-Hant': '壓縮碼「山田」（w = p）', 'ja': '圧縮符号「山田」（w = p）'}[_lang], 'k38': {'fr': 'Table « Thirtyeight »', 'en': '“Thirtyeight” table', 'zh-Hant': '「Thirtyeight」碼表', 'ja': '「Thirtyeight」表'}[_lang], 'man2': {'fr': 'Clé Manille → Tōyama', 'en': 'Manila → Tōyama key', 'zh-Hant': '馬尼拉→頭山密鑰', 'ja': 'マニラ→頭山鍵'}[_lang]}); LAB[_lang]['read'] = _READ[_lang]
+    _SEI = {'fr': 'Condensateur « Qingdao » (Qingdao → Tokyo)', 'en': 'Condenser “Qingdao” (Qingdao → Tokyo)', 'zh-Hant': '壓縮碼「青島」（青島 → 東京）', 'ja': '圧縮符号「青島」（青島 → 東京）'}[_lang]
+    LAB[_lang]['toc']['seito1916'] = _SEI; LAB[_lang]['channel']['seito1916'] = _SEI   # q0426 (C117/C124)
 
 CONF['n0504a']['云'] = 'mot'   # 云云 (fin de citation), relu le 13/10/2026
 CONF.setdefault('n0615', {})['銘'] = 'nom'; CONF.setdefault('n0515', {})['云'] = 'mot'   # 兆銘 ; 云云
@@ -445,6 +451,11 @@ _P12 = {
  'ja': "「如下」の後、zoxeyujore と kuzixacujo の間に、音節にならない二組がある（上の文字列には含めていない）。「wicuhaelou woipeilyce」は Rosamonde 電報の鍵で暗号化された英語である。一字ずつ解くと「mrsayuoteamerporthso」、すなわち「Mrs …, steamer Porthos」（steamer の s と os の順序の二か所が異なる）。乗客の名は不確か（「Ayu」？）。航海中の打電先であり、Porthos 号は本文の「法船」（フランス船）、5月13日の東京発の電報（「Rosamonde. Porthos.」）にも出てくる。その後、中国語の暗号に戻る（請派二人接……）。",
 }
 for _lang in _P12: NOTE[_lang]['n0512'] = _P12[_lang]
+_Q26 = {'fr': "Formulaire de Qingdao (« Seito ») reçu à Tokyo le 26 avril à 20 h 40. Lettres lues par Claude, relues à l'aveugle par Brice Dudout (25/10/2026). Au dernier mot, la voyelle après « qedus » n'est pas lisible : « e » est restitué par la signature 居正 (Ju Zheng, qui commandait alors au Shandong) ; « 延 » demande g au lieu du d lu (erreur probable de 1916), « 各 » un o au lieu de la dernière lettre du 12ᵉ mot.",
+ 'en': "Form from Qingdao (“Seito”) received in Tokyo on 26 April at 8.40 pm. Letters read by Claude, re-read blind by Brice Dudout (25/10/2026). In the last word the vowel after “qedus” is illegible: “e” is restored from the signature 居正 (Ju Zheng, then in command in Shandong); “延” needs g instead of the d read (probably an error of 1916), “各” an o instead of the last letter of word 12.",
+ 'zh-Hant': "青島（Seito）發、4月26日晚8時40分東京收到的電報。字母由 Claude 讀出，Brice Dudout 盲讀複核（2026年10月25日）。末一詞「qedus」後的母音無法辨認，依署名「居正」（時在山東指揮）補作 e；「延」須將讀出的 d 改為 g（當係1916年的錯誤），「各」須將第12詞末字母改為 o。",
+ 'ja': "青島（Seito）発、4月26日午後8時40分東京着の電報。文字は Claude が読み、Brice Dudout が意味を知らずに再読した（2026年10月25日）。最後の語の「qedus」の後の母音は判読できず、署名「居正」（当時山東で指揮）から e を補った。「延」は読んだ d を g に（1916年の誤りと思われる）、「各」は第12語の最後の文字を o にする必要がある。"}
+for _lang in _Q26: NOTE[_lang]['q0426'] = _Q26[_lang]
 
 def build():
     msgs = []

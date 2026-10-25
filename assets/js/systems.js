@@ -6,7 +6,7 @@ window.WENMI_SYSTEMS = {
   map: {
     CORPUS: { G0: 'G0', Y0: 'Y0' },
     C1916: { manila1916: 'manila1916', shanghai1916: 'shanghai1916', seito1916: 'seito1916', yamada1916: 'yamada1916' },
-    N1916: { honolulu1916w: 'honolulu1916', yamada1916: 'yamada1916', yamada1916w: 'yamada1916', man2: 'manila1916b', k38: 'k38', h16: 'h16' },
+    N1916: { seito1916: 'seito1916', honolulu1916w: 'honolulu1916', yamada1916: 'yamada1916', yamada1916w: 'yamada1916', man2: 'manila1916b', k38: 'k38', h16: 'h16' },
     T1915: { manila1916b: 'manila1916b', laisaosang1915: 'laisaosang1915', newyork1915: 'newyork1915', k30: 'k30', shanghai1916: 'shanghai1916', sanfran1916: 'sanfran1916' },
     F1916: { shanghai1916: 'shanghai1916', k13: 'k13', seito1916: 'seito1916', manila1916: 'manila1916', sanfran1916: 'sanfran1916' },
     NUM1916: { gongmi: 'gongmi', rongmi: 'rongmi', chenmi: 'chenmi', qianmi: 'qianmi', gaimusho: 'gaimusho', clair: 'clair' }
