@@ -58,7 +58,7 @@ def load_js(path, var):
 
 # Codes rares pour le modèle de langue mais confirmés par ailleurs (raison) : ils ne sont pas « douteux ».
 CONFIRMED = {
-    '0462': {28: 'mot', 52: 'date'}, '0348': {35: 'mot', 43: 'mot', 56: 'mot', 63: 'date'},
+    '0462': {28: 'mot', 52: 'date'}, '0415': {38: 'variante'}, '0348': {35: 'mot', 43: 'mot', 56: 'mot', 63: 'date'},
     '0413': {20: 'mot', 41: 'date'}, '0416a': {28: 'date'}, '0449': {12: 'mot', 18: 'nom'},
     '0455a': {15: 'variante'}, '0467': {43: 'variante'}, '0473': {30: 'variante', 54: 'nom', 58: 'nom'},
     '0494a': {3: 'variante', 17: 'mot'}, '0496a': {10: 'mot', 34: 'mot'}, '0498': {40: 'mot', 43: 'mot', 71: 'variante', 76: 'mot'},
