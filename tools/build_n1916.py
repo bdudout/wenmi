@@ -168,6 +168,7 @@ R.update({
  's0506': ('請覆邵：地點未備，人緩招募，械則安置安東，待時而用。款六千由正金購。所持人‹拂›票寄{到}', []),
  's0508': ('已{到}津學生請酌撥款維持，待得濟南令役餘令。楊丙停歷招集。邵事目前不能辦，本部文下足則六十勿匯可也。齊', []),
  's0515': ('速辦十圓、百圓券各二{萬}，加福建專用章，交陳羣轉黃展雲。此間款盡，難再籌。請酌覆各處', []),
+ 's0621': ('正金六月二‹旰›千{圓}收否？滬窘‹鼙›東京電籌濟。軍票應署經手發行人。知坂本飛行校停辦', []),   # 0328 (C118 ; relectures Brice C122/C123, 25/10/2026)
  'h0430': ('黃鄧到日，換船赴滬。鐵城', []),
  'h0516': ('不能往金，卽歸國。公到滬如何？‹贛›‹箬›定‹吟›電{復}。鐵城', []),
  'm0503': ('款匯港，債券無存，請{該}趣漢英‹擐›券伍仟圓、証書及{陞}等功章速附來。弟擬日間回國。誠叩', []),
@@ -176,22 +177,22 @@ R.update({
 P_, Q_ = lambda *r: ('P', list(r)), lambda *r: ('Q', list(r))
 _LV = {'n0503a': [Q_('sens'), P_('sens', 'contexte'), Q_('sens')], 'n0510': [P_('sens'), P_('sens'), P_('structure')], 'n0511': [], 'h0430': [], 'h0516': [P_('sens')], 'n0512': [], 'n0504a': [],
        'n0504b': [], 'n0506': [P_('sens')], 'n0508': [Q_('sens')], 'n0515': [P_('sens'), Q_('sens')],
-       's0505': [Q_('sens')], 's0506': [Q_('sens')], 's0508': [P_('sens')], 's0515': [P_('sens', 'contexte')],
+       's0505': [Q_('sens')], 's0506': [Q_('sens')], 's0508': [P_('sens')], 's0515': [P_('sens', 'contexte')], 's0621': [P_('sens', 'code voisin')],
        'm0503': [Q_('sens'), P_('sens', 'jumeau')]}
 # propositions maintenues alors que la relecture de Brice (lot V7) ne les voit pas sur l'image
 DIVERGE = set()   # 14/10/2026 : toutes tranchées par la relecture V1 (une lettre comparée à la même main, aveugle au sens)
 # relecture V1 : la lettre décodée est confirmée à l'image, la proposition est maintenue (erreur d'origine, 1916, supposée)
-MAINT = {('n0503a', '滬'), ('n0503a', '擬'), ('n0515', '款'), ('s0515', '萬'), ('s0508', '到'), ('m0503', '陞')}
+MAINT = {('n0503a', '滬'), ('n0503a', '擬'), ('n0515', '款'), ('s0515', '萬'), ('s0621', '圓'), ('s0508', '到'), ('m0503', '陞')}
 # (n0615 如 : lettre proposée lue à l'image au lot V1 → lettres corrigées, dx_corrections.json)
 for _sid, _lv in _LV.items(): R[_sid] = (R[_sid][0], _lv)
 CONF.update({'n0601': {'云': 'mot'}})   # 云云 (fin de citation) ; 兆銘 (Wang Zhaoming)
 CONF.update({'n0503a': {'愷': 'nom', '江': 'date'}, 'n0512': {'塚': 'nom'}, 'n0504a': {'卲': 'variante', '儉': 'date', '坂': 'nom'}, 'n0504b': {'仟': 'mot', '支': 'date'},
-             'n0508': {'占': 'mot', '濰': 'nom', '却': 'variante'}, 'n0515': {'絶': 'variante', '删': 'date'}, 'm0503': {'仟': 'mot', '証': 'variante'}})
+             'n0508': {'占': 'mot', '濰': 'nom', '却': 'variante'}, 's0621': {'坂': 'nom'}, 'n0515': {'絶': 'variante', '删': 'date'}, 'm0503': {'仟': 'mot', '証': 'variante'}})
 KEYS.update({'n0503a': ['兆銘', '債券', '仲愷'], 'n0503b': ['博愛丸'], 'n0504a': ['邵子峯', '王煥夏', '鴨綠江', '安東', '坂本', '春日丸'],
              'n0504b': ['現款六仟', '深谷', '中須賀'], 'n0506': ['楊丙', '天津', '學生'], 'n0508': ['覺生', '周村', '濰縣', '邵子峯'],
              'n0510': ['克強', '避人', '舉事', '金山'], 'n0512': ['犬塚', '法船', 'Porthos', '行李'], 'n0511': ['張繼', '回日'], 'h0430': ['黃', '換船', '鐵城'], 'h0516': ['歸國', '到滬', '鐵城'], 'n0515': ['克強', '參謀部', '席正銘', '保定軍校', '天津'],
              's0505': ['百圓券', '春洋丸', '梅喬林', '文'], 's0506': ['邵', '安東', '正金'], 's0508': ['學生', '濟南', '楊丙', '邵'],
-             's0515': ['福建', '陳羣', '黃展雲'], 'm0503': ['債券', '陞等功章', '誠']})
+             's0515': ['福建', '陳羣', '黃展雲'], 's0621': ['正金', '軍票', '署名', '坂本', '飛行校'], 'm0503': ['債券', '陞等功章', '誠']})
 _MAI = {
  'fr': {
   'n0503a': "Bien arrivé à Shanghai ? […] la lettre de Jiangmen a été reçue, mais la réponse s'est perdue (?). Les représentants de San Francisco (金山) et de Los Angeles (羅省) […], Ma Xing […], trois personnes, sont arrivés hier au Japon : peut-on les presser de se rendre à Shanghai ? [Wang] Zhaoming compte trouver Du Shi pour aider à rédiger les obligations ; demandez à frère [Liao] Zhongkai s'il peut s'en charger. — Le 3.",
@@ -208,6 +209,7 @@ _MAI = {
   's0506': "Répondez à Shao : le lieu n'est pas prêt ; ralentir le recrutement ; les armes, les garder à Andong jusqu'au moment de s'en servir. Les 6 000 de fonds passent par la Yokohama Specie Bank (正金). Les chèques au porteur sont envoyés (?).",
   's0508': "Les étudiants déjà arrivés à Tianjin : allouez[-leur] des fonds pour les entretenir, en attendant l'ordre de Jinan […]. Que Yang Bing cesse de recruter. L'affaire de Shao ne peut être traitée pour l'instant ; une fois le document du quartier général arrivé, s'il y a assez, inutile de virer les soixante (?). — Le 8.",
   's0515': "Faites vite [faire] des billets de 10 et de 100 yuans, 20 000 de chaque, avec le sceau spécial du Fujian, à remettre à Chen Qun (陳羣) pour Huang Zhanyun (黃展雲). Les fonds d'ici sont épuisés ; il est difficile d'en lever d'autres. Veuillez en décider et répondre partout.",
+  's0621': "Yokohama Specie Bank (正金) : les deux […] mille yuans de juin ont-ils été reçus ? Shanghai est à court ; […] télégraphier à Tokyo pour réunir des fonds. Les billets militaires doivent porter la signature de la personne chargée de les émettre. Je prends note que l'école d'aviation de Sakamoto (坂本) cesse ses activités.",
   'h0430': 'Huang (黃, Huang Xing) et Deng (鄧) arrivent au Japon et y changent de navire pour Shanghai. — Tiecheng (鐵城, Wu Tiecheng).',
   'h0516': 'Je ne peux pas aller à Jin (金, Jinshan, San Francisco ?) ; je rentre aussitôt au pays. Comment vont les choses depuis votre arrivée à Shanghai ? […] répondez par télégramme. — Tiecheng (鐵城, Wu Tiecheng).',
   'm0503': "Fonds virés à Hong Kong ; il ne reste plus d'obligations ; prière […] 5 000 yuans de billets ; les certificats et les médailles de promotion et de mérite, envoyez-les vite. Je compte rentrer au pays ces jours-ci. — Cheng (誠), salutations.",
@@ -227,6 +229,7 @@ _MAI = {
   's0506': "Reply to Shao: the place is not ready; slow down recruitment; keep the arms at Andong until the time comes to use them. The 6,000 in funds go through the Yokohama Specie Bank (正金). The bearer cheques are being sent (?).",
   's0508': "The students already arrived in Tianjin: please allot funds to keep them, pending the Jinan order […]. Yang Bing should stop recruiting. Shao's affair cannot be handled for now; once the headquarters' document has come, if it is enough, there is no need to remit the sixty (?). — The 8th.",
   's0515': "Get notes of 10 and 100 yuan made quickly, 20,000 of each, with the special seal for Fujian, to be handed to Chen Qun (陳羣) for Huang Zhanyun (黃展雲). Funds here are exhausted; it is hard to raise more. Please decide and reply everywhere.",
+  's0621': "Yokohama Specie Bank (正金): have the two […] thousand yuan of June been received? Shanghai is short of money; […] cable Tokyo to raise funds. The military notes should bear the signature of the person in charge of issuing them. Noted that Sakamoto’s (坂本) flying school is closing.",
   'h0430': 'Huang (黃, Huang Xing) and Deng (鄧) arrive in Japan and change ship there for Shanghai. — Tiecheng (鐵城, Wu Tiecheng).',
   'h0516': 'I cannot go to Jin (金, Jinshan, San Francisco?); I am returning home at once. How are things since your arrival in Shanghai? […] reply by telegram. — Tiecheng (鐵城, Wu Tiecheng).',
   'm0503': "Funds remitted to Hong Kong; no bonds are left; please […] 5,000 yuan in notes; the certificates and the promotion and merit medals, send them quickly. I expect to return home in the next few days. — Cheng (誠), with respects.",
@@ -246,6 +249,7 @@ _MAI = {
   's0506': "邵に返電：場所の準備ができていない。募集は控え、武器は安東に保管して時機を待って使う。資金六千は正金（横浜正金銀行）経由。持参人払手形を送る（？）。",
   's0508': "すでに天津に着いた学生には資金を配分して維持し、済南の命令を待つ……。楊丙は募集を停止。邵の件は目下処理できない。本部の文書が届き、足りるなら六十（？）は送金しなくてよい。齊（8日）。",
   's0515': "至急、十円券・百円券を各二万作り、福建専用印を付けて陳羣に渡し、黄展雲へ転送されたい。こちらの資金は尽き、これ以上調達しがたい。斟酌して各所に返答されたい。",
+  's0621': "正金：六月分の二〔…〕千円は受け取ったか。上海は窮している。〔…〕東京に電報して資金を工面されたい。軍票には発行担当者が署名すべきである。坂本の飛行学校が閉鎖されることは承知した。",
   'h0430': '黄（黄興）と鄧が日本に着き、船を乗り換えて上海へ向かう。鉄城（呉鉄城）。',
   'h0516': '金（金山＝サンフランシスコ？）へは行けない。すぐに帰国する。上海に着かれてからいかがか。〔…〕電報で返事を。鉄城（呉鉄城）。',
   'm0503': "資金は香港へ送金した。債券は残っていない。……券五千円、証書および昇進・功労章を至急送られたい。近日中に帰国するつもり。誠拝。",

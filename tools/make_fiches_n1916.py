@@ -20,6 +20,7 @@ M.CITIES['honolulu'] = ('Honolulu', '檀香山', 144.2, 25.0, (14, -6)); FC.CITY
 for rec, off in IMG_OFFSET.items():
     if os.path.exists(os.path.join(WENMI, 'sources', 'site', rec + '.pdf')) or rec not in FC.PDF:
         FC.PDF[rec] = (os.path.join(WENMI, 'sources', 'site', rec + '.pdf'), off)   # page du PDF = image − décalage (089100 : sources/c14, déjà dans FC.PDF)
+FC.PDF['B03050089800'] = (os.path.join(WENMI, 'sources', 'c39', 'jacar', 'B03050089800.pdf'), IMG_OFFSET['B03050089800'])   # 0328 (s0621) : PDF acquis en C39
 
 
 def corpus():
