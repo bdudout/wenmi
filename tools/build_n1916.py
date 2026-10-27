@@ -17,6 +17,8 @@ import dx_overrides                                   # noqa: E402
 DX = dx_overrides.load(WENMI)
 import form_times  # noqa: E402
 from n1916_streams import SEL, EXTRA_KEYS, KEY, ROUTE as ROUTES, LOCAL, IMG_OFFSET, POS   # noqa: E402
+import n1916_streams as _NS   # noqa: E402
+HEAD = getattr(_NS, 'HEAD', {})   # en-tête chiffré avec une autre table que le corps (n0422 : « Shanghai », C130)
 bkeys = BC.bkeys; C2CH, uni, REF = BC.C2CH, BC.uni, BC.REF
 for _k, _t in EXTRA_KEYS.items(): bkeys.KEYS.setdefault(_k, _t)
 # clé « Honolulu » (grille de Bourdeau) avec l'alphabet « Aloha » : sans q, avec w (C111, 23/10/2026 ; avant : w = v)
@@ -457,13 +459,71 @@ _Q26 = {'fr': "Formulaire de Qingdao (« Seito ») reçu à Tokyo le 26 avril à
  'ja': "青島（Seito）発、4月26日午後8時40分東京着の電報。文字は Claude が読み、Brice Dudout が意味を知らずに再読した（2026年10月25日）。最後の語の「qedus」の後の母音は判読できず、署名「居正」（当時山東で指揮）から e を補った。「延」は読んだ d を g に（1916年の誤りと思われる）、「各」は第12語の最後の文字を o にする必要がある。"}
 for _lang in _Q26: NOTE[_lang]['q0426'] = _Q26[_lang]
 
+# ---- C130 (27/10/2026) : table « Thirty fifth » (Hu Hanmin), b23 (22/4, Tokyo → Junzaburo, 轉胡漢民) et b38b (24/4, réponse signée 展) ----
+# Lecture v2 : relecture aveugle ciblée de Brice (reread-c130t, 27/10/2026 01:02) ; 救 臨時 司 其 袁 以 可 滇 lus directement ;
+# 英 段 留 (n0422) et 爲 (s0424) : lettre décodée confirmée à l'image ⇒ propositions « maintenues » (erreur de 1916 supposée).
+# 已意 (pour 己意) et 其 (pour 祺, 段祺瑞) : caractères décodés gardés, sens donné par la traduction et la note.
+R['n0422'] = ('轉胡漢民鑒：日府已決助岑，其意叵測，急圖挽救。請兄若出已意，密與唐少川商，説楊善德獨立，以滬爲臨時地點，組織政府：唐爲總理，‹植›爲陸軍，伍爲外交，陳{英}士爲總司令，馮國璋參謀長，{段}其瑞爲北京{留}守，‹裯›袁以優待條件由我取決。如此則內患外交可一時解決矣。望兄力爲圖之，並速覆。文',
+              [P_('sens', 'contexte'), P_('sens', 'contexte'), P_('sens')])
+R['s0424'] = ('唐{爲}滇代表主舉黎，且無力動盧、楊。展', [P_('sens', 'contexte')])
+MAINT |= {('n0422', '英'), ('n0422', '段'), ('n0422', '留'), ('s0424', '爲')}
+CONF.update({'n0422': {'岑': 'nom', '叵': 'mot', '説': 'variante'}})
+KEYS.update({'n0422': ['胡漢民', '唐少川', '楊善德', '伍', '陳英士', '馮國璋', '段祺瑞', '袁', '文'], 's0424': ['唐', '滇', '黎', '盧', '楊', '展']})
+_K35 = {
+ 'fr': {
+  'n0422': "À transmettre à Hu Hanmin. Le gouvernement japonais a décidé de soutenir Cen [Chunxuan] ; ses intentions sont insondables : il faut d'urgence redresser la situation. Je vous prie, frère, comme de votre propre initiative, de vous concerter en secret avec Tang Shaochuan (Tang Shaoyi) et de persuader Yang Shande de proclamer l'indépendance ; de prendre Shanghai pour siège provisoire et d'y organiser un gouvernement : Tang Premier ministre, […] à l'Armée, Wu [Tingfang] aux Affaires étrangères, Chen Yingshi (Chen Qimei) commandant en chef, Feng Guozhang chef d'état-major, Duan Qirui gardien (留守) de Pékin ; […] Yuan : les conditions de traitement de faveur seront fixées par nous. Ainsi les troubles intérieurs et les affaires extérieures pourraient être réglés d'un coup. Je compte que vous vous y emploierez ; répondez vite. — Wen (Sun Yat-sen).",
+  's0424': "Tang [Shaoyi] représente le Yunnan (滇) et est d'avis d'élire Li [Yuanhong] ; de plus, il n'y a pas moyen de faire bouger Lu [Yongxiang] ni Yang [Shande]. — Zhan (展, Hu Hanmin).",
+ },
+ 'en': {
+  'n0422': "To be forwarded to Hu Hanmin. The Japanese government has decided to support Cen [Chunxuan]; its intentions are unfathomable: the situation must be retrieved urgently. I ask you, brother, as if on your own initiative, to consult in secret with Tang Shaochuan (Tang Shaoyi) and to persuade Yang Shande to declare independence; to take Shanghai as the provisional seat and organise a government there: Tang prime minister, […] for the Army, Wu [Tingfang] for Foreign Affairs, Chen Yingshi (Chen Qimei) commander-in-chief, Feng Guozhang chief of staff, Duan Qirui custodian (留守) of Peking; […] Yuan: the conditions of preferential treatment will be decided by us. In this way internal troubles and foreign affairs could be settled at one stroke. I hope you will work hard for it; reply quickly. — Wen (Sun Yat-sen).",
+  's0424': "Tang [Shaoyi] represents Yunnan (滇) and favours electing Li [Yuanhong]; moreover, there is no way to move Lu [Yongxiang] or Yang [Shande]. — Zhan (展, Hu Hanmin).",
+ },
+ 'zh-Hant': {
+  'n0422': "轉胡漢民鑒：日本政府已決定援助岑（春煊），其用意難測，須急謀挽救。請兄以出於己意之姿態，密與唐少川（紹儀）商議，說服楊善德獨立，以上海為臨時地點，組織政府：唐為總理，……為陸軍，伍（廷芳）為外交，陳英士（其美）為總司令，馮國璋為參謀長，段祺瑞為北京留守；……袁之優待條件由我方決定。如此則內患與外交可一時解決。望兄盡力圖之，並速覆。文（孫中山）。",
+  's0424': "唐（紹儀）為雲南代表，主張推舉黎（元洪）；且無力使盧（永祥）、楊（善德）有所行動。展（展堂，胡漢民）。",
+ },
+ 'ja': {
+  'n0422': "胡漢民へ転送。日本政府は岑（春煊）を援助することに決した。その意図は測りがたく、急ぎ挽回を図らねばならない。兄には自らの考えであるかのようにして、ひそかに唐少川（紹儀）と協議し、楊善徳に独立を説いてほしい。上海を臨時の所在地として政府を組織する：唐を総理、〔…〕を陸軍、伍（廷芳）を外交、陳英士（其美）を総司令、馮国璋を参謀長、段祺瑞を北京留守とし、〔…〕袁の優待条件は我が方で決める。こうすれば内憂と外交は一挙に解決しよう。尽力されたい。至急返電を。文（孫文）。",
+  's0424': "唐（紹儀）は雲南（滇）を代表し、黎（元洪）の推挙を主張している。また、盧（永祥）・楊（善徳）を動かす力はない。展（展堂＝胡漢民）。",
+ },
+}
+for _lang in ('fr', 'en', 'zh-Hant', 'ja'): TR[_lang].update(_K35[_lang])
+_K35N = {
+ 'fr': {
+  'n0422': "Formulaire de Tokyo n° 00325 (images 0627–0628, trois feuillets), 22 avril 1916, 10 h 15, 48 mots, adresse « Junzaburo Shanghai » ; signé 中山 sur le formulaire (adresse de l'expéditeur : 原宿109 ?). Les cinq premiers codes (轉胡漢民鑒, « à transmettre à Hu Hanmin ») se lisent avec la table « Shanghai » de D. Bourdeau ; le corps avec la table nouvelle « Thirty fifth » (voir Méthode). Lettres : transcription de Claude, collationnée (mot 37 : n, pas x), puis relecture aveugle ciblée de Brice Dudout (27/10/2026) : 救, 臨時, 司, 其, 袁 et 以 lus directement ; pour 英, 段 et 留, la lettre écrite est confirmée (erreurs de 1916 supposées). 已意 est écrit pour 己意 (lettre relue), 其 pour 祺 (段祺瑞) ; ‹植› (le nom du ministre de l'Armée ?) et ‹裯› restent non résolus ; 岑, 叵 et 説 sont des codes rares mais conformes au sens. Contexte, avec prudence : le télégramme date du jour où Duan Qirui devient secrétaire d'État (國務卿) de Yuan Shikai, un mois après l'abandon de l'empire ; Sun propose un gouvernement formé à Shanghai, dont la liste comprend aussi Feng Guozhang et Duan Qirui. La réponse du 24 avril (0642b) dit que Tang Shaoyi représente le Yunnan et soutient Li Yuanhong, et qu'on ne peut faire bouger Lu Yongxiang ni Yang Shande. Antériorité vérifiée le 27/10/2026 : ni chez S. Tomokiyo (Cryptiana), ni dans les notes de D. Bourdeau (mise à jour du 26/10/2026), ni dans le 中山學術資料庫 / 國父全集 en ligne (vol. 4, p. 412–413 : pour la fin d'avril 1916, seulement un télégramme à Wu Tiecheng du 24 avril et un au 少年中國報), ni dans les recherches en ligne sur Hu Hanmin ; l'édition imprimée du 國父全集 n'a pas été feuilletée page à page.",
+  's0424': "Formulaire de Shanghai (n° 071, 10 mots), déposé le 24 avril 1916 à 18 h 26 et reçu à Tokyo le 25 à 0 h 12, adresse « Rosamonde » (Sun Yat-sen), préfixe en clair « Thirtyfifth » (retiré du flux). Même table que le corps du télégramme du 22 avril, appliquée sans réglage : c'est sa réponse (唐, 楊). Signé 展 : 展堂, nom social de Hu Hanmin. Relecture aveugle ciblée de Brice Dudout (27/10/2026) : 滇 lu directement ; pour 爲, la lettre écrite (vaso, 牌) est confirmée (erreur de 1916 supposée). Même vérification d'antériorité que pour le 22 avril.",
+ },
+ 'en': {
+  'n0422': "Tokyo form no. 00325 (images 0627–0628, three sheets), 22 April 1916, 10.15 am, 48 words, address “Junzaburo Shanghai”; signed 中山 on the form (sender's address: 原宿109?). The first five codes (轉胡漢民鑒, “to be forwarded to Hu Hanmin”) read with D. Bourdeau's “Shanghai” table; the body with the new “Thirty fifth” table (see Method). Letters: Claude's transcription, collated (word 37: n, not x), then Brice Dudout's targeted blind re-reading (27/10/2026): 救, 臨時, 司, 其, 袁 and 以 read directly; for 英, 段 and 留 the written letter is confirmed (presumably errors of 1916). 已意 is written for 己意 (letter re-read), 其 for 祺 (段祺瑞); ‹植› (the name of the Army minister?) and ‹裯› remain unresolved; 岑, 叵 and 説 are rare codes but fit the sense. Context, with caution: the telegram is dated the day Duan Qirui became Yuan Shikai's Secretary of State (國務卿), a month after the monarchy was abandoned; Sun proposes a government formed in Shanghai whose list also includes Feng Guozhang and Duan Qirui. The reply of 24 April (0642b) says that Tang Shaoyi represents Yunnan and supports Li Yuanhong, and that Lu Yongxiang and Yang Shande cannot be moved. Prior publication checked on 27/10/2026: not in S. Tomokiyo (Cryptiana), not in D. Bourdeau's notes (update of 26/10/2026), not in the online 中山學術資料庫 / 國父全集 (vol. 4, pp. 412–413: for late April 1916, only a telegram to Wu Tiecheng of 24 April and one to the 少年中國報), not in online searches on Hu Hanmin; the printed 國父全集 has not been leafed through page by page.",
+  's0424': "Form from Shanghai (no. 071, 10 words), handed in on 24 April 1916 at 6.26 pm and received in Tokyo on the 25th at 0.12 am, address “Rosamonde” (Sun Yat-sen), clear prefix “Thirtyfifth” (removed from the stream). Same table as the body of the 22 April telegram, applied without adjustment: this is its reply (唐, 楊). Signed 展: 展堂, Hu Hanmin's courtesy name. Brice Dudout's targeted blind re-reading (27/10/2026): 滇 read directly; for 爲 the written letter (vaso, 牌) is confirmed (presumably an error of 1916). Same check for prior publication as for 22 April.",
+ },
+ 'zh-Hant': {
+  'n0422': "東京第00325號電報紙（影像0627–0628，三頁），1916年4月22日上午10時15分，48詞，地址「Junzaburo Shanghai」；電報紙署名「中山」（發報人地址：原宿109？）。前五碼（轉胡漢民鑒）以 D. Bourdeau 的「上海」碼表讀出；正文以新碼表「Thirty fifth」讀出（見「方法」）。字母：Claude 轉寫並校對（第37詞為 n 非 x），再經 Brice Dudout 針對性盲讀（2026年10月27日）：救、臨時、司、其、袁、以直接讀出；英、段、留三字，寫出的字母經確認無誤（當係1916年的錯誤）。「已意」寫作「已」而意為「己」（字母已複核），「其」代「祺」（段祺瑞）；‹植›（陸軍人選之名？）與‹裯›未能解決；岑、叵、説為罕見碼，但合於文意。背景（審慎言之）：此電發於段祺瑞出任袁世凱國務卿之日，距撤銷帝制一月；孫中山擬在上海組織政府，名單中亦列馮國璋、段祺瑞。4月24日覆電（0642b）稱唐紹儀代表雲南、主張推舉黎元洪，且無力使盧永祥、楊善德行動。先行發表之查核（2026年10月27日）：Tomokiyo（Cryptiana）、D. Bourdeau 筆記（2026年10月26日更新）、線上中山學術資料庫／《國父全集》（第4冊第412–413頁：1916年4月下旬僅有4月24日致吳鐵城電及致少年中國報電）、有關胡漢民的網路檢索，均未見此電；紙本《國父全集》未逐頁翻檢。",
+  's0424': "上海第071號電報紙（10詞），1916年4月24日下午6時26分發出，25日上午0時12分東京收到，地址「Rosamonde」（孫中山），明碼前綴「Thirtyfifth」（已自字流中除去）。與4月22日電正文同一碼表，不作任何調整即可讀出：為該電之覆電（唐、楊）。署名「展」：胡漢民字展堂。Brice Dudout 針對性盲讀（2026年10月27日）：「滇」直接讀出；「爲」字寫出的字母（vaso，牌）經確認無誤（當係1916年的錯誤）。先行發表之查核同4月22日電。",
+ },
+ 'ja': {
+  'n0422': "東京発第00325号の用紙（画像0627–0628、3枚）、1916年4月22日午前10時15分、48語、宛名「Junzaburo Shanghai」。用紙の署名は「中山」（発信者住所：原宿109？）。最初の5符号（轉胡漢民鑒＝胡漢民へ転送）はD. Bourdeauの「上海」表で、本文は新しい表「Thirty fifth」で読める（「方法」を参照）。文字：Claudeの転写を照合し（第37語は x でなく n）、Brice Dudoutが意味を知らずに的を絞って再読した（2026年10月27日）：救・臨時・司・其・袁・以は直接読めた。英・段・留は書かれた文字が確認された（1916年の誤りと思われる）。「已意」は「己意」の意で「已」と書かれ（文字は再確認）、「其」は「祺」（段祺瑞）の代用。‹植›（陸軍の人名か）と‹裯›は未解決。岑・叵・説はまれな符号だが文意に合う。背景（慎重に）：この電報は段祺瑞が袁世凱の国務卿となった日付で、帝制取り消しの一か月後にあたる。孫文は上海で政府を組織する案を示し、その名簿には馮国璋・段祺瑞も含まれる。4月24日の返電（0642b）は、唐紹儀が雲南を代表して黎元洪を推し、盧永祥・楊善徳は動かせないと伝える。先行公表の確認（2026年10月27日）：S. Tomokiyo（Cryptiana）、D. Bourdeauのノート（2026年10月26日更新）、オンラインの中山學術資料庫／『國父全集』（第4冊412–413頁：1916年4月下旬は4月24日の呉鉄城宛てと少年中國報宛ての電報のみ）、胡漢民に関するウェブ検索のいずれにも見当たらない。印刷版『國父全集』は一頁ずつ確認していない。",
+  's0424': "上海発第071号の用紙（10語）、1916年4月24日午後6時26分発信、25日午前0時12分東京着、宛名「Rosamonde」（孫文）、平文の前置語「Thirtyfifth」（文字列から除いた）。4月22日の電報本文と同じ表を調整なしで適用して読める。その返電である（唐・楊）。署名「展」は胡漢民の字「展堂」。Brice Dudoutの的を絞った再読（2026年10月27日）：「滇」は直接読めた。「爲」は書かれた文字（vaso、牌）が確認された（1916年の誤りと思われる）。先行公表の確認は4月22日の電報と同じ。",
+ },
+}
+for _lang in _K35N: NOTE[_lang].update(_K35N[_lang])
+_CH35 = {'fr': 'Table « Thirty fifth » (Hu Hanmin)', 'en': '“Thirty fifth” table (Hu Hanmin)', 'zh-Hant': '「Thirty fifth」碼表（胡漢民）', 'ja': '「Thirty fifth」表（胡漢民）'}
+_TOC35 = {'fr': ('Table « Thirty fifth » (Tokyo → Shanghai, à Hu Hanmin)', 'Table « Thirty fifth » (Shanghai → Tokyo, signée 展)'),
+          'en': ('“Thirty fifth” table (Tokyo → Shanghai, to Hu Hanmin)', '“Thirty fifth” table (Shanghai → Tokyo, signed 展)'),
+          'zh-Hant': ('「Thirty fifth」碼表（東京 → 上海，轉胡漢民）', '「Thirty fifth」碼表（上海 → 東京，署名「展」）'),
+          'ja': ('「Thirty fifth」表（東京 → 上海、胡漢民宛て）', '「Thirty fifth」表（上海 → 東京、「展」署名）')}
+for _lang in LAB:
+    LAB[_lang]['channel']['k35'] = _CH35[_lang]; LAB[_lang]['toc']['k35'], LAB[_lang]['toc']['k35-sh'] = _TOC35[_lang]
+
+
 def build():
     msgs = []
     for sid, rec, page, (mo, da), tm, s, prefix in SEL:
         if sid in LOCAL: continue                      # en cours en local : pas sur le site
         key = KEY.get(sid, 'yamada1916'); T = bkeys.KEYS[key]
         s = dx_overrides.apply_stream(s, DX.get(('n1916', sid), {}), sid)   # relecture ciblée (Brice, 13/10/2026)
-        d = [(s[i:i + 4], ('%02d%02d' % (T[s[i:i + 2]], T[s[i + 2:i + 4]])) if s[i:i + 2] in T and s[i + 2:i + 4] in T else '····') for i in range(0, len(s) - 3, 4)]; codes = [c for _, c in d];   # accepte w (yamada1916w) ; comme bkeys.decode, ignore une syllabe finale seule ; syllabe hors table → « ···· » (illisible)
+        _hk, _hn = HEAD.get(sid, (None, 0)); TB = (lambda i, _T=bkeys.KEYS[_hk] if _hk else T: _T if 4 * i < _hn else T)   # table de la position (en-tête / corps)
+        d = [(s[i:i + 4], ('%02d%02d' % (TB(i // 4)[s[i:i + 2]], TB(i // 4)[s[i + 2:i + 4]])) if s[i:i + 2] in TB(i // 4) and s[i + 2:i + 4] in TB(i // 4) else '····') for i in range(0, len(s) - 3, 4)]; codes = [c for _, c in d];   # accepte w (yamada1916w) ; comme bkeys.decode, ignore une syllabe finale seule ; syllabe hors table → « ···· » (illisible)
         chars = [CH(c) if c.isdigit() else '·' for c in codes]; nums = [int(c) if c.isdigit() else 0 for c in codes]
         letters = ''.join(syl for syl, _ in d)
         text, levels = R[sid]
@@ -485,11 +545,11 @@ def build():
             elif rare and cf and i not in marked: status.append('confirmé:' + cf)
             elif rare or i in marked or i in props: status.append('douteux')
             else: status.append('ok')
-        alts = {str(i): a for i, st in enumerate(status) if st == 'douteux' and i not in props for a in [BC.alts_for(letters, i, nums, T)] if a}
+        alts = {str(i): a for i, st in enumerate(status) if st == 'douteux' and i not in props for a in [BC.alts_for(letters, i, nums, TB(i))] if a}
         out = []
         for (lvl, reasons), i in zip(levels, props):
             ch = next(t[0] for t in toks if t[1] == i and t[2])
-            ep = edit_path_alias(letters[4 * i:4 * i + 4], T, ch)
+            ep = edit_path_alias(letters[4 * i:4 * i + 4], TB(i), ch)
             assert ep and len(ep['edits']) <= 2, (sid, i, ch, ep)
             out.append(dict(i=i, ch=ch, orig=chars[i], level=lvl, reasons=reasons, letters=letters[4 * i:4 * i + 4], image='divergente' if (sid, ch) in DIVERGE else 'maintenue' if (sid, ch) in MAINT else None, **ep))
         after = list(nums)

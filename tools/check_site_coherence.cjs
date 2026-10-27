@@ -103,7 +103,7 @@ for(const [lang,locale]of Object.entries(langs)) {
   const unresolved=telegrams.match(/<li id="wenmi-unresolved">([\s\S]*?)<\/li>/)[1];
   assert.equal(numbers(unresolved)[0],metrics.WENMI_CORPUS.unresolved,lang+' Wenmi unresolved count');
   const table=method.match(/<table class="tables-found">([\s\S]*?)<\/table>/)[1];
-  assert.equal((table.match(/<tr>/g)||[]).length-1,14,lang+' table recap');
+  assert.equal((table.match(/<tr>/g)||[]).length-1,15,lang+' table recap');   // 15 : + « Thirty fifth » (C130, 27/10/2026)
   assert(table.indexOf('Hong Kong')<table.indexOf('Laisaosang')&&table.indexOf('Laisaosang')<table.indexOf('New York')&&table.indexOf('Hsuweilin')<table.indexOf('Kai'),lang+' table chronology');
   for(const link of ['b45t','b51b'])assert(table.includes('#tinedits-c39-'+link),lang+' missing 1914 attestation');
   assert(method.includes('1.40')||method.includes('1,40'),lang+' Kai candidate gate');
@@ -120,7 +120,7 @@ for(const [lang,locale]of Object.entries(langs)) {
   }
 }
 checks.push('Home inventory, corrections, Y0 percentages, T1915/F1916 counters and Wenmi unresolved count agree in five languages.');
-checks.push('Classification complete; 1914 attestations, 14 recap entries including Kai candidate, review scopes and method definitions present.');
+checks.push('Classification complete; 1914 attestations, 15 recap entries including Kai candidate, review scopes and method definitions present.');
 if(baseline)checks.push(`All telegram arrays, translations, Rosamonde rows, 1917 template and political/military analysis unchanged from ${baseline}.`);
 const report={baseline,metrics,grids,checks};
 if(arg('--report'))fs.writeFileSync(arg('--report'),JSON.stringify(report,null,2)+'\n');

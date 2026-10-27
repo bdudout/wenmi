@@ -21,6 +21,8 @@ for rec, off in IMG_OFFSET.items():
     if os.path.exists(os.path.join(WENMI, 'sources', 'site', rec + '.pdf')) or rec not in FC.PDF:
         FC.PDF[rec] = (os.path.join(WENMI, 'sources', 'site', rec + '.pdf'), off)   # page du PDF = image − décalage (089100 : sources/c14, déjà dans FC.PDF)
 FC.PDF['B03050089800'] = (os.path.join(WENMI, 'sources', 'c39', 'jacar', 'B03050089800.pdf'), IMG_OFFSET['B03050089800'])   # 0328 (s0621) : PDF acquis en C39
+FC.PDF['B03050088600'] = (os.path.join(WENMI, 'sources', 'c39', 'jacar', 'B03050088600.pdf'), IMG_OFFSET['B03050088600'])   # 0627–0628, 0642 (n0422, s0424 : C130)
+JOIN = {'n0627': ['0627', '0628']}   # formulaire sur deux images (trois feuillets) : pages empilées
 
 
 def corpus():
@@ -29,13 +31,21 @@ def corpus():
     return json.loads(s[a:b])['messages']
 
 
+def _stack(parts):
+    from PIL import Image
+    W = max(p.width for p in parts); out = Image.new('L', (W, sum(p.height for p in parts) + 20 * (len(parts) - 1)), 255); y = 0
+    for p in parts: out.paste(p, (0, y)); y += p.height + 20
+    return out
+
+
 def scans(msgs):
     done = set()
     for m in msgs:
         img = m['fiche']['img']
         if img in done: continue
         done.add(img)
-        c = ImageOps.autocontrast(FC.form_crop(FC.render(m['record'], m['fiche']['n'])), cutoff=1)
+        parts = [ImageOps.autocontrast(FC.form_crop(FC.render(m['record'], n)), cutoff=1) for n in JOIN.get(img, [m['fiche']['n']])]
+        c = parts[0] if len(parts) == 1 else _stack(parts)
         if (np.asarray(c) < 200).mean() > 0.12: c = c.filter(ImageFilter.MedianFilter(3))   # trame grisée des formulaires de réception
         full = c.copy(); full.thumbnail((1400, 2400)); fp = os.path.join(OUT, f'scan-{img}-full.webp'); full.save(fp, quality=60)
         if os.path.getsize(fp) > 450 * 1024: full.save(fp, quality=40)

@@ -6,7 +6,7 @@ window.WENMI_SYSTEMS = {
   map: {
     CORPUS: { G0: 'G0', Y0: 'Y0' },
     C1916: { manila1916: 'manila1916', shanghai1916: 'shanghai1916', seito1916: 'seito1916', yamada1916: 'yamada1916' },
-    N1916: { seito1916: 'seito1916', honolulu1916w: 'honolulu1916', yamada1916: 'yamada1916', yamada1916w: 'yamada1916', man2: 'manila1916b', k38: 'k38', h16: 'h16' },
+    N1916: { seito1916: 'seito1916', honolulu1916w: 'honolulu1916', yamada1916: 'yamada1916', yamada1916w: 'yamada1916', man2: 'manila1916b', k35: 'k35', k38: 'k38', h16: 'h16' },
     T1915: { manila1916b: 'manila1916b', laisaosang1915: 'laisaosang1915', newyork1915: 'newyork1915', k30: 'k30', shanghai1916: 'shanghai1916', sanfran1916: 'sanfran1916' },
     F1916: { shanghai1916: 'shanghai1916', k13: 'k13', seito1916: 'seito1916', manila1916: 'manila1916', sanfran1916: 'sanfran1916' },
     NUM1916: { gongmi: 'gongmi', rongmi: 'rongmi', chenmi: 'chenmi', qianmi: 'qianmi', gaimusho: 'gaimusho', clair: 'clair' }
@@ -17,7 +17,7 @@ window.WENMI_SYSTEMS = {
   groups: [
     { id: 'wenmi', systems: ['G0', 'Y0'] },
     { id: 'condensers', anchors: ['c1916', 'n1916', 't1915', 'f1916'],
-      systems: ['manila1916b', 'laisaosang1915', 'newyork1915', 'k30', 'shanghai1916', 'k13', 'seito1916', 'manila1916', 'sanfran1916', 'honolulu1916', 'yamada1916', 'k38', 'h16'] },
+      systems: ['manila1916b', 'laisaosang1915', 'newyork1915', 'k30', 'shanghai1916', 'k13', 'seito1916', 'manila1916', 'sanfran1916', 'k35', 'honolulu1916', 'yamada1916', 'k38', 'h16'] },
     { id: 'numeric', anchors: ['num1916'], systems: ['gaimusho', 'gongmi', 'rongmi', 'chenmi', 'qianmi', 'clair'] }
   ],
   text: {
@@ -42,6 +42,7 @@ window.WENMI_SYSTEMS = {
         sanfran1916: ['Table « San Francisco »', 'San Francisco → « Dr Sunwen », Tokyo, octobre 1915–avril 1916 ; signé 森 (Lin Sen). Table publiée par D. Bourdeau[1]. Également attestée le <a href="telegrams.html#tinedits-c39-m17">18 septembre 1914</a>.'],
         honolulu1916: ['Table « Honolulu », alphabet « Aloha »', 'Honolulu → Tokyo, 30 avril et 16 mai 1916 ; indicateur « Aloha ». Grille publiée par D. Bourdeau[1], écrite ici avec un alphabet sans q et avec w (23 octobre 2026).'],
         yamada1916: ['Table « Yamada » — « Thirtyseventh »', 'Tokyo ↔ Shanghai (« Junzaburo », « Linwailuk »), mai–juin 1916 ; indicateur en clair « Thirtyseventh » sur la plupart. Table publiée par D. Bourdeau[1].'],
+        k35: ['Table « Thirty fifth » (Hu Hanmin)', 'Tokyo → « Junzaburo », 22 avril 1916, à transmettre à Hu Hanmin (en-tête dans la table « Shanghai »), et Shanghai → « Rosamonde », 24 avril 1916, réponse signée 展 (Hu Hanmin) ; indicateur en clair « Thirtyfifth ». Table retrouvée le 27 octobre 2026 (voir la <a href="method.html#thirtyfifth">méthode</a>).'],
         k38: ['Table « Thirtyeight »', 'Tokyo → « Junzaburo », 11–12 mai 1916 ; indicateur en clair « Thirtyeight ». Table retrouvée en octobre 2026.'],
         h16: ['Table de Huang Xing', 'Tokyo (Huang Xing) → « Junzaburo », sans indicateur, et Shanghai → « Ylchang » (Huang Xing), fin mai – juin 1916. Table retrouvée en octobre 2026. À ne pas confondre avec le code à trois kana d\'un autre télégramme de Huang Xing (25 mai 1916, à Lin Hu et Li Genyuan), dont le système a été identifié par D. Bourdeau et la formule par S. Tomokiyo[22, 23].'],
         gongmi: ['Clé « 共密 » (C51)', 'Tokyo ↔ Shanghai, 10–16 juin 1916 ; Huang Xing, Zhang Ji. Dizaines remplacées (0→9, 1→7, 2→6, 3→1, 4→4, 5→0, 6→5, 7→2, 8→8, 9→3), puis P = 9000 − C. Clé reconstruite par Codex en octobre 2026 (voir la page <a href="gongmi.html">共密</a>).'],
@@ -75,6 +76,7 @@ window.WENMI_SYSTEMS = {
         sanfran1916: ['“San Francisco” table', 'San Francisco → “Dr Sunwen”, Tokyo, October 1915–April 1916; signed 森 (Lin Sen). Table published by D. Bourdeau[1]. Also attested on <a href="telegrams.html#tinedits-c39-m17">18 September 1914</a>.'],
         honolulu1916: ['“Honolulu” table, “Aloha” alphabet', 'Honolulu → Tokyo, 30 April and 16 May 1916; indicator “Aloha”. Grid published by D. Bourdeau[1], written here with an alphabet without q and with w (23 October 2026).'],
         yamada1916: ['“Yamada” table — “Thirtyseventh”', 'Tokyo ↔ Shanghai (“Junzaburo”, “Linwailuk”), May–June 1916; clear indicator “Thirtyseventh” on most. Table published by D. Bourdeau[1].'],
+        k35: ['“Thirty fifth” table (Hu Hanmin)', 'Tokyo → “Junzaburo”, 22 April 1916, to be forwarded to Hu Hanmin (header in the “Shanghai” table), and Shanghai → “Rosamonde”, 24 April 1916, reply signed 展 (Hu Hanmin); clear indicator “Thirtyfifth”. Table recovered on 27 October 2026 (see the <a href="method.html#thirtyfifth">method</a>).'],
         k38: ['“Thirtyeight” table', 'Tokyo → “Junzaburo”, 11–12 May 1916; clear indicator “Thirtyeight”. Table recovered in October 2026.'],
         h16: ['Huang Xing\'s table', 'Tokyo (Huang Xing) → “Junzaburo”, without indicator, and Shanghai → “Ylchang” (Huang Xing), late May – June 1916. Table recovered in October 2026. Not to be confused with the three-kana code of another telegram of Huang Xing (25 May 1916, to Lin Hu and Li Genyuan), whose system was identified by D. Bourdeau and whose formula by S. Tomokiyo[22, 23].'],
         gongmi: ['“Gongmi” (共密) key (C51)', 'Tokyo ↔ Shanghai, 10–16 June 1916; Huang Xing, Zhang Ji. Tens digit replaced (0→9, 1→7, 2→6, 3→1, 4→4, 5→0, 6→5, 7→2, 8→8, 9→3), then P = 9000 − C. Key reconstructed by Codex in October 2026 (see the <a href="gongmi.html">Gongmi</a> page).'],
@@ -108,6 +110,7 @@ window.WENMI_SYSTEMS = {
         sanfran1916: ['「舊金山」表', '舊金山 →「Dr Sunwen」，東京，1915年10月至1916年4月；署名「森」（林森）。D. Bourdeau 發表的表[1]。 亦見於<a href="telegrams.html#tinedits-c39-m17">1914年9月18日</a>。'],
         honolulu1916: ['「檀香山」表，「Aloha」字母表', '檀香山 → 東京，1916年4月30日、5月16日；標記「Aloha」。D. Bourdeau 發表的方格[1]，此處以去 q 而有 w 的字母表寫出（2026年10月23日）。'],
         yamada1916: ['「山田」表——「Thirtyseventh」', '東京 ↔ 上海（「Junzaburo」、「Linwailuk」），1916年5月至6月；多數帶明碼標記「Thirtyseventh」。D. Bourdeau 發表的表[1]。'],
+        k35: ['「Thirty fifth」表（胡漢民）', '東京 →「Junzaburo」，1916年4月22日，轉胡漢民（報頭用「上海」表）；上海 →「Rosamonde」，1916年4月24日，覆電署名「展」（胡漢民）；明碼標記「Thirtyfifth」。2026年10月27日復原（見<a href="method.html#thirtyfifth">方法</a>）。'],
         k38: ['「Thirtyeight」表', '東京 →「Junzaburo」，1916年5月11至12日；明碼標記「Thirtyeight」。2026年10月復原。'],
         h16: ['黃興的表', '東京（黃興）→「Junzaburo」（無標記）及上海 →「Ylchang」（黃興），1916年5月底至6月。2026年10月復原。勿與黃興另一封電報（1916年5月25日致林虎、李根源）的三假名電碼混淆：該系統由 D. Bourdeau 識別，其對應公式由 S. Tomokiyo 找出[22, 23]。'],
         gongmi: ['「共密」密鑰（C51）', '東京↔上海，1916年6月10–16日；黃興、張繼。替換十位數（0→9、1→7、2→6、3→1、4→4、5→0、6→5、7→2、8→8、9→3），再計算P = 9000 − C。密鑰由 Codex 於2026年10月復原（見<a href="gongmi.html">共密</a>頁面）。'],
@@ -141,6 +144,7 @@ window.WENMI_SYSTEMS = {
         sanfran1916: ['“旧金山”表', '旧金山 →“Dr Sunwen”，东京，1915年10月至1916年4月；署名“森”（林森）。D. Bourdeau 发表的表[1]。 亦见于<a href="telegrams.html#tinedits-c39-m17">1914年9月18日</a>。'],
         honolulu1916: ['“檀香山”表，“Aloha”字母表', '檀香山 → 东京，1916年4月30日、5月16日；标记“Aloha”。D. Bourdeau 发表的方格[1]，此处以去 q 而有 w 的字母表写出（2026年10月23日）。'],
         yamada1916: ['“山田”表——“Thirtyseventh”', '东京 ↔ 上海（“Junzaburo”、“Linwailuk”），1916年5月至6月；多数带明码标记“Thirtyseventh”。D. Bourdeau 发表的表[1]。'],
+        k35: ['“Thirty fifth”表（胡汉民）', '东京 →“Junzaburo”，1916年4月22日，转胡汉民（报头用“上海”表）；上海 →“Rosamonde”，1916年4月24日，复电署名“展”（胡汉民）；明码标记“Thirtyfifth”。2026年10月27日复原（见<a href="method.html#thirtyfifth">方法</a>）。'],
         k38: ['“Thirtyeight”表', '东京 →“Junzaburo”，1916年5月11至12日；明码标记“Thirtyeight”。2026年10月复原。'],
         h16: ['黄兴的表', '东京（黄兴）→“Junzaburo”（无标记）及上海 →“Ylchang”（黄兴），1916年5月底至6月。2026年10月复原。勿与黄兴另一封电报（1916年5月25日致林虎、李根源）的三假名电码混淆：该系统由 D. Bourdeau 识别，其对应公式由 S. Tomokiyo 找出[22, 23]。'],
         gongmi: ['“共密”密钥（C51）', '东京↔上海，1916年6月10–16日；黄兴、张继。替换十位数（0→9、1→7、2→6、3→1、4→4、5→0、6→5、7→2、8→8、9→3），再计算P = 9000 − C。密钥由 Codex 于2026年10月复原（见<a href="gongmi.html">共密</a>页面）。'],
@@ -174,6 +178,7 @@ window.WENMI_SYSTEMS = {
         sanfran1916: ['「サンフランシスコ」表', 'サンフランシスコ →「Dr Sunwen」、東京、1915年10月〜1916年4月。署名「森」（林森）。D. Bourdeau が公表した表[1]。 <a href="telegrams.html#tinedits-c39-m17">1914年9月18日</a>にも確認。'],
         honolulu1916: ['「ホノルル」表、「Aloha」文字表', 'ホノルル → 東京、1916年4月30日・5月16日。標識「Aloha」。D. Bourdeau が公表した表[1]を、q を除き w を含む文字表で書いたもの（2026年10月23日）。'],
         yamada1916: ['「山田」表——「Thirtyseventh」', '東京 ↔ 上海（「Junzaburo」、「Linwailuk」）、1916年5〜6月。多くに平文の標識「Thirtyseventh」。D. Bourdeau が公表した表[1]。'],
+        k35: ['「Thirty fifth」表（胡漢民）', '東京 →「Junzaburo」、1916年4月22日、胡漢民へ転送（冒頭は「上海」表）。上海 →「Rosamonde」、1916年4月24日、「展」（胡漢民）署名の返電。平文の標識「Thirtyfifth」。2026年10月27日に復元（<a href="method.html#thirtyfifth">方法</a>を参照）。'],
         k38: ['「Thirtyeight」表', '東京 →「Junzaburo」、1916年5月11〜12日。平文の標識「Thirtyeight」。2026年10月に復元。'],
         h16: ['黄興の表', '東京（黄興）→「Junzaburo」（標識なし）および上海 →「Ylchang」（黄興）、1916年5月末〜6月。2026年10月に復元。黄興の別の電報（1916年5月25日、林虎・李根源宛）の三仮名コードとは別物である。その方式は D. Bourdeau が、対応の公式は S. Tomokiyo が明らかにした[22, 23]。'],
         gongmi: ['「共密」の鍵（C51）', '東京↔上海、1916年6月10〜16日。黄興、張継。十の位を置き換え（0→9、1→7、2→6、3→1、4→4、5→0、6→5、7→2、8→8、9→3）、P = 9000 − C。鍵は2026年10月にCodexが復元（<a href="gongmi.html">共密</a>のページ参照）。'],
