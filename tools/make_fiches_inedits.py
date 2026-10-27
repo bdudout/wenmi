@@ -8,6 +8,10 @@ from pathlib import Path
 from PIL import Image,ImageDraw
 SITE=Path(__file__).resolve().parents[1];WENMI=Path(sys.argv[1]).resolve();OUT=SITE/'assets/img/fiches'
 D=json.loads((WENMI/'cryptanalysis/c40/site/inedits_data.json').read_text())
+X=WENMI/'cryptanalysis/c138/inedits_extra.json'   # b23, b38b (C130/C138)
+if X.exists():D+=json.loads(X.read_text())
+import os
+if os.environ.get('ONLY_IDS'):D=[x for x in D if x['id'] in os.environ['ONLY_IDS'].split(',')]
 cache={}
 with tempfile.TemporaryDirectory() as tmp:
  for x in D:

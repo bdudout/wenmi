@@ -2616,5 +2616,107 @@
       "from": "lin",
       "to": "sun"
     }
+  },
+  {
+    "id": "inedits-c130-b23",
+    "source_id": "b23",
+    "date_iso": "1916-04-22",
+    "date": {
+      "fr": "22 avril 1916",
+      "en": "22 April 1916",
+      "zh": "1916年4月22日",
+      "ja": "1916年4月22日"
+    },
+    "route": {
+      "fr": "Tokyo (中山) → Junzaburo Shanghai, pour Hu Hanmin [en-tête « Shanghai », corps « Thirty fifth »]",
+      "en": "Tokyo (中山) → Junzaburo Shanghai, for Hu Hanmin [header “Shanghai”, body “Thirty fifth”]",
+      "ja": "東京（中山）→ 上海 Junzaburo、胡漢民宛［冒頭「Shanghai」、本文「Thirty fifth」］",
+      "zh-hant": "東京（中山）→ 上海 Junzaburo，轉胡漢民［電首「Shanghai」，正文「Thirty fifth」］",
+      "zh-hans": "東京（中山）→ 上海 Junzaburo，轉胡漢民［電首「Shanghai」，正文「Thirty fifth」］"
+    },
+    "key": "k35",
+    "head": {
+      "key": "shanghai1916",
+      "codes": 5
+    },
+    "src": "B03050088600, image 23",
+    "pages": "23-24",
+    "frame": "0627",
+    "cipher": "teremaneko lanosanexi gabisunoru pinadefudu quyicujixu doguqiqaci vuyakuvoca kegafuciro cuyarokedu karupixudo puyiqobihu cequcaruxo husecicoka zejulutute xakohozabu luraxavasa qozohaquku jiyiyuloku monafayesu nohucevasa moyuyaluka zevasapiyu himubugava samuyubesi pirurapemu zuvasamoyu gusibukusi yokuloyagi guzacibini danojucuji yafovasafu sobezizagi pufozolozo pubulucuka tumikadobu ruzahoyuro gulonademu qimasidufi cutovupemu yubesiguli bebuhaqubo fonadedolo hayecuyafu bevasakuvo bexabetuji fobolugama",
+    "effective": "teremanekolanosanexigabisunorupinadefuduquyicujixudoguqiqacivuyakuvocakegafucirocuyarokedukarupixudopuyiqobihucequcaruxohusecicokazejulututexakohozabuluraxavasaqozohaqukujiyiyulokumonafayesunohucevasamoyuyalukazevasapiyuhimubugavasamuyubesipirurapemuzuvasamoyugusibukusiyokuloyagiguzacibinidanojucujiyafovasafusobezizagipufozolozopubulucukatumikadoburuzahoyurogulonademuqimasiduficutovupemuyubesigulibebuhaqubofonadedolohayecuyafubevasakuvobexabetujifobolugama",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "轉胡漢民鑒日府已決助岑其意叵測急圖挽救請兄若出已意密與唐少川商説楊善德獨立以滬爲臨時地點組織政府唐爲總理楊爲陸軍伍爲外交陳潰士爲總司令馮國璋參謀長罹其瑞爲北京畜守裯袁以優待條件由我取決如此則內患外交可一時解決矣望兄力爲圖之並速覆文",
+    "aligned": "轉胡漢民鑒日府已決助岑其意叵測急圖挽救請兄若出已意密與唐少川商説楊善德獨立以滬爲臨時地點組織政府唐爲總理楊爲陸軍伍爲外交陳潰士爲總司令馮國璋參謀長罹其瑞爲北京畜守裯袁以優待條件由我取決如此則內患外交可一時解決矣望兄力爲圖之並速覆文",
+    "read": "轉胡漢民鑒：日府已決助岑，其意叵測，急圖挽救。請兄若出己意，密與唐少川商，説楊善德獨立，以滬爲臨時地點，組織政府：唐爲總理，楊爲陸軍，伍爲外交，陳{英}士爲總司令，馮國璋參謀長，{段}其瑞爲北京{留}守，‹裯›袁以優待條件由我取決。如此則內患外交可一時解決矣。望兄力爲圖之，並速覆。文",
+    "keyw": [
+      "轉胡漢民鑒",
+      "日府已決助岑",
+      "說楊善德獨立",
+      "組織政府",
+      "唐爲總理"
+    ],
+    "tr": {
+      "fr": "À transmettre à Hu Hanmin : le gouvernement japonais a décidé d'aider Cen [Chunxuan] ; ses intentions sont insondables, il faut d'urgence redresser la situation. Je vous prie, comme de votre propre initiative, de vous concerter en secret avec Tang Shaochuan (Tang Shaoyi) et de persuader Yang Shande de proclamer l'indépendance, Shanghai devenant le siège provisoire d'un gouvernement : Tang Premier ministre, Yang à l'Armée, Wu [Tingfang] aux Affaires étrangères, Chen Yingshi (Chen Qimei) commandant en chef, Feng Guozhang chef d'état-major, Duan Qirui (其 pour 祺) gardien de Pékin ; […] les conditions de traitement de faveur de Yuan seront fixées par nous. Ainsi les troubles intérieurs et les affaires étrangères pourraient se régler d'un coup. Faites tout votre possible et répondez vite. Wen [Sun Yat-sen].",
+      "en": "To be forwarded to Hu Hanmin: the Japanese government has decided to help Cen [Chunxuan]; its intentions are unfathomable, and the situation must be retrieved urgently. Please, as if on your own initiative, consult secretly with Tang Shaochuan (Tang Shaoyi) and persuade Yang Shande to declare independence, with Shanghai as the provisional seat of a government: Tang Prime Minister, Yang at the Army, Wu [Tingfang] at Foreign Affairs, Chen Yingshi (Chen Qimei) commander-in-chief, Feng Guozhang chief of staff, Duan Qirui (其 for 祺) guardian of Beijing; […] the terms of preferential treatment for Yuan to be decided by us. In this way internal troubles and foreign affairs could be settled at one stroke. Do your utmost, and reply quickly. Wen [Sun Yat-sen].",
+      "ja": "胡漢民へ転達：日本政府はすでに岑〔春煊〕援助を決めたが、その意図は測りがたく、至急挽回を図らねばならない。兄自身の意向として、ひそかに唐少川（唐紹儀）と協議し、楊善徳に独立を説き、上海を臨時の地として政府を組織されたい：唐を総理、楊を陸軍、伍〔廷芳〕を外交、陳英士（陳其美）を総司令、馮国璋を参謀長、段祺瑞を北京留守とし、〔…〕袁の優待条件はわれわれが決める。こうすれば内患と外交は一時に解決しよう。兄が力を尽くされんことを望む。至急返電を。文（孫文）。",
+      "zh-Hant": "大意：請轉胡漢民：日本政府已決定援助岑春煊，其用意難測，須急圖挽救。請兄以個人意思，祕密與唐紹儀（少川）商量，勸楊善德宣布獨立，以上海爲臨時地點組織政府：唐爲總理，楊爲陸軍，伍廷芳爲外交，陳英士（其美）爲總司令，馮國璋爲參謀長，段祺瑞爲北京留守，……袁世凱的優待條件由我方決定。如此則內患與外交可一時解決。望兄盡力圖之，並速回覆。文（孫中山）。"
+    },
+    "score": 3.46,
+    "null": -0.74,
+    "source": "C130",
+    "who": {
+      "from": "sun",
+      "to": "hu"
+    }
+  },
+  {
+    "id": "inedits-c130-b38b",
+    "source_id": "b38b",
+    "date_iso": "1916-04-24",
+    "date": {
+      "fr": "24 avril 1916",
+      "en": "24 April 1916",
+      "zh": "1916年4月24日",
+      "ja": "1916年4月24日"
+    },
+    "route": {
+      "fr": "Shanghai (071) → Rosamonde (15 codes) [Thirty fifth]",
+      "en": "Shanghai (071) → Rosamonde (15 codes) [Thirty fifth]",
+      "ja": "上海 (071) → Rosamonde（15 符号）［Thirty fifth］",
+      "zh-hant": "上海 (071) → Rosamonde（15碼）［Thirty fifth］",
+      "zh-hans": "上海 (071) → Rosamonde（15碼）［Thirty fifth］"
+    },
+    "key": "k35",
+    "src": "B03050088600, image 38",
+    "pages": "38",
+    "frame": "0642b",
+    "cipher": "hucevasora mabujuzocu bepaqodeyi nubemutaco fubefuyuco pokazequto",
+    "effective": "hucevasoramabujuzocubepaqodeyinubemutacofubefuyucopokazequto",
+    "inserted": [],
+    "phase": 0,
+    "alignment_edits": [],
+    "raw": "唐牌滇代表主舉黎且無力動盧楊展",
+    "aligned": "唐牌滇代表主舉黎且無力動盧楊展",
+    "read": "唐{爲}滇代表主舉黎，且無力動盧、楊。展",
+    "keyw": [
+      "主舉黎",
+      "無力動盧楊",
+      "展"
+    ],
+    "tr": {
+      "fr": "Tang, représentant du Yunnan, soutient l'élection de Li [Yuanhong] ; et il n'a pas la force de faire bouger Lu et Yang. Zhan (Hu Hanmin).",
+      "en": "Tang, as representative of Yunnan, supports the election of Li [Yuanhong]; and he lacks the strength to move Lu and Yang. Zhan (Hu Hanmin).",
+      "ja": "唐は滇（雲南）代表として黎〔元洪〕の推挙を主張し、しかも盧・楊を動かす力はない。展（胡漢民）。",
+      "zh-Hant": "大意：唐紹儀爲雲南代表，主張推舉黎元洪，且無力促動盧、楊。展（胡漢民）。"
+    },
+    "score": 2.26,
+    "null": 0.09,
+    "source": "C130",
+    "who": {
+      "from": "hu",
+      "to": "sun"
+    }
   }
 ]

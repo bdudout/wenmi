@@ -324,11 +324,11 @@
     }
   ],
   "stats": {
-    "tels": 50,
-    "codes": 1635,
-    "douteux": 386,
+    "tels": 52,
+    "codes": 1765,
+    "douteux": 391,
     "illisible": 5,
-    "props": 6
+    "props": 10
   },
   "source_pdfs": {
     "B03050087300": {
@@ -1770,6 +1770,36 @@
       "key": "sanfran1916",
       "score": 3.12,
       "null": -0.87
+    },
+    {
+      "id": "inedits-c130-b23",
+      "source_id": "b23",
+      "src": "B03050088600, image 23",
+      "cipher": "teremaneko lanosanexi gabisunoru pinadefudu quyicujixu doguqiqaci vuyakuvoca kegafuciro cuyarokedu karupixudo puyiqobihu cequcaruxo husecicoka zejulutute xakohozabu luraxavasa qozohaquku jiyiyuloku monafayesu nohucevasa moyuyaluka zevasapiyu himubugava samuyubesi pirurapemu zuvasamoyu gusibukusi yokuloyagi guzacibini danojucuji yafovasafu sobezizagi pufozolozo pubulucuka tumikadobu ruzahoyuro gulonademu qimasidufi cutovupemu yubesiguli bebuhaqubo fonadedolo hayecuyafu bevasakuvo bexabetuji fobolugama",
+      "effective": "teremanekolanosanexigabisunorupinadefuduquyicujixudoguqiqacivuyakuvocakegafucirocuyarokedukarupixudopuyiqobihucequcaruxohusecicokazejulututexakohozabuluraxavasaqozohaqukujiyiyulokumonafayesunohucevasamoyuyalukazevasapiyuhimubugavasamuyubesipirurapemuzuvasamoyugusibukusiyokuloyagiguzacibinidanojucujiyafovasafusobezizagipufozolozopubulucukatumikadoburuzahoyurogulonademuqimasiduficutovupemuyubesigulibebuhaqubofonadedolohayecuyafubevasakuvobexabetujifobolugama",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "轉胡漢民鑒日府已決助岑其意叵測急圖挽救請兄若出已意密與唐少川商説楊善德獨立以滬爲臨時地點組織政府唐爲總理楊爲陸軍伍爲外交陳潰士爲總司令馮國璋參謀長罹其瑞爲北京畜守裯袁以優待條件由我取決如此則內患外交可一時解決矣望兄力爲圖之並速覆文",
+      "read": "轉胡漢民鑒：日府已決助岑，其意叵測，急圖挽救。請兄若出己意，密與唐少川商，説楊善德獨立，以滬爲臨時地點，組織政府：唐爲總理，楊爲陸軍，伍爲外交，陳{英}士爲總司令，馮國璋參謀長，{段}其瑞爲北京{留}守，‹裯›袁以優待條件由我取決。如此則內患外交可一時解決矣。望兄力爲圖之，並速覆。文",
+      "key": "k35",
+      "score": 3.46,
+      "null": -0.74
+    },
+    {
+      "id": "inedits-c130-b38b",
+      "source_id": "b38b",
+      "src": "B03050088600, image 38",
+      "cipher": "hucevasora mabujuzocu bepaqodeyi nubemutaco fubefuyuco pokazequto",
+      "effective": "hucevasoramabujuzocubepaqodeyinubemutacofubefuyucopokazequto",
+      "inserted": [],
+      "phase": 0,
+      "alignment_edits": [],
+      "raw": "唐牌滇代表主舉黎且無力動盧楊展",
+      "read": "唐{爲}滇代表主舉黎，且無力動盧、楊。展",
+      "key": "k35",
+      "score": 2.26,
+      "null": 0.09
     }
   ]
 }
